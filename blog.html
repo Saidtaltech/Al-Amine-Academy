@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Blog | DAARA Al Amine Academy - Articles sur l'éducation coranique</title>
+  <meta content="Découvrez nos articles sur l'éducation coranique, les daara modernes, la mémorisation du Coran (Tahfiz), et les meilleures écoles coranique à Dakar. Guides complets, comparatifs, méthodes et témoignages." name="description"/>
+  <meta content="blog daara, articles éducation coranique, tahfiz guide, daara dakar, école coranique, mémorisation coran, daara moderne, internat islamique, al amine academy blog" name="keywords"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8', 50: '#f0f9fc' },
+            secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
+            accent: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
+            coral: { DEFAULT: '#f43f5e', dark: '#e11d48', light: '#ffe4e6' },
+            teal: {
+              50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
+              400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
+              800: '#0f4457', 900: '#0a3040', 950: '#061e2a'
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            arabic: ['Amiri', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
+
+    /* Gradient Animations */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .gradient-animate {
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    /* Floating Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    .float { animation: float 6s ease-in-out infinite; }
+    .float-delay { animation: float 6s ease-in-out 2s infinite; }
+
+    /* Pulse glow */
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(13, 148, 136, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(13, 148, 136, 0.6); }
+    }
+    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+    /* Card hover effects */
+    .card-3d {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .card-3d:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+
+    /* Navbar scroll effect */
+    .nav-scrolled {
+      background: rgba(255,255,255,0.95) !important;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    }
+    .dark .nav-scrolled {
+      background: rgba(15,23,42,0.95) !important;
+    }
+
+    /* Filter button active state */
+    .filter-btn {
+      transition: all 0.3s ease;
+    }
+    .filter-btn.active {
+      background: linear-gradient(135deg, #1e7a9a, #3ba5c9);
+      color: white;
+    }
+
+    /* Text gradient */
+    .text-gradient {
+      background: linear-gradient(135deg, #1e7a9a, #3ba5c9, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e7a9a, #3ba5c9); border-radius: 10px; }
+    .dark ::-webkit-scrollbar-track { background: #1e293b; }
+
+    /* Dark mode transitions */
+    * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+
+    /* Blob shapes */
+    .blob {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  </style>
+
+  <!-- SEO -->
+  <link href="https://alamineacademy.com/blog.html" rel="canonical"/>
+  <meta content="Blog | DAARA Al Amine Academy - Articles sur l'éducation coranique" property="og:title"/>
+  <meta content="Découvrez nos articles sur l'éducation coranique, les daara modernes, la mémorisation du Coran et les meilleures écoles coranique à Dakar." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://alamineacademy.com/blog.html" property="og:url"/>
+  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" property="og:image"/>
+  <meta content="fr_SN" property="og:locale"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Blog DAARA Al Amine Academy" name="twitter:title"/>
+  <meta content="Articles sur l'éducation coranique et les daara modernes à Dakar." name="twitter:description"/>
+  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" name="twitter:image"/>
+  <link href="https://alamineacademy.com/blog.html" hreflang="fr" rel="alternate"/>
+  <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+
+  <!-- Geo SEO -->
+  <meta content="SN-DK" name="geo.region"/>
+  <meta content="Dakar" name="geo.placename"/>
+  <meta content="14.7473;-17.4569" name="geo.position"/>
+  <meta content="14.7473, -17.4569" name="ICBM"/>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "DAARA Al Amine Academy Blog",
+    "description": "Articles sur l'éducation coranique, daara modernes, Tahfiz et mémorisation du Coran",
+    "url": "https://alamineacademy.com/blog.html",
+    "image": "https://alamineacademy.com/assets/img/LogoAAA.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DAARA Al Amine Academy",
+      "logo": "https://alamineacademy.com/assets/img/LogoAAA.png"
+    }
+  }
+  </script>
+</head>
+
+<body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
+
+  <!-- WhatsApp Floating Button -->
+  <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp text-3xl"></i>
+    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
+  </a>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="flex justify-between items-center py-3">
+        <!-- Logo -->
+        <a class="flex items-center gap-3 group" href="index.html">
+          <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
+            <i class="fas fa-book-quran text-white text-xl"></i>
+          </div>
+          <div>
+            <h1 class="text-lg font-extrabold text-white" id="navTitle" data-i18n="site.name">Al Amine Academy</h1>
+            <p class="text-[10px] text-white/70 arabic-text" id="navSubtitle">يار أك خام خام</p>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="index.html" data-i18n="menu.home">Accueil</a>
+          <div class="relative group">
+            <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm flex items-center gap-1" data-i18n="menu.programs">
+              Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 border border-gray-100 dark:border-slate-700 overflow-hidden">
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all" href="programme-internat.html">
+                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center"><i class="fas fa-school text-primary"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-gray-500">Coran + Sport + Hébergement</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-secondary/5 dark:hover:bg-secondary/10 transition-all" href="programme-tahfiz-academique.html">
+                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center"><i class="fas fa-book-open text-secondary"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.combined">Tahfiz + Académique</p><p class="text-xs text-gray-500">Coran + Français + Anglais</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-accent/5 dark:hover:bg-accent/10 transition-all" href="programme-cours-en-ligne.html">
+                <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center"><i class="fas fa-laptop text-accent"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-gray-500">Apprenez de chez vous</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-coral/5 dark:hover:bg-coral/10 transition-all" href="programme-cours-gratuits.html">
+                <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
+              </a>
+            </div>
+          </div>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="a-propos.html" data-i18n="menu.about">À Propos</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="contact.html" data-i18n="menu.contact">Contact</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="blog.html" data-i18n="menu.blog">Blog</a>
+
+          <!-- Dark Mode Toggle -->
+          <button id="darkToggle" class="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all" title="Mode sombre">
+            <i class="fas fa-moon text-lg" id="darkIcon"></i>
+          </button>
+
+          <!-- Language -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all text-sm">
+              <i class="fas fa-globe"></i> <span id="currentLang">FR</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 dark:border-slate-700 overflow-hidden">
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('fr');return false;">&#127467;&#127479; Français</a>
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('en');return false;">&#127468;&#127463; English</a>
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 arabic-text text-sm" href="#" onclick="switchLanguage('ar');return false;">&#127480;&#127462; العربية</a>
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('es');return false;">&#127466;&#127480; Español</a>
+            </div>
+          </div>
+
+          <a class="ml-2 bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
+            S'inscrire <i class="fas fa-arrow-right ml-1 text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <button id="darkToggleMobile" class="p-2 text-white/80 hover:text-white rounded-xl transition-all">
+            <i class="fas fa-moon text-lg" id="darkIconMobile"></i>
+          </button>
+          <button onclick="toggleMenu()" class="p-2 text-white hover:bg-white/10 rounded-xl transition-all">
+            <i class="fas fa-bars text-xl" id="menuIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden lg:hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 shadow-2xl" id="mobileMenu">
+      <div class="container mx-auto px-4 py-6 space-y-2">
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="index.html" data-i18n="menu.home"><i class="fas fa-home mr-3 text-primary"></i>Accueil</a>
+        <div class="pl-4 space-y-1 border-l-2 border-primary/20 ml-4">
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="programme-internat.html" data-i18n="programs.tahfiz"><i class="fas fa-school mr-2 text-primary/60"></i>Tahfiz Internat</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+        </div>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary"></i>Galerie</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary"></i>À Propos</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="contact.html" data-i18n="menu.contact"><i class="fas fa-envelope mr-3 text-primary"></i>Contact</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="blog.html" data-i18n="menu.blog"><i class="fas fa-blog mr-3 text-primary"></i>Blog</a>
+        <div class="pt-4 border-t dark:border-slate-700">
+          <a class="block text-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 py-3.5 rounded-2xl font-bold shadow-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
+            S'inscrire maintenant <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative min-h-[600px] flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-primary-dark to-slate-900 gradient-animate pt-32">
+    <!-- Animated background shapes -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl float"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/15 rounded-full blur-3xl float-delay"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl"></div>
+      <!-- Geometric pattern overlay -->
+      <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    </div>
+
+    <div class="container mx-auto px-4 lg:px-8 relative z-10">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6 border border-white/10">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          Ressources éducatives
+        </div>
+        <h1 class="text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6" data-i18n="blog.hero_title">
+          Notre Blog Éducatif
+        </h1>
+        <p class="text-xl text-white/70 max-w-2xl leading-relaxed" data-i18n="blog.hero_subtitle">
+          Découvrez nos guides complets, articles comparatifs et témoignages sur l'éducation coranique moderne, les meilleures daara et la mémorisation du Coran.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FILTER SECTION ==================== -->
+  <section class="py-12 bg-white dark:bg-slate-800 sticky top-24 z-40 shadow-md">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button class="filter-btn active px-6 py-2.5 bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white rounded-full font-semibold transition-all" data-filter="all">
+          <i class="fas fa-border-all mr-2"></i><span data-i18n="blog.filter_all">Tous</span>
+        </button>
+        <button class="filter-btn px-6 py-2.5 bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white rounded-full font-semibold transition-all" data-filter="guides">
+          <i class="fas fa-book mr-2"></i><span data-i18n="blog.filter_guides">Guides</span>
+        </button>
+        <button class="filter-btn px-6 py-2.5 bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white rounded-full font-semibold transition-all" data-filter="comparatifs">
+          <i class="fas fa-balance-scale mr-2"></i><span data-i18n="blog.filter_comparatifs">Comparatifs</span>
+        </button>
+        <button class="filter-btn px-6 py-2.5 bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white rounded-full font-semibold transition-all" data-filter="methodes">
+          <i class="fas fa-brain mr-2"></i><span data-i18n="blog.filter_methodes">Méthodes</span>
+        </button>
+        <button class="filter-btn px-6 py-2.5 bg-gray-100 dark:bg-slate-700 text-gray-900 dark:text-white rounded-full font-semibold transition-all" data-filter="temoignages">
+          <i class="fas fa-comments mr-2"></i><span data-i18n="blog.filter_testimonials">Témoignages</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ARTICLES GRID ==================== -->
+  <section class="py-24 bg-gray-50 dark:bg-slate-900">
+    <div class="container mx-auto px-4 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articlesGrid">
+
+        <!-- Article : Hajj 2026 (NOUVEAU) -->
+        <a href="blog/preparer-son-hajj-2026-guide-complet.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border-2 border-secondary dark:border-secondary" data-aos="fade-up">
+          <div class="h-48 bg-gradient-to-br from-primary-dark to-primary flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-kaaba text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-secondary text-gray-900 text-xs px-3 py-1 rounded-full font-bold">NOUVEAU 2026</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Préparer son Hajj 2026 : guide complet</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Tout l'essentiel du pèlerinage : rites, étapes, dou'as et conseils pratiques selon la Sunnah, par Oustaz Abou Ahmad Al Amine Niang.</p>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="blog/les-10-meilleurs-daara-dakar-2025.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-secondary to-amber-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-trophy text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-secondary text-gray-900 text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-secondary transition-colors">Les 10 meilleurs daara à Dakar 2025</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Sélection des 10 écoles coraniques les mieux classées selon la qualité pédagogique et les services offerts.</p>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="blog/daara-moderne-vs-traditionnel.html" class="article-card comparatifs group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 bg-gradient-to-br from-coral to-rose-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-balance-scale text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-coral text-white text-xs px-3 py-1 rounded-full font-semibold">COMPARATIF</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-coral transition-colors">Daara moderne vs traditionnel</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Comprendre les différences clés entre les écoles coraniques modernes et traditionnelles pour faire le meilleur choix.</p>
+          </div>
+        </a>
+
+        <!-- Article 4 -->
+        <a href="blog/comment-choisir-le-bon-daara-2025.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="300">
+          <div class="h-48 bg-gradient-to-br from-accent to-purple-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-question-circle text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Comment choisir le bon daara en 2025</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Guide complet avec critères essentiels pour sélectionner l'école coranique idéale selon vos besoins et objectifs.</p>
+          </div>
+        </a>
+
+        <!-- Article 5 -->
+        <a href="blog/ecole-coranique-dakar-inscription-2026.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="400">
+          <div class="h-48 bg-gradient-to-br from-primary to-cyan-400 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-pen-to-square text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-primary text-white text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">École coranique Dakar : inscription 2026</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Démarches, documents requis et calendrier complet pour inscrire votre enfant à l'école coranique en 2026.</p>
+          </div>
+        </a>
+
+        <!-- Article 6 -->
+        <a href="blog/education-islamique-moderne-dakar-2026.html" class="article-card methodes group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="500">
+          <div class="h-48 bg-gradient-to-br from-secondary to-orange-400 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-graduation-cap text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-secondary text-gray-900 text-xs px-3 py-1 rounded-full font-semibold">MÉTHODE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-secondary transition-colors">Éducation islamique moderne à Dakar 2026</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Découvrez les innovations pédagogiques qui combinent l'enseignement religieux traditionnel avec les standards modernes.</p>
+          </div>
+        </a>
+
+        <!-- Article 7 -->
+        <a href="blog/prix-daara-senegal-2025.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="600">
+          <div class="h-48 bg-gradient-to-br from-coral to-pink-400 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-tag text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-coral text-white text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-coral transition-colors">Prix des daara au Sénégal 2025</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Analyse détaillée des tarifs, services inclus et options de paiement proposées par les écoles coraniques du Sénégal.</p>
+          </div>
+        </a>
+
+        <!-- Article 8 -->
+        <a href="blog/tahfiz-methode-memorisation-coran-2026.html" class="article-card methodes group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="700">
+          <div class="h-48 bg-gradient-to-br from-accent to-indigo-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-brain text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">MÉTHODE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Tahfiz : méthode de mémorisation du Coran 2026</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Les techniques de mémorisation du Coran (Tahfiz) éprouvées et les stratégies les plus efficaces pour progresser rapidement.</p>
+          </div>
+        </a>
+
+        <!-- Article 9 -->
+        <a href="blog/al-amine-academy-vs-autres-daara-dakar.html" class="article-card comparatifs group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="800">
+          <div class="h-48 bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-crown text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-primary text-white text-xs px-3 py-1 rounded-full font-semibold">COMPARATIF</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Al Amine Academy vs autres daara à Dakar</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Comparaison détaillée entre Al Amine Academy et les autres écoles coraniques de Dakar : avantages distinctifs et points forts.</p>
+          </div>
+        </a>
+
+        <!-- Article 10 -->
+        <a href="blog/pourquoi-choisir-daara-moderne-2026.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="900">
+          <div class="h-48 bg-gradient-to-br from-secondary to-yellow-400 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-star text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-secondary text-gray-900 text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-secondary transition-colors">Pourquoi choisir un daara moderne en 2026</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Les avantages des écoles coraniques modernes : infrastructures, pédagogie innovante et approche holistique de l'éducation.</p>
+          </div>
+        </a>
+
+        <!-- Article 11 -->
+        <a href="blog/internat-islamique-dakar-guide-complet.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up">
+          <div class="h-48 bg-gradient-to-br from-coral to-red-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-bed text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-coral text-white text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-coral transition-colors">Internat islamique à Dakar : guide complet</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Guide complet sur les internats islamiques à Dakar : infrastructure, vie quotidienne, encadrement et activités proposées.</p>
+          </div>
+        </a>
+
+        <!-- Article 12 -->
+        <a href="blog/programme-tahfiz-accelere-dakar.html" class="article-card methodes group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-rocket text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">MÉTHODE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Programme Tahfiz accéléré à Dakar</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Présentation des programmes Tahfiz accélérés : intensité, résultats attendus, conditions de participation et durée.</p>
+          </div>
+        </a>
+
+        <!-- Article 13 -->
+        <a href="blog/cout-ecole-coranique-dakar-2026.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 bg-gradient-to-br from-primary to-green-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-money-bill text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-primary text-white text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Coût école coranique Dakar 2026</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Analyse détaillée des tarifs, des packages disponibles et des options de financement pour l'inscription en 2026.</p>
+          </div>
+        </a>
+
+        <!-- Article 14 -->
+        <a href="blog/bilingue-francais-arabe-ecole-coranique.html" class="article-card methodes group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="300">
+          <div class="h-48 bg-gradient-to-br from-secondary to-orange-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-language text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-secondary text-gray-900 text-xs px-3 py-1 rounded-full font-semibold">MÉTHODE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-secondary transition-colors">Bilingue français-arabe en école coranique</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Comment les écoles coraniques modernes intègrent l'enseignement bilingue français-arabe pour un équilibre optimal.</p>
+          </div>
+        </a>
+
+        <!-- Article 15 -->
+        <a href="blog/preparation-cfee-ecole-coranique.html" class="article-card guides group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="400">
+          <div class="h-48 bg-gradient-to-br from-coral to-pink-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-book text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-coral text-white text-xs px-3 py-1 rounded-full font-semibold">GUIDE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-coral transition-colors">Préparation CFEE en école coranique</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Comment les écoles coraniques préparent les élèves à l'examen du CFEE tout en maintenant la mémorisation du Coran.</p>
+          </div>
+        </a>
+
+        <!-- Article 16 -->
+        <a href="blog/temoignages-parents-daara-al-amine.html" class="article-card temoignages group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="500">
+          <div class="h-48 bg-gradient-to-br from-accent to-violet-500 flex items-center justify-center overflow-hidden relative">
+            <i class="fas fa-quote-left text-white/20 text-8xl group-hover:scale-110 transition-transform"></i>
+            <span class="absolute top-4 right-4 bg-accent text-white text-xs px-3 py-1 rounded-full font-semibold">TÉMOIGNAGE</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Témoignages parents daara Al Amine</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Témoignages authentiques de parents ayant leurs enfants inscrits à Al Amine Academy : expériences et satisfaction.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="py-24 bg-gradient-to-r from-primary via-accent to-secondary relative overflow-hidden">
+    <!-- Animated background shapes -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl float"></div>
+      <div class="absolute bottom-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl float-delay"></div>
+    </div>
+
+    <div class="container mx-auto px-4 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto" data-aos="zoom-in">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6">
+          Prêt à transformer<br/>l'éducation de votre enfant?
+        </h2>
+        <p class="text-xl text-white/90 mb-8">
+          Rejoignez plus de 150 familles qui ont confié leur enfant à Al Amine Academy pour une éducation coranique d'excellence.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a class="group inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank">
+            S'inscrire maintenant
+            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <a class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white/10 transition-all backdrop-blur-sm" href="contact.html">
+            <i class="fas fa-envelope mr-2"></i> Nous contacter
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- Brand -->
+        <div>
+          <h3 class="text-2xl font-bold mb-2">
+            <i class="fas fa-quran mr-2"></i>Al Amine Academy
+          </h3>
+          <p class="text-slate-400">Excellence éducative islamique</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="index.html" class="hover:text-white transition-colors">Accueil</a></li>
+            <li><a href="a-propos.html" class="hover:text-white transition-colors">À Propos</a></li>
+            <li><a href="galerie.html" class="hover:text-white transition-colors">Galerie</a></li>
+            <li><a href="temoignages.html" class="hover:text-white transition-colors">Témoignages</a></li>
+            <li><a href="admission.html" class="hover:text-white transition-colors">Admission</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div>
+          <h4 class="font-bold mb-4">Nos Programmes</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="programme-internat.html" class="hover:text-white transition-colors">Tahfiz Internat</a></li>
+            <li><a href="programme-tahfiz-academique.html" class="hover:text-white transition-colors">Tahfiz + Académique</a></li>
+            <li><a href="programme-mixte.html" class="hover:text-white transition-colors">Programme Mixte</a></li>
+            <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors">Cours en Ligne</a></li>
+            <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors">Cours Gratuits</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-bold mb-4">Nous Contacter</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li><i class="fas fa-phone mr-2"></i>+221 77 774 37 00</li>
+            <li><i class="fas fa-envelope mr-2"></i>daara@alamineacademy.com</li>
+            <li><i class="fas fa-map-marker-alt mr-2"></i>Cité des Magistrats, Derrière Kër Yoff, Dakar</li>
+            <li><a href="https://www.facebook.com/daaraalamineacademy/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-facebook-f mr-2"></i>Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-slate-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-slate-400 text-sm">
+            &copy; 2024 Al Amine Academy. Tous droits réservés.
+          </p>
+          <div class="flex gap-6 text-sm text-slate-400">
+            <a href="mailto:daara@alamineacademy.com?subject=Demande%20politique%20de%20confidentialit%C3%A9" class="hover:text-white transition-colors">Politique de confidentialité</a>
+            <a href="mailto:daara@alamineacademy.com?subject=Conditions%20d%27utilisation" class="hover:text-white transition-colors">Conditions d'utilisation</a>
+            <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // AOS Init
+    AOS.init({ duration: 800, once: true, offset: 50 });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      menu.classList.toggle('hidden');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    }
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter articles
+        const filter = btn.dataset.filter;
+        articleCards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'block';
+            setTimeout(() => card.style.opacity = '1', 10);
+          } else {
+            card.style.opacity = '0';
+            setTimeout(() => card.style.display = 'none', 300);
+          }
+        });
+      });
+    });
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const navTitle = document.getElementById('navTitle');
+    const navSubtitle = document.getElementById('navSubtitle');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('nav-scrolled');
+        navTitle.classList.remove('text-white');
+        navTitle.classList.add('text-gray-900', 'dark:text-white');
+        navSubtitle.classList.remove('text-white/70');
+        navSubtitle.classList.add('text-gray-500');
+        // Update menu links
+        navbar.querySelectorAll('.hidden.lg\\:flex a:not([class*="bg-gradient"]), .hidden.lg\\:flex button').forEach(el => {
+          el.classList.remove('text-white/90', 'text-white/80', 'hover:text-white', 'hover:bg-white/10');
+          el.classList.add('text-gray-700', 'dark:text-gray-200', 'hover:text-primary', 'hover:bg-gray-100', 'dark:hover:bg-slate-700');
+        });
+      } else {
+        navbar.classList.remove('nav-scrolled');
+        navTitle.classList.add('text-white');
+        navTitle.classList.remove('text-gray-900', 'dark:text-white');
+        navSubtitle.classList.add('text-white/70');
+        navSubtitle.classList.remove('text-gray-500');
+        navbar.querySelectorAll('.hidden.lg\\:flex a:not([class*="bg-gradient"]), .hidden.lg\\:flex button').forEach(el => {
+          el.classList.add('text-white/90', 'text-white/80', 'hover:text-white', 'hover:bg-white/10');
+          el.classList.remove('text-gray-700', 'dark:text-gray-200', 'hover:text-primary', 'hover:bg-gray-100', 'dark:hover:bg-slate-700');
+        });
+      }
+    });
+
+    // Dark mode
+    function initDarkMode() {
+      const isDark = localStorage.getItem('darkMode') === 'true';
+      if (isDark) document.documentElement.classList.add('dark');
+      updateDarkIcons(isDark);
+    }
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('darkMode', isDark);
+      updateDarkIcons(isDark);
+    }
+    function updateDarkIcons(isDark) {
+      ['darkIcon', 'darkIconMobile'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.classList.toggle('fa-moon', !isDark);
+          el.classList.toggle('fa-sun', isDark);
+        }
+      });
+    }
+    document.getElementById('darkToggle')?.addEventListener('click', toggleDarkMode);
+    document.getElementById('darkToggleMobile')?.addEventListener('click', toggleDarkMode);
+    initDarkMode();
+
+    // Language switch — handled by lang.js
+  </script>
+  <script src="translations.js"></script>
+  <script src="lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build output (si Tailwind CLI compilé localement)
+node_modules/
+dist/
+.cache/
+
+# Logs
+*.log
+
+# Files Claude / cowork mode
+.claude/
+local-agent-mode-sessions/

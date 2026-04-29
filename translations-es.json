@@ -1,0 +1,217 @@
+{
+  "site": {
+    "name": "Academia Al Amine"
+  },
+  "meta": {
+    "lang": "es",
+    "title": "DAARA Al Amine Academy | Escuela coránica de excelencia en Dakar",
+    "description": "Escuela coránica moderna en Dakar. Programas Tahfiz, internado, externado y cursos en línea. Yarr ak Xam-Xam — buen carácter antes que conocimiento."
+  },
+  "menu": {
+    "home": "Inicio",
+    "programs": "Programas",
+    "gallery": "Galería",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "testimonials": "Testimonios",
+    "admission": "Admisión",
+    "conferences": "Conferencias",
+    "register": "Inscribirse"
+  },
+  "nav": {
+    "problems": "Los desafíos",
+    "approach": "Nuestro enfoque",
+    "programs": "Programas",
+    "testimonials": "Testimonios",
+    "admission": "Admisión",
+    "contact": "Contacto"
+  },
+  "programs": {
+    "tahfiz": "Tahfiz Internado",
+    "combined": "Tahfiz + Académico",
+    "mixed": "Programa Mixto",
+    "online": "Cursos en línea",
+    "free": "Cursos gratuitos",
+    "tahfiz_subtitle": "Corán, deporte y alojamiento",
+    "combined_subtitle": "Corán, francés e inglés",
+    "mixed_subtitle": "Externado — vuelta a casa cada noche",
+    "online_subtitle": "Aprende desde casa",
+    "free_subtitle": "Cursos en wolof, abiertos a todos"
+  },
+  "hero": {
+    "badge": "Escuela coránica de excelencia",
+    "title": "Ofrezca a su hijo una educación coránica de excelencia",
+    "title_html": "Ofrezca a su hijo una <span class=\"text-secondary\">educación coránica</span> de excelencia",
+    "subtitle": "¿Busca una daara moderna que combine memorización del Corán, disciplina y desarrollo personal? Al Amine Academy acompaña a su hijo hacia el éxito espiritual y académico.",
+    "motto": "يار أك خام خام",
+    "motto_transliteration": "Yarr ak Xam-Xam",
+    "motto_translation": "Buen carácter antes que conocimiento",
+    "cta_primary": "Inscribir a mi hijo",
+    "cta_secondary": "Descubrir nuestros programas",
+    "stats_rating": "15 reseñas en Google",
+    "stats_students": "Alumnos plenos",
+    "stats_programs": "Programas adaptados",
+    "stats_since": "Excelencia desde"
+  },
+  "home": {
+    "problems_title": "Los desafíos de los padres hoy",
+    "problems_title_html": "Los desafíos de los padres <span class=\"text-primary\">hoy</span>",
+    "problems_subtitle": "No está solo(a). Cientos de padres viven las mismas preocupaciones.",
+    "problem_external_title": "El problema externo",
+    "problem_external_text": "Encontrar una daara fiable que ofrezca resultados reales en la memorización del Corán manteniendo un nivel académico sólido.",
+    "problem_internal_title": "El problema interno",
+    "problem_internal_text": "El miedo a que su hijo pierda sus valores, se atrase académicamente o no se desarrolle plenamente en un entorno controlado.",
+    "problem_philosophical_title": "El problema filosófico",
+    "problem_philosophical_text": "Cada niño merece una educación que nutra el espíritu Y el alma, que refuerce la fe sin comprometer el futuro académico.",
+    "guide_title": "Comprendemos sus preocupaciones",
+    "guide_text": "Desde 2023, Al Amine Academy acompaña a las familias de Senegal en esta búsqueda delicada: ofrecer una educación islámica de excelencia garantizando el bienestar y el éxito académico de cada niño.",
+    "plan_title": "3 pasos sencillos para empezar",
+    "plan_title_html": "3 pasos sencillos para <span class=\"text-secondary\">empezar</span>",
+    "plan_subtitle": "Un proceso transparente y fácil para inscribir a su hijo.",
+    "plan_step1_title": "Inscriba a su hijo",
+    "plan_step1_text": "Complete nuestro formulario de inscripción en línea. Solo lleva unos minutos.",
+    "plan_step2_title": "Se incorpora a su clase",
+    "plan_step2_text": "Su hijo se integra en el programa que corresponde a su edad y objetivos.",
+    "plan_step3_title": "Progresa cada día",
+    "plan_step3_text": "Seguimiento personalizado con informes regulares. Usted ve los progresos de su hijo en tiempo real.",
+    "programs_title": "Nuestros tres programas",
+    "programs_title_html": "Nuestros tres <span class=\"text-primary\">programas</span>",
+    "programs_subtitle": "Cada programa está diseñado para responder a las necesidades específicas de su hijo.",
+    "popular_badge": "Popular",
+    "learn_more": "Saber más",
+    "register_now": "Inscribirse ahora",
+    "testimonials_title": "Lo que dicen las familias",
+    "testimonials_title_html": "Lo que dicen <span class=\"text-primary\">las familias</span>",
+    "testimonials_subtitle": "Descubra las transformaciones y los éxitos de nuestros alumnos a través de los testimonios de sus familias.",
+    "all_reviews": "Leer todas las reseñas de Google",
+    "more_testimonials": "Más testimonios",
+    "failure_title": "No deje pasar el tiempo",
+    "failure_text": "Cada año de espera es un año en el que su hijo no construye los cimientos de una educación islámica estructurada.",
+    "final_cta_title": "Únase a nuestra familia",
+    "final_cta_title_html": "Únase a nuestra <span class=\"text-secondary\">familia</span>",
+    "final_cta_text": "¿Listo(a) para ofrecer a su hijo una educación islámica de excelencia? Las inscripciones están abiertas para todos nuestros programas."
+  },
+  "about": {
+    "hero_title": "Sobre DAARA Al Amine Academy",
+    "hero_subtitle": "Su socio de confianza para la excelencia académica y espiritual de su hijo.",
+    "mission_label": "Nuestra misión",
+    "mission_title": "Educar con excelencia",
+    "mission_text": "Ofrecer una educación holística que combine la memorización del Noble Corán con una sólida formación académica.",
+    "vision_label": "Nuestra visión",
+    "vision_title": "Construir el futuro juntos",
+    "vision_text": "Convertirnos en la referencia de las escuelas coránicas modernas en África Occidental.",
+    "values_label": "Nuestros valores",
+    "values_title": "Los pilares de nuestra excelencia",
+    "value_adab": "Adab y comportamiento",
+    "value_excellence": "Excelencia",
+    "value_modernity": "Modernidad",
+    "value_kindness": "Amabilidad",
+    "team_title": "Profesionales dedicados",
+    "timeline_title": "Historia y hitos"
+  },
+  "contact": {
+    "hero_title": "Contáctenos",
+    "hero_subtitle": "¿Una pregunta sobre nuestros programas? ¿Necesita información? Nuestro equipo está a su disposición.",
+    "phone_label": "Teléfono",
+    "phone_hours": "Disponible de lunes a sábado, 8 h – 18 h",
+    "email_label": "Correo electrónico",
+    "email_response": "Respuesta en 24 horas",
+    "whatsapp_label": "WhatsApp",
+    "whatsapp_hint": "Chat instantáneo disponible",
+    "address_label": "Ubicación",
+    "phone1": "+221 77 774 37 00",
+    "phone2": "+221 77 785 07 89",
+    "email": "daara@alamineacademy.com",
+    "address": "Cité des Magistrats, detrás de Kër Yoff, Dakar"
+  },
+  "admission": {
+    "hero_title": "Inscripción y admisión",
+    "hero_subtitle": "Únase a DAARA Al Amine Academy siguiendo nuestros pasos de inscripción simples y transparentes.",
+    "open_badge": "Inscripciones 2026 abiertas",
+    "steps_title": "Pasos de inscripción",
+    "step1": "Completar el formulario",
+    "step2": "Entrevista",
+    "step3": "Inscripción",
+    "step4": "Inicio del curso",
+    "fees_title": "Cuotas escolares",
+    "fees_subtitle": "Transparente y competitivo"
+  },
+  "testimonials_page": {
+    "hero_title": "Testimonios",
+    "hero_subtitle": "Descubra por qué más de 150 familias confían en DAARA Al Amine Academy.",
+    "stat_families": "Familias satisfechas",
+    "stat_rating": "Nota media",
+    "stat_recommend": "Recomiendan la escuela"
+  },
+  "gallery": {
+    "hero_title": "Galería",
+    "hero_subtitle": "Sumérjase en el día a día de nuestros alumnos a través de nuestras fotos y vídeos.",
+    "categories_title": "Categorías",
+    "cat_classes": "Aulas",
+    "cat_sport": "Deporte",
+    "cat_events": "Eventos",
+    "cat_building": "Edificio",
+    "cat_canteen": "Comedor"
+  },
+  "blog": {
+    "hero_title": "Nuestro blog educativo",
+    "hero_subtitle": "Descubra nuestras guías completas, artículos comparativos y testimonios sobre la educación coránica moderna.",
+    "filter_all": "Todos",
+    "filter_guides": "Guías",
+    "filter_comparatifs": "Comparativas",
+    "filter_methodes": "Métodos",
+    "filter_testimonials": "Testimonios"
+  },
+  "footer": {
+    "description": "Escuela coránica moderna dedicada a la memorización del Noble Corán y a la excelencia académica.",
+    "navigation": "Navegación",
+    "programs": "Programas",
+    "contact": "Contacto",
+    "follow": "Síganos",
+    "legal": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "terms": "Condiciones de uso",
+    "copyright": "© 2026 DAARA Al Amine Academy. Todos los derechos reservados."
+  },
+  "cta": {
+    "register": "Completar el formulario de inscripción",
+    "contact": "Contáctenos",
+    "whatsapp": "Contactar por WhatsApp",
+    "learn_more": "Saber más",
+    "back_home": "Volver al inicio"
+  },
+  "programme_internat": {
+    "hero_title": "Programa Tahfiz completo",
+    "hero_subtitle": "Memorización integral del Corán en internado con un acompañamiento de excelencia."
+  },
+  "programme_combined": {
+    "hero_title_html": "Programa Mixto<br/><span class=\"text-secondary\">Tahfiz + Académico</span>",
+    "hero_subtitle_html": "Lo mejor de los dos mundos: su hijo memoriza el Corán <strong>Y</strong> sigue el currículo francés oficial."
+  },
+  "programme_mixed": {
+    "hero_title": "Programa Mixto en externado",
+    "hero_subtitle": "Corán por la mañana, currículo académico por la tarde. Su hijo regresa a casa cada noche — para las familias que quieren mantener cerca a sus hijos mientras les ofrecen Tahfiz + estudios."
+  },
+  "programme_online": {
+    "hero_title": "Aprenda el Corán desde casa"
+  },
+  "programme_free": {
+    "hero_title": "Cursos gratuitos para todos"
+  },
+  "lang_label": "Idioma",
+  "page_404": {
+    "code": "404",
+    "title": "Página no encontrada",
+    "subtitle": "La página que busca no existe o ha sido movida.",
+    "description": "Vuelva al inicio para descubrir nuestra escuela coránica y nuestros programas de memorización del Corán.",
+    "back_home": "Volver al inicio",
+    "contact_us": "Contáctenos",
+    "quick_nav": "Navegación rápida:"
+  },
+  "conferences_page": {
+    "hero_badge": "Eventos y saber",
+    "hero_title_html": "Conferencias <span class=\"text-secondary\">y</span> formaciones",
+    "hero_subtitle": "Descubra nuestras conferencias islámicas, formaciones y seminarios organizados para compartir el saber y reforzar la comunidad."
+  }
+}

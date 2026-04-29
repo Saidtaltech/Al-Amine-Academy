@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Amine Academy - Fiche de Renseignements</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        :root {
+            --primary-color: #1e40af; /* Bleu principal inspiré académies */
+            --secondary-color: #0ea5e9;
+            --accent-color: #10b981;
+            --neutral-dark: #1e293b;
+            --neutral-light: #f1f5f9;
+            --white: #ffffff;
+            --shadow-light: 0 1px 3px 0 rgba(0, 0,0, 0.1);
+            --shadow-medium: 0 4px 6px -1px rgba(0, 0,0, 0.1);
+        }
+
+
+        .logo-title {
+            font-weight: 700;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        .section-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .section-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        .program-card, .payment-item, .address-box {
+            background: var(--neutral-light);
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover, .payment-item:hover {
+            border-left-color: var(--secondary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .price-box {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .price-amount {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .payment-name {
+            font-weight: 500;
+            color: var(--neutral-dark);
+        }
+
+        .payment-amount {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .btn-modern {
+            background: var(--primary-color);
+            color: var(--white);
+            font-weight: 500;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-light);
+        }
+
+        .btn-modern:hover {
+            background: var(--secondary-color);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-medium);
+            color: var(--white);
+        }
+
+        .btn-accent {
+            background: var(--accent-color);
+        }
+
+        .btn-accent:hover {
+            background: #059669;
+        }
+
+        .highlight-note {
+            background: #ecfdf5;
+            border-left: 4px solid var(--accent-color);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .icon-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .icon-list li:last-child {
+            border-bottom: none;
+        }
+
+        .icon-list i {
+            width: 20px;
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+
+        .contact-box {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-box i {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: var(--neutral-dark);
+            color: var(--white);
+            padding: 24px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+   
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fas fa-graduation-cap"></i>Programme Élémentaire</h3>
+                    <ul class="icon-list list-unstyled ps-0">
+                        <li><i class="fas fa-language"></i>Français</li>
+                        <li><i class="fas fa-language" style="color: #eab308;"></i>Anglais</li>
+                        <li><i class="fas fa-book-open-quran"></i>Coran</li>
+                        <li><i class="fas fa-pray"></i>Éducation Islamique</li>
+                        <li><i class="fas fa-futbol"></i>Sport (Football weekends)</li>
+                    </ul>
+                    <div class="highlight-note">
+                        <i class="fas fa-info-circle me-2"></i>Après Coran complet: 3 ans préparation CFEE.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fas fa-coins"></i>Frais</h3>
+                    <div class="price-box">
+                        <div style="font-size: 0.95rem; opacity: 0.9;">Inscription</div>
+                        <div class="price-amount">95 000 FCFA</div>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-name">Tahfiz (Coran + Sport)</span>
+                        <span class="payment-amount">100 000 FCFA/mois</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-name">Académique Complet</span>
+                        <span class="payment-amount">115 000 FCFA/mois</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-name">Linge</span>
+                        <span class="payment-amount">5 000 FCFA/mois</span>
+                    </div>
+                    <a href="#" class="btn btn-modern w-100 mt-3">
+                        <i class="fas fa-file-alt me-2"></i>Formulaire Inscription
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fas fa-file-check"></i>Documents</h3>
+                    <ul class="icon-list list-unstyled ps-0">
+                        <li><i class="fas fa-file-signature"></i>Formulaire rempli <a href="#" class="btn btn-modern btn-sm ms-2">Lien</a></li>
+                        <li><i class="fas fa-birthday-cake"></i>Extrait naissance</li>
+                        <li><i class="fas fa-camera"></i>2 Photos identité</li>
+                        <li><i class="fas fa-gavel"></i>Règlement signé</li>
+                        <li><i class="fas fa-stethoscope"></i>Certificat médical</li>
+                    </ul>
+                    <div class="highlight-note">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Dossier incomplet rejeté.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fas fa-dumbbell"></i>Extra-scolaire</h3>
+                    <div class="program-card">
+                        <i class="fas fa-shield-alt me-2"></i><strong>Self-défense:</strong> Confiance et sécurité.
+                    </div>
+                    <div class="program-card">
+                        <i class="fas fa-futbol me-2" style="color: var(--accent-color);"></i><strong>Football:</strong> Tous les weekends.
+                    </div>
+                </div>
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fas fa-book-open"></i>Tahfiz</h3>
+                    <p>Mémorisation Coran intégrale + Tajwid (agé de 5-10 ans).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" data-aos="fade-up">
+                <div class="section-card p-5">
+                    <h3 class="section-title mb-4 text-center"><i class="fas fa-map-marker-alt"></i>Adresses</h3>
+                    <div class="row text-center">
+                        <div class="col-md-6 mb-4">
+                            <div class="address-box">
+                                <i class="fas fa-male fa-2x mb-3" style="color: var(--primary-color);"></i>
+                                <h5>Internat Garçons</h5>
+                                <p class="mb-0 fw-medium">Cité des magistrats, derrière Kër Yoff, Dakar</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="address-box">
+                                <i class="fas fa-female fa-2x mb-3" style="color: var(--secondary-color);"></i>
+                                <h5>Internat Filles</h5>
+                                <p class="mb-0 fw-medium">Cité des magistrats, derrière Kër Yoff, Dakar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12" data-aos="fade-up">
+                <div class="section-card">
+                    <div class="contact-box">
+                        <i class="fas fa-phone fa-3x mb-4"></i>
+                        <h3 class="mb-3">77 774 37 00</h3>
+                        <p class="mb-4 fs-5">daara@alamineacademy.com</p>
+                        <div>
+                            <a href="https://www.alamineacademy.com" class="btn btn-modern me-3 mb-2">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                            <a href="https://wa.me/221777743700" class="btn btn-accent mb-2">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2025 Al Amine Academy. Dakar, Sénégal.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({duration: 800, once: true});</script>
+</body>
+</html>

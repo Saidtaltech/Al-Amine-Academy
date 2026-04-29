@@ -1,0 +1,217 @@
+{
+  "site": {
+    "name": "أكاديمية الأمين"
+  },
+  "meta": {
+    "lang": "ar",
+    "title": "دارة الأمين أكاديمي | مدرسة قرآنية متميزة في داكار",
+    "description": "مدرسة قرآنية حديثة في داكار. برامج التحفيظ، الداخلية، الخارجية والدروس عبر الإنترنت. يار أك خام خام — حسن الخلق قبل العلم."
+  },
+  "menu": {
+    "home": "الرئيسية",
+    "programs": "البرامج",
+    "gallery": "المعرض",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "blog": "المدونة",
+    "testimonials": "الشهادات",
+    "admission": "التسجيل",
+    "conferences": "المحاضرات",
+    "register": "سجّل الآن"
+  },
+  "nav": {
+    "problems": "تحديات الأهالي",
+    "approach": "منهجنا",
+    "programs": "البرامج",
+    "testimonials": "الشهادات",
+    "admission": "التسجيل",
+    "contact": "اتصل بنا"
+  },
+  "programs": {
+    "tahfiz": "تحفيظ داخلي",
+    "combined": "تحفيظ + أكاديمي",
+    "mixed": "برنامج مختلط (خارجي)",
+    "online": "دروس عبر الإنترنت",
+    "free": "دروس مجانية",
+    "tahfiz_subtitle": "قرآن، رياضة وإقامة",
+    "combined_subtitle": "قرآن، فرنسي وإنجليزي",
+    "mixed_subtitle": "خارجي — العودة إلى المنزل كل مساء",
+    "online_subtitle": "تعلّم من بيتك",
+    "free_subtitle": "دروس باللغة الولوفية، مفتوحة للجميع"
+  },
+  "hero": {
+    "badge": "مدرسة قرآنية متميزة",
+    "title": "امنح طفلك تربية قرآنية متميزة",
+    "title_html": "امنح طفلك <span class=\"text-secondary\">تربية قرآنية</span> متميزة",
+    "subtitle": "هل تبحث عن دارة عصرية تجمع بين حفظ القرآن، الانضباط والازدهار الشخصي؟ أكاديمية الأمين ترافق طفلك نحو النجاح الروحي والأكاديمي.",
+    "motto": "يار أك خام خام",
+    "motto_transliteration": "Yarr ak Xam-Xam",
+    "motto_translation": "حسن الخلق قبل العلم",
+    "cta_primary": "سجّل طفلي",
+    "cta_secondary": "اكتشف برامجنا",
+    "stats_rating": "15 تقييمًا على غوغل",
+    "stats_students": "طلابنا المزدهرون",
+    "stats_programs": "برامج مخصصة",
+    "stats_since": "التميز منذ"
+  },
+  "home": {
+    "problems_title": "تحديات الأهالي اليوم",
+    "problems_title_html": "تحديات الأهالي <span class=\"text-primary\">اليوم</span>",
+    "problems_subtitle": "أنت لست وحدك. مئات الأهالي يعيشون نفس المخاوف.",
+    "problem_external_title": "المشكلة الخارجية",
+    "problem_external_text": "إيجاد دارة موثوقة تقدّم نتائج فعلية في حفظ القرآن مع الحفاظ على مستوى أكاديمي قوي.",
+    "problem_internal_title": "المشكلة الداخلية",
+    "problem_internal_text": "الخوف من أن يفقد طفلك قيمه، أن يتأخر دراسيًا، أو ألا يزدهر في بيئة منظمة.",
+    "problem_philosophical_title": "المشكلة الفلسفية",
+    "problem_philosophical_text": "كل طفل يستحق تربية تغذي العقل والروح معًا، تعزّز الإيمان دون التضحية بالمستقبل الأكاديمي.",
+    "guide_title": "نحن نتفهّم مخاوفك",
+    "guide_text": "منذ 2023، تواكب أكاديمية الأمين الأسر السنغالية في هذا المسعى الدقيق: تقديم تربية إسلامية متميزة مع ضمان ازدهار كل طفل ونجاحه الأكاديمي.",
+    "plan_title": "ثلاث خطوات بسيطة للبدء",
+    "plan_title_html": "ثلاث خطوات بسيطة <span class=\"text-secondary\">للبدء</span>",
+    "plan_subtitle": "مسار شفاف وسهل لتسجيل طفلك.",
+    "plan_step1_title": "سجّل طفلك",
+    "plan_step1_text": "املأ نموذج التسجيل عبر الإنترنت. الأمر لا يستغرق سوى دقائق قليلة.",
+    "plan_step2_title": "ينضمّ إلى صفّه",
+    "plan_step2_text": "يلتحق طفلك بالبرنامج الذي يناسب عمره وأهدافه.",
+    "plan_step3_title": "يتقدّم كلّ يوم",
+    "plan_step3_text": "متابعة شخصية وتقارير منتظمة. تشاهد تقدّم طفلك في الوقت الفعلي.",
+    "programs_title": "برامجنا الثلاثة",
+    "programs_title_html": "<span class=\"text-primary\">برامجنا</span> الثلاثة",
+    "programs_subtitle": "كل برنامج مصمَّم لتلبية الاحتياجات الخاصة لطفلك.",
+    "popular_badge": "الأكثر طلبًا",
+    "learn_more": "اعرف المزيد",
+    "register_now": "سجّل الآن",
+    "testimonials_title": "ماذا تقول الأسر",
+    "testimonials_title_html": "ماذا تقول <span class=\"text-primary\">الأسر</span>",
+    "testimonials_subtitle": "اكتشف تحوّلات طلابنا ونجاحاتهم من خلال شهادات أسرهم.",
+    "all_reviews": "اقرأ جميع تقييمات غوغل",
+    "more_testimonials": "المزيد من الشهادات",
+    "failure_title": "لا تدع الوقت يمضي",
+    "failure_text": "كل سنة انتظار هي سنة لا يبني فيها طفلك أساس تربية إسلامية منظمة.",
+    "final_cta_title": "انضمّ إلى عائلتنا",
+    "final_cta_title_html": "انضمّ إلى <span class=\"text-secondary\">عائلتنا</span>",
+    "final_cta_text": "هل أنت مستعد لتقديم تربية إسلامية متميزة لطفلك؟ التسجيل مفتوح لجميع برامجنا."
+  },
+  "about": {
+    "hero_title": "عن دارة الأمين أكاديمي",
+    "hero_subtitle": "شريكك الموثوق لتميّز طفلك الأكاديمي والروحي.",
+    "mission_label": "مهمتنا",
+    "mission_title": "التربية بالتميّز",
+    "mission_text": "تقديم تربية شاملة تجمع بين حفظ القرآن الكريم وتكوين أكاديمي متين.",
+    "vision_label": "رؤيتنا",
+    "vision_title": "نبني المستقبل معًا",
+    "vision_text": "أن نصبح المرجع الرائد للمدارس القرآنية الحديثة في غرب إفريقيا.",
+    "values_label": "قِيَمُنَا",
+    "values_title": "أعمدة التميّز لدينا",
+    "value_adab": "الأدب والسلوك",
+    "value_excellence": "التميّز",
+    "value_modernity": "الحداثة",
+    "value_kindness": "الرحمة والرفق",
+    "team_title": "مهنيون متفانون",
+    "timeline_title": "تاريخنا ومحطاتنا"
+  },
+  "contact": {
+    "hero_title": "اتصل بنا",
+    "hero_subtitle": "لديك سؤال حول برامجنا؟ تحتاج إلى معلومات؟ فريقنا في خدمتك.",
+    "phone_label": "الهاتف",
+    "phone_hours": "متاح من الإثنين إلى السبت، من 8 صباحًا إلى 6 مساءً",
+    "email_label": "البريد الإلكتروني",
+    "email_response": "ردّ خلال 24 ساعة",
+    "whatsapp_label": "واتساب",
+    "whatsapp_hint": "محادثة فورية متاحة",
+    "address_label": "الموقع",
+    "phone1": "+221 77 774 37 00",
+    "phone2": "+221 77 785 07 89",
+    "email": "daara@alamineacademy.com",
+    "address": "مدينة القضاة، خلف كير يوف، داكار"
+  },
+  "admission": {
+    "hero_title": "التسجيل والقبول",
+    "hero_subtitle": "انضمّ إلى دارة الأمين أكاديمي عبر خطوات تسجيل بسيطة وشفافة.",
+    "open_badge": "التسجيل لعام 2026 مفتوح",
+    "steps_title": "خطوات التسجيل",
+    "step1": "املأ النموذج",
+    "step2": "المقابلة",
+    "step3": "التسجيل",
+    "step4": "بدء الدراسة",
+    "fees_title": "الرسوم الدراسية",
+    "fees_subtitle": "شفافة وتنافسية"
+  },
+  "testimonials_page": {
+    "hero_title": "الشهادات",
+    "hero_subtitle": "اكتشف لماذا تثق أكثر من 150 أسرة بدارة الأمين أكاديمي.",
+    "stat_families": "أسر راضية",
+    "stat_rating": "متوسط التقييم",
+    "stat_recommend": "ينصحون بالمدرسة"
+  },
+  "gallery": {
+    "hero_title": "المعرض",
+    "hero_subtitle": "اطّلع على يوميات طلابنا من خلال صورنا وفيديوهاتنا.",
+    "categories_title": "الفئات",
+    "cat_classes": "القاعات الدراسية",
+    "cat_sport": "الرياضة",
+    "cat_events": "الفعاليات",
+    "cat_building": "المبنى",
+    "cat_canteen": "المطعم"
+  },
+  "blog": {
+    "hero_title": "مدوّنتنا التربوية",
+    "hero_subtitle": "اكتشف أدلتنا الشاملة، مقالاتنا المقارنة، وشهاداتنا حول التربية القرآنية الحديثة.",
+    "filter_all": "الكل",
+    "filter_guides": "الأدلة",
+    "filter_comparatifs": "المقارنات",
+    "filter_methodes": "المناهج",
+    "filter_testimonials": "الشهادات"
+  },
+  "footer": {
+    "description": "مدرسة قرآنية حديثة مكرّسة لحفظ القرآن الكريم وتحقيق التميّز الأكاديمي.",
+    "navigation": "روابط",
+    "programs": "البرامج",
+    "contact": "اتصل بنا",
+    "follow": "تابعنا",
+    "legal": "الإشعارات القانونية",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الاستخدام",
+    "copyright": "© 2026 دارة الأمين أكاديمي. جميع الحقوق محفوظة."
+  },
+  "cta": {
+    "register": "املأ نموذج التسجيل",
+    "contact": "اتصل بنا",
+    "whatsapp": "تواصل عبر واتساب",
+    "learn_more": "اعرف المزيد",
+    "back_home": "العودة إلى الرئيسية"
+  },
+  "programme_internat": {
+    "hero_title": "برنامج التحفيظ الكامل",
+    "hero_subtitle": "حفظ القرآن الكريم كاملًا في الإقامة الداخلية مع إشراف متميّز ورعاية شاملة."
+  },
+  "programme_combined": {
+    "hero_title_html": "البرنامج المختلط<br/><span class=\"text-secondary\">تحفيظ + أكاديمي</span>",
+    "hero_subtitle_html": "أفضل ما في العالمين: يحفظ طفلك القرآن <strong>و</strong> يتابع المنهج الفرنسي الرسمي."
+  },
+  "programme_mixed": {
+    "hero_title": "البرنامج المختلط — خارجي",
+    "hero_subtitle": "قرآن في الصباح، منهج أكاديمي بعد الظهر. يعود طفلك إلى المنزل كل مساء — للأسر التي تريد إبقاء أطفالها قريبين مع تقديم التحفيظ والدراسة."
+  },
+  "programme_online": {
+    "hero_title": "تعلّم القرآن من بيتك"
+  },
+  "programme_free": {
+    "hero_title": "دروس مجانية للجميع"
+  },
+  "lang_label": "اللغة",
+  "page_404": {
+    "code": "404",
+    "title": "الصفحة غير موجودة",
+    "subtitle": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    "description": "عُد إلى الصفحة الرئيسية لاكتشاف مدرستنا القرآنية وبرامجنا لحفظ القرآن.",
+    "back_home": "العودة إلى الرئيسية",
+    "contact_us": "اتصل بنا",
+    "quick_nav": "روابط سريعة:"
+  },
+  "conferences_page": {
+    "hero_badge": "أحداث وعلم",
+    "hero_title_html": "المحاضرات <span class=\"text-secondary\">و</span> التكوينات",
+    "hero_subtitle": "اكتشف محاضراتنا الإسلامية، تكويناتنا وندواتنا المنظَّمة لنشر العلم وتعزيز المجتمع."
+  }
+}

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAARA Al Amine Academy — Information Sheet</title>
+    <meta name="description" content="Fiche d'information officielle de la DAARA Al Amine Academy à Dakar : programmes Tahfiz, internat, bilingue arabe-français, admissions et contacts.">
+    <link rel="icon" type="image/png" href="assets/img/LogoAAA.png">
+    <link rel="canonical" href="https://alamineacademy.com/Information_Sheet_Al_Amine_Academy.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1E7A9A;
+            --primary-light: rgba(30, 122, 154, 0.08);
+            --primary-dark: #155d76;
+            --secondary: #F4C640;
+            --secondary-light: rgba(244, 198, 64, 0.15);
+            --dark: #1a1a2e;
+            --gray: #4b5563;
+            --light-bg: #f8f9fa;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background: #fff;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media print {
+            .page {
+                page-break-after: always;
+                margin: 0;
+                padding: 0;
+                width: 210mm;
+                min-height: 297mm;
+            }
+            body {
+                background: #fff;
+            }
+        }
+
+        /* ===== PAGE 1 - COVER ===== */
+        .cover-page {
+            background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        .cover-top-bar {
+            background: rgba(255,255,255,0.1);
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .cover-logo-large {
+            width: 160px;
+            height: 160px;
+            margin-bottom: 24px;
+        }
+
+        .cover-logo-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            font-weight: 400;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .cover-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 20px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cover-title {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cover-subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cover-desc {
+            font-size: 13.5px;
+            line-height: 1.8;
+            max-width: 520px;
+            opacity: 0.92;
+            font-weight: 400;
+        }
+
+        .cover-bottom {
+            padding: 20px 40px 30px;
+        }
+
+        .cover-nav {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .cover-nav-item {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            font-size: 10.5px;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cover-website {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            opacity: 0.7;
+        }
+
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.08);
+        }
+        .deco-circle-1 { width: 300px; height: 300px; top: -80px; right: -80px; }
+        .deco-circle-2 { width: 200px; height: 200px; bottom: 80px; left: -60px; }
+        .deco-circle-3 { width: 150px; height: 150px; top: 200px; left: -40px; border-color: rgba(244,198,64,0.15); }
+
+        /* ===== PAGE 2 - PROGRAMS ===== */
+        .content-page {
+            padding: 32px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 28px;
+        }
+
+        .page-header-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .page-header-logo .logo-circle {
+            width: 34px;
+            height: 34px;
+        }
+
+        .page-header-logo .logo-circle svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .page-header-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .page-number {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gray);
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-line {
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .program-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary);
+            border-radius: 4px 0 0 4px;
+        }
+
+        .program-card.tahfiz::before {
+            background: var(--secondary);
+        }
+
+        .program-name {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .program-desc {
+            font-size: 12.5px;
+            line-height: 1.7;
+            color: var(--gray);
+            margin-bottom: 14px;
+        }
+
+        .program-motto {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--primary);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .subjects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .subject-tag {
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 14px;
+            border-radius: 20px;
+        }
+
+        .selfdefense-note {
+            background: var(--secondary-light);
+            border-left: 3px solid var(--secondary);
+            padding: 10px 16px;
+            border-radius: 0 8px 8px 0;
+            font-size: 11.5px;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .tahfiz-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 14px 0;
+        }
+
+        .tahfiz-list li {
+            font-size: 12px;
+            color: var(--gray);
+            padding: 4px 0;
+            padding-left: 22px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .tahfiz-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .tahfiz-note {
+            background: var(--primary-light);
+            border-left: 3px solid var(--primary);
+            padding: 10px 16px;
+            border-radius: 0 8px 8px 0;
+            font-size: 11px;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .tahfiz-note strong {
+            color: var(--primary);
+        }
+
+        /* ===== PAGE 3 - FEES & DOCS ===== */
+        .fees-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .fee-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 14px;
+            padding: 24px;
+            color: #fff;
+        }
+
+        .fee-card.secondary {
+            background: linear-gradient(135deg, #d4a825, #b8920e);
+        }
+
+        .fee-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.85;
+            margin-bottom: 8px;
+        }
+
+        .fee-amount {
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .fee-currency {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .fee-desc {
+            font-size: 11px;
+            opacity: 0.85;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        .tuition-section {
+            margin-bottom: 24px;
+        }
+
+        .tuition-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tuition-program {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .tuition-details {
+            font-size: 11px;
+            color: var(--gray);
+        }
+
+        .tuition-price {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .tuition-price span {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .boarding-notice {
+            background: linear-gradient(135deg, #fff3cd, #fef9e7);
+            border: 2px solid var(--secondary);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .boarding-icon {
+            background: var(--secondary);
+            color: var(--dark);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .boarding-text {
+            font-size: 12px;
+            line-height: 1.7;
+            color: var(--dark);
+        }
+
+        .boarding-text strong {
+            color: #b8920e;
+            font-weight: 800;
+        }
+
+        .docs-section {
+            margin-bottom: 16px;
+        }
+
+        .sub-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .doc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+
+        .doc-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 12.5px;
+            font-weight: 500;
+            color: var(--dark);
+            margin-bottom: 6px;
+            background: var(--light-bg);
+        }
+
+        .doc-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--primary);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .important-notice {
+            background: #fef2f2;
+            border: 1px solid #fca5a5;
+            border-radius: 10px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .important-notice .icon {
+            color: #dc2626;
+            font-size: 18px;
+        }
+
+        .important-notice p {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #991b1b;
+            margin: 0;
+        }
+
+        /* ===== PAGE 4 - OTHER PROGRAMS ===== */
+        .other-programs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .other-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 22px 24px;
+            position: relative;
+        }
+
+        .other-card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .other-card-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .other-card-desc {
+            font-size: 12px;
+            line-height: 1.7;
+            color: var(--gray);
+        }
+
+        .contact-cta {
+            background: var(--primary-light);
+            border: 1px dashed var(--primary);
+            border-radius: 10px;
+            padding: 12px 18px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* ===== PAGE 5 - CONTACT ===== */
+        .contact-page-inner {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .location-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .location-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .location-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .location-address {
+            font-size: 12.5px;
+            line-height: 1.7;
+            color: var(--gray);
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .contact-info-card {
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-info-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .contact-info-value {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .footer-bar {
+            margin-top: auto;
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 12px 12px 0 0;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .footer-bar span {
+            font-weight: 700;
+        }
+
+        /* ===== UTILITIES ===== */
+        .page-footer {
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            color: #9ca3af;
+        }
+
+        .single-location {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .single-location .location-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 26px;
+        }
+
+        .single-location .location-label {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .single-location .location-address {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1 — COVER ==================== -->
+<div class="page cover-page">
+    <div class="deco-circle deco-circle-1"></div>
+    <div class="deco-circle deco-circle-2"></div>
+    <div class="deco-circle deco-circle-3"></div>
+
+    <div class="cover-top-bar">
+        <div class="logo-area">
+            <div class="logo-circle">
+                <img src="LogoAAA.png" alt="DAARA Al Amine Academy">
+            </div>
+            <div>
+                <div class="logo-text">Al Amine Academy</div>
+                <div class="logo-sub">YARR AK XAM-XAM</div>
+            </div>
+        </div>
+        <div style="font-size: 10px; opacity: 0.7; letter-spacing: 1px;">DAKAR, SENEGAL</div>
+    </div>
+
+    <div class="cover-content">
+        <div class="cover-logo-large">
+            <img src="LogoAAA.png" alt="DAARA Al Amine Academy">
+        </div>
+        <div class="cover-badge">School of Quranic Excellence</div>
+        <h1 class="cover-title">Daara Al Amine<br>Academy</h1>
+        <p class="cover-subtitle">Information Sheet</p>
+        <p class="cover-desc">
+            A modern private Daara dedicated to the memorization of the Noble Quran,
+            open to boys and girls aged 6 to 12.
+            Our Daara places each student at the center of attention and applies a
+            tailored program to foster the personal and spiritual growth of every child.
+            Our small class sizes ensure quality follow-up of religious and moral education.
+        </p>
+    </div>
+
+    <div class="cover-bottom">
+        <div class="cover-nav">
+            <div class="cover-nav-item">Levels</div>
+            <div class="cover-nav-item">Extracurricular Activities</div>
+            <div class="cover-nav-item">Registration Fees</div>
+            <div class="cover-nav-item">Tuition Fees</div>
+            <div class="cover-nav-item">Required Documents</div>
+            <div class="cover-nav-item">Other Programs</div>
+        </div>
+        <div class="cover-website">WWW.ALAMINEACADEMY.COM</div>
+    </div>
+</div>
+
+<!-- ==================== PAGE 2 — PROGRAMS ==================== -->
+<div class="page content-page">
+    <div class="page-header">
+        <div class="page-header-logo">
+            <div class="logo-circle">
+                <img src="LogoAAA.png" alt="DAARA Al Amine Academy">
+            </div>
+            <span class="page-header-title">Al Amine Academy</span>
+        </div>
+        <span class="page-number">02 / 05</span>
+    </div>
+
+    <h2 class="section-title">Our Programs</h2>
+    <div class="section-line"></div>
+
+    <!-- Elementary Program -->
+    <div class="program-card">
+        <div class="program-name">Elementary Program</div>
+        <p class="program-motto">"Yarr ak Xam-Xam" — Good character and knowledge</p>
+        <p class="program-desc">
+            A quality academic program based on excellence and good behavior.
+            The teaching is structured around the following subjects:
+        </p>
+        <div class="subjects-grid">
+            <span class="subject-tag">French</span>
+            <span class="subject-tag">English</span>
+            <span class="subject-tag">Quran</span>
+            <span class="subject-tag">Islamic Education</span>
+            <span class="subject-tag">Sports</span>
+        </div>
+        <div class="selfdefense-note">
+            To build self-confidence, we offer <strong>Self-Defense</strong> classes outside of regular school hours, allowing each child to ensure their safety on a daily basis.
+        </div>
+    </div>
+
+    <!-- Tahfiz Program -->
+    <div class="program-card tahfiz">
+        <div class="program-name">Tahfiz Program</div>
+        <p class="program-desc">
+            Give your child the opportunity to learn and memorize the Noble Quran in a caring and stimulating environment! The Tahfiz program is designed for children aged 5 to 10 and offers quality educational guidance, combining:
+        </p>
+        <ul class="tahfiz-list">
+            <li>Complete memorization of the Quran</li>
+            <li>Learning the rules of Tajweed for correct and respectful recitation</li>
+            <li>Islamic education adapted to the students' age</li>
+            <li>Fun and educational activities promoting personal development</li>
+        </ul>
+        <div class="tahfiz-note">
+            <strong>NB:</strong> Upon completion of Quran memorization, students have the opportunity to follow a three-year training program in preparation for the CFEE (Certificate of Elementary Studies).
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span>DAARA Al Amine Academy — Information Sheet</span>
+        <span>www.alamineacademy.com</span>
+    </div>
+</div>
+
+<!-- ==================== PAGE 3 — FEES & DOCUMENTS ==================== -->
+<div class="page content-page">
+    <div class="page-header">
+        <div class="page-header-logo">
+            <div class="logo-circle">
+                <img src="LogoAAA.png" alt="DAARA Al Amine Academy">
+            </div>
+            <span class="page-header-title">Al Amine Academy</span>
+        </div>
+        <span class="page-number">03 / 05</span>
+    </div>
+
+    <h2 class="section-title">Fees & Documents</h2>
+    <div class="section-line"></div>
+
+    <!-- Registration Fee -->
+    <div class="fees-grid">
+        <div class="fee-card">
+            <div class="fee-label">Registration Fee</div>
+            <div class="fee-amount">95,000 <span class="fee-currency">XOF</span></div>
+            <div class="fee-desc">Per student, for each class level</div>
+        </div>
+        <div class="fee-card secondary">
+            <div class="fee-label">Boarding Surcharge</div>
+            <div class="fee-amount">+15,000 <span class="fee-currency">XOF</span></div>
+            <div class="fee-desc">Monthly supplement for students staying for one month or more (in addition to tuition)</div>
+        </div>
+    </div>
+
+    <!-- Tuition -->
+    <div class="tuition-section">
+        <div class="sub-title">Monthly Tuition Fees</div>
+        <div class="tuition-card">
+            <div>
+                <div class="tuition-program">Tahfiz Program</div>
+                <div class="tuition-details">Quran only &amp; Sports</div>
+            </div>
+            <div class="tuition-price">100,000 <span>XOF/month</span></div>
+        </div>
+        <div class="tuition-card">
+            <div>
+                <div class="tuition-program">Elementary Program</div>
+                <div class="tuition-details">Quran, French, English &amp; Sports</div>
+            </div>
+            <div class="tuition-price">115,000 <span>XOF/month</span></div>
+        </div>
+    </div>
+
+    <!-- Boarding notice -->
+    <div class="boarding-notice">
+        <div class="boarding-icon">!</div>
+        <div class="boarding-text">
+            <strong>Monthly Boarding Fee:</strong> Students who stay on campus for one month or more are required to pay an additional fee of <strong>15,000 XOF per month</strong> on top of their regular tuition fees.
+        </div>
+    </div>
+
+    <!-- Documents -->
+    <div class="docs-section">
+        <div class="sub-title">Required Documents</div>
+        <ul class="doc-list">
+            <li>
+                <div class="doc-icon">📋</div>
+                The registration form (completed)
+            </li>
+            <li>
+                <div class="doc-icon">📄</div>
+                Birth certificate
+            </li>
+            <li>
+                <div class="doc-icon">📷</div>
+                2 passport-size photos of the child
+            </li>
+            <li>
+                <div class="doc-icon">✍️</div>
+                The internal rules and regulations, duly signed
+            </li>
+            <li>
+                <div class="doc-icon">🏥</div>
+                Medical certificate
+            </li>
+        </ul>
+        <div class="important-notice">
+            <span class="icon">⚠️</span>
+            <p>IMPORTANT: Any incomplete application will not be considered.</p>
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span>DAARA Al Amine Academy — Information Sheet</span>
+        <span>www.alamineacademy.com</span>
+    </div>
+</div>
+
+<!-- ==================== PAGE 4 — OTHER PROGRAMS ==================== -->
+<div class="page content-page">
+    <div class="page-header">
+        <div class="page-header-logo">
+            <div class="logo-circle">
+                <img src="LogoAAA.png" alt="DAARA Al Amine Academy">
+            </div>
+            <span class="page-header-title">Al Amine Academy</span>
+        </div>
+        <span class="page-number">04 / 05</span>
+    </div>
+
+    <h2 class="section-title">Other Programs</h2>
+    <div class="section-line"></div>
+
+    <div class="other-programs-grid">
+        <!-- Weekly Adult Classes -->
+        <div class="other-card">
+            <div class="other-card-icon">📖</div>
+            <div class="other-card-title">Weekly Classes for Adults</div>
+            <p class="other-card-desc">
+                Al Amine Academy Institute offers parents various Islamic courses: learning to read the Quran, Tajweed lessons, and Islamic sciences (Tawhid, Fiqh).
+            </p>
+        </div>
+
+        <!-- Online Courses for Teenagers -->
+        <div class="other-card">
+            <div class="other-card-icon">💻</div>
+            <div class="other-card-title">Courses for Teenagers</div>
+            <p class="other-card-desc">
+                To help children stay on track or progress from home during the school year, we have set up online courses to learn the Quran and Islamic sciences.
+            </p>
+            <div class="contact-cta">
+                For more information, contact: +221 77 785 07 89
+            </div>
+        </div>
+
+        <!-- Islamic Training -->
+        <div class="other-card">
+            <div class="other-card-icon">🕌</div>
+            <div class="other-card-title">Islamic Training Sessions</div>
+            <p class="other-card-desc">
+                Free classes are held on weekends at the Institute. The courses cover Quran exegesis (Tafsir), the history of the Prophet (PBUH) and His Companions. These courses are also available online on our YouTube channel, which we invite you to subscribe to now.
+            </p>
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span>DAARA Al Amine Academy — Information Sheet</span>
+        <span>www.alamineacademy.com</span>
+    </div>
+</div>
+
+<!-- ==================== PAGE 5 — CONTACT ==================== -->
+<div class="page content-page">
+    <div class="page-header">
+        <div class="page-header-logo">
+            <div class="logo-circle">
+                <img src="LogoAAA.png" alt="DAARA Al Amine Academy">
+            </div>
+            <span class="page-header-title">Al Amine Academy</span>
+        </div>
+        <span class="page-number">05 / 05</span>
+    </div>
+
+    <div class="contact-page-inner">
+        <h2 class="section-title">Location & Contact</h2>
+        <div class="section-line"></div>
+
+        <div class="single-location">
+            <div class="location-icon" style="margin: 0 auto 14px;">📍</div>
+            <div class="location-label">Both Campuses (Boys & Girls)</div>
+            <p class="location-address">
+                Cité des Magistrats,<br>
+                behind Kër Yoff,<br>
+                Dakar
+            </p>
+        </div>
+
+        <div class="contact-info-grid">
+            <div class="contact-info-card">
+                <div class="contact-info-icon">📞</div>
+                <div class="contact-info-label">Phone</div>
+                <div class="contact-info-value">77 774 37 00</div>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-info-icon">✉️</div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-value">contact@alamineacademy.com</div>
+            </div>
+        </div>
+
+        <div class="footer-bar">
+            <span>DAARA AL AMINE ACADEMY</span> — Yarr ak Xam-Xam — www.alamineacademy.com
+        </div>
+    </div>
+
+    <div class="page-footer">
+        <span>DAARA Al Amine Academy — Information Sheet</span>
+        <span>www.alamineacademy.com</span>
+    </div>
+</div>
+
+</body>
+</html>
