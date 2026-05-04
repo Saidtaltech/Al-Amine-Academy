@@ -113,6 +113,12 @@
   <meta content="fr_SN" property="og:locale"/>
   <meta content="summary_large_image" name="twitter:card"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <style>
+    /* Fallback: keep content visible before AOS initializes */
+    [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .aos-initialized [data-aos] { opacity: 0; transform: initial; transition: all 0.8s ease-in-out; }
+    .aos-initialized [data-aos].aos-animate { opacity: 1; transform: none; }
+  </style>
 </head>
 
 <body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
