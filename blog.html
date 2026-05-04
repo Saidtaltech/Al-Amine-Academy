@@ -163,22 +163,8 @@
     }
   }
   </script>
-  <style>
-    /* Fallback: keep content visible before AOS initializes */
-    [data-aos] {
-      opacity: 1 !important;
-      transform: none !important;
-      transition: none !important;
-    }
-    .aos-initialized [data-aos] {
-      opacity: 0;
-      transform: initial;
-      transition: all 0.8s ease-in-out;
-    }
-    .aos-initialized [data-aos].aos-animate {
-      opacity: 1;
-      transform: none;
-    }
+  <style id="aos-preload">
+    [data-aos] { opacity: 1 !important; transform: none !important; }
   </style>
 </head>
 
@@ -645,6 +631,7 @@
   <script>
     // AOS Init
     AOS.init({ duration: 800, once: true, offset: 50 });
+    var aosPreload = document.getElementById("aos-preload"); if (aosPreload) aosPreload.remove();
 
     // Mobile menu toggle
     function toggleMenu() {
