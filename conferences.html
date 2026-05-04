@@ -44,6 +44,23 @@
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
         .card-hover { transition: all 0.3s ease; }
     </style>
+  <style>
+    /* Fallback: keep content visible before AOS initializes */
+    [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .aos-initialized [data-aos] {
+      opacity: 0;
+      transform: initial;
+      transition: all 0.8s ease-in-out;
+    }
+    .aos-initialized [data-aos].aos-animate {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
 </head>
 <body class="font-sans bg-white dark:bg-slate-950 text-gray-800 dark:text-gray-200 transition-colors duration-300">
 
