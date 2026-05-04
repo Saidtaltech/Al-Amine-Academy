@@ -65,7 +65,13 @@
   <link href="https://alamineacademy.com/programme-cours-gratuits.html" hreflang="ar" rel="alternate"/>
   <link href="https://alamineacademy.com/programme-cours-gratuits.html" hreflang="es" rel="alternate"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
- </head>
+   <style>
+    /* Fallback: keep content visible before AOS initializes */
+    [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .aos-initialized [data-aos] { opacity: 0; transform: initial; transition: all 0.8s ease-in-out; }
+    .aos-initialized [data-aos].aos-animate { opacity: 1; transform: none; }
+  </style>
+</head>
  <body class="antialiased bg-white">
   <!-- WhatsApp Button -->
   <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group" href="https://wa.me/221777743700" target="_blank">
