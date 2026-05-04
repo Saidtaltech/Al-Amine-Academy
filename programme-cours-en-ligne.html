@@ -56,11 +56,8 @@
   <link href="https://alamineacademy.com/programme-cours-en-ligne.html" hreflang="ar" rel="alternate"/>
   <link href="https://alamineacademy.com/programme-cours-en-ligne.html" hreflang="es" rel="alternate"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
-   <style>
-    /* Fallback: keep content visible before AOS initializes */
-    [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
-    .aos-initialized [data-aos] { opacity: 0; transform: initial; transition: all 0.8s ease-in-out; }
-    .aos-initialized [data-aos].aos-animate { opacity: 1; transform: none; }
+   <style id="aos-preload">
+    [data-aos] { opacity: 1 !important; transform: none !important; }
   </style>
 </head>
  <body class="antialiased bg-white">
@@ -544,6 +541,7 @@
   </script>
   <script>
    AOS.init({ duration: 800, once: true });
+    var aosPreload = document.getElementById("aos-preload"); if (aosPreload) aosPreload.remove();
    function toggleMenu() {
      const menu = document.getElementById('mobileMenu');
      const icon = document.getElementById('menuIcon');
