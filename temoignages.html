@@ -107,9 +107,6 @@
   <meta content="fr_SN" property="og:locale"/>
   <meta content="summary_large_image" name="twitter:card"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
-  <style id="aos-preload">
-    [data-aos] { opacity: 1 !important; transform: none !important; }
-  </style>
 </head>
 
 <body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
@@ -629,7 +626,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: false, easing: 'ease-out-quart' });
-    var aosPreload = document.getElementById("aos-preload"); if (aosPreload) aosPreload.remove();
 
     const navbar = document.getElementById('navbar');
     const navTitle = document.getElementById('navTitle');
@@ -702,7 +698,7 @@
     });
   </script>
 
-  <script src="translations.js?v=30260429b"></script>
-  <script src="lang.js?v=30260429b"></script>
+  <script src="translations.js"></script>
+  <script src="lang.js"></script>
 </body>
 </html>

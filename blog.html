@@ -162,9 +162,6 @@
     }
   }
   </script>
-  <style id="aos-preload">
-    [data-aos] { opacity: 1 !important; transform: none !important; }
-  </style>
 </head>
 
 <body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
@@ -630,7 +627,6 @@
   <script>
     // AOS Init
     AOS.init({ duration: 800, once: true, offset: 50 });
-    var aosPreload = document.getElementById("aos-preload"); if (aosPreload) aosPreload.remove();
 
     // Mobile menu toggle
     function toggleMenu() {
@@ -721,7 +717,7 @@
 
     // Language switch — handled by lang.js
   </script>
-  <script src="translations.js?v=20260429b"></script>
-  <script src="lang.js?v=20260429b"></script>
+  <script src="translations.js"></script>
+  <script src="lang.js"></script>
 </body>
 </html>
