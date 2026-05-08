@@ -1,666 +1,158 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Inscription et Admission | DAARA Al Amine Academy Dakar 2026</title>
-  <meta content="Processus d'admission à DAARA Al Amine Academy Dakar. Inscription 2026 ouverte. Frais, conditions, documents requis et étapes pour inscrire votre enfant." name="description"/>
-  <meta content="inscription daara, admission daara dakar, tarifs école coranique, formulaire inscription, documents admission daara" name="keywords"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admission & inscription — DAARA Al Amine Academy</title>
+  <meta name="description" content="Inscriptions ouvertes à DAARA Al Amine Academy : 3 étapes simples, frais d'inscription 95 000 FCFA, programmes à partir de 100 000 FCFA/mois."/>
+  <link rel="canonical" href="https://alamineacademy.com/admission.html"/>
+  <link rel="icon" type="image/png" href="assets/img/LogoAAA.png"/>
+  <link rel="apple-touch-icon" href="assets/img/LogoAAA.png"/>
+  <link rel="alternate" hreflang="fr" href="https://alamineacademy.com/admission.html"/>
+  <link rel="alternate" hreflang="en" href="https://alamineacademy.com/admission.html"/>
+  <link rel="alternate" hreflang="ar" href="https://alamineacademy.com/admission.html"/>
+  <link rel="alternate" hreflang="es" href="https://alamineacademy.com/admission.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://alamineacademy.com/admission.html"/>
+  <meta property="og:title" content="Admission & inscription — DAARA Al Amine Academy"/>
+  <meta property="og:description" content="Inscriptions ouvertes à DAARA Al Amine Academy : 3 étapes simples, frais d'inscription 95 000 FCFA, programmes à partir de 100 000 FCFA/mois."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://alamineacademy.com/admission.html"/>
+  <meta property="og:image" content="https://alamineacademy.com/assets/img/LogoAAA.png"/>
+  <meta property="og:locale" content="fr_SN"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-
+  <link rel="stylesheet" href="assets/css/site.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8', 50: '#f0f9fc' },
-            secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
-            accent: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-            coral: { DEFAULT: '#f43f5e', dark: '#e11d48', light: '#ffe4e6' },
-            teal: {
-              50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
-              400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
-              800: '#0f4457', 900: '#0a3040', 950: '#061e2a'
-            }
+            primary:   { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73', light: '#e8f4f8' },
+            secondary: { DEFAULT: '#f5a623', dark: '#d97706', light: '#fef3c7' },
+            ink:       { DEFAULT: '#0f172a', soft: '#334155', muted: '#64748b' }
           },
           fontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
-            arabic: ['Amiri', 'serif']
+            sans:    ['Montserrat', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif'],
+            arabic:  ['Amiri', 'serif']
           }
         }
       }
-    }
+    };
   </script>
-
-  <style>
-    body { font-family: 'Montserrat', sans-serif; }
-    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .gradient-animate {
-      background-size: 200% 200%;
-      animation: gradientShift 8s ease infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    .float { animation: float 6s ease-in-out infinite; }
-    .float-delay { animation: float 6s ease-in-out 2s infinite; }
-
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(30, 122, 154, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(30, 122, 154, 0.6); }
-    }
-    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
-
-    .card-3d {
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .card-3d:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    .nav-scrolled {
-      background: rgba(255,255,255,0.95) !important;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    }
-    .dark .nav-scrolled {
-      background: rgba(15,23,42,0.95) !important;
-    }
-
-    * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-
-    .text-gradient {
-      background: linear-gradient(135deg, #1e7a9a, #1e7a9a, #f59e0b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e7a9a, #1e7a9a); border-radius: 10px; }
-    .dark ::-webkit-scrollbar-track { background: #1e293b; }
-
-    .accordion-button {
-      background-color: transparent;
-      border: none;
-      color: inherit;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      padding: 1rem;
-      width: 100%;
-      text-align: left;
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .accordion-button.active {
-      color: #1e7a9a;
-      background-color: rgba(30, 122, 154, 0.05);
-    }
-
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .accordion-content.active {
-      max-height: 500px;
-    }
-  </style>
-
-  <link href="https://alamineacademy.com/admission.html" rel="canonical"/>
-  <meta content="Inscription et Admission | DAARA Al Amine Academy" property="og:title"/>
-  <meta content="Découvrez nos tarifs, conditions d'admission et comment s'inscrire à DAARA Al Amine Academy." property="og:description"/>
-  <meta content="website" property="og:type"/>
-  <meta content="https://alamineacademy.com/admission.html" property="og:url"/>
-  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" property="og:image"/>
-  <meta content="fr_SN" property="og:locale"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  
 </head>
 
-<body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
+<body class="antialiased">
 
-  <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp text-3xl"></i>
-    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
-  </a>
-
-  <!-- ==================== NAVBAR ==================== -->
-  <!-- ====================  NAVBAR (injecté par site-shell.js)  ==================== -->
+  <div id="aaa-wa"></div>
   <div id="aaa-navbar">
     <noscript><nav class="fixed top-0 left-0 right-0 z-50 bg-white p-4 border-b border-slate-200">
-      <a href="index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> ·
-      <a href="a-propos.html">À Propos</a> ·
-      <a href="admission.html">Admission</a> ·
-      <a href="contact.html">Contact</a>
+      <a href="index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> · <a href="a-propos.html">À Propos</a> · <a href="admission.html">Admission</a> · <a href="contact.html">Contact</a>
     </nav></noscript>
   </div>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-primary-dark to-slate-900 gradient-animate pt-20">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl float"></div>
-      <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/15 rounded-full blur-3xl float-delay"></div>
-      <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  
+  <header class="page-header">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <p class="eyebrow text-secondary mb-4">Admission 2026 ouverte</p>
+      <h1 class="text-4xl md:text-6xl text-white mb-5 max-w-3xl mx-auto">Inscription &amp; <span class='text-secondary'>admission</span></h1>
+      <p class="text-white/85 text-lg max-w-2xl mx-auto">Rejoignez DAARA Al Amine Academy en suivant nos étapes d'inscription simples et transparentes.</p>
     </div>
+  </header>
 
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center">
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6 border border-white/10">
-          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          <span data-i18n="admission.open_badge">Inscriptions 2026 ouvertes</span>
-        </div>
-        <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-          <span class="text-gradient" data-i18n="admission.hero_title">Inscription & Admission</span>
-        </h1>
-        <p class="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed" data-i18n="admission.hero_subtitle">
-          Rejoignez DAARA Al Amine Academy en suivant nos étapes d'inscription simples et transparentes
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ==================== STEPS SECTION ==================== -->
-  <section class="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="mb-16">
-        <img src="assets/img/accueil-eleves.jpg" alt="Accueil des nouveaux élèves" class="w-full h-64 object-cover rounded-2xl"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
-          <i class="fas fa-image text-white/30 text-5xl"></i>
-        </div>
+  
+  <section class="section">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <p class="eyebrow mb-3" data-i18n="admission.steps_eyebrow">Comment s'inscrire</p>
+        <h2 class="text-3xl md:text-4xl" data-i18n="admission.steps_title">3 étapes simples</h2>
       </div>
 
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Notre processus</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Étapes d'inscription</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Suivez ces 4 étapes simples pour inscrire votre enfant</p>
-      </div>
-
-      <!-- Steps -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="relative" data-aos="fade-up" data-aos-delay="0">
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 text-center card-3d border border-gray-100 dark:border-slate-700 h-full">
-            <div class="w-16 h-16 bg-gradient-to-br from-primary to-teal-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <span class="text-white font-bold text-2xl">1</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Remplir le formulaire</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
-              Remplissez notre formulaire en ligne avec les informations de votre enfant et votre contact.
-            </p>
-          </div>
-          <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-            <i class="fas fa-arrow-right text-primary text-2xl"></i>
-          </div>
-        </div>
-
-        <div class="relative" data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 text-center card-3d border border-gray-100 dark:border-slate-700 h-full">
-            <div class="w-16 h-16 bg-gradient-to-br from-secondary to-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <span class="text-gray-900 font-bold text-2xl">2</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Entretien</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
-              Un entretien avec la direction pour discuter des objectifs et de l'adaptation du programme.
-            </p>
-          </div>
-          <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-            <i class="fas fa-arrow-right text-secondary text-2xl"></i>
-          </div>
-        </div>
-
-        <div class="relative" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 text-center card-3d border border-gray-100 dark:border-slate-700 h-full">
-            <div class="w-16 h-16 bg-gradient-to-br from-accent to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <span class="text-white font-bold text-2xl">3</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Inscription</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
-              Finalisez l'inscription et payez les frais. Confirmation immédiate par email.
-            </p>
-          </div>
-          <div class="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-            <i class="fas fa-arrow-right text-accent text-2xl"></i>
-          </div>
-        </div>
-
-        <div class="relative" data-aos="fade-up" data-aos-delay="300">
-          <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 text-center card-3d border border-gray-100 dark:border-slate-700 h-full">
-            <div class="w-16 h-16 bg-gradient-to-br from-coral to-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-              <span class="text-white font-bold text-2xl">4</span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Rentrée</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
-              Bienvenue à DAARA ! Début des cours selon le calendrier scolaire.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PRICING SECTION ==================== -->
-  <section class="py-24 bg-gray-50 dark:bg-slate-800 relative overflow-hidden">
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-secondary/10 text-secondary dark:text-secondary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Tarifs</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Frais de scolarité</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Transparent et compétitif</p>
-      </div>
-
-      <!-- Pricing Table -->
-      <div class="bg-white dark:bg-slate-700 rounded-3xl overflow-hidden border border-gray-200 dark:border-slate-600 shadow-xl" data-aos="fade-up">
-        <div class="overflow-x-auto">
-          <table class="w-full">
-            <thead>
-              <tr class="bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/5 dark:to-secondary/5">
-                <th class="px-6 py-4 text-left font-bold text-gray-900 dark:text-white">Programme</th>
-                <th class="px-6 py-4 text-center font-bold text-gray-900 dark:text-white">Montant mensuel</th>
-                <th class="px-6 py-4 text-center font-bold text-gray-900 dark:text-white">Détails</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200 dark:divide-slate-600">
-              <tr class="hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Tahfiz Internat</td>
-                <td class="px-6 py-4 text-center text-lg font-bold text-primary">100 000 FCFA</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Coran + Sport</td>
-              </tr>
-              <tr class="hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Élémentaire Mixte</td>
-                <td class="px-6 py-4 text-center text-lg font-bold text-secondary">115 000 FCFA</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Coran + Français + Anglais + Sport</td>
-              </tr>
-              <tr class="bg-primary/5 dark:bg-primary/10 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Frais d'inscription (une fois)</td>
-                <td class="px-6 py-4 text-center text-lg font-bold text-accent">95 000 FCFA</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Tous les programmes</td>
-              </tr>
-              <tr class="hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Supplément internat</td>
-                <td class="px-6 py-4 text-center text-lg font-bold text-coral">+15 000 FCFA/mois</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Hébergement optionnel</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="mt-12 bg-gradient-to-r from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10 border border-primary/20 dark:border-primary/30 rounded-3xl p-8 text-center">
-        <p class="text-gray-700 dark:text-gray-200">
-          <i class="fas fa-info-circle text-primary mr-2"></i>
-          Les frais d'inscription sont dus une fois au moment de l'inscription. Les frais mensuels sont payables en début de mois ou selon les arrangements convenus.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== DOCUMENTS SECTION ==================== -->
-  <section class="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-accent/10 text-accent dark:text-accent-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Documents requis</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Pièces justificatives</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">À fournir lors de l'inscription</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="0">
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-            <i class="fas fa-list-check text-primary text-2xl"></i>
-            Documents de l'élève
-          </h3>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Copie de l'acte de naissance</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Copie de la carte d'identité nationale</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Relevés scolaires précédents</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Certificat de santé</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Photo d'identité (4x4)</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-            <i class="fas fa-users text-secondary text-2xl"></i>
-            Documents des parents
-          </h3>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Copie des cartes d'identité des parents</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Certificat de mariage (si applicable)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Preuve de revenus (dernier bulletin de paie)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Contacts d'urgence valides</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Attestation de résidence</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FAQ SECTION ==================== -->
-  <section class="py-24 bg-gray-50 dark:bg-slate-800 relative overflow-hidden">
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-coral/10 text-coral dark:text-coral-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Questions fréquentes</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">FAQ</h2>
-      </div>
-
-      <!-- FAQ Accordion -->
-      <div class="max-w-3xl mx-auto space-y-4">
-        <!-- FAQ Item 1 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="0">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quel est l'âge minimum pour l'inscription ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Les élèves doivent avoir au minimum 4 ans pour rejoindre le programme Élémentaire. Pour le Tahfiz, l'âge minimum recommandé est 7 ans, mais nous accueillons les enfants dès 5 ans selon leur niveau.
-          </div>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="100">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Y a-t-il des bourses disponibles ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Oui, nous proposons des bourses partielles pour les familles de bonne réputation académique et financièrement modestes. Veuillez nous contacter pour discuter de votre situation.
-          </div>
-        </div>
-
-        <!-- FAQ Item 3 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="200">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quelle est la durée de l'année scolaire ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            L'année scolaire commence généralement en septembre et se termine en juillet. Nous avons des vacances scolaires en décembre et août. Les horaires exacts sont fournis lors de l'inscription.
-          </div>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="300">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Puis-je modifier mon choix de programme après l'inscription ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Oui, les modifications peuvent être effectuées jusqu'à la fin du premier mois scolaire avec l'accord de la direction et sans frais supplémentaires.
-          </div>
-        </div>
-
-        <!-- FAQ Item 5 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="400">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Comment fonctionnent les cours en ligne ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Les cours en ligne sont dispensés via Google Meet le samedi et le dimanche après-midi (12h–17h), avec un suivi entre les sessions par groupe WhatsApp. À 10 000 FCFA/mois en classe commune (25 000 FCFA en individuel).
-          </div>
-        </div>
-
-        <!-- FAQ Item 6 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="500">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Les repas servis sont-ils halal ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Oui, tous les repas servis à l'académie sont 100 % halal. Trois repas équilibrés par jour + un goûter sont inclus pour les élèves en internat. Nous adaptons les menus aux allergies et besoins spécifiques sur demande.
-          </div>
-        </div>
-
-        <!-- FAQ Item 7 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="600">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Mon enfant peut-il rentrer le week-end ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Oui. Pour le programme internat, les élèves peuvent rentrer en famille chaque week-end (du vendredi soir au dimanche soir) selon le calendrier convenu avec les parents. Pour le programme mixte, l'enfant rentre chaque jour à 17h30.
-          </div>
-        </div>
-
-        <!-- FAQ Item 8 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="700">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Y a-t-il un examen d'entrée ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Pas d'examen écrit. Un entretien de 30 minutes avec la direction permet d'évaluer le niveau de l'enfant (lecture, mémorisation déjà acquise) et d'orienter vers le programme adapté. L'objectif est d'accueillir, pas de sélectionner.
-          </div>
-        </div>
-
-        <!-- FAQ Item 9 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="800">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quels documents fournir pour l'inscription ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Acte de naissance de l'enfant, deux photos d'identité récentes, carte d'identité de l'un des parents, certificat médical de moins de 3 mois et bulletins scolaires de l'année précédente. Pour les internes, un certificat de groupe sanguin est demandé.
-          </div>
-        </div>
-
-        <!-- FAQ Item 10 -->
-        <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="900">
-          <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quels modes de paiement acceptez-vous ?</span>
-            <i class="fas fa-chevron-down transition-transform"></i>
-          </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
-            Cash sur place, Wave, Orange Money ou virement bancaire. Le paiement est mensuel ; un règlement trimestriel donne droit à 2 % de remise et un règlement annuel à 5 %.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== INSCRIPTION ASSISTANT (formulaire intégré) ==================== -->
-  <section id="inscription-assistant" class="py-24 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/5 dark:to-secondary/5 relative overflow-hidden">
-    <div class="absolute inset-0">
-      <div class="absolute top-1/2 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-y-1/2"></div>
-    </div>
-
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="max-w-2xl mx-auto" data-aos="fade-up">
-        <div class="text-center mb-10">
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="admission.cta_title">Prêt à commencer ?</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300" data-i18n="admission.cta_subtitle">
-            Remplissez ces 4 champs et envoyez votre demande directement par WhatsApp. Notre équipe vous répond dans la journée.
-          </p>
-        </div>
-
-        <form id="inscriptionAssistant" class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 dark:border-slate-700 space-y-5">
+      <ol class="space-y-6">
+        <li class="card p-7 flex flex-col md:flex-row gap-5 items-start" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-full bg-secondary text-white font-extrabold flex items-center justify-center flex-shrink-0">1</div>
           <div>
-            <label for="parent-name" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2" data-i18n="admission.form_parent_name">Votre nom (parent / tuteur)</label>
-            <input id="parent-name" type="text" required minlength="2" autocomplete="name" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"/>
+            <h3 class="text-xl font-bold mb-2" data-i18n="admission.step1_title">Remplir le formulaire en ligne</h3>
+            <p class="text-ink-soft mb-3" data-i18n="admission.step1_text">Renseignez les informations de votre enfant et le programme souhaité. Cela ne prend que quelques minutes.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-pen-fancy"></i>Accéder au formulaire</a>
           </div>
+        </li>
+        <li class="card p-7 flex flex-col md:flex-row gap-5 items-start" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-full bg-secondary text-white font-extrabold flex items-center justify-center flex-shrink-0">2</div>
           <div>
-            <label for="phone-number" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2" data-i18n="admission.form_phone">Téléphone WhatsApp</label>
-            <input id="phone-number" type="tel" required pattern="[0-9 +()-]{8,}" placeholder="+221 ..." autocomplete="tel" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"/>
+            <h3 class="text-xl font-bold mb-2" data-i18n="admission.step2_title">Entretien et visite</h3>
+            <p class="text-ink-soft" data-i18n="admission.step2_text">Notre équipe vous recontacte sous 48h pour planifier un entretien et une visite de l'école.</p>
           </div>
+        </li>
+        <li class="card p-7 flex flex-col md:flex-row gap-5 items-start" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 rounded-full bg-secondary text-white font-extrabold flex items-center justify-center flex-shrink-0">3</div>
           <div>
-            <label for="program-choice" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2" data-i18n="admission.form_program">Programme souhaité</label>
-            <select id="program-choice" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
-              <option value="" data-i18n="admission.form_program_choose">— Choisir un programme —</option>
-              <option value="Tahfiz Internat" data-i18n="programs.tahfiz">Tahfiz Internat</option>
-              <option value="Tahfiz + Académique" data-i18n="programs.combined">Tahfiz + Académique</option>
-              <option value="Programme Mixte (externat)" data-i18n="programs.mixed">Programme Mixte</option>
-              <option value="Cours en ligne" data-i18n="programs.online">Cours en ligne</option>
-              <option value="Cours gratuits" data-i18n="programs.free">Cours gratuits</option>
-            </select>
+            <h3 class="text-xl font-bold mb-2" data-i18n="admission.step3_title">Validation et rentrée</h3>
+            <p class="text-ink-soft" data-i18n="admission.step3_text">Inscription définitive après acceptation. Votre enfant rejoint sa classe à la prochaine session.</p>
           </div>
-          <div>
-            <label for="child-age" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2" data-i18n="admission.form_age">Âge de l'enfant</label>
-            <input id="child-age" type="number" min="3" max="20" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"/>
-          </div>
-
-          <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <button type="submit" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-4 rounded-2xl font-bold text-base shadow-lg hover:shadow-xl transition-all">
-              <i class="fab fa-whatsapp mr-2 text-lg"></i> <span data-i18n="admission.form_submit">Envoyer ma demande</span>
-            </button>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" rel="noopener" class="inline-flex items-center justify-center border-2 border-primary text-primary dark:text-primary-light px-6 py-4 rounded-2xl font-semibold hover:bg-primary/10 transition-all">
-              <i class="fas fa-pen-fancy mr-2"></i> <span data-i18n="admission.form_full">Formulaire complet</span>
-            </a>
-          </div>
-
-          <p class="text-xs text-gray-500 dark:text-gray-400 text-center pt-2" data-i18n="admission.form_privacy">
-            Vos informations restent confidentielles. Nous les utilisons uniquement pour vous recontacter au sujet de l'inscription.
-          </p>
-        </form>
-      </div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <script>
-    (function () {
-      var form = document.getElementById('inscriptionAssistant');
-      if (!form) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var name = (document.getElementById('parent-name').value || '').trim();
-        var phone = (document.getElementById('phone-number').value || '').trim();
-        var program = (document.getElementById('program-choice').value || '').trim();
-        var age = (document.getElementById('child-age').value || '').trim();
-        if (!name || !phone || !program || !age) return;
-        var msg = 'Assalamou alaykoum, je souhaite inscrire mon enfant à Al Amine Academy.\n\n'
-                + 'Parent : ' + name + '\n'
-                + 'Téléphone : ' + phone + '\n'
-                + 'Programme : ' + program + '\n'
-                + 'Âge de l’enfant : ' + age + ' ans\n\n'
-                + 'Merci de me recontacter.';
-        var url = 'https://wa.me/221777743700?text=' + encodeURIComponent(msg);
-        window.open(url, '_blank', 'noopener');
-      });
-    })();
-  </script>
+  <section class="section section-tint">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <p class="eyebrow mb-3" data-i18n="admission.fees_eyebrow">Tarification</p>
+        <h2 class="text-3xl md:text-4xl mb-3" data-i18n="admission.fees_title">Des tarifs transparents</h2>
+        <p class="text-ink-soft" data-i18n="admission.fees_subtitle">Frais d'inscription unique : 95 000 FCFA pour tous les programmes.</p>
+      </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Brand -->
-        <div>
-          <h3 class="text-2xl font-bold mb-2">
-            <i class="fas fa-quran mr-2"></i>Al Amine Academy
-          </h3>
-          <p class="text-slate-400">Excellence éducative islamique</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-7" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-bold text-lg mb-2">Tahfiz Internat</h3>
+          <p class="text-sm text-ink-muted mb-4">Mémorisation immersive</p>
+          <p class="text-3xl font-extrabold text-primary mb-4">100 000 <span class="text-base text-ink-muted font-medium">FCFA / mois</span></p>
+          <a href="programme-internat.html" class="btn btn-outline-blue w-full justify-center text-sm">Voir le détail</a>
         </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="font-bold mb-4">Navigation</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="index.html" class="hover:text-white transition-colors">Accueil</a></li>
-            <li><a href="a-propos.html" class="hover:text-white transition-colors">À Propos</a></li>
-            <li><a href="galerie.html" class="hover:text-white transition-colors">Galerie</a></li>
-            <li><a href="temoignages.html" class="hover:text-white transition-colors">Témoignages</a></li>
-            <li><a href="admission.html" class="hover:text-white transition-colors">Admission</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
-          </ul>
+        <div class="card p-7 ring-2 ring-secondary" data-aos="fade-up" data-aos-delay="150">
+          <p class="text-xs font-bold uppercase tracking-wider text-secondary mb-2">Le plus populaire</p>
+          <h3 class="font-bold text-lg mb-2">Tahfiz + Académique</h3>
+          <p class="text-sm text-ink-muted mb-4">Coran + cursus complet</p>
+          <p class="text-3xl font-extrabold text-primary mb-4">115 000 <span class="text-base text-ink-muted font-medium">FCFA / mois</span></p>
+          <a href="programme-tahfiz-academique.html" class="btn btn-primary w-full justify-center text-sm">Voir le détail</a>
         </div>
-
-        <!-- Programs -->
-        <div>
-          <h4 class="font-bold mb-4">Nos Programmes</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="programme-internat.html" class="hover:text-white transition-colors">Tahfiz Internat</a></li>
-            <li><a href="programme-tahfiz-academique.html" class="hover:text-white transition-colors">Tahfiz + Académique</a></li>
-            <li><a href="programme-mixte.html" class="hover:text-white transition-colors">Programme Mixte</a></li>
-            <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors">Cours en Ligne</a></li>
-            <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors">Cours Gratuits</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <h4 class="font-bold mb-4">Nous Contacter</h4>
-          <ul class="space-y-2 text-slate-400 text-sm">
-            <li><i class="fas fa-phone mr-2"></i>+221 77 774 37 00</li>
-            <li><i class="fas fa-envelope mr-2"></i>daara@alamineacademy.com</li>
-            <li><i class="fas fa-map-marker-alt mr-2"></i>Cité des Magistrats, Derrière Kër Yoff, Dakar</li>
-            <li><a href="https://www.facebook.com/daaraalamineacademy/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-facebook-f mr-2"></i>Facebook</a></li>
-          </ul>
+        <div class="card p-7" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="font-bold text-lg mb-2">Programme Mixte</h3>
+          <p class="text-sm text-ink-muted mb-4">Externat journalier</p>
+          <p class="text-3xl font-extrabold text-primary mb-4">115 000 <span class="text-base text-ink-muted font-medium">FCFA / mois</span></p>
+          <a href="programme-mixte.html" class="btn btn-outline-blue w-full justify-center text-sm">Voir le détail</a>
         </div>
       </div>
 
-      <!-- Divider -->
-      <div class="border-t border-slate-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-slate-400 text-sm">
-            &copy; 2024 Al Amine Academy. Tous droits réservés.
-          </p>
-          <div class="flex gap-6 text-sm text-slate-400">
-            <a href="mailto:daara@alamineacademy.com?subject=Demande%20politique%20de%20confidentialit%C3%A9" class="hover:text-white transition-colors">Politique de confidentialité</a>
-            <a href="mailto:daara@alamineacademy.com?subject=Conditions%20d%27utilisation" class="hover:text-white transition-colors">Conditions d'utilisation</a>
-            <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-      </div>
+      <p class="bg-white rounded-xl p-5 border-l-4 border-secondary text-sm text-ink-soft mt-8 max-w-3xl mx-auto" data-aos="fade-up">
+        <i class="fas fa-info-circle text-secondary mr-2"></i>
+        Les tarifs comprennent l'instruction, le suivi pédagogique, les fournitures coraniques et les activités. Pour le Tahfiz Internat : repas et hébergement inclus.
+      </p>
     </div>
-  </footer>
+  </section>
+
+  <section class="section section-blue-deep text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl mb-5" data-i18n="admission.final_title">Prêt à inscrire votre enfant ?</h2>
+      <p class="text-white/85 text-lg mb-8" data-i18n="admission.final_text">Le formulaire d'inscription en ligne ne prend que quelques minutes.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn btn-primary text-lg"><i class="fas fa-pen-fancy"></i>Commencer l'inscription</a>
+    </div>
+  </section>
+
+
+  <div id="aaa-footer"></div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+  <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
   <script src="translations.js"></script>
   <script src="lang.js"></script>
   <script src="assets/js/site-shell.js" defer></script>

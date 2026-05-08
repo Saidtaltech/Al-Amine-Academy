@@ -1,396 +1,126 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Galerie Photos et Vidéos | DAARA Al Amine Academy Dakar</title>
-  <meta content="Galerie photos et vidéos de DAARA Al Amine Academy. Découvrez nos salles de classe, nos élèves en cours de mémorisation du Coran, et nos activités sportives à Dakar." name="description"/>
-  <meta content="galerie daara, photos école coranique, vidéos daara dakar, installations al amine, événements daara, activités daara" name="keywords"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galerie — DAARA Al Amine Academy</title>
+  <meta name="description" content="Galerie photos et vidéos de DAARA Al Amine Academy à Dakar : classes, sport, cérémonies, bâtiment, cantine et vie spirituelle."/>
+  <link rel="canonical" href="https://alamineacademy.com/galerie.html"/>
+  <link rel="icon" type="image/png" href="assets/img/LogoAAA.png"/>
+  <link rel="apple-touch-icon" href="assets/img/LogoAAA.png"/>
+  <link rel="alternate" hreflang="fr" href="https://alamineacademy.com/galerie.html"/>
+  <link rel="alternate" hreflang="en" href="https://alamineacademy.com/galerie.html"/>
+  <link rel="alternate" hreflang="ar" href="https://alamineacademy.com/galerie.html"/>
+  <link rel="alternate" hreflang="es" href="https://alamineacademy.com/galerie.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://alamineacademy.com/galerie.html"/>
+  <meta property="og:title" content="Galerie — DAARA Al Amine Academy"/>
+  <meta property="og:description" content="Galerie photos et vidéos de DAARA Al Amine Academy à Dakar : classes, sport, cérémonies, bâtiment, cantine et vie spirituelle."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://alamineacademy.com/galerie.html"/>
+  <meta property="og:image" content="https://alamineacademy.com/assets/img/LogoAAA.png"/>
+  <meta property="og:locale" content="fr_SN"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-
+  <link rel="stylesheet" href="assets/css/site.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8', 50: '#f0f9fc' },
-            secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
-            accent: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-            coral: { DEFAULT: '#f43f5e', dark: '#e11d48', light: '#ffe4e6' },
-            teal: {
-              50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
-              400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
-              800: '#0f4457', 900: '#0a3040', 950: '#061e2a'
-            }
+            primary:   { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73', light: '#e8f4f8' },
+            secondary: { DEFAULT: '#f5a623', dark: '#d97706', light: '#fef3c7' },
+            ink:       { DEFAULT: '#0f172a', soft: '#334155', muted: '#64748b' }
           },
           fontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
-            arabic: ['Amiri', 'serif']
+            sans:    ['Montserrat', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif'],
+            arabic:  ['Amiri', 'serif']
           }
         }
       }
-    }
+    };
   </script>
-
-  <style>
-    body { font-family: 'Montserrat', sans-serif; }
-    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .gradient-animate {
-      background-size: 200% 200%;
-      animation: gradientShift 8s ease infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    .float { animation: float 6s ease-in-out infinite; }
-    .float-delay { animation: float 6s ease-in-out 2s infinite; }
-
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(30, 122, 154, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(30, 122, 154, 0.6); }
-    }
-    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
-
-    .card-3d {
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .card-3d:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    .nav-scrolled {
-      background: rgba(255,255,255,0.95) !important;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    }
-    .dark .nav-scrolled {
-      background: rgba(15,23,42,0.95) !important;
-    }
-
-    * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-
-    .text-gradient {
-      background: linear-gradient(135deg, #1e7a9a, #1e7a9a, #f59e0b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e7a9a, #1e7a9a); border-radius: 10px; }
-    .dark ::-webkit-scrollbar-track { background: #1e293b; }
-  </style>
-
-  <!-- SEO -->
-  <link href="https://alamineacademy.com/galerie.html" rel="canonical"/>
-  <meta content="Galerie | DAARA Al Amine Academy" property="og:title"/>
-  <meta content="Galerie photos et vidéos de DAARA Al Amine Academy à Dakar. Découvrez nos installations et activités." property="og:description"/>
-  <meta content="website" property="og:type"/>
-  <meta content="https://alamineacademy.com/galerie.html" property="og:url"/>
-  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" property="og:image"/>
-  <meta content="fr_SN" property="og:locale"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  
 </head>
 
-<body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
+<body class="antialiased">
 
-  <!-- WhatsApp Floating Button -->
-  <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp text-3xl"></i>
-    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
-  </a>
-
-  <!-- ==================== NAVBAR ==================== -->
-  <!-- ====================  NAVBAR (injecté par site-shell.js)  ==================== -->
+  <div id="aaa-wa"></div>
   <div id="aaa-navbar">
     <noscript><nav class="fixed top-0 left-0 right-0 z-50 bg-white p-4 border-b border-slate-200">
-      <a href="index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> ·
-      <a href="a-propos.html">À Propos</a> ·
-      <a href="admission.html">Admission</a> ·
-      <a href="contact.html">Contact</a>
+      <a href="index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> · <a href="a-propos.html">À Propos</a> · <a href="admission.html">Admission</a> · <a href="contact.html">Contact</a>
     </nav></noscript>
   </div>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-primary-dark to-slate-900 gradient-animate pt-20">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl float"></div>
-      <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/15 rounded-full blur-3xl float-delay"></div>
-      <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  
+  <header class="page-header">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <p class="eyebrow text-secondary mb-4">Vie au DAARA</p>
+      <h1 class="text-4xl md:text-6xl text-white mb-5 max-w-3xl mx-auto">Galerie <span class='text-secondary'>photos &amp; vidéos</span></h1>
+      <p class="text-white/85 text-lg max-w-2xl mx-auto">Un aperçu visuel du quotidien des élèves d'Al Amine Academy.</p>
     </div>
+  </header>
 
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center">
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6 border border-white/10">
-          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          Découvrez notre école
-        </div>
-        <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-          <span class="text-gradient" data-i18n="gallery.hero_title">Galerie</span>
-        </h1>
-        <p class="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed" data-i18n="gallery.hero_subtitle">
-          Plongez dans le quotidien de nos élèves à travers nos photos et vidéos. Découvrez l'environnement d'apprentissage exceptionnel de DAARA Al Amine Academy.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <!-- ==================== GALLERY SECTION ==================== -->
-  <section class="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Notre Galerie</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Catégories</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Sélectionnez une catégorie pour voir les images et vidéos</p>
-      </div>
-
-      <!-- Gallery Categories Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="0">
-          <div class="relative overflow-hidden rounded-3xl h-64">
-            <img src="assets/img/galerie-classes.jpg" alt="Salles de classe" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-              <i class="fas fa-image text-white/30 text-5xl"></i>
-            </div>
-            <div class="absolute inset-0 opacity-40 bg-black group-hover:opacity-50 transition-all duration-300"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i class="fas fa-chalkboard text-white text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white" data-i18n="gallery.cat_classes">Salles de classe</h3>
-                <p class="text-white/80 text-sm mt-2">Modernes, climatisées, suivi personnalisé</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="100">
-          <div class="relative overflow-hidden rounded-3xl h-64">
-            <img src="assets/img/galerie-sport.jpg" alt="Activités sportives" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-              <i class="fas fa-image text-white/30 text-5xl"></i>
-            </div>
-            <div class="absolute inset-0 opacity-40 bg-black group-hover:opacity-50 transition-all duration-300"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i class="fas fa-basketball text-white text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white" data-i18n="gallery.cat_sport">Sport</h3>
-                <p class="text-white/80 text-sm mt-2">Football, lutte, esprit d'équipe</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="200">
-          <div class="relative overflow-hidden rounded-3xl h-64">
-            <img src="assets/img/galerie-ceremonies.jpg" alt="Cérémonies et événements" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-              <i class="fas fa-image text-white/30 text-5xl"></i>
-            </div>
-            <div class="absolute inset-0 opacity-40 bg-black group-hover:opacity-50 transition-all duration-300"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i class="fas fa-star text-white text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white" data-i18n="gallery.cat_events">Événements</h3>
-                <p class="text-white/80 text-sm mt-2">Graduations, fêtes religieuses</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="300">
-          <div class="relative overflow-hidden rounded-3xl h-64">
-            <img src="assets/img/galerie-batiment.jpg" alt="Bâtiment et locaux" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-              <i class="fas fa-image text-white/30 text-5xl"></i>
-            </div>
-            <div class="absolute inset-0 opacity-40 bg-black group-hover:opacity-50 transition-all duration-300"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i class="fas fa-building text-white text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white" data-i18n="gallery.cat_building">Bâtiment</h3>
-                <p class="text-white/80 text-sm mt-2">Campus moderne à Dakar</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="400">
-          <div class="relative overflow-hidden rounded-3xl h-64">
-            <img src="assets/img/galerie-cantine.jpg" alt="Cantine et repas" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-              <i class="fas fa-image text-white/30 text-5xl"></i>
-            </div>
-            <div class="absolute inset-0 opacity-40 bg-black group-hover:opacity-50 transition-all duration-300"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i class="fas fa-utensils text-white text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white">Cantine</h3>
-                <p class="text-white/80 text-sm mt-2">Repas équilibrés et halal</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="500">
-          <div class="relative overflow-hidden rounded-3xl h-64">
-            <img src="assets/img/galerie-priere.jpg" alt="Prières et vie spirituelle" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-              <i class="fas fa-image text-white/30 text-5xl"></i>
-            </div>
-            <div class="absolute inset-0 opacity-40 bg-black group-hover:opacity-50 transition-all duration-300"></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center">
-                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <i class="fas fa-hands-praying text-white text-3xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white">Prière</h3>
-                <p class="text-white/80 text-sm mt-2">5 prières quotidiennes serein</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Coming Soon Message -->
-      <div class="mt-20 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 dark:border-primary/30 rounded-3xl p-12 text-center" data-aos="fade-up">
-        <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-3xl flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-camera text-white text-3xl"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Notre galerie s'enrichit constamment</h3>
-        <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6">
-          Notre galerie s'enrichit régulièrement de nouvelles photos et vidéos. Suivez-nous sur les réseaux sociaux pour découvrir le quotidien de nos élèves en temps réel.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://wa.me/221777743700" target="_blank" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-3 rounded-full font-semibold transition-all">
-            <i class="fas fa-pencil"></i> S'inscrire
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+  
+  <section class="section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Brand -->
-        <div>
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 bg-gradient-to-br from-primary to-teal-400 rounded-2xl flex items-center justify-center shadow-lg">
-              <i class="fas fa-book-quran text-white text-xl"></i>
-            </div>
-            <div>
-              <h3 class="text-xl font-extrabold">Al Amine Academy</h3>
-              <p class="text-xs text-gray-400 arabic-text">يار أك خام خام</p>
-            </div>
-          </div>
-          <p class="text-gray-400 text-sm mb-6 leading-relaxed">École coranique moderne dédiée à la mémorisation du Noble Coran et à l'éducation académique d'excellence.</p>
-          <div class="flex gap-3">
-            <a class="w-10 h-10 bg-white/5 hover:bg-primary rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a class="w-10 h-10 bg-white/5 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://www.instagram.com/alamineacademy" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a class="w-10 h-10 bg-white/5 hover:bg-red-600 rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://www.youtube.com/@alamineacademy" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a class="w-10 h-10 bg-white/5 hover:bg-green-500 rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div>
-          <h4 class="text-lg font-bold mb-6">Navigation</h4>
-          <ul class="space-y-3 text-sm">
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="index.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Accueil</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="a-propos.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>À Propos</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="galerie.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Galerie</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="temoignages.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Témoignages</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="admission.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Admission</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="blog.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Blog</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="contact.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Programmes -->
-        <div>
-          <h4 class="text-lg font-bold mb-6">Programmes</h4>
-          <ul class="space-y-3 text-sm">
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-internat.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz Internat</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-tahfiz-academique.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz + Académique</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-mixte.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Programme Mixte</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-en-ligne.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours en Ligne</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-gratuits.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours Gratuits</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <h4 class="text-lg font-bold mb-6">Contact</h4>
-          <ul class="space-y-4 text-sm text-gray-400">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-phone mt-1 text-primary"></i>
-              <div>
-                <p>+221 77 774 37 00</p>
-                <p>+221 77 785 07 89</p>
-              </div>
-            </li>
-            <li class="flex items-center gap-3"><i class="fas fa-envelope text-primary"></i> daara@alamineacademy.com</li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-map-marker-alt mt-1 text-primary"></i>
-              <span>Cité des Magistrats, Derrière Kër Yoff, Dakar</span>
-            </li>
-          </ul>
-        </div>
+      <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+        <p class="eyebrow mb-3">Galerie</p>
+        <h2 class="text-3xl md:text-4xl mb-3">Découvrez la vie au DAARA</h2>
+        <p class="text-ink-soft">Classes, événements, sport, cantine, prières… un aperçu visuel de notre quotidien.</p>
       </div>
 
-      <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-        <p>&copy; 2024 Al Amine Academy. Tous droits réservés.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/img/galerie-classes.jpg" alt="Salles de classe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-chalkboard-teacher text-white/40 text-5xl"></i></div>
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Salles de classe</p></div>
+        </a>
+        <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="150">
+          <img src="assets/img/galerie-sport.jpg" alt="Sport" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-futbol text-white/40 text-5xl"></i></div>
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Sport</p></div>
+        </a>
+        <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/img/galerie-ceremonies.jpg" alt="Cérémonies & événements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-award text-white/40 text-5xl"></i></div>
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Cérémonies & événements</p></div>
+        </a>
+        <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="250">
+          <img src="assets/img/galerie-batiment.jpg" alt="Bâtiment & locaux" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-building text-white/40 text-5xl"></i></div>
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Bâtiment & locaux</p></div>
+        </a>
+        <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/img/galerie-cantine.jpg" alt="Cantine & repas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-utensils text-white/40 text-5xl"></i></div>
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Cantine & repas</p></div>
+        </a>
+        <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="350">
+          <img src="assets/img/galerie-priere.jpg" alt="Prières & vie spirituelle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-hands-praying text-white/40 text-5xl"></i></div>
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Prières & vie spirituelle</p></div>
+        </a>
+      </div>
+
+      <div class="bg-secondary/10 border border-secondary/30 rounded-xl p-6 mt-10 text-center" data-aos="fade-up">
+        <p class="text-ink-soft"><i class="fas fa-camera text-secondary mr-2"></i>D'autres photos sont publiées régulièrement sur nos <a href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" class="text-primary font-semibold underline">Facebook</a> et <a href="https://www.instagram.com/alamineacademy" target="_blank" rel="noopener" class="text-primary font-semibold underline">Instagram</a>.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Scripts -->
+
+  <div id="aaa-footer"></div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+  <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
   <script src="translations.js"></script>
   <script src="lang.js"></script>
   <script src="assets/js/site-shell.js" defer></script>

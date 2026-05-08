@@ -1,108 +1,32 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>404 - Page introuvable | DAARA Al Amine Academy</title>
-  <meta content="Erreur 404. La page que vous cherchez n'existe pas ou a été déplacée." name="description"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page introuvable — DAARA Al Amine Academy</title>
+  <meta name="description" content="La page que vous cherchez n'existe pas ou a été déplacée."/>
+  <link rel="icon" type="image/png" href="assets/img/LogoAAA.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/site.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-            secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
-            teal: {
-              50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
-              400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
-              800: '#0f4457', 900: '#0a3040', 950: '#061e2a'
-            }
-          },
-          fontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
-            arabic: ['Amiri', 'serif']
-          }
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: { colors: { primary: { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73' }, secondary: { DEFAULT: '#f5a623', dark: '#d97706' } } } } };
   </script>
-  <style>
-    body { font-family: 'Montserrat', sans-serif; }
-    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
-  </style>
 </head>
-<body class="antialiased bg-white">
-  <!-- WhatsApp Button -->
-  <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group transition-transform hover:scale-110" href="https://wa.me/221777743700" target="_blank">
-    <i class="fab fa-whatsapp text-3xl"></i>
-    <span class="absolute right-20 bg-gray-900 text-white px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-opacity">
-      Contactez-nous
-    </span>
-  </a>
-
-  <!-- 404 Content Section -->
-  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-primary-dark px-4">
-    <div class="text-center">
-      <!-- Logo and School Name -->
-      <div class="mb-12">
-        <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border-2 border-white/20">
-          <i class="fas fa-mosque text-5xl text-white"></i>
-        </div>
-        <h1 class="text-2xl font-bold text-white mb-2">Al Amine Academy</h1>
-        <p class="text-white/80 arabic-text text-lg">يار أك خام خام</p>
-      </div>
-
-      <!-- 404 Heading -->
-      <div class="mb-8">
-        <h2 class="text-9xl font-bold text-secondary mb-2" data-i18n="page_404.code">404</h2>
-        <h3 class="text-4xl font-bold text-white mb-4" data-i18n="page_404.title">Page introuvable</h3>
-        <p class="text-xl text-white/90 mb-2" data-i18n="page_404.subtitle">La page que vous cherchez n'existe pas ou a été déplacée.</p>
-      </div>
-
-      <!-- Description -->
-      <p class="text-lg text-white/80 mb-12 max-w-md mx-auto" data-i18n="page_404.description">
-        Retournez à l'accueil pour explorer notre école coranique et nos programmes de mémorisation du Coran.
-      </p>
-
-      <!-- Call to Action Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="index.html" class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 font-bold shadow-lg transition-all transform hover:scale-105">
-          <i class="fas fa-home mr-2"></i>
-          <span data-i18n="page_404.back_home">Retour à l'accueil</span>
-        </a>
-        <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white px-8 py-4 font-bold shadow-lg transition-all transform hover:scale-105 border-2 border-white/40">
-          <i class="fas fa-envelope mr-2"></i>
-          <span data-i18n="page_404.contact_us">Nous contacter</span>
-        </a>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="mt-16 pt-12 border-t border-white/20">
-        <p class="text-white/70 text-sm mb-4" data-i18n="page_404.quick_nav">Navigation rapide:</p>
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a href="a-propos.html" class="text-white/80 hover:text-secondary transition" data-i18n="menu.about">À Propos</a>
-          <span class="text-white/30">•</span>
-          <a href="galerie.html" class="text-white/80 hover:text-secondary transition" data-i18n="menu.gallery">Galerie</a>
-          <span class="text-white/30">•</span>
-          <a href="blog.html" class="text-white/80 hover:text-secondary transition" data-i18n="menu.blog">Blog</a>
-          <span class="text-white/30">•</span>
-          <a href="programme-internat.html" class="text-white/80 hover:text-secondary transition" data-i18n="menu.programs">Programmes</a>
-        </div>
+<body class="antialiased">
+  <main class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-deep via-primary-dark to-primary text-white relative overflow-hidden">
+    <div class="absolute top-10 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl float pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float-delay pointer-events-none"></div>
+    <div class="text-center max-w-2xl px-6 relative z-10">
+      <p class="text-9xl md:text-[12rem] font-extrabold text-secondary leading-none">404</p>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-4 mt-2">Page introuvable</h1>
+      <p class="text-white/85 text-lg mb-8">La page que vous cherchez n'existe pas ou a été déplacée. Retournons à l'accueil pour repartir du bon pied.</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="/" class="btn btn-primary"><i class="fas fa-home"></i>Retour à l'accueil</a>
+        <a href="contact.html" class="btn btn-ghost"><i class="fas fa-envelope"></i>Nous contacter</a>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-8">
-    <div class="container mx-auto px-4 text-center text-gray-400 text-sm">
-      <p data-i18n="footer.copyright">© 2026 DAARA Al Amine Academy. Tous droits réservés.</p>
-    </div>
-  </footer>
-
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
+  </main>
 </body>
 </html>

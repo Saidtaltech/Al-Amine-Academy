@@ -1,14 +1,21 @@
+# DAARA Al Amine Academy — robots.txt
 User-agent: *
 Allow: /
 
-Disallow: /admin/
-Disallow: /private/
-Disallow: /tmp/
-
-Sitemap: https://alamineacademy.com/sitemap.xml
+# Pages internes / techniques à ne pas indexer
+Disallow: /Information_Sheet_Al_Amine_Academy.html
+Disallow: /renseignements
+Disallow: /AUDIT-SITE-AAA.md
+Disallow: /DEPLOY-HOSTINGER.md
+Disallow: /DEPLOY.md
+Disallow: /LIRE-MOI-AU-REVEIL.md
+Disallow: /PUSH-MISE-A-JOUR.cmd
+Disallow: /assets/img/IMAGES-A-DEPOSER.md
 
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+Sitemap: https://alamineacademy.com/sitemap.xml
