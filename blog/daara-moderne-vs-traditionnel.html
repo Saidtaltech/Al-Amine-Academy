@@ -18,7 +18,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
   <!-- JSON-LD for AI Search -->
   <script type="application/ld+json">
    {
@@ -84,7 +83,8 @@
   <link href="https://alamineacademy.com/daara-moderne-vs-traditionnel.html" hreflang="ar" rel="alternate"/>
   <link href="https://alamineacademy.com/daara-moderne-vs-traditionnel.html" hreflang="es" rel="alternate"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
- </head>
+   <link rel="stylesheet" href="../assets/css/site.css"/>
+</head>
  <body class="font-sans bg-gray-50">
   <header class="bg-white shadow-sm sticky top-0 z-50">
   </header>
@@ -477,153 +477,10 @@
   <script>
    AOS.init({duration: 800, once: true});
   </script>
-  <footer class="bg-gray-900 text-white pt-16 pb-8">
-   <div class="container mx-auto px-4">
-    <div class="grid md:grid-cols-4 gap-8 mb-12">
-     <div>
-      <div class="flex items-center space-x-3 mb-4">
-       <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-        <i class="fas fa-book-quran text-white text-2xl">
-        </i>
-       </div>
-       <div>
-        <h3 class="text-xl font-bold">
-         Al Amine Academy
-        </h3>
-        <p class="text-sm text-gray-400 arabic-text">
-         يار أك خام خام
-        </p>
-       </div>
-      </div>
-      <p class="text-gray-400 text-sm mb-4" data-i18n="footer.description">
-       École coranique moderne dédiée à la mémorisation du Noble Coran.
-      </p>
-      <div class="flex space-x-3">
-       <a class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition" href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" aria-label="Facebook">
-        <i class="fab fa-facebook-f">
-        </i>
-       </a>
-       <a class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition" href="https://www.instagram.com/alamineacademy" target="_blank" rel="noopener" aria-label="Instagram">
-        <i class="fab fa-instagram">
-        </i>
-       </a>
-       <a class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition" href="https://www.youtube.com/@alamineacademy" target="_blank" rel="noopener" aria-label="YouTube">
-        <i class="fab fa-youtube">
-        </i>
-       </a>
-       <a class="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-full flex items-center justify-center transition" href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp">
-        </i>
-       </a>
-      </div>
-     </div>
-     <div>
-      <h4 class="text-lg font-bold mb-4" data-i18n="footer.navigation">
-       Navigation
-      </h4>
-      <ul class="space-y-2 text-sm">
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="menu.home" href="../index.html">
-         Accueil
-        </a>
-       </li>
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="menu.about" href="../a-propos.html">
-         À Propos
-        </a>
-       </li>
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="menu.gallery" href="../galerie.html">
-         Galerie
-        </a>
-       </li>
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="menu.contact" href="../contact.html">
-         Contacts
-        </a>
-       </li>
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="menu.blog" href="index.html">
-         Blog
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4 class="text-lg font-bold mb-4" data-i18n="footer.programs">
-       Programmes
-      </h4>
-      <ul class="space-y-2 text-sm">
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="programs.tahfiz" href="../programme-internat.html">
-         Tahfiz Internat
-        </a>
-       </li>
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="programs.combined" href="../programme-tahfiz-academique.html">
-         Tahfiz + Académique
-        </a>
-       </li>
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="programs.online" href="../programme-cours-en-ligne.html">
-         Cours en Ligne
-        </a>
-       </li>
-       <li>
-        <a class="text-gray-400 hover:text-secondary transition" data-i18n="programs.free" href="../programme-cours-gratuits.html">
-         Cours Gratuits
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4 class="text-lg font-bold mb-4" data-i18n="footer.contact">
-       Contact
-      </h4>
-      <ul class="space-y-2 text-sm text-gray-400">
-       <li>
-        <i class="fas fa-phone mr-2">
-        </i>
-        <span data-i18n="contact.phone1">
-         +221 77 774 37 00
-        </span>
-       </li>
-       <li>
-        <i class="fas fa-phone mr-2">
-        </i>
-        <span data-i18n="contact.phone2">
-         +221 77 785 07 89
-        </span>
-       </li>
-       <li>
-        <i class="fas fa-envelope mr-2">
-        </i>
-        <span data-i18n="contact.email">
-         daara@alamineacademy.com
-        </span>
-       </li>
-       <li>
-        <i class="fas fa-map-marker-alt mr-2">
-        </i>
-        <span data-i18n="contact.address">
-         Cité des Magistrats
-         <br/>
-         <span class="ml-6">
-          Derrière Kër Yoff, Dakar
-         </span>
-        </span>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-     <p data-i18n="footer.copyright">
-      © 2026 DAARA Al Amine Academy. Tous droits réservés.
-     </p>
-    </div>
-   </div>
-  </footer>
-  <script src="../translations.js?v=20260429b"></script>
-  <script src="../lang.js?v=20260429b"></script>
+
+  <div id="aaa-footer"></div>
+  <script src="../translations.js"></script>
+  <script src="../lang.js"></script>
+   <script src="../assets/js/site-shell.js" defer></script>
  </body>
 </html>

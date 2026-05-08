@@ -1,579 +1,120 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Contact | DAARA Al Amine Academy | École Coranique Moderne Dakar</title>
-  <meta content="Contactez DAARA Al Amine Academy à Dakar. Téléphone, WhatsApp, email et adresse. Prenez rendez-vous pour visiter notre école coranique moderne. Réponse sous 24h." name="description"/>
-  <meta content="contact daara, école coranique dakar contact, daara al amine contact, telefone daara dakar" name="keywords"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — DAARA Al Amine Academy</title>
+  <meta name="description" content="Contactez DAARA Al Amine Academy à Dakar : téléphone +221 77 774 37 00, WhatsApp, email, adresse Cité des Magistrats."/>
+  <link rel="canonical" href="https://alamineacademy.com/contact.html"/>
+  <link rel="icon" type="image/png" href="assets/img/LogoAAA.png"/>
+  <link rel="apple-touch-icon" href="assets/img/LogoAAA.png"/>
+  <link rel="alternate" hreflang="fr" href="https://alamineacademy.com/contact.html"/>
+  <link rel="alternate" hreflang="en" href="https://alamineacademy.com/contact.html"/>
+  <link rel="alternate" hreflang="ar" href="https://alamineacademy.com/contact.html"/>
+  <link rel="alternate" hreflang="es" href="https://alamineacademy.com/contact.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://alamineacademy.com/contact.html"/>
+  <meta property="og:title" content="Contact — DAARA Al Amine Academy"/>
+  <meta property="og:description" content="Contactez DAARA Al Amine Academy à Dakar : téléphone +221 77 774 37 00, WhatsApp, email, adresse Cité des Magistrats."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://alamineacademy.com/contact.html"/>
+  <meta property="og:image" content="https://alamineacademy.com/assets/img/LogoAAA.png"/>
+  <meta property="og:locale" content="fr_SN"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
-
+  <link rel="stylesheet" href="assets/css/site.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8', 50: '#f0f9fc' },
-            secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
-            accent: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-            coral: { DEFAULT: '#f43f5e', dark: '#e11d48', light: '#ffe4e6' },
-            teal: {
-              50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
-              400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
-              800: '#0f4457', 900: '#0a3040', 950: '#061e2a'
-            }
+            primary:   { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73', light: '#e8f4f8' },
+            secondary: { DEFAULT: '#f5a623', dark: '#d97706', light: '#fef3c7' },
+            ink:       { DEFAULT: '#0f172a', soft: '#334155', muted: '#64748b' }
           },
           fontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
-            arabic: ['Amiri', 'serif']
+            sans:    ['Montserrat', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif'],
+            arabic:  ['Amiri', 'serif']
           }
         }
       }
-    }
+    };
   </script>
-
-  <style>
-    body { font-family: 'Montserrat', sans-serif; }
-    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
-
-    /* Gradient Animations */
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .gradient-animate {
-      background-size: 200% 200%;
-      animation: gradientShift 8s ease infinite;
-    }
-
-    /* Floating Animation */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    .float { animation: float 6s ease-in-out infinite; }
-    .float-delay { animation: float 6s ease-in-out 2s infinite; }
-
-    /* Pulse glow */
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(13, 148, 136, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(13, 148, 136, 0.6); }
-    }
-    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
-
-    /* Card hover effects */
-    .card-3d {
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .card-3d:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    /* Navbar scroll effect */
-    .nav-scrolled {
-      background: rgba(255,255,255,0.95) !important;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    }
-    .dark .nav-scrolled {
-      background: rgba(15,23,42,0.95) !important;
-    }
-
-    /* Text gradient */
-    .text-gradient {
-      background: linear-gradient(135deg, #1e7a9a, #3ba5c9, #f59e0b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Smooth scroll */
-    html { scroll-behavior: smooth; }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e7a9a, #3ba5c9); border-radius: 10px; }
-    .dark ::-webkit-scrollbar-track { background: #1e293b; }
-
-    /* Dark mode transitions */
-    * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-  </style>
-
-  <!-- SEO -->
-  <link href="https://alamineacademy.com/contact.html" rel="canonical"/>
-  <meta content="Contact | DAARA Al Amine Academy | École Coranique Moderne Dakar" property="og:title"/>
-  <meta content="Contactez DAARA Al Amine Academy à Dakar. Téléphone, WhatsApp, email et localisation. Cité des Magistrats, Derrière Kër Yoff." property="og:description"/>
-  <meta content="website" property="og:type"/>
-  <meta content="https://alamineacademy.com/contact.html" property="og:url"/>
-  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" property="og:image"/>
-  <meta content="fr_SN" property="og:locale"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="Contact | DAARA Al Amine Academy" name="twitter:title"/>
-  <meta content="Contactez DAARA Al Amine Academy à Dakar. Inscrivez votre enfant." name="twitter:description"/>
-  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" name="twitter:image"/>
-  <link href="https://alamineacademy.com/contact.html" hreflang="fr" rel="alternate"/>
-  <link href="https://alamineacademy.com/contact.html" hreflang="en" rel="alternate"/>
-  <link href="https://alamineacademy.com/contact.html" hreflang="ar" rel="alternate"/>
-  <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
-
-  <!-- Geo SEO -->
-  <meta content="SN-DK" name="geo.region"/>
-  <meta content="Dakar" name="geo.placename"/>
-  <meta content="14.7473;-17.4569" name="geo.position"/>
-  <meta content="14.7473, -17.4569" name="ICBM"/>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "DAARA Al Amine Academy",
-    "url": "https://alamineacademy.com",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
-      "telephone": "+221777743700",
-      "email": "daara@alamineacademy.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Cité des Magistrats, Derrière Kër Yoff",
-      "addressLocality": "Dakar",
-      "addressRegion": "Dakar",
-      "addressCountry": "SN",
-      "postalCode": "12500"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 14.7473,
-      "longitude": -17.4569
-    }
-  }
-  </script>
-  <style id="aos-preload">
-    [data-aos] { opacity: 1 !important; transform: none !important; }
-  </style>
+  
 </head>
 
-<body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
+<body class="antialiased">
 
-  <!-- WhatsApp Floating Button -->
-  <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp text-3xl"></i>
-    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
-  </a>
+  <div id="aaa-wa"></div>
+  <div id="aaa-navbar">
+    <noscript><nav class="fixed top-0 left-0 right-0 z-50 bg-white p-4 border-b border-slate-200">
+      <a href="index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> · <a href="a-propos.html">À Propos</a> · <a href="admission.html">Admission</a> · <a href="contact.html">Contact</a>
+    </nav></noscript>
+  </div>
 
-  <!-- ==================== NAVBAR ==================== -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent">
-    <div class="container mx-auto px-4 lg:px-8">
-      <div class="flex justify-between items-center py-3">
-        <!-- Logo -->
-        <a class="flex items-center gap-3 group" href="index.html">
-          <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
-            <i class="fas fa-book-quran text-white text-xl"></i>
-          </div>
-          <div>
-            <h1 class="text-lg font-extrabold text-white" id="navTitle" data-i18n="site.name">Al Amine Academy</h1>
-            <p class="text-[10px] text-white/70 arabic-text" id="navSubtitle">يار أك خام خام</p>
-          </div>
-        </a>
+  
+  <header class="page-header">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <p class="eyebrow text-secondary mb-4" data-i18n="contact.hero_eyebrow">On vous écoute</p>
+      <h1 class="text-4xl md:text-6xl text-white mb-5 max-w-3xl mx-auto">Contactez-nous</h1>
+      <p class="text-white/85 text-lg max-w-2xl mx-auto" data-i18n="contact.hero_subtitle">Téléphone, WhatsApp, email ou visite sur place — choisissez votre canal préféré.</p>
+    </div>
+  </header>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center gap-1">
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="index.html" data-i18n="menu.home">Accueil</a>
-          <div class="relative group">
-            <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm flex items-center gap-1" data-i18n="menu.programs">
-              Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
-            </button>
-            <div class="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 border border-gray-100 dark:border-slate-700 overflow-hidden">
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all" href="programme-internat.html">
-                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center"><i class="fas fa-school text-primary"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-gray-500">Coran + Sport + Hébergement</p></div>
-              </a>
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-secondary/5 dark:hover:bg-secondary/10 transition-all" href="programme-tahfiz-academique.html">
-                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center"><i class="fas fa-book-open text-secondary"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.combined">Tahfiz + Académique</p><p class="text-xs text-gray-500">Coran + Français + Anglais</p></div>
-              </a>
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-accent/5 dark:hover:bg-accent/10 transition-all" href="programme-cours-en-ligne.html">
-                <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center"><i class="fas fa-laptop text-accent"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-gray-500">Apprenez de chez vous</p></div>
-              </a>
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-coral/5 dark:hover:bg-coral/10 transition-all" href="programme-cours-gratuits.html">
-                <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
-              </a>
-            </div>
-          </div>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="a-propos.html" data-i18n="menu.about">À Propos</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="contact.html" data-i18n="menu.contact">Contact</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="blog.html" data-i18n="menu.blog">Blog</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="temoignages.html" data-i18n="menu.testimonials">Témoignages</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="admission.html" data-i18n="menu.admission">Admission</a>
 
-          <!-- Dark Mode Toggle -->
-          <button id="darkToggle" class="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all" title="Mode sombre">
-            <i class="fas fa-moon text-lg" id="darkIcon"></i>
-          </button>
-
-        <!-- Language Selector -->
-        <div class="relative group">
-          <button class="flex items-center gap-1 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all text-sm">
-            <i class="fas fa-globe"></i> <span id="currentLang">FR</span>
-          </button>
-          <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 dark:border-slate-700 overflow-hidden">
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('fr');return false;">&#127467;&#127479; Français</a>
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('en');return false;">&#127468;&#127463; English</a>
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 arabic-text text-sm" href="#" onclick="switchLanguage('ar');return false;">&#127480;&#127462; العربية</a>
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('es');return false;">&#127466;&#127480; Español</a>
-          </div>
-        </div>
-
-          <a class="ml-2 bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
-            S'inscrire <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="flex items-center gap-3 lg:hidden">
-          <button id="darkToggleMobile" class="p-2 text-white/80 hover:text-white rounded-xl transition-all">
-            <i class="fas fa-moon text-lg" id="darkIconMobile"></i>
-          </button>
-          <button onclick="toggleMenu()" class="p-2 text-white hover:bg-white/10 rounded-xl transition-all">
-            <i class="fas fa-bars text-xl" id="menuIcon"></i>
-          </button>
-        </div>
+  
+  <section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <a href="tel:+221777743700" class="card p-7 text-center hover:shadow-lg" data-aos="fade-up" data-aos-delay="100"><div class="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-phone text-primary text-2xl"></i></div><p class="text-xs uppercase tracking-wider text-ink-muted mb-1">Téléphone</p><p class="font-bold text-primary tabular">+221 77 774 37 00</p></a>
+        <a href="https://wa.me/221777743700" target="_blank" rel="noopener" class="card p-7 text-center hover:shadow-lg" data-aos="fade-up" data-aos-delay="200"><div class="w-14 h-14 mx-auto rounded-xl bg-green-500/15 flex items-center justify-center mb-4"><i class="fab fa-whatsapp text-green-500 text-2xl"></i></div><p class="text-xs uppercase tracking-wider text-ink-muted mb-1">WhatsApp</p><p class="font-bold text-green-600">Discutons en direct</p></a>
+        <a href="mailto:daara@alamineacademy.com" class="card p-7 text-center hover:shadow-lg" data-aos="fade-up" data-aos-delay="300"><div class="w-14 h-14 mx-auto rounded-xl bg-secondary/15 flex items-center justify-center mb-4"><i class="fas fa-envelope text-secondary text-2xl"></i></div><p class="text-xs uppercase tracking-wider text-ink-muted mb-1">Email</p><p class="font-bold text-secondary break-all">daara@alamineacademy.com</p></a>
       </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div class="hidden lg:hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 shadow-2xl" id="mobileMenu">
-      <div class="container mx-auto px-4 py-6 space-y-2">
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="index.html" data-i18n="menu.home"><i class="fas fa-home mr-3 text-primary"></i>Accueil</a>
-        <div class="pl-4 space-y-1 border-l-2 border-primary/20 ml-4">
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="programme-internat.html" data-i18n="programs.tahfiz"><i class="fas fa-school mr-2 text-primary/60"></i>Tahfiz Internat</a>
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div data-aos="fade-right">
+          <h2 class="text-2xl md:text-3xl mb-6" data-i18n="contact.address_title">Notre adresse</h2>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4"><i class="fas fa-location-dot text-secondary text-xl mt-1"></i><div><p class="font-bold mb-1">Cité des Magistrats</p><p class="text-ink-soft" data-i18n="contact.address_full">Derrière Kër Yoff, Liberté 6 Extension, Dakar, Sénégal</p></div></div>
+            <div class="flex items-start gap-4"><i class="fas fa-clock text-secondary text-xl mt-1"></i><div><p class="font-bold mb-1" data-i18n="contact.hours_title">Horaires d'accueil</p><p class="text-ink-soft text-sm" data-i18n="contact.hours_text">Lundi – Vendredi : 8h00 – 18h00<br/>Samedi : 9h00 – 13h00</p></div></div>
+            <div class="flex items-start gap-4"><i class="fas fa-route text-secondary text-xl mt-1"></i><div><p class="font-bold mb-1" data-i18n="contact.directions_title">Comment venir</p><p class="text-ink-soft text-sm" data-i18n="contact.directions_text">À 5 min de Liberté 6, accessible par bus DDD et clandos. Parking sur place.</p></div></div>
+          </div>
         </div>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary"></i>Galerie</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary"></i>À Propos</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="contact.html" data-i18n="menu.contact"><i class="fas fa-envelope mr-3 text-primary"></i>Contact</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="blog.html" data-i18n="menu.blog"><i class="fas fa-blog mr-3 text-primary"></i>Blog</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="temoignages.html" data-i18n="menu.testimonials"><i class="fas fa-star mr-3 text-teal-600"></i>Témoignages</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="admission.html" data-i18n="menu.admission"><i class="fas fa-user-plus mr-3 text-teal-600"></i>Admission</a>
-        <div class="pt-4 border-t dark:border-slate-700">
-          <a class="block text-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 py-3.5 rounded-2xl font-bold shadow-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
-            S'inscrire maintenant <i class="fas fa-arrow-right ml-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative pt-32 pb-20 bg-gradient-to-br from-primary via-teal-500 to-accent overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-3xl"></div>
-      <div class="absolute bottom-0 right-10 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-3xl"></div>
-    </div>
-
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center max-w-4xl mx-auto">
-        <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-6" data-aos="fade-down" data-i18n="contact.hero_title">
-          Contactez-nous
-        </h1>
-        <p class="text-xl text-white/90 mb-8" data-aos="fade-up" data-aos-delay="100" data-i18n="contact.hero_subtitle">
-          Une question sur nos programmes ? Besoin d'informations ? Notre équipe est à votre écoute pour vous aider.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
-          <a class="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank">
-            <i class="fas fa-edit mr-2"></i> S'inscrire
-          </a>
-          <a class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank">
-            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-          </a>
+        <div data-aos="fade-left">
+          <div class="rounded-2xl overflow-hidden shadow-lg bg-slate-100 aspect-square flex items-center justify-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0!2d-17.475!3d14.745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCit%C3%A9%20des%20Magistrats%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1700000000000" class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Al Amine Academy"></iframe>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== CONTACT INFO CARDS ==================== -->
-  <section class="py-24 bg-white dark:bg-slate-900 relative">
-    <div class="container mx-auto px-4 lg:px-8">
-      <div class="mb-16">
-        <img src="assets/img/facade-ecole.jpg" alt="Façade de l'école Al Amine Academy Dakar" class="w-full h-64 object-cover rounded-2xl"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
-          <i class="fas fa-image text-white/30 text-5xl"></i>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Téléphone Card -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group" data-aos="fade-up">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-primary to-teal-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fas fa-phone text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="contact.phone_label">Téléphone</h3>
-          <div class="space-y-3">
-            <a href="tel:+221777743700" class="block text-primary font-semibold hover:text-primary-dark transition-colors">+221 77 774 37 00</a>
-            <a href="tel:+221777850789" class="block text-primary font-semibold hover:text-primary-dark transition-colors">+221 77 785 07 89</a>
-          </div>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4">Disponible du lundi au samedi, 08h - 18h</p>
-        </div>
-
-        <!-- Email Card -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group" data-aos="fade-up" data-aos-delay="100">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-secondary to-yellow-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fas fa-envelope text-gray-900 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="contact.email_label">Email</h3>
-          <a href="mailto:daara@alamineacademy.com" class="text-secondary-dark font-semibold hover:text-secondary transition-colors break-all">
-            daara@alamineacademy.com
-          </a>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4">Réponse sous 24 heures</p>
-        </div>
-
-        <!-- WhatsApp Card -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group" data-aos="fade-up" data-aos-delay="200">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fab fa-whatsapp text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="contact.whatsapp_label">WhatsApp</h3>
-          <a href="https://wa.me/221777743700" target="_blank" class="text-green-600 font-semibold hover:text-green-700 transition-colors">
-            +221 77 774 37 00
-          </a>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4">Chat instantané disponible</p>
-        </div>
-
-        <!-- Adresse Card -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group" data-aos="fade-up" data-aos-delay="300">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-accent to-purple-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fas fa-map-marker-alt text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="contact.address_label">Localisation</h3>
-          <p class="text-gray-700 dark:text-gray-300 font-semibold text-sm leading-relaxed">
-            Cité des Magistrats, Derrière Kër Yoff, Dakar
-          </p>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4">Dakar, Sénégal</p>
-        </div>
+  <section class="section section-tint">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+      <p class="eyebrow mb-3" data-i18n="contact.faq_eyebrow">Questions fréquentes</p>
+      <h2 class="text-3xl md:text-4xl mb-10" data-i18n="contact.faq_title">Avant de nous écrire</h2>
+      <div class="space-y-4 text-left">
+        <details class="card p-5 cursor-pointer"><summary class="font-bold flex items-center justify-between"><span data-i18n="contact.faq_q1">Quels documents fournir pour l'inscription ?</span><i class="fas fa-chevron-down text-primary"></i></summary><p class="text-ink-soft text-sm mt-3" data-i18n="contact.faq_a1">Acte de naissance de l'enfant, photo d'identité, dernier bulletin scolaire, certificat médical et copie de la pièce d'identité du parent.</p></details>
+        <details class="card p-5 cursor-pointer"><summary class="font-bold flex items-center justify-between"><span data-i18n="contact.faq_q2">À partir de quel âge peut-on inscrire son enfant ?</span><i class="fas fa-chevron-down text-primary"></i></summary><p class="text-ink-soft text-sm mt-3" data-i18n="contact.faq_a2">À partir de 6 ans pour le programme Tahfiz, et de 7 ans pour le programme académique. Contactez-nous pour des cas particuliers.</p></details>
+        <details class="card p-5 cursor-pointer"><summary class="font-bold flex items-center justify-between"><span data-i18n="contact.faq_q3">Peut-on visiter l'école avant d'inscrire ?</span><i class="fas fa-chevron-down text-primary"></i></summary><p class="text-ink-soft text-sm mt-3" data-i18n="contact.faq_a3">Oui, nous encourageons les visites. Appelez-nous pour planifier un rendez-vous.</p></details>
       </div>
     </div>
   </section>
 
-  <!-- ==================== GOOGLE MAPS ==================== -->
-  <section class="py-24 bg-gray-50 dark:bg-slate-800">
-    <div class="container mx-auto px-4 lg:px-8">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Localisation</h2>
-        <p class="text-gray-600 dark:text-gray-400 text-lg">Trouvez-nous facilement sur la carte</p>
-      </div>
 
-      <div class="rounded-3xl overflow-hidden shadow-2xl" data-aos="zoom-in">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.7477956221826!2d-17.457823!3d14.747323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172cc7e9e9e9e9%3A0x1234567890abcdef!2sDARAA%20Al%20Amine%20Academy!5e0!3m2!1sfr!2ssn!4v1234567890" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+  <div id="aaa-footer"></div>
 
-      <div class="mt-12 grid md:grid-cols-3 gap-8">
-        <div class="text-center" data-aos="fade-up">
-          <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-clock text-primary text-2xl"></i>
-          </div>
-          <h3 class="font-bold text-gray-900 dark:text-white mb-2">Horaires d'ouverture</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Lundi - Samedi: 08h - 18h</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Dimanche: Fermé</p>
-        </div>
-        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-directions text-secondary text-2xl"></i>
-          </div>
-          <h3 class="font-bold text-gray-900 dark:text-white mb-2">Accès facile</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Proche de tous les transports en commun</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Parking disponible</p>
-        </div>
-        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-info-circle text-accent text-2xl"></i>
-          </div>
-          <h3 class="font-bold text-gray-900 dark:text-white mb-2">Visite</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Visite de l'établissement sur rendez-vous</p>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Contactez-nous pour organiser</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== INSCRIPTION SECTION ==================== -->
-  <section class="py-20 bg-gradient-to-r from-primary via-primary-dark to-accent relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M20 20.5V18H0v-2h20v-2l2 3-2 3zm0-3V20h20v2H20v2l-2-3 2-3z&quot; fill=&quot;%23ffffff&quot; fill-opacity=&quot;.3&quot; fill-rule=&quot;evenodd&quot;/%3E%3C/svg%3E');"></div>
-    <div class="container mx-auto px-4 lg:px-8 text-center relative z-10" data-aos="zoom-in">
-      <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6">Prêt à inscrire votre enfant ?</h2>
-      <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Rejoignez la famille Al Amine Academy et offrez à votre enfant une éducation d'excellence alliant Coran et savoir académique.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a class="inline-flex items-center justify-center bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank">
-          <i class="fas fa-edit mr-2"></i> Formulaire d'inscription
-        </a>
-        <a class="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank">
-          <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Brand -->
-        <div>
-          <h3 class="text-2xl font-bold mb-2">
-            <i class="fas fa-quran mr-2"></i>Al Amine Academy
-          </h3>
-          <p class="text-slate-400">Excellence éducative islamique</p>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="font-bold mb-4">Navigation</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="index.html" class="hover:text-white transition-colors">Accueil</a></li>
-            <li><a href="a-propos.html" class="hover:text-white transition-colors">À Propos</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-            <li><a href="galerie.html" class="hover:text-white transition-colors">Galerie</a></li>
-          </ul>
-        </div>
-
-        <!-- Programs -->
-        <div>
-          <h4 class="font-bold mb-4">Nos Programmes</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="programme-internat.html" class="hover:text-white transition-colors">Tahfiz Internat</a></li>
-            <li><a href="programme-tahfiz-academique.html" class="hover:text-white transition-colors">Tahfiz + Académique</a></li>
-            <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors">Cours en Ligne</a></li>
-            <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors">Cours Gratuits</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div>
-          <h4 class="font-bold mb-4">Nous Contacter</h4>
-          <ul class="space-y-2 text-slate-400 text-sm">
-            <li><i class="fas fa-phone mr-2"></i>+221 77 774 37 00</li>
-            <li><i class="fas fa-envelope mr-2"></i>daara@alamineacademy.com</li>
-            <li><i class="fas fa-map-marker-alt mr-2"></i>Cité des Magistrats, Derrière Kër Yoff, Dakar</li>
-            <li><a href="https://www.facebook.com/daaraalamineacademy/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-facebook-f mr-2"></i>Facebook</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Divider -->
-      <div class="border-t border-slate-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-slate-400 text-sm">
-            &copy; 2024 Al Amine Academy. Tous droits réservés.
-          </p>
-          <div class="flex gap-6 text-sm text-slate-400">
-            <a href="mailto:daara@alamineacademy.com?subject=Demande%20politique%20de%20confidentialit%C3%A9" class="hover:text-white transition-colors">Politique de confidentialité</a>
-            <a href="mailto:daara@alamineacademy.com?subject=Conditions%20d%27utilisation" class="hover:text-white transition-colors">Conditions d'utilisation</a>
-            <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- AOS Init -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true, offset: 0 });
-    var aosPreload = document.getElementById("aos-preload"); if (aosPreload) aosPreload.remove();
-  </script>
-
-  <!-- Navbar Scroll Effect -->
-  <script>
-    const navbar = document.getElementById('navbar');
-    const navTitle = document.getElementById('navTitle');
-    const navSubtitle = document.getElementById('navSubtitle');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('nav-scrolled');
-        navTitle.classList.remove('text-white');
-        navTitle.classList.add('text-gray-900', 'dark:text-white');
-        navSubtitle.classList.remove('text-white/70');
-        navSubtitle.classList.add('text-gray-600', 'dark:text-gray-400');
-      } else {
-        navbar.classList.remove('nav-scrolled');
-        navTitle.classList.add('text-white');
-        navTitle.classList.remove('text-gray-900', 'dark:text-white');
-        navSubtitle.classList.add('text-white/70');
-        navSubtitle.classList.remove('text-gray-600', 'dark:text-gray-400');
-      }
-    });
-  </script>
-
-  <!-- Mobile Menu Toggle -->
-  <script>
-    function toggleMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      const menuIcon = document.getElementById('menuIcon');
-      mobileMenu.classList.toggle('hidden');
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-times');
-    }
-  </script>
-
-  <!-- Dark Mode Toggle -->
-  <script>
-    const darkToggle = document.getElementById('darkToggle');
-    const darkToggleMobile = document.getElementById('darkToggleMobile');
-    const darkIcon = document.getElementById('darkIcon');
-    const darkIconMobile = document.getElementById('darkIconMobile');
-    const html = document.documentElement;
-
-    const isDarkMode = localStorage.getItem('darkMode') === 'true' ||
-                       (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-    if (isDarkMode) {
-      html.classList.add('dark');
-      darkIcon.classList.remove('fa-moon');
-      darkIcon.classList.add('fa-sun');
-      darkIconMobile.classList.remove('fa-moon');
-      darkIconMobile.classList.add('fa-sun');
-    }
-
-    const toggleDarkMode = () => {
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      localStorage.setItem('darkMode', isDark);
-      darkIcon.classList.toggle('fa-moon');
-      darkIcon.classList.toggle('fa-sun');
-      darkIconMobile.classList.toggle('fa-moon');
-      darkIconMobile.classList.toggle('fa-sun');
-    };
-
-    darkToggle.addEventListener('click', toggleDarkMode);
-    darkToggleMobile.addEventListener('click', toggleDarkMode);
-  </script>
-
-  <script src="translations.js?v=30260429b"></script>
-  <script src="lang.js?v=30260429b"></script>
+  <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
+  <script src="translations.js"></script>
+  <script src="lang.js"></script>
+  <script src="assets/js/site-shell.js" defer></script>
 </body>
 </html>

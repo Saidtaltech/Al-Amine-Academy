@@ -8,26 +8,6 @@
  * - Updates <html lang> and dir (RTL for ar) and the #currentLang indicator.
  * - Includes a Font Awesome / AOS resilience layer for offline / blocked-CDN users. */
 
-/* ========================================================================== *
- * RESILIENCE CSS — injected synchronously, BEFORE anything else runs.
- * Ensures [data-aos] elements are always visible even if AOS JS fails to load
- * or is slow. AOS animations remain optional — content visibility is mandatory. */
-(function injectResilienceCSS () {
-    var css = [
-        '[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}',
-        '[data-aos].aos-animate{opacity:1!important;transform:none!important;}',
-        '.lang-active{background:rgba(245,158,11,0.18);border-radius:8px;font-weight:600;}',
-        '[data-lang-switch]{transition:background-color .15s ease;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;}',
-        '#aaa-lang-toast{font-family:Montserrat,system-ui,sans-serif;}',
-        '/* Make every text node visible even if a parent had opacity:0 from AOS */',
-        '[data-i18n],[data-i18n-html]{opacity:1!important;}'
-    ].join('\n');
-    var style = document.createElement('style');
-    style.setAttribute('data-aaa', 'resilience');
-    style.textContent = css;
-    (document.head || document.documentElement).appendChild(style);
-})();
-
 const TRANSLATIONS = (window.AAA_TRANSLATIONS && typeof window.AAA_TRANSLATIONS === 'object')
     ? window.AAA_TRANSLATIONS
     : { fr: {}, en: {}, ar: {}, es: {} };
@@ -192,23 +172,37 @@ function decorateLangSwitchers() {
     });
 }
 
-/* Apply translations as early as possible — don't wait for DOMContentLoaded
- * if the body is already parsed (script is at end of body). */
-function bootstrapTranslations() {
+document.addEventListener('DOMContentLoaded', function () {
     decorateLangSwitchers();
     if (translationsReady) applyTranslations();
     overlayJsonTranslations(); // best-effort overlay; no-op in file://
-}
-
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bootstrapTranslations);
-} else {
-    bootstrapTranslations();
-}
+});
 
 /* ========================================================================== *
- * RESILIENCE LAYER — keep icons visible when CDNs fail to load. */
+ * RESILIENCE LAYER — keep content & icons visible when CDNs fail to load. */
 (function () {
+    var fallbackCss = document.createElement('style');
+    fallbackCss.setAttribute('data-fallback', 'aaa');
+    fallbackCss.textContent = [
+        '.lang-active { background: rgba(244,198,64,0.18); border-radius: 8px; font-weight: 600; }',
+        '[data-lang-switch] { transition: background-color .15s ease; cursor: pointer; min-height: 44px; display: flex; align-items: center; }',
+        '[data-aos].aos-animate { opacity: 1 !important; transform: none !important; }',
+        '#aaa-lang-toast { font-family: Montserrat, system-ui, sans-serif; }'
+    ].join('\n');
+    (document.head || document.documentElement).appendChild(fallbackCss);
+
+    function showAosFallback() {
+        document.querySelectorAll('[data-aos]').forEach(function (el) {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+            el.style.transition = 'none';
+            el.classList.add('aos-animate');
+        });
+    }
+    function checkAos() {
+        if (typeof window.AOS === 'undefined') showAosFallback();
+        else { try { window.AOS.refresh(); } catch (e) { /* ignore */ } }
+    }
     function isFontAwesomeLoaded() {
         var probe = document.createElement('i');
         probe.className = 'fas fa-check';
@@ -222,23 +216,13 @@ if (document.readyState === 'loading') {
         return /Font Awesome|FontAwesome/i.test(fontFamily) && content !== 'none' && content !== '' && content !== '""';
     }
     function checkFontAwesome() {
-        if (!document.body) return;
         if (!isFontAwesomeLoaded()) document.documentElement.classList.add('no-fa');
     }
-    function refreshAOS() {
-        if (typeof window.AOS !== 'undefined' && typeof window.AOS.refresh === 'function') {
-            try { window.AOS.refresh(); } catch (e) { /* ignore */ }
-        }
-    }
-    if (document.readyState === 'complete') {
-        try { checkFontAwesome(); } catch (e) {}
-        refreshAOS();
-    } else {
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                try { checkFontAwesome(); } catch (e) {}
-                refreshAOS();
-            }, 300);
-        });
-    }
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            checkAos();
+            try { checkFontAwesome(); } catch (e) { /* ignore */ }
+        }, 600);
+    });
+    setTimeout(checkAos, 3000);
 })();

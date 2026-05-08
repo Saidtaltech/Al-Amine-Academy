@@ -69,29 +69,16 @@
         .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
         @media (prefers-color-scheme: dark) { body { background-color: #0f172a; color: #e2e8f0; } }
     </style>
-  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
+  <link rel="stylesheet" href="../assets/css/site.css"/>
 </head>
 <body class="bg-gray-50 dark:bg-slate-900 text-gray-800 dark:text-gray-100">
     <!-- Navbar -->
-    <nav id="navbar" class="bg-white dark:bg-slate-900 shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 lg:px-8">
-            <div class="flex justify-between items-center py-3">
-                <a class="flex items-center gap-3" href="../index.html">
-                    <div class="w-10 h-10 bg-gradient-to-br from-teal-600 to-purple-500 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-book-quran text-white text-lg"></i>
-                    </div>
-                    <span class="text-lg font-extrabold text-gray-900 dark:text-white">Al Amine Academy</span>
-                </a>
-                <div class="hidden lg:flex items-center gap-4">
-                    <a class="text-gray-600 dark:text-gray-300 hover:text-teal-600 font-medium text-sm" href="../index.html">Accueil</a>
-                    <a class="text-gray-600 dark:text-gray-300 hover:text-teal-600 font-medium text-sm" href="../a-propos.html">À Propos</a>
-                    <a class="text-gray-600 dark:text-gray-300 hover:text-teal-600 font-medium text-sm" href="../contact.html">Contact</a>
-                    <a class="text-gray-600 dark:text-gray-300 hover:text-teal-600 font-medium text-sm" href="../blog.html">Blog</a>
-                    <a class="bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank">S'inscrire</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+
+  <div id="aaa-navbar">
+    <noscript><nav class="fixed top-0 left-0 right-0 z-50 bg-white p-4 border-b border-slate-200">
+      <a href="../index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> · <a href="../a-propos.html">À Propos</a> · <a href="../admission.html">Admission</a> · <a href="../contact.html">Contact</a>
+    </nav></noscript>
+  </div>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-teal-600 to-purple-500 text-white py-12 lg:py-16">
@@ -339,41 +326,8 @@
     </article>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 dark:bg-slate-950 text-gray-300 py-12">
-        <div class="container mx-auto px-4 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h3 class="text-white font-bold mb-4 flex items-center gap-2">
-                        <i class="fas fa-book-quran"></i> Al Amine Academy
-                    </h3>
-                    <p class="text-sm">Excellence en éducation islamique et académique à Dakar, Senegal</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Liens Rapides</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="../index.html" class="hover:text-teal-400">Accueil</a></li>
-                        <li><a href="../a-propos.html" class="hover:text-teal-400">À Propos</a></li>
-                        <li><a href="../blog.html" class="hover:text-teal-400">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Contact</h4>
-                    <p class="text-sm mb-2"><i class="fas fa-phone mr-2 text-teal-400"></i> +221 77 774 37 00</p>
-                    <p class="text-sm"><i class="fas fa-envelope mr-2 text-teal-400"></i> daara@alamineacademy.com</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4">Suivez-Nous</h4>
-                    <div class="flex gap-4">
-                        <a href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" aria-label="Facebook" class="text-teal-400 hover:text-teal-300 text-lg"><i class="fab fa-facebook"></i></a>
-                        <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="text-teal-400 hover:text-teal-300 text-lg"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.youtube.com/@alamineacademy" target="_blank" rel="noopener" aria-label="YouTube" class="text-teal-400 hover:text-teal-300 text-lg"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 pt-8 text-center text-sm">
-                <p>&copy; 2026 Al Amine Academy. Tous droits réservés. | <a href="#" class="hover:text-teal-400">Confidentialité</a> | <a href="#" class="hover:text-teal-400">Conditions</a></p>
-            </div>
-        </div>
-    </footer>
+
+  <div id="aaa-footer"></div>
+  <script src="../assets/js/site-shell.js" defer></script>
 </body>
 </html>
