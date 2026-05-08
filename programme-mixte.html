@@ -70,94 +70,15 @@
    </span>
   </a>
   <!-- NAVBAR -->
-<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-white dark:bg-slate-900 shadow-md">
-  <div class="container mx-auto px-4 lg:px-8">
-    <div class="flex justify-between items-center py-3">
-      <a class="flex items-center gap-3 group" href="index.html">
-        <div class="w-12 h-12 bg-gradient-to-br from-teal-600 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
-          <i class="fas fa-book-quran text-white text-xl"></i>
-        </div>
-        <div>
-          <span class="text-lg font-extrabold text-gray-900 dark:text-white" data-i18n="site.name">Al Amine Academy</span>
-          <p class="text-[10px] text-gray-500 dark:text-gray-400 arabic-text">يار أك خام خام</p>
-        </div>
-      </a>
-      <div class="hidden lg:flex items-center gap-1">
-        <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="index.html" data-i18n="menu.home">Accueil</a>
-        <div class="relative group">
-          <button class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm flex items-center gap-1" data-i18n="menu.programs">
-            Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
-          </button>
-          <div class="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 border border-gray-100 dark:border-slate-700 overflow-hidden">
-            <a class="flex items-center gap-3 px-5 py-4 hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-all" href="programme-internat.html">
-              <div class="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-school text-teal-600"></i></div>
-              <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-gray-500">Coran + Sport + Hébergement</p></div>
-            </a>
-            <a class="flex items-center gap-3 px-5 py-4 hover:bg-amber-50 dark:hover:bg-amber-900/20 transition-all" href="programme-tahfiz-academique.html">
-              <div class="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-book-open text-amber-600"></i></div>
-              <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.combined">Tahfiz + Académique</p><p class="text-xs text-gray-500">Coran + Français + Anglais</p></div>
-            </a>
-            <a class="flex items-center gap-3 px-5 py-4 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all" href="programme-cours-en-ligne.html">
-              <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-laptop text-purple-600"></i></div>
-              <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-gray-500">Apprenez de chez vous</p></div>
-            </a>
-            <a class="flex items-center gap-3 px-5 py-4 hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-all" href="programme-cours-gratuits.html">
-              <div class="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-rose-600"></i></div>
-              <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
-            </a>
-          </div>
-        </div>
-        <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
-        <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="a-propos.html" data-i18n="menu.about">À Propos</a>
-        <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="contact.html" data-i18n="menu.contact">Contact</a>
-        <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="blog.html" data-i18n="menu.blog">Blog</a>
-        <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="temoignages.html" data-i18n="menu.testimonials">Témoignages</a>
-        <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="admission.html" data-i18n="menu.admission">Admission</a>
-        <button id="darkToggle" class="p-2 text-gray-600 dark:text-gray-300 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl transition-all" title="Mode sombre">
-          <i class="fas fa-moon text-lg" id="darkIcon"></i>
-        </button>
-        <div class="relative group">
-          <button class="flex items-center gap-1 px-3 py-2 text-gray-600 dark:text-gray-300 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl transition-all text-sm">
-            <i class="fas fa-globe"></i> <span id="currentLang">FR</span>
-          </button>
-          <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 dark:border-slate-700 overflow-hidden">
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('fr');return false;">🇫🇷 Français</a>
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('en');return false;">🇬🇧 English</a>
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 arabic-text text-sm" href="#" onclick="switchLanguage('ar');return false;">🇸🇦 العربية</a>
-            <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('es');return false;">🇪🇸 Español</a>
-          </div>
-        </div>
-        <a class="ml-2 bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-yellow-400 hover:to-amber-400 text-gray-900 px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
-          S'inscrire <i class="fas fa-arrow-right ml-1 text-xs"></i>
-        </a>
-      </div>
-      <div class="flex items-center gap-3 lg:hidden">
-        <button id="darkToggleMobile" class="p-2 text-gray-600 dark:text-gray-300 rounded-xl transition-all"><i class="fas fa-moon text-lg" id="darkIconMobile"></i></button>
-        <button onclick="toggleMenu()" class="p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl transition-all"><i class="fas fa-bars text-xl" id="menuIcon"></i></button>
-      </div>
-    </div>
+  <!-- ====================  NAVBAR (injecté par site-shell.js)  ==================== -->
+  <div id="aaa-navbar">
+    <noscript><nav class="fixed top-0 left-0 right-0 z-50 bg-white p-4 border-b border-slate-200">
+      <a href="index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> ·
+      <a href="a-propos.html">À Propos</a> ·
+      <a href="admission.html">Admission</a> ·
+      <a href="contact.html">Contact</a>
+    </nav></noscript>
   </div>
-  <div class="hidden lg:hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 shadow-2xl" id="mobileMenu">
-    <div class="container mx-auto px-4 py-6 space-y-2">
-      <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="index.html" data-i18n="menu.home"><i class="fas fa-home mr-3 text-teal-600"></i>Accueil</a>
-      <div class="pl-4 space-y-1 border-l-2 border-teal-200 ml-4">
-        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-internat.html" data-i18n="programs.tahfiz"><i class="fas fa-school mr-2 text-teal-500"></i>Tahfiz Internat</a>
-        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-amber-500"></i>Tahfiz + Académique</a>
-        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-purple-500"></i>Cours en Ligne</a>
-        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-rose-500"></i>Cours Gratuits</a>
-      </div>
-      <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-teal-600"></i>Galerie</a>
-      <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-teal-600"></i>À Propos</a>
-      <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="contact.html" data-i18n="menu.contact"><i class="fas fa-envelope mr-3 text-teal-600"></i>Contact</a>
-      <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="blog.html" data-i18n="menu.blog"><i class="fas fa-blog mr-3 text-teal-600"></i>Blog</a>
-      <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="temoignages.html" data-i18n="menu.testimonials"><i class="fas fa-star mr-3 text-teal-600"></i>Témoignages</a>
-      <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="admission.html" data-i18n="menu.admission"><i class="fas fa-user-plus mr-3 text-teal-600"></i>Admission</a>
-      <div class="pt-4 border-t dark:border-slate-700">
-        <a class="block text-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 py-3.5 rounded-2xl font-bold shadow-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">S'inscrire maintenant <i class="fas fa-arrow-right ml-1"></i></a>
-      </div>
-    </div>
-  </div>
-</nav>
   <div class="h-16"></div>
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-br from-blue-600 to-blue-800 py-24 overflow-hidden">
@@ -852,5 +773,6 @@
   </footer>
   <script src="translations.js"></script>
   <script src="lang.js"></script>
+   <script src="assets/js/site-shell.js" defer></script>
  </body>
 </html>

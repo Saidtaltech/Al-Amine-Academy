@@ -35,15 +35,16 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 
   <script>
+    /* Palette : bleu du logo Al Amine Academy + jaune-orange */
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8', 50: '#f0f9fc' },
-            secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
-            accent: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-            coral: { DEFAULT: '#f43f5e', dark: '#e11d48', light: '#ffe4e6' },
+            primary: { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73', light: '#e8f4f8', 50: '#f0f9fc' },
+            secondary: { DEFAULT: '#f5a623', dark: '#d97706', light: '#fef3c7' },
+            accent:    { DEFAULT: '#2590b3', dark: '#1e7a9a', light: '#e8f4f8' },
+            ink:       { DEFAULT: '#0f172a', soft: '#334155', muted: '#64748b' },
             teal: {
               50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
               400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
@@ -51,272 +52,216 @@
             }
           },
           fontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
-            arabic: ['Amiri', 'serif']
-          }
+            sans:    ['Montserrat', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif'],
+            arabic:  ['Amiri', 'serif']
+          },
+          letterSpacing: { tightest: '-0.04em' }
         }
       }
     }
   </script>
 
   <style>
-    body { font-family: 'Montserrat', sans-serif; }
+    /* ---------- Brand tokens ---------- */
+    :root {
+      --brand-blue: #2590b3;
+      --brand-blue-dark: #1e7a9a;
+      --brand-blue-deep: #165b73;
+      --brand-yellow: #f5a623;
+      --brand-yellow-dark: #d97706;
+      --ink: #0f172a;
+      --ink-soft: #334155;
+      --ink-muted: #64748b;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-feature-settings: 'kern' 1, 'liga' 1;
+      -webkit-font-smoothing: antialiased;
+      color: var(--ink);
+    }
     .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .gradient-animate {
-      background-size: 200% 200%;
-      animation: gradientShift 8s ease infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    .float { animation: float 6s ease-in-out infinite; }
-    .float-delay { animation: float 6s ease-in-out 2s infinite; }
-
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(30, 122, 154, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(30, 122, 154, 0.6); }
-    }
-    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
-
-    .parallax-bg {
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
+    /* Typographic rhythm */
+    h1, h2, h3, h4 { letter-spacing: -0.02em; }
+    h1 { letter-spacing: -0.035em; line-height: 1.05; }
+    h2 { line-height: 1.1; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .75rem; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--brand-blue);
     }
 
-    .counter-value { font-variant-numeric: tabular-nums; }
-
-    .card-3d {
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* ---------- Hero with background image ---------- */
+    .hero {
+      position: relative; isolation: isolate;
+      min-height: 100vh;
+      background-color: var(--brand-blue-dark);
+      background-image:
+        linear-gradient(135deg, rgba(15,30,42,0.55) 0%, rgba(22,91,115,0.78) 60%, rgba(22,91,115,0.92) 100%),
+        url('assets/img/hero-eleves-coran.jpg'),
+        linear-gradient(135deg, #1e7a9a 0%, #3ba5c9 100%);
+      background-size: cover, cover, cover;
+      background-position: center, center, center;
+      background-repeat: no-repeat;
     }
-    .card-3d:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    .hero::after {
+      content: ''; position: absolute; inset: auto 0 0 0; height: 30%;
+      background: linear-gradient(to bottom, transparent, rgba(15,23,42,0.18));
+      pointer-events: none; z-index: 0;
     }
 
+    /* ---------- Buttons ---------- */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font-weight: 600; transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease; }
+    .btn-primary {
+      background: var(--brand-yellow); color: #1f2937;
+      padding: 1rem 1.75rem; border-radius: .75rem;
+      box-shadow: 0 10px 24px -10px rgba(245,166,35,.55);
+    }
+    .btn-primary:hover { transform: translateY(-2px); background: #f7b541; box-shadow: 0 16px 32px -12px rgba(245,166,35,.65); }
+    .btn-ghost {
+      border: 1.5px solid rgba(255,255,255,.5); color: #fff;
+      padding: 1rem 1.75rem; border-radius: .75rem; backdrop-filter: blur(6px);
+    }
+    .btn-ghost:hover { background: #fff; color: var(--brand-blue-dark); border-color: #fff; }
+    .btn-outline-blue {
+      border: 1.5px solid var(--brand-blue); color: var(--brand-blue);
+      padding: .85rem 1.5rem; border-radius: .65rem; background: #fff;
+    }
+    .btn-outline-blue:hover { background: var(--brand-blue); color: #fff; }
+
+    /* ---------- Glass stats bar ---------- */
+    .stats-bar {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    /* ---------- Cards ---------- */
+    .problem-card { background: #fff; border-left: 4px solid var(--brand-yellow); transition: transform .3s ease, box-shadow .3s ease; }
+    .dark .problem-card { background: #1f2937; }
+    .problem-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -20px rgba(15,23,42,.35); }
+
+    .program-card { background: #fff; border-top: 4px solid var(--brand-blue); transition: transform .3s ease, box-shadow .3s ease; }
+    .dark .program-card { background: #1f2937; }
+    .program-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -24px rgba(37,144,179,.35); }
+
+    .testimonial-card { background: linear-gradient(135deg, #f0f9fc 0%, #e8f4f8 100%); border-left: 4px solid var(--brand-blue); }
+    .dark .testimonial-card { background: linear-gradient(135deg, #0f4457 0%, #165b73 100%); }
+
+    .stars { color: var(--brand-yellow); }
+
+    /* ---------- Navbar ---------- */
+    .navbar {
+      transition: background-color .25s ease, box-shadow .25s ease, backdrop-filter .25s ease;
+    }
     .nav-scrolled {
-      background: rgba(255,255,255,0.95) !important;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      background: rgba(255,255,255,0.92) !important;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 4px 24px rgba(15,23,42,0.08);
     }
     .dark .nav-scrolled {
-      background: rgba(15,23,42,0.95) !important;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+      background: rgba(15,23,42,0.92) !important;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
     }
+    .nav-link { position: relative; padding: .35rem .15rem; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: -2px;
+      width: 0; height: 2px; background: var(--brand-yellow);
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .lang-active { background: rgba(245,166,35,0.18); border-radius: 8px; font-weight: 600; }
 
-    .hero-gradient {
-      background: linear-gradient(135deg, #1e7a9a 0%, #3ba5c9 100%);
-    }
+    /* ---------- Animations ---------- */
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+    .float       { animation: float 6s ease-in-out infinite; }
+    .float-delay { animation: float 6s ease-in-out 2s infinite; }
 
-    .stats-bar {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .cta-primary {
-      background: linear-gradient(135deg, #f59e0b 0%, #f59e0b 100%);
-      transition: all 0.3s ease;
-    }
-    .cta-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
-    }
-
-    .cta-secondary {
-      border: 2px solid white;
-      color: white;
-      transition: all 0.3s ease;
-    }
-    .cta-secondary:hover {
-      background: white;
-      color: #1e7a9a;
-    }
-
-    .problem-card {
-      background: white;
-      border-left: 4px solid #f59e0b;
-      transition: all 0.3s ease;
-    }
-    .dark .problem-card {
-      background: #1f2937;
-      border-left-color: #f59e0b;
-    }
-    .problem-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(30, 122, 154, 0.1);
-    }
-
-    .testimonial-card {
-      background: linear-gradient(135deg, #f0f9fc 0%, #e8f4f8 100%);
-      border-left: 4px solid #1e7a9a;
-    }
-    .dark .testimonial-card {
-      background: linear-gradient(135deg, #0f4457 0%, #165b73 100%);
-    }
-
-    .program-card {
-      background: white;
-      border-top: 4px solid #1e7a9a;
-      transition: all 0.3s ease;
-    }
-    .dark .program-card {
-      background: #1f2937;
-    }
-    .program-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(30, 122, 154, 0.2);
-    }
-
-    .stars {
-      color: #f59e0b;
-    }
+    /* ---------- AOS resilience: content always visible if AOS fails ---------- */
+    [data-aos] { opacity: 1; transform: none; }
+    .aos-init[data-aos] { opacity: 0; }
+    .aos-init.aos-animate[data-aos] { opacity: 1; transform: none; }
 
     @media (max-width: 768px) {
-      .hero-gradient {
-        min-height: 90vh;
-      }
+      .hero { min-height: 88vh; }
     }
   </style>
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
 
-  <!-- Navigation Bar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 navbar bg-white/80 dark:bg-slate-950/80 backdrop-blur-md transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center">
-          <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
-            <i class="fas fa-quran mr-2"></i>Al Amine
-          </a>
-        </div>
+  <!-- ====================  NAVBAR (injecté par site-shell.js)  ==================== -->
+  <div id="aaa-navbar">
+    <noscript><nav class="fixed top-0 left-0 right-0 z-50 bg-white p-4 border-b border-slate-200">
+      <a href="index.html" class="font-bold text-primary">DAARA Al Amine Academy</a> ·
+      <a href="a-propos.html">À Propos</a> ·
+      <a href="admission.html">Admission</a> ·
+      <a href="contact.html">Contact</a>
+    </nav></noscript>
+  </div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center space-x-6 text-sm">
-          <a href="#programmes" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.programs">Programmes</a>
-          <a href="admission.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.admission">Admission</a>
-          <a href="a-propos.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.about">À Propos</a>
-          <a href="galerie.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.gallery">Galerie</a>
-          <a href="temoignages.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.testimonials">Témoignages</a>
-          <a href="blog.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.blog">Blog</a>
-          <a href="contact.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.contact">Contact</a>
-          <div class="flex items-center gap-1 text-sm border-l border-slate-300 dark:border-slate-700 pl-3 ml-1">
-            <a href="#" data-lang-switch="fr" onclick="switchLanguage('fr');return false;" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800" title="Français">FR</a>
-            <a href="#" data-lang-switch="en" onclick="switchLanguage('en');return false;" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800" title="English">EN</a>
-            <a href="#" data-lang-switch="ar" onclick="switchLanguage('ar');return false;" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 arabic-text" title="العربية">ع</a>
-          </div>
-          <a href="tel:+221777743700" class="px-4 py-2 rounded-lg bg-secondary hover:bg-secondary/90 text-white transition-colors whitespace-nowrap">
-            <i class="fas fa-phone mr-2"></i>+221 77 774 37 00
-          </a>
-        </div>
+  <!-- ====================  HERO  (StoryBrand)  ==================== -->
+  <section class="hero flex items-center pt-24 pb-20">
+    <!-- Decorative blurs -->
+    <div class="absolute top-24 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl float-delay pointer-events-none"></div>
 
-        <!-- Right Side Controls -->
-        <div class="flex items-center space-x-4">
-          <!-- Dark Mode Toggle -->
-          <button id="dark-toggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-            <i class="fas fa-moon dark:hidden"></i>
-            <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
-          </button>
-
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+      <!-- Eyebrow / badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-white/90 text-xs font-semibold tracking-[0.18em] uppercase mb-8" data-aos="fade-down">
+        <i class="fas fa-star text-secondary"></i>
+        <span data-i18n="hero.eyebrow">Daara moderne · Dakar · Depuis 2023</span>
       </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-slate-200 dark:border-slate-700">
-        <a href="#programmes" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.programs">Programmes</a>
-        <a href="admission.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.admission">Admission</a>
-        <a href="a-propos.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.about">À Propos</a>
-        <a href="galerie.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.gallery">Galerie</a>
-        <a href="temoignages.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.testimonials">Témoignages</a>
-        <a href="blog.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.blog">Blog</a>
-        <a href="contact.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.contact">Contact</a>
-        <div class="flex items-center gap-2 py-2 mt-2 border-t border-slate-200 dark:border-slate-700">
-          <span class="text-xs text-slate-500">Langue :</span>
-          <a href="#" data-lang-switch="fr" onclick="switchLanguage('fr');return false;" class="px-2 py-1 rounded text-sm">FR</a>
-          <a href="#" data-lang-switch="en" onclick="switchLanguage('en');return false;" class="px-2 py-1 rounded text-sm">EN</a>
-          <a href="#" data-lang-switch="ar" onclick="switchLanguage('ar');return false;" class="px-2 py-1 rounded text-sm arabic-text">ع</a>
-        </div>
-        <a href="tel:+221777743700" class="block py-2 mt-2 text-center bg-secondary text-white rounded-lg">
-          <i class="fas fa-phone mr-2"></i>+221 77 774 37 00
+      <!-- Headline (StoryBrand: clear promise) -->
+      <h1 class="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto mb-6" data-aos="fade-up" data-i18n-html="hero.title_html">
+        Offrez à votre enfant une <span class="text-secondary">éducation coranique</span> d'excellence
+      </h1>
+
+      <!-- Subheadline (StoryBrand: how life gets better) -->
+      <p class="text-white/90 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10" data-aos="fade-up" data-aos-delay="100" data-i18n="hero.subtitle">
+        Tahfiz, programme académique bilingue et épanouissement personnel — réunis dans un internat moderne à Dakar, encadré par des enseignants qualifiés et bienveillants.
+      </p>
+
+      <!-- CTAs (StoryBrand: clear primary + transitional) -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn btn-primary text-base">
+          <i class="fas fa-pen-fancy"></i>
+          <span data-i18n="hero.cta_primary">Inscrire mon enfant</span>
+        </a>
+        <a href="#programmes" class="btn btn-ghost text-base">
+          <i class="fas fa-compass"></i>
+          <span data-i18n="hero.cta_secondary">Découvrir nos programmes</span>
         </a>
       </div>
-    </div>
-  </nav>
 
-  <!-- HERO SECTION - The Customer is the Hero -->
-  <section class="hero-gradient min-h-screen flex items-center pt-16 relative overflow-hidden">
-    <!-- Animated background elements -->
-    <div class="absolute top-10 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float"></div>
-    <div class="absolute bottom-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float-delay"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Content -->
-        <div data-aos="fade-right" data-aos-duration="800">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-i18n-html="hero.title_html">
-            Offrez à votre enfant une <span class="text-secondary">éducation coranique</span> d'excellence
-          </h1>
-
-          <p class="text-lg md:text-xl text-white/90 mb-8 leading-relaxed" data-i18n="hero.subtitle">
-            Vous cherchez un daara moderne qui allie mémorisation du Coran, discipline et épanouissement ? Al Amine Academy accompagne votre enfant vers la réussite spirituelle et académique.
-          </p>
-
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="cta-primary px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center">
-              <i class="fas fa-pen-fancy mr-2"></i><span data-i18n="hero.cta_primary">Inscrire mon enfant</span>
-            </a>
-            <a href="#programmes" class="cta-secondary px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center">
-              <i class="fas fa-compass mr-2"></i><span data-i18n="hero.cta_secondary">Découvrir nos programmes</span>
-            </a>
-          </div>
-
-          <!-- Stats Bar -->
-          <div class="stats-bar rounded-xl p-6 flex flex-col sm:flex-row gap-6">
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">4.9<span class="text-sm">/5</span></div>
-              <p class="text-white/80 text-sm"><i class="fas fa-star text-secondary mr-1"></i><span data-i18n="hero.stats_rating">15 avis Google</span></p>
-            </div>
-            <div class="w-px bg-white/20 hidden sm:block"></div>
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">200+</div>
-              <p class="text-white/80 text-sm" data-i18n="hero.stats_students">Élèves épanouis</p>
-            </div>
-            <div class="w-px bg-white/20 hidden sm:block"></div>
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">3</div>
-              <p class="text-white/80 text-sm" data-i18n="hero.stats_programs">Programmes adaptés</p>
-            </div>
-            <div class="w-px bg-white/20 hidden sm:block"></div>
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">2023</div>
-              <p class="text-white/80 text-sm" data-i18n="hero.stats_since">Excellence depuis</p>
-            </div>
-          </div>
+      <!-- Stats bar (social proof) -->
+      <div class="stats-bar rounded-2xl p-5 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-2 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-center">
+          <div class="text-2xl md:text-3xl font-extrabold text-secondary">4.9<span class="text-base">/5</span></div>
+          <p class="text-white/80 text-xs md:text-sm mt-1"><i class="fas fa-star text-secondary mr-1"></i><span data-i18n="hero.stats_rating">15 avis Google</span></p>
         </div>
-
-        <!-- Right Image/Illustration -->
-        <div data-aos="fade-left" data-aos-duration="800" class="relative">
-          <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves apprenant le Coran à Al Amine Academy Dakar" class="w-full h-96 md:h-full object-cover rounded-2xl shadow-xl"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div style="display:none" class="absolute inset-0 w-full h-96 md:h-full bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
-            <i class="fas fa-book-quran text-7xl text-white/40"></i>
-          </div>
+        <div class="text-center md:border-l md:border-white/15">
+          <div class="text-2xl md:text-3xl font-extrabold text-secondary">200<span class="text-base">+</span></div>
+          <p class="text-white/80 text-xs md:text-sm mt-1" data-i18n="hero.stats_students">Élèves épanouis</p>
+        </div>
+        <div class="text-center md:border-l md:border-white/15">
+          <div class="text-2xl md:text-3xl font-extrabold text-secondary">5</div>
+          <p class="text-white/80 text-xs md:text-sm mt-1" data-i18n="hero.stats_programs">Programmes adaptés</p>
+        </div>
+        <div class="text-center md:border-l md:border-white/15">
+          <div class="text-2xl md:text-3xl font-extrabold text-secondary">2023</div>
+          <p class="text-white/80 text-xs md:text-sm mt-1" data-i18n="hero.stats_since">Excellence depuis</p>
         </div>
       </div>
+
+      <!-- Scroll cue -->
+      <a href="#probleme" class="hidden md:inline-flex flex-col items-center gap-2 mt-14 text-white/70 hover:text-white transition-colors" aria-label="Faire défiler">
+        <span class="text-[10px] tracking-[0.2em] uppercase font-semibold" data-i18n="hero.scroll">Défiler</span>
+        <i class="fas fa-chevron-down animate-bounce"></i>
+      </a>
     </div>
   </section>
 
@@ -846,7 +791,7 @@
   <!-- FAILURE SECTION - The Cost of Inaction -->
   <section class="py-20 bg-slate-50 dark:bg-slate-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white dark:bg-slate-800 rounded-xl p-8 md:p-12 shadow-lg border-l-4 border-coral" data-aos="fade-up">
+      <div class="bg-white dark:bg-slate-800 rounded-xl p-8 md:p-12 shadow-lg border-l-4 border-secondary" data-aos="fade-up">
         <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white" data-i18n="home.failure_title">
           Ne laissez pas le temps passer
         </h2>
@@ -1002,69 +947,20 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- ====================  SCRIPTS  ==================== -->
+  <!-- AOS animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100
-    });
-  </script>
-
-  <!-- Dark Mode Toggle -->
-  <script>
-    const darkToggle = document.getElementById('dark-toggle');
-    const html = document.documentElement;
-
-    // Check localStorage for saved preference
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      html.classList.add('dark');
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ duration: 800, easing: 'ease-out-quart', once: true, offset: 80 });
     }
-
-    darkToggle.addEventListener('click', () => {
-      if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        localStorage.theme = 'light';
-      } else {
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
-      }
-    });
   </script>
 
-  <!-- Mobile Menu Toggle -->
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when link is clicked
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-  </script>
-
-  <!-- Navbar scroll effect -->
-  <script>
-    const navbar = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('nav-scrolled');
-      } else {
-        navbar.classList.remove('nav-scrolled');
-      }
-    });
-  </script>
-
-  <!-- Language/i18n script -->
+  <!-- Translations (FR/EN/AR/ES) -->
   <script src="translations.js"></script>
   <script src="lang.js"></script>
+
+  <!-- Shell partagé : navbar, mobile menu, dark mode, scroll -->
+  <script src="assets/js/site-shell.js" defer></script>
 </body>
 </html>
