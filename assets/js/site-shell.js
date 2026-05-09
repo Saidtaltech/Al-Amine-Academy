@@ -17,18 +17,18 @@
 
   /* ====================  NAVBAR HTML  ==================== */
   var NAV_HTML = ''
-    + '<nav id="aaa-nav" class="navbar fixed top-0 left-0 right-0 z-50 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md">'
+    + '<nav id="aaa-nav" class="navbar fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md">'
     +   '<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">'
     +     '<div class="flex items-center justify-between h-20">'
     +       '<a href="' + ASSET_PREFIX + 'index.html" class="flex items-center gap-3 group">'
     +         '<img src="' + ASSET_PREFIX + 'assets/img/LogoAAA.png" alt="Logo DAARA Al Amine Academy" class="w-11 h-11 object-contain"/>'
     +         '<span class="hidden sm:flex flex-col leading-tight">'
-    +           '<span class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">DAARA Al Amine</span>'
+    +           '<span class="text-base font-extrabold text-slate-900 tracking-tight">DAARA Al Amine</span>'
     +           '<span class="text-[10px] uppercase tracking-[0.18em] text-primary font-semibold">Academy · Dakar</span>'
     +         '</span>'
     +       '</a>'
 
-    +       '<div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700 dark:text-slate-200">'
+    +       '<div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">'
     +         '<a href="' + ASSET_PREFIX + 'index.html"          data-route="index"        class="nav-link hover:text-primary" data-i18n="menu.home">Accueil</a>'
     +         '<div class="relative group">'
     +           '<button type="button" data-route="programs" class="nav-link hover:text-primary inline-flex items-center gap-1" data-i18n="menu.programs">Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i></button>'
@@ -49,7 +49,7 @@
     +       '</div>'
 
     +       '<div class="flex items-center gap-2 lg:gap-3">'
-    +         '<div class="hidden md:flex items-center gap-0.5 text-xs font-semibold text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-lg p-0.5">'
+    +         '<div class="hidden md:flex items-center gap-0.5 text-xs font-semibold text-slate-600 border border-slate-200 rounded-lg p-0.5">'
     +           '<a href="#" data-lang-switch="fr" onclick="switchLanguage(\'fr\');return false;" class="px-2 py-1 rounded-md hover:bg-slate-100" title="Français">FR</a>'
     +           '<a href="#" data-lang-switch="en" onclick="switchLanguage(\'en\');return false;" class="px-2 py-1 rounded-md hover:bg-slate-100" title="English">EN</a>'
     +           '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" class="px-2 py-1 rounded-md hover:bg-slate-100 arabic-text" title="العربية">ع</a>'

@@ -37,7 +37,8 @@
     "combined_subtitle": "Coran, français et anglais",
     "mixed_subtitle": "Externat — retour à la maison chaque soir",
     "online_subtitle": "Apprendre depuis chez vous",
-    "free_subtitle": "Cours en wolof, ouverts à tous"
+    "free_subtitle": "Cours en wolof, ouverts à tous",
+    "popular_tag": "POPULAIRE"
   },
   "hero": {
     "badge": "École coranique d'excellence",
@@ -52,7 +53,9 @@
     "stats_rating": "15 avis Google",
     "stats_students": "Élèves épanouis",
     "stats_programs": "Programmes adaptés",
-    "stats_since": "Excellence depuis"
+    "stats_since": "Excellence depuis",
+    "eyebrow": "Daara moderne · Dakar · Depuis 2023",
+    "scroll": "Défiler"
   },
   "home": {
     "problems_title": "Les défis des parents aujourd'hui",
@@ -90,7 +93,19 @@
     "failure_text": "Chaque année d'attente est une année où votre enfant n'accumule pas les souvenirs précieux d'une éducation islamique structurée.",
     "final_cta_title": "Rejoignez notre famille",
     "final_cta_title_html": "Rejoignez notre <span class=\"text-secondary\">famille</span>",
-    "final_cta_text": "Prêt(e) à offrir à votre enfant une éducation islamique d'excellence ? Les inscriptions sont ouvertes pour tous nos programmes."
+    "final_cta_text": "Prêt(e) à offrir à votre enfant une éducation islamique d'excellence ? Les inscriptions sont ouvertes pour tous nos programmes.",
+    "pricing_label": "À partir de",
+    "pricing_per_month": "/ mois — tout inclus",
+    "pricing_hint": "Repas, hébergement, sport, fournitures coraniques",
+    "pricing_cta": "Voir les tarifs",
+    "problems_eyebrow": "Le défi des parents",
+    "guide_eyebrow": "Notre engagement",
+    "plan_eyebrow": "Comment ça marche",
+    "plan_cta": "Commencer l'inscription maintenant",
+    "programs_eyebrow": "Nos programmes",
+    "testimonials_eyebrow": "Avis vérifiés Google",
+    "testimonials_count": "(15 avis Google)",
+    "failure_text2": "Rejoignez les 200+ familles qui ont déjà fait confiance à Al Amine Academy."
   },
   "about": {
     "hero_title": "À propos de DAARA Al Amine Academy",
@@ -108,7 +123,16 @@
     "value_modernity": "Modernité",
     "value_kindness": "Bienveillance",
     "team_title": "Des professionnels dévoués",
-    "timeline_title": "Historique & jalons"
+    "timeline_title": "Historique & jalons",
+    "mission_eyebrow": "Notre mission",
+    "mission_text1": "DAARA Al Amine Academy est un internat coranique moderne fondé en 2023 à Dakar, dans la Cité des Magistrats. Notre mission : offrir aux enfants une éducation islamique d'excellence, ancrée dans le Coran et ouverte sur le monde académique.",
+    "mission_text2": "Nous croyons que chaque enfant peut allier mémorisation du Coran, réussite scolaire et épanouissement personnel — quand l'environnement et l'encadrement sont à la hauteur.",
+    "values_eyebrow": "Nos valeurs",
+    "method_eyebrow": "Notre méthode",
+    "method_title": "Une approche intégrée",
+    "cta_title": "Vous voulez visiter l'école ?",
+    "cta_text": "Contactez-nous pour organiser une visite guidée et rencontrer notre équipe pédagogique.",
+    "cta_visit": "Demander une visite"
   },
   "contact": {
     "hero_title": "Contactez-nous",
@@ -123,7 +147,22 @@
     "phone1": "+221 77 774 37 00",
     "phone2": "+221 77 785 07 89",
     "email": "daara@alamineacademy.com",
-    "address": "Cité des Magistrats, Derrière Kër Yoff, Dakar"
+    "address": "Cité des Magistrats, Derrière Kër Yoff, Dakar",
+    "hero_eyebrow": "On vous écoute",
+    "address_title": "Notre adresse",
+    "address_full": "Derrière Kër Yoff, Liberté 6 Extension, Dakar, Sénégal",
+    "hours_title": "Horaires d'accueil",
+    "hours_text": "Lundi – Vendredi : 8h00 – 18h00",
+    "directions_title": "Comment venir",
+    "directions_text": "À 5 min de Liberté 6, accessible par bus DDD et clandos. Parking sur place.",
+    "faq_eyebrow": "Questions fréquentes",
+    "faq_title": "Avant de nous écrire",
+    "faq_q1": "Quels documents fournir pour l'inscription ?",
+    "faq_a1": "Acte de naissance de l'enfant, photo d'identité, dernier bulletin scolaire, certificat médical et copie de la pièce d'identité du parent.",
+    "faq_q2": "À partir de quel âge peut-on inscrire son enfant ?",
+    "faq_a2": "À partir de 6 ans pour le programme Tahfiz, et de 7 ans pour le programme académique. Contactez-nous pour des cas particuliers.",
+    "faq_q3": "Peut-on visiter l'école avant d'inscrire ?",
+    "faq_a3": "Oui, nous encourageons les visites. Appelez-nous pour planifier un rendez-vous."
   },
   "admission": {
     "hero_title": "Inscription & admission",
@@ -135,7 +174,17 @@
     "step3": "Inscription",
     "step4": "Rentrée",
     "fees_title": "Frais de scolarité",
-    "fees_subtitle": "Transparent et compétitif"
+    "fees_subtitle": "Transparent et compétitif",
+    "steps_eyebrow": "Comment s'inscrire",
+    "step1_title": "Remplir le formulaire en ligne",
+    "step1_text": "Renseignez les informations de votre enfant et le programme souhaité. Cela ne prend que quelques minutes.",
+    "step2_title": "Entretien et visite",
+    "step2_text": "Notre équipe vous recontacte sous 48h pour planifier un entretien et une visite de l'école.",
+    "step3_title": "Validation et rentrée",
+    "step3_text": "Inscription définitive après acceptation. Votre enfant rejoint sa classe à la prochaine session.",
+    "fees_eyebrow": "Tarification",
+    "final_title": "Prêt à inscrire votre enfant ?",
+    "final_text": "Le formulaire d'inscription en ligne ne prend que quelques minutes."
   },
   "testimonials_page": {
     "hero_title": "Témoignages",
