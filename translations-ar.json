@@ -37,7 +37,8 @@
     "combined_subtitle": "قرآن، فرنسي وإنجليزي",
     "mixed_subtitle": "خارجي — العودة إلى المنزل كل مساء",
     "online_subtitle": "تعلّم من بيتك",
-    "free_subtitle": "دروس باللغة الولوفية، مفتوحة للجميع"
+    "free_subtitle": "دروس باللغة الولوفية، مفتوحة للجميع",
+    "popular_tag": "الأكثر طلبًا"
   },
   "hero": {
     "badge": "مدرسة قرآنية متميزة",
@@ -52,7 +53,9 @@
     "stats_rating": "15 تقييمًا على غوغل",
     "stats_students": "طلابنا المزدهرون",
     "stats_programs": "برامج مخصصة",
-    "stats_since": "التميز منذ"
+    "stats_since": "التميز منذ",
+    "eyebrow": "مدرسة قرآنية حديثة · داكار · منذ 2023",
+    "scroll": "للأسفل"
   },
   "home": {
     "problems_title": "تحديات الأهالي اليوم",
@@ -90,7 +93,19 @@
     "failure_text": "كل سنة انتظار هي سنة لا يبني فيها طفلك أساس تربية إسلامية منظمة.",
     "final_cta_title": "انضمّ إلى عائلتنا",
     "final_cta_title_html": "انضمّ إلى <span class=\"text-secondary\">عائلتنا</span>",
-    "final_cta_text": "هل أنت مستعد لتقديم تربية إسلامية متميزة لطفلك؟ التسجيل مفتوح لجميع برامجنا."
+    "final_cta_text": "هل أنت مستعد لتقديم تربية إسلامية متميزة لطفلك؟ التسجيل مفتوح لجميع برامجنا.",
+    "problems_eyebrow": "تحدي الآباء",
+    "guide_eyebrow": "التزامنا",
+    "plan_eyebrow": "كيف يعمل ذلك",
+    "plan_cta": "ابدأ التسجيل الآن",
+    "programs_eyebrow": "برامجنا",
+    "testimonials_eyebrow": "تقييمات Google موثقة",
+    "testimonials_count": "(15 تقييم على Google)",
+    "failure_text2": "انضم إلى أكثر من 200 عائلة وثقت بالفعل في أكاديمية الأمين.",
+    "pricing_label": "ابتداءً من",
+    "pricing_per_month": " / شهر — كل شيء مشمول",
+    "pricing_hint": "وجبات، إقامة، رياضة، مستلزمات قرآنية",
+    "pricing_cta": "عرض الأسعار"
   },
   "about": {
     "hero_title": "عن دارة الأمين أكاديمي",
@@ -108,7 +123,16 @@
     "value_modernity": "الحداثة",
     "value_kindness": "الرحمة والرفق",
     "team_title": "مهنيون متفانون",
-    "timeline_title": "تاريخنا ومحطاتنا"
+    "timeline_title": "تاريخنا ومحطاتنا",
+    "mission_eyebrow": "مهمتنا",
+    "mission_text1": "أكاديمية الأمين دارا هي مدرسة قرآنية داخلية حديثة تأسست عام 2023 في داكار، في حي القضاة. مهمتنا هي تقديم تعليم إسلامي متميز للأطفال، يرتكز على القرآن ومنفتح على العالم الأكاديمي.",
+    "mission_text2": "نؤمن أن كل طفل يستطيع الجمع بين حفظ القرآن والنجاح الأكاديمي والنمو الشخصي — عندما تكون البيئة والإشراف في المستوى المناسب.",
+    "values_eyebrow": "قيمنا",
+    "method_eyebrow": "منهجيتنا",
+    "method_title": "نهج متكامل",
+    "cta_title": "هل ترغب في زيارة المدرسة؟",
+    "cta_text": "تواصل معنا لتنظيم زيارة موجَّهة والتعرف على فريقنا التربوي.",
+    "cta_visit": "اطلب زيارة"
   },
   "contact": {
     "hero_title": "اتصل بنا",
@@ -123,7 +147,22 @@
     "phone1": "+221 77 774 37 00",
     "phone2": "+221 77 785 07 89",
     "email": "daara@alamineacademy.com",
-    "address": "مدينة القضاة، خلف كير يوف، داكار"
+    "address": "مدينة القضاة، خلف كير يوف، داكار",
+    "hero_eyebrow": "نحن نصغي إليك",
+    "address_title": "عنواننا",
+    "address_full": "خلف كير يوف، Liberté 6 Extension، داكار، السنغال",
+    "hours_title": "ساعات العمل",
+    "hours_text": "الإثنين – الجمعة: 8:00 ص – 6:00 م<br/>السبت: 9:00 ص – 1:00 م",
+    "directions_title": "كيفية الوصول",
+    "directions_text": "على بعد 5 دقائق من Liberté 6، يمكن الوصول بحافلات DDD وسيارات الأجرة. موقف للسيارات في الموقع.",
+    "faq_eyebrow": "الأسئلة الشائعة",
+    "faq_title": "قبل أن تراسلنا",
+    "faq_q1": "ما هي الوثائق المطلوبة للتسجيل؟",
+    "faq_a1": "شهادة ميلاد الطفل، صورة شخصية، آخر بيان مدرسي، شهادة طبية ونسخة من بطاقة هوية الوالد.",
+    "faq_q2": "ما هو الحد الأدنى للسن لتسجيل الطفل؟",
+    "faq_a2": "من سن 6 سنوات لبرنامج التحفيظ، ومن سن 7 سنوات للبرنامج الأكاديمي. تواصل معنا للحالات الخاصة.",
+    "faq_q3": "هل يمكننا زيارة المدرسة قبل التسجيل؟",
+    "faq_a3": "نعم، نشجع الزيارات. اتصل بنا لتحديد موعد."
   },
   "admission": {
     "hero_title": "التسجيل والقبول",
@@ -135,7 +174,17 @@
     "step3": "التسجيل",
     "step4": "بدء الدراسة",
     "fees_title": "الرسوم الدراسية",
-    "fees_subtitle": "شفافة وتنافسية"
+    "fees_subtitle": "شفافة وتنافسية",
+    "steps_eyebrow": "كيف تسجل",
+    "step1_title": "املأ الاستمارة عبر الإنترنت",
+    "step1_text": "أدخل معلومات طفلك والبرنامج المرغوب. لا يستغرق الأمر سوى بضع دقائق.",
+    "step2_title": "مقابلة وزيارة",
+    "step2_text": "سيتواصل معك فريقنا خلال 48 ساعة لتحديد موعد المقابلة وزيارة المدرسة.",
+    "step3_title": "التحقق وبدء الدراسة",
+    "step3_text": "التسجيل النهائي بعد القبول. ينضم طفلك إلى صفه في الجلسة القادمة.",
+    "fees_eyebrow": "التسعير",
+    "final_title": "هل أنت مستعد لتسجيل طفلك؟",
+    "final_text": "تستغرق استمارة التسجيل عبر الإنترنت بضع دقائق فقط."
   },
   "testimonials_page": {
     "hero_title": "الشهادات",
@@ -213,5 +262,19 @@
     "hero_badge": "أحداث وعلم",
     "hero_title_html": "المحاضرات <span class=\"text-secondary\">و</span> التكوينات",
     "hero_subtitle": "اكتشف محاضراتنا الإسلامية، تكويناتنا وندواتنا المنظَّمة لنشر العلم وتعزيز المجتمع."
+  },
+  "page": {
+    "about_title": "حول <span class='text-secondary'>دارا الأمين</span>",
+    "admission_title": "<span class='text-secondary'>التسجيل</span> والقبول",
+    "contact_title": "اتصل بنا",
+    "testimonials_title": "<span class='text-secondary'>الشهادات</span>",
+    "gallery_title": "معرض <span class='text-secondary'>الصور والفيديوهات</span>",
+    "blog_title": "المقالات و<span class='text-secondary'>المصادر</span>",
+    "conferences_title": "المؤتمرات و<span class='text-secondary'>تدريب الحج</span>",
+    "tahfiz_title": "تحفيظ <span class='text-secondary'>داخلي</span>",
+    "combined_title": "تحفيظ + <span class='text-secondary'>أكاديمي</span>",
+    "mixed_title": "برنامج <span class='text-secondary'>المدرسة النهارية</span>",
+    "online_title": "دروس <span class='text-secondary'>عبر الإنترنت</span>",
+    "free_title": "دروس <span class='text-secondary'>مجانية</span>"
   }
 }

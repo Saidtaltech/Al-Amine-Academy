@@ -262,5 +262,19 @@
     "hero_badge": "Événements & Savoir",
     "hero_title_html": "Conférences <span class=\"text-secondary\">&</span> Formations",
     "hero_subtitle": "Découvrez nos conférences islamiques, formations et séminaires organisés pour le partage du savoir et le renforcement de la communauté."
+  },
+  "page": {
+    "about_title": "À propos de <span class='text-secondary'>DAARA Al Amine</span>",
+    "admission_title": "Inscription &amp; <span class='text-secondary'>admission</span>",
+    "contact_title": "Contactez-nous",
+    "testimonials_title": "<span class='text-secondary'>Témoignages</span>",
+    "gallery_title": "Galerie <span class='text-secondary'>photos &amp; vidéos</span>",
+    "blog_title": "Articles &amp; <span class='text-secondary'>ressources</span>",
+    "conferences_title": "Conférences &amp; <span class='text-secondary'>Formation Hajj</span>",
+    "tahfiz_title": "Tahfiz <span class='text-secondary'>Internat</span>",
+    "combined_title": "Tahfiz + <span class='text-secondary'>Académique</span>",
+    "mixed_title": "Programme <span class='text-secondary'>Mixte</span>",
+    "online_title": "Cours en <span class='text-secondary'>ligne</span>",
+    "free_title": "Cours <span class='text-secondary'>gratuits</span>"
   }
 }

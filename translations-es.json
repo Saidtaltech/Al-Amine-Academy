@@ -37,7 +37,8 @@
     "combined_subtitle": "Corán, francés e inglés",
     "mixed_subtitle": "Externado — vuelta a casa cada noche",
     "online_subtitle": "Aprende desde casa",
-    "free_subtitle": "Cursos en wolof, abiertos a todos"
+    "free_subtitle": "Cursos en wolof, abiertos a todos",
+    "popular_tag": "POPULAR"
   },
   "hero": {
     "badge": "Escuela coránica de excelencia",
@@ -52,7 +53,9 @@
     "stats_rating": "15 reseñas en Google",
     "stats_students": "Alumnos plenos",
     "stats_programs": "Programas adaptados",
-    "stats_since": "Excelencia desde"
+    "stats_since": "Excelencia desde",
+    "eyebrow": "Daara moderna · Dakar · Desde 2023",
+    "scroll": "Desplazar"
   },
   "home": {
     "problems_title": "Los desafíos de los padres hoy",
@@ -90,7 +93,19 @@
     "failure_text": "Cada año de espera es un año en el que su hijo no construye los cimientos de una educación islámica estructurada.",
     "final_cta_title": "Únase a nuestra familia",
     "final_cta_title_html": "Únase a nuestra <span class=\"text-secondary\">familia</span>",
-    "final_cta_text": "¿Listo(a) para ofrecer a su hijo una educación islámica de excelencia? Las inscripciones están abiertas para todos nuestros programas."
+    "final_cta_text": "¿Listo(a) para ofrecer a su hijo una educación islámica de excelencia? Las inscripciones están abiertas para todos nuestros programas.",
+    "problems_eyebrow": "El reto de los padres",
+    "guide_eyebrow": "Nuestro compromiso",
+    "plan_eyebrow": "Cómo funciona",
+    "plan_cta": "Comenzar la inscripción ahora",
+    "programs_eyebrow": "Nuestros programas",
+    "testimonials_eyebrow": "Reseñas verificadas de Google",
+    "testimonials_count": "(15 reseñas de Google)",
+    "failure_text2": "Únete a las más de 200 familias que ya confían en Al Amine Academy.",
+    "pricing_label": "Desde",
+    "pricing_per_month": " / mes — todo incluido",
+    "pricing_hint": "Comidas, alojamiento, deportes, material coránico",
+    "pricing_cta": "Ver precios"
   },
   "about": {
     "hero_title": "Sobre DAARA Al Amine Academy",
@@ -108,7 +123,16 @@
     "value_modernity": "Modernidad",
     "value_kindness": "Amabilidad",
     "team_title": "Profesionales dedicados",
-    "timeline_title": "Historia y hitos"
+    "timeline_title": "Historia y hitos",
+    "mission_eyebrow": "Nuestra misión",
+    "mission_text1": "DAARA Al Amine Academy es un internado coránico moderno fundado en 2023 en Dakar, en la Cité des Magistrats. Nuestra misión es ofrecer a los niños una educación islámica de excelencia, anclada en el Corán y abierta al mundo académico.",
+    "mission_text2": "Creemos que cada niño puede combinar la memorización del Corán, el éxito académico y el crecimiento personal cuando el entorno y la supervisión están a la altura.",
+    "values_eyebrow": "Nuestros valores",
+    "method_eyebrow": "Nuestro método",
+    "method_title": "Un enfoque integrado",
+    "cta_title": "¿Quieres visitar la escuela?",
+    "cta_text": "Contáctanos para organizar una visita guiada y conocer a nuestro equipo pedagógico.",
+    "cta_visit": "Solicitar una visita"
   },
   "contact": {
     "hero_title": "Contáctenos",
@@ -123,7 +147,22 @@
     "phone1": "+221 77 774 37 00",
     "phone2": "+221 77 785 07 89",
     "email": "daara@alamineacademy.com",
-    "address": "Cité des Magistrats, detrás de Kër Yoff, Dakar"
+    "address": "Cité des Magistrats, detrás de Kër Yoff, Dakar",
+    "hero_eyebrow": "Te escuchamos",
+    "address_title": "Nuestra dirección",
+    "address_full": "Detrás de Kër Yoff, Liberté 6 Extension, Dakar, Senegal",
+    "hours_title": "Horario de atención",
+    "hours_text": "Lunes – Viernes: 8:00 – 18:00<br/>Sábado: 9:00 – 13:00",
+    "directions_title": "Cómo llegar",
+    "directions_text": "A 5 min de Liberté 6, accesible en autobús DDD y clandos. Aparcamiento en el lugar.",
+    "faq_eyebrow": "Preguntas frecuentes",
+    "faq_title": "Antes de escribirnos",
+    "faq_q1": "¿Qué documentos hacen falta para la inscripción?",
+    "faq_a1": "Partida de nacimiento del niño, foto de identidad, último boletín escolar, certificado médico y copia del documento de identidad del progenitor.",
+    "faq_q2": "¿A partir de qué edad se puede inscribir a un niño?",
+    "faq_a2": "A partir de los 6 años para el programa Tahfiz, y de los 7 años para el programa académico. Contáctanos para casos especiales.",
+    "faq_q3": "¿Podemos visitar la escuela antes de inscribirnos?",
+    "faq_a3": "Sí, fomentamos las visitas. Llámanos para concertar una cita."
   },
   "admission": {
     "hero_title": "Inscripción y admisión",
@@ -135,7 +174,17 @@
     "step3": "Inscripción",
     "step4": "Inicio del curso",
     "fees_title": "Cuotas escolares",
-    "fees_subtitle": "Transparente y competitivo"
+    "fees_subtitle": "Transparente y competitivo",
+    "steps_eyebrow": "Cómo inscribirse",
+    "step1_title": "Completa el formulario en línea",
+    "step1_text": "Introduce los datos de tu hijo y el programa deseado. Solo lleva unos minutos.",
+    "step2_title": "Entrevista y visita",
+    "step2_text": "Nuestro equipo te contactará en menos de 48 horas para programar una entrevista y una visita.",
+    "step3_title": "Validación e inicio",
+    "step3_text": "Inscripción definitiva tras la aceptación. Tu hijo se incorpora a su clase en la próxima sesión.",
+    "fees_eyebrow": "Tarifas",
+    "final_title": "¿Listo para inscribir a tu hijo?",
+    "final_text": "El formulario de inscripción en línea solo lleva unos minutos."
   },
   "testimonials_page": {
     "hero_title": "Testimonios",
@@ -213,5 +262,19 @@
     "hero_badge": "Eventos y saber",
     "hero_title_html": "Conferencias <span class=\"text-secondary\">y</span> formaciones",
     "hero_subtitle": "Descubra nuestras conferencias islámicas, formaciones y seminarios organizados para compartir el saber y reforzar la comunidad."
+  },
+  "page": {
+    "about_title": "Sobre <span class='text-secondary'>DAARA Al Amine</span>",
+    "admission_title": "<span class='text-secondary'>Inscripción</span> y admisión",
+    "contact_title": "Contáctanos",
+    "testimonials_title": "<span class='text-secondary'>Testimonios</span>",
+    "gallery_title": "Galería de <span class='text-secondary'>fotos y vídeos</span>",
+    "blog_title": "Artículos y <span class='text-secondary'>recursos</span>",
+    "conferences_title": "Conferencias y <span class='text-secondary'>formación Hajj</span>",
+    "tahfiz_title": "<span class='text-secondary'>Internado</span> Tahfiz",
+    "combined_title": "Tahfiz + <span class='text-secondary'>Académico</span>",
+    "mixed_title": "Programa <span class='text-secondary'>Mixto</span>",
+    "online_title": "Clases <span class='text-secondary'>en línea</span>",
+    "free_title": "Clases <span class='text-secondary'>gratuitas</span>"
   }
 }
