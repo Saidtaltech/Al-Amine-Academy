@@ -37,7 +37,8 @@
     "combined_subtitle": "Quran, French and English",
     "mixed_subtitle": "Day school — back home every evening",
     "online_subtitle": "Learn from home",
-    "free_subtitle": "Wolof courses, open to all"
+    "free_subtitle": "Wolof courses, open to all",
+    "popular_tag": "POPULAR"
   },
   "hero": {
     "badge": "Premier Quranic school",
@@ -52,7 +53,9 @@
     "stats_rating": "15 Google reviews",
     "stats_students": "Thriving students",
     "stats_programs": "Tailored programs",
-    "stats_since": "Excellence since"
+    "stats_since": "Excellence since",
+    "eyebrow": "Modern Daara · Dakar · Since 2023",
+    "scroll": "Scroll"
   },
   "home": {
     "problems_title": "The challenges parents face today",
@@ -90,7 +93,19 @@
     "failure_text": "Every year of waiting is a year your child does not build the foundation of a structured Islamic education.",
     "final_cta_title": "Join our family",
     "final_cta_title_html": "Join our <span class=\"text-secondary\">family</span>",
-    "final_cta_text": "Ready to give your child an outstanding Islamic education? Registrations are open for all our programs."
+    "final_cta_text": "Ready to give your child an outstanding Islamic education? Registrations are open for all our programs.",
+    "problems_eyebrow": "Parents' challenge",
+    "guide_eyebrow": "Our commitment",
+    "plan_eyebrow": "How it works",
+    "plan_cta": "Start your registration now",
+    "programs_eyebrow": "Our programs",
+    "testimonials_eyebrow": "Verified Google reviews",
+    "testimonials_count": "(15 Google reviews)",
+    "failure_text2": "Join the 200+ families who already trust Al Amine Academy.",
+    "pricing_label": "Starting from",
+    "pricing_per_month": " / month — all included",
+    "pricing_hint": "Meals, lodging, sports, Quranic supplies",
+    "pricing_cta": "View prices"
   },
   "about": {
     "hero_title": "About DAARA Al Amine Academy",
@@ -108,7 +123,16 @@
     "value_modernity": "Modernity",
     "value_kindness": "Kindness",
     "team_title": "Dedicated professionals",
-    "timeline_title": "History & milestones"
+    "timeline_title": "History & milestones",
+    "mission_eyebrow": "Our mission",
+    "mission_text1": "DAARA Al Amine Academy is a modern Quranic boarding school founded in 2023 in Dakar, in the Cité des Magistrats. Our mission is to give children an outstanding Islamic education, anchored in the Quran and open to the academic world.",
+    "mission_text2": "We believe every child can combine Quran memorization, academic success and personal growth — when the environment and supervision are at the right level.",
+    "values_eyebrow": "Our values",
+    "method_eyebrow": "Our method",
+    "method_title": "An integrated approach",
+    "cta_title": "Want to visit the school?",
+    "cta_text": "Contact us to schedule a guided tour and meet our pedagogical team.",
+    "cta_visit": "Request a visit"
   },
   "contact": {
     "hero_title": "Contact us",
@@ -123,7 +147,22 @@
     "phone1": "+221 77 774 37 00",
     "phone2": "+221 77 785 07 89",
     "email": "daara@alamineacademy.com",
-    "address": "Cité des Magistrats, behind Kër Yoff, Dakar"
+    "address": "Cité des Magistrats, behind Kër Yoff, Dakar",
+    "hero_eyebrow": "We're listening",
+    "address_title": "Our address",
+    "address_full": "Behind Kër Yoff, Liberté 6 Extension, Dakar, Senegal",
+    "hours_title": "Opening hours",
+    "hours_text": "Monday – Friday: 8:00 am – 6:00 pm<br/>Saturday: 9:00 am – 1:00 pm",
+    "directions_title": "Getting here",
+    "directions_text": "5 min from Liberté 6, accessible by DDD bus and clandos. Parking on site.",
+    "faq_eyebrow": "Frequently asked questions",
+    "faq_title": "Before writing to us",
+    "faq_q1": "What documents are needed for registration?",
+    "faq_a1": "Child's birth certificate, ID photo, latest school report, medical certificate and copy of the parent's ID.",
+    "faq_q2": "What is the minimum age to enroll a child?",
+    "faq_a2": "From age 6 for the Tahfiz program, and from age 7 for the academic program. Contact us for special cases.",
+    "faq_q3": "Can we visit the school before enrolling?",
+    "faq_a3": "Yes, we encourage visits. Call us to schedule an appointment."
   },
   "admission": {
     "hero_title": "Registration & admission",
@@ -135,7 +174,17 @@
     "step3": "Registration",
     "step4": "First day",
     "fees_title": "Tuition fees",
-    "fees_subtitle": "Transparent and competitive"
+    "fees_subtitle": "Transparent and competitive",
+    "steps_eyebrow": "How to register",
+    "step1_title": "Fill in the online form",
+    "step1_text": "Enter your child's information and the desired program. It only takes a few minutes.",
+    "step2_title": "Interview and visit",
+    "step2_text": "Our team will contact you within 48 hours to schedule an interview and a school visit.",
+    "step3_title": "Validation and start",
+    "step3_text": "Final registration after acceptance. Your child joins their class at the next session.",
+    "fees_eyebrow": "Pricing",
+    "final_title": "Ready to register your child?",
+    "final_text": "The online registration form only takes a few minutes."
   },
   "testimonials_page": {
     "hero_title": "Testimonials",
@@ -213,5 +262,19 @@
     "hero_badge": "Events & Knowledge",
     "hero_title_html": "Lectures <span class=\"text-secondary\">&</span> Workshops",
     "hero_subtitle": "Discover our Islamic lectures, workshops and seminars hosted to share knowledge and strengthen the community."
+  },
+  "page": {
+    "about_title": "About <span class='text-secondary'>DAARA Al Amine</span>",
+    "admission_title": "<span class='text-secondary'>Registration</span> &amp; admission",
+    "contact_title": "Contact us",
+    "testimonials_title": "<span class='text-secondary'>Testimonials</span>",
+    "gallery_title": "Photo &amp; video <span class='text-secondary'>gallery</span>",
+    "blog_title": "Articles &amp; <span class='text-secondary'>resources</span>",
+    "conferences_title": "Conferences &amp; <span class='text-secondary'>Hajj Training</span>",
+    "tahfiz_title": "Tahfiz <span class='text-secondary'>Boarding</span>",
+    "combined_title": "Tahfiz + <span class='text-secondary'>Academic</span>",
+    "mixed_title": "<span class='text-secondary'>Day School</span> Program",
+    "online_title": "Online <span class='text-secondary'>classes</span>",
+    "free_title": "<span class='text-secondary'>Free</span> classes"
   }
 }
