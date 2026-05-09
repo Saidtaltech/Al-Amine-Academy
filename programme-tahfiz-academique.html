@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="assets/css/site.css"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
+    if (typeof tailwind !== 'undefined') tailwind.config = {
       theme: {
         extend: {
           colors: {
@@ -79,7 +79,7 @@
           <p class="text-xs uppercase tracking-wider text-ink-muted mb-1">Tarif mensuel</p>
           <p class="text-3xl font-extrabold text-primary mb-2">115 000<span class="text-base text-ink-muted font-medium"> FCFA</span></p>
           <p class="text-xs text-ink-muted mb-5">Inscription : 95 000 FCFA</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn btn-primary w-full justify-center mb-3"><i class="fas fa-pen-fancy"></i>S'inscrire</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform" target="_blank" rel="noopener" class="btn btn-primary w-full justify-center mb-3"><i class="fas fa-pen-fancy"></i>S'inscrire</a>
           <a href="contact.html" class="btn btn-outline-blue w-full justify-center text-sm"><i class="fas fa-comments"></i>Poser une question</a>
         </aside>
       </div>
@@ -132,7 +132,7 @@
       <h2 class="text-3xl md:text-4xl mb-5">Prêt à inscrire votre enfant ?</h2>
       <p class="text-white/85 text-lg mb-8">Notre équipe est disponible pour répondre à toutes vos questions.</p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-pen-fancy"></i>S'inscrire en ligne</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-pen-fancy"></i>S'inscrire en ligne</a>
         <a href="tel:+221777743700" class="btn btn-ghost"><i class="fas fa-phone"></i><span class="tabular">+221 77 774 37 00</span></a>
       </div>
     </div>
