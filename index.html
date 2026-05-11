@@ -33,6 +33,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
 
   <script>
     tailwind.config = {
@@ -189,75 +197,127 @@
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
 
-  <!-- Navigation Bar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 navbar bg-white/80 dark:bg-slate-950/80 backdrop-blur-md transition-all duration-300">
+    <!-- WhatsApp Floating Button -->
+  <a class="fixed bottom-24 md:bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp text-2xl md:text-3xl"></i>
+    <span class="hidden md:inline absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
+  </a>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex justify-between items-center py-3">
         <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center">
-          <a href="index.html" class="text-2xl font-bold bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
-            <i class="fas fa-quran mr-2"></i>Al Amine
-          </a>
-        </div>
+        <a class="flex items-center gap-3 group" href="index.html">
+          <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
+            <i class="fas fa-book-quran text-white text-xl"></i>
+          </div>
+          <div>
+            <h1 class="text-lg font-extrabold text-white" id="navTitle" data-i18n="site.name">Al Amine Academy</h1>
+            <p class="text-[10px] text-white/70 arabic-text" id="navSubtitle">يار أك خام خام</p>
+          </div>
+        </a>
 
         <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center space-x-6 text-sm">
-          <a href="#programmes" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.programs">Programmes</a>
-          <a href="admission.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.admission">Admission</a>
-          <a href="a-propos.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.about">À Propos</a>
-          <a href="galerie.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.gallery">Galerie</a>
-          <a href="temoignages.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.testimonials">Témoignages</a>
-          <a href="blog.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.blog">Blog</a>
-          <a href="contact.html" class="hover:text-primary dark:hover:text-secondary transition-colors" data-i18n="menu.contact">Contact</a>
-          <div class="flex items-center gap-1 text-sm border-l border-slate-300 dark:border-slate-700 pl-3 ml-1">
-            <a href="#" data-lang-switch="fr" onclick="switchLanguage('fr');return false;" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800" title="Français">FR</a>
-            <a href="#" data-lang-switch="en" onclick="switchLanguage('en');return false;" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800" title="English">EN</a>
-            <a href="#" data-lang-switch="ar" onclick="switchLanguage('ar');return false;" class="px-2 py-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 arabic-text" title="العربية">ع</a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="index.html" data-i18n="menu.home">Accueil</a>
+          <div class="relative group">
+            <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm flex items-center gap-1" data-i18n="menu.programs">
+              Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div class="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 border border-gray-100 dark:border-slate-700 overflow-hidden">
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all" href="programme-internat.html">
+                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center"><i class="fas fa-school text-primary"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-gray-500">Coran + Sport + Hébergement</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-secondary/5 dark:hover:bg-secondary/10 transition-all" href="programme-tahfiz-academique.html">
+                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center"><i class="fas fa-book-open text-secondary"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.combined">Tahfiz + Académique</p><p class="text-xs text-gray-500">Coran + Français + Anglais</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-accent/5 dark:hover:bg-accent/10 transition-all" href="programme-cours-en-ligne.html">
+                <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center"><i class="fas fa-laptop text-accent"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-gray-500">Apprenez de chez vous</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-coral/5 dark:hover:bg-coral/10 transition-all" href="programme-cours-gratuits.html">
+                <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Été 2026</p></div>
+              </a>
+            </div>
           </div>
-          <a href="tel:+221777743700" class="px-4 py-2 rounded-lg bg-secondary hover:bg-secondary/90 text-white transition-colors whitespace-nowrap">
-            <i class="fas fa-phone mr-2"></i>+221 77 774 37 00
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="a-propos.html" data-i18n="menu.about">À Propos</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="contact.html" data-i18n="menu.contact">Contact</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="blog.html" data-i18n="menu.blog">Blog</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="temoignages.html" data-i18n="menu.testimonials">Témoignages</a>
+          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="admission.html" data-i18n="menu.admission">Admission</a>
+
+          <!-- Dark Mode Toggle -->
+          <button id="darkToggle" class="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all" title="Mode sombre">
+            <i class="fas fa-moon text-lg" id="darkIcon"></i>
+          </button>
+
+          <!-- Language Selector -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all text-sm">
+              <i class="fas fa-globe"></i> <span id="currentLang">FR</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 dark:border-slate-700 overflow-hidden">
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('fr');return false;">&#127467;&#127479; Français</a>
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('en');return false;">&#127468;&#127463; English</a>
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 arabic-text text-sm" href="#" onclick="switchLanguage('ar');return false;">&#127480;&#127462; العربية</a>
+              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('es');return false;">&#127466;&#127480; Español</a>
+            </div>
+          </div>
+
+          <a class="ml-2 bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
+            S'inscrire <i class="fas fa-arrow-right ml-1 text-xs"></i>
           </a>
         </div>
 
-        <!-- Right Side Controls -->
-        <div class="flex items-center space-x-4">
-          <!-- Dark Mode Toggle -->
-          <button id="dark-toggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-            <i class="fas fa-moon dark:hidden"></i>
-            <i class="fas fa-sun hidden dark:inline text-yellow-400"></i>
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-3 lg:hidden">
+          <button id="darkToggleMobile" class="p-2 text-white/80 hover:text-white rounded-xl transition-all">
+            <i class="fas fa-moon text-lg" id="darkIconMobile"></i>
           </button>
-
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
-            <i class="fas fa-bars"></i>
+          <button onclick="toggleMenu()" class="p-2 text-white hover:bg-white/10 rounded-xl transition-all">
+            <i class="fas fa-bars text-xl" id="menuIcon"></i>
           </button>
         </div>
       </div>
+    </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-slate-200 dark:border-slate-700">
-        <a href="#programmes" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.programs">Programmes</a>
-        <a href="admission.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.admission">Admission</a>
-        <a href="a-propos.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.about">À Propos</a>
-        <a href="galerie.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.gallery">Galerie</a>
-        <a href="temoignages.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.testimonials">Témoignages</a>
-        <a href="blog.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.blog">Blog</a>
-        <a href="contact.html" class="block py-2 hover:text-primary dark:hover:text-secondary" data-i18n="menu.contact">Contact</a>
-        <div class="flex items-center gap-2 py-2 mt-2 border-t border-slate-200 dark:border-slate-700">
-          <span class="text-xs text-slate-500">Langue :</span>
-          <a href="#" data-lang-switch="fr" onclick="switchLanguage('fr');return false;" class="px-2 py-1 rounded text-sm">FR</a>
-          <a href="#" data-lang-switch="en" onclick="switchLanguage('en');return false;" class="px-2 py-1 rounded text-sm">EN</a>
-          <a href="#" data-lang-switch="ar" onclick="switchLanguage('ar');return false;" class="px-2 py-1 rounded text-sm arabic-text">ع</a>
+    <!-- Mobile Menu -->
+    <div class="hidden lg:hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 shadow-2xl" id="mobileMenu">
+      <div class="container mx-auto px-4 py-6 space-y-2">
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="index.html" data-i18n="menu.home"><i class="fas fa-home mr-3 text-primary"></i>Accueil</a>
+        <div class="pl-4 space-y-1 border-l-2 border-primary/20 ml-4">
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="programme-internat.html" data-i18n="programs.tahfiz"><i class="fas fa-school mr-2 text-primary/60"></i>Tahfiz Internat</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
         </div>
-        <a href="tel:+221777743700" class="block py-2 mt-2 text-center bg-secondary text-white rounded-lg">
-          <i class="fas fa-phone mr-2"></i>+221 77 774 37 00
-        </a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary"></i>Galerie</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary"></i>À Propos</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="contact.html" data-i18n="menu.contact"><i class="fas fa-envelope mr-3 text-primary"></i>Contact</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="blog.html" data-i18n="menu.blog"><i class="fas fa-blog mr-3 text-primary"></i>Blog</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="temoignages.html" data-i18n="menu.testimonials"><i class="fas fa-star mr-3 text-teal-600"></i>Témoignages</a>
+        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="admission.html" data-i18n="menu.admission"><i class="fas fa-user-plus mr-3 text-teal-600"></i>Admission</a>
+        <div class="pt-4 border-t dark:border-slate-700">
+          <a class="block text-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 py-3.5 rounded-2xl font-bold shadow-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
+            S'inscrire maintenant <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
   <!-- HERO SECTION - The Customer is the Hero -->
-  <section class="hero-gradient min-h-screen flex items-center pt-16 relative overflow-hidden">
+  <section class="hero-gradient min-h-screen flex items-center pt-24 lg:pt-20 relative overflow-hidden">
     <!-- Animated background elements -->
     <div class="absolute top-10 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float"></div>
     <div class="absolute bottom-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float-delay"></div>
@@ -406,7 +466,7 @@
           <p class="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.guide_text">
             Depuis 2023, Al Amine Academy accompagne les familles du Sénégal dans cette quête délicate : offrir une éducation islamique d'excellence tout en garantissant l'épanouissement et la réussite académique de chaque enfant.
           </p>
-          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.guide_text2">
             Nos méthodes éprouvées, nos enseignants qualifiés, et notre engagement personnel envers chaque étudiant font la différence.
           </p>
 
@@ -417,8 +477,8 @@
                 <i class="fas fa-star text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg">Note 4.9/5 sur Google</h4>
-                <p class="text-slate-600 dark:text-slate-400">Avec 15+ avis vérifiés de familles satisfaites</p>
+                <h4 class="font-bold text-lg" data-i18n="home.badge1_title">Note 4.9/5 sur Google</h4>
+                <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge1_text">Avec 15+ avis vérifiés de familles satisfaites</p>
               </div>
             </div>
 
@@ -427,8 +487,8 @@
                 <i class="fas fa-check-circle text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg">Méthode structurée et éprouvée</h4>
-                <p class="text-slate-600 dark:text-slate-400">Basée sur des décennies de pédagogie islamique</p>
+                <h4 class="font-bold text-lg" data-i18n="home.badge2_title">Méthode structurée et éprouvée</h4>
+                <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge2_text">Basée sur des décennies de pédagogie islamique</p>
               </div>
             </div>
 
@@ -437,8 +497,8 @@
                 <i class="fas fa-graduation-cap text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg">Enseignants qualifiés et bienveillants</h4>
-                <p class="text-slate-600 dark:text-slate-400">Passionnés par l'enseignement et le développement des enfants</p>
+                <h4 class="font-bold text-lg" data-i18n="home.badge3_title">Enseignants qualifiés et bienveillants</h4>
+                <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge3_text">Passionnés par l'enseignement et le développement des enfants</p>
               </div>
             </div>
 
@@ -447,8 +507,8 @@
                 <i class="fas fa-chart-line text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg">Résultats visibles et mesurables</h4>
-                <p class="text-slate-600 dark:text-slate-400">Suivi personnalisé avec rapports réguliers aux parents</p>
+                <h4 class="font-bold text-lg" data-i18n="home.badge4_title">Résultats visibles et mesurables</h4>
+                <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge4_text">Suivi personnalisé avec rapports réguliers aux parents</p>
               </div>
             </div>
           </div>
@@ -495,7 +555,7 @@
               Remplissez notre formulaire d'inscription en ligne. Ça ne prend que quelques minutes.
             </p>
             <p class="text-sm text-secondary font-semibold">
-              <i class="fas fa-arrow-down mr-2"></i>Obtenir le lien
+              <i class="fas fa-arrow-down mr-2"></i><span data-i18n="home.plan_step1_action">Obtenir le lien</span>
             </p>
           </div>
           <div class="hidden md:block absolute top-1/2 -right-8 w-16 h-0.5 bg-white/30 -translate-y-1/2"></div>
@@ -512,7 +572,7 @@
               Votre enfant est intégré dans le programme qui correspond à son âge et ses objectifs.
             </p>
             <p class="text-sm text-secondary font-semibold">
-              <i class="fas fa-handshake mr-2"></i>Bienvenue
+              <i class="fas fa-handshake mr-2"></i><span data-i18n="home.plan_step2_action">Bienvenue</span>
             </p>
           </div>
           <div class="hidden md:block absolute top-1/2 -right-8 w-16 h-0.5 bg-white/30 -translate-y-1/2"></div>
@@ -529,7 +589,7 @@
               Suivi personnalisé avec rapports réguliers. Vous voyez les progrès de votre enfant en temps réel.
             </p>
             <p class="text-sm text-secondary font-semibold">
-              <i class="fas fa-trophy mr-2"></i>Succès garanti
+              <i class="fas fa-trophy mr-2"></i><span data-i18n="home.plan_step3_action">Succès garanti</span>
             </p>
           </div>
         </div>
@@ -538,7 +598,7 @@
       <!-- CTA -->
       <div class="text-center" data-aos="fade-up" data-aos-delay="400">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="inline-block px-10 py-4 rounded-lg bg-secondary hover:bg-secondary/90 text-primary font-bold text-lg transition-all transform hover:scale-105 hover:-translate-y-1">
-          <i class="fas fa-pen-fancy mr-2"></i>Commencer l'inscription maintenant
+          <i class="fas fa-pen-fancy mr-2"></i><span data-i18n="home.start_enrollment">Commencer l'inscription maintenant</span>
         </a>
       </div>
     </div>
@@ -570,33 +630,33 @@
               <div class="w-16 h-16 rounded-lg bg-secondary/20 flex items-center justify-center mb-4">
                 <i class="fas fa-book-quran text-secondary text-3xl"></i>
               </div>
-              <h3 class="text-2xl font-bold mb-2">Tahfiz Internat</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">Immersion complète dans la mémorisation du Coran</p>
+              <h3 class="text-2xl font-bold mb-2" data-i18n="home.card1_title">Tahfiz Internat</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-4" data-i18n="home.card1_subtitle">Immersion complète dans la mémorisation du Coran</p>
             </div>
             <ul class="space-y-3 mb-8 text-slate-700 dark:text-slate-300">
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Mémorisation structurée du Coran</span>
+                <span data-i18n="home.card1_feat1">Mémorisation structurée du Coran</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Hébergement et repas inclus</span>
+                <span data-i18n="home.card1_feat2">Hébergement et repas inclus</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Sport et loisirs éducatifs</span>
+                <span data-i18n="home.card1_feat3">Sport et loisirs éducatifs</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Discipline et caractère</span>
+                <span data-i18n="home.card1_feat4">Discipline et caractère</span>
               </li>
             </ul>
 
             <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">À partir de</p>
+              <p class="text-slate-600 dark:text-slate-400 text-sm mb-2" data-i18n="home.pricing_label">À partir de</p>
               <p class="text-3xl font-bold text-primary mb-4">100,000 <span class="text-lg">FCFA/mois</span></p>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Inscription: 95,000 FCFA</p>
-              <a href="programme-internat.html" class="block w-full text-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold transition-colors">
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6" data-i18n="home.enrollment_fee">Inscription: 95,000 FCFA</p>
+              <a href="programme-internat.html" class="block w-full text-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold transition-colors" data-i18n="cta.learn_more">
                 En savoir plus
               </a>
             </div>
@@ -605,7 +665,7 @@
 
         <!-- Program 2: Élémentaire -->
         <div class="program-card rounded-xl overflow-hidden shadow-lg border-t-4 border-t-secondary relative" data-aos="fade-up" data-aos-delay="200">
-          <div class="absolute -top-4 right-6 bg-secondary text-white px-4 py-1 rounded-full text-sm font-bold z-20">
+          <div class="absolute -top-4 right-6 bg-secondary text-white px-4 py-1 rounded-full text-sm font-bold z-20" data-i18n="home.popular_badge">
             Populaire
           </div>
           <img src="assets/img/programme-elementaire.jpg" alt="Programme élémentaire bilingue" class="w-full h-48 object-cover"
@@ -618,36 +678,36 @@
               <div class="w-16 h-16 rounded-lg bg-secondary/20 flex items-center justify-center mb-4">
                 <i class="fas fa-graduation-cap text-secondary text-3xl"></i>
               </div>
-              <h3 class="text-2xl font-bold mb-2">Élémentaire</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">Coran et études académiques équilibrées</p>
+              <h3 class="text-2xl font-bold mb-2" data-i18n="home.card2_title">Élémentaire</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-4" data-i18n="home.card2_subtitle">Coran et études académiques équilibrées</p>
             </div>
             <ul class="space-y-3 mb-8 text-slate-700 dark:text-slate-300">
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Mémorisation du Coran progressive</span>
+                <span data-i18n="home.card2_feat1">Mémorisation du Coran progressive</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Français et Anglais avancés</span>
+                <span data-i18n="home.card2_feat2">Français et Anglais avancés</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Mathématiques et sciences</span>
+                <span data-i18n="home.card2_feat3">Mathématiques et sciences</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Hébergement inclus</span>
+                <span data-i18n="home.card2_feat4">Hébergement inclus</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Sport et activités</span>
+                <span data-i18n="home.card2_feat5">Sport et activités</span>
               </li>
             </ul>
             <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">À partir de</p>
+              <p class="text-slate-600 dark:text-slate-400 text-sm mb-2" data-i18n="home.pricing_label">À partir de</p>
               <p class="text-3xl font-bold text-primary mb-4">115,000 <span class="text-lg">FCFA/mois</span></p>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Inscription: 95,000 FCFA</p>
-              <a href="programme-tahfiz-academique.html" class="block w-full text-center px-6 py-3 rounded-lg bg-secondary hover:bg-secondary/90 text-white font-semibold transition-colors">
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6" data-i18n="home.enrollment_fee">Inscription: 95,000 FCFA</p>
+              <a href="programme-tahfiz-academique.html" class="block w-full text-center px-6 py-3 rounded-lg bg-secondary hover:bg-secondary/90 text-white font-semibold transition-colors" data-i18n="home.register_now">
                 S'inscrire maintenant
               </a>
             </div>
@@ -666,36 +726,36 @@
               <div class="w-16 h-16 rounded-lg bg-secondary/20 flex items-center justify-center mb-4">
                 <i class="fas fa-balance-scale text-secondary text-3xl"></i>
               </div>
-              <h3 class="text-2xl font-bold mb-2">Programme Mixte</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4">Externat : Coran le matin, académique l'après-midi, retour à la maison chaque soir</p>
+              <h3 class="text-2xl font-bold mb-2" data-i18n="home.card3_title">Programme Mixte</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-4" data-i18n="home.card3_subtitle">Externat : Coran le matin, académique l'après-midi, retour à la maison chaque soir</p>
             </div>
             <ul class="space-y-3 mb-8 text-slate-700 dark:text-slate-300">
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Mémorisation du Coran ciblée</span>
+                <span data-i18n="home.card3_feat1">Mémorisation du Coran ciblée</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Études académiques complètes</span>
+                <span data-i18n="home.card3_feat2">Études académiques complètes</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Horaires adaptés aux familles</span>
+                <span data-i18n="home.card3_feat3">Horaires adaptés aux familles</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Suivi personnalisé</span>
+                <span data-i18n="home.card3_feat4">Suivi personnalisé</span>
               </li>
               <li class="flex items-start gap-3">
                 <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-                <span>Activités parascolaires</span>
+                <span data-i18n="home.card3_feat5">Activités parascolaires</span>
               </li>
             </ul>
             <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">À partir de</p>
+              <p class="text-slate-600 dark:text-slate-400 text-sm mb-2" data-i18n="home.pricing_label">À partir de</p>
               <p class="text-3xl font-bold text-primary mb-4">115,000 <span class="text-lg">FCFA/mois</span></p>
-              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Inscription: 95,000 FCFA</p>
-              <a href="programme-mixte.html" class="block w-full text-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold transition-colors">
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6" data-i18n="home.enrollment_fee">Inscription: 95,000 FCFA</p>
+              <a href="programme-mixte.html" class="block w-full text-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold transition-colors" data-i18n="cta.learn_more">
                 En savoir plus
               </a>
             </div>
@@ -705,7 +765,7 @@
 
       <!-- Info note -->
       <div class="bg-white dark:bg-slate-800 rounded-lg p-6 border-l-4 border-secondary" data-aos="fade-up">
-        <p class="text-slate-700 dark:text-slate-300">
+        <p class="text-slate-700 dark:text-slate-300" data-i18n-html="home.enrollment_note_html">
           <i class="fas fa-info-circle text-secondary mr-2"></i>
           <strong>Frais d'inscription:</strong> 95,000 FCFA pour tous les programmes. Les tarifs mensuels comprennent l'instruction, le suivi pédagogique, et les activités incluses.
         </p>
@@ -729,7 +789,7 @@
             <i class="fas fa-star"></i>
           </div>
           <span class="text-2xl font-bold text-primary">4.9/5</span>
-          <span class="text-slate-600 dark:text-slate-400">(15 avis Google)</span>
+          <span class="text-slate-600 dark:text-slate-400" data-i18n="home.google_rating_count">(15 avis Google)</span>
         </div>
         <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
           <span data-i18n="home.testimonials_subtitle">Découvrez les transformations et succès de nos élèves à travers les témoignages de leurs familles.</span>
@@ -853,14 +913,14 @@
         <p class="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed" data-i18n="home.failure_text">
           Chaque année d'attente est une année où votre enfant n'accumule pas les souvenirs précieux d'une éducation islamique structurée. Les enfants qui commencent tôt acquièrent une base solide de discipline, de foi, et de réussite académique.
         </p>
-        <p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
+        <p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.failure_text2">
           Rejoignez les 200+ familles qui ont déjà fait confiance à Al Amine Academy pour transformer l'avenir de leurs enfants.
         </p>
         <div class="flex gap-4">
           <i class="fas fa-check-circle text-secondary text-2xl flex-shrink-0 mt-1"></i>
           <div>
-            <p class="font-semibold text-slate-900 dark:text-white">Plus de 3 ans d'accompagnement</p>
-            <p class="text-slate-600 dark:text-slate-400">Méthode éprouvée depuis 2023</p>
+            <p class="font-semibold text-slate-900 dark:text-white" data-i18n="home.failure_badge_title">Plus de 3 ans d'accompagnement</p>
+            <p class="text-slate-600 dark:text-slate-400" data-i18n="home.failure_badge_text">Méthode éprouvée depuis 2023</p>
           </div>
         </div>
       </div>
@@ -936,7 +996,7 @@
           <h3 class="text-2xl font-bold mb-2">
             <i class="fas fa-quran mr-2"></i>Al Amine Academy
           </h3>
-          <p class="text-slate-400">Excellence éducative islamique</p>
+          <p class="text-slate-400" data-i18n="footer.tagline">Excellence éducative islamique</p>
         </div>
 
         <!-- Quick Links -->
@@ -962,6 +1022,7 @@
             <li><a href="programme-mixte.html" class="hover:text-white transition-colors" data-i18n="programs.mixed">Programme Mixte</a></li>
             <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors" data-i18n="programs.online">Cours en Ligne</a></li>
             <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors" data-i18n="programs.free">Cours Gratuits</a></li>
+            <li><a href="camp-vacances.html" class="text-secondary font-semibold hover:text-amber-300 transition-colors">Camp de Vacances <span class="ml-1 text-[10px] bg-secondary/20 text-secondary rounded px-1.5 py-0.5 align-middle">Nouveau</span></a></li>
           </ul>
         </div>
 
@@ -1064,7 +1125,85 @@
   </script>
 
   <!-- Language/i18n script -->
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+ 
+  <!-- Navbar Scroll Effect -->
+  <script>
+    (function() {
+      const navbar = document.getElementById('navbar');
+      const navTitle = document.getElementById('navTitle');
+      const navSubtitle = document.getElementById('navSubtitle');
+      if (!navbar || !navTitle || !navSubtitle) return;
+      function updateNav() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('nav-scrolled');
+          navTitle.classList.remove('text-white');
+          navTitle.classList.add('text-gray-900', 'dark:text-white');
+          navSubtitle.classList.remove('text-white/70');
+          navSubtitle.classList.add('text-gray-600', 'dark:text-gray-400');
+        } else {
+          navbar.classList.remove('nav-scrolled');
+          navTitle.classList.add('text-white');
+          navTitle.classList.remove('text-gray-900', 'dark:text-white');
+          navSubtitle.classList.add('text-white/70');
+          navSubtitle.classList.remove('text-gray-600', 'dark:text-gray-400');
+        }
+      }
+      window.addEventListener('scroll', updateNav);
+      updateNav();
+    })();
+
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      if (!mobileMenu) return;
+      mobileMenu.classList.toggle('hidden');
+      if (menuIcon) {
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-times');
+      }
+    }
+
+    // Dark mode (a-propos pattern)
+    (function() {
+      const darkToggle = document.getElementById('darkToggle');
+      const darkToggleMobile = document.getElementById('darkToggleMobile');
+      const darkIcon = document.getElementById('darkIcon');
+      const darkIconMobile = document.getElementById('darkIconMobile');
+      const html = document.documentElement;
+      const isDarkMode = localStorage.getItem('darkMode') === 'true' ||
+                         (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDarkMode) {
+        html.classList.add('dark');
+        if (darkIcon) { darkIcon.classList.remove('fa-moon'); darkIcon.classList.add('fa-sun'); }
+        if (darkIconMobile) { darkIconMobile.classList.remove('fa-moon'); darkIconMobile.classList.add('fa-sun'); }
+      }
+      function toggleDark() {
+        html.classList.toggle('dark');
+        const dark = html.classList.contains('dark');
+        localStorage.setItem('darkMode', dark);
+        if (darkIcon) { darkIcon.classList.toggle('fa-moon', !dark); darkIcon.classList.toggle('fa-sun', dark); }
+        if (darkIconMobile) { darkIconMobile.classList.toggle('fa-moon', !dark); darkIconMobile.classList.toggle('fa-sun', dark); }
+      }
+      darkToggle && darkToggle.addEventListener('click', toggleDark);
+      darkToggleMobile && darkToggleMobile.addEventListener('click', toggleDark);
+    })();
+  </script>
+
 </body>
+</html>
 </html>

@@ -16,6 +16,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
     <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
 
     <script>
         tailwind.config = {
@@ -62,31 +70,35 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center gap-1">
-               <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="index.html">Accueil</a>
+               <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="index.html" data-i18n="menu.home">Accueil</a>
                     <div class="relative group">
                         <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm flex items-center gap-1">
-                            Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                            <span data-i18n="menu.programs">Programmes</span> <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
                         </button>
                         <div class="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 border border-gray-100 dark:border-slate-700 overflow-hidden">
                             <a class="flex items-center gap-3 px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all" href="programme-internat.html">
                                 <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center"><i class="fas fa-school text-primary"></i></div>
-                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Tahfiz Internat</p><p class="text-xs text-gray-500">Coran + Sport + Hébergement</p></div>
+                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-gray-500" data-i18n="programs.tahfiz_subtitle">Coran + Sport + Hébergement</p></div>
                             </a>
                             <a class="flex items-center gap-3 px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all" href="programme-tahfiz-academique.html">
                                 <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center"><i class="fas fa-book-open text-secondary"></i></div>
-                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Tahfiz + Académique</p><p class="text-xs text-gray-500">Coran + Français + Anglais</p></div>
+                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.combined">Tahfiz + Académique</p><p class="text-xs text-gray-500" data-i18n="programs.combined_subtitle">Coran + Français + Anglais</p></div>
                             </a>
                             <a class="flex items-center gap-3 px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all" href="programme-cours-en-ligne.html">
                                 <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center"><i class="fas fa-laptop text-accent"></i></div>
-                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Cours en Ligne</p><p class="text-xs text-gray-500">Apprenez de chez vous</p></div>
+                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-gray-500" data-i18n="programs.online_subtitle">Apprenez de chez vous</p></div>
                             </a>
                             <a class="flex items-center gap-3 px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all" href="programme-cours-gratuits.html">
                                 <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
-                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
+                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500" data-i18n="programs.free_subtitle">Accès libre pour tous</p></div>
+                            </a>
+                            <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+                              <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+                              <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="menu.camp">Camp de Vacances</p><p class="text-xs text-gray-500" data-i18n="menu.camp_subtitle">Été 2026</p></div>
                             </a>
                             <a class="flex items-center gap-3 px-5 py-3.5 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all" href="programme-mixte.html">
                                 <div class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center"><i class="fas fa-users text-primary"></i></div>
-                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Programme Mixte</p><p class="text-xs text-gray-500">Tahfiz + Académique (Internat)</p></div>
+                                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.mixed">Programme Mixte</p><p class="text-xs text-gray-500" data-i18n="programs.mixed_subtitle">Tahfiz + Académique (Internat)</p></div>
                             </a>
                         </div>
                     </div>
@@ -112,10 +124,10 @@
                         </div>
                     </div>
 
-                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="galerie.html">Galerie</a>
-                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="a-propos.html">À Propos</a>
-                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="contact.html">Contact</a>
-                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="blog.html">Blog</a>
+                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
+                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="a-propos.html" data-i18n="menu.about">À Propos</a>
+                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="contact.html" data-i18n="menu.contact">Contact</a>
+                    <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="blog.html" data-i18n="menu.blog">Blog</a>
 
                     <!-- Dark Mode Toggle -->
                     <button onclick="toggleDarkMode()" class="p-2 text-white hover:bg-white/10 rounded-xl transition-all" title="Mode sombre/clair"><i class="fas fa-moon dark-mode-icon text-lg"></i></button>
@@ -127,7 +139,7 @@
                         </button>
                     </div>
 
-                    <a class="ml-2 bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-2.5 rounded-full font-bold text-sm shadow-lg hover:shadow-xl transition-all hover:scale-105" href="admission.html">
+                    <a class="ml-2 bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-2.5 rounded-full font-bold text-sm shadow-lg hover:shadow-xl transition-all hover:scale-105" href="admission.html" data-i18n="menu.register">
                         S'inscrire →
                     </a>
                 </div>
@@ -142,27 +154,28 @@
         <!-- Mobile Menu -->
         <div class="lg:hidden hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 shadow-2xl" id="mobileMenu">
             <div class="container mx-auto px-4 py-4 space-y-1">
-                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="index.html"><i class="fas fa-home mr-3 text-primary/60"></i>Accueil</a>
-                <button onclick="document.getElementById('mobileProgrammes').classList.toggle('hidden')" class="flex items-center justify-between w-full py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all"><span><i class="fas fa-graduation-cap mr-3 text-primary"></i>Programmes</span><i class="fas fa-chevron-down text-xs text-gray-400"></i></button>
+                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="index.html" data-i18n="menu.home"><i class="fas fa-home mr-3 text-primary/60"></i>Accueil</a>
+                <button onclick="document.getElementById('mobileProgrammes').classList.toggle('hidden')" class="flex items-center justify-between w-full py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all"><span><i class="fas fa-graduation-cap mr-3 text-primary"></i><span data-i18n="menu.programs">Programmes</span></span><i class="fas fa-chevron-down text-xs text-gray-400"></i></button>
                 <div id="mobileProgrammes" class="hidden pl-4 space-y-1 border-l-2 border-primary/20 ml-4">
-                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="programme-internat.html"><i class="fas fa-school mr-2 text-primary/60"></i>Tahfiz Internat</a>
-                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
-                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
-                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="programme-internat.html" data-i18n="programs.tahfiz"><i class="fas fa-school mr-2 text-primary/60"></i>Tahfiz Internat</a>
+                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
+                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
+                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html" data-i18n="menu.camp"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
                 <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="programme-mixte.html" data-i18n="programs.mixed"><i class="fas fa-book-reader mr-2 text-primary/60"></i>Programme Mixte</a>
                 </div>
 
                 <div class="py-2 px-4"><p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Activités</p></div>
-                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="conferences.html"><i class="fas fa-microphone-lines mr-2 text-secondary/60"></i>Conférences & Formations</a>
+                <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="conferences.html" data-i18n="menu.conferences"><i class="fas fa-microphone-lines mr-2 text-secondary/60"></i>Conférences & Formations</a>
                 <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="contact.html#activites-sociales"><i class="fas fa-hand-holding-heart mr-2 text-coral/60"></i>Activités Sociales</a>
                 <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="contact.html#cercles-etudes"><i class="fas fa-users-rectangle mr-2 text-primary/60"></i>Cercles d'Études</a>
 
-                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="galerie.html"><i class="fas fa-images mr-3 text-primary/60"></i>Galerie</a>
-                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="a-propos.html"><i class="fas fa-info-circle mr-3 text-primary/60"></i>À Propos</a>
-                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="contact.html"><i class="fas fa-envelope mr-3 text-primary/60"></i>Contact</a>
-                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="blog.html"><i class="fas fa-blog mr-3 text-primary/60"></i>Blog</a>
+                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary/60"></i>Galerie</a>
+                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary/60"></i>À Propos</a>
+                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="contact.html" data-i18n="menu.contact"><i class="fas fa-envelope mr-3 text-primary/60"></i>Contact</a>
+                <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 hover:bg-primary/5 rounded-xl font-medium transition-all" href="blog.html" data-i18n="menu.blog"><i class="fas fa-blog mr-3 text-primary/60"></i>Blog</a>
                 <div class="pt-4 border-t border-gray-100 dark:border-slate-800">
-                    <a class="block w-full text-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 py-3 rounded-2xl font-bold shadow-lg" href="admission.html">S'inscrire maintenant →</a>
+                    <a class="block w-full text-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 py-3 rounded-2xl font-bold shadow-lg" href="admission.html" data-i18n="home.register_now">S'inscrire maintenant →</a>
                 </div>
             </div>
         </div>
@@ -267,7 +280,7 @@
                     <i class="fas fa-graduation-cap mr-2"></i><span data-i18n="conferences_page.formations_label">Se former</span>
                 </span>
                 <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="conferences_page.formations_title">Nos Formations</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Des formations de qualité pour approfondir vos connaissances en sciences islamiques et développement personnel.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="conferences_page.formations_subtitle">Des formations de qualité pour approfondir vos connaissances en sciences islamiques et développement personnel.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -276,12 +289,12 @@
                     <div class="w-16 h-16 bg-gradient-to-br from-primary to-teal-400 rounded-2xl flex items-center justify-center mb-6">
                         <i class="fas fa-book-quran text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Sciences du Coran</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="conferences_page.form1_title">Sciences du Coran</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Formation approfondie en Tajwid, Tafsir et mémorisation du Noble Coran avec des méthodes pédagogiques modernes.</p>
                     <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                        <li><i class="fas fa-check-circle text-primary mr-2"></i>Tajwid avancé</li>
-                        <li><i class="fas fa-check-circle text-primary mr-2"></i>Méthodes de mémorisation</li>
-                        <li><i class="fas fa-check-circle text-primary mr-2"></i>Tafsir et compréhension</li>
+                        <li><i class="fas fa-check-circle text-primary mr-2"></i><span data-i18n="conferences_page.form1_feat1">Tajwid avancé</span></li>
+                        <li><i class="fas fa-check-circle text-primary mr-2"></i><span data-i18n="conferences_page.form1_feat2">Méthodes de mémorisation</span></li>
+                        <li><i class="fas fa-check-circle text-primary mr-2"></i><span data-i18n="conferences_page.form1_feat3">Tafsir et compréhension</span></li>
                     </ul>
                 </div>
 
@@ -290,12 +303,12 @@
                     <div class="w-16 h-16 bg-gradient-to-br from-secondary to-yellow-400 rounded-2xl flex items-center justify-center mb-6">
                         <i class="fas fa-mosque text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Sciences Islamiques</h3>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="conferences_page.form2_title">Sciences Islamiques</h3>
                     <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Cursus complet en Fiqh, Aqida, Sira et langue arabe pour une formation religieuse solide.</p>
                     <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                        <li><i class="fas fa-check-circle text-secondary mr-2"></i>Fiqh et jurisprudence</li>
-                        <li><i class="fas fa-check-circle text-secondary mr-2"></i>Aqida (croyance)</li>
-                        <li><i class="fas fa-check-circle text-secondary mr-2"></i>Langue arabe</li>
+                        <li><i class="fas fa-check-circle text-secondary mr-2"></i><span data-i18n="conferences_page.form2_feat1">Fiqh et jurisprudence</span></li>
+                        <li><i class="fas fa-check-circle text-secondary mr-2"></i><span data-i18n="conferences_page.form2_feat2">Aqida (croyance)</span></li>
+                        <li><i class="fas fa-check-circle text-secondary mr-2"></i><span data-i18n="conferences_page.form2_feat3">Langue arabe</span></li>
                     </ul>
                 </div>
             </div>
@@ -307,9 +320,9 @@
         <div class="container mx-auto px-4 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="inline-block bg-coral/10 text-coral px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-                    <i class="fas fa-archive mr-2"></i>Rétrospective
+                    <i class="fas fa-archive mr-2"></i><span data-i18n="conferences_page.archives_badge">Rétrospective</span>
                 </span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">Archives des Événements</h2>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="conferences_page.archives_title">Archives des Événements</h2>
                 <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Revivez nos événements passés et découvrez les moments forts de l'académie.</p>
             </div>
 
@@ -332,11 +345,11 @@
     <!-- CTA Section -->
     <section class="py-16 hero-gradient">
         <div class="container mx-auto px-4 lg:px-8 text-center" data-aos="fade-up">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Restez informé de nos événements</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4" data-i18n="conferences_page.cta_title">Restez informé de nos événements</h2>
             <p class="text-white/80 mb-8 max-w-xl mx-auto">Suivez-nous sur les réseaux sociaux pour ne manquer aucune conférence ni formation.</p>
             <div class="flex justify-center gap-4 flex-wrap">
                 <a class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105" href="contact.html">
-                    <i class="fas fa-envelope mr-2"></i>Nous contacter
+                    <i class="fas fa-envelope mr-2"></i><span data-i18n="conferences_page.cta_contact">Nous contacter</span>
                 </a>
                 <a class="bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105" href="https://wa.me/221781089098">
                     <i class="fab fa-whatsapp mr-2"></i>WhatsApp
@@ -357,9 +370,10 @@
                         </div>
                         <div>
                             <h3 class="text-xl font-extrabold">Al Amine Academy</h3>
+                            <p class="text-xs text-gray-400" data-i18n="footer.tagline">Excellence éducative islamique</p>
                         </div>
                     </div>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">École coranique moderne dédiée à la mémorisation du Noble Coran et à l'éducation académique d'excellence.</p>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed" data-i18n="footer.description">École coranique moderne dédiée à la mémorisation du Noble Coran et à l'éducation académique d'excellence.</p>
                     <div class="flex gap-3">
                         <a class="w-10 h-10 bg-white/5 hover:bg-primary rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://www.facebook.com/daaraalamine"><i class="fab fa-facebook-f"></i></a>
                         <a class="w-10 h-10 bg-white/5 hover:bg-pink-500 rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://www.instagram.com/al_amine_academy/"><i class="fab fa-instagram"></i></a>
@@ -370,14 +384,14 @@
 
                 <!-- Liens rapides -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Liens rapides</h4>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="footer.navigation">Liens rapides</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="index.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Accueil</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="a-propos.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>À Propos</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="galerie.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Galerie</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="contact.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Contact</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="blog.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Blog</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="conferences.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Conférences</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="index.html" data-i18n="menu.home"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Accueil</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-chevron-right text-[10px] text-primary"></i>À Propos</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Galerie</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="contact.html" data-i18n="menu.contact"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Contact</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="blog.html" data-i18n="menu.blog"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Blog</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="conferences.html" data-i18n="menu.conferences"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Conférences</a></li>
                         <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="contact.html#activites-sociales"><i class="fas fa-chevron-right text-[10px] text-coral"></i>Activités Sociales</a></li>
                         <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="contact.html#cercles-etudes"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Cercles d'Études</a></li>
                     </ul>
@@ -385,18 +399,19 @@
 
                 <!-- Programmes -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Programmes</h4>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="footer.programs">Programmes</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-internat.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz Internat</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-tahfiz-academique.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz + Académique</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-en-ligne.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours en Ligne</a></li>
-                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-gratuits.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours Gratuits</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-internat.html" data-i18n="programs.tahfiz"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz Internat</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz + Académique</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours en Ligne</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours Gratuits</a></li>
+                        <li><a class="text-secondary font-semibold hover:text-amber-300 transition-colors flex items-center gap-2" href="camp-vacances.html" data-i18n="menu.camp"><i class="fas fa-umbrella-beach text-[10px] text-secondary"></i>Camp de Vacances</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="footer.contact">Contact</h4>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-start gap-3">
                             <i class="fas fa-map-marker-alt text-primary mt-1"></i>
@@ -415,7 +430,7 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-500 text-sm">© 2025 Al Amine Academy. Tous droits réservés.</p>
+                <p class="text-gray-500 text-sm" data-i18n="footer.copyright">© 2026 DAARA Al Amine Academy. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -472,7 +487,20 @@
             }
         });
     </script>
-    <script src="translations.js"></script>
-    <script src="lang.js"></script>
-</body>
+    <script src="translations.js?v=20260429b"></script>
+    <script src="lang.js?v=20260429b"></script>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+ </body>
 </html>

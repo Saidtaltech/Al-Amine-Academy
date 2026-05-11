@@ -11,6 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
 
   <script>
     tailwind.config = {
@@ -183,6 +191,10 @@
                 <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
                 <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
               </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Été 2026</p></div>
+              </a>
             </div>
           </div>
           <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
@@ -232,6 +244,7 @@
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
         </div>
         <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary"></i>Galerie</a>
         <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary"></i>À Propos</a>
@@ -286,9 +299,9 @@
       </div>
 
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Notre processus</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Étapes d'inscription</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Suivez ces 4 étapes simples pour inscrire votre enfant</p>
+        <span class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="admission.steps_label">Notre processus</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="admission.steps_title">Étapes d'inscription</h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="admission.steps_subtitle">Suivez ces 4 étapes simples pour inscrire votre enfant</p>
       </div>
 
       <!-- Steps -->
@@ -298,8 +311,8 @@
             <div class="w-16 h-16 bg-gradient-to-br from-primary to-teal-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span class="text-white font-bold text-2xl">1</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Remplir le formulaire</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="admission.step1">Remplir le formulaire</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="admission.step1_desc">
               Remplissez notre formulaire en ligne avec les informations de votre enfant et votre contact.
             </p>
           </div>
@@ -313,8 +326,8 @@
             <div class="w-16 h-16 bg-gradient-to-br from-secondary to-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span class="text-gray-900 font-bold text-2xl">2</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Entretien</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="admission.step2">Entretien</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="admission.step2_desc">
               Un entretien avec la direction pour discuter des objectifs et de l'adaptation du programme.
             </p>
           </div>
@@ -328,8 +341,8 @@
             <div class="w-16 h-16 bg-gradient-to-br from-accent to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span class="text-white font-bold text-2xl">3</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Inscription</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="admission.step3">Inscription</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="admission.step3_desc">
               Finalisez l'inscription et payez les frais. Confirmation immédiate par email.
             </p>
           </div>
@@ -343,8 +356,8 @@
             <div class="w-16 h-16 bg-gradient-to-br from-coral to-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span class="text-white font-bold text-2xl">4</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Rentrée</h3>
-            <p class="text-gray-600 dark:text-gray-300 text-sm">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="admission.step4">Rentrée</h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="admission.step4_desc">
               Bienvenue à DAARA ! Début des cours selon le calendrier scolaire.
             </p>
           </div>
@@ -359,9 +372,9 @@
 
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-secondary/10 text-secondary dark:text-secondary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Tarifs</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Frais de scolarité</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">Transparent et compétitif</p>
+        <span class="inline-block bg-secondary/10 text-secondary dark:text-secondary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="admission.fees_label">Tarifs</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="admission.fees_title">Frais de scolarité</h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="admission.fees_subtitle">Transparent et compétitif</p>
       </div>
 
       <!-- Pricing Table -->
@@ -370,31 +383,31 @@
           <table class="w-full">
             <thead>
               <tr class="bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/5 dark:to-secondary/5">
-                <th class="px-6 py-4 text-left font-bold text-gray-900 dark:text-white">Programme</th>
-                <th class="px-6 py-4 text-center font-bold text-gray-900 dark:text-white">Montant mensuel</th>
-                <th class="px-6 py-4 text-center font-bold text-gray-900 dark:text-white">Détails</th>
+                <th class="px-6 py-4 text-left font-bold text-gray-900 dark:text-white" data-i18n="admission.table_program">Programme</th>
+                <th class="px-6 py-4 text-center font-bold text-gray-900 dark:text-white" data-i18n="admission.table_monthly">Montant mensuel</th>
+                <th class="px-6 py-4 text-center font-bold text-gray-900 dark:text-white" data-i18n="admission.table_details">Détails</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 dark:divide-slate-600">
               <tr class="hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Tahfiz Internat</td>
+                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white" data-i18n="programs.tahfiz">Tahfiz Internat</td>
                 <td class="px-6 py-4 text-center text-lg font-bold text-primary">100 000 FCFA</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Coran + Sport</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300" data-i18n="admission.row1_details">Coran + Sport</td>
               </tr>
               <tr class="hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Élémentaire Mixte</td>
+                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white" data-i18n="admission.row2_program">Élémentaire Mixte</td>
                 <td class="px-6 py-4 text-center text-lg font-bold text-secondary">115 000 FCFA</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Coran + Français + Anglais + Sport</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300" data-i18n="admission.row2_details">Coran + Français + Anglais + Sport</td>
               </tr>
               <tr class="bg-primary/5 dark:bg-primary/10 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Frais d'inscription (une fois)</td>
+                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white" data-i18n="admission.row3_program">Frais d'inscription (une fois)</td>
                 <td class="px-6 py-4 text-center text-lg font-bold text-accent">95 000 FCFA</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Tous les programmes</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300" data-i18n="admission.row3_details">Tous les programmes</td>
               </tr>
               <tr class="hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">Supplément internat</td>
+                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white" data-i18n="admission.row4_program">Supplément internat</td>
                 <td class="px-6 py-4 text-center text-lg font-bold text-coral">+15 000 FCFA/mois</td>
-                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300">Hébergement optionnel</td>
+                <td class="px-6 py-4 text-center text-sm text-gray-600 dark:text-gray-300" data-i18n="admission.row4_details">Hébergement optionnel</td>
               </tr>
             </tbody>
           </table>
@@ -402,7 +415,7 @@
       </div>
 
       <div class="mt-12 bg-gradient-to-r from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10 border border-primary/20 dark:border-primary/30 rounded-3xl p-8 text-center">
-        <p class="text-gray-700 dark:text-gray-200">
+        <p class="text-gray-700 dark:text-gray-200" data-i18n="admission.fees_note">
           <i class="fas fa-info-circle text-primary mr-2"></i>
           Les frais d'inscription sont dus une fois au moment de l'inscription. Les frais mensuels sont payables en début de mois ou selon les arrangements convenus.
         </p>
@@ -414,37 +427,37 @@
   <section class="py-24 bg-white dark:bg-slate-900 relative overflow-hidden">
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-accent/10 text-accent dark:text-accent-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Documents requis</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Pièces justificatives</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">À fournir lors de l'inscription</p>
+        <span class="inline-block bg-accent/10 text-accent dark:text-accent-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="admission.docs_label">Documents requis</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="admission.docs_title">Pièces justificatives</h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="admission.docs_subtitle">À fournir lors de l'inscription</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="0">
           <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
             <i class="fas fa-list-check text-primary text-2xl"></i>
-            Documents de l'élève
+            <span data-i18n="admission.docs_student_title">Documents de l'élève</span>
           </h3>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Copie de l'acte de naissance</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_s1">Copie de l'acte de naissance</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Copie de la carte d'identité nationale</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_s2">Copie de la carte d'identité nationale</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Relevés scolaires précédents</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_s3">Relevés scolaires précédents</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Certificat de santé</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_s4">Certificat de santé</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-primary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Photo d'identité (4x4)</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_s5">Photo d'identité (4x4)</span>
             </li>
           </ul>
         </div>
@@ -452,28 +465,28 @@
         <div class="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-gray-100 dark:border-slate-700" data-aos="fade-up" data-aos-delay="100">
           <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
             <i class="fas fa-users text-secondary text-2xl"></i>
-            Documents des parents
+            <span data-i18n="admission.docs_parents_title">Documents des parents</span>
           </h3>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Copie des cartes d'identité des parents</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_p1">Copie des cartes d'identité des parents</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Certificat de mariage (si applicable)</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_p2">Certificat de mariage (si applicable)</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Preuve de revenus (dernier bulletin de paie)</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_p3">Preuve de revenus (dernier bulletin de paie)</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Contacts d'urgence valides</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_p4">Contacts d'urgence valides</span>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-secondary mt-1 flex-shrink-0"></i>
-              <span class="text-gray-600 dark:text-gray-300">Attestation de résidence</span>
+              <span class="text-gray-600 dark:text-gray-300" data-i18n="admission.doc_p5">Attestation de résidence</span>
             </li>
           </ul>
         </div>
@@ -485,8 +498,8 @@
   <section class="py-24 bg-gray-50 dark:bg-slate-800 relative overflow-hidden">
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-coral/10 text-coral dark:text-coral-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Questions fréquentes</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">FAQ</h2>
+        <span class="inline-block bg-coral/10 text-coral dark:text-coral-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="admission.faq_label">Questions fréquentes</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="admission.faq_title">FAQ</h2>
       </div>
 
       <!-- FAQ Accordion -->
@@ -494,10 +507,10 @@
         <!-- FAQ Item 1 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="0">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quel est l'âge minimum pour l'inscription ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq1_q">Quel est l'âge minimum pour l'inscription ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq1_a">
             Les élèves doivent avoir au minimum 4 ans pour rejoindre le programme Élémentaire. Pour le Tahfiz, l'âge minimum recommandé est 7 ans, mais nous accueillons les enfants dès 5 ans selon leur niveau.
           </div>
         </div>
@@ -505,10 +518,10 @@
         <!-- FAQ Item 2 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="100">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Y a-t-il des bourses disponibles ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq2_q">Y a-t-il des bourses disponibles ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq2_a">
             Oui, nous proposons des bourses partielles pour les familles de bonne réputation académique et financièrement modestes. Veuillez nous contacter pour discuter de votre situation.
           </div>
         </div>
@@ -516,10 +529,10 @@
         <!-- FAQ Item 3 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="200">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quelle est la durée de l'année scolaire ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq3_q">Quelle est la durée de l'année scolaire ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq3_a">
             L'année scolaire commence généralement en septembre et se termine en juillet. Nous avons des vacances scolaires en décembre et août. Les horaires exacts sont fournis lors de l'inscription.
           </div>
         </div>
@@ -527,10 +540,10 @@
         <!-- FAQ Item 4 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="300">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Puis-je modifier mon choix de programme après l'inscription ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq4_q">Puis-je modifier mon choix de programme après l'inscription ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq4_a">
             Oui, les modifications peuvent être effectuées jusqu'à la fin du premier mois scolaire avec l'accord de la direction et sans frais supplémentaires.
           </div>
         </div>
@@ -538,10 +551,10 @@
         <!-- FAQ Item 5 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="400">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Comment fonctionnent les cours en ligne ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq5_q">Comment fonctionnent les cours en ligne ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq5_a">
             Les cours en ligne sont dispensés via Google Meet le samedi et le dimanche après-midi (12h–17h), avec un suivi entre les sessions par groupe WhatsApp. À 10 000 FCFA/mois en classe commune (25 000 FCFA en individuel).
           </div>
         </div>
@@ -549,10 +562,10 @@
         <!-- FAQ Item 6 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="500">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Les repas servis sont-ils halal ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq6_q">Les repas servis sont-ils halal ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq6_a">
             Oui, tous les repas servis à l'académie sont 100 % halal. Trois repas équilibrés par jour + un goûter sont inclus pour les élèves en internat. Nous adaptons les menus aux allergies et besoins spécifiques sur demande.
           </div>
         </div>
@@ -560,10 +573,10 @@
         <!-- FAQ Item 7 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="600">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Mon enfant peut-il rentrer le week-end ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq7_q">Mon enfant peut-il rentrer le week-end ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq7_a">
             Oui. Pour le programme internat, les élèves peuvent rentrer en famille chaque week-end (du vendredi soir au dimanche soir) selon le calendrier convenu avec les parents. Pour le programme mixte, l'enfant rentre chaque jour à 17h30.
           </div>
         </div>
@@ -571,10 +584,10 @@
         <!-- FAQ Item 8 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="700">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Y a-t-il un examen d'entrée ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq8_q">Y a-t-il un examen d'entrée ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq8_a">
             Pas d'examen écrit. Un entretien de 30 minutes avec la direction permet d'évaluer le niveau de l'enfant (lecture, mémorisation déjà acquise) et d'orienter vers le programme adapté. L'objectif est d'accueillir, pas de sélectionner.
           </div>
         </div>
@@ -582,10 +595,10 @@
         <!-- FAQ Item 9 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="800">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quels documents fournir pour l'inscription ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq9_q">Quels documents fournir pour l'inscription ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq9_a">
             Acte de naissance de l'enfant, deux photos d'identité récentes, carte d'identité de l'un des parents, certificat médical de moins de 3 mois et bulletins scolaires de l'année précédente. Pour les internes, un certificat de groupe sanguin est demandé.
           </div>
         </div>
@@ -593,10 +606,10 @@
         <!-- FAQ Item 10 -->
         <div class="bg-white dark:bg-slate-700 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-600" data-aos="fade-up" data-aos-delay="900">
           <button class="accordion-button w-full px-6 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors" onclick="toggleAccordion(this)">
-            <span class="flex-1 text-left">Quels modes de paiement acceptez-vous ?</span>
+            <span class="flex-1 text-left" data-i18n="admission.faq10_q">Quels modes de paiement acceptez-vous ?</span>
             <i class="fas fa-chevron-down transition-transform"></i>
           </button>
-          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300">
+          <div class="accordion-content px-6 pb-4 text-gray-600 dark:text-gray-300" data-i18n="admission.faq10_a">
             Cash sur place, Wave, Orange Money ou virement bancaire. Le paiement est mensuel ; un règlement trimestriel donne droit à 2 % de remise et un règlement annuel à 5 %.
           </div>
         </div>
@@ -719,6 +732,7 @@
             <li><a href="programme-mixte.html" class="hover:text-white transition-colors">Programme Mixte</a></li>
             <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors">Cours en Ligne</a></li>
             <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors">Cours Gratuits</a></li>
+            <li><a href="camp-vacances.html" class="text-secondary font-semibold hover:text-amber-300 transition-colors">Camp de Vacances</a></li>
           </ul>
         </div>
 
@@ -843,7 +857,20 @@
     });
   </script>
 
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
-</body>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+ </body>
 </html>
