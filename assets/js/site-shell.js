@@ -40,7 +40,7 @@
     +           '</div>'
     +         '</div>'
     +         '<a href="' + ASSET_PREFIX + 'admission.html"      data-route="admission"    class="nav-link hover:text-primary" data-i18n="menu.admission">Admission</a>'
-    +         '<a href="' + ASSET_PREFIX + 'a-propos.html"       data-route="about"        class="nav-link hover:text-primary" data-i18n="menu.about">À Propos</a>'
+    +         '<a href="' + ASSET_PREFIX + 'a-propos.html"       data-route="about"        class="nav-link hover:text-primary whitespace-nowrap" data-i18n="menu.about">À Propos</a>'
     +         '<a href="' + ASSET_PREFIX + 'galerie.html"        data-route="gallery"      class="nav-link hover:text-primary" data-i18n="menu.gallery">Galerie</a>'
     +         '<a href="' + ASSET_PREFIX + 'temoignages.html"    data-route="testimonials" class="nav-link hover:text-primary" data-i18n="menu.testimonials">Témoignages</a>'
     +         '<a href="' + ASSET_PREFIX + 'blog.html"           data-route="blog"         class="nav-link hover:text-primary" data-i18n="menu.blog">Blog</a>'
@@ -252,30 +252,45 @@
   }
 
   /* ==================== COUNTER ANIMATION ==================== */
-  /* Usage: <span data-counter="200" data-counter-suffix="+">200+</span> */
+  /* Usage: <span data-counter="200" data-counter-suffix="+">200+</span>        */
+  /* Elements already visible at page load (entry.time < 500ms) show their      */
+  /* final value immediately — no count-up from zero for above-the-fold stats.  */
   function bindCounters() {
     var els = document.querySelectorAll('[data-counter]');
     if (!els.length || !window.IntersectionObserver) return;
+
+    function setFinal(el) {
+      var t = parseFloat(el.getAttribute('data-counter'));
+      var s = el.getAttribute('data-counter-suffix') || '';
+      var p = el.getAttribute('data-counter-prefix') || '';
+      var d = el.getAttribute('data-counter-decimal') === 'true';
+      el.textContent = p + (d ? t.toFixed(1) : t) + s;
+    }
+
+    function animate(el) {
+      var target  = parseFloat(el.getAttribute('data-counter'));
+      var suffix  = el.getAttribute('data-counter-suffix') || '';
+      var prefix  = el.getAttribute('data-counter-prefix') || '';
+      var decimal = el.getAttribute('data-counter-decimal') === 'true';
+      var dur = 1500, t0 = performance.now();
+      function step(now) {
+        var p  = Math.min((now - t0) / dur, 1);
+        var ep = 1 - Math.pow(1 - p, 3);             /* ease-out cubic */
+        var v  = decimal ? (ep * target).toFixed(1) : Math.floor(ep * target);
+        el.textContent = prefix + v + suffix;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = prefix + (decimal ? target.toFixed(1) : target) + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+
     var obs = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        var el      = entry.target;
-        var target  = parseFloat(el.getAttribute('data-counter'));
-        var suffix  = el.getAttribute('data-counter-suffix') || '';
-        var prefix  = el.getAttribute('data-counter-prefix') || '';
-        var decimal = el.getAttribute('data-counter-decimal') === 'true';
-        var dur     = 1500;
-        var t0      = performance.now();
-        function step(now) {
-          var p  = Math.min((now - t0) / dur, 1);
-          var ep = 1 - Math.pow(1 - p, 3);           /* ease-out cubic */
-          var v  = decimal ? (ep * target).toFixed(1) : Math.floor(ep * target);
-          el.textContent = prefix + v + suffix;
-          if (p < 1) requestAnimationFrame(step);
-          else el.textContent = prefix + (decimal ? target.toFixed(1) : target) + suffix;
-        }
-        requestAnimationFrame(step);
-        obs.unobserve(el);
+        /* entry.time is ms since page navigation — < 500 means already in viewport */
+        if (entry.time < 500) setFinal(entry.target);
+        else                   animate(entry.target);
+        obs.unobserve(entry.target);
       });
     }, { threshold: 0.55 });
     els.forEach(function (el) { obs.observe(el); });

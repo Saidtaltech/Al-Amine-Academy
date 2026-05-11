@@ -143,6 +143,7 @@ h2 { line-height: 1.1; }
   box-shadow: var(--shadow-soft);
   transition: transform .3s ease, box-shadow .3s ease;
 }
+.dark .problem-card { background: #1f2937; border-left-color: var(--brand-yellow); }
 .problem-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 
 .program-card {
@@ -153,6 +154,7 @@ h2 { line-height: 1.1; }
   box-shadow: var(--shadow-soft);
   transition: transform .3s ease, box-shadow .3s ease;
 }
+.dark .program-card { background: #1f2937; }
 .program-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -24px rgba(37,144,179,.35); }
 .program-card.featured { border-top-color: var(--brand-yellow); }
 
@@ -163,6 +165,7 @@ h2 { line-height: 1.1; }
   padding: 2rem;
   position: relative;
 }
+.dark .testimonial-card { background: linear-gradient(135deg, #0f4457 0%, #165b73 100%); }
 .testimonial-card .quote-mark {
   position: absolute; top: 0.75rem; right: 1rem;
   font-size: 4rem; line-height: 1; color: var(--brand-blue);

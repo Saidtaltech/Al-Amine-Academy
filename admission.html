@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="scroll-smooth" lang="fr">
 <head>
   <meta charset="utf-8"/>
@@ -10,8 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+  <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
    details summary { cursor: pointer; list-style: none; }
@@ -163,7 +162,7 @@
           <span data-i18n="admission.open_badge">Inscriptions 2026 ouvertes</span>
         </div>
         <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-          <span class="text-gradient" data-i18n="admission.hero_title">Inscription & Admission</span>
+          <span class="text-white" data-i18n="admission.hero_title">Inscription & Admission</span>
         </h1>
         <p class="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed" data-i18n="admission.hero_subtitle">
           Rejoignez DAARA Al Amine Academy en suivant nos étapes d'inscription simples et transparentes
@@ -584,40 +583,6 @@
   </script>
 
   <div id="aaa-footer"></div>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: false, easing: 'ease-out-quart' });
-
-    window.toggleAccordion = function(button) {
-      const parent = button.parentElement;
-      const content = parent.querySelector('.accordion-content');
-      const icon = button.querySelector('i');
-
-      document.querySelectorAll('.accordion-button').forEach(btn => {
-        if (btn !== button) {
-          btn.classList.remove('active');
-          btn.parentElement.querySelector('.accordion-content').classList.remove('active');
-          btn.querySelector('i').style.transform = 'rotate(0deg)';
-        }
-      });
-
-      button.classList.toggle('active');
-      content.classList.toggle('active');
-      icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-    };
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  </script>
 
   <script src="translations.js?v=20260429b"></script>
   <script src="lang.js?v=20260429b"></script>

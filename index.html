@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="scroll-smooth" lang="fr">
 <head>
   <meta charset="utf-8"/>
@@ -31,10 +31,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <!-- AOS Animations -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/site.css">
-  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+  <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
    details summary { cursor: pointer; list-style: none; }
@@ -150,45 +148,6 @@
       color: #1e7a9a;
     }
 
-    .problem-card {
-      background: white;
-      border-left: 4px solid #f59e0b;
-      transition: all 0.3s ease;
-    }
-    .dark .problem-card {
-      background: #1f2937;
-      border-left-color: #f59e0b;
-    }
-    .problem-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(30, 122, 154, 0.1);
-    }
-
-    .testimonial-card {
-      background: linear-gradient(135deg, #f0f9fc 0%, #e8f4f8 100%);
-      border-left: 4px solid #1e7a9a;
-    }
-    .dark .testimonial-card {
-      background: linear-gradient(135deg, #0f4457 0%, #165b73 100%);
-    }
-
-    .program-card {
-      background: white;
-      border-top: 4px solid #1e7a9a;
-      transition: all 0.3s ease;
-    }
-    .dark .program-card {
-      background: #1f2937;
-    }
-    .program-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(30, 122, 154, 0.2);
-    }
-
-    .stars {
-      color: #f59e0b;
-    }
-
     @media (max-width: 768px) {
       .hero-gradient {
         min-height: 90vh;
@@ -254,12 +213,47 @@
           </div>
         </div>
 
-        <!-- Right Image/Illustration -->
-        <div data-aos="fade-left" data-aos-duration="800" class="relative">
-          <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves apprenant le Coran à Al Amine Academy Dakar" class="w-full h-96 md:h-full object-cover rounded-2xl shadow-xl"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div style="display:none" class="absolute inset-0 w-full h-96 md:h-full bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
-            <i class="fas fa-book-quran text-7xl text-white/40"></i>
+        <!-- Right Image / Social Proof Card -->
+        <div class="relative flex items-center justify-center">
+          <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves apprenant le Coran à Al Amine Academy Dakar" class="w-full h-96 md:h-[540px] object-cover rounded-2xl shadow-2xl"
+               onerror="this.style.display='none'; this.nextElementSibling.style.removeProperty('display');">
+          <!-- Social proof card — always shown if image fails, floating overlay otherwise -->
+          <div class="absolute -bottom-6 -left-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 max-w-[280px] border border-white/60 dark:border-slate-700/60">
+            <!-- Google rating row -->
+            <div class="flex items-center gap-2 mb-3">
+              <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M43.611 20.083H42V20H24V28H35.303C33.654 32.657 29.223 36 24 36C17.373 36 12 30.627 12 24C12 17.373 17.373 12 24 12C27.059 12 29.842 13.154 31.961 15.039L37.618 9.382C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24C4 35.045 12.955 44 24 44C35.045 44 44 35.045 44 24C44 22.659 43.862 21.35 43.611 20.083Z" fill="#FFC107"/>
+                <path d="M6.30603 14.691L12.877 19.51C14.655 15.108 18.961 12 24 12C27.059 12 29.842 13.154 31.961 15.039L37.618 9.382C34.046 6.053 29.268 4 24 4C16.318 4 9.65603 8.337 6.30603 14.691Z" fill="#FF3D00"/>
+                <path d="M24 44C29.166 44 33.86 42.023 37.409 38.808L31.219 33.57C29.211 35.092 26.715 36 24 36C18.798 36 14.381 32.683 12.717 28.054L6.19501 33.079C9.50501 39.556 16.227 44 24 44Z" fill="#4CAF50"/>
+                <path d="M43.611 20.083H42V20H24V28H35.303C34.511 30.237 33.072 32.166 31.216 33.572L31.219 33.57L37.409 38.808C36.971 39.205 44 34 44 24C44 22.659 43.862 21.35 43.611 20.083Z" fill="#1976D2"/>
+              </svg>
+              <span class="text-sm font-bold text-slate-800 dark:text-white">Google Reviews</span>
+            </div>
+            <!-- Stars + score -->
+            <div class="flex items-center gap-1.5 mb-2">
+              <span class="text-3xl font-extrabold text-slate-900 dark:text-white leading-none">4.9</span>
+              <div class="flex gap-0.5">
+                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                <i class="fas fa-star text-yellow-400 text-sm"></i>
+                <i class="fas fa-star text-yellow-400 text-sm"></i>
+              </div>
+            </div>
+            <!-- Testimonial quote -->
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3 italic">
+              "Mon fils a mémorisé 3 juz en 6 mois. Une école exceptionnelle !"
+            </p>
+            <!-- Counter stat -->
+            <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-700">
+              <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-users text-primary text-xs"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-800 dark:text-white leading-none">200+ élèves</p>
+                <p class="text-[10px] text-slate-500 dark:text-slate-400">inscrits &amp; épanouis</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -829,15 +823,6 @@
   <div id="aaa-footer"></div>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      offset: 100
-    });
-  </script>
 
   <!-- Language/i18n script -->
   <script src="translations.js?v=20260429b"></script>
