@@ -1,68 +1,99 @@
 # Images à déposer dans `assets/img/`
 
-Toutes les pages utilisent ces noms exacts. Le site fonctionne sans (un fallback gradient + icône s'affiche), mais il prendra vie quand tu déposeras les fichiers ici. Garde les **mêmes noms et extensions** (`.jpg`).
+Toutes les pages utilisent ces noms **exacts**. Le site fonctionne sans elles (dégradé bleu de marque en fallback), mais il prendra toute sa dimension dès que tu déposes les fichiers ici. **Respecte les noms et extensions (`.jpg`).**
+
+---
 
 ## Page d'accueil (`index.html`)
 
 | Fichier | Section | Conseil photo |
 |---|---|---|
-| `hero-eleves-coran.jpg` | Hero principal (haut de page) | Élèves en train d'apprendre le Coran, lumière naturelle, format paysage |
-| `batiment-ecole.jpg` | Section « Notre approche » | Vue extérieure du bâtiment ou de la cour, format paysage |
-| `programme-tahfiz.jpg` | Carte programme Tahfiz Internat | Élève qui mémorise / récite, plan rapproché |
-| `programme-elementaire.jpg` | Carte programme Tahfiz + Académique | Salle de classe avec tableau, élèves en uniforme |
-| `programme-mixte.jpg` | Carte programme Mixte (externat) | Élèves arrivant ou sortant de l'école |
-| `eleves-priere.jpg` | Section CTA finale | Élèves en prière, format paysage, lumière douce |
+| `hero-eleves-coran.jpg` | **Hero principal** (cover plein écran) | Élèves apprenant le Coran — lumière naturelle, format paysage 16/9 |
+| `batiment-ecole.jpg` | Section « Notre approche » | Vue extérieure du bâtiment ou de la cour |
+| `programme-tahfiz.jpg` | Carte programme Tahfiz Internat | Élève qui mémorise, plan rapproché |
+| `programme-mixte.jpg` | Carte programme Mixte | Élèves arrivant ou sortant de l'école |
+| `eleves-priere.jpg` | Section CTA finale (fond) | Élèves en prière, lumière douce |
 
-## Page À propos (`a-propos.html`)
+---
+
+## Page À Propos (`a-propos.html`)
 
 | Fichier | Section |
 |---|---|
-| `equipe-pedagogique.jpg` | Hero À propos |
-| `classe-apprentissage.jpg` | Mission & vision |
-| `directeur.jpg` | Section équipe |
+| `equipe-pedagogique.jpg` | **Hero cover** (fond plein écran) + card flottante |
+| `classe-apprentissage.jpg` | Section Mission & Vision |
+| `directeur.jpg` | Section Équipe |
+
+---
 
 ## Page Admission (`admission.html`)
 
 | Fichier | Section |
 |---|---|
-| `accueil-eleves.jpg` | Section étapes d'inscription |
+| `accueil-eleves.jpg` | **Hero cover** (fond plein écran) |
 
-## Pages programmes
+---
 
-| Fichier | Page |
+## Page Témoignages (`temoignages.html`)
+
+| Fichier | Section |
 |---|---|
-| `internat-eleves.jpg` | `programme-internat.html` |
-| `tahfiz-academique.jpg` | `programme-tahfiz-academique.html` |
-| `programme-mixte-classe.jpg` | `programme-mixte.html` |
-| `cours-en-ligne.jpg` | `programme-cours-en-ligne.html` |
-| `cours-gratuits.jpg` | `programme-cours-gratuits.html` (et v2) |
+| `temoignages-hero.jpg` | **Hero cover** (fond plein écran) — famille + enfants souriants |
+
+---
+
+## Page Galerie (`galerie.html`)
+
+| Fichier | Section |
+|---|---|
+| `galerie-hero.jpg` | **Hero cover** (fond plein écran) — vue d'ensemble de l'école |
+| `galerie-classes.jpg` | Catégorie Salles de classe |
+| `galerie-sport.jpg` | Catégorie Sport |
+| `galerie-ceremonies.jpg` | Catégorie Cérémonies & événements |
+| `galerie-batiment.jpg` | Catégorie Bâtiment & locaux |
+| `galerie-cantine.jpg` | Catégorie Cantine & repas |
+| `galerie-priere.jpg` | Catégorie Prières & vie spirituelle |
+
+---
 
 ## Page Contact (`contact.html`)
 
 | Fichier | Section |
 |---|---|
-| `facade-ecole.jpg` | Section avant les cartes contact |
+| `facade-ecole.jpg` | **Hero cover** (fond plein écran) — façade ou entrée de l'école |
 
-## Page Galerie (`galerie.html`) — 6 catégories
+---
 
-| Fichier | Catégorie |
-|---|---|
-| `galerie-classes.jpg` | Salles de classe |
-| `galerie-sport.jpg` | Sport |
-| `galerie-ceremonies.jpg` | Cérémonies & événements |
-| `galerie-batiment.jpg` | Bâtiment & locaux |
-| `galerie-cantine.jpg` | Cantine & repas |
-| `galerie-priere.jpg` | Prières & vie spirituelle |
+## Pages Programmes
+
+| Fichier | Page | Section |
+|---|---|---|
+| `internat-eleves.jpg` | `programme-internat.html` | **Hero cover** + image section sous le hero |
+| `programme-mixte-classe.jpg` | `programme-mixte.html` | **Hero cover** |
+| `cours-en-ligne.jpg` | `programme-cours-en-ligne.html` | **Hero cover** |
+| `cours-gratuits.jpg` | `programme-cours-gratuits.html` | **Hero cover** |
+| `tahfiz-academique.jpg` | `programme-tahfiz-academique.html` | **Hero cover** |
+| `conferences-hero.jpg` | `conferences.html` | **Hero cover** — conférence ou rassemblement |
+| `camp-vacances-hero.jpg` | `camp-vacances.html` | **Hero cover** — activités de camp |
 
 ---
 
 ## Format recommandé
 
-- **Format** : JPG (le code attend `.jpg` exactement)
-- **Largeur cible** : 1600 px pour les hero, 1200 px pour les cartes — cela suffit pour un site rapide
-- **Poids** : viser <300 KB par image (compression au moment du dépôt avec [TinyPNG](https://tinypng.com) ou [Squoosh](https://squoosh.app))
-- **Visages** : si des élèves apparaissent, vérifier l'autorisation parentale (droit à l'image)
+| Paramètre | Valeur |
+|---|---|
+| **Format** | `.jpg` (obligatoire — le code attend cette extension) |
+| **Largeur hero** | 1600 px minimum (affiché plein écran) |
+| **Largeur cartes** | 900 px suffit |
+| **Poids cible** | < 300 KB (compresse sur [TinyPNG](https://tinypng.com) ou [Squoosh](https://squoosh.app)) |
+| **Ratio hero** | 16/9 ou 3/2 — évite le portrait |
+| **Visages** | Vérifie l'autorisation parentale (droit à l'image) |
 
-## Fallback automatique
+---
 
-Si une image manque, le site affiche automatiquement un dégradé teal avec une icône Font Awesome — donc rien ne casse en attendant.
+## Comment fonctionne le fallback
+
+- **Sans photo** → hero affiche un **dégradé bleu de marque** avec motif de points blancs. Le site est 100 % fonctionnel.
+- **Avec photo** → hero affiche la **photo avec overlay semi-transparent** (dégradé bleu + dot-grid). Le texte reste parfaitement lisible même sur photo lumineuse.
+
+Pour tester : dépose une image dans ce dossier, rafraîchis la page — aucune modification de code nécessaire.

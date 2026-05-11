@@ -189,6 +189,23 @@
     if (foot) foot.innerHTML = FOOTER_HTML;
     var wa = document.getElementById('aaa-wa');
     if (wa) wa.innerHTML = WA_HTML;
+
+    /* --- Scroll progress bar --- */
+    if (!document.getElementById('aaa-progress')) {
+      var prog = document.createElement('div');
+      prog.id = 'aaa-progress';
+      prog.setAttribute('aria-hidden', 'true');
+      document.body.insertBefore(prog, document.body.firstChild);
+    }
+
+    /* --- Back-to-top button --- */
+    if (!document.getElementById('aaa-top')) {
+      var topBtn = document.createElement('button');
+      topBtn.id = 'aaa-top';
+      topBtn.setAttribute('aria-label', 'Retour en haut de page');
+      topBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+      document.body.appendChild(topBtn);
+    }
   }
 
   function bindScroll() {
@@ -212,6 +229,73 @@
     });
   }
 
+  /* ==================== SCROLL PROGRESS + BACK-TO-TOP ==================== */
+  function bindScrollProgress() {
+    var bar    = document.getElementById('aaa-progress');
+    var topBtn = document.getElementById('aaa-top');
+    function onScroll() {
+      var doc   = document.documentElement;
+      var total = doc.scrollHeight - doc.clientHeight;
+      if (bar) bar.style.width = (total > 0 ? (window.scrollY / total * 100) : 0) + '%';
+      if (topBtn) {
+        if (window.scrollY > 420) topBtn.classList.add('visible');
+        else                      topBtn.classList.remove('visible');
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  function bindBackToTop() {
+    var topBtn = document.getElementById('aaa-top');
+    if (!topBtn) return;
+    topBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ==================== COUNTER ANIMATION ==================== */
+  /* Usage: <span data-counter="200" data-counter-suffix="+">200+</span> */
+  function bindCounters() {
+    var els = document.querySelectorAll('[data-counter]');
+    if (!els.length || !window.IntersectionObserver) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el      = entry.target;
+        var target  = parseFloat(el.getAttribute('data-counter'));
+        var suffix  = el.getAttribute('data-counter-suffix') || '';
+        var prefix  = el.getAttribute('data-counter-prefix') || '';
+        var decimal = el.getAttribute('data-counter-decimal') === 'true';
+        var dur     = 1500;
+        var t0      = performance.now();
+        function step(now) {
+          var p  = Math.min((now - t0) / dur, 1);
+          var ep = 1 - Math.pow(1 - p, 3);           /* ease-out cubic */
+          var v  = decimal ? (ep * target).toFixed(1) : Math.floor(ep * target);
+          el.textContent = prefix + v + suffix;
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = prefix + (decimal ? target.toFixed(1) : target) + suffix;
+        }
+        requestAnimationFrame(step);
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.55 });
+    els.forEach(function (el) { obs.observe(el); });
+  }
+
+  /* ==================== IMG ZOOM — auto-wrap card images ==================== */
+  function bindImageZoom() {
+    /* Wrap <img> inside .program-card, .card, .testimonial-card that aren't already wrapped */
+    document.querySelectorAll('.program-card img, .card img').forEach(function (img) {
+      if (img.parentElement.classList.contains('img-zoom')) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'img-zoom';
+      img.parentNode.insertBefore(wrap, img);
+      wrap.appendChild(img);
+    });
+  }
+
   function ready(fn) {
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
     else fn();
@@ -221,6 +305,10 @@
     inject();
     bindScroll();
     bindMobileMenu();
+    bindScrollProgress();
+    bindBackToTop();
+    bindCounters();
+    bindImageZoom();
     if (typeof window.applyTranslations === 'function') {
       try { window.applyTranslations(); } catch (e) { /* ignore */ }
     }

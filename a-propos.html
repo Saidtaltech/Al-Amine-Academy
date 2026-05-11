@@ -189,19 +189,26 @@
   <div class="h-20"></div>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative pt-32 pb-20 bg-gradient-to-br from-primary via-teal-500 to-accent overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-3xl"></div>
-      <div class="absolute bottom-0 right-10 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-3xl"></div>
-    </div>
-
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
+  <section class="hero-cover" style="--hero-image: url('assets/img/equipe-pedagogique.jpg')">
+    <div class="hero-inner max-w-7xl mx-auto px-4 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-          <img src="assets/img/equipe-pedagogique.jpg" alt="Équipe pédagogique Al Amine Academy" class="w-full h-64 object-cover rounded-2xl"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
-            <i class="fas fa-image text-white/30 text-5xl"></i>
+        <div data-aos="fade-right" class="flex justify-center lg:justify-start">
+          <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center max-w-xs">
+            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-graduation-cap text-white text-3xl"></i>
+            </div>
+            <p class="text-white font-bold text-lg">DAARA Al Amine</p>
+            <p class="text-white/70 text-sm mt-1">Excellence depuis 2023</p>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-center">
+              <div class="bg-white/10 rounded-xl p-3">
+                <div class="text-2xl font-extrabold text-secondary" data-counter="200" data-counter-suffix="+">200+</div>
+                <div class="text-xs text-white/70 mt-1">Élèves</div>
+              </div>
+              <div class="bg-white/10 rounded-xl p-3">
+                <div class="text-2xl font-extrabold text-secondary" data-counter="4.9" data-counter-decimal="true" data-counter-suffix="/5">4.9/5</div>
+                <div class="text-xs text-white/70 mt-1">Google</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="text-left" data-aos="fade-left">

@@ -73,14 +73,8 @@
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
-  <section class="relative bg-gradient-to-br from-blue-600 to-blue-800 py-24 overflow-hidden">
-   <div class="absolute inset-0 opacity-10">
-    <div class="absolute top-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl">
-    </div>
-    <div class="absolute bottom-20 left-20 w-96 h-96 bg-secondary rounded-full blur-3xl">
-    </div>
-   </div>
-   <div class="container mx-auto px-4 relative z-10">
+  <section class="hero-cover" style="--hero-image: url('assets/img/internat-eleves.jpg')">
+   <div class="hero-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto text-center text-white">
      <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6" data-aos="fade-up">
       <i class="fas fa-school mr-2">
@@ -112,10 +106,12 @@
   <!-- ==================== PROGRAMME IMAGE ==================== -->
   <section class="py-12 bg-gray-50">
    <div class="container mx-auto px-4">
-    <img src="assets/img/internat-eleves.jpg" alt="Élèves en internat" class="w-full h-64 object-cover rounded-2xl"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
-      <i class="fas fa-image text-white/30 text-5xl"></i>
+    <div class="img-zoom rounded-2xl overflow-hidden">
+      <img src="assets/img/internat-eleves.jpg" alt="Élèves en internat" class="w-full h-64 object-cover"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
+        <i class="fas fa-image text-white/30 text-5xl"></i>
+      </div>
     </div>
    </div>
   </section>

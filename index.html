@@ -203,7 +203,7 @@
   <div class="h-20"></div>
 
   <!-- HERO SECTION - The Customer is the Hero -->
-  <section class="hero-gradient min-h-screen flex items-center pt-24 lg:pt-20 relative overflow-hidden">
+  <section class="hero-gradient min-h-screen flex items-center pt-24 lg:pt-20 relative overflow-hidden" style="--hero-image: url('assets/img/hero-eleves-coran.jpg'); background-image: linear-gradient(135deg,rgba(15,30,42,.55) 0%,rgba(22,91,115,.78) 60%,rgba(22,91,115,.92) 100%), var(--hero-image, none), linear-gradient(135deg,#1e7a9a 0%,#3ba5c9 100%); background-size: cover,cover,cover; background-position:center; background-repeat:no-repeat;">
     <!-- Animated background elements -->
     <div class="absolute top-10 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float"></div>
     <div class="absolute bottom-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float-delay"></div>
@@ -238,7 +238,7 @@
             </div>
             <div class="w-px bg-white/20 hidden sm:block"></div>
             <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">200+</div>
+              <div class="text-2xl font-bold text-secondary" data-counter="200" data-counter-suffix="+">200+</div>
               <p class="text-white/80 text-sm" data-i18n="hero.stats_students">Élèves épanouis</p>
             </div>
             <div class="w-px bg-white/20 hidden sm:block"></div>
@@ -248,7 +248,7 @@
             </div>
             <div class="w-px bg-white/20 hidden sm:block"></div>
             <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">2023</div>
+              <div class="text-2xl font-bold text-secondary" data-counter="2023">2023</div>
               <p class="text-white/80 text-sm" data-i18n="hero.stats_since">Excellence depuis</p>
             </div>
           </div>
@@ -505,11 +505,13 @@
       <!-- Programs Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
         <!-- Program 1: Tahfiz Internat -->
-        <div class="program-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/img/programme-tahfiz.jpg" alt="Programme Tahfiz - mémorisation du Coran" class="w-full h-48 object-cover"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div style="display:none" class="w-full h-48 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-            <i class="fas fa-book-quran text-white/30 text-5xl"></i>
+        <div class="program-card card-lift rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <div class="img-zoom">
+            <img src="assets/img/programme-tahfiz.jpg" alt="Programme Tahfiz - mémorisation du Coran" class="w-full h-48 object-cover"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display:none" class="w-full h-48 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center shimmer">
+              <i class="fas fa-book-quran text-white/30 text-5xl"></i>
+            </div>
           </div>
           <div class="p-8">
             <div class="mb-6">
@@ -550,11 +552,13 @@
         </div>
 
         <!-- Program 2: Mixte -->
-        <div class="program-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/img/programme-mixte.jpg" alt="Programme mixte externat" class="w-full h-48 object-cover"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div style="display:none" class="w-full h-48 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
-            <i class="fas fa-balance-scale text-white/30 text-5xl"></i>
+        <div class="program-card card-lift rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+          <div class="img-zoom">
+            <img src="assets/img/programme-mixte.jpg" alt="Programme mixte externat" class="w-full h-48 object-cover"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display:none" class="w-full h-48 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center shimmer">
+              <i class="fas fa-balance-scale text-white/30 text-5xl"></i>
+            </div>
           </div>
           <div class="p-8">
             <div class="mb-6">
