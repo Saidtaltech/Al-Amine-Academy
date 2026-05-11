@@ -32,6 +32,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
   </script>
   <link href="https://alamineacademy.com/programme-tahfiz-academique.html" rel="canonical"/>
@@ -93,6 +101,10 @@
               <div class="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-rose-600"></i></div>
               <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
             </a>
+            <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+              <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+              <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Séjour Coran, sport &amp; loisirs</p></div>
+            </a>
           </div>
         </div>
         <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
@@ -133,6 +145,7 @@
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-amber-500"></i>Tahfiz + Académique</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-purple-500"></i>Cours en Ligne</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-rose-500"></i>Cours Gratuits</a>
+        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
       </div>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-teal-600"></i>Galerie</a>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-teal-600"></i>À Propos</a>
@@ -157,7 +170,7 @@
    <div class="container mx-auto px-4 relative z-10">
     <div class="max-w-4xl mx-auto text-center">
      <div class="inline-block bg-secondary/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6" data-aos="fade-up">
-      <span class="text-secondary font-bold">
+      <span class="text-secondary font-bold" data-i18n="programme_combined.hero_badge">
        ✨ NOUVEAUTÉ 2025
       </span>
      </div>
@@ -199,12 +212,12 @@
       </div>
      </div>
      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
-      <a class="bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-xl" href="#inscription">
+      <a class="bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-xl" href="#inscription" data-i18n-html="programme_combined.btn_register">
        <i class="fas fa-check-circle mr-2">
        </i>
        Inscrire Mon Enfant
       </a>
-      <a class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition border-2 border-white/30" href="#programme-detail">
+      <a class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition border-2 border-white/30" href="#programme-detail" data-i18n-html="programme_combined.btn_learn_more">
        <i class="fas fa-info-circle mr-2">
        </i>
        En Savoir Plus
@@ -229,11 +242,11 @@
   <section class="py-16 bg-white" id="programme-detail">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.why_title">
       Pourquoi Choisir le Programme Mixte ?
      </h2>
-     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-      Vous n'avez plus à choisir entre éducation islamique et réussite scolaire. 
+     <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-i18n="programme_combined.why_intro">
+      Vous n'avez plus à choisir entre éducation islamique et réussite scolaire.
                 Al Amine Academy combine les deux avec excellence.
      </p>
     </div>
@@ -243,28 +256,28 @@
        <i class="fas fa-book-quran">
        </i>
       </div>
-      <h3 class="text-2xl font-bold text-gray-900 mb-4">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.why1_title">
        Mémorisation du Coran
       </h3>
       <ul class="space-y-3 text-gray-700">
        <li class="flex items-start">
         <i class="fas fa-check text-primary mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why1_b1">
          Mémorisation progressive (2-5 ans selon capacité)
         </span>
        </li>
        <li class="flex items-start">
         <i class="fas fa-check text-primary mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why1_b2">
          Méthode Tarteel + Tajweed
         </span>
        </li>
        <li class="flex items-start">
         <i class="fas fa-check text-primary mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why1_b3">
          Enseignants certifiés (Ijazah)
         </span>
        </li>
@@ -275,28 +288,28 @@
        <i class="fas fa-graduation-cap">
        </i>
       </div>
-      <h3 class="text-2xl font-bold text-gray-900 mb-4">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.why2_title">
        Cursus Scolaire Français
       </h3>
       <ul class="space-y-3 text-gray-700">
        <li class="flex items-start">
         <i class="fas fa-check text-secondary mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why2_b1">
          Programme officiel du Sénégal
         </span>
        </li>
        <li class="flex items-start">
         <i class="fas fa-check text-secondary mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why2_b2">
          Toutes les matières (Maths, Français, Sciences...)
         </span>
        </li>
        <li class="flex items-start">
         <i class="fas fa-check text-secondary mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why2_b3">
          Préparation aux examens nationaux
         </span>
        </li>
@@ -307,28 +320,28 @@
        <i class="fas fa-balance-scale">
        </i>
       </div>
-      <h3 class="text-2xl font-bold text-gray-900 mb-4">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.why3_title">
        Équilibre Parfait
       </h3>
       <ul class="space-y-3 text-gray-700">
        <li class="flex items-start">
         <i class="fas fa-check text-green-600 mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why3_b1">
          Pas de surcharge, emploi du temps optimisé
         </span>
        </li>
        <li class="flex items-start">
         <i class="fas fa-check text-green-600 mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why3_b2">
          Pauses, sport et activités d'éveil
         </span>
        </li>
        <li class="flex items-start">
         <i class="fas fa-check text-green-600 mr-2 mt-1">
         </i>
-        <span>
+        <span data-i18n="programme_combined.why3_b3">
          Suivi psychologique et pédagogique
         </span>
        </li>
@@ -341,16 +354,16 @@
   <section class="py-16 bg-gray-50">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.schedule_title">
       Emploi du Temps Type
      </h2>
-     <p class="text-xl text-gray-600">
+     <p class="text-xl text-gray-600" data-i18n="programme_combined.schedule_subtitle">
       Une journée bien structurée pour maximiser l'apprentissage
      </p>
     </div>
     <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden" data-aos="fade-up">
      <div class="bg-gradient-to-r from-primary to-primary-dark text-white p-6">
-      <h3 class="text-2xl font-bold text-center">
+      <h3 class="text-2xl font-bold text-center" data-i18n="programme_combined.schedule_days">
        📅 Lundi - Vendredi
       </h3>
      </div>
@@ -358,7 +371,7 @@
       <!-- Matin -->
       <div class="mb-8">
        <div class="bg-primary-light rounded-lg p-4 mb-4">
-        <h4 class="text-xl font-bold text-primary flex items-center">
+        <h4 class="text-xl font-bold text-primary flex items-center" data-i18n="programme_combined.schedule_morning">
          <i class="fas fa-sun mr-3">
          </i>
          Matinée : Cursus Académique Français
@@ -370,10 +383,10 @@
           8h00 - 8h30
          </div>
          <div>
-          <div class="font-semibold text-gray-900">
+          <div class="font-semibold text-gray-900" data-i18n="programme_combined.sched_breakfast">
            Accueil &amp; Petit-Déjeuner
           </div>
-          <div class="text-sm text-gray-600">
+          <div class="text-sm text-gray-600" data-i18n="programme_combined.sched_breakfast_sub">
            Installation des élèves
           </div>
          </div>
@@ -383,7 +396,7 @@
           8h30 - 12h30
          </div>
          <div class="flex-1">
-          <div class="font-semibold text-gray-900 mb-2">
+          <div class="font-semibold text-gray-900 mb-2" data-i18n="programme_combined.sched_school">
            Programme Scolaire Français
           </div>
           <div class="grid grid-cols-2 gap-2 text-sm">
@@ -411,10 +424,10 @@
          12h30 - 15h00
         </div>
         <div>
-         <div class="font-semibold text-gray-900">
+         <div class="font-semibold text-gray-900" data-i18n="programme_combined.sched_lunch">
           🍽️ Pause Déjeuner &amp; Repos
          </div>
-         <div class="text-sm text-gray-600">
+         <div class="text-sm text-gray-600" data-i18n="programme_combined.sched_lunch_sub">
           Repas chaud + Sieste/Temps libre
          </div>
         </div>
@@ -423,7 +436,7 @@
       <!-- Après-midi -->
       <div>
        <div class="bg-secondary-light rounded-lg p-4 mb-4">
-        <h4 class="text-xl font-bold text-secondary-dark flex items-center">
+        <h4 class="text-xl font-bold text-secondary-dark flex items-center" data-i18n="programme_combined.schedule_afternoon">
          <i class="fas fa-moon mr-3">
          </i>
          Après-midi : Mémorisation du Coran (Tahfiz)
@@ -435,10 +448,10 @@
           15h00 - 16h00
          </div>
          <div>
-          <div class="font-semibold text-gray-900">
+          <div class="font-semibold text-gray-900" data-i18n="programme_combined.sched_sabaq">
            📿 Nouvelle Mémorisation (Sabaq)
           </div>
-          <div class="text-sm text-gray-600">
+          <div class="text-sm text-gray-600" data-i18n="programme_combined.sched_sabaq_sub">
            Apprentissage de nouvelles sourates
           </div>
          </div>
@@ -448,10 +461,10 @@
           16h00 - 17h00
          </div>
          <div>
-          <div class="font-semibold text-gray-900">
+          <div class="font-semibold text-gray-900" data-i18n="programme_combined.sched_manzil">
            🔄 Révision (Manzil)
           </div>
-          <div class="text-sm text-gray-600">
+          <div class="text-sm text-gray-600" data-i18n="programme_combined.sched_manzil_sub">
            Consolidation des sourates apprises
           </div>
          </div>
@@ -461,10 +474,10 @@
           17h00 - 17h30
          </div>
          <div>
-          <div class="font-semibold text-gray-900">
+          <div class="font-semibold text-gray-900" data-i18n="programme_combined.sched_tajweed">
            ✨ Tajweed &amp; Tarteel
           </div>
-          <div class="text-sm text-gray-600">
+          <div class="text-sm text-gray-600" data-i18n="programme_combined.sched_tajweed_sub">
            Perfectionnement de la récitation
           </div>
          </div>
@@ -474,7 +487,7 @@
      </div>
     </div>
     <div class="text-center mt-8" data-aos="fade-up">
-     <p class="text-gray-600 mb-4">
+     <p class="text-gray-600 mb-4" data-i18n="programme_combined.sched_note">
       <i class="fas fa-info-circle text-primary mr-2">
       </i>
       Emploi du temps flexible selon le niveau de l'élève
@@ -486,10 +499,10 @@
   <section class="py-16 bg-white" id="inscription">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.tarifs_title">
       Tarifs &amp; Modalités d'Inscription
      </h2>
-     <p class="text-xl text-gray-600">
+     <p class="text-xl text-gray-600" data-i18n="programme_combined.tarifs_subtitle">
       Investissez dans l'avenir spirituel ET académique de votre enfant
      </p>
     </div>
@@ -497,7 +510,7 @@
      <div class="bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl shadow-2xl p-8 md:p-12" data-aos="fade-up">
       <div class="text-center mb-8">
        <div class="inline-block bg-secondary px-6 py-2 rounded-full mb-4">
-        <span class="text-gray-900 font-bold">
+        <span class="text-gray-900 font-bold" data-i18n="programme_combined.tarifs_badge">
          ⭐ FORMULE COMPLÈTE
         </span>
        </div>
@@ -507,60 +520,60 @@
          FCFA
         </span>
        </div>
-       <div class="text-xl text-white/80">
+       <div class="text-xl text-white/80" data-i18n="programme_combined.tarifs_per_month">
         par mois
        </div>
       </div>
       <div class="grid md:grid-cols-2 gap-6 mb-8">
        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-        <h4 class="font-bold text-lg mb-4 flex items-center">
+        <h4 class="font-bold text-lg mb-4 flex items-center" data-i18n="programme_combined.tarifs_included_title">
          <i class="fas fa-check-circle text-secondary mr-2">
          </i>
          Ce qui est inclus
         </h4>
         <ul class="space-y-2 text-sm">
-         <li>
+         <li data-i18n="programme_combined.included_item1">
           ✅ Cursus scolaire français complet
          </li>
-         <li>
+         <li data-i18n="programme_combined.included_item2">
           ✅ Programme Tahfiz (mémorisation Coran)
          </li>
-         <li>
+         <li data-i18n="programme_combined.included_item3">
           ✅ Repas du midi (chaud &amp; équilibré)
          </li>
-         <li>
+         <li data-i18n="programme_combined.included_item4">
           ✅ Fournitures scolaires
          </li>
-         <li>
+         <li data-i18n="programme_combined.included_item5">
           ✅ Suivi pédagogique personnalisé
          </li>
-         <li>
+         <li data-i18n="programme_combined.included_item6">
           ✅ Activités sportives &amp; d'éveil
          </li>
         </ul>
        </div>
        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-        <h4 class="font-bold text-lg mb-4 flex items-center">
+        <h4 class="font-bold text-lg mb-4 flex items-center" data-i18n="programme_combined.tarifs_fees_title">
          <i class="fas fa-info-circle text-secondary mr-2">
          </i>
          Frais annexes
         </h4>
         <ul class="space-y-2 text-sm">
-         <li>
+         <li data-i18n="programme_combined.fee_item1">
           📝
           <strong>
            Inscription :
           </strong>
           95,000 FCFA (une fois)
          </li>
-         <li>
+         <li data-i18n="programme_combined.fee_item2">
           👕
           <strong>
            Uniforme :
           </strong>
           15,000 FCFA (optionnel)
          </li>
-         <li>
+         <li data-i18n="programme_combined.fee_item3">
           🚌
           <strong>
            Transport :
@@ -569,19 +582,19 @@
          </li>
         </ul>
         <div class="mt-4 pt-4 border-t border-white/20">
-         <p class="text-xs text-white/70">
+         <p class="text-xs text-white/70" data-i18n="programme_combined.tarifs_payment_note">
           💳 Paiement : Cash, Wave, Orange Money ou virement bancaire
          </p>
         </div>
        </div>
       </div>
       <div class="text-center">
-       <a class="inline-block bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-xl" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform" target="_blank">
+       <a class="inline-block bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-xl" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform" target="_blank" data-i18n-html="programme_combined.tarifs_btn">
         <i class="fas fa-edit mr-2">
         </i>
         Remplir le Formulaire d'Inscription
        </a>
-       <p class="text-sm text-white/70 mt-4">
+       <p class="text-sm text-white/70 mt-4" data-i18n="programme_combined.tarifs_places_note">
         <i class="fas fa-users mr-1">
         </i>
         Places limitées - Réservez dès maintenant !
@@ -595,7 +608,7 @@
   <section class="py-16 bg-gray-50">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.testimonials_title">
       Ce Que Disent Les Parents
      </h2>
     </div>
@@ -651,41 +664,41 @@
   <section class="py-16 bg-white">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="programme_combined.faq_title">
       Questions Fréquentes
      </h2>
     </div>
     <div class="max-w-3xl mx-auto space-y-4" data-aos="fade-up">
      <div class="bg-gray-50 rounded-lg p-6">
-      <h3 class="font-bold text-lg text-gray-900 mb-2">
+      <h3 class="font-bold text-lg text-gray-900 mb-2" data-i18n-html="programme_combined.faq1_q">
        <i class="fas fa-question-circle text-primary mr-2">
        </i>
        Mon enfant peut-il réussir dans les deux programmes ?
       </h3>
-      <p class="text-gray-700">
-       Absolument ! Nos élèves excellent dans les deux domaines grâce à un emploi du temps optimisé 
+      <p class="text-gray-700" data-i18n="programme_combined.faq1_a">
+       Absolument ! Nos élèves excellent dans les deux domaines grâce à un emploi du temps optimisé
                     et un suivi pédagogique personnalisé. Nos statistiques montrent un taux de réussite de 95%.
       </p>
      </div>
      <div class="bg-gray-50 rounded-lg p-6">
-      <h3 class="font-bold text-lg text-gray-900 mb-2">
+      <h3 class="font-bold text-lg text-gray-900 mb-2" data-i18n-html="programme_combined.faq2_q">
        <i class="fas fa-question-circle text-primary mr-2">
        </i>
        Combien de temps pour mémoriser tout le Coran ?
       </h3>
-      <p class="text-gray-700">
-       Avec le programme mixte, la mémorisation complète prend entre 4 et 6 ans selon l'âge de départ 
+      <p class="text-gray-700" data-i18n="programme_combined.faq2_a">
+       Avec le programme mixte, la mémorisation complète prend entre 4 et 6 ans selon l'âge de départ
                     et les capacités de l'enfant. L'important est la qualité et la solidité de la mémorisation.
       </p>
      </div>
      <div class="bg-gray-50 rounded-lg p-6">
-      <h3 class="font-bold text-lg text-gray-900 mb-2">
+      <h3 class="font-bold text-lg text-gray-900 mb-2" data-i18n-html="programme_combined.faq3_q">
        <i class="fas fa-question-circle text-primary mr-2">
        </i>
        Quels sont les niveaux acceptés ?
       </h3>
-      <p class="text-gray-700">
-       Nous acceptons les élèves du CP au CM2. Chaque enfant est évalué individuellement pour 
+      <p class="text-gray-700" data-i18n="programme_combined.faq3_a">
+       Nous acceptons les élèves du CP au CM2. Chaque enfant est évalué individuellement pour
                     s'assurer que le programme mixte correspond à son profil.
       </p>
      </div>
@@ -695,18 +708,18 @@
   <!-- CTA Final -->
   <section class="py-16 bg-gradient-to-br from-primary to-primary-dark text-white">
    <div class="container mx-auto px-4 text-center" data-aos="fade-up">
-    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6" data-i18n="programme_combined.cta_title">
      Prêt à Offrir le Meilleur à Votre Enfant ?
     </h2>
-    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-     Ne choisissez plus entre Coran et école. Avec Al Amine Academy, 
+    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-i18n="programme_combined.cta_subtitle">
+     Ne choisissez plus entre Coran et école. Avec Al Amine Academy,
             votre enfant réussit dans les deux domaines.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
-     <a class="bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform" target="_blank">
+     <a class="bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform" target="_blank" data-i18n="programme_combined.cta_btn1">
       📝 Inscrire Mon Enfant Maintenant
      </a>
-     <a class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition border-2 border-white/30" href="https://wa.me/221777743700" target="_blank">
+     <a class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition border-2 border-white/30" href="https://wa.me/221777743700" target="_blank" data-i18n="programme_combined.cta_btn2">
       💬 Poser une Question
      </a>
     </div>
@@ -743,7 +756,7 @@
    document.getElementById('darkToggleMobile')?.addEventListener('click', toggleDarkMode);
    initDarkMode();
   </script>
-  <footer class="bg-gray-900 text-white pt-16 pb-8">
+  <footer class="bg-gray-900 text-white pt-16 pb-24 lg:pb-8">
    <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-4 gap-8 mb-12">
      <div>
@@ -855,6 +868,11 @@
          Cours Gratuits
         </a>
        </li>
+       <li>
+        <a class="text-secondary font-semibold hover:text-amber-300 transition" href="camp-vacances.html">
+         Camp de Vacances
+        </a>
+       </li>
       </ul>
      </div>
      <div>
@@ -904,7 +922,20 @@
     </div>
    </div>
   </footer>
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+ 
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
  </body>
 </html>

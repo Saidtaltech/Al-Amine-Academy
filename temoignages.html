@@ -11,6 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
 
   <script>
     tailwind.config = {
@@ -113,7 +121,7 @@
 
   <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp text-3xl"></i>
-    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
+    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2" data-i18n="cta.whatsapp_tooltip">Contactez-nous</span>
   </a>
 
   <!-- ==================== NAVBAR ==================== -->
@@ -152,6 +160,10 @@
               <a class="flex items-center gap-3 px-5 py-4 hover:bg-coral/5 dark:hover:bg-coral/10 transition-all" href="programme-cours-gratuits.html">
                 <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
                 <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Été 2026</p></div>
               </a>
             </div>
           </div>
@@ -202,6 +214,7 @@
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
         </div>
         <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary"></i>Galerie</a>
         <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary"></i>À Propos</a>
@@ -230,7 +243,7 @@
       <div class="text-center">
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6 border border-white/10">
           <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-          Avis vérifiés des familles
+          <span data-i18n="testimonials_page.hero_badge">Avis vérifiés des familles</span>
         </div>
         <h1 class="text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
           <span class="text-gradient" data-i18n="testimonials_page.hero_title">Témoignages</span>
@@ -268,23 +281,23 @@
 
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4">Retours des parents</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Ce que disent les familles</h2>
+        <span class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="testimonials_page.section_badge">Retours des parents</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="testimonials_page.section_title">Ce que disent les familles</h2>
       </div>
 
       <!-- Stats Section -->
       <div class="grid md:grid-cols-3 gap-6 mb-16" data-aos="fade-up">
         <div class="bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 rounded-2xl p-6 border border-primary/20 dark:border-primary/30 text-center">
           <div class="text-4xl font-extrabold text-primary mb-2">4.9/5</div>
-          <p class="text-gray-700 dark:text-gray-300 font-semibold">Note Google</p>
+          <p class="text-gray-700 dark:text-gray-300 font-semibold" data-i18n="testimonials_page.stat_google">Note Google</p>
         </div>
         <div class="bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 rounded-2xl p-6 border border-primary/20 dark:border-primary/30 text-center">
           <div class="text-4xl font-extrabold text-primary mb-2">15</div>
-          <p class="text-gray-700 dark:text-gray-300 font-semibold">Avis Vérifiés</p>
+          <p class="text-gray-700 dark:text-gray-300 font-semibold" data-i18n="testimonials_page.stat_verified">Avis Vérifiés</p>
         </div>
         <div class="bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 rounded-2xl p-6 border border-primary/20 dark:border-primary/30 text-center">
           <div class="text-4xl font-extrabold text-primary mb-2">100%</div>
-          <p class="text-gray-700 dark:text-gray-300 font-semibold">Parents Satisfaits</p>
+          <p class="text-gray-700 dark:text-gray-300 font-semibold" data-i18n="testimonials_page.stat_satisfied">Parents Satisfaits</p>
         </div>
       </div>
 
@@ -292,7 +305,7 @@
       <div class="text-center mb-12" data-aos="fade-up">
         <a href="https://www.google.com/maps/place/DAARA+Al+Amine+Academy" target="_blank" class="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full px-6 py-3 hover:shadow-lg transition-all">
           <i class="fab fa-google text-red-500"></i>
-          <span class="font-semibold text-gray-900 dark:text-white">Avis Vérifiés Google</span>
+          <span class="font-semibold text-gray-900 dark:text-white" data-i18n="testimonials_page.google_badge">Avis Vérifiés Google</span>
           <i class="fas fa-external-link-alt text-xs text-primary"></i>
         </a>
       </div>
@@ -531,15 +544,15 @@
 
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Prêt à rejoindre notre communauté ?</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-6" data-i18n="testimonials_page.cta_title">Prêt à rejoindre notre communauté ?</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8" data-i18n="testimonials_page.cta_subtitle">
           Inscrivez-vous dès maintenant et découvrez pourquoi tant de familles nous font confiance. Les places sont limitées !
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="inline-flex items-center justify-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="inline-flex items-center justify-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105" data-i18n-html="testimonials_page.cta_btn_primary">
             <i class="fas fa-pencil mr-2"></i> S'inscrire maintenant
           </a>
-          <a href="https://wa.me/221777743700" target="_blank" class="inline-flex items-center justify-center border-2 border-primary text-primary dark:text-primary-light px-8 py-4 rounded-2xl font-semibold hover:bg-primary/10 transition-all">
+          <a href="https://wa.me/221777743700" target="_blank" class="inline-flex items-center justify-center border-2 border-primary text-primary dark:text-primary-light px-8 py-4 rounded-2xl font-semibold hover:bg-primary/10 transition-all" data-i18n-html="testimonials_page.cta_btn_secondary">
             <i class="fab fa-whatsapp mr-2"></i> Nous contacter
           </a>
         </div>
@@ -562,7 +575,7 @@
               <p class="text-xs text-gray-400 arabic-text">يار أك خام خام</p>
             </div>
           </div>
-          <p class="text-gray-400 text-sm mb-6 leading-relaxed">École coranique moderne dédiée à la mémorisation du Noble Coran et à l'éducation académique d'excellence.</p>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed" data-i18n="footer.description">École coranique moderne dédiée à la mémorisation du Noble Coran et à l'éducation académique d'excellence.</p>
           <div class="flex gap-3">
             <a class="w-10 h-10 bg-white/5 hover:bg-primary rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a class="w-10 h-10 bg-white/5 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all hover:scale-110" href="https://www.instagram.com/alamineacademy" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -573,33 +586,34 @@
 
         <!-- Navigation -->
         <div>
-          <h4 class="text-lg font-bold mb-6">Navigation</h4>
+          <h4 class="text-lg font-bold mb-6" data-i18n="footer.navigation">Navigation</h4>
           <ul class="space-y-3 text-sm">
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="index.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Accueil</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="a-propos.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>À Propos</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="galerie.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Galerie</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="temoignages.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Témoignages</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="admission.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Admission</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="blog.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Blog</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="contact.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i>Contact</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="index.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i><span data-i18n="menu.home">Accueil</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="a-propos.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i><span data-i18n="menu.about">À Propos</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="galerie.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i><span data-i18n="menu.gallery">Galerie</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="temoignages.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i><span data-i18n="menu.testimonials">Témoignages</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="admission.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i><span data-i18n="menu.admission">Admission</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="blog.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i><span data-i18n="menu.blog">Blog</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="contact.html"><i class="fas fa-chevron-right text-[10px] text-primary"></i><span data-i18n="menu.contact">Contact</span></a></li>
           </ul>
         </div>
 
         <!-- Programmes -->
         <div>
-          <h4 class="text-lg font-bold mb-6">Programmes</h4>
+          <h4 class="text-lg font-bold mb-6" data-i18n="footer.programs">Programmes</h4>
           <ul class="space-y-3 text-sm">
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-internat.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz Internat</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-tahfiz-academique.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Tahfiz + Académique</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-mixte.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Programme Mixte</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-en-ligne.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours en Ligne</a></li>
-            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-gratuits.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i>Cours Gratuits</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-internat.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i><span data-i18n="programs.tahfiz">Tahfiz Internat</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-tahfiz-academique.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i><span data-i18n="programs.combined">Tahfiz + Académique</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-mixte.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i><span data-i18n="programs.mixed">Programme Mixte</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-en-ligne.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i><span data-i18n="programs.online">Cours en Ligne</span></a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors flex items-center gap-2" href="programme-cours-gratuits.html"><i class="fas fa-chevron-right text-[10px] text-secondary"></i><span data-i18n="programs.free">Cours Gratuits</span></a></li>
+            <li><a class="text-secondary font-semibold hover:text-amber-300 transition-colors flex items-center gap-2" href="camp-vacances.html"><i class="fas fa-umbrella-beach text-[10px] text-secondary"></i>Camp de Vacances</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div>
-          <h4 class="text-lg font-bold mb-6">Contact</h4>
+          <h4 class="text-lg font-bold mb-6" data-i18n="footer.contact">Contact</h4>
           <ul class="space-y-4 text-sm text-gray-400">
             <li class="flex items-start gap-3">
               <i class="fas fa-phone mt-1 text-primary"></i>
@@ -618,7 +632,7 @@
       </div>
 
       <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-        <p>&copy; 2024 Al Amine Academy. Tous droits réservés.</p>
+        <p data-i18n="footer.copyright">&copy; 2024 Al Amine Academy. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
@@ -698,7 +712,20 @@
     });
   </script>
 
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
-</body>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+ </body>
 </html>

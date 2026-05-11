@@ -15,6 +15,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
 
   <script>
     tailwind.config = {
@@ -169,7 +177,7 @@
   <!-- WhatsApp Floating Button -->
   <a class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
     <i class="fab fa-whatsapp text-3xl"></i>
-    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
+    <span class="absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2" data-i18n="cta.whatsapp_tooltip">Contactez-nous</span>
   </a>
 
   <!-- ==================== NAVBAR ==================== -->
@@ -210,6 +218,10 @@
               <a class="flex items-center gap-3 px-5 py-4 hover:bg-coral/5 dark:hover:bg-coral/10 transition-all" href="programme-cours-gratuits.html">
                 <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
                 <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
+              </a>
+              <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Été 2026</p></div>
               </a>
             </div>
           </div>
@@ -264,6 +276,7 @@
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
           <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
+          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
         </div>
         <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary"></i>Galerie</a>
         <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary"></i>À Propos</a>
@@ -297,10 +310,10 @@
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
           <a class="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank">
-            <i class="fas fa-edit mr-2"></i> S'inscrire
+            <i class="fas fa-edit mr-2"></i> <span data-i18n="contact.btn_call">S'inscrire</span>
           </a>
           <a class="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank">
-            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+            <i class="fab fa-whatsapp mr-2"></i> <span data-i18n="contact.btn_whatsapp">WhatsApp</span>
           </a>
         </div>
       </div>
@@ -330,7 +343,7 @@
             <a href="tel:+221777743700" class="block text-primary font-semibold hover:text-primary-dark transition-colors">+221 77 774 37 00</a>
             <a href="tel:+221777850789" class="block text-primary font-semibold hover:text-primary-dark transition-colors">+221 77 785 07 89</a>
           </div>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4">Disponible du lundi au samedi, 08h - 18h</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4" data-i18n="contact.phone_hours">Disponible du lundi au samedi, 08h - 18h</p>
         </div>
 
         <!-- Email Card -->
@@ -343,7 +356,7 @@
           <a href="mailto:daara@alamineacademy.com" class="text-secondary-dark font-semibold hover:text-secondary transition-colors break-all">
             daara@alamineacademy.com
           </a>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4">Réponse sous 24 heures</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4" data-i18n="contact.email_response">Réponse sous 24 heures</p>
         </div>
 
         <!-- WhatsApp Card -->
@@ -356,7 +369,7 @@
           <a href="https://wa.me/221777743700" target="_blank" class="text-green-600 font-semibold hover:text-green-700 transition-colors">
             +221 77 774 37 00
           </a>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4">Chat instantané disponible</p>
+          <p class="text-gray-500 dark:text-gray-400 text-sm mt-4" data-i18n="contact.whatsapp_hint">Chat instantané disponible</p>
         </div>
 
         <!-- Adresse Card -->
@@ -379,8 +392,8 @@
   <section class="py-24 bg-gray-50 dark:bg-slate-800">
     <div class="container mx-auto px-4 lg:px-8">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">Localisation</h2>
-        <p class="text-gray-600 dark:text-gray-400 text-lg">Trouvez-nous facilement sur la carte</p>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="contact.map_title">Localisation</h2>
+        <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="contact.map_subtitle">Trouvez-nous facilement sur la carte</p>
       </div>
 
       <div class="rounded-3xl overflow-hidden shadow-2xl" data-aos="zoom-in">
@@ -392,24 +405,24 @@
           <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-clock text-primary text-2xl"></i>
           </div>
-          <h3 class="font-bold text-gray-900 dark:text-white mb-2">Horaires d'ouverture</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Lundi - Samedi: 08h - 18h</p>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact.hours_title">Horaires d'ouverture</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="contact.hours_desc">Lundi - Samedi: 08h - 18h</p>
           <p class="text-sm text-gray-600 dark:text-gray-400">Dimanche: Fermé</p>
         </div>
         <div class="text-center" data-aos="fade-up" data-aos-delay="100">
           <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-directions text-secondary text-2xl"></i>
           </div>
-          <h3 class="font-bold text-gray-900 dark:text-white mb-2">Accès facile</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Proche de tous les transports en commun</p>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact.access_title">Accès facile</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="contact.access_desc">Proche de tous les transports en commun</p>
           <p class="text-sm text-gray-600 dark:text-gray-400">Parking disponible</p>
         </div>
         <div class="text-center" data-aos="fade-up" data-aos-delay="200">
           <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-info-circle text-accent text-2xl"></i>
           </div>
-          <h3 class="font-bold text-gray-900 dark:text-white mb-2">Visite</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">Visite de l'établissement sur rendez-vous</p>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact.visit_title">Visite</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="contact.visit_desc">Visite de l'établissement sur rendez-vous</p>
           <p class="text-sm text-gray-600 dark:text-gray-400">Contactez-nous pour organiser</p>
         </div>
       </div>
@@ -420,13 +433,13 @@
   <section class="py-20 bg-gradient-to-r from-primary via-primary-dark to-accent relative overflow-hidden">
     <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M20 20.5V18H0v-2h20v-2l2 3-2 3zm0-3V20h20v2H20v2l-2-3 2-3z&quot; fill=&quot;%23ffffff&quot; fill-opacity=&quot;.3&quot; fill-rule=&quot;evenodd&quot;/%3E%3C/svg%3E');"></div>
     <div class="container mx-auto px-4 lg:px-8 text-center relative z-10" data-aos="zoom-in">
-      <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6">Prêt à inscrire votre enfant ?</h2>
-      <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Rejoignez la famille Al Amine Academy et offrez à votre enfant une éducation d'excellence alliant Coran et savoir académique.</p>
+      <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6" data-i18n="contact.cta_title">Prêt à inscrire votre enfant ?</h2>
+      <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto" data-i18n="contact.cta_subtitle">Rejoignez la famille Al Amine Academy et offrez à votre enfant une éducation d'excellence alliant Coran et savoir académique.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a class="inline-flex items-center justify-center bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank">
+        <a class="inline-flex items-center justify-center bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n-html="contact.cta_btn_primary">
           <i class="fas fa-edit mr-2"></i> Formulaire d'inscription
         </a>
-        <a class="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank">
+        <a class="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank" data-i18n-html="contact.cta_btn_secondary">
           <i class="fab fa-whatsapp mr-2"></i> WhatsApp
         </a>
       </div>
@@ -447,29 +460,30 @@
 
         <!-- Quick Links -->
         <div>
-          <h4 class="font-bold mb-4">Navigation</h4>
+          <h4 class="font-bold mb-4" data-i18n="footer.navigation">Navigation</h4>
           <ul class="space-y-2 text-slate-400">
-            <li><a href="index.html" class="hover:text-white transition-colors">Accueil</a></li>
-            <li><a href="a-propos.html" class="hover:text-white transition-colors">À Propos</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-            <li><a href="galerie.html" class="hover:text-white transition-colors">Galerie</a></li>
+            <li><a href="index.html" class="hover:text-white transition-colors" data-i18n="menu.home">Accueil</a></li>
+            <li><a href="a-propos.html" class="hover:text-white transition-colors" data-i18n="menu.about">À Propos</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="menu.blog">Blog</a></li>
+            <li><a href="galerie.html" class="hover:text-white transition-colors" data-i18n="menu.gallery">Galerie</a></li>
           </ul>
         </div>
 
         <!-- Programs -->
         <div>
-          <h4 class="font-bold mb-4">Nos Programmes</h4>
+          <h4 class="font-bold mb-4" data-i18n="footer.programs">Nos Programmes</h4>
           <ul class="space-y-2 text-slate-400">
-            <li><a href="programme-internat.html" class="hover:text-white transition-colors">Tahfiz Internat</a></li>
-            <li><a href="programme-tahfiz-academique.html" class="hover:text-white transition-colors">Tahfiz + Académique</a></li>
-            <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors">Cours en Ligne</a></li>
-            <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors">Cours Gratuits</a></li>
+            <li><a href="programme-internat.html" class="hover:text-white transition-colors" data-i18n="programs.tahfiz">Tahfiz Internat</a></li>
+            <li><a href="programme-tahfiz-academique.html" class="hover:text-white transition-colors" data-i18n="programs.combined">Tahfiz + Académique</a></li>
+            <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors" data-i18n="programs.online">Cours en Ligne</a></li>
+            <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors" data-i18n="programs.free">Cours Gratuits</a></li>
+            <li><a href="camp-vacances.html" class="text-secondary font-semibold hover:text-amber-300 transition-colors" data-i18n="programs.camp">Camp de Vacances</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div>
-          <h4 class="font-bold mb-4">Nous Contacter</h4>
+          <h4 class="font-bold mb-4" data-i18n="footer.contact">Nous Contacter</h4>
           <ul class="space-y-2 text-slate-400 text-sm">
             <li><i class="fas fa-phone mr-2"></i>+221 77 774 37 00</li>
             <li><i class="fas fa-envelope mr-2"></i>daara@alamineacademy.com</li>
@@ -482,13 +496,13 @@
       <!-- Divider -->
       <div class="border-t border-slate-800 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-slate-400 text-sm">
+          <p class="text-slate-400 text-sm" data-i18n="footer.copyright">
             &copy; 2024 Al Amine Academy. Tous droits réservés.
           </p>
           <div class="flex gap-6 text-sm text-slate-400">
-            <a href="mailto:daara@alamineacademy.com?subject=Demande%20politique%20de%20confidentialit%C3%A9" class="hover:text-white transition-colors">Politique de confidentialité</a>
-            <a href="mailto:daara@alamineacademy.com?subject=Conditions%20d%27utilisation" class="hover:text-white transition-colors">Conditions d'utilisation</a>
-            <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+            <a href="mailto:daara@alamineacademy.com?subject=Demande%20politique%20de%20confidentialit%C3%A9" class="hover:text-white transition-colors" data-i18n="footer.privacy">Politique de confidentialité</a>
+            <a href="mailto:daara@alamineacademy.com?subject=Conditions%20d%27utilisation" class="hover:text-white transition-colors" data-i18n="footer.terms">Conditions d'utilisation</a>
+            <a href="contact.html" class="hover:text-white transition-colors" data-i18n="menu.contact">Contact</a>
           </div>
         </div>
       </div>
@@ -568,7 +582,20 @@
     darkToggleMobile.addEventListener('click', toggleDarkMode);
   </script>
 
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
-</body>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="tel:+221777743700" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" >
+        <i class="fas fa-phone mr-1"></i> Appeler
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+ </body>
 </html>

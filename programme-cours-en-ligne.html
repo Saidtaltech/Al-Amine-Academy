@@ -12,6 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
   <script>
    tailwind.config = {
             theme: {
@@ -101,6 +109,10 @@
               <div class="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-rose-600"></i></div>
               <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
             </a>
+            <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+              <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+              <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Séjour Coran, sport &amp; loisirs</p></div>
+            </a>
           </div>
         </div>
         <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
@@ -141,6 +153,7 @@
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-amber-500"></i>Tahfiz + Académique</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-purple-500"></i>Cours en Ligne</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-rose-500"></i>Cours Gratuits</a>
+        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
       </div>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-teal-600"></i>Galerie</a>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-teal-600"></i>À Propos</a>
@@ -162,7 +175,7 @@
    </div>
    <div class="container mx-auto px-4 relative z-10">
     <div class="max-w-4xl mx-auto text-center text-white">
-     <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6" data-aos="fade-up">
+     <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6" data-aos="fade-up" data-i18n-html="programme_online.hero_badge">
       <i class="fas fa-laptop mr-2">
       </i>
       Cours en Ligne
@@ -170,14 +183,14 @@
      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="programme_online.hero_title">
       Apprenez le Coran depuis chez vous
      </h1>
-     <p class="text-xl md:text-2xl mb-8 text-white/90" data-aos="fade-up" data-aos-delay="200">
+     <p class="text-xl md:text-2xl mb-8 text-white/90" data-aos="fade-up" data-aos-delay="200" data-i18n="programme_online.hero_subtitle">
       Cours en ligne de Lecture, Tajweed et Fiqh via Google Meet — classes communiquent via groupes WhatsApp. Horaires week-ends (samedi &amp; dimanche).
       <span class="font-semibold">
        Nous privilégions la bonne éducation avant le savoir — formation du cœur d'abord.
       </span>
      </p>
      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
-      <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" rel="noopener" target="_blank">
+      <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" rel="noopener" target="_blank" data-i18n-html="programme_online.hero_btn">
        <i class="fas fa-edit mr-2">
        </i>
        S'inscrire maintenant
@@ -194,7 +207,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        10,000F
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_online.price_label1">
        par mois (classe commune)
       </p>
      </div>
@@ -202,7 +215,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        Week-ends
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_online.price_label2">
        Samedi &amp; Dimanche (12h–17h)
       </p>
      </div>
@@ -210,7 +223,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        Inscriptions
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_online.price_label3">
        Ouvertes en continu
       </p>
      </div>
@@ -218,7 +231,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        Google Meet
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_online.price_label4">
        En direct + groupes WhatsApp
       </p>
      </div>
@@ -242,10 +255,10 @@
    <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
      <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6" data-i18n="programme_online.features_title">
        Formation coranique à distance
       </h2>
-      <p class="text-lg text-slate-700 leading-relaxed mb-8">
+      <p class="text-lg text-slate-700 leading-relaxed mb-8" data-i18n="programme_online.features_intro">
        Nos
        <span class="font-bold text-primary">
         Cours en Ligne
@@ -263,10 +276,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_online.feat1_title">
           Lecture &amp; Tawhid
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_online.feat1_desc">
           Apprentissage de la lecture du Coran en arabe et étude du Tawhid (croyance islamique)
          </p>
         </div>
@@ -279,10 +292,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_online.feat2_title">
           Tajweed &amp; Fiqh
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_online.feat2_desc">
           Maîtrise des règles de récitation (Tajweed) et apprentissage de la jurisprudence (Fiqh)
          </p>
         </div>
@@ -295,10 +308,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_online.feat3_title">
           Programme Tarteel (Tous âges)
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_online.feat3_desc">
           Programme Tarteel adapté aux enfants et aux adultes, méthode utilisée pour tous les niveaux.
          </p>
         </div>
@@ -311,10 +324,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_online.feat4_title">
           Horaires Flexibles
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_online.feat4_desc">
           Sessions le samedi et le dimanche après-midi (12h–17h) pour s'adapter à votre emploi du temps.
          </p>
         </div>
@@ -328,10 +341,10 @@
   <section class="py-20 bg-white">
    <div class="container mx-auto px-4">
     <div class="text-center mb-16" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="programme_online.modules_title">
       Modules de formation
      </h2>
-     <p class="text-lg text-slate-600">
+     <p class="text-lg text-slate-600" data-i18n="programme_online.modules_subtitle">
       Programme complet sur plusieurs mois
      </p>
     </div>
@@ -341,20 +354,20 @@
        <i class="fas fa-book text-primary text-2xl">
        </i>
       </div>
-      <h3 class="text-xl font-bold text-slate-900 mb-3">
+      <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="programme_online.level1_title">
        Niveau 1 : Débutant
       </h3>
       <ul class="space-y-2 text-slate-600">
-       <li>
+       <li data-i18n="programme_online.level1_b1">
         • Alphabet arabe
        </li>
-       <li>
+       <li data-i18n="programme_online.level1_b2">
         • Lecture des lettres
        </li>
-       <li>
+       <li data-i18n="programme_online.level1_b3">
         • Prononciation de base
        </li>
-       <li>
+       <li data-i18n="programme_online.level1_b4">
         • Courtes sourates
        </li>
       </ul>
@@ -364,20 +377,20 @@
        <i class="fas fa-graduation-cap text-primary text-2xl">
        </i>
       </div>
-      <h3 class="text-xl font-bold text-slate-900 mb-3">
+      <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="programme_online.level2_title">
        Niveau 2 : Intermédiaire
       </h3>
       <ul class="space-y-2 text-slate-600">
-       <li>
+       <li data-i18n="programme_online.level2_b1">
         • Règles de Tajweed
        </li>
-       <li>
+       <li data-i18n="programme_online.level2_b2">
         • Lecture fluide
        </li>
-       <li>
+       <li data-i18n="programme_online.level2_b3">
         • Juz Amma complet
        </li>
-       <li>
+       <li data-i18n="programme_online.level2_b4">
         • Tawhid
        </li>
       </ul>
@@ -387,20 +400,20 @@
        <i class="fas fa-award text-primary text-2xl">
        </i>
       </div>
-      <h3 class="text-xl font-bold text-slate-900 mb-3">
+      <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="programme_online.level3_title">
        Niveau 3 : Avancé
       </h3>
       <ul class="space-y-2 text-slate-600">
-       <li>
+       <li data-i18n="programme_online.level3_b1">
         • Tajweed avancé
        </li>
-       <li>
+       <li data-i18n="programme_online.level3_b2">
         • Mémorisation (Hifz)
        </li>
-       <li>
+       <li data-i18n="programme_online.level3_b3">
         • Fiqh de la prière
        </li>
-       <li>
+       <li data-i18n="programme_online.level3_b4">
         • Tafsir
        </li>
       </ul>
@@ -412,7 +425,7 @@
   <section class="py-20 bg-slate-50">
    <div class="container mx-auto px-4">
     <div class="text-center mb-16" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="programme_online.how_title">
       Comment suivre les cours ?
      </h2>
     </div>
@@ -423,10 +436,10 @@
         1
        </span>
       </div>
-      <h3 class="text-lg font-bold text-slate-900 mb-2">
+      <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="programme_online.step1_title">
        Inscription
       </h3>
-      <p class="text-slate-600 text-sm">
+      <p class="text-slate-600 text-sm" data-i18n="programme_online.step1_desc">
        Remplissez le formulaire d'inscription en ligne
       </p>
      </div>
@@ -436,10 +449,10 @@
         2
        </span>
       </div>
-      <h3 class="text-lg font-bold text-slate-900 mb-2">
+      <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="programme_online.step2_title">
        Paiement
       </h3>
-      <p class="text-slate-600 text-sm">
+      <p class="text-slate-600 text-sm" data-i18n="programme_online.step2_desc">
        Réglez la mensualité (10 000 F en classe commune, 25 000 F en individuel) — Wave, Orange Money ou virement.
       </p>
      </div>
@@ -449,10 +462,10 @@
         3
        </span>
       </div>
-      <h3 class="text-lg font-bold text-slate-900 mb-2">
+      <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="programme_online.step3_title">
        Lien Google Meet
       </h3>
-      <p class="text-slate-600 text-sm">
+      <p class="text-slate-600 text-sm" data-i18n="programme_online.step3_desc">
        Recevez le lien Google Meet via le groupe WhatsApp de la classe
       </p>
      </div>
@@ -462,10 +475,10 @@
         4
        </span>
       </div>
-      <h3 class="text-lg font-bold text-slate-900 mb-2">
+      <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="programme_online.step4_title">
        Commencez
       </h3>
-      <p class="text-slate-600 text-sm">
+      <p class="text-slate-600 text-sm" data-i18n="programme_online.step4_desc">
        Rejoignez les sessions chaque samedi et dimanche, de 12h à 17h.
       </p>
      </div>
@@ -476,7 +489,7 @@
   <section class="py-20 bg-primary">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="programme_online.advantages_title">
       Pourquoi choisir nos cours en ligne ?
      </h2>
     </div>
@@ -484,30 +497,30 @@
      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white" data-aos="fade-up">
       <i class="fas fa-home text-3xl mb-4">
       </i>
-      <h3 class="text-xl font-bold mb-2">
+      <h3 class="text-xl font-bold mb-2" data-i18n="programme_online.adv1_title">
        Confort de la maison
       </h3>
-      <p class="text-white/80 text-sm">
+      <p class="text-white/80 text-sm" data-i18n="programme_online.adv1_desc">
        Apprenez depuis chez vous sans vous déplacer
       </p>
      </div>
      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white" data-aos="fade-up" data-aos-delay="100">
       <i class="fas fa-wallet text-3xl mb-4">
       </i>
-      <h3 class="text-xl font-bold mb-2">
+      <h3 class="text-xl font-bold mb-2" data-i18n="programme_online.adv2_title">
        Prix abordable
       </h3>
-      <p class="text-white/80 text-sm">
+      <p class="text-white/80 text-sm" data-i18n="programme_online.adv2_desc">
        10,000F/mois (classe commune) — individuel 25,000F/mois
       </p>
      </div>
      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white" data-aos="fade-up" data-aos-delay="200">
       <i class="fas fa-chalkboard-teacher text-3xl mb-4">
       </i>
-      <h3 class="text-xl font-bold mb-2">
+      <h3 class="text-xl font-bold mb-2" data-i18n="programme_online.adv3_title">
        Enseignants qualifiés
       </h3>
-      <p class="text-white/80 text-sm">
+      <p class="text-white/80 text-sm" data-i18n="programme_online.adv3_desc">
        Professeurs diplômés et expérimentés
       </p>
      </div>
@@ -518,13 +531,13 @@
   <section class="py-20 bg-white">
    <div class="container mx-auto px-4 text-center">
     <div class="max-w-3xl mx-auto" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6" data-i18n="programme_online.cta_title">
       Inscrivez-vous dès maintenant
      </h2>
-     <p class="text-xl text-slate-600 mb-8">
+     <p class="text-xl text-slate-600 mb-8" data-i18n="programme_online.cta_subtitle">
       Inscriptions ouvertes en continu — démarrage dès la session suivante.
      </p>
-     <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-10 py-5 text-xl font-bold shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" rel="noopener" target="_blank">
+     <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-10 py-5 text-xl font-bold shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" rel="noopener" target="_blank" data-i18n-html="programme_online.cta_btn">
       <i class="fas fa-edit mr-3">
       </i>
       Remplir le formulaire
@@ -565,7 +578,7 @@
    document.getElementById('darkToggleMobile')?.addEventListener('click', toggleDarkMode);
    initDarkMode();
   </script>
-  <footer class="bg-gray-900 text-white pt-16 pb-8">
+  <footer class="bg-gray-900 text-white pt-16 pb-24 lg:pb-8">
    <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-4 gap-8 mb-12">
      <div>
@@ -677,6 +690,11 @@
          Cours Gratuits
         </a>
        </li>
+       <li>
+        <a class="text-secondary font-semibold hover:text-amber-300 transition" href="camp-vacances.html">
+         Camp de Vacances
+        </a>
+       </li>
       </ul>
      </div>
      <div>
@@ -726,7 +744,20 @@
     </div>
    </div>
   </footer>
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+ 
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
  </body>
 </html>

@@ -16,6 +16,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
   <script>
    tailwind.config = {
             theme: {
@@ -110,6 +118,10 @@
               <div class="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-rose-600"></i></div>
               <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
             </a>
+            <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+              <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+              <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Séjour Coran, sport &amp; loisirs</p></div>
+            </a>
           </div>
         </div>
         <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
@@ -150,6 +162,7 @@
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-amber-500"></i>Tahfiz + Académique</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-purple-500"></i>Cours en Ligne</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-rose-500"></i>Cours Gratuits</a>
+        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
       </div>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-teal-600"></i>Galerie</a>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-teal-600"></i>À Propos</a>
@@ -171,7 +184,7 @@
    </div>
    <div class="container mx-auto px-4 relative z-10">
     <div class="max-w-4xl mx-auto text-center text-white">
-     <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6" data-aos="fade-up">
+     <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6" data-aos="fade-up" data-i18n-html="programme_free.hero_badge">
       <i class="fas fa-gift mr-2">
       </i>
       100% Gratuit
@@ -179,14 +192,14 @@
      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="programme_free.hero_title">
       Cours Gratuits pour Tous
      </h1>
-     <p class="text-xl md:text-2xl mb-8 text-white/90" data-aos="fade-up" data-aos-delay="200">
+     <p class="text-xl md:text-2xl mb-8 text-white/90" data-aos="fade-up" data-aos-delay="200" data-i18n="programme_free.hero_subtitle">
       Cours gratuits en Wolof — Tafsir, Hayatu as-Sahaba et autres sessions. En dehors des mosquées, tous les cours se déroulent à l'Institut Al Amine Academy.
       <span class="font-semibold">
        Nous privilégions la bonne éducation avant le savoir — formation du cœur d'abord.
       </span>
      </p>
      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
-      <a class="inline-flex items-center justify-center rounded-full bg-white text-primary-dark hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://wa.me/221777743700?text=Je souhaite participer aux cours gratuits">
+      <a class="inline-flex items-center justify-center rounded-full bg-white text-primary-dark hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://wa.me/221777743700?text=Je souhaite participer aux cours gratuits" data-i18n-html="programme_free.hero_btn">
        <i class="fab fa-whatsapp mr-2">
        </i>
        Rejoindre sur WhatsApp
@@ -203,7 +216,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        GRATUIT
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_free.price_label1">
        100% gratuit
       </p>
      </div>
@@ -211,7 +224,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        Fin Maghrib
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_free.price_label2">
        Jusqu'au début d'Isha
       </p>
      </div>
@@ -219,7 +232,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        Présentiel
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_free.price_label3">
        Institut ou mosquées partenaires
       </p>
      </div>
@@ -227,7 +240,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        Langue
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_free.price_label4">
        Wolof
       </p>
      </div>
@@ -250,10 +263,10 @@
   <section class="py-20 bg-slate-50">
    <div class="container mx-auto px-4">
     <div class="text-center mb-16" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="programme_free.formations_title">
       Nos formations gratuites (en Wolof)
      </h2>
-     <p class="text-lg text-slate-600">
+     <p class="text-lg text-slate-600" data-i18n="programme_free.formations_subtitle">
       Ouvertes à tous — sessions entre la fin de Maghrib et le début de Isha
      </p>
     </div>
@@ -290,7 +303,7 @@
        </div>
        <!-- Détails -->
        <div class="p-8 md:p-10 flex flex-col">
-        <p class="text-slate-700 text-lg mb-6 leading-relaxed">
+        <p class="text-slate-700 text-lg mb-6 leading-relaxed" data-i18n="programme_free.card1_desc">
          <strong class="text-primary-dark">3 cours</strong> pour connaître l'essentiel du pèlerinage en Islam — rites, dou'as, étapes et conseils pratiques, selon la Sunnah du Prophète (PSL).
         </p>
         <!-- Infos clés grid -->
@@ -374,7 +387,7 @@
        <h3 class="text-2xl font-bold text-slate-900 mb-4">
         Comprendre le Coran
        </h3>
-       <p class="text-slate-600 mb-6">
+       <p class="text-slate-600 mb-6" data-i18n="programme_free.card2_desc">
         Cours de Tafsir en wolof, en présentiel dans des mosquées partenaires.
        </p>
        <div class="space-y-3 mb-6">
@@ -445,7 +458,7 @@
        <h3 class="text-2xl font-bold text-slate-900 mb-4">
         Vie des Compagnons
        </h3>
-       <p class="text-slate-600 mb-6">
+       <p class="text-slate-600 mb-6" data-i18n="programme_free.card3_desc">
         Cours sur la vie des compagnons. Lieu : Mosquée Khouba (HLM Rail, Dakar). Horaire : entre Maghrib et Isha.
        </p>
        <a class="block w-full bg-secondary hover:bg-secondary-dark text-white text-center py-4 rounded-xl font-bold transition" href="https://wa.me/221777743700?text=Je veux participer au cours Hayatu%20as%20Sahaba">
@@ -468,7 +481,7 @@
        <h3 class="text-2xl font-bold text-slate-900 mb-4">
         Tomes de l'étudiant de science
        </h3>
-       <p class="text-slate-600 mb-6">
+       <p class="text-slate-600 mb-6" data-i18n="programme_free.card4_desc">
         Tous les samedis à l'Institut Al Amine Academy (Liberté 6 Extension, Dakar), salle rez-de-chaussée. Horaire : entre Maghrib et Isha.
        </p>
        <a class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center py-4 rounded-xl font-bold transition" href="https://wa.me/221777743700?text=Je veux participer au cours du Cheikh">
@@ -512,10 +525,10 @@
        <div class="inline-block bg-primary-light text-primary-dark text-xs font-extrabold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
         <i class="fas fa-book-open mr-1"></i> Article &amp; brochure
        </div>
-       <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-5">
+       <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-5" data-i18n="programme_free.brochure_title">
         Le guide complet du <span class="text-primary">Hajj 2026</span>
        </h2>
-       <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+       <p class="text-lg text-slate-600 mb-6 leading-relaxed" data-i18n="programme_free.brochure_desc">
         Un article détaillé qui couvre les <strong>piliers et obligations</strong>, les <strong>10 étapes du pèlerinage</strong>, l’état d’<strong>Ihrâm</strong> (interdits et permissions), et les <strong>invocations essentielles</strong> à mémoriser — le tout basé sur la Sunnah du Prophète (PSL).
        </p>
 
@@ -542,12 +555,12 @@
        <!-- CTAs -->
        <div class="flex flex-wrap gap-3">
         <a class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3.5 rounded-full font-extrabold shadow-lg transition transform hover:scale-105"
-           href="blog/preparer-son-hajj-2026-guide-complet.html">
+           href="blog/preparer-son-hajj-2026-guide-complet.html" data-i18n-html="programme_free.brochure_btn">
          <i class="fas fa-book-open"></i>
          Lire l’article complet
         </a>
         <a class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-dark text-slate-900 px-6 py-3.5 rounded-full font-extrabold shadow-lg transition"
-           href="assets/docs/Preparer_son_Hajj_2026_AAA.pdf" download>
+           href="assets/docs/Preparer_son_Hajj_2026_AAA.pdf" download data-i18n-html="programme_free.brochure_btn2">
          <i class="fas fa-download"></i>
          Télécharger le PDF
         </a>
@@ -566,7 +579,7 @@
   <section class="py-20 bg-white">
    <div class="container mx-auto px-4">
     <div class="text-center mb-16" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="programme_free.how_title">
       Comment participer ?
      </h2>
     </div>
@@ -576,10 +589,10 @@
        <i class="fab fa-whatsapp text-primary text-3xl">
        </i>
       </div>
-      <h3 class="text-xl font-bold text-slate-900 mb-2">
+      <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_free.step1_title">
        1. Contactez-nous
       </h3>
-      <p class="text-slate-600">
+      <p class="text-slate-600" data-i18n="programme_free.step1_desc">
        Envoyez un message WhatsApp pour confirmer votre participation
       </p>
      </div>
@@ -588,10 +601,10 @@
        <i class="fas fa-calendar text-primary text-3xl">
        </i>
       </div>
-      <h3 class="text-xl font-bold text-slate-900 mb-2">
+      <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_free.step2_title">
        2. Notez la date
       </h3>
-      <p class="text-slate-600">
+      <p class="text-slate-600" data-i18n="programme_free.step2_desc">
        Ajoutez l'événement à votre calendrier
       </p>
      </div>
@@ -600,10 +613,10 @@
        <i class="fas fa-users text-primary text-3xl">
        </i>
       </div>
-      <h3 class="text-xl font-bold text-slate-900 mb-2">
+      <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_free.step3_title">
        3. Rejoignez-nous
       </h3>
-      <p class="text-slate-600">
+      <p class="text-slate-600" data-i18n="programme_free.step3_desc">
        Participez en ligne ou en présentiel
       </p>
      </div>
@@ -614,7 +627,7 @@
   <section class="py-20 bg-slate-50">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4" data-i18n="programme_free.activities_title">
       Autres activités ouvertes à tous
      </h2>
     </div>
@@ -622,10 +635,10 @@
      <a class="bg-white rounded-2xl p-6 shadow-lg card-hover" href="blog.html">
       <i class="fas fa-mosque text-primary text-3xl mb-4">
       </i>
-      <h3 class="text-lg font-bold text-slate-900 mb-2">
+      <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="programme_free.act1_title">
        Conférences Islamiques
       </h3>
-      <p class="text-slate-600 text-sm mb-4">
+      <p class="text-slate-600 text-sm mb-4" data-i18n="programme_free.act1_desc">
        Rencontres mensuelles avec des savants invités
       </p>
       <span class="text-primary font-semibold">
@@ -635,10 +648,10 @@
      <a class="bg-white rounded-2xl p-6 shadow-lg card-hover" href="a-propos.html">
       <i class="fas fa-hands-helping text-primary text-3xl mb-4">
       </i>
-      <h3 class="text-lg font-bold text-slate-900 mb-2">
+      <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="programme_free.act2_title">
        Actions Sociales
       </h3>
-      <p class="text-slate-600 text-sm mb-4">
+      <p class="text-slate-600 text-sm mb-4" data-i18n="programme_free.act2_desc">
        Représentant l'association Collecte Sadaqa au Sénégal.
       </p>
       <span class="text-primary font-semibold">
@@ -648,10 +661,10 @@
      <a class="bg-white rounded-2xl p-6 shadow-lg card-hover" href="programme-cours-gratuits.html">
       <i class="fas fa-users text-primary text-3xl mb-4">
       </i>
-      <h3 class="text-lg font-bold text-slate-900 mb-2">
+      <h3 class="text-lg font-bold text-slate-900 mb-2" data-i18n="programme_free.act3_title">
        Cercles d'Étude
       </h3>
-      <p class="text-slate-600 text-sm mb-4">
+      <p class="text-slate-600 text-sm mb-4" data-i18n="programme_free.act3_desc">
        Groupes de discussion sur des thèmes islamiques
       </p>
       <span class="text-primary font-semibold">
@@ -665,13 +678,13 @@
   <section class="py-20 bg-primary">
    <div class="container mx-auto px-4 text-center">
     <div class="max-w-3xl mx-auto" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-i18n="programme_free.cta_title">
       Rejoignez notre communauté
      </h2>
-     <p class="text-xl text-white/90 mb-8">
+     <p class="text-xl text-white/90 mb-8" data-i18n="programme_free.cta_subtitle">
       Participez gratuitement à nos formations et activités
      </p>
-     <a class="inline-flex items-center justify-center rounded-full bg-white text-primary-dark hover:bg-gray-100 px-10 py-5 text-xl font-bold shadow-2xl transition-all transform hover:scale-105" href="https://wa.me/221777743700?text=Je veux rejoindre les cours gratuits">
+     <a class="inline-flex items-center justify-center rounded-full bg-white text-primary-dark hover:bg-gray-100 px-10 py-5 text-xl font-bold shadow-2xl transition-all transform hover:scale-105" href="https://wa.me/221777743700?text=Je veux rejoindre les cours gratuits" data-i18n-html="programme_free.cta_btn">
       <i class="fab fa-whatsapp mr-3">
       </i>
       Rejoindre sur WhatsApp
@@ -712,7 +725,7 @@
    document.getElementById('darkToggleMobile')?.addEventListener('click', toggleDarkMode);
    initDarkMode();
   </script>
-  <footer class="bg-gray-900 text-white pt-16 pb-8">
+  <footer class="bg-gray-900 text-white pt-16 pb-24 lg:pb-8">
    <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-4 gap-8 mb-12">
      <div>
@@ -824,6 +837,11 @@
          Cours Gratuits
         </a>
        </li>
+       <li>
+        <a class="text-secondary font-semibold hover:text-amber-300 transition" href="camp-vacances.html">
+         Camp de Vacances
+        </a>
+       </li>
       </ul>
      </div>
      <div>
@@ -873,7 +891,20 @@
     </div>
    </div>
   </footer>
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+ 
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
  </body>
 </html>

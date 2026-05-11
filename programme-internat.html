@@ -16,6 +16,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
+   /* Sticky mobile CTA + FAQ pattern */
+   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+   details summary { cursor: pointer; list-style: none; }
+   details summary::-webkit-details-marker { display: none; }
+   details[open] summary .faq-icon { transform: rotate(45deg); }
+   .faq-icon { transition: transform .25s ease; }
+</style>
   <script>
    tailwind.config = {
             theme: {
@@ -105,6 +113,10 @@
               <div class="w-10 h-10 bg-rose-100 dark:bg-rose-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-rose-600"></i></div>
               <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
             </a>
+            <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
+              <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
+              <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Séjour Coran, sport &amp; loisirs</p></div>
+            </a>
           </div>
         </div>
         <a class="px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-teal-600 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
@@ -145,6 +157,7 @@
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-amber-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-amber-500"></i>Tahfiz + Académique</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-purple-500"></i>Cours en Ligne</a>
         <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-rose-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-rose-500"></i>Cours Gratuits</a>
+        <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
       </div>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-teal-600"></i>Galerie</a>
       <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-teal-600"></i>À Propos</a>
@@ -171,7 +184,7 @@
      <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6" data-aos="fade-up">
       <i class="fas fa-school mr-2">
       </i>
-      Programme Internat
+      <span data-i18n="programme_internat.hero_badge">Programme Internat</span>
      </div>
      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100" data-i18n="programme_internat.hero_title">
       Programme Tahfiz Complet
@@ -183,12 +196,12 @@
       <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" rel="noopener" target="_blank">
        <i class="fas fa-edit mr-2">
        </i>
-       S'inscrire maintenant
+       <span data-i18n="programme_internat.btn_register">S'inscrire maintenant</span>
       </a>
       <a class="inline-flex items-center justify-center rounded-full border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-8 py-4 text-lg font-bold transition" href="#details">
        <i class="fas fa-info-circle mr-2">
        </i>
-       En savoir plus
+       <span data-i18n="programme_internat.btn_learn_more">En savoir plus</span>
       </a>
      </div>
     </div>
@@ -214,7 +227,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        100,000F
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_internat.price_per_month">
        par mois
       </p>
      </div>
@@ -222,7 +235,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        95,000F
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_internat.price_registration">
        frais d'inscription
       </p>
      </div>
@@ -230,7 +243,7 @@
       <div class="text-3xl font-bold text-primary mb-2">
        6-12 ans
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_internat.price_age">
        âge des élèves
       </p>
      </div>
@@ -238,13 +251,13 @@
       <div class="text-3xl font-bold text-primary mb-2">
        Tous les 15j
       </div>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-600" data-i18n="programme_internat.price_activities">
        activités pédagogiques
       </p>
      </div>
     </div>
     <div class="text-center mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-     <p class="text-sm text-slate-700">
+     <p class="text-sm text-slate-700" data-i18n="programme_internat.housing_note">
       <strong>Note:</strong> Pour les élèves en internat (un mois ou plus), un supplément d'hébergement de 15,000 FCFA/mois s'ajoute aux frais de scolarité.
      </p>
     </div>
@@ -255,16 +268,16 @@
    <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
      <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6" data-i18n="programme_internat.features_title">
        Un programme complet pour mémoriser le Coran
       </h2>
-      <p class="text-lg text-slate-700 leading-relaxed mb-8">
+      <p class="text-lg text-slate-700 leading-relaxed mb-8" data-i18n="programme_internat.features_intro">
        Notre
        <span class="font-bold text-primary">
         Programme Internat Tahfiz
        </span>
-       est conçu pour permettre 
-                    à vos enfants de mémoriser l'intégralité du Noble Coran dans un environnement propice à la concentration, 
+       est conçu pour permettre
+                    à vos enfants de mémoriser l'intégralité du Noble Coran dans un environnement propice à la concentration,
                     entourés d'enseignants qualifiés et bienveillants.
       </p>
       <div class="space-y-6">
@@ -276,10 +289,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_internat.feat1_title">
           Mémorisation du Coran (Tahfiz)
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_internat.feat1_desc">
           Méthode progressive adaptée au rythme de chaque enfant. Révisions quotidiennes et contrôles réguliers.
          </p>
         </div>
@@ -292,10 +305,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_internat.feat2_title">
           Sciences Islamiques
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_internat.feat2_desc">
           Tajweed (règles de récitation), Fiqh (jurisprudence), Tawhid (croyance), Akhlaq (comportement).
          </p>
         </div>
@@ -308,10 +321,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_internat.feat3_title">
           Formation Multilingue
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_internat.feat3_desc">
           Apprentissage de l'arabe, perfectionnement du français et initiation à l'anglais.
          </p>
         </div>
@@ -324,10 +337,10 @@
          </div>
         </div>
         <div>
-         <h3 class="text-xl font-bold text-slate-900 mb-2">
+         <h3 class="text-xl font-bold text-slate-900 mb-2" data-i18n="programme_internat.feat4_title">
           Développement Personnel
          </h3>
-         <p class="text-slate-600">
+         <p class="text-slate-600" data-i18n="programme_internat.feat4_desc">
           Sport, activités ludiques et développement des soft skills.
          </p>
         </div>
@@ -341,10 +354,10 @@
   <section class="py-20 bg-white">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-4xl font-bold text-slate-900 mb-4">
+     <h2 class="text-4xl font-bold text-slate-900 mb-4" data-i18n="programme_internat.schedule_title">
       Programme de la Journée
      </h2>
-     <p class="text-xl text-slate-600">
+     <p class="text-xl text-slate-600" data-i18n="programme_internat.schedule_subtitle">
       De 04h30 à 22h - Un planning structuré et équilibré
      </p>
     </div>
@@ -355,14 +368,14 @@
        <h3 class="text-2xl font-bold text-primary mb-4 flex items-center">
         <i class="fas fa-sun mr-3">
         </i>
-        Matin - Apprentissage Intensif
+        <span data-i18n="programme_internat.schedule_morning">Matin - Apprentissage Intensif</span>
        </h3>
        <div class="space-y-3">
         <div class="flex items-start gap-4 bg-white rounded-lg p-4">
          <span class="font-bold text-primary min-w-[80px]">
           04h30
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_1">
           Réveil
          </span>
         </div>
@@ -370,7 +383,7 @@
          <span class="font-bold text-primary min-w-[80px]">
           05h00-07h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_2">
           <strong>
            Apprentissage du Coran
           </strong>
@@ -381,7 +394,7 @@
          <span class="font-bold text-primary min-w-[80px]">
           07h00-09h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_3">
           Repos / Sieste + Douche et hygiène personnelle + Petit déjeuner
          </span>
         </div>
@@ -392,14 +405,14 @@
        <h3 class="text-2xl font-bold text-secondary-dark mb-4 flex items-center">
         <i class="fas fa-cloud-sun mr-3">
         </i>
-        Journée - Apprentissage du Coran
+        <span data-i18n="programme_internat.schedule_afternoon">Journée - Apprentissage du Coran</span>
        </h3>
        <div class="space-y-3">
         <div class="flex items-start gap-4 bg-white rounded-lg p-4">
          <span class="font-bold text-secondary-dark min-w-[80px]">
           09h00-13h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_4">
           <strong>
            Apprentissage du Coran
           </strong>
@@ -410,7 +423,7 @@
          <span class="font-bold text-secondary-dark min-w-[80px]">
           13h25
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_5">
           Prière de Dhohr
          </span>
         </div>
@@ -418,7 +431,7 @@
          <span class="font-bold text-secondary-dark min-w-[80px]">
           13h45
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_6">
           <strong>
            Déjeuner
           </strong>
@@ -428,7 +441,7 @@
          <span class="font-bold text-secondary-dark min-w-[80px]">
           14h00-15h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_7">
           Sieste
          </span>
         </div>
@@ -436,7 +449,7 @@
          <span class="font-bold text-secondary-dark min-w-[80px]">
           15h00-17h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_8">
           <strong>
            Apprentissage du Coran
           </strong>
@@ -450,14 +463,14 @@
        <h3 class="text-2xl font-bold text-purple-600 mb-4 flex items-center">
         <i class="fas fa-moon mr-3">
         </i>
-        Soirée - Activités &amp; Repos
+        <span data-i18n="programme_internat.schedule_evening">Soirée - Activités &amp; Repos</span>
        </h3>
        <div class="space-y-3">
         <div class="flex items-start gap-4 bg-white rounded-lg p-4">
          <span class="font-bold text-purple-600 min-w-[80px]">
           17h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_9">
           Prière de Asr
          </span>
         </div>
@@ -465,7 +478,7 @@
          <span class="font-bold text-purple-600 min-w-[80px]">
           17h15-18h45
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_10">
           Activités ludiques, Anglais ou Français
          </span>
         </div>
@@ -473,7 +486,7 @@
          <span class="font-bold text-purple-600 min-w-[80px]">
           18h50
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_11">
           Goûter
          </span>
         </div>
@@ -481,7 +494,7 @@
          <span class="font-bold text-purple-600 min-w-[80px]">
           19h00-20h45
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_12">
           Prière de Maghreb + Apprentissage du Coran
          </span>
         </div>
@@ -489,7 +502,7 @@
          <span class="font-bold text-purple-600 min-w-[80px]">
           20h45
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_13">
           Prière de Isha + Chafaa + Witr
          </span>
         </div>
@@ -497,7 +510,7 @@
          <span class="font-bold text-purple-600 min-w-[80px]">
           21h10
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_14">
           <strong>
            Dîner
           </strong>
@@ -507,7 +520,7 @@
          <span class="font-bold text-purple-600 min-w-[80px]">
           21h30-22h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_15">
           Brossage des dents et préparation pour aller au lit
          </span>
         </div>
@@ -515,7 +528,7 @@
          <span class="font-bold text-purple-600 min-w-[80px]">
           22h00
          </span>
-         <span class="text-slate-700">
+         <span class="text-slate-700" data-i18n="programme_internat.sched_row_16">
           <strong>
            Coucher
           </strong>
@@ -530,7 +543,7 @@
         </i>
         Programme Tahfiz + Académique
        </h4>
-       <p class="text-gray-700">
+       <p class="text-gray-700" data-i18n="programme_internat.note_tahfiz">
         <strong>
          La seule différence :
         </strong>
@@ -538,8 +551,8 @@
         <strong>
          08h00 à 13h00
         </strong>
-        , 
-                        les élèves du programme combiné suivent les cours de français (programme académique national). 
+        ,
+                        les élèves du programme combiné suivent les cours de français (programme académique national).
                         Le reste du planning est identique pour tous les élèves.
        </p>
       </div>
@@ -551,7 +564,7 @@
   <section class="py-20 bg-primary">
    <div class="container mx-auto px-4">
     <div class="text-center mb-12" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+     <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="programme_internat.included_title">
       Tout inclus pour votre tranquillité
      </h2>
     </div>
@@ -559,30 +572,30 @@
      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white" data-aos="fade-up">
       <i class="fas fa-utensils text-3xl mb-4">
       </i>
-      <h3 class="text-xl font-bold mb-2">
+      <h3 class="text-xl font-bold mb-2" data-i18n="programme_internat.included1_title">
        Repas quotidiens
       </h3>
-      <p class="text-white/80 text-sm">
+      <p class="text-white/80 text-sm" data-i18n="programme_internat.included1_desc">
        3 repas équilibrés par jour + goûter inclus (optionnel: 5,000 FCFA/mois)
       </p>
      </div>
      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white" data-aos="fade-up" data-aos-delay="100">
       <i class="fas fa-home text-3xl mb-4">
       </i>
-      <h3 class="text-xl font-bold mb-2">
+      <h3 class="text-xl font-bold mb-2" data-i18n="programme_internat.included2_title">
        Sécurité &amp; Quartier
       </h3>
-      <p class="text-white/80 text-sm">
+      <p class="text-white/80 text-sm" data-i18n="programme_internat.included2_desc">
        Quartier résidentiel avec gardiens et caméras 24h/24
       </p>
      </div>
      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white" data-aos="fade-up" data-aos-delay="200">
       <i class="fas fa-book text-3xl mb-4">
       </i>
-      <h3 class="text-xl font-bold mb-2">
+      <h3 class="text-xl font-bold mb-2" data-i18n="programme_internat.included3_title">
        Coran &amp; Fournitures
       </h3>
-      <p class="text-white/80 text-sm">
+      <p class="text-white/80 text-sm" data-i18n="programme_internat.included3_desc">
        Coran et livres de lecture arabe fournis. Linge optionnel (5,000 FCFA/mois).
       </p>
      </div>
@@ -593,14 +606,14 @@
   <section class="py-20 bg-white">
    <div class="container mx-auto px-4 text-center">
     <div class="max-w-3xl mx-auto" data-aos="fade-up">
-     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+     <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6" data-i18n="programme_internat.cta_title">
       Inscrivez votre enfant dès maintenant
      </h2>
-     <p class="text-xl text-slate-600 mb-8">
-      Les places sont limitées. Ne manquez pas cette opportunité d'offrir à votre enfant 
+     <p class="text-xl text-slate-600 mb-8" data-i18n="programme_internat.cta_subtitle">
+      Les places sont limitées. Ne manquez pas cette opportunité d'offrir à votre enfant
                 une éducation coranique d'excellence.
      </p>
-     <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-10 py-5 text-xl font-bold shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" rel="noopener" target="_blank">
+     <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-10 py-5 text-xl font-bold shadow-2xl transition-all transform hover:scale-105" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" rel="noopener" target="_blank" data-i18n-html="programme_internat.cta_btn">
       <i class="fas fa-edit mr-3">
       </i>
       Remplir le formulaire d'inscription
@@ -641,7 +654,7 @@
    document.getElementById('darkToggleMobile')?.addEventListener('click', toggleDarkMode);
    initDarkMode();
   </script>
-  <footer class="bg-gray-900 text-white pt-16 pb-8">
+  <footer class="bg-gray-900 text-white pt-16 pb-24 lg:pb-8">
    <div class="container mx-auto px-4">
     <div class="grid md:grid-cols-4 gap-8 mb-12">
      <div>
@@ -753,6 +766,11 @@
          Cours Gratuits
         </a>
        </li>
+       <li>
+        <a class="text-secondary font-semibold hover:text-amber-300 transition" href="camp-vacances.html">
+         Camp de Vacances
+        </a>
+       </li>
       </ul>
      </div>
      <div>
@@ -802,7 +820,20 @@
     </div>
    </div>
   </footer>
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
+  <script src="translations.js?v=20260429b"></script>
+  <script src="lang.js?v=20260429b"></script>
+ 
+  <!-- STICKY MOBILE CTA -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+    <div class="flex gap-2">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+        <i class="fas fa-edit mr-1"></i> S'inscrire à l'internat
+      </a>
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
  </body>
 </html>
