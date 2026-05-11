@@ -33,6 +33,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/site.css">
   <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-aos].aos-animate{opacity:1!important;transform:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -197,124 +198,9 @@
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300">
 
-    <!-- WhatsApp Floating Button -->
-  <a class="fixed bottom-24 md:bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl group transition-all hover:scale-110 pulse-glow" href="https://wa.me/221777743700" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp text-2xl md:text-3xl"></i>
-    <span class="hidden md:inline absolute right-20 bg-slate-900 text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap text-sm transition-all transform group-hover:translate-x-0 translate-x-2">Contactez-nous</span>
-  </a>
-
-  <!-- ==================== NAVBAR ==================== -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-3">
-        <!-- Logo -->
-        <a class="flex items-center gap-3 group" href="index.html">
-          <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
-            <i class="fas fa-book-quran text-white text-xl"></i>
-          </div>
-          <div>
-            <h1 class="text-lg font-extrabold text-white" id="navTitle" data-i18n="site.name">Al Amine Academy</h1>
-            <p class="text-[10px] text-white/70 arabic-text" id="navSubtitle">يار أك خام خام</p>
-          </div>
-        </a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center gap-1">
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="index.html" data-i18n="menu.home">Accueil</a>
-          <div class="relative group">
-            <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm flex items-center gap-1" data-i18n="menu.programs">
-              Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
-            </button>
-            <div class="absolute left-0 mt-2 w-72 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform group-hover:translate-y-0 translate-y-2 border border-gray-100 dark:border-slate-700 overflow-hidden">
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all" href="programme-internat.html">
-                <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center"><i class="fas fa-school text-primary"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-gray-500">Coran + Sport + Hébergement</p></div>
-              </a>
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-secondary/5 dark:hover:bg-secondary/10 transition-all" href="programme-tahfiz-academique.html">
-                <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center"><i class="fas fa-book-open text-secondary"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.combined">Tahfiz + Académique</p><p class="text-xs text-gray-500">Coran + Français + Anglais</p></div>
-              </a>
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-accent/5 dark:hover:bg-accent/10 transition-all" href="programme-cours-en-ligne.html">
-                <div class="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center"><i class="fas fa-laptop text-accent"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-gray-500">Apprenez de chez vous</p></div>
-              </a>
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-coral/5 dark:hover:bg-coral/10 transition-all" href="programme-cours-gratuits.html">
-                <div class="w-10 h-10 bg-coral/10 rounded-xl flex items-center justify-center"><i class="fas fa-gift text-coral"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-gray-500">Accès libre pour tous</p></div>
-              </a>
-              <a class="flex items-center gap-3 px-5 py-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all border-t border-gray-100 dark:border-slate-700" href="camp-vacances.html">
-                <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-blue-600"></i></div>
-                <div><p class="font-semibold text-gray-800 dark:text-white text-sm">Camp de Vacances</p><p class="text-xs text-gray-500">Été 2026</p></div>
-              </a>
-            </div>
-          </div>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="galerie.html" data-i18n="menu.gallery">Galerie</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="a-propos.html" data-i18n="menu.about">À Propos</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="contact.html" data-i18n="menu.contact">Contact</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="blog.html" data-i18n="menu.blog">Blog</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="temoignages.html" data-i18n="menu.testimonials">Témoignages</a>
-          <a class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all text-sm" href="admission.html" data-i18n="menu.admission">Admission</a>
-
-          <!-- Dark Mode Toggle -->
-          <button id="darkToggle" class="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all" title="Mode sombre">
-            <i class="fas fa-moon text-lg" id="darkIcon"></i>
-          </button>
-
-          <!-- Language Selector -->
-          <div class="relative group">
-            <button class="flex items-center gap-1 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all text-sm">
-              <i class="fas fa-globe"></i> <span id="currentLang">FR</span>
-            </button>
-            <div class="absolute right-0 mt-2 w-40 bg-white dark:bg-slate-800 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all border border-gray-100 dark:border-slate-700 overflow-hidden">
-              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('fr');return false;">&#127467;&#127479; Français</a>
-              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('en');return false;">&#127468;&#127463; English</a>
-              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 arabic-text text-sm" href="#" onclick="switchLanguage('ar');return false;">&#127480;&#127462; العربية</a>
-              <a class="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-200 text-sm" href="#" onclick="switchLanguage('es');return false;">&#127466;&#127480; Español</a>
-            </div>
-          </div>
-
-          <a class="ml-2 bg-gradient-to-r from-secondary to-yellow-400 hover:from-yellow-400 hover:to-secondary text-gray-900 px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
-            S'inscrire <i class="fas fa-arrow-right ml-1 text-xs"></i>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <div class="flex items-center gap-3 lg:hidden">
-          <button id="darkToggleMobile" class="p-2 text-white/80 hover:text-white rounded-xl transition-all">
-            <i class="fas fa-moon text-lg" id="darkIconMobile"></i>
-          </button>
-          <button onclick="toggleMenu()" class="p-2 text-white hover:bg-white/10 rounded-xl transition-all">
-            <i class="fas fa-bars text-xl" id="menuIcon"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="hidden lg:hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 shadow-2xl" id="mobileMenu">
-      <div class="container mx-auto px-4 py-6 space-y-2">
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="index.html" data-i18n="menu.home"><i class="fas fa-home mr-3 text-primary"></i>Accueil</a>
-        <div class="pl-4 space-y-1 border-l-2 border-primary/20 ml-4">
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-primary/5 rounded-xl transition-all text-sm" href="programme-internat.html" data-i18n="programs.tahfiz"><i class="fas fa-school mr-2 text-primary/60"></i>Tahfiz Internat</a>
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-secondary/5 rounded-xl transition-all text-sm" href="programme-tahfiz-academique.html" data-i18n="programs.combined"><i class="fas fa-book-open mr-2 text-secondary/60"></i>Tahfiz + Académique</a>
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-accent/5 rounded-xl transition-all text-sm" href="programme-cours-en-ligne.html" data-i18n="programs.online"><i class="fas fa-laptop mr-2 text-accent/60"></i>Cours en Ligne</a>
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-coral/5 rounded-xl transition-all text-sm" href="programme-cours-gratuits.html" data-i18n="programs.free"><i class="fas fa-gift mr-2 text-coral/60"></i>Cours Gratuits</a>
-          <a class="block py-2.5 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-xl transition-all text-sm font-semibold" href="camp-vacances.html"><i class="fas fa-umbrella-beach mr-2 text-blue-500"></i>Camp de Vacances</a>
-        </div>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="galerie.html" data-i18n="menu.gallery"><i class="fas fa-images mr-3 text-primary"></i>Galerie</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="a-propos.html" data-i18n="menu.about"><i class="fas fa-info-circle mr-3 text-primary"></i>À Propos</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="contact.html" data-i18n="menu.contact"><i class="fas fa-envelope mr-3 text-primary"></i>Contact</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-primary/5 rounded-xl transition-all" href="blog.html" data-i18n="menu.blog"><i class="fas fa-blog mr-3 text-primary"></i>Blog</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="temoignages.html" data-i18n="menu.testimonials"><i class="fas fa-star mr-3 text-teal-600"></i>Témoignages</a>
-        <a class="block py-3 px-4 text-gray-700 dark:text-gray-200 font-semibold hover:bg-teal-50 dark:hover:bg-slate-700 rounded-xl transition-all" href="admission.html" data-i18n="menu.admission"><i class="fas fa-user-plus mr-3 text-teal-600"></i>Admission</a>
-        <div class="pt-4 border-t dark:border-slate-700">
-          <a class="block text-center bg-gradient-to-r from-secondary to-yellow-400 text-gray-900 py-3.5 rounded-2xl font-bold shadow-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n="menu.register">
-            S'inscrire maintenant <i class="fas fa-arrow-right ml-1"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <div id="aaa-wa"></div>
+  <div id="aaa-navbar"></div>
+  <div class="h-20"></div>
 
   <!-- HERO SECTION - The Customer is the Hero -->
   <section class="hero-gradient min-h-screen flex items-center pt-24 lg:pt-20 relative overflow-hidden">
@@ -987,81 +873,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Brand -->
-        <div>
-          <h3 class="text-2xl font-bold mb-2">
-            <i class="fas fa-quran mr-2"></i>Al Amine Academy
-          </h3>
-          <p class="text-slate-400" data-i18n="footer.tagline">Excellence éducative islamique</p>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="font-bold mb-4" data-i18n="footer.navigation">Navigation</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="index.html" class="hover:text-white transition-colors" data-i18n="menu.home">Accueil</a></li>
-            <li><a href="a-propos.html" class="hover:text-white transition-colors" data-i18n="menu.about">À Propos</a></li>
-            <li><a href="galerie.html" class="hover:text-white transition-colors" data-i18n="menu.gallery">Galerie</a></li>
-            <li><a href="temoignages.html" class="hover:text-white transition-colors" data-i18n="menu.testimonials">Témoignages</a></li>
-            <li><a href="admission.html" class="hover:text-white transition-colors" data-i18n="menu.admission">Admission</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors" data-i18n="menu.blog">Blog</a></li>
-            <li><a href="contact.html" class="hover:text-white transition-colors" data-i18n="menu.contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Programs -->
-        <div>
-          <h4 class="font-bold mb-4" data-i18n="footer.programs">Nos Programmes</h4>
-          <ul class="space-y-2 text-slate-400">
-            <li><a href="programme-internat.html" class="hover:text-white transition-colors" data-i18n="programs.tahfiz">Tahfiz Internat</a></li>
-            <li><a href="programme-tahfiz-academique.html" class="hover:text-white transition-colors" data-i18n="programs.combined">Tahfiz + Académique</a></li>
-            <li><a href="programme-mixte.html" class="hover:text-white transition-colors" data-i18n="programs.mixed">Programme Mixte</a></li>
-            <li><a href="programme-cours-en-ligne.html" class="hover:text-white transition-colors" data-i18n="programs.online">Cours en Ligne</a></li>
-            <li><a href="programme-cours-gratuits.html" class="hover:text-white transition-colors" data-i18n="programs.free">Cours Gratuits</a></li>
-            <li><a href="camp-vacances.html" class="text-secondary font-semibold hover:text-amber-300 transition-colors">Camp de Vacances <span class="ml-1 text-[10px] bg-secondary/20 text-secondary rounded px-1.5 py-0.5 align-middle">Nouveau</span></a></li>
-          </ul>
-        </div>
-
-        <!-- Social -->
-        <div>
-          <h4 class="font-bold mb-4" data-i18n="footer.follow">Nous Suivre</h4>
-          <div class="flex gap-4">
-            <a href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" aria-label="Facebook" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-secondary flex items-center justify-center transition-colors">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-secondary flex items-center justify-center transition-colors">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.instagram.com/alamineacademy" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-secondary flex items-center justify-center transition-colors">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@alamineacademy" target="_blank" rel="noopener" aria-label="TikTok" class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-secondary flex items-center justify-center transition-colors">
-              <i class="fab fa-tiktok"></i>
-            </a>
-          </div>
-          <p class="text-xs text-slate-500 mt-4">Suivez le quotidien de l'académie et nos prochains événements.</p>
-        </div>
-      </div>
-
-      <!-- Divider -->
-      <div class="border-t border-slate-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-slate-400 text-sm" data-i18n="footer.copyright">
-            &copy; 2023-2026 Al Amine Academy. Tous droits réservés.
-          </p>
-          <div class="flex gap-6 text-sm text-slate-400">
-            <a href="mailto:daara@alamineacademy.com?subject=Demande%20politique%20de%20confidentialit%C3%A9" class="hover:text-white transition-colors" data-i18n="footer.privacy">Politique de confidentialité</a>
-            <a href="mailto:daara@alamineacademy.com?subject=Conditions%20d%27utilisation" class="hover:text-white transition-colors" data-i18n="footer.terms">Conditions d'utilisation</a>
-            <a href="contact.html" class="hover:text-white transition-colors" data-i18n="menu.contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="aaa-footer"></div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -1074,59 +886,10 @@
     });
   </script>
 
-  <!-- Dark Mode Toggle -->
-  <script>
-    const darkToggle = document.getElementById('dark-toggle');
-    const html = document.documentElement;
-
-    // Check localStorage for saved preference
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      html.classList.add('dark');
-    }
-
-    darkToggle.addEventListener('click', () => {
-      if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        localStorage.theme = 'light';
-      } else {
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
-      }
-    });
-  </script>
-
-  <!-- Mobile Menu Toggle -->
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when link is clicked
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-  </script>
-
-  <!-- Navbar scroll effect -->
-  <script>
-    const navbar = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('nav-scrolled');
-      } else {
-        navbar.classList.remove('nav-scrolled');
-      }
-    });
-  </script>
-
   <!-- Language/i18n script -->
   <script src="translations.js?v=20260429b"></script>
   <script src="lang.js?v=20260429b"></script>
+  <script src="assets/js/site-shell.js?v=20260511"></script>
 
   <!-- STICKY MOBILE CTA -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
@@ -1140,69 +903,6 @@
     </div>
   </div>
 
- 
-  <!-- Navbar Scroll Effect -->
-  <script>
-    (function() {
-      const navbar = document.getElementById('navbar');
-      const navTitle = document.getElementById('navTitle');
-      const navSubtitle = document.getElementById('navSubtitle');
-      if (!navbar || !navTitle || !navSubtitle) return;
-      function updateNav() {
-        if (window.scrollY > 50) {
-          navbar.classList.add('nav-scrolled');
-          navTitle.classList.remove('text-white');
-          navTitle.classList.add('text-gray-900', 'dark:text-white');
-          navSubtitle.classList.remove('text-white/70');
-          navSubtitle.classList.add('text-gray-600', 'dark:text-gray-400');
-        } else {
-          navbar.classList.remove('nav-scrolled');
-          navTitle.classList.add('text-white');
-          navTitle.classList.remove('text-gray-900', 'dark:text-white');
-          navSubtitle.classList.add('text-white/70');
-          navSubtitle.classList.remove('text-gray-600', 'dark:text-gray-400');
-        }
-      }
-      window.addEventListener('scroll', updateNav);
-      updateNav();
-    })();
-
-    function toggleMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      const menuIcon = document.getElementById('menuIcon');
-      if (!mobileMenu) return;
-      mobileMenu.classList.toggle('hidden');
-      if (menuIcon) {
-        menuIcon.classList.toggle('fa-bars');
-        menuIcon.classList.toggle('fa-times');
-      }
-    }
-
-    // Dark mode (a-propos pattern)
-    (function() {
-      const darkToggle = document.getElementById('darkToggle');
-      const darkToggleMobile = document.getElementById('darkToggleMobile');
-      const darkIcon = document.getElementById('darkIcon');
-      const darkIconMobile = document.getElementById('darkIconMobile');
-      const html = document.documentElement;
-      const isDarkMode = localStorage.getItem('darkMode') === 'true' ||
-                         (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      if (isDarkMode) {
-        html.classList.add('dark');
-        if (darkIcon) { darkIcon.classList.remove('fa-moon'); darkIcon.classList.add('fa-sun'); }
-        if (darkIconMobile) { darkIconMobile.classList.remove('fa-moon'); darkIconMobile.classList.add('fa-sun'); }
-      }
-      function toggleDark() {
-        html.classList.toggle('dark');
-        const dark = html.classList.contains('dark');
-        localStorage.setItem('darkMode', dark);
-        if (darkIcon) { darkIcon.classList.toggle('fa-moon', !dark); darkIcon.classList.toggle('fa-sun', dark); }
-        if (darkIconMobile) { darkIconMobile.classList.toggle('fa-moon', !dark); darkIconMobile.classList.toggle('fa-sun', dark); }
-      }
-      darkToggle && darkToggle.addEventListener('click', toggleDark);
-      darkToggleMobile && darkToggleMobile.addEventListener('click', toggleDark);
-    })();
-  </script>
 
 </body>
 </html>
