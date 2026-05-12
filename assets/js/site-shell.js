@@ -33,10 +33,13 @@
     +         '<div class="relative group">'
     +           '<button type="button" data-route="programs" class="nav-link hover:text-primary inline-flex items-center gap-1" data-i18n="menu.programs">Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i></button>'
     +           '<div class="absolute left-1/2 -translate-x-1/2 mt-3 w-72 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-1 group-hover:translate-y-0 border border-slate-100 overflow-hidden">'
-    +             '<a href="' + ASSET_PREFIX + 'programme-internat.html"          class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fas fa-school text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-slate-500">Coran + sport + hébergement</p></div></a>'
     +             '<a href="' + ASSET_PREFIX + 'programme-mixte.html"             class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fas fa-balance-scale text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.mixed">Programme Mixte</p><p class="text-xs text-slate-500">Externat journalier</p></div></a>'
     +             '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fas fa-laptop text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-slate-500">Apprenez de chez vous</p></div></a>'
     +             '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"    class="flex items-center gap-3 px-4 py-3 hover:bg-secondary/5"><div class="w-9 h-9 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fas fa-gift text-secondary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-slate-500">Accès libre pour tous</p></div></a>'
+    +             '<a href="' + ASSET_PREFIX + 'camp-vacances.html"               class="flex items-center gap-3 px-4 py-3 hover:bg-secondary/5"><div class="w-9 h-9 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fas fa-umbrella-beach text-secondary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm">Camp de Vacances</p><p class="text-xs text-slate-500">Été 2026 · Dakar &amp; Petite Côte</p></div></a>'
+    +             '<div class="border-t border-slate-100 mx-4 my-1"></div>'
+    +             '<p class="px-4 pt-2 pb-1 text-[10px] uppercase tracking-wider font-bold text-slate-400">Aides Sociales</p>'
+    +             '<a href="' + ASSET_PREFIX + 'aides-sociales.html"             class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-teal-100 rounded-lg flex items-center justify-center"><i class="fas fa-hand-holding-heart text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm">Projet Al Moohlisoun</p><p class="text-xs text-slate-500">Aides sociales & humanitaires</p></div></a>'
     +           '</div>'
     +         '</div>'
     +         '<a href="' + ASSET_PREFIX + 'admission.html"      data-route="admission"    class="nav-link hover:text-primary" data-i18n="menu.admission">Admission</a>'
@@ -65,10 +68,12 @@
 
     +     '<div id="aaa-mobile-menu" class="hidden lg:hidden pb-4 pt-2 border-t border-slate-200 text-slate-700">'
     +       '<a href="' + ASSET_PREFIX + 'index.html"          data-route="index"        class="block py-2" data-i18n="menu.home">Accueil</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-internat.html"          data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</a>'
     +       '<a href="' + ASSET_PREFIX + 'programme-mixte.html"             data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.mixed">Programme Mixte</a>'
     +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"    data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.online">Cours en Ligne</a>'
     +       '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"    data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.free">Cours Gratuits</a>'
+    +       '<a href="' + ASSET_PREFIX + 'camp-vacances.html"               data-route="programs" class="block py-2 pl-4 text-sm"><i class="fas fa-umbrella-beach text-secondary mr-2 text-xs"></i>Camp de Vacances</a>'
+    +       '<p class="pl-4 pt-2 pb-1 text-[10px] uppercase tracking-wider font-bold text-slate-400">Aides Sociales</p>'
+    +       '<a href="' + ASSET_PREFIX + 'aides-sociales.html"             data-route="programs" class="block py-2 pl-8 text-sm"><i class="fas fa-hand-holding-heart text-primary mr-2 text-xs"></i>Projet Al Moohlisoun</a>'
     +       '<a href="' + ASSET_PREFIX + 'admission.html"      data-route="admission"    class="block py-2" data-i18n="menu.admission">Admission</a>'
     +       '<a href="' + ASSET_PREFIX + 'a-propos.html"       data-route="about"        class="block py-2" data-i18n="menu.about">À Propos</a>'
     +       '<a href="' + ASSET_PREFIX + 'galerie.html"        data-route="gallery"      class="block py-2" data-i18n="menu.gallery">Galerie</a>'
@@ -102,7 +107,7 @@
     +             '<p class="text-[10px] uppercase tracking-[0.18em] text-secondary font-semibold">Academy · Dakar</p>'
     +           '</div>'
     +         '</a>'
-    +         '<p class="text-sm leading-relaxed mb-4" data-i18n="footer.tagline">École coranique moderne à Dakar : Tahfiz, académique bilingue et épanouissement personnel.</p>'
+    +         '<p class="text-sm leading-relaxed mb-4" data-i18n="footer.tagline">École coranique moderne à Dakar — Coran, sports et épanouissement personnel.</p>'
     +         '<div class="flex gap-3">'
     +           '<a href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-secondary inline-flex items-center justify-center transition-colors"><i class="fab fa-facebook-f"></i></a>'
     +           '<a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-secondary inline-flex items-center justify-center transition-colors"><i class="fab fa-whatsapp"></i></a>'
@@ -127,11 +132,12 @@
     +       '<div>'
     +         '<h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.programs">Nos programmes</h4>'
     +         '<ul class="space-y-2 text-sm">'
-    +           '<li><a href="' + ASSET_PREFIX + 'programme-internat.html"          data-i18n="programs.tahfiz">Tahfiz Internat</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-mixte.html"             data-i18n="programs.mixed">Programme Mixte</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"    data-i18n="programs.online">Cours en Ligne</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"    data-i18n="programs.free">Cours Gratuits</a></li>'
+    +           '<li><a href="' + ASSET_PREFIX + 'camp-vacances.html"><i class="fas fa-umbrella-beach mr-1 text-xs"></i> Camp de Vacances</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'conferences.html">Conférences &amp; Hajj</a></li>'
+    +           '<li><a href="' + ASSET_PREFIX + 'aides-sociales.html"><i class="fas fa-hand-holding-heart mr-1 text-xs"></i> Aides Sociales</a></li>'
     +         '</ul>'
     +       '</div>'
 
@@ -171,7 +177,7 @@
     if (/temoignages\.html$/.test(path)) return 'testimonials';
     if (/blog\.html$/.test(path)) return 'blog';
     if (/contact\.html$/.test(path)) return 'contact';
-    if (/programme-/.test(path) || /conferences\.html$/.test(path)) return 'programs';
+    if (/programme-/.test(path) || /conferences\.html$/.test(path) || /aides-sociales\.html$/.test(path)) return 'programs';
     return 'index';
   }
 
