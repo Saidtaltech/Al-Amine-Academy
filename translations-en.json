@@ -52,7 +52,11 @@
     "stats_rating": "15 Google reviews",
     "stats_students": "Thriving students",
     "stats_programs": "Tailored programs",
-    "stats_since": "Excellence since"
+    "stats_since": "Excellence since",
+    "proof_google": "Google Reviews",
+    "proof_quote": "\"My son memorized 3 juz in 6 months. An exceptional school!\"",
+    "proof_students": "200+ students",
+    "proof_students_sub": "enrolled & thriving"
   },
   "home": {
     "problems_title": "The challenges parents face today",
@@ -321,7 +325,17 @@
     "role_parent_2kids": "Parent of 2 children",
     "role_sister": "Student's sister",
     "role_family_amar": "Famille Amar",
-    "source_google": "Google Review"
+    "source_google": "Google Review",
+    "quote_1": "\"I gave 5 stars because it's the maximum, but you deserve more. Just 1 year since our children joined your school, we truly have no regrets.\"",
+    "quote_2": "\"I am more than satisfied with Daara Al Amine. I enrolled both my children there and mashallah, I only hear great things from them. Thank you for the professionalism.\"",
+    "quote_3": "\"I highly recommend this Daara. I enrolled my 9-year-old brother and in less than 2 months, he became polite, calm and diligent in his prayers. His Quranic recitation became very fluent. Alhamdulillah.\"",
+    "quote_4": "\"Mashallah, Daara Al Amine. The courses are of very high quality, as is the Islamic education.\"",
+    "quote_5": "\"I recommend. The curriculum, the premises and the teachers are all mashallah excellent.\"",
+    "quote_6": "\"What struck me most is the discipline. Masha Allah.\"",
+    "quote_7": "\"Excellent boarding school. Well structured, great pedagogy, great learning environment. Real progress for the child.\"",
+    "quote_8": "\"The Amar family thanks you from the bottom of their hearts.\"",
+    "quote_9": "\"Honestly, masha'Allah.\"",
+    "quote_10": "\"Infinite thanks to the Daara Al Amine Academy, we are absolutely delighted.\""
   },
   "gallery": {
     "hero_title": "Gallery",
@@ -469,7 +483,7 @@
     "sched_row_7": "<strong>13:00</strong> — Academic lessons (French/Maths)",
     "sched_row_8": "<strong>15:30</strong> — Asr & activities",
     "sched_row_9": "<strong>17:30</strong> — Return home",
-    "schedule_note": "Timetable adaptable to the child's age and level.",
+    "schedule_note": "Schedules adapted to the student's age and level.",
     "advantages_title": "Why choose the day programme?",
     "adv1_title": "Family bond preserved",
     "adv1_desc": "Your child comes home every evening. They maintain a strong daily bond with their family.",
@@ -570,7 +584,16 @@
     "formations_title": "Our free courses",
     "formations_subtitle": "Quality lessons, open to all, to strengthen the community",
     "card1_desc": "Quran reading for adults who did not have the opportunity when they were young.",
-    "card2_desc": "Essential Tajwid rules for a beautiful Quran recitation.",
+    "card2_desc": "The essential rules of Tajwid for a beautiful Quran recitation.",
+    "tafsir_badge": "QURAN TAFSIR",
+    "tafsir_title": "Understanding the Quran",
+    "tafsir_feat1": "Verse explanation",
+    "tafsir_feat2": "Context of revelation",
+    "tafsir_feat3": "Lessons and teachings",
+    "tafsir_feat4": "Q&A sessions",
+    "tafsir_lieux_label": "Venues:",
+    "tafsir_lang_label": "Language:",
+    "tafsir_cta": "Register (Free)",
     "card3_desc": "The pillars of Islamic faith, prayer rules and basic Fiqh.",
     "card4_desc": "Arabic language courses to understand the Quran and Islamic sciences.",
     "brochure_title": "Download our brochure",
@@ -640,5 +663,9 @@
     "cta_title": "Stay informed about our events",
     "cta_contact": "Contact us"
   },
-  "lang_switch_toast": "Language changed: English"
+  "lang_switch_toast": "Language changed: English",
+  "common": {
+    "good_to_know": "Good to know",
+    "age_range_6_16": "6-16 years"
+  }
 }

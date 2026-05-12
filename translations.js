@@ -41,7 +41,11 @@ window.AAA_TRANSLATIONS = {
       "cta_primary": "Inscrire mon enfant",
       "cta_secondary": "Découvrir nos programmes",
       "stats_rating": "15 avis Google", "stats_students": "Élèves épanouis",
-      "stats_programs": "Programmes adaptés", "stats_since": "Excellence depuis"
+      "stats_programs": "Programmes adaptés", "stats_since": "Excellence depuis",
+      "proof_google": "Avis Google",
+      "proof_quote": "\"Mon fils a mémorisé 3 juz en 6 mois. Une école exceptionnelle !\"",
+      "proof_students": "200+ élèves",
+      "proof_students_sub": "inscrits & épanouis"
     },
     "home": {
       "problems_title": "Les défis des parents aujourd'hui",
@@ -293,7 +297,17 @@ window.AAA_TRANSLATIONS = {
       "role_parent_2kids": "Parent de 2 enfants",
       "role_sister": "Sœur d'élève",
       "role_family_amar": "Famille Amar",
-      "source_google": "Avis Google"
+      "source_google": "Avis Google",
+      "quote_1": "\"J'ai mis 5 étoiles parce que c'est le maximum qu'on peut noter, sinon vous méritez plus. À peine 1 an que nos enfants sont rentrés dans votre école, franchement on ne le regrette pas.\"",
+      "quote_2": "\"Je suis plus que satisfaite du Daara Al amine, j'y avais laissé mes deux enfants mais machallah que de bons retours de leur part. Merci encore pour le professionnalisme.\"",
+      "quote_3": "\"Je recommande vivement cette Daara. J'y ai inscrit mon petit frère de 9 ans et en moins de 2 mois, il est devenu poli, posé et studieux dans ses prières. Sa lecture coranique est devenue très fluide. Alhamdulillah.\"",
+      "quote_4": "\"Machallah le daara Al amine. Les cours sont de très bonne qualité ainsi que l'éducation islamique.\"",
+      "quote_5": "\"Je recommande. Le contenu pédagogique, le local et les oustaz sont tous machallah.\"",
+      "quote_6": "\"C'est surtout la discipline que j'ai remarqué. Masha Allah.\"",
+      "quote_7": "\"Très bon internat. Bien structuré, très bonne pédagogie, très bon apprentissage. Évolution de l'enfant dans l'apprentissage.\"",
+      "quote_8": "\"La famille Amar vous remercie du fond du cœur.\"",
+      "quote_9": "\"Franchement macha'Allah.\"",
+      "quote_10": "\"Merci infiniment à l'Académie Daara Al Amine, nous sommes comblés.\""
     },
     "gallery": {
       "hero_title": "Galerie",
@@ -430,7 +444,7 @@ window.AAA_TRANSLATIONS = {
       "sched_row_7": "<strong>13h00</strong> — Cours académiques (Français/Maths)",
       "sched_row_8": "<strong>15h30</strong> — Asr & activités",
       "sched_row_9": "<strong>17h30</strong> — Retour à la maison",
-      "schedule_note": "Horaires adaptables selon l'âge et le niveau de l'enfant.",
+      "schedule_note": "Horaires adaptables selon l'âge et le niveau de l'élève.",
       "advantages_title": "Pourquoi choisir l'externat ?",
       "adv1_title": "Lien familial préservé",
       "adv1_desc": "Votre enfant rentre chaque soir. Il garde un lien quotidien fort avec sa famille.",
@@ -532,6 +546,15 @@ window.AAA_TRANSLATIONS = {
       "formations_subtitle": "Des cours de qualité, ouverts à tous, pour renforcer la communauté",
       "card1_desc": "Apprentissage de la lecture du Coran pour les adultes qui n'ont pas eu l'opportunité dans leur jeunesse.",
       "card2_desc": "Les règles essentielles du Tajwid pour une belle récitation du Coran.",
+      "tafsir_badge": "TAFSIR DU CORAN",
+      "tafsir_title": "Comprendre le Coran",
+      "tafsir_feat1": "Explication des versets",
+      "tafsir_feat2": "Contexte de révélation",
+      "tafsir_feat3": "Leçons et enseignements",
+      "tafsir_feat4": "Questions-réponses",
+      "tafsir_lieux_label": "Lieux :",
+      "tafsir_lang_label": "Langue :",
+      "tafsir_cta": "M'inscrire (Gratuit)",
       "card3_desc": "Les piliers de la foi islamique, les règles de la prière et les bases du Fiqh.",
       "card4_desc": "Cours de langue arabe pour comprendre le Coran et les sciences islamiques.",
       "brochure_title": "Téléchargez notre brochure",
@@ -599,7 +622,11 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "Restez informé de nos événements",
       "cta_contact": "Nous contacter"
     },
-    "lang_switch_toast": "Langue changée : Français"
+    "lang_switch_toast": "Langue changée : Français",
+    "common": {
+      "good_to_know": "Bon à savoir",
+      "age_range_6_16": "6-16 ans"
+    }
   },
   en: {
     "site": { "name": "Al Amine Academy" },
@@ -637,7 +664,11 @@ window.AAA_TRANSLATIONS = {
       "motto_translation": "Good character before knowledge",
       "cta_primary": "Enroll my child", "cta_secondary": "Discover our programs",
       "stats_rating": "15 Google reviews", "stats_students": "Thriving students",
-      "stats_programs": "Tailored programs", "stats_since": "Excellence since"
+      "stats_programs": "Tailored programs", "stats_since": "Excellence since",
+      "proof_google": "Google Reviews",
+      "proof_quote": "\"My son memorized 3 juz in 6 months. An exceptional school!\"",
+      "proof_students": "200+ students",
+      "proof_students_sub": "enrolled & thriving"
     },
     "home": {
       "problems_title": "The challenges parents face today",
@@ -888,7 +919,17 @@ window.AAA_TRANSLATIONS = {
       "role_parent_2kids": "Parent of 2 children",
       "role_sister": "Student's sister",
       "role_family_amar": "Famille Amar",
-      "source_google": "Google Review"
+      "source_google": "Google Review",
+      "quote_1": "\"I gave 5 stars because it's the maximum, but you deserve more. Just 1 year since our children joined your school, we truly have no regrets.\"",
+      "quote_2": "\"I am more than satisfied with Daara Al Amine. I enrolled both my children there and mashallah, I only hear great things from them. Thank you for the professionalism.\"",
+      "quote_3": "\"I highly recommend this Daara. I enrolled my 9-year-old brother and in less than 2 months, he became polite, calm and diligent in his prayers. His Quranic recitation became very fluent. Alhamdulillah.\"",
+      "quote_4": "\"Mashallah, Daara Al Amine. The courses are of very high quality, as is the Islamic education.\"",
+      "quote_5": "\"I recommend. The curriculum, the premises and the teachers are all mashallah excellent.\"",
+      "quote_6": "\"What struck me most is the discipline. Masha Allah.\"",
+      "quote_7": "\"Excellent boarding school. Well structured, great pedagogy, great learning environment. Real progress for the child.\"",
+      "quote_8": "\"The Amar family thanks you from the bottom of their hearts.\"",
+      "quote_9": "\"Honestly, masha'Allah.\"",
+      "quote_10": "\"Infinite thanks to the Daara Al Amine Academy, we are absolutely delighted.\""
     },
     "gallery": {
       "hero_title": "Gallery",
@@ -1025,7 +1066,7 @@ window.AAA_TRANSLATIONS = {
       "sched_row_7": "<strong>13:00</strong> — Academic lessons (French/Maths)",
       "sched_row_8": "<strong>15:30</strong> — Asr & activities",
       "sched_row_9": "<strong>17:30</strong> — Return home",
-      "schedule_note": "Timetable adaptable to the child's age and level.",
+      "schedule_note": "Schedules adapted to the student's age and level.",
       "advantages_title": "Why choose the day programme?",
       "adv1_title": "Family bond preserved",
       "adv1_desc": "Your child comes home every evening. They maintain a strong daily bond with their family.",
@@ -1126,7 +1167,16 @@ window.AAA_TRANSLATIONS = {
       "formations_title": "Our free courses",
       "formations_subtitle": "Quality lessons, open to all, to strengthen the community",
       "card1_desc": "Quran reading for adults who did not have the opportunity when they were young.",
-      "card2_desc": "Essential Tajwid rules for a beautiful Quran recitation.",
+      "card2_desc": "The essential rules of Tajwid for a beautiful Quran recitation.",
+      "tafsir_badge": "QURAN TAFSIR",
+      "tafsir_title": "Understanding the Quran",
+      "tafsir_feat1": "Verse explanation",
+      "tafsir_feat2": "Context of revelation",
+      "tafsir_feat3": "Lessons and teachings",
+      "tafsir_feat4": "Q&A sessions",
+      "tafsir_lieux_label": "Venues:",
+      "tafsir_lang_label": "Language:",
+      "tafsir_cta": "Register (Free)",
       "card3_desc": "The pillars of Islamic faith, prayer rules and basic Fiqh.",
       "card4_desc": "Arabic language courses to understand the Quran and Islamic sciences.",
       "brochure_title": "Download our brochure",
@@ -1194,7 +1244,11 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "Stay informed about our events",
       "cta_contact": "Contact us"
     },
-    "lang_switch_toast": "Language changed: English"
+    "lang_switch_toast": "Language changed: English",
+    "common": {
+      "good_to_know": "Good to know",
+      "age_range_6_16": "6-16 years"
+    }
   },
   ar: {
     "site": { "name": "أكاديمية الأمين" },
@@ -1234,7 +1288,11 @@ window.AAA_TRANSLATIONS = {
       "cta_primary": "سجّل طفلي", "cta_secondary": "اكتشف برامجنا",
       "stats_rating": "15 تقييمًا على غوغل",
       "stats_students": "طلابنا المزدهرون",
-      "stats_programs": "برامج مخصصة", "stats_since": "التميز منذ"
+      "stats_programs": "برامج مخصصة", "stats_since": "التميز منذ",
+      "proof_google": "تقييمات Google",
+      "proof_quote": "\"حفظ ابني 3 أجزاء في 6 أشهر. مدرسة استثنائية!\"",
+      "proof_students": "أكثر من 200 طالب",
+      "proof_students_sub": "مسجلون وناجحون"
     },
     "home": {
       "problems_title": "تحديات الأهالي اليوم",
@@ -1488,7 +1546,17 @@ window.AAA_TRANSLATIONS = {
       "role_parent_2kids": "والد طفلين",
       "role_sister": "أخت الطالب",
       "role_family_amar": "عائلة Amar",
-      "source_google": "تقييم Google"
+      "source_google": "تقييم Google",
+      "quote_1": "\"أعطيت 5 نجوم لأنها الحد الأقصى وإلا تستحقون أكثر. لم يمضِ سوى عام على التحاق أطفالنا بمدرستكم ولا ندم على الإطلاق.\"",
+      "quote_2": "\"أنا أكثر من راضية عن داارا الأمين، تركت فيه طفليَّ وماشاء الله ما يصلني إلا أجمل الأخبار. شكراً على الاحترافية.\"",
+      "quote_3": "\"أوصي بشدة بهذه الداارا. سجّلت أخي البالغ من العمر 9 سنوات وفي أقل من شهرين أصبح مؤدباً وهادئاً ومتحمساً في صلاته. تلاوته للقرآن صارت سلسة جداً. الحمد لله.\"",
+      "quote_4": "\"ماشاء الله داارا الأمين. الدروس عالية الجودة وكذلك التربية الإسلامية.\"",
+      "quote_5": "\"أوصي بها. المحتوى التعليمي والمكان والأساتذة جميعهم ماشاء الله رائعون.\"",
+      "quote_6": "\"ما لفت انتباهي أكثر هو الانضباط. ماشاء الله.\"",
+      "quote_7": "\"داخلية ممتازة. منظمة جيداً، تربية رائعة، تعلم رائع. تقدم ملحوظ للطفل.\"",
+      "quote_8": "\"عائلة أمار تشكركم من أعماق قلبها.\"",
+      "quote_9": "\"بصراحة، ماشاء الله.\"",
+      "quote_10": "\"شكراً جزيلاً لأكاديمية داارا الأمين، نحن في غاية السعادة.\""
     },
     "gallery": {
       "hero_title": "المعرض",
@@ -1625,7 +1693,7 @@ window.AAA_TRANSLATIONS = {
       "sched_row_7": "<strong>13:00</strong> — الدروس الأكاديمية (فرنسي/رياضيات)",
       "sched_row_8": "<strong>15:30</strong> — العصر وأنشطة",
       "sched_row_9": "<strong>17:30</strong> — العودة إلى المنزل",
-      "schedule_note": "الجدول قابل للتعديل حسب عمر الطفل ومستواه.",
+      "schedule_note": "مواعيد مرنة حسب عمر الطالب ومستواه.",
       "advantages_title": "لماذا تختار الخارجي؟",
       "adv1_title": "الرابط الأسري محفوظ",
       "adv1_desc": "يعود طفلك كل مساء. يحافظ على رابط يومي متين مع أسرته.",
@@ -1726,7 +1794,16 @@ window.AAA_TRANSLATIONS = {
       "formations_title": "دروسنا المجانية",
       "formations_subtitle": "دروس عالية الجودة، مفتوحة للجميع، لتعزيز المجتمع",
       "card1_desc": "تعلّم قراءة القرآن للبالغين الذين لم تُتَح لهم الفرصة في صغرهم.",
-      "card2_desc": "أحكام التجويد الأساسية لتلاوة القرآن بصورة جميلة.",
+      "card2_desc": "القواعد الأساسية للتجويد لتلاوة جميلة للقرآن الكريم.",
+      "tafsir_badge": "تفسير القرآن",
+      "tafsir_title": "فهم القرآن",
+      "tafsir_feat1": "تفسير الآيات",
+      "tafsir_feat2": "سياق النزول",
+      "tafsir_feat3": "الدروس والتعاليم",
+      "tafsir_feat4": "أسئلة وأجوبة",
+      "tafsir_lieux_label": "الأماكن :",
+      "tafsir_lang_label": "اللغة :",
+      "tafsir_cta": "التسجيل (مجاني)",
       "card3_desc": "أركان الإيمان الإسلامي وأحكام الصلاة وأساسيات الفقه.",
       "card4_desc": "دروس اللغة العربية لفهم القرآن والعلوم الإسلامية.",
       "brochure_title": "نزّل نشرتنا",
@@ -1794,7 +1871,11 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "ابقَ مطّلعًا على أحداثنا",
       "cta_contact": "اتصل بنا"
     },
-    "lang_switch_toast": "تم تغيير اللغة: العربية"
+    "lang_switch_toast": "تم تغيير اللغة: العربية",
+    "common": {
+      "good_to_know": "مفيد للمعرفة",
+      "age_range_6_16": "٦-١٦ سنة"
+    }
   },
   es: {
     "site": { "name": "Academia Al Amine" },
@@ -1832,7 +1913,11 @@ window.AAA_TRANSLATIONS = {
       "motto_translation": "Buen carácter antes que conocimiento",
       "cta_primary": "Inscribir a mi hijo", "cta_secondary": "Descubrir nuestros programas",
       "stats_rating": "15 reseñas en Google", "stats_students": "Alumnos plenos",
-      "stats_programs": "Programas adaptados", "stats_since": "Excelencia desde"
+      "stats_programs": "Programas adaptados", "stats_since": "Excelencia desde",
+      "proof_google": "Reseñas Google",
+      "proof_quote": "\"Mi hijo memorizó 3 juz en 6 meses. ¡Una escuela excepcional!\"",
+      "proof_students": "Más de 200 alumnos",
+      "proof_students_sub": "inscritos y felices"
     },
     "home": {
       "problems_title": "Los desafíos de los padres hoy",
@@ -2083,7 +2168,17 @@ window.AAA_TRANSLATIONS = {
       "role_parent_2kids": "Padre de 2 hijos",
       "role_sister": "Hermana del alumno",
       "role_family_amar": "Famille Amar",
-      "source_google": "Reseña Google"
+      "source_google": "Reseña Google",
+      "quote_1": "\"Le di 5 estrellas porque es el máximo, pero merecen más. Solo 1 año desde que nuestros hijos se unieron a su escuela, y no nos arrepentimos en absoluto.\"",
+      "quote_2": "\"Estoy más que satisfecha con el Daara Al Amine. Dejé a mis dos hijos allí y mashallah solo escucho cosas buenas. Gracias por el profesionalismo.\"",
+      "quote_3": "\"Recomiendo ampliamente este Daara. Inscribí a mi hermano de 9 años y en menos de 2 meses se volvió educado, tranquilo y diligente en sus oraciones. Su recitación coránica se volvió muy fluida. Alhamdulillah.\"",
+      "quote_4": "\"Mashallah, el Daara Al Amine. Los cursos son de muy alta calidad, al igual que la educación islámica.\"",
+      "quote_5": "\"Lo recomiendo. El contenido pedagógico, el local y los ustaz son todos mashallah excelentes.\"",
+      "quote_6": "\"Lo que más me impresionó es la disciplina. Masha Allah.\"",
+      "quote_7": "\"Excelente internado. Bien estructurado, gran pedagogía, gran aprendizaje. Evolución real del niño.\"",
+      "quote_8": "\"La familia Amar les agradece de todo corazón.\"",
+      "quote_9": "\"Francamente, masha'Allah.\"",
+      "quote_10": "\"Infinitas gracias a la Academia Daara Al Amine, estamos absolutamente encantados.\""
     },
     "gallery": {
       "hero_title": "Galería",
@@ -2220,7 +2315,7 @@ window.AAA_TRANSLATIONS = {
       "sched_row_7": "<strong>13:00</strong> — Clases académicas (Francés/Matemáticas)",
       "sched_row_8": "<strong>15:30</strong> — Asr y actividades",
       "sched_row_9": "<strong>17:30</strong> — Vuelta a casa",
-      "schedule_note": "Horario adaptable según la edad y el nivel del alumno.",
+      "schedule_note": "Horarios adaptados a la edad y nivel del alumno.",
       "advantages_title": "¿Por qué elegir el externado?",
       "adv1_title": "Vínculo familiar preservado",
       "adv1_desc": "Su hijo regresa cada noche. Mantiene un vínculo diario fuerte con su familia.",
@@ -2322,6 +2417,15 @@ window.AAA_TRANSLATIONS = {
       "formations_subtitle": "Clases de calidad, abiertas a todos, para fortalecer la comunidad",
       "card1_desc": "Aprendizaje de la lectura del Corán para adultos que no tuvieron la oportunidad en su juventud.",
       "card2_desc": "Las reglas esenciales del Tajwid para una bella recitación del Corán.",
+      "tafsir_badge": "TAFSIR DEL CORÁN",
+      "tafsir_title": "Comprender el Corán",
+      "tafsir_feat1": "Explicación de versículos",
+      "tafsir_feat2": "Contexto de revelación",
+      "tafsir_feat3": "Lecciones y enseñanzas",
+      "tafsir_feat4": "Preguntas y respuestas",
+      "tafsir_lieux_label": "Lugares:",
+      "tafsir_lang_label": "Idioma:",
+      "tafsir_cta": "Registrarse (Gratis)",
       "card3_desc": "Los pilares de la fe islámica, las reglas de la oración y los fundamentos del Fiqh.",
       "card4_desc": "Cursos de lengua árabe para comprender el Corán y las ciencias islámicas.",
       "brochure_title": "Descargue nuestro folleto",
@@ -2389,6 +2493,10 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "Manténgase informado sobre nuestros eventos",
       "cta_contact": "Contáctenos"
     },
-    "lang_switch_toast": "Idioma cambiado: Español"
+    "lang_switch_toast": "Idioma cambiado: Español",
+    "common": {
+      "good_to_know": "Útil saber",
+      "age_range_6_16": "6-16 años"
+    }
   }
 };

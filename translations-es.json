@@ -52,7 +52,11 @@
     "stats_rating": "15 reseñas en Google",
     "stats_students": "Alumnos plenos",
     "stats_programs": "Programas adaptados",
-    "stats_since": "Excelencia desde"
+    "stats_since": "Excelencia desde",
+    "proof_google": "Reseñas Google",
+    "proof_quote": "\"Mi hijo memorizó 3 juz en 6 meses. ¡Una escuela excepcional!\"",
+    "proof_students": "Más de 200 alumnos",
+    "proof_students_sub": "inscritos y felices"
   },
   "home": {
     "problems_title": "Los desafíos de los padres hoy",
@@ -321,7 +325,17 @@
     "role_parent_2kids": "Padre de 2 hijos",
     "role_sister": "Hermana del alumno",
     "role_family_amar": "Famille Amar",
-    "source_google": "Reseña Google"
+    "source_google": "Reseña Google",
+    "quote_1": "\"Le di 5 estrellas porque es el máximo, pero merecen más. Solo 1 año desde que nuestros hijos se unieron a su escuela, y no nos arrepentimos en absoluto.\"",
+    "quote_2": "\"Estoy más que satisfecha con el Daara Al Amine. Dejé a mis dos hijos allí y mashallah solo escucho cosas buenas. Gracias por el profesionalismo.\"",
+    "quote_3": "\"Recomiendo ampliamente este Daara. Inscribí a mi hermano de 9 años y en menos de 2 meses se volvió educado, tranquilo y diligente en sus oraciones. Su recitación coránica se volvió muy fluida. Alhamdulillah.\"",
+    "quote_4": "\"Mashallah, el Daara Al Amine. Los cursos son de muy alta calidad, al igual que la educación islámica.\"",
+    "quote_5": "\"Lo recomiendo. El contenido pedagógico, el local y los ustaz son todos mashallah excelentes.\"",
+    "quote_6": "\"Lo que más me impresionó es la disciplina. Masha Allah.\"",
+    "quote_7": "\"Excelente internado. Bien estructurado, gran pedagogía, gran aprendizaje. Evolución real del niño.\"",
+    "quote_8": "\"La familia Amar les agradece de todo corazón.\"",
+    "quote_9": "\"Francamente, masha'Allah.\"",
+    "quote_10": "\"Infinitas gracias a la Academia Daara Al Amine, estamos absolutamente encantados.\""
   },
   "gallery": {
     "hero_title": "Galería",
@@ -469,7 +483,7 @@
     "sched_row_7": "<strong>13:00</strong> — Clases académicas (Francés/Matemáticas)",
     "sched_row_8": "<strong>15:30</strong> — Asr y actividades",
     "sched_row_9": "<strong>17:30</strong> — Vuelta a casa",
-    "schedule_note": "Horario adaptable según la edad y el nivel del alumno.",
+    "schedule_note": "Horarios adaptados a la edad y nivel del alumno.",
     "advantages_title": "¿Por qué elegir el externado?",
     "adv1_title": "Vínculo familiar preservado",
     "adv1_desc": "Su hijo regresa cada noche. Mantiene un vínculo diario fuerte con su familia.",
@@ -571,6 +585,15 @@
     "formations_subtitle": "Clases de calidad, abiertas a todos, para fortalecer la comunidad",
     "card1_desc": "Aprendizaje de la lectura del Corán para adultos que no tuvieron la oportunidad en su juventud.",
     "card2_desc": "Las reglas esenciales del Tajwid para una bella recitación del Corán.",
+    "tafsir_badge": "TAFSIR DEL CORÁN",
+    "tafsir_title": "Comprender el Corán",
+    "tafsir_feat1": "Explicación de versículos",
+    "tafsir_feat2": "Contexto de revelación",
+    "tafsir_feat3": "Lecciones y enseñanzas",
+    "tafsir_feat4": "Preguntas y respuestas",
+    "tafsir_lieux_label": "Lugares:",
+    "tafsir_lang_label": "Idioma:",
+    "tafsir_cta": "Registrarse (Gratis)",
     "card3_desc": "Los pilares de la fe islámica, las reglas de la oración y los fundamentos del Fiqh.",
     "card4_desc": "Cursos de lengua árabe para comprender el Corán y las ciencias islámicas.",
     "brochure_title": "Descargue nuestro folleto",
@@ -640,5 +663,9 @@
     "cta_title": "Manténgase informado sobre nuestros eventos",
     "cta_contact": "Contáctenos"
   },
-  "lang_switch_toast": "Idioma cambiado: Español"
+  "lang_switch_toast": "Idioma cambiado: Español",
+  "common": {
+    "good_to_know": "Útil saber",
+    "age_range_6_16": "6-16 años"
+  }
 }
