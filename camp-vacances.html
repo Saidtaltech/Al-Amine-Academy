@@ -53,9 +53,15 @@
    /* Hero photo override — portrait image, less dark overlay to let the photo show */
    .hero-cover-camp {
      background-image:
-       linear-gradient(160deg, rgba(9,28,40,.58) 0%, rgba(21,84,108,.68) 55%, rgba(22,91,115,.78) 100%),
+       linear-gradient(160deg, rgba(9,28,40,.22) 0%, rgba(9,28,40,.30) 100%),
        var(--hero-image, none),
        linear-gradient(135deg, var(--brand-blue-deep) 0%, var(--brand-blue) 100%);
+   }
+   /* Text legibility — dark backdrop behind copy only */
+   .hero-cover-camp .hero-inner .max-w-4xl {
+     background: radial-gradient(ellipse 80% 90% at 50% 55%, rgba(9,28,40,.55) 0%, transparent 100%);
+     border-radius: 2rem;
+     padding: 2rem 1.5rem;
    }
   </style>
   <link href="https://alamineacademy.com/camp-vacances.html" rel="canonical"/>
