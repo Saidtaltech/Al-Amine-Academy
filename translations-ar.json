@@ -304,7 +304,12 @@
     "cta_title": "انضمّ إلى الأسر التي تثق بنا",
     "cta_subtitle": "اختارت أكثر من 150 أسرة أكاديمية الأمين بالفعل. حان دورك.",
     "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> تسجيل طفلي",
-    "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> اتصل بنا"
+    "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> اتصل بنا",
+    "role_parent": "أحد الوالدين",
+    "role_parent_2kids": "والد طفلين",
+    "role_sister": "أخت الطالب",
+    "role_family_amar": "عائلة Amar",
+    "source_google": "تقييم Google"
   },
   "gallery": {
     "hero_title": "المعرض",

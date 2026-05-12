@@ -8,8 +8,16 @@
   <meta content="inscription daara, admission daara dakar, tarifs école coranique, formulaire inscription, documents admission daara" name="keywords"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <!-- Preconnect to CDN origins — faster DNS + TLS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <!-- Google Fonts — non-blocking for better FCP -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
+  <!-- Font Awesome — non-blocking -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -178,7 +186,7 @@
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
       <div class="mb-16">
         <img src="assets/img/accueil-eleves.jpg" alt="Accueil des nouveaux élèves" class="w-full h-64 object-cover rounded-2xl"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
         <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
           <i class="fas fa-image text-white/30 text-5xl"></i>
         </div>

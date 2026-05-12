@@ -316,7 +316,12 @@
     "cta_title": "Únase a las familias que confían en nosotros",
     "cta_subtitle": "Más de 150 familias ya han elegido Al Amine Academy. Es su turno.",
     "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Inscribir a mi hijo",
-    "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Llamarnos"
+    "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Llamarnos",
+    "role_parent": "Padre / Madre",
+    "role_parent_2kids": "Padre de 2 hijos",
+    "role_sister": "Hermana del alumno",
+    "role_family_amar": "Famille Amar",
+    "source_google": "Reseña Google"
   },
   "gallery": {
     "hero_title": "Galería",

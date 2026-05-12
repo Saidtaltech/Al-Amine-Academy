@@ -8,8 +8,16 @@
   <meta content="avis daara, témoignages parents, école coranique dakar, retours familles daara, notes clients" name="keywords"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <!-- Preconnect to CDN origins — faster DNS + TLS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <!-- Google Fonts — non-blocking for better FCP -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
+  <!-- Font Awesome — non-blocking -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/site.css">
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
@@ -204,7 +212,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-teal-400 rounded-full flex items-center justify-center text-white font-bold text-xl">T</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Tenace Tenace</h4>
-              <p class="text-sm text-gray-500">Parent</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent">Parent</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -217,7 +225,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "J'ai mis 5 étoiles parce que c'est le maximum qu'on peut noter, sinon vous méritez plus. À peine 1 an que nos enfants sont rentrés dans votre école, franchement on ne le regrette pas."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 2 -->
@@ -226,7 +234,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-secondary to-yellow-400 rounded-full flex items-center justify-center text-gray-900 font-bold text-xl">S</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Sall Oumou Mamadou</h4>
-              <p class="text-sm text-gray-500">Parent de 2 enfants</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent_2kids">Parent de 2 enfants</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -239,7 +247,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "Je suis plus que satisfaite du Daara Al amine, j'y avais laissé mes deux enfants mais machallah que de bons retours de leur part. Merci encore pour le professionnalisme."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 3 -->
@@ -248,7 +256,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-accent to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-xl">D</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Diaka Ndiaye</h4>
-              <p class="text-sm text-gray-500">Sœur d'élève</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_sister">Sœur d'élève</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -261,7 +269,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "Je recommande vivement cette Daara. J'y ai inscrit mon petit frère de 9 ans et en moins de 2 mois, il est devenu poli, posé et studieux dans ses prières. Sa lecture coranique est devenue très fluide. Alhamdulillah."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 4 -->
@@ -270,7 +278,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-coral to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-xl">B</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">BAIDY DIAW</h4>
-              <p class="text-sm text-gray-500">Parent</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent">Parent</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -283,7 +291,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "Machallah le daara Al amine. Les cours sont de très bonne qualité ainsi que l'éducation islamique."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 5 -->
@@ -292,7 +300,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-primary/80 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Aliou Baldé</h4>
-              <p class="text-sm text-gray-500">Parent</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent">Parent</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -305,7 +313,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "Je recommande. Le contenu pédagogique, le local et les oustaz sont tous machallah."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 6 -->
@@ -314,7 +322,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-secondary/80 to-orange-400 rounded-full flex items-center justify-center text-gray-900 font-bold text-xl">A</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Arona Diakhate</h4>
-              <p class="text-sm text-gray-500">Parent</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent">Parent</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -327,7 +335,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "C'est surtout la discipline que j'ai remarqué. Masha Allah."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 7 -->
@@ -336,7 +344,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Amira Toure</h4>
-              <p class="text-sm text-gray-500">Parent</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent">Parent</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -349,7 +357,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "Très bon internat. Bien structuré, très bonne pédagogie, très bon apprentissage. Évolution de l'enfant dans l'apprentissage."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 8 -->
@@ -358,7 +366,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-accent to-teal-400 rounded-full flex items-center justify-center text-white font-bold text-xl">M</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Matou Amar</h4>
-              <p class="text-sm text-gray-500">Famille Amar</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_family_amar">Famille Amar</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -371,7 +379,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "La famille Amar vous remercie du fond du cœur."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 9 -->
@@ -380,7 +388,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-secondary to-orange-400 rounded-full flex items-center justify-center text-gray-900 font-bold text-xl">D</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Dieynaba Timera</h4>
-              <p class="text-sm text-gray-500">Parent</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent">Parent</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -393,7 +401,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "Franchement macha'Allah."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 10 -->
@@ -402,7 +410,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-xl">Z</div>
             <div>
               <h4 class="font-bold text-gray-900 dark:text-white">Zahra Diop</h4>
-              <p class="text-sm text-gray-500">Parent</p>
+              <p class="text-sm text-gray-500" data-i18n="testimonials_page.role_parent">Parent</p>
             </div>
           </div>
           <div class="flex gap-1 mb-4">
@@ -415,7 +423,7 @@
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             "Merci infiniment à l'Académie Daara Al Amine, nous sommes comblés."
           </p>
-          <p class="text-xs text-gray-400">Google Review</p>
+          <p class="text-xs text-gray-400" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
       </div>
     </div>

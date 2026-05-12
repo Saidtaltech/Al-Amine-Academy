@@ -9,10 +9,16 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+  <!-- Preconnect to CDN origins — faster DNS + TLS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <!-- Google Fonts — non-blocking for better FCP -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
+  <!-- Font Awesome — non-blocking -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/site.css">
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
@@ -161,7 +167,7 @@
         <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="0">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-classes.jpg" alt="Salles de classe" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
             <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
               <i class="fas fa-image text-white/30 text-5xl"></i>
             </div>
@@ -181,7 +187,7 @@
         <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="100">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-sport.jpg" alt="Activités sportives" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
             <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
               <i class="fas fa-image text-white/30 text-5xl"></i>
             </div>
@@ -201,7 +207,7 @@
         <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="200">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-ceremonies.jpg" alt="Cérémonies et événements" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
             <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
               <i class="fas fa-image text-white/30 text-5xl"></i>
             </div>
@@ -221,7 +227,7 @@
         <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="300">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-batiment.jpg" alt="Bâtiment et locaux" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
             <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
               <i class="fas fa-image text-white/30 text-5xl"></i>
             </div>
@@ -241,7 +247,7 @@
         <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="400">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-cantine.jpg" alt="Cantine et repas" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
             <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
               <i class="fas fa-image text-white/30 text-5xl"></i>
             </div>
@@ -261,7 +267,7 @@
         <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="500">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-priere.jpg" alt="Prières et vie spirituelle" class="w-full h-64 object-cover"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
             <div style="display:none" class="w-full h-64 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] flex items-center justify-center">
               <i class="fas fa-image text-white/30 text-5xl"></i>
             </div>

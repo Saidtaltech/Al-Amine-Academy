@@ -288,7 +288,12 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "Rejoignez les familles qui nous font confiance",
       "cta_subtitle": "Plus de 150 familles ont déjà choisi Al Amine Academy. C'est votre tour.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Inscrire mon enfant",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Nous appeler"
+      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Nous appeler",
+      "role_parent": "Parent",
+      "role_parent_2kids": "Parent de 2 enfants",
+      "role_sister": "Sœur d'élève",
+      "role_family_amar": "Famille Amar",
+      "source_google": "Avis Google"
     },
     "gallery": {
       "hero_title": "Galerie",
@@ -878,7 +883,12 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "Join the families who trust us",
       "cta_subtitle": "More than 150 families have already chosen Al Amine Academy. It's your turn.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Enroll my child",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Call us"
+      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Call us",
+      "role_parent": "Parent",
+      "role_parent_2kids": "Parent of 2 children",
+      "role_sister": "Student's sister",
+      "role_family_amar": "Famille Amar",
+      "source_google": "Google Review"
     },
     "gallery": {
       "hero_title": "Gallery",
@@ -1473,7 +1483,12 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "انضمّ إلى الأسر التي تثق بنا",
       "cta_subtitle": "اختارت أكثر من 150 أسرة أكاديمية الأمين بالفعل. حان دورك.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> تسجيل طفلي",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> اتصل بنا"
+      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> اتصل بنا",
+      "role_parent": "أحد الوالدين",
+      "role_parent_2kids": "والد طفلين",
+      "role_sister": "أخت الطالب",
+      "role_family_amar": "عائلة Amar",
+      "source_google": "تقييم Google"
     },
     "gallery": {
       "hero_title": "المعرض",
@@ -2063,7 +2078,12 @@ window.AAA_TRANSLATIONS = {
       "cta_title": "Únase a las familias que confían en nosotros",
       "cta_subtitle": "Más de 150 familias ya han elegido Al Amine Academy. Es su turno.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Inscribir a mi hijo",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Llamarnos"
+      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Llamarnos",
+      "role_parent": "Padre / Madre",
+      "role_parent_2kids": "Padre de 2 hijos",
+      "role_sister": "Hermana del alumno",
+      "role_family_amar": "Famille Amar",
+      "source_google": "Reseña Google"
     },
     "gallery": {
       "hero_title": "Galería",
