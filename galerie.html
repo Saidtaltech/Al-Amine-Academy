@@ -134,7 +134,7 @@
   <div class="h-20"></div>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero-cover" style="--hero-image: url('assets/img/galerie-hero.jpg')">
+  <section class="hero-cover" style="--hero-image: url('assets/img/camp-vacances-hero.jpg'); background-position: center, center 50%, center">
     <div class="hero-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm mb-6 border border-white/10">
@@ -156,15 +156,15 @@
     <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="text-center mb-16" data-aos="fade-up">
+      <div class="text-center mb-16 reveal">
         <span class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="gallery.section_badge">Notre Galerie</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="gallery.categories_title">Catégories</h2>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 reveal" data-i18n="gallery.categories_title">Catégories</h2>
         <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="gallery.categories_subtitle">Sélectionnez une catégorie pour voir les images et vidéos</p>
       </div>
 
       <!-- Gallery Categories Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="0">
+        <div class="group cursor-pointer card-3d reveal">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-classes.jpg" alt="Salles de classe" class="w-full h-64 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -184,7 +184,7 @@
           </div>
         </div>
 
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="100">
+        <div class="group cursor-pointer card-3d reveal reveal-delay-2">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-sport.jpg" alt="Activités sportives" class="w-full h-64 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -204,7 +204,7 @@
           </div>
         </div>
 
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="200">
+        <div class="group cursor-pointer card-3d reveal reveal-delay-4">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-ceremonies.jpg" alt="Cérémonies et événements" class="w-full h-64 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -224,7 +224,7 @@
           </div>
         </div>
 
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="300">
+        <div class="group cursor-pointer card-3d reveal reveal-delay-6">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-batiment.jpg" alt="Bâtiment et locaux" class="w-full h-64 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -244,7 +244,7 @@
           </div>
         </div>
 
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="400">
+        <div class="group cursor-pointer card-3d reveal reveal-delay-8">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-cantine.jpg" alt="Cantine et repas" class="w-full h-64 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -264,7 +264,7 @@
           </div>
         </div>
 
-        <div class="group cursor-pointer card-3d" data-aos="fade-up" data-aos-delay="500">
+        <div class="group cursor-pointer card-3d reveal">
           <div class="relative overflow-hidden rounded-3xl h-64">
             <img src="assets/img/galerie-priere.jpg" alt="Prières et vie spirituelle" class="w-full h-64 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -286,7 +286,7 @@
       </div>
 
       <!-- Coming Soon Message -->
-      <div class="mt-20 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 dark:border-primary/30 rounded-3xl p-12 text-center" data-aos="fade-up">
+      <div class="mt-20 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 dark:border-primary/30 rounded-3xl p-12 text-center reveal">
         <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-3xl flex items-center justify-center mx-auto mb-6">
           <i class="fas fa-camera text-white text-3xl"></i>
         </div>
@@ -317,7 +317,7 @@
   <!-- STICKY MOBILE CTA -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
     <div class="flex gap-2">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg" target="_blank" rel="noopener">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg btn-shimmer" target="_blank" rel="noopener">
         <i class="fas fa-edit mr-1"></i> S'inscrire
       </a>
       <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
