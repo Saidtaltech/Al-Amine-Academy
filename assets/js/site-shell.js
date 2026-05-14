@@ -181,6 +181,25 @@
     return 'index';
   }
 
+  /* --- Auto-inject modern CSS + JS once, before anything else --- */
+  function injectModernAssets() {
+    if (!document.querySelector('link[data-aaa-modern]')) {
+      var link = document.createElement('link');
+      link.rel  = 'stylesheet';
+      link.href = ASSET_PREFIX + 'assets/css/modern.css';
+      link.setAttribute('data-aaa-modern', '1');
+      document.head.appendChild(link);
+    }
+    if (!document.querySelector('script[data-aaa-modern-js]')) {
+      var s = document.createElement('script');
+      s.src   = ASSET_PREFIX + 'assets/js/modern-reveal.js';
+      s.defer = true;
+      s.setAttribute('data-aaa-modern-js', '1');
+      document.head.appendChild(s);
+    }
+  }
+  injectModernAssets();
+
   function inject() {
     var nav = document.getElementById('aaa-navbar');
     if (nav) {

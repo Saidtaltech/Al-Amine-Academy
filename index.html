@@ -171,34 +171,42 @@
 
   <!-- HERO SECTION - The Customer is the Hero -->
   <section class="hero-gradient min-h-screen flex items-center pt-24 lg:pt-20 relative overflow-hidden" style="--hero-image: url('assets/img/hero-eleves-coran.jpg'); background-image: linear-gradient(160deg,rgba(9,28,40,.30) 0%,rgba(22,91,115,.48) 60%,rgba(22,91,115,.58) 100%), var(--hero-image, none), linear-gradient(135deg,#1e7a9a 0%,#3ba5c9 100%); background-size: cover,cover,cover; background-position:center,center 35%,center; background-repeat:no-repeat;">
-    <!-- Animated background elements -->
-    <div class="absolute top-10 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float"></div>
-    <div class="absolute bottom-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float-delay"></div>
+    <!-- Animated soft blobs -->
+    <div class="blob blob-amber aaa-float" style="width:480px;height:480px;top:-120px;right:-80px;"></div>
+    <div class="blob blob-teal aaa-float-slow" style="width:420px;height:420px;bottom:-100px;left:-80px;"></div>
+    <div class="blob blob-yellow aaa-float-fast" style="width:320px;height:320px;top:40%;left:50%;transform:translateX(-50%);opacity:.18;"></div>
+    <!-- Subtle dotted overlay -->
+    <div class="absolute inset-0 opacity-[0.05] dotted-overlay text-white pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
-        <div data-aos="fade-right" data-aos-duration="800">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-i18n-html="hero.title_html">
-            Offrez à votre enfant une <span class="text-secondary">éducation coranique</span> d'excellence
+        <div>
+          <div class="reveal inline-flex items-center gap-2.5 glass-badge px-5 py-2.5 rounded-full text-white font-bold text-sm mb-6 shadow-lg">
+            <span class="w-2 h-2 rounded-full bg-secondary aaa-pulse-soft"></span>
+            <i class="fas fa-mosque text-secondary"></i>
+            <span data-i18n="hero.badge">DAARA Moderne · Dakar</span>
+          </div>
+          <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 heading-tight" data-i18n-html="hero.title_html">
+            Offrez à votre enfant une <span class="gradient-text">éducation coranique</span> d'excellence
           </h1>
 
-          <p class="text-lg md:text-xl text-white/90 mb-8 leading-relaxed" data-i18n="hero.subtitle">
+          <p class="reveal reveal-delay-2 text-lg md:text-xl text-white/90 mb-8 leading-relaxed" data-i18n="hero.subtitle">
             Vous cherchez un daara moderne qui allie mémorisation du Coran, discipline et épanouissement ? Al Amine Academy accompagne votre enfant vers la réussite spirituelle et académique.
           </p>
 
           <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="cta-primary px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center">
+          <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 mb-12">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="btn-shimmer cta-primary px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center shadow-2xl shadow-secondary/30 hover:-translate-y-0.5 transition-transform">
               <i class="fas fa-pen-fancy mr-2"></i><span data-i18n="hero.cta_primary">Inscrire mon enfant</span>
             </a>
-            <a href="#programmes" class="cta-secondary px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center">
+            <a href="#programmes" class="cta-secondary px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center hover:-translate-y-0.5 transition-transform">
               <i class="fas fa-compass mr-2"></i><span data-i18n="hero.cta_secondary">Découvrir nos programmes</span>
             </a>
           </div>
 
           <!-- Stats Bar -->
-          <div class="stats-bar rounded-xl p-6 flex flex-col sm:flex-row gap-6">
+          <div class="reveal reveal-delay-4 stats-bar rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
             <div class="flex-1 text-center">
               <div class="text-2xl font-bold text-secondary">4.9<span class="text-sm">/5</span></div>
               <p class="text-white/80 text-sm"><i class="fas fa-star text-secondary mr-1"></i><span data-i18n="hero.stats_rating">15 avis Google</span></p>
@@ -222,8 +230,8 @@
         </div>
 
         <!-- Right Image / Social Proof Card -->
-        <div class="relative flex items-center justify-center">
-          <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves apprenant le Coran à Al Amine Academy Dakar" fetchpriority="high" decoding="async" class="w-full h-96 md:h-[540px] object-cover rounded-2xl shadow-2xl"
+        <div class="reveal reveal-delay-2 relative flex items-center justify-center">
+          <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves apprenant le Coran à Al Amine Academy Dakar" fetchpriority="high" decoding="async" class="w-full h-96 md:h-[540px] object-cover rounded-3xl shadow-2xl shadow-teal-950/40"
                onerror="this.style.display='none'; this.nextElementSibling.style.removeProperty('display');">
           <!-- Social proof card — always shown if image fails, floating overlay otherwise -->
           <div class="absolute -bottom-6 -left-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 max-w-[280px] border border-white/60 dark:border-slate-700/60">
@@ -293,47 +301,54 @@
   </section>
 
   <!-- PROBLEM SECTION - The Real Challenges Parents Face -->
-  <section id="probleme" class="py-20 bg-slate-50 dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4" data-i18n-html="home.problems_title_html">
-          Les défis des parents <span class="text-primary">aujourd'hui</span>
+  <section id="probleme" class="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 relative overflow-hidden">
+    <div class="absolute top-1/4 left-0 w-72 h-72 bg-amber-100/30 dark:bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-0 w-72 h-72 bg-teal-100/40 dark:bg-teal-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="reveal inline-flex items-center gap-2 bg-secondary/10 text-secondary-dark dark:text-secondary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary aaa-pulse-soft"></span>
+          <span data-i18n="home.problems_eyebrow">Les défis</span>
+        </span>
+        <h2 class="reveal reveal-delay-1 text-4xl md:text-5xl font-extrabold mb-4 heading-tight" data-i18n-html="home.problems_title_html">
+          Les défis des parents <span class="gradient-text-teal">aujourd'hui</span>
         </h2>
-        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto" data-i18n="home.problems_subtitle">
+        <p class="reveal reveal-delay-2 text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto" data-i18n="home.problems_subtitle">
           Vous n'êtes pas seul(e). Des centaines de parents vivent les mêmes préoccupations.
         </p>
       </div>
 
       <!-- Three Problems -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- External Problem -->
-        <div class="problem-card rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-14 h-14 rounded-lg bg-secondary/20 flex items-center justify-center mb-6">
+        <div class="reveal reveal-delay-1 soft-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700">
+          <div class="icon-wrap w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 flex items-center justify-center mb-6 shadow-sm">
             <i class="fas fa-search text-secondary text-2xl"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-4" data-i18n="home.problem_external_title">Trouver un daara fiable</h3>
+          <h3 class="text-2xl font-bold mb-4 tracking-tight" data-i18n="home.problem_external_title">Trouver un daara fiable</h3>
           <p class="text-slate-700 dark:text-slate-300 leading-relaxed" data-i18n="home.problem_external_text">
             Trouver un daara fiable qui offre de vrais résultats dans la mémorisation du Coran tout en maintenant un niveau académique solide.
           </p>
         </div>
 
         <!-- Internal Problem -->
-        <div class="problem-card rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-14 h-14 rounded-lg bg-secondary/20 flex items-center justify-center mb-6">
-            <i class="fas fa-heart text-secondary text-2xl"></i>
+        <div class="reveal reveal-delay-2 soft-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700">
+          <div class="icon-wrap w-16 h-16 rounded-2xl bg-gradient-to-br from-coral/20 to-coral/5 flex items-center justify-center mb-6 shadow-sm">
+            <i class="fas fa-heart text-coral text-2xl"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-4" data-i18n="home.problem_internal_title">La peur de faire le mauvais choix</h3>
+          <h3 class="text-2xl font-bold mb-4 tracking-tight" data-i18n="home.problem_internal_title">La peur de faire le mauvais choix</h3>
           <p class="text-slate-700 dark:text-slate-300 leading-relaxed" data-i18n="home.problem_internal_text">
             La peur que votre enfant ne perde ses valeurs, ne prenne du retard académique, ou ne s'épanouisse pas dans un environnement contrôlé.
           </p>
         </div>
 
         <!-- Philosophical Problem -->
-        <div class="problem-card rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-14 h-14 rounded-lg bg-secondary/20 flex items-center justify-center mb-6">
-            <i class="fas fa-lightbulb text-secondary text-2xl"></i>
+        <div class="reveal reveal-delay-3 soft-card group bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700">
+          <div class="icon-wrap w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 shadow-sm">
+            <i class="fas fa-lightbulb text-primary text-2xl"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-4" data-i18n="home.problem_philosophical_title">Ce que votre enfant mérite</h3>
+          <h3 class="text-2xl font-bold mb-4 tracking-tight" data-i18n="home.problem_philosophical_title">Ce que votre enfant mérite</h3>
           <p class="text-slate-700 dark:text-slate-300 leading-relaxed" data-i18n="home.problem_philosophical_text">
             Chaque enfant mérite une éducation qui nourrit l'esprit ET l'âme, qui renforce la foi sans compromettre l'avenir académique.
           </p>
@@ -343,59 +358,64 @@
   </section>
 
   <!-- GUIDE SECTION - Al Amine as the Guide with Empathy + Authority -->
-  <section id="guide" class="py-20 bg-white dark:bg-slate-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="guide" class="py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-teal-100/30 dark:bg-teal-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left: Empathy -->
-        <div data-aos="fade-right">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="home.guide_title">
-            Nous comprenons vos inquiétudes
+        <div>
+          <span class="reveal inline-flex items-center gap-2 bg-teal-100 text-teal-700 dark:bg-teal-500/20 dark:text-teal-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+            <span class="w-1.5 h-1.5 rounded-full bg-teal-600 aaa-pulse-soft"></span>
+            <span data-i18n="home.guide_eyebrow">Notre engagement</span>
+          </span>
+          <h2 class="reveal reveal-delay-1 text-4xl md:text-5xl font-extrabold mb-6 heading-tight" data-i18n="home.guide_title">
+            Nous comprenons <span class="gradient-text-teal">vos inquiétudes</span>
           </h2>
-          <p class="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.guide_text">
+          <p class="reveal reveal-delay-2 text-xl text-slate-600 dark:text-slate-300 mb-6 leading-relaxed" data-i18n="home.guide_text">
             Depuis 2023, Al Amine Academy accompagne les familles du Sénégal dans cette quête délicate : offrir une éducation islamique d'excellence tout en garantissant l'épanouissement et la réussite académique de chaque enfant.
           </p>
-          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.guide_text2">
+          <p class="reveal reveal-delay-3 text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.guide_text2">
             Nos méthodes éprouvées, nos enseignants qualifiés, et notre engagement personnel envers chaque étudiant font la différence.
           </p>
 
           <!-- Authority Badges -->
-          <div class="space-y-4">
-            <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-1">
+          <div class="space-y-3">
+            <div class="reveal reveal-delay-4 check-row flex items-start gap-4 p-3 rounded-2xl hover:bg-teal-50/60 dark:hover:bg-teal-500/5">
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                 <i class="fas fa-star text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg" data-i18n="home.badge1_title">Note 4.9/5 sur Google</h4>
+                <h4 class="font-bold text-lg tracking-tight" data-i18n="home.badge1_title">Note 4.9/5 sur Google</h4>
                 <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge1_text">Avec 15+ avis vérifiés de familles satisfaites</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="150">
-              <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-1">
+            <div class="reveal reveal-delay-5 check-row flex items-start gap-4 p-3 rounded-2xl hover:bg-teal-50/60 dark:hover:bg-teal-500/5">
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                 <i class="fas fa-check-circle text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg" data-i18n="home.badge2_title">Méthode structurée et éprouvée</h4>
+                <h4 class="font-bold text-lg tracking-tight" data-i18n="home.badge2_title">Méthode structurée et éprouvée</h4>
                 <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge2_text">Basée sur des décennies de pédagogie islamique</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-1">
+            <div class="reveal reveal-delay-6 check-row flex items-start gap-4 p-3 rounded-2xl hover:bg-teal-50/60 dark:hover:bg-teal-500/5">
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                 <i class="fas fa-graduation-cap text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg" data-i18n="home.badge3_title">Enseignants qualifiés et bienveillants</h4>
+                <h4 class="font-bold text-lg tracking-tight" data-i18n="home.badge3_title">Enseignants qualifiés et bienveillants</h4>
                 <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge3_text">Passionnés par l'enseignement et le développement des enfants</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="250">
-              <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-1">
+            <div class="reveal reveal-delay-7 check-row flex items-start gap-4 p-3 rounded-2xl hover:bg-teal-50/60 dark:hover:bg-teal-500/5">
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                 <i class="fas fa-chart-line text-secondary"></i>
               </div>
               <div>
-                <h4 class="font-bold text-lg" data-i18n="home.badge4_title">Résultats visibles et mesurables</h4>
+                <h4 class="font-bold text-lg tracking-tight" data-i18n="home.badge4_title">Résultats visibles et mesurables</h4>
                 <p class="text-slate-600 dark:text-slate-400" data-i18n="home.badge4_text">Suivi personnalisé avec rapports réguliers aux parents</p>
               </div>
             </div>
@@ -403,10 +423,11 @@
         </div>
 
         <!-- Right: Visual -->
-        <div data-aos="fade-left" class="relative">
-          <img src="assets/img/batiment-ecole.jpg" alt="Bâtiment de l'école Al Amine Academy" class="w-full h-96 object-cover rounded-2xl shadow-xl"
+        <div class="reveal reveal-delay-2 reveal-right relative">
+          <div class="absolute inset-0 -m-6 bg-gradient-to-br from-teal-200/40 to-amber-200/40 dark:from-teal-500/10 dark:to-amber-500/10 rounded-3xl blur-2xl"></div>
+          <img src="assets/img/batiment-ecole.jpg" alt="Bâtiment de l'école Al Amine Academy" class="relative w-full h-96 object-cover rounded-3xl shadow-2xl shadow-teal-900/15"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
-          <div style="display:none" class="w-full h-96 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-2xl flex items-center justify-center">
+          <div style="display:none" class="relative w-full h-96 bg-gradient-to-br from-[#1e7a9a] to-[#3ba5c9] rounded-3xl items-center justify-center">
             <i class="fas fa-building text-6xl text-white/30"></i>
           </div>
         </div>
@@ -415,99 +436,111 @@
   </section>
 
   <!-- PLAN SECTION - Simple 3-Step Plan -->
-  <section class="py-20 bg-primary text-white relative overflow-hidden">
-    <!-- Background decoration -->
-    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+  <section class="py-24 bg-gradient-to-br from-primary via-teal-700 to-teal-800 text-white relative overflow-hidden">
+    <!-- Animated background blobs -->
+    <div class="blob blob-amber aaa-float" style="width:480px;height:480px;top:-120px;right:-80px;opacity:.15;"></div>
+    <div class="blob blob-yellow aaa-float-slow" style="width:420px;height:420px;bottom:-100px;left:-80px;opacity:.12;"></div>
+    <div class="absolute inset-0 opacity-[0.04] dotted-overlay text-white pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4" data-i18n-html="home.plan_title_html">
-          3 étapes simples pour <span class="text-secondary">commencer</span>
+      <div class="text-center mb-20">
+        <span class="reveal inline-flex items-center gap-2 glass-badge px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary aaa-pulse-soft"></span>
+          <span data-i18n="home.plan_eyebrow">Inscription</span>
+        </span>
+        <h2 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 heading-tight" data-i18n-html="home.plan_title_html">
+          3 étapes simples pour <span class="gradient-text">commencer</span>
         </h2>
-        <p class="text-xl text-white/80 max-w-3xl mx-auto" data-i18n="home.plan_subtitle">
+        <p class="reveal reveal-delay-2 text-xl text-white/80 max-w-3xl mx-auto" data-i18n="home.plan_subtitle">
           Un processus transparent et facile pour inscrire votre enfant.
         </p>
       </div>
 
       <!-- Steps -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <!-- Step 1 -->
-        <div class="relative" data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 h-full">
-            <div class="absolute -top-6 left-8 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
+        <div class="reveal reveal-delay-1 relative">
+          <div class="glass-card group rounded-3xl p-8 border border-white/15 h-full shadow-xl shadow-teal-950/20">
+            <div class="absolute -top-6 left-8 w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-amber-500 flex items-center justify-center text-primary font-extrabold text-xl shadow-lg shadow-secondary/40 icon-wrap">
               1
             </div>
-            <h3 class="text-2xl font-bold mt-4 mb-4" data-i18n="home.plan_step1_title">Inscrivez votre enfant</h3>
-            <p class="text-white/80 mb-4" data-i18n="home.plan_step1_text">
+            <h3 class="text-2xl font-bold mt-6 mb-3 tracking-tight" data-i18n="home.plan_step1_title">Inscrivez votre enfant</h3>
+            <p class="text-white/80 mb-4 leading-relaxed" data-i18n="home.plan_step1_text">
               Remplissez notre formulaire d'inscription en ligne. Ça ne prend que quelques minutes.
             </p>
-            <p class="text-sm text-secondary font-semibold">
-              <i class="fas fa-arrow-down mr-2"></i><span data-i18n="home.plan_step1_action">Obtenir le lien</span>
+            <p class="text-sm text-secondary font-semibold flex items-center gap-2">
+              <i class="fas fa-arrow-down"></i><span data-i18n="home.plan_step1_action">Obtenir le lien</span>
             </p>
           </div>
-          <div class="hidden md:block absolute top-1/2 -right-8 w-16 h-0.5 bg-white/30 -translate-y-1/2"></div>
+          <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-px bg-gradient-to-r from-white/30 to-transparent -translate-y-1/2"></div>
         </div>
 
         <!-- Step 2 -->
-        <div class="relative" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 h-full">
-            <div class="absolute -top-6 left-8 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
+        <div class="reveal reveal-delay-2 relative">
+          <div class="glass-card group rounded-3xl p-8 border border-white/15 h-full shadow-xl shadow-teal-950/20">
+            <div class="absolute -top-6 left-8 w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-amber-500 flex items-center justify-center text-primary font-extrabold text-xl shadow-lg shadow-secondary/40 icon-wrap">
               2
             </div>
-            <h3 class="text-2xl font-bold mt-4 mb-4" data-i18n="home.plan_step2_title">Il rejoint sa classe</h3>
-            <p class="text-white/80 mb-4" data-i18n="home.plan_step2_text">
+            <h3 class="text-2xl font-bold mt-6 mb-3 tracking-tight" data-i18n="home.plan_step2_title">Il rejoint sa classe</h3>
+            <p class="text-white/80 mb-4 leading-relaxed" data-i18n="home.plan_step2_text">
               Votre enfant est intégré dans le programme qui correspond à son âge et ses objectifs.
             </p>
-            <p class="text-sm text-secondary font-semibold">
-              <i class="fas fa-handshake mr-2"></i><span data-i18n="home.plan_step2_action">Bienvenue</span>
+            <p class="text-sm text-secondary font-semibold flex items-center gap-2">
+              <i class="fas fa-handshake"></i><span data-i18n="home.plan_step2_action">Bienvenue</span>
             </p>
           </div>
-          <div class="hidden md:block absolute top-1/2 -right-8 w-16 h-0.5 bg-white/30 -translate-y-1/2"></div>
+          <div class="hidden md:block absolute top-1/2 -right-4 w-8 h-px bg-gradient-to-r from-white/30 to-transparent -translate-y-1/2"></div>
         </div>
 
         <!-- Step 3 -->
-        <div class="relative" data-aos="fade-up" data-aos-delay="300">
-          <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 h-full">
-            <div class="absolute -top-6 left-8 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
+        <div class="reveal reveal-delay-3 relative">
+          <div class="glass-card group rounded-3xl p-8 border border-white/15 h-full shadow-xl shadow-teal-950/20">
+            <div class="absolute -top-6 left-8 w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-amber-500 flex items-center justify-center text-primary font-extrabold text-xl shadow-lg shadow-secondary/40 icon-wrap">
               3
             </div>
-            <h3 class="text-2xl font-bold mt-4 mb-4" data-i18n="home.plan_step3_title">Il progresse chaque jour</h3>
-            <p class="text-white/80 mb-4" data-i18n="home.plan_step3_text">
+            <h3 class="text-2xl font-bold mt-6 mb-3 tracking-tight" data-i18n="home.plan_step3_title">Il progresse chaque jour</h3>
+            <p class="text-white/80 mb-4 leading-relaxed" data-i18n="home.plan_step3_text">
               Suivi personnalisé avec rapports réguliers. Vous voyez les progrès de votre enfant en temps réel.
             </p>
-            <p class="text-sm text-secondary font-semibold">
-              <i class="fas fa-trophy mr-2"></i><span data-i18n="home.plan_step3_action">Succès garanti</span>
+            <p class="text-sm text-secondary font-semibold flex items-center gap-2">
+              <i class="fas fa-trophy"></i><span data-i18n="home.plan_step3_action">Succès garanti</span>
             </p>
           </div>
         </div>
       </div>
 
       <!-- CTA -->
-      <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="inline-block px-10 py-4 rounded-lg bg-secondary hover:bg-secondary/90 text-primary font-bold text-lg transition-all transform hover:scale-105 hover:-translate-y-1">
-          <i class="fas fa-pen-fancy mr-2"></i><span data-i18n="home.start_enrollment">Commencer l'inscription maintenant</span>
+      <div class="reveal reveal-delay-4 text-center">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="btn-shimmer group inline-flex items-center justify-center px-10 py-4 rounded-full bg-secondary hover:bg-secondary/90 text-primary font-bold text-lg shadow-2xl shadow-secondary/40 hover:-translate-y-0.5 transition-transform">
+          <i class="fas fa-pen-fancy mr-2 group-hover:scale-110 transition-transform"></i><span data-i18n="home.start_enrollment">Commencer l'inscription maintenant</span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- PROGRAMMES SECTION - Overview of 3 Programs -->
-  <section id="programmes" class="py-20 bg-slate-50 dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4" data-i18n-html="home.programs_title_html">
-          Nos <span class="text-primary">programmes</span>
+  <section id="programmes" class="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 relative overflow-hidden">
+    <div class="absolute top-1/3 left-0 w-80 h-80 bg-teal-100/40 dark:bg-teal-500/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-1/3 right-0 w-80 h-80 bg-amber-100/30 dark:bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="reveal inline-flex items-center gap-2 bg-teal-100 text-teal-700 dark:bg-teal-500/20 dark:text-teal-300 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-600 aaa-pulse-soft"></span>
+          <span data-i18n="home.programs_eyebrow">Nos formations</span>
+        </span>
+        <h2 class="reveal reveal-delay-1 text-4xl md:text-5xl font-extrabold mb-4 heading-tight" data-i18n-html="home.programs_title_html">
+          Nos <span class="gradient-text">programmes</span>
         </h2>
-        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto" data-i18n="home.programs_subtitle">
+        <p class="reveal reveal-delay-2 text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto" data-i18n="home.programs_subtitle">
           Chaque programme est conçu pour répondre aux besoins spécifiques de votre enfant.
         </p>
       </div>
 
       <!-- Programs Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
         <!-- Program 1: Tahfiz Internat -->
-        <div class="program-card card-lift rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+        <div class="reveal reveal-delay-1 soft-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700">
           <div class="img-zoom">
             <img src="assets/img/programme-tahfiz.jpg" alt="Programme Tahfiz - mémorisation du Coran" class="w-full h-48 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -517,11 +550,11 @@
           </div>
           <div class="p-8">
             <div class="mb-6">
-              <div class="w-16 h-16 rounded-lg bg-secondary/20 flex items-center justify-center mb-4">
+              <div class="icon-wrap w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center mb-4 shadow-sm">
                 <i class="fas fa-book-quran text-secondary text-3xl"></i>
               </div>
-              <h3 class="text-2xl font-bold mb-2" data-i18n="home.card1_title">Tahfiz Internat</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4" data-i18n="home.card1_subtitle">Immersion complète dans la mémorisation du Coran</p>
+              <h3 class="text-2xl font-bold mb-2 tracking-tight" data-i18n="home.card1_title">Tahfiz Internat</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed" data-i18n="home.card1_subtitle">Immersion complète dans la mémorisation du Coran</p>
             </div>
             <ul class="space-y-3 mb-8 text-slate-700 dark:text-slate-300">
               <li class="flex items-start gap-3">
@@ -546,7 +579,7 @@
               <p class="text-slate-600 dark:text-slate-400 text-sm mb-2" data-i18n="home.pricing_label">À partir de</p>
               <p class="text-3xl font-bold text-primary mb-4">100,000 <span class="text-lg">FCFA/mois</span></p>
               <p class="text-sm text-slate-500 dark:text-slate-400 mb-6" data-i18n="home.enrollment_fee">Inscription: 95,000 FCFA</p>
-              <a href="programme-internat.html" class="block w-full text-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold transition-colors" data-i18n="cta.learn_more">
+              <a href="programme-internat.html" class="block w-full text-center px-6 py-3 rounded-full bg-gradient-to-r from-primary to-teal-700 hover:from-primary/95 hover:to-teal-700 text-white font-semibold shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5" data-i18n="cta.learn_more">
                 En savoir plus
               </a>
             </div>
@@ -554,7 +587,7 @@
         </div>
 
         <!-- Program 2: Mixte -->
-        <div class="program-card card-lift rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+        <div class="reveal reveal-delay-2 soft-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700">
           <div class="img-zoom">
             <img src="assets/img/programme-mixte.jpg" alt="Programme mixte externat" class="w-full h-48 object-cover"
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
@@ -564,11 +597,11 @@
           </div>
           <div class="p-8">
             <div class="mb-6">
-              <div class="w-16 h-16 rounded-lg bg-secondary/20 flex items-center justify-center mb-4">
-                <i class="fas fa-balance-scale text-secondary text-3xl"></i>
+              <div class="icon-wrap w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/30 to-primary/5 flex items-center justify-center mb-4 shadow-sm">
+                <i class="fas fa-balance-scale text-primary text-3xl"></i>
               </div>
-              <h3 class="text-2xl font-bold mb-2" data-i18n="home.card3_title">Programme Mixte</h3>
-              <p class="text-slate-600 dark:text-slate-400 mb-4" data-i18n="home.card3_subtitle">Externat : Coran le matin, académique l'après-midi, retour à la maison chaque soir</p>
+              <h3 class="text-2xl font-bold mb-2 tracking-tight" data-i18n="home.card3_title">Programme Mixte</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed" data-i18n="home.card3_subtitle">Externat : Coran le matin, académique l'après-midi, retour à la maison chaque soir</p>
             </div>
             <ul class="space-y-3 mb-8 text-slate-700 dark:text-slate-300">
               <li class="flex items-start gap-3">
@@ -596,7 +629,7 @@
               <p class="text-slate-600 dark:text-slate-400 text-sm mb-2" data-i18n="home.pricing_label">À partir de</p>
               <p class="text-3xl font-bold text-primary mb-4">115,000 <span class="text-lg">FCFA/mois</span></p>
               <p class="text-sm text-slate-500 dark:text-slate-400 mb-6" data-i18n="home.enrollment_fee">Inscription: 95,000 FCFA</p>
-              <a href="programme-mixte.html" class="block w-full text-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold transition-colors" data-i18n="cta.learn_more">
+              <a href="programme-mixte.html" class="block w-full text-center px-6 py-3 rounded-full bg-gradient-to-r from-primary to-teal-700 hover:from-primary/95 hover:to-teal-700 text-white font-semibold shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5" data-i18n="cta.learn_more">
                 En savoir plus
               </a>
             </div>
@@ -605,9 +638,11 @@
       </div>
 
       <!-- Info note -->
-      <div class="bg-white dark:bg-slate-800 rounded-lg p-6 border-l-4 border-secondary" data-aos="fade-up">
-        <p class="text-slate-700 dark:text-slate-300" data-i18n-html="home.enrollment_note_html">
-          <i class="fas fa-info-circle text-secondary mr-2"></i>
+      <div class="reveal max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm flex items-start gap-4">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-info-circle text-secondary"></i>
+        </div>
+        <p class="text-slate-700 dark:text-slate-300 leading-relaxed" data-i18n-html="home.enrollment_note_html">
           <strong>Frais d'inscription:</strong> 95,000 FCFA pour tous les programmes. Les tarifs mensuels comprennent l'instruction, le suivi pédagogique, et les activités incluses.
         </p>
       </div>
@@ -615,32 +650,39 @@
   </section>
 
   <!-- SUCCESS SECTION - Real Testimonials (Google Reviews 4.9/5) -->
-  <section id="temoignages" class="py-20 bg-white dark:bg-slate-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4" data-i18n-html="home.testimonials_title_html">
-          Ce que les <span class="text-primary">familles disent</span>
+  <section id="temoignages" class="py-20 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-100/30 dark:bg-amber-500/5 rounded-full blur-3xl -translate-y-1/4 translate-x-1/4 pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="reveal inline-flex items-center gap-2 bg-secondary/10 text-secondary-dark dark:text-secondary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary aaa-pulse-soft"></span>
+          <span data-i18n="home.testimonials_eyebrow">Avis Google</span>
+        </span>
+        <h2 class="reveal reveal-delay-1 text-4xl md:text-5xl font-extrabold mb-4 heading-tight" data-i18n-html="home.testimonials_title_html">
+          Ce que les <span class="gradient-text-teal">familles disent</span>
         </h2>
-        <div class="flex items-center justify-center gap-2 mb-4">
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+        <div class="reveal reveal-delay-2 flex items-center justify-center gap-2 mb-4">
+          <div class="stars flex gap-0.5">
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
           </div>
-          <span class="text-2xl font-bold text-primary">4.9/5</span>
+          <span class="text-2xl font-extrabold text-primary">4.9/5</span>
           <span class="text-slate-600 dark:text-slate-400" data-i18n="home.google_rating_count">(15 avis Google)</span>
         </div>
-        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+        <p class="reveal reveal-delay-3 text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
           <span data-i18n="home.testimonials_subtitle">Découvrez les transformations et succès de nos élèves à travers les témoignages de leurs familles.</span>
         </p>
       </div>
 
       <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         <!-- Testimonial 1 -->
-        <div class="testimonial-card rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+        <div class="reveal reveal-delay-1 soft-card bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700 relative">
+          <i class="fas fa-quote-left text-3xl text-teal-100 dark:text-teal-700/50 absolute top-6 right-6"></i>
           <div class="flex items-center gap-1 mb-4">
             <i class="fas fa-star stars"></i>
             <i class="fas fa-star stars"></i>
@@ -652,7 +694,7 @@
             "J'ai mis 5 étoiles parce que c'est le maximum qu'on peut noter, sinon vous méritez plus. À peine 1 an que nos enfants sont rentrés dans votre école, franchement on ne le regrette pas."
           </p>
           <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center shadow-sm">
               <i class="fas fa-user text-secondary"></i>
             </div>
             <div>
@@ -663,7 +705,8 @@
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="testimonial-card rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+        <div class="reveal reveal-delay-2 soft-card bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700 relative">
+          <i class="fas fa-quote-left text-3xl text-teal-100 dark:text-teal-700/50 absolute top-6 right-6"></i>
           <div class="flex items-center gap-1 mb-4">
             <i class="fas fa-star stars"></i>
             <i class="fas fa-star stars"></i>
@@ -675,7 +718,7 @@
             "Je suis plus que satisfaite du Daara Al amine, j'y avais laissé mes deux enfants mais machallah que de bons retours de leur part. Merci encore pour le professionnalisme."
           </p>
           <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center shadow-sm">
               <i class="fas fa-user text-secondary"></i>
             </div>
             <div>
@@ -686,7 +729,8 @@
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="testimonial-card rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+        <div class="reveal reveal-delay-3 soft-card bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700 relative">
+          <i class="fas fa-quote-left text-3xl text-teal-100 dark:text-teal-700/50 absolute top-6 right-6"></i>
           <div class="flex items-center gap-1 mb-4">
             <i class="fas fa-star stars"></i>
             <i class="fas fa-star stars"></i>
@@ -698,7 +742,7 @@
             "Je recommande vivement cette Daara. J'y ai inscrit mon petit frère de 9 ans et en moins de 2 mois, il est devenu poli, posé et studieux. Sa lecture coranique est devenue très fluide."
           </p>
           <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center shadow-sm">
               <i class="fas fa-user text-secondary"></i>
             </div>
             <div>
@@ -709,7 +753,8 @@
         </div>
 
         <!-- Testimonial 4 -->
-        <div class="testimonial-card rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+        <div class="reveal reveal-delay-4 soft-card bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700 relative">
+          <i class="fas fa-quote-left text-3xl text-teal-100 dark:text-teal-700/50 absolute top-6 right-6"></i>
           <div class="flex items-center gap-1 mb-4">
             <i class="fas fa-star stars"></i>
             <i class="fas fa-star stars"></i>
@@ -721,7 +766,7 @@
             "Très bon internat. Bien structuré, très bonne pédagogie, très bon apprentissage. Évolution de l'enfant dans l'apprentissage."
           </p>
           <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center shadow-sm">
               <i class="fas fa-user text-secondary"></i>
             </div>
             <div>
@@ -733,11 +778,11 @@
       </div>
 
       <!-- Links to more reviews -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up">
-        <a href="https://www.google.com/maps/place/DAARA+Al+Amine+Academy/reviews" target="_blank" class="px-8 py-4 rounded-lg bg-primary text-white hover:bg-primary/90 font-semibold flex items-center justify-center transition-colors">
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://www.google.com/maps/place/DAARA+Al+Amine+Academy/reviews" target="_blank" class="btn-shimmer px-8 py-4 rounded-full bg-gradient-to-r from-primary to-teal-700 text-white font-semibold flex items-center justify-center shadow-xl shadow-primary/20 hover:-translate-y-0.5 transition-transform">
           <i class="fas fa-google mr-2"></i><span data-i18n="home.all_reviews">Lire tous les avis Google</span>
         </a>
-        <a href="temoignages.html" class="px-8 py-4 rounded-lg border-2 border-primary text-primary hover:bg-primary/5 dark:hover:bg-primary/20 font-semibold flex items-center justify-center transition-colors">
+        <a href="temoignages.html" class="px-8 py-4 rounded-full border-2 border-primary text-primary hover:bg-primary/5 dark:hover:bg-primary/20 font-semibold flex items-center justify-center transition-all hover:-translate-y-0.5">
           <i class="fas fa-comment-dots mr-2"></i><span data-i18n="home.more_testimonials">Plus de témoignages</span>
         </a>
       </div>
@@ -745,23 +790,30 @@
   </section>
 
   <!-- FAILURE SECTION - The Cost of Inaction -->
-  <section class="py-20 bg-slate-50 dark:bg-slate-900">
+  <section class="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white dark:bg-slate-800 rounded-xl p-8 md:p-12 shadow-lg border-l-4 border-coral" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white" data-i18n="home.failure_title">
+      <div class="reveal soft-card relative bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-12 shadow-[0_4px_30px_-12px_rgba(0,0,0,0.08)] border border-slate-100 dark:border-slate-700 overflow-hidden">
+        <div class="absolute -top-8 -left-8 w-32 h-32 bg-coral/10 rounded-full blur-2xl pointer-events-none"></div>
+        <span class="relative inline-flex items-center gap-2 bg-coral/10 text-coral-dark dark:text-coral px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-coral aaa-pulse-soft"></span>
+          <span data-i18n="home.failure_eyebrow">Pourquoi attendre ?</span>
+        </span>
+        <h2 class="relative text-3xl md:text-4xl font-extrabold mb-5 text-slate-900 dark:text-white heading-tight" data-i18n="home.failure_title">
           Ne laissez pas le temps passer
         </h2>
-        <p class="text-lg text-slate-700 dark:text-slate-300 mb-6 leading-relaxed" data-i18n="home.failure_text">
+        <p class="relative text-lg text-slate-700 dark:text-slate-300 mb-5 leading-relaxed" data-i18n="home.failure_text">
           Chaque année d'attente est une année où votre enfant n'accumule pas les souvenirs précieux d'une éducation islamique structurée. Les enfants qui commencent tôt acquièrent une base solide de discipline, de foi, et de réussite académique.
         </p>
-        <p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.failure_text2">
+        <p class="relative text-lg text-slate-700 dark:text-slate-300 mb-8 leading-relaxed" data-i18n="home.failure_text2">
           Rejoignez les 200+ familles qui ont déjà fait confiance à Al Amine Academy pour transformer l'avenir de leurs enfants.
         </p>
-        <div class="flex gap-4">
-          <i class="fas fa-check-circle text-secondary text-2xl flex-shrink-0 mt-1"></i>
+        <div class="relative flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-teal-50 to-amber-50 dark:from-teal-900/20 dark:to-amber-900/20">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-secondary/30 to-secondary/5 flex items-center justify-center flex-shrink-0 shadow-sm">
+            <i class="fas fa-check-circle text-secondary"></i>
+          </div>
           <div>
-            <p class="font-semibold text-slate-900 dark:text-white" data-i18n="home.failure_badge_title">Plus de 3 ans d'accompagnement</p>
-            <p class="text-slate-600 dark:text-slate-400" data-i18n="home.failure_badge_text">Méthode éprouvée depuis 2023</p>
+            <p class="font-bold text-slate-900 dark:text-white" data-i18n="home.failure_badge_title">Plus de 3 ans d'accompagnement</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm" data-i18n="home.failure_badge_text">Méthode éprouvée depuis 2023</p>
           </div>
         </div>
       </div>
@@ -769,58 +821,61 @@
   </section>
 
   <!-- FINAL CTA SECTION - Call to Action -->
-  <section class="py-20 bg-primary text-white relative overflow-hidden">
+  <section class="py-24 bg-gradient-to-br from-primary via-teal-700 to-teal-900 text-white relative overflow-hidden">
     <!-- Background Image -->
     <img src="assets/img/eleves-priere.jpg" alt="Élèves en prière à Al Amine Academy" class="absolute inset-0 w-full h-full object-cover opacity-20"
          onerror="this.style.display='none';" loading="lazy">
 
-    <!-- Background decoration -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-0 right-1/4 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-    </div>
+    <!-- Animated soft blobs -->
+    <div class="blob blob-amber aaa-float" style="width:520px;height:520px;top:-150px;right:10%;opacity:.18;"></div>
+    <div class="blob blob-yellow aaa-float-slow" style="width:420px;height:420px;bottom:-100px;left:10%;opacity:.14;"></div>
+    <div class="absolute inset-0 opacity-[0.04] dotted-overlay text-white pointer-events-none"></div>
 
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up" data-i18n-html="home.final_cta_title_html">
-        Rejoignez notre <span class="text-secondary">famille</span>
+      <span class="reveal inline-flex items-center gap-2 glass-badge px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-secondary aaa-pulse-soft"></span>
+        <span data-i18n="home.final_cta_eyebrow">Inscriptions ouvertes</span>
+      </span>
+      <h2 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 heading-tight" data-i18n-html="home.final_cta_title_html">
+        Rejoignez notre <span class="gradient-text">famille</span>
       </h2>
-      <p class="text-xl text-white/80 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100" data-i18n="home.final_cta_text">
+      <p class="reveal reveal-delay-2 text-xl text-white/85 mb-12 max-w-2xl mx-auto leading-relaxed" data-i18n="home.final_cta_text">
         Prêt(e) à offrir à votre enfant une éducation islamique d'excellence ? Les inscriptions sont ouvertes pour tous nos programmes.
       </p>
 
       <!-- Primary CTA -->
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="inline-block px-12 py-5 rounded-lg bg-secondary hover:bg-secondary/90 text-primary font-bold text-lg transition-all transform hover:scale-105 hover:-translate-y-1 mb-8" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-pen-fancy mr-2"></i><span data-i18n="hero.cta_primary">Inscrire mon enfant</span>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="reveal reveal-delay-3 btn-shimmer group inline-flex items-center justify-center px-12 py-5 rounded-full bg-secondary hover:bg-secondary/95 text-primary font-bold text-lg shadow-2xl shadow-secondary/40 hover:-translate-y-0.5 transition-transform mb-8">
+        <i class="fas fa-pen-fancy mr-2 group-hover:scale-110 transition-transform"></i><span data-i18n="hero.cta_primary">Inscrire mon enfant</span>
       </a>
 
       <!-- Contact Info -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/20">
-        <div data-aos="fade-up" data-aos-delay="100">
-          <div class="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-phone text-secondary text-xl"></i>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/15">
+        <div class="reveal reveal-delay-1 glass-card group rounded-3xl p-6">
+          <div class="icon-wrap w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-amber-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-secondary/30">
+            <i class="fas fa-phone text-white text-xl"></i>
           </div>
-          <p class="text-white/80 mb-2" data-i18n="contact.phone_label">Téléphone</p>
-          <a href="tel:+221777743700" class="text-secondary font-bold hover:text-white transition-colors">
+          <p class="text-white/70 text-sm mb-2" data-i18n="contact.phone_label">Téléphone</p>
+          <a href="tel:+221777743700" class="text-white font-bold hover:text-secondary transition-colors">
             +221 77 774 37 00
           </a>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="200">
-          <div class="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-envelope text-secondary text-xl"></i>
+        <div class="reveal reveal-delay-2 glass-card group rounded-3xl p-6">
+          <div class="icon-wrap w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-amber-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-secondary/30">
+            <i class="fas fa-envelope text-white text-xl"></i>
           </div>
-          <p class="text-white/80 mb-2" data-i18n="contact.email_label">Email</p>
-          <a href="mailto:daara@alamineacademy.com" class="text-secondary font-bold hover:text-white transition-colors">
+          <p class="text-white/70 text-sm mb-2" data-i18n="contact.email_label">Email</p>
+          <a href="mailto:daara@alamineacademy.com" class="text-white font-bold hover:text-secondary transition-colors break-words">
             daara@alamineacademy.com
           </a>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="300">
-          <div class="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-location-dot text-secondary text-xl"></i>
+        <div class="reveal reveal-delay-3 glass-card group rounded-3xl p-6">
+          <div class="icon-wrap w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-amber-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-secondary/30">
+            <i class="fas fa-location-dot text-white text-xl"></i>
           </div>
-          <p class="text-white/80 mb-2" data-i18n="contact.address_label">Adresse</p>
-          <p class="text-secondary font-bold" data-i18n="contact.address">
+          <p class="text-white/70 text-sm mb-2" data-i18n="contact.address_label">Adresse</p>
+          <p class="text-white font-bold" data-i18n="contact.address">
             Cité des Magistrats, Derrière Kër Yoff, Dakar
           </p>
         </div>
