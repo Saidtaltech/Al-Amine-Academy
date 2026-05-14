@@ -169,108 +169,95 @@
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
 
-  <!-- HERO SECTION - The Customer is the Hero -->
-  <section class="hero-gradient min-h-screen flex items-center pt-24 lg:pt-20 relative overflow-hidden" style="--hero-image: url('assets/img/hero-eleves-coran.jpg'); background-image: linear-gradient(160deg,rgba(9,28,40,.30) 0%,rgba(22,91,115,.48) 60%,rgba(22,91,115,.58) 100%), var(--hero-image, none), linear-gradient(135deg,#1e7a9a 0%,#3ba5c9 100%); background-size: cover,cover,cover; background-position:center,center 35%,center; background-repeat:no-repeat;">
-    <!-- Animated soft blobs -->
-    <div class="blob blob-amber aaa-float" style="width:480px;height:480px;top:-120px;right:-80px;"></div>
-    <div class="blob blob-teal aaa-float-slow" style="width:420px;height:420px;bottom:-100px;left:-80px;"></div>
-    <div class="blob blob-yellow aaa-float-fast" style="width:320px;height:320px;top:40%;left:50%;transform:translateX(-50%);opacity:.18;"></div>
-    <!-- Subtle dotted overlay -->
-    <div class="absolute inset-0 opacity-[0.05] dotted-overlay text-white pointer-events-none"></div>
+  <!-- HERO SECTION -->
+  <section class="hero-gradient min-h-screen flex flex-col justify-end pb-14 relative overflow-hidden"
+    style="background-image: linear-gradient(to bottom, rgba(9,28,40,.08) 0%, rgba(9,28,40,.30) 45%, rgba(9,28,40,.78) 75%, rgba(9,28,40,.90) 100%), url('assets/img/hero-eleves-coran.jpg'), linear-gradient(135deg,#1e7a9a 0%,#3ba5c9 100%);
+           background-size: cover, cover, cover;
+           background-position: center, center 20%, center;
+           background-repeat: no-repeat;">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Content -->
-        <div>
-          <div class="reveal inline-flex items-center gap-2.5 glass-badge px-5 py-2.5 rounded-full text-white font-bold text-sm mb-6 shadow-lg">
-            <span class="w-2 h-2 rounded-full bg-secondary aaa-pulse-soft"></span>
-            <i class="fas fa-mosque text-secondary"></i>
-            <span data-i18n="hero.badge">DAARA Moderne · Dakar</span>
-          </div>
-          <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 heading-tight" data-i18n-html="hero.title_html">
-            Offrez à votre enfant une <span class="gradient-text">éducation coranique</span> d'excellence
-          </h1>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
 
-          <p class="reveal reveal-delay-2 text-lg md:text-xl text-white/90 mb-8 leading-relaxed" data-i18n="hero.subtitle">
-            Vous cherchez un daara moderne qui allie mémorisation du Coran, discipline et épanouissement ? Al Amine Academy accompagne votre enfant vers la réussite spirituelle et académique.
-          </p>
+      <!-- Badge -->
+      <div class="reveal inline-flex items-center gap-2.5 glass-badge px-5 py-2 rounded-full text-white text-sm font-semibold mb-7 shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-secondary aaa-pulse-soft"></span>
+        <i class="fas fa-mosque text-secondary"></i>
+        <span data-i18n="hero.badge">DAARA Moderne · Dakar</span>
+      </div>
 
-          <!-- CTAs -->
-          <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="btn-shimmer cta-primary px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center shadow-2xl shadow-secondary/30 hover:-translate-y-0.5 transition-transform">
-              <i class="fas fa-pen-fancy mr-2"></i><span data-i18n="hero.cta_primary">Inscrire mon enfant</span>
-            </a>
-            <a href="#programmes" class="cta-secondary px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center hover:-translate-y-0.5 transition-transform">
-              <i class="fas fa-compass mr-2"></i><span data-i18n="hero.cta_secondary">Découvrir nos programmes</span>
-            </a>
-          </div>
+      <!-- H1 -->
+      <h1 class="reveal reveal-delay-1 text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-5 heading-tight" data-i18n-html="hero.title_html">
+        Offrez à votre enfant<br>une <span class="gradient-text">éducation coranique</span><br>d'excellence
+      </h1>
 
-          <!-- Stats Bar -->
-          <div class="reveal reveal-delay-4 stats-bar rounded-2xl p-6 flex flex-col sm:flex-row gap-6">
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">4.9<span class="text-sm">/5</span></div>
-              <p class="text-white/80 text-sm"><i class="fas fa-star text-secondary mr-1"></i><span data-i18n="hero.stats_rating">15 avis Google</span></p>
-            </div>
-            <div class="w-px bg-white/20 hidden sm:block"></div>
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary" data-counter="200" data-counter-suffix="+">200+</div>
-              <p class="text-white/80 text-sm" data-i18n="hero.stats_students">Élèves épanouis</p>
-            </div>
-            <div class="w-px bg-white/20 hidden sm:block"></div>
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary">2</div>
-              <p class="text-white/80 text-sm" data-i18n="hero.stats_programs">Programmes adaptés</p>
-            </div>
-            <div class="w-px bg-white/20 hidden sm:block"></div>
-            <div class="flex-1 text-center">
-              <div class="text-2xl font-bold text-secondary" data-counter="2023">2023</div>
-              <p class="text-white/80 text-sm" data-i18n="hero.stats_since">Excellence depuis</p>
-            </div>
-          </div>
+      <!-- Subtitle -->
+      <p class="reveal reveal-delay-2 text-lg md:text-xl text-white/85 mb-9 max-w-2xl mx-auto leading-relaxed" data-i18n="hero.subtitle">
+        Mémorisation du Coran · Discipline · Épanouissement personnel.<br>Le daara moderne de référence à Dakar, depuis 2023.
+      </p>
+
+      <!-- CTAs -->
+      <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" class="btn-shimmer cta-primary px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center shadow-2xl shadow-secondary/30 hover:-translate-y-0.5 transition-transform">
+          <i class="fas fa-pen-fancy mr-2"></i><span data-i18n="hero.cta_primary">Inscrire mon enfant</span>
+        </a>
+        <a href="#programmes" class="cta-secondary px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center hover:-translate-y-0.5 transition-transform">
+          <i class="fas fa-compass mr-2"></i><span data-i18n="hero.cta_secondary">Découvrir nos programmes</span>
+        </a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="reveal reveal-delay-4 stats-bar rounded-2xl p-5 flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+        <div class="flex-1 text-center">
+          <div class="text-2xl font-bold text-secondary">4.9<span class="text-sm">/5</span></div>
+          <p class="text-white/80 text-xs mt-0.5"><i class="fas fa-star text-secondary mr-1"></i><span data-i18n="hero.stats_rating">15 avis Google</span></p>
         </div>
+        <div class="w-px bg-white/20 hidden sm:block"></div>
+        <div class="flex-1 text-center">
+          <div class="text-2xl font-bold text-secondary" data-counter="200" data-counter-suffix="+">200+</div>
+          <p class="text-white/80 text-xs mt-0.5" data-i18n="hero.stats_students">Élèves épanouis</p>
+        </div>
+        <div class="w-px bg-white/20 hidden sm:block"></div>
+        <div class="flex-1 text-center">
+          <div class="text-2xl font-bold text-secondary">2</div>
+          <p class="text-white/80 text-xs mt-0.5" data-i18n="hero.stats_programs">Programmes adaptés</p>
+        </div>
+        <div class="w-px bg-white/20 hidden sm:block"></div>
+        <div class="flex-1 text-center">
+          <div class="text-2xl font-bold text-secondary" data-counter="2023">2023</div>
+          <p class="text-white/80 text-xs mt-0.5" data-i18n="hero.stats_since">Excellence depuis</p>
+        </div>
+      </div>
+    </div>
 
-        <!-- Right Image / Social Proof Card -->
-        <div class="reveal reveal-delay-2 relative flex items-center justify-center">
-          <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves apprenant le Coran à Al Amine Academy Dakar" fetchpriority="high" decoding="async" class="w-full h-96 md:h-[540px] object-cover rounded-3xl shadow-2xl shadow-teal-950/40"
-               onerror="this.style.display='none'; this.nextElementSibling.style.removeProperty('display');">
-          <!-- Social proof card — always shown if image fails, floating overlay otherwise -->
-          <div class="absolute -bottom-6 -left-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-5 max-w-[280px] border border-white/60 dark:border-slate-700/60">
-            <!-- Google rating row -->
-            <div class="flex items-center gap-2 mb-3">
-              <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M43.611 20.083H42V20H24V28H35.303C33.654 32.657 29.223 36 24 36C17.373 36 12 30.627 12 24C12 17.373 17.373 12 24 12C27.059 12 29.842 13.154 31.961 15.039L37.618 9.382C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24C4 35.045 12.955 44 24 44C35.045 44 44 35.045 44 24C44 22.659 43.862 21.35 43.611 20.083Z" fill="#FFC107"/>
-                <path d="M6.30603 14.691L12.877 19.51C14.655 15.108 18.961 12 24 12C27.059 12 29.842 13.154 31.961 15.039L37.618 9.382C34.046 6.053 29.268 4 24 4C16.318 4 9.65603 8.337 6.30603 14.691Z" fill="#FF3D00"/>
-                <path d="M24 44C29.166 44 33.86 42.023 37.409 38.808L31.219 33.57C29.211 35.092 26.715 36 24 36C18.798 36 14.381 32.683 12.717 28.054L6.19501 33.079C9.50501 39.556 16.227 44 24 44Z" fill="#4CAF50"/>
-                <path d="M43.611 20.083H42V20H24V28H35.303C34.511 30.237 33.072 32.166 31.216 33.572L31.219 33.57L37.409 38.808C36.971 39.205 44 34 44 24C44 22.659 43.862 21.35 43.611 20.083Z" fill="#1976D2"/>
-              </svg>
-              <span class="text-sm font-bold text-slate-800 dark:text-white" data-i18n="hero.proof_google">Google Reviews</span>
-            </div>
-            <!-- Stars + score -->
-            <div class="flex items-center gap-1.5 mb-2">
-              <span class="text-3xl font-extrabold text-slate-900 dark:text-white leading-none">4.9</span>
-              <div class="flex gap-0.5">
-                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                <i class="fas fa-star text-yellow-400 text-sm"></i>
-              </div>
-            </div>
-            <!-- Testimonial quote -->
-            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-3 italic" data-i18n="hero.proof_quote">
-              "Mon fils a mémorisé 3 juz en 6 mois. Une école exceptionnelle !"
-            </p>
-            <!-- Counter stat -->
-            <div class="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-700">
-              <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-users text-primary text-xs"></i>
-              </div>
-              <div>
-                <p class="text-xs font-bold text-slate-800 dark:text-white leading-none" data-i18n="hero.proof_students">200+ élèves</p>
-                <p class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="hero.proof_students_sub">inscrits &amp; épanouis</p>
-              </div>
-            </div>
-          </div>
+    <!-- Floating Google Reviews card -->
+    <div class="absolute bottom-8 right-6 hidden lg:block bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-4 w-60 border border-white/60 z-20">
+      <div class="flex items-center gap-2 mb-2">
+        <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M43.611 20.083H42V20H24V28H35.303C33.654 32.657 29.223 36 24 36C17.373 36 12 30.627 12 24C12 17.373 17.373 12 24 12C27.059 12 29.842 13.154 31.961 15.039L37.618 9.382C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24C4 35.045 12.955 44 24 44C35.045 44 44 35.045 44 24C44 22.659 43.862 21.35 43.611 20.083Z" fill="#FFC107"/>
+          <path d="M6.30603 14.691L12.877 19.51C14.655 15.108 18.961 12 24 12C27.059 12 29.842 13.154 31.961 15.039L37.618 9.382C34.046 6.053 29.268 4 24 4C16.318 4 9.65603 8.337 6.30603 14.691Z" fill="#FF3D00"/>
+          <path d="M24 44C29.166 44 33.86 42.023 37.409 38.808L31.219 33.57C29.211 35.092 26.715 36 24 36C18.798 36 14.381 32.683 12.717 28.054L6.19501 33.079C9.50501 39.556 16.227 44 24 44Z" fill="#4CAF50"/>
+          <path d="M43.611 20.083H42V20H24V28H35.303C34.511 30.237 33.072 32.166 31.216 33.572L31.219 33.57L37.409 38.808C36.971 39.205 44 34 44 24C44 22.659 43.862 21.35 43.611 20.083Z" fill="#1976D2"/>
+        </svg>
+        <span class="text-xs font-bold text-slate-800" data-i18n="hero.proof_google">Google Reviews</span>
+      </div>
+      <div class="flex items-center gap-1.5 mb-1.5">
+        <span class="text-2xl font-extrabold text-slate-900 leading-none">4.9</span>
+        <div class="flex gap-0.5">
+          <i class="fas fa-star text-yellow-400 text-xs"></i>
+          <i class="fas fa-star text-yellow-400 text-xs"></i>
+          <i class="fas fa-star text-yellow-400 text-xs"></i>
+          <i class="fas fa-star text-yellow-400 text-xs"></i>
+          <i class="fas fa-star text-yellow-400 text-xs"></i>
+        </div>
+      </div>
+      <p class="text-[11px] text-slate-600 leading-relaxed mb-2 italic" data-i18n="hero.proof_quote">"Mon fils a mémorisé 3 juz en 6 mois. Une école exceptionnelle !"</p>
+      <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+        <div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-users text-primary text-[10px]"></i>
+        </div>
+        <div>
+          <p class="text-[11px] font-bold text-slate-800 leading-none" data-i18n="hero.proof_students">200+ élèves</p>
+          <p class="text-[10px] text-slate-500" data-i18n="hero.proof_students_sub">inscrits &amp; épanouis</p>
         </div>
       </div>
     </div>
