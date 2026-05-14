@@ -248,7 +248,7 @@ h2 { line-height: 1.1; }
   min-height: 65vh;
   background-color: var(--brand-blue-deep);
   background-image:
-    linear-gradient(160deg, rgba(9,28,40,.74) 0%, rgba(21,84,108,.82) 55%, rgba(22,91,115,.92) 100%),
+    linear-gradient(to bottom, rgba(9,28,40,.18) 0%, rgba(9,28,40,.45) 40%, rgba(9,28,40,.78) 75%, rgba(9,28,40,.88) 100%),
     var(--hero-image, none),
     linear-gradient(135deg, var(--brand-blue-deep) 0%, var(--brand-blue) 100%);
   background-size: cover, cover, cover;
