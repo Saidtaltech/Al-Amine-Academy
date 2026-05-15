@@ -33,6 +33,7 @@
     +         '<div class="relative group">'
     +           '<button type="button" data-route="programs" class="nav-link hover:text-primary inline-flex items-center gap-1" data-i18n="menu.programs">Programmes <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i></button>'
     +           '<div class="absolute left-1/2 -translate-x-1/2 mt-3 w-72 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-1 group-hover:translate-y-0 border border-slate-100 overflow-hidden">'
+    +             '<a href="' + ASSET_PREFIX + 'programme-internat.html"          class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fas fa-book-open text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm">Tahfiz Internat</p><p class="text-xs text-slate-500">Mémorisation complète du Coran</p></div></a>'
     +             '<a href="' + ASSET_PREFIX + 'programme-mixte.html"             class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fas fa-balance-scale text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.mixed">Programme Mixte</p><p class="text-xs text-slate-500">Externat journalier</p></div></a>'
     +             '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"    class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center"><i class="fas fa-laptop text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-slate-500">Apprenez de chez vous</p></div></a>'
     +             '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"    class="flex items-center gap-3 px-4 py-3 hover:bg-secondary/5"><div class="w-9 h-9 bg-secondary/10 rounded-lg flex items-center justify-center"><i class="fas fa-gift text-secondary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-slate-500">Accès libre pour tous</p></div></a>'
@@ -68,6 +69,7 @@
 
     +     '<div id="aaa-mobile-menu" class="hidden lg:hidden pb-4 pt-2 border-t border-slate-200 text-slate-700">'
     +       '<a href="' + ASSET_PREFIX + 'index.html"          data-route="index"        class="block py-2" data-i18n="menu.home">Accueil</a>'
+    +       '<a href="' + ASSET_PREFIX + 'programme-internat.html"          data-route="programs" class="block py-2 pl-4 text-sm"><i class="fas fa-book-open text-primary mr-2 text-xs"></i>Tahfiz Internat</a>'
     +       '<a href="' + ASSET_PREFIX + 'programme-mixte.html"             data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.mixed">Programme Mixte</a>'
     +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"    data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.online">Cours en Ligne</a>'
     +       '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"    data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.free">Cours Gratuits</a>'
@@ -132,6 +134,7 @@
     +       '<div>'
     +         '<h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.programs">Nos programmes</h4>'
     +         '<ul class="space-y-2 text-sm">'
+    +           '<li><a href="' + ASSET_PREFIX + 'programme-internat.html">Tahfiz Internat</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-mixte.html"             data-i18n="programs.mixed">Programme Mixte</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"    data-i18n="programs.online">Cours en Ligne</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"    data-i18n="programs.free">Cours Gratuits</a></li>'
