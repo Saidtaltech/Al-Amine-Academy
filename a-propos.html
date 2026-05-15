@@ -1,44 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="fr">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>À Propos | DAARA Al Amine Academy | École Coranique Moderne Dakar</title>
-  <meta content="Découvrez DAARA Al Amine Academy, la meilleure école coranique moderne à Dakar. Notre mission, valeurs, équipe et histoire depuis 2024. Programme Tahfiz d'excellence." name="description"/>
-  <meta content="daara al amine, école coranique dakar, mission école coranique, valeurs daara, équipe enseignante dakar, programme tahfiz dakar" name="keywords"/>
+  <title>À Propos | DAARA Al Amine Academy | Oustaz Al Amine Niang</title>
+  <meta content="Découvrez Oustaz Al Amine Niang, fondateur et directeur de DAARA Al Amine Academy, école coranique moderne à Dakar." name="description"/>
+  <meta content="oustaz al amine niang, fondateur daara al amine, école coranique dakar, directeur al amine academy" name="keywords"/>
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Preconnect to CDN origins — faster DNS + TLS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <!-- Google Fonts — non-blocking for better FCP -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
-  <!-- Font Awesome — non-blocking -->
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/site.css">
-  <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
-   /* Sticky mobile CTA + FAQ pattern */
-   .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
-   details summary { cursor: pointer; list-style: none; }
-   details summary::-webkit-details-marker { display: none; }
-   details[open] summary .faq-icon { transform: rotate(45deg); }
-   .faq-icon { transition: transform .25s ease; }
-</style>
+  <link rel="stylesheet" href="assets/css/modern.css">
+  <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
 
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8', 50: '#f0f9fc' },
+            primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
             secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
-            accent: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-            coral: { DEFAULT: '#f43f5e', dark: '#e11d48', light: '#ffe4e6' },
             teal: {
               50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
               400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
@@ -54,440 +41,173 @@
     }
   </script>
 
-  <style>
-    body { font-family: 'Montserrat', sans-serif; }
-    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
-
-    /* Gradient Animations */
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .gradient-animate {
-      background-size: 200% 200%;
-      animation: gradientShift 8s ease infinite;
-    }
-
-    /* Floating Animation */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    .float { animation: float 6s ease-in-out infinite; }
-    .float-delay { animation: float 6s ease-in-out 2s infinite; }
-
-    /* Pulse glow */
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(13, 148, 136, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(13, 148, 136, 0.6); }
-    }
-    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
-
-    /* Card hover effects */
-    .card-3d {
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .card-3d:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    /* Navbar scroll effect */
-    .nav-scrolled {
-      background: rgba(255,255,255,0.95) !important;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    }
-    .dark .nav-scrolled {
-      background: rgba(15,23,42,0.95) !important;
-    }
-
-    /* Text gradient */
-    .text-gradient {
-      background: linear-gradient(135deg, #1e7a9a, #3ba5c9, #f59e0b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* Timeline */
-    .timeline-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      left: 24px;
-      top: 72px;
-      width: 2px;
-      height: calc(100% + 24px);
-      background: linear-gradient(180deg, #1e7a9a, transparent);
-    }
-
-    /* Smooth scroll */
-    html { scroll-behavior: smooth; }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e7a9a, #3ba5c9); border-radius: 10px; }
-    .dark ::-webkit-scrollbar-track { background: #1e293b; }
-
-    /* Dark mode transitions */
-    * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-  </style>
-
-  <!-- SEO -->
   <link href="https://alamineacademy.com/a-propos.html" rel="canonical"/>
-  <meta content="À Propos | DAARA Al Amine Academy | Meilleure École Coranique Moderne Dakar" property="og:title"/>
-  <meta content="Découvrez la mission et les valeurs de DAARA Al Amine Academy. École coranique moderne, programme Tahfiz d'excellence, équipe dévouée à Dakar." property="og:description"/>
+  <meta content="À Propos | DAARA Al Amine Academy | Oustaz Al Amine Niang" property="og:title"/>
+  <meta content="Découvrez Oustaz Al Amine Niang, fondateur de DAARA Al Amine Academy — école coranique moderne à Dakar." property="og:description"/>
   <meta content="website" property="og:type"/>
   <meta content="https://alamineacademy.com/a-propos.html" property="og:url"/>
-  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" property="og:image"/>
+  <meta content="https://alamineacademy.com/assets/img/fondateur-oustaz-al-amine-niang.jpg" property="og:image"/>
   <meta content="fr_SN" property="og:locale"/>
   <meta content="summary_large_image" name="twitter:card"/>
   <meta content="À Propos | DAARA Al Amine Academy" name="twitter:title"/>
-  <meta content="Découvrez notre histoire, mission et valeurs. École coranique moderne à Dakar." name="twitter:description"/>
-  <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" name="twitter:image"/>
+  <meta content="Oustaz Al Amine Niang, fondateur de DAARA Al Amine Academy." name="twitter:description"/>
+  <meta content="https://alamineacademy.com/assets/img/fondateur-oustaz-al-amine-niang.jpg" name="twitter:image"/>
   <link href="https://alamineacademy.com/a-propos.html" hreflang="fr" rel="alternate"/>
   <link href="https://alamineacademy.com/a-propos.html" hreflang="en" rel="alternate"/>
   <link href="https://alamineacademy.com/a-propos.html" hreflang="ar" rel="alternate"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
-
-  <!-- Geo SEO -->
   <meta content="SN-DK" name="geo.region"/>
   <meta content="Dakar" name="geo.placename"/>
-  <meta content="14.7473;-17.4569" name="geo.position"/>
-  <meta content="14.7473, -17.4569" name="ICBM"/>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "DAARA Al Amine Academy",
-    "url": "https://alamineacademy.com",
-    "logo": "https://alamineacademy.com/assets/img/LogoAAA.png",
-    "description": "Meilleure école coranique moderne à Dakar, Sénégal. Programme Tahfiz, internat, cours académiques.",
-    "foundingDate": "2024",
-    "areaServed": "SN",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Cité des Magistrats, Derrière Kër Yoff",
-      "addressLocality": "Dakar",
-      "addressRegion": "Dakar",
-      "addressCountry": "SN"
-    },
-    "telephone": "+221777743700",
-    "email": "daara@alamineacademy.com",
-    "sameAs": [
-      "https://www.facebook.com/alamineacademy",
-      "https://www.instagram.com/alamineacademy"
-    ]
-  }
-  </script>
 </head>
 
-<body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
+<body class="antialiased bg-white" style="font-family:'Montserrat',sans-serif">
 
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
 
-  <!-- ==================== HERO SECTION ==================== -->
+  <!-- ==================== HERO ==================== -->
   <section class="hero-cover" style="--hero-image: url('/assets/img/hero-eleves-coran.jpg'); background-position: center, center 30%, center">
-    <div class="hero-inner max-w-7xl mx-auto px-4 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="flex justify-center lg:justify-start reveal reveal-left">
-          <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center max-w-xs">
-            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <i class="fas fa-graduation-cap text-white text-3xl"></i>
-            </div>
-            <p class="text-white font-bold text-lg">DAARA Al Amine</p>
-            <p class="text-white/70 text-sm mt-1">Excellence depuis 2023</p>
-            <div class="mt-4 grid grid-cols-2 gap-3 text-center">
-              <div class="bg-white/10 rounded-xl p-3">
-                <div class="text-2xl font-extrabold text-secondary" data-counter="200" data-counter-suffix="+">200+</div>
-                <div class="text-xs text-white/70 mt-1">Élèves</div>
-              </div>
-              <div class="bg-white/10 rounded-xl p-3">
-                <div class="text-2xl font-extrabold text-secondary" data-counter="4.9" data-counter-decimal="true" data-counter-suffix="/5">4.9/5</div>
-                <div class="text-xs text-white/70 mt-1">Google</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-left reveal reveal-right">
-          <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-6 reveal" data-i18n="about.hero_title">
-            À Propos de DAARA Al Amine Academy
-          </h1>
-          <p class="text-xl text-white/90 mb-8" data-i18n="about.hero_subtitle">
-            Votre partenaire de confiance pour l'excellence académique et spirituelle de votre enfant.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== MISSION & VISION SECTION ==================== -->
-  <section class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-16">
-        <img src="assets/img/hero-eleves-coran.jpg" alt="Classe d'apprentissage du Coran" class="w-full h-64 object-cover rounded-2xl" loading="lazy" style="object-position:center 35%">
-      </div>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <!-- Mission -->
-        <div class="reveal reveal-left">
-          <div class="inline-flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-              <i class="fas fa-bullseye text-primary text-xl"></i>
-            </div>
-            <span class="text-primary font-semibold text-sm" data-i18n="about.mission_label">Notre Mission</span>
-          </div>
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 reveal" data-i18n="about.mission_title">
-            Éduquer avec Excellence
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6" data-i18n="about.mission_text">
-            Offrir une éducation holistique combinant la mémorisation du Coran noble avec une formation académique solide. Nous nous engageons à former des jeunes musulmans conscients, cultivés et prêts à contribuer à la société.
-          </p>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                <i class="fas fa-check text-primary text-xs"></i>
-              </div>
-              <span class="text-gray-700 dark:text-gray-300 font-medium" data-i18n="about.mission_bullet1">Mémorisation du Coran certifiée</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                <i class="fas fa-check text-primary text-xs"></i>
-              </div>
-              <span class="text-gray-700 dark:text-gray-300 font-medium" data-i18n="about.mission_bullet2">Excellence académique reconnue</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                <i class="fas fa-check text-primary text-xs"></i>
-              </div>
-              <span class="text-gray-700 dark:text-gray-300 font-medium" data-i18n="about.mission_bullet3">Développement personnel intégral</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Vision -->
-        <div class="reveal reveal-right">
-          <div class="inline-flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-              <i class="fas fa-eye text-accent text-xl"></i>
-            </div>
-            <span class="text-accent font-semibold text-sm" data-i18n="about.vision_label">Notre Vision</span>
-          </div>
-          <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-6 reveal" data-i18n="about.vision_title">
-            Bâtir l'Avenir Ensemble
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6" data-i18n="about.vision_text">
-            Devenir la référence incontournable des écoles coraniques modernes en Afrique de l'Ouest. Une institution qui marie tradition islamique et modernité, produisant des leaders pieux, instruits et éthiques.
-          </p>
-          <ul class="space-y-4">
-            <li class="flex items-start gap-3">
-              <div class="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                <i class="fas fa-star text-accent text-xs"></i>
-              </div>
-              <span class="text-gray-700 dark:text-gray-300 font-medium" data-i18n="about.vision_bullet1">Infrastructure moderne et sécurisée</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <div class="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                <i class="fas fa-star text-accent text-xs"></i>
-              </div>
-              <span class="text-gray-700 dark:text-gray-300 font-medium" data-i18n="about.vision_bullet2">Enseignants qualifiés et dévoués</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <div class="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
-                <i class="fas fa-star text-accent text-xs"></i>
-              </div>
-              <span class="text-gray-700 dark:text-gray-300 font-medium" data-i18n="about.vision_bullet3">Réseau international de collaboration</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== VALUES SECTION ==================== -->
-  <section class="py-24 bg-gray-50 dark:bg-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 reveal">
-        <span class="inline-block bg-secondary/10 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4 btn-shimmer" data-i18n="about.values_label">Nos Valeurs</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 reveal" data-i18n="about.values_title">Les piliers de notre excellence</h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="about.values_subtitle">Ces valeurs fondamentales guident chaque décision et action au sein de notre académie.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Adab / Comportement -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-700 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-600 group reveal">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-primary to-teal-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fas fa-heart text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="about.value_adab">Adab & Comportement</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="about.value_adab_desc">Discipline, respect et politesse. Chaque élève apprend à se comporter avec intégrité et honneur selon les principes islamiques.</p>
-        </div>
-
-        <!-- Excellence -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-700 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-600 group reveal reveal-delay-2">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-secondary to-yellow-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fas fa-trophy text-gray-900 text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="about.value_excellence">Excellence</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="about.value_excellence_desc">Nous visons toujours la qualité supérieure dans l'enseignement, la gestion et les résultats. L'excellence est notre norme.</p>
-        </div>
-
-        <!-- Modernité -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-700 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-600 group reveal reveal-delay-4">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-accent to-purple-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fas fa-lightbulb text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="about.value_modernity">Modernité</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="about.value_modernity_desc">Intégration de la technologie et des méthodes pédagogiques contemporaines sans compromettre les valeurs islamiques.</p>
-        </div>
-
-        <!-- Bienveillance -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-700 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-600 group reveal reveal-delay-6">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-coral/10 to-transparent rounded-bl-full"></div>
-          <div class="w-16 h-16 bg-gradient-to-br from-coral to-pink-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-            <i class="fas fa-hands-helping text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="about.value_kindness">Bienveillance</h3>
-          <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="about.value_kindness_desc">Compassion, soutien et attention envers chaque élève. Un environnement familial qui favorise la confiance et l'épanouissement.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== TEAM SECTION ==================== -->
-  <section class="py-24 bg-white dark:bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 reveal">
-        <span class="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="about.team_label">Notre Équipe</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 reveal" data-i18n="about.team_title">Des professionnels dévoués</h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="about.team_subtitle">Une équipe pédagogique qualifiée, expérimentée et passionnée par l'enseignement du Coran et des disciplines académiques.</p>
-      </div>
-
-      <div class="mb-12">
-        <img src="assets/img/LogoAAA.png" alt="Directeur de Al Amine Academy" class="w-full h-64 object-cover rounded-2xl" loading="lazy" style="object-fit:contain; background:#e8f4f8; padding:1rem">
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Team Member 1 -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700 reveal">
-          <div class="h-48 bg-gradient-to-br from-primary to-teal-400 flex items-center justify-center">
-            <i class="fas fa-user-tie text-white/30 text-6xl"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1" data-i18n="about.team_member1_name">Direction Générale</h3>
-            <p class="text-sm text-primary font-semibold mb-3" data-i18n="about.team_member1_role">Leadership & Vision</p>
-            <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="about.team_member1_desc">Gestion stratégique de l'académie et pilotage de la qualité pédagogique.</p>
-          </div>
-        </div>
-
-        <!-- Team Member 2 -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700 reveal reveal-delay-2">
-          <div class="h-48 bg-gradient-to-br from-secondary to-yellow-400 flex items-center justify-center">
-            <i class="fas fa-book-reader text-white/30 text-6xl"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1" data-i18n="about.team_member2_name">Maîtres Coraniques</h3>
-            <p class="text-sm text-secondary-dark font-semibold mb-3" data-i18n="about.team_member2_role">Tahfiz & Tajweed</p>
-            <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="about.team_member2_desc">Experts en mémorisation et récitation du Coran avec certification.</p>
-          </div>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700 reveal reveal-delay-4">
-          <div class="h-48 bg-gradient-to-br from-accent to-purple-400 flex items-center justify-center">
-            <i class="fas fa-chalkboard-user text-white/30 text-6xl"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1" data-i18n="about.team_member3_name">Enseignants Académiques</h3>
-            <p class="text-sm text-accent font-semibold mb-3" data-i18n="about.team_member3_role">Français, Anglais, Sciences</p>
-            <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="about.team_member3_desc">Professionnels qualifiés préparant au CFEE avec excellence.</p>
-          </div>
-        </div>
-
-        <!-- Team Member 4 -->
-        <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden card-3d border border-gray-100 dark:border-slate-700 reveal reveal-delay-6">
-          <div class="h-48 bg-gradient-to-br from-coral to-pink-400 flex items-center justify-center">
-            <i class="fas fa-heart-pulse text-white/30 text-6xl"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1" data-i18n="about.team_member4_name">Équipe d'Encadrement</h3>
-            <p class="text-sm text-coral font-semibold mb-3" data-i18n="about.team_member4_role">Bien-être & Développement</p>
-            <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="about.team_member4_desc">Moniteurs et conseillers assurant suivi et épanouissement.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-12 reveal">
-        <p class="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6 text-lg" data-i18n="about.team_complete_text">
-          Notre équipe complète comprend également des spécialistes en sports, culture islamique, développement personnel et encadrement internat, tous mobilisés pour la réussite de vos enfants.
+    <div class="hero-inner max-w-4xl mx-auto px-4 lg:px-8 text-center">
+      <div class="reveal">
+        <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white text-sm font-semibold px-5 py-2 rounded-full mb-6">
+          <i class="fas fa-star text-secondary text-xs"></i>
+          Le Fondateur
+        </span>
+        <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-6 heading-tight">
+          À Propos de<br>
+          <span class="gradient-text">DAARA Al Amine Academy</span>
+        </h1>
+        <p class="text-xl text-white/85 max-w-2xl mx-auto">
+          Une vision, une mission, un homme derrière l'académie.
         </p>
-        <a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all" href="contact.html">
-          <i class="fas fa-arrow-right"></i> <span data-i18n="about.team_discover_link">Découvrir notre équipe</span>
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== TIMELINE SECTION ==================== -->
-  <section class="py-24 bg-gray-50 dark:bg-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ==================== FONDATEUR ==================== -->
+  <section class="py-24 bg-white relative overflow-hidden">
+    <!-- Background blobs -->
+    <div class="blob blob-teal aaa-float w-96 h-96 -top-24 -right-32 opacity-10"></div>
+    <div class="blob blob-amber aaa-float-slow w-72 h-72 -bottom-20 -left-20 opacity-10"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section label -->
       <div class="text-center mb-16 reveal">
-        <span class="inline-block bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-semibold mb-4" data-i18n="about.timeline_label">Notre Parcours</span>
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 reveal" data-i18n="about.timeline_title">Historique & Jalons</h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg" data-i18n="about.timeline_subtitle">Une croissance remarquable fondée sur l'engagement envers l'excellence.</p>
+        <span class="inline-block bg-secondary/10 text-secondary-dark px-5 py-2 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">
+          Fondateur &amp; Directeur
+        </span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 heading-tight mb-4">
+          Oustaz Al Amine Niang
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto"></div>
       </div>
 
-      <div class="max-w-4xl mx-auto">
-        <div class="relative">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item mb-12 relative pl-16 reveal">
-            <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-primary to-teal-400 rounded-full flex items-center justify-center shadow-lg">
-              <i class="fas fa-flag text-white text-lg"></i>
+      <!-- Main content: photo + bio -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Photo column -->
+        <div class="reveal reveal-left flex flex-col items-center">
+          <div class="relative w-full max-w-sm mx-auto">
+            <!-- Decorative ring -->
+            <div class="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/5 blur-xl"></div>
+            <!-- Photo -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-square">
+              <img
+                src="assets/img/fondateur-oustaz-al-amine-niang.jpg"
+                alt="Oustaz Al Amine Niang — Fondateur de DAARA Al Amine Academy"
+                class="w-full h-full object-cover object-top"
+                loading="eager"
+              />
+              <!-- Subtle gradient overlay at bottom -->
+              <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+              <!-- Name badge on photo -->
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <p class="font-extrabold text-lg leading-tight">Oustaz Al Amine Niang</p>
+                <p class="text-white/80 text-sm">Fondateur · DAARA Al Amine Academy</p>
+              </div>
             </div>
-            <div class="bg-white dark:bg-slate-700 rounded-2xl p-8 border border-gray-100 dark:border-slate-600">
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="about.timeline_event1_title">Fondation 2023</h3>
-              <p class="text-gray-600 dark:text-gray-300" data-i18n="about.timeline_event1_desc">DAARA Al Amine Academy est fondée avec une vision claire : créer une école coranique moderne alliant tradition et innovation à Dakar.</p>
+            <!-- Floating badge -->
+            <div class="absolute -top-4 -right-4 bg-secondary text-gray-900 rounded-2xl px-4 py-2 shadow-xl font-bold text-sm aaa-bob">
+              <i class="fas fa-graduation-cap mr-1"></i> Depuis 2023
             </div>
           </div>
 
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item mb-12 relative pl-16 reveal reveal-delay-2">
-            <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-secondary to-yellow-400 rounded-full flex items-center justify-center shadow-lg">
-              <i class="fas fa-graduation-cap text-gray-900 text-lg"></i>
-            </div>
-            <div class="bg-white dark:bg-slate-700 rounded-2xl p-8 border border-gray-100 dark:border-slate-600">
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="about.timeline_event2_title">Première promotion 2023-2024</h3>
-              <p class="text-gray-600 dark:text-gray-300" data-i18n="about.timeline_event2_desc">Lancement du programme Tahfiz Internat avec une première cohorte d'élèves. Inauguration de nos installations modernes à la Cité des Magistrats.</p>
-            </div>
+          <!-- Social / contact links -->
+          <div class="flex gap-3 mt-8">
+            <a href="https://wa.me/221777743700" target="_blank" rel="noopener"
+               class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl font-semibold text-sm transition shadow-md btn-shimmer">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="contact.html"
+               class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-2xl font-semibold text-sm transition shadow-md btn-shimmer">
+              <i class="fas fa-envelope"></i> Contacter
+            </a>
+          </div>
+        </div>
+
+        <!-- Bio column -->
+        <div class="reveal reveal-right space-y-8">
+
+          <!-- Quote opener -->
+          <div class="relative bg-primary/5 border-l-4 border-primary rounded-r-3xl p-6">
+            <i class="fas fa-quote-left text-primary/30 text-4xl absolute top-4 right-4"></i>
+            <p class="text-slate-700 text-lg leading-relaxed italic">
+              <!-- À compléter par le fondateur -->
+              « L'éducation de nos enfants est notre plus grande responsabilité envers Allah et envers la société. À Al Amine Academy, nous unissons le Coran et la science pour former des individus pieux et compétents. »
+            </p>
+            <p class="text-primary font-bold mt-4 text-sm">— Oustaz Al Amine Niang</p>
           </div>
 
-          <!-- Timeline Item 3 -->
-          <div class="timeline-item mb-12 relative pl-16 reveal reveal-delay-4">
-            <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-accent to-purple-400 rounded-full flex items-center justify-center shadow-lg">
-              <i class="fas fa-book-open text-white text-lg"></i>
-            </div>
-            <div class="bg-white dark:bg-slate-700 rounded-2xl p-8 border border-gray-100 dark:border-slate-600">
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="about.timeline_event3_title">Expansion 2024-2026</h3>
-              <p class="text-gray-600 dark:text-gray-300" data-i18n="about.timeline_event3_desc">Ouverture du programme mixte en externat et des cours en ligne. Renforcement de l'équipe pédagogique et passage à plus de 200 élèves. Lancement des conférences ouvertes à toutes les familles.</p>
-            </div>
+          <!-- Bio text -->
+          <div class="prose prose-slate max-w-none">
+            <p class="text-slate-600 leading-relaxed text-base">
+              <!-- À compléter : parcours, formation, ijaza, expériences... -->
+              Hafiz du Coran et éducateur de vocation, <strong class="text-slate-900">Oustaz Al Amine Niang</strong> a fondé DAARA Al Amine Academy avec une conviction profonde : offrir aux enfants sénégalais une éducation islamique d'excellence, alliant la mémorisation du Coran noble à une solide formation académique.
+            </p>
+            <p class="text-slate-600 leading-relaxed text-base mt-4">
+              Animé par sa foi et son expérience dans l'enseignement coranique, il a créé une institution où tradition et modernité se complètent, dans un environnement sécurisé, bienveillant et stimulant pour chaque enfant.
+            </p>
           </div>
 
-          <!-- Timeline Item 4 -->
-          <div class="timeline-item relative pl-16 reveal reveal-delay-6">
-            <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-coral to-pink-400 rounded-full flex items-center justify-center shadow-lg">
-              <i class="fas fa-star text-white text-lg"></i>
+          <!-- Key credentials -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
+              <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-book-open text-primary"></i>
+              </div>
+              <div>
+                <p class="font-bold text-slate-900 text-sm">Hafiz du Coran</p>
+                <p class="text-xs text-slate-500 mt-0.5">Mémorisation complète avec isnâd</p>
+              </div>
             </div>
-            <div class="bg-white dark:bg-slate-700 rounded-2xl p-8 border border-gray-100 dark:border-slate-600">
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="about.timeline_event4_title">Vision 2027 et au-delà</h3>
-              <p class="text-gray-600 dark:text-gray-300" data-i18n="about.timeline_event4_desc">Devenir une référence ouest-africaine de l'éducation coranique moderne : nouveau campus pour l'enseignement secondaire, cycle complet jusqu'au baccalauréat, et programme de bourses pour les familles méritantes.</p>
+            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
+              <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-school text-secondary-dark"></i>
+              </div>
+              <div>
+                <p class="font-bold text-slate-900 text-sm">Fondateur 2023</p>
+                <p class="text-xs text-slate-500 mt-0.5">DAARA Al Amine Academy, Dakar</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
+              <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-users text-primary"></i>
+              </div>
+              <div>
+                <p class="font-bold text-slate-900 text-sm">+200 Élèves formés</p>
+                <p class="text-xs text-slate-500 mt-0.5">En internat, mixte et en ligne</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
+              <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-secondary-dark"></i>
+              </div>
+              <div>
+                <p class="font-bold text-slate-900 text-sm">Cité des Magistrats</p>
+                <p class="text-xs text-slate-500 mt-0.5">Derrière Kër Yoff, Dakar</p>
+              </div>
             </div>
           </div>
         </div>
@@ -495,17 +215,24 @@
     </div>
   </section>
 
-  <!-- ==================== CTA SECTION ==================== -->
-  <section class="py-20 bg-gradient-to-r from-primary via-primary-dark to-accent relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 40 40&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M20 20.5V18H0v-2h20v-2l2 3-2 3zm0-3V20h20v2H20v2l-2-3 2-3z&quot; fill=&quot;%23ffffff&quot; fill-opacity=&quot;.3&quot; fill-rule=&quot;evenodd&quot;/%3E%3C/svg%3E');"></div>
+  <!-- ==================== CTA ==================== -->
+  <section class="py-20 bg-gradient-to-r from-primary via-teal-700 to-primary relative overflow-hidden">
+    <div class="blob blob-amber w-80 h-80 -top-20 right-0 opacity-10 aaa-float"></div>
     <div class="container mx-auto px-4 lg:px-8 text-center relative z-10 reveal reveal-scale">
-      <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6 reveal" data-i18n="about.cta_title">Rejoignez la famille Al Amine</h2>
-      <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto" data-i18n="about.cta_subtitle">Offrez à votre enfant une éducation d'excellence qui allie spiritualité, savoir académique et développement personnel dans un environnement bienveillant et moderne.</p>
+      <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6 heading-tight">
+        Rejoignez la famille Al Amine
+      </h2>
+      <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+        Offrez à votre enfant une éducation d'excellence qui allie spiritualité, savoir académique et développement personnel.
+      </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a class="inline-flex items-center justify-center bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 soft-card" href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview" target="_blank" data-i18n-html="about.cta_btn_primary">
+        <a class="inline-flex items-center justify-center bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 soft-card"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSdxZWQkKpLrnfkqY4OiVuSwFaxwO5fjIUo-SlRGW_o9uKKOuQ/viewform?usp=preview"
+           target="_blank" rel="noopener">
           <i class="fas fa-edit mr-2"></i> Formulaire d'inscription
         </a>
-        <a class="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank" data-i18n-html="about.cta_btn_secondary">
+        <a class="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all"
+           href="https://wa.me/221777743700" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp mr-2"></i> Nous contacter
         </a>
       </div>
@@ -514,23 +241,25 @@
 
   <div id="aaa-footer"></div>
 
-  <!-- AOS Init -->
-
-  <script src="translations.js?v=20260429b"></script>
-  <script src="lang.js?v=20260429b"></script>
-  <script src="assets/js/site-shell.js?v=20260511"></script>
+  <script src="translations.js?v=20260515"></script>
+  <script src="lang.js?v=20260515"></script>
+  <script src="assets/js/site-shell.js?v=20260515"></script>
+  <script src="assets/js/modern-reveal.js" defer></script>
 
   <!-- STICKY MOBILE CTA -->
-  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 border-t border-gray-200 shadow-2xl px-4 py-3"
+       style="backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px)">
     <div class="flex gap-2">
-      <a href="contact.html" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg btn-shimmer" >
+      <a href="contact.html"
+         class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg btn-shimmer">
         <i class="fas fa-phone mr-1"></i> Nous contacter
       </a>
-      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
+      <a href="https://wa.me/221777743700" target="_blank" rel="noopener" aria-label="WhatsApp"
+         class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
   </div>
 
- </body>
+</body>
 </html>
