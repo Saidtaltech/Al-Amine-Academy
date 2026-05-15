@@ -162,7 +162,7 @@
           <p class="text-lg opacity-90" data-i18n="testimonials_page.stat_rating">Note moyenne</p>
         </div>
         <div class="bg-gradient-to-br from-primary-dark to-primary rounded-3xl p-8 text-white shadow-xl card-3d text-center reveal reveal-delay-4">
-          <div class="text-5xl font-extrabold mb-2">95%</div>
+          <div class="text-5xl font-extrabold mb-2" data-counter="95" data-counter-suffix="%">95%</div>
           <p class="text-lg opacity-90" data-i18n="testimonials_page.stat_recommend">Recommandent l'école</p>
         </div>
       </div>
@@ -182,15 +182,15 @@
       <!-- Stats Section -->
       <div class="grid md:grid-cols-3 gap-6 mb-16 reveal">
         <div class="bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 rounded-2xl p-6 border border-primary/20 dark:border-primary/30 text-center">
-          <div class="text-4xl font-extrabold text-primary mb-2">4.9/5</div>
+          <div class="text-4xl font-extrabold text-primary mb-2" data-counter="4.9" data-counter-suffix="/5" data-counter-decimal="true">4.9/5</div>
           <p class="text-gray-700 dark:text-gray-300 font-semibold" data-i18n="testimonials_page.stat_google">Note Google</p>
         </div>
         <div class="bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 rounded-2xl p-6 border border-primary/20 dark:border-primary/30 text-center">
-          <div class="text-4xl font-extrabold text-primary mb-2">15</div>
+          <div class="text-4xl font-extrabold text-primary mb-2" data-counter="15" data-counter-suffix="+">15+</div>
           <p class="text-gray-700 dark:text-gray-300 font-semibold" data-i18n="testimonials_page.stat_verified">Avis Vérifiés</p>
         </div>
         <div class="bg-gradient-to-br from-primary/10 to-accent/10 dark:from-primary/20 dark:to-accent/20 rounded-2xl p-6 border border-primary/20 dark:border-primary/30 text-center">
-          <div class="text-4xl font-extrabold text-primary mb-2">100%</div>
+          <div class="text-4xl font-extrabold text-primary mb-2" data-counter="100" data-counter-suffix="%">100%</div>
           <p class="text-gray-700 dark:text-gray-300 font-semibold" data-i18n="testimonials_page.stat_satisfied">Parents Satisfaits</p>
         </div>
       </div>
@@ -456,9 +456,61 @@
 
   <div id="aaa-footer"></div>
 
-  <script src="translations.js?v=20260429b"></script>
-  <script src="lang.js?v=20260429b"></script>
-  <script src="assets/js/site-shell.js?v=20260511"></script>
+  <script src="translations.js?v=20260515"></script>
+  <script src="lang.js?v=20260515"></script>
+  <script src="assets/js/site-shell.js?v=20260515"></script>
+
+  <!-- COUNTER ANIMATIONS -->
+  <script>
+  (function() {
+    function animateCounter(el) {
+      const target   = parseFloat(el.dataset.counter);
+      const suffix   = el.dataset.counterSuffix  || '';
+      const decimal  = el.dataset.counterDecimal === 'true';
+      const duration = 1800; // ms
+      const steps    = 60;
+      const step     = duration / steps;
+      let current    = 0;
+      let frame      = 0;
+
+      // easeOutCubic
+      function ease(t) { return 1 - Math.pow(1 - t, 3); }
+
+      const timer = setInterval(() => {
+        frame++;
+        const progress = ease(frame / steps);
+        current = target * progress;
+        el.textContent = (decimal ? current.toFixed(1) : Math.round(current)) + suffix;
+        if (frame >= steps) {
+          clearInterval(timer);
+          el.textContent = (decimal ? target.toFixed(1) : target) + suffix;
+        }
+      }, step);
+    }
+
+    // IntersectionObserver — trigger when stat enters viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.counterDone) {
+          entry.target.dataset.counterDone = '1';
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    // Wait for DOM ready then observe all counter elements
+    function init() {
+      document.querySelectorAll('[data-counter]').forEach(el => observer.observe(el));
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+  </script>
 
   <!-- STICKY MOBILE CTA -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
