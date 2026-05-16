@@ -25,10 +25,12 @@ window.AAA_TRANSLATIONS = {
       "tahfiz": "Tahfiz Internat",
       "mixed": "Programme Mixte", "online": "Cours en ligne",
       "free": "Cours gratuits",
+      "conferences": "Formations & Conférences",
       "tahfiz_subtitle": "Coran, sport et hébergement",
       "mixed_subtitle": "Internat — Coran & académique, hébergement inclus",
       "online_subtitle": "Apprendre depuis chez vous",
-      "free_subtitle": "Cours en wolof, ouverts à tous"
+      "free_subtitle": "Cours en wolof, ouverts à tous",
+      "conferences_subtitle": "Ateliers, séminaires & formations"
     },
     "hero": {
       "badge": "École coranique d'excellence",
@@ -706,10 +708,12 @@ window.AAA_TRANSLATIONS = {
     "programs": {
       "tahfiz": "Tahfiz Boarding",
       "mixed": "Day Program", "online": "Online Courses", "free": "Free Courses",
+      "conferences": "Formations & Conferences",
       "tahfiz_subtitle": "Quran, sports and accommodation",
       "mixed_subtitle": "Boarding — Quran & academics, accommodation included",
       "online_subtitle": "Learn from home",
-      "free_subtitle": "Wolof courses, open to all"
+      "free_subtitle": "Wolof courses, open to all",
+      "conferences_subtitle": "Workshops, seminars & training"
     },
     "hero": {
       "badge": "Premier Quranic school",
@@ -1385,6 +1389,7 @@ window.AAA_TRANSLATIONS = {
       "tahfiz": "تحفيظ داخلي",
       "mixed": "برنامج مختلط (داخلي)", "online": "دروس عبر الإنترنت",
       "free": "دروس مجانية",
+      "conferences": "تكوينات ومحاضرات",
       "tahfiz_subtitle": "قرآن، رياضة وإقامة",
       "mixed_subtitle": "داخلية — قرآن وأكاديمي، الإقامة مشمولة",
       "online_subtitle": "تعلّم من بيتك",
@@ -2067,6 +2072,7 @@ window.AAA_TRANSLATIONS = {
     "programs": {
       "tahfiz": "Tahfiz Internado",
       "mixed": "Programa Mixto", "online": "Cursos en línea", "free": "Cursos gratuitos",
+      "conferences": "Formaciones y Conferencias",
       "tahfiz_subtitle": "Corán, deporte y alojamiento",
       "mixed_subtitle": "Internado — Corán y académico, alojamiento incluido",
       "online_subtitle": "Aprende desde casa",
