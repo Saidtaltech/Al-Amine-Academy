@@ -87,27 +87,40 @@
   <div class="h-20"></div>
   <section class="hero-cover" style="--hero-image: url('/assets/img/cours-gratuits-cover.jpg'); background-position: center, center 38%, center">
    <div class="hero-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto text-center text-white">
-     <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6 reveal" data-i18n-html="programme_free.hero_badge">
-      <i class="fas fa-gift mr-2">
-      </i>
-      100% Gratuit
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+     <!-- Texte -->
+     <div class="text-white text-center lg:text-left">
+      <div class="inline-block bg-white/20 px-4 py-2 rounded-full text-white font-bold text-sm mb-6 reveal" data-i18n-html="programme_free.hero_badge">
+       <i class="fas fa-gift mr-2"></i>100% Gratuit
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 reveal reveal-delay-2" data-i18n="programme_free.hero_title">
+       Cours Gratuits pour Tous
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-white/90 reveal reveal-delay-4" data-i18n="programme_free.hero_subtitle">
+       Cours gratuits en Wolof — Tafsir, Hayatu as-Sahaba et autres sessions. En dehors des mosquées, tous les cours se déroulent à l'Institut Al Amine Academy.
+       <span class="font-semibold">Nous privilégions la bonne éducation avant le savoir — formation du cœur d'abord.</span>
+      </p>
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 reveal reveal-delay-6">
+       <a class="inline-flex items-center justify-center rounded-full bg-white text-primary-dark hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://wa.me/221777743700?text=Je souhaite participer aux cours gratuits" data-i18n-html="programme_free.hero_btn">
+        <i class="fab fa-whatsapp mr-2"></i>Rejoindre sur WhatsApp
+       </a>
+      </div>
      </div>
-     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 reveal reveal-delay-2" data-i18n="programme_free.hero_title">
-      Cours Gratuits pour Tous
-     </h1>
-     <p class="text-xl md:text-2xl mb-8 text-white/90 reveal reveal-delay-4" data-i18n="programme_free.hero_subtitle">
-      Cours gratuits en Wolof — Tafsir, Hayatu as-Sahaba et autres sessions. En dehors des mosquées, tous les cours se déroulent à l'Institut Al Amine Academy.
-      <span class="font-semibold">
-       Nous privilégions la bonne éducation avant le savoir — formation du cœur d'abord.
-      </span>
-     </p>
-     <div class="flex flex-wrap justify-center gap-4 reveal reveal-delay-6">
-      <a class="inline-flex items-center justify-center rounded-full bg-white text-primary-dark hover:bg-gray-100 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://wa.me/221777743700?text=Je souhaite participer aux cours gratuits" data-i18n-html="programme_free.hero_btn">
-       <i class="fab fa-whatsapp mr-2">
-       </i>
-       Rejoindre sur WhatsApp
-      </a>
+     <!-- Photo couverture -->
+     <div class="hidden lg:block reveal reveal-delay-4">
+      <div class="relative">
+       <div class="rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/20" style="transform:rotate(-1.5deg)">
+        <img src="/assets/img/cours-gratuits-cover.jpg" alt="Cours gratuits Coran en Wolof — Al Amine Academy" class="w-full h-72 object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+       </div>
+       <div class="absolute -bottom-5 -right-5 bg-white rounded-2xl px-5 py-3 shadow-2xl">
+        <p class="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Participation</p>
+        <p class="text-xl font-extrabold text-green-600">Entièrement gratuit</p>
+       </div>
+       <div class="absolute -top-4 -left-4 bg-green-500 text-white text-xs font-extrabold px-3 py-2 rounded-full shadow-lg uppercase tracking-wider">
+        <i class="fas fa-heart mr-1"></i> Lillah
+       </div>
+      </div>
      </div>
     </div>
    </div>
