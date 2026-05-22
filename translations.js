@@ -422,7 +422,7 @@ window.AAA_TRANSLATIONS = {
       "price_registration": "Frais d'inscription : 95 000 FCFA",
       "price_label3": "Hébergement inclus",
       "price_label4": "Coran + Académique",
-      "inclus_title": "Inclus &amp; Options",
+      "inclus_title": "Options",
       "inclus_subtitle": "Ce qui est prévu dans votre programme quotidien",
       "gouter_title": "Goûter",
       "gouter_desc": "Collation quotidienne pour les internants.",
