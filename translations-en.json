@@ -312,7 +312,8 @@
     "faq9_q": "What documents are required for enrollment?",
     "faq9_a": "Child's birth certificate, two recent ID photos, one parent's ID card, medical certificate less than 3 months old, and previous year's school reports. For boarding students, a blood type certificate is required.",
     "faq10_q": "What payment methods do you accept?",
-    "faq10_a": "Cash on site, Wave, Orange Money, or bank transfer. Payment is monthly; quarterly payment gives a 2% discount and annual payment gives 5%."
+    "faq10_a": "Cash on site, Wave, Orange Money, or bank transfer. Payment is monthly; quarterly payment gives a 2% discount and annual payment gives 5%.",
+    "pdf_hint": "Download the information sheet"
   },
   "testimonials_page": {
     "hero_title": "Testimonials",

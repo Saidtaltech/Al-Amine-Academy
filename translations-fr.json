@@ -312,7 +312,8 @@
     "faq9_q": "Quels documents fournir pour l'inscription ?",
     "faq9_a": "Acte de naissance de l'enfant, deux photos d'identité récentes, carte d'identité de l'un des parents, certificat médical de moins de 3 mois et bulletins scolaires de l'année précédente. Pour les internes, un certificat de groupe sanguin est demandé.",
     "faq10_q": "Quels modes de paiement acceptez-vous ?",
-    "faq10_a": "Cash sur place, Wave, Orange Money ou virement bancaire. Le paiement est mensuel ; un règlement trimestriel donne droit à 2 % de remise et un règlement annuel à 5 %."
+    "faq10_a": "Cash sur place, Wave, Orange Money ou virement bancaire. Le paiement est mensuel ; un règlement trimestriel donne droit à 2 % de remise et un règlement annuel à 5 %.",
+    "pdf_hint": "Télécharger la fiche de renseignements"
   },
   "testimonials_page": {
     "hero_title": "Témoignages",

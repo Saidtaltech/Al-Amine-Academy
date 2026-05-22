@@ -665,69 +665,7 @@
     })();
   </script>
 
-  <script src="translations.js?v=20260510a"></script>
-  <script src="lang.js?v=20260510a"></script>
-</body>
-</html>
-      const sections = ['programmes','frais','documents','autres','contact'];
-      function setActive() {
-        const y = window.scrollY + 120;
-        let active = sections[0];
-        for (const id of sections) {
-          const el = document.getElementById(id);
-          if (el && el.offsetTop <= y) active = id;
-        }
-        chips.forEach(c => {
-          c.classList.toggle('active', c.getAttribute('href') === '#' + active);
-        });
-      }
-      window.addEventListener('scroll', setActive);
-      setActive();
-    })();
-
-    // Swap the PDF download link based on the active language
-    (function() {
-      const PDF_MAP = {
-        fr: 'assets/pdf/fiche-renseignements-fr.pdf',
-        en: 'assets/pdf/information-sheet-en.pdf',
-        ar: 'assets/pdf/fiche-renseignements-ar.pdf',
-        es: 'assets/pdf/ficha-informacion-es.pdf'
-      };
-      function updatePdfHref() {
-        const btn = document.getElementById('fichePdfBtn');
-        if (!btn) return;
-        let lang = 'fr';
-        try { lang = localStorage.getItem('language') || document.documentElement.lang || 'fr'; } catch (e) {}
-        if (!PDF_MAP[lang]) lang = 'fr';
-        btn.setAttribute('href', PDF_MAP[lang]);
-        const filename = PDF_MAP[lang].split('/').pop();
-        btn.setAttribute('download', filename);
-      }
-      updatePdfHref();
-      const origSwitchLanguage = window.switchLanguage;
-      if (typeof origSwitchLanguage === 'function') {
-        window.switchLanguage = function(lang) {
-          const r = origSwitchLanguage(lang);
-          setTimeout(updatePdfHref, 50);
-          return r;
-        };
-      } else {
-        new MutationObserver(updatePdfHref).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-      }
-    })();
-  </script>
-
-  <script src="translations.js?v=20260521a"></script>
-  <script src="lang.js?v=20260521a"></script>
-</body>
-</html>
-ttribute changes
-        new MutationObserver(updatePdfHref).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-      }
-    })();
-  </script>
-
-  <script src="translations.js?v=20260521a"></script>
-  <script src="lang.js?v=20260521a"></script>
+  <script src="translations.js?v=20260522a"></script>
+  <script src="lang.js?v=20260522a"></script>
 </body>
 </html>
