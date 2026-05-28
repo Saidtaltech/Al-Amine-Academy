@@ -12,13 +12,13 @@ window.AAA_TRANSLATIONS = {
     "menu": {
       "home": "Accueil", "programs": "Programmes", "gallery": "Galerie",
       "about": "À propos", "contact": "Contact", "blog": "Blog",
-      "testimonials": "Témoignages", "admission": "Admission",
+      "testimonials": "Témoignages", "admission": "Renseignements",
       "conferences": "Conférences", "register": "S'inscrire",
       "camp": "Camp de Vacances", "camp_subtitle": "Été 2026", "fiche": "Fiche" },
     "nav": {
       "problems": "Nos défis", "approach": "Notre approche",
       "programs": "Programmes", "testimonials": "Témoignages",
-      "admission": "Admission", "contact": "Contact",
+      "admission": "Renseignements", "contact": "Contact",
       "pdf_btn": "Télécharger la fiche en PDF",
       "pdf_hint": "4 pages · disponible en FR · EN · AR · ES"
     },
@@ -800,13 +800,13 @@ window.AAA_TRANSLATIONS = {
     "menu": {
       "home": "Home", "programs": "Programs", "gallery": "Gallery",
       "about": "About", "contact": "Contact", "blog": "Blog",
-      "testimonials": "Testimonials", "admission": "Admission",
+      "testimonials": "Testimonials", "admission": "Information",
       "conferences": "Conferences", "register": "Register",
       "camp": "Summer Camp", "camp_subtitle": "Summer 2026", "fiche": "Information Sheet" },
     "nav": {
       "problems": "The challenges", "approach": "Our approach",
       "programs": "Programs", "testimonials": "Testimonials",
-      "admission": "Admission", "contact": "Contact",
+      "admission": "Information", "contact": "Contact",
       "pdf_btn": "Download the information sheet (PDF)",
       "pdf_hint": "4 pages · available in FR · EN · AR · ES"
     },
@@ -1569,13 +1569,13 @@ window.AAA_TRANSLATIONS = {
     "menu": {
       "home": "الرئيسية", "programs": "البرامج", "gallery": "المعرض",
       "about": "من نحن", "contact": "اتصل بنا", "blog": "المدونة",
-      "testimonials": "الشهادات", "admission": "التسجيل",
+      "testimonials": "الشهادات", "admission": "معلومات",
       "conferences": "المحاضرات", "register": "سجّل الآن",
       "camp": "مخيم الصيف", "camp_subtitle": "صيف 2026", "fiche": "بطاقة المعلومات" },
     "nav": {
       "problems": "تحديات الأهالي", "approach": "منهجنا",
       "programs": "البرامج", "testimonials": "الشهادات",
-      "admission": "التسجيل", "contact": "اتصل بنا",
+      "admission": "معلومات", "contact": "اتصل بنا",
       "pdf_btn": "تحميل بطاقة المعلومات بصيغة PDF",
       "pdf_hint": "4 صفحات · متاحة بالفرنسية · الإنجليزية · العربية · الإسبانية"
     },
@@ -2342,13 +2342,13 @@ window.AAA_TRANSLATIONS = {
     "menu": {
       "home": "Inicio", "programs": "Programas", "gallery": "Galería",
       "about": "Sobre nosotros", "contact": "Contacto", "blog": "Blog",
-      "testimonials": "Testimonios", "admission": "Admisión",
+      "testimonials": "Testimonios", "admission": "Información",
       "conferences": "Conferencias", "register": "Inscribirse",
       "camp": "Campamento de Verano", "camp_subtitle": "Verano 2026", "fiche": "Ficha" },
     "nav": {
       "problems": "Los desafíos", "approach": "Nuestro enfoque",
       "programs": "Programas", "testimonials": "Testimonios",
-      "admission": "Admisión", "contact": "Contacto",
+      "admission": "Información", "contact": "Contacto",
       "pdf_btn": "Descargar la ficha en PDF",
       "pdf_hint": "4 páginas · disponible en FR · EN · AR · ES"
     },

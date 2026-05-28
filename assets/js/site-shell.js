@@ -45,7 +45,7 @@
     +             '<a href="' + ASSET_PREFIX + 'aides-sociales.html"             class="flex items-center gap-3 px-4 py-3 hover:bg-primary/5"><div class="w-9 h-9 bg-teal-100 rounded-lg flex items-center justify-center"><i class="fas fa-hand-holding-heart text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm">Projet Al Mouslihoon <span style="font-family:Amiri,serif;font-size:0.85em;color:#0f766e;">المُصلحون</span></p><p class="text-xs text-slate-500">Aides sociales & humanitaires</p></div></a>'
     +           '</div>'
     +         '</div>'
-    +         '<a href="' + ASSET_PREFIX + 'admission.html"      data-route="admission"    class="nav-link hover:text-primary" data-i18n="menu.admission">Admission</a>'
+    +         '<a href="' + ASSET_PREFIX + 'fiche-renseignements.html" data-route="fiche"       class="nav-link hover:text-primary" data-i18n="menu.admission">Renseignements</a>'
     +         '<a href="' + ASSET_PREFIX + 'a-propos.html"       data-route="about"        class="nav-link hover:text-primary whitespace-nowrap" data-i18n="menu.about">À Propos</a>'
     +         '<a href="' + ASSET_PREFIX + 'galerie.html"        data-route="gallery"      class="nav-link hover:text-primary" data-i18n="menu.gallery">Galerie</a>'
     +         '<a href="' + ASSET_PREFIX + 'temoignages.html"    data-route="testimonials" class="nav-link hover:text-primary" data-i18n="menu.testimonials">Témoignages</a>'
@@ -80,7 +80,7 @@
     +       '<a href="' + ASSET_PREFIX + 'conferences.html"                 data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.conferences"><i class="fas fa-chalkboard-teacher text-primary mr-2 text-xs"></i>Formations &amp; Conférences</a>'
     +       '<p class="pl-4 pt-2 pb-1 text-[10px] uppercase tracking-wider font-bold text-slate-400">Aides Sociales</p>'
     +       '<a href="' + ASSET_PREFIX + 'aides-sociales.html"             data-route="programs" class="block py-2 pl-8 text-sm"><i class="fas fa-hand-holding-heart text-primary mr-2 text-xs"></i>Projet Al Mouslihoon</a>'
-    +       '<a href="' + ASSET_PREFIX + 'admission.html"      data-route="admission"    class="block py-2" data-i18n="menu.admission">Admission</a>'
+    +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements.html" data-route="fiche"       class="block py-2" data-i18n="menu.admission">Renseignements</a>'
     +       '<a href="' + ASSET_PREFIX + 'a-propos.html"       data-route="about"        class="block py-2" data-i18n="menu.about">À Propos</a>'
     +       '<a href="' + ASSET_PREFIX + 'galerie.html"        data-route="gallery"      class="block py-2" data-i18n="menu.gallery">Galerie</a>'
     +       '<a href="' + ASSET_PREFIX + 'temoignages.html"    data-route="testimonials" class="block py-2" data-i18n="menu.testimonials">Témoignages</a>'
@@ -127,7 +127,7 @@
     +         '<ul class="space-y-2 text-sm">'
     +           '<li><a href="' + ASSET_PREFIX + 'index.html"        data-i18n="menu.home">Accueil</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'a-propos.html"     data-i18n="menu.about">À propos</a></li>'
-    +           '<li><a href="' + ASSET_PREFIX + 'admission.html"    data-i18n="menu.admission">Admission</a></li>'
+    +           '<li><a href="' + ASSET_PREFIX + 'fiche-renseignements.html" data-i18n="menu.admission">Renseignements</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'galerie.html"      data-i18n="menu.gallery">Galerie</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'temoignages.html"  data-i18n="menu.testimonials">Témoignages</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'blog.html"         data-i18n="menu.blog">Blog</a></li>'
@@ -179,7 +179,8 @@
   function getActiveRoute() {
     var path = (window.location.pathname || '').toLowerCase();
     if (path.indexOf('/blog/') !== -1) return 'blog';
-    if (/admission\.html$/.test(path)) return 'admission';
+    if (/admission\.html$/.test(path)) return 'fiche';
+    if (/fiche-renseignements\.html$/.test(path)) return 'fiche';
     if (/a-propos\.html$/.test(path)) return 'about';
     if (/galerie\.html$/.test(path)) return 'gallery';
     if (/temoignages\.html$/.test(path)) return 'testimonials';
