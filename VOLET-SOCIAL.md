@@ -20,7 +20,7 @@ Al Amine Academy considère que **l'éducation coranique ne suffit pas** : elle 
 
 ### 2.1. Projet Al Mouhlisoon de Karang ✅ (projet phare)
 
-**Nom arabe** : المخلصون (Al Mouhlisoon — « Les Sincères »)
+**Nom arabe** : المخلصون (Al Mouhlisoon — « Les Bientfaîteurs »)
 **Localité cible** : Karang, Sénégal
 **Statut** : 100 % bénévolat
 **Initiateur** : Al Amine Academy
@@ -205,7 +205,7 @@ social: {
   mouhlisoon_title: "Projet Al Mouhlisoon de Karang",
   mouhlisoon_arabic: "المخلصون",
   mouhlisoon_intro: "Un projet humanitaire et éducatif porté par Al Amine Academy au profit des populations de Karang.",
-  mouhlisoon_subtitle: "« Les Sincères » — au service de la communauté",
+  mouhlisoon_subtitle: "« Les Bientfaîteurs » — au service de la communauté",
   mouhlisoon_description: "Le Projet Al Mouhlisoon est une initiative d'Al Amine Academy en faveur des communautés les plus éloignées du Sénégal...",
   mouhlisoon_axis_1: "Soutien à l'éducation coranique dans les daaras locaux",
   mouhlisoon_axis_2: "Distribution de fournitures et de matériel scolaire",
@@ -213,7 +213,7 @@ social: {
   mouhlisoon_axis_4: "Renforcement des liens inter-communautés entre élèves",
   mouhlisoon_stat_locality_label: "Localité cible",
   mouhlisoon_stat_volunteer_label: "Bénévolat",
-  mouhlisoon_stat_arabic_label: "Les Sincères",
+  mouhlisoon_stat_arabic_label: "Les Bientfaîteurs",
   mouhlisoon_cta: "Devenir bénévole",
   mouhlisoon_cta_donate: "Faire un don",
 
