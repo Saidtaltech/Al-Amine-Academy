@@ -21,3 +21,8 @@ dist/
 # Files Claude / cowork mode
 .claude/
 local-agent-mode-sessions/
+
+# Deploy config (credentials — ne jamais commit)
+deploy.cfg
+.deploy.cfg
+ruvector.db
