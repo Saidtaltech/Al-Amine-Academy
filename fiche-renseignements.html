@@ -95,6 +95,17 @@
     /* Sticky CTA + FAQ */
     .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 
+    /* FAQ accordion */
+    .faq-item { transition: box-shadow .25s ease, border-color .25s ease; }
+    .faq-item:hover { box-shadow: 0 4px 24px -8px rgba(30,122,154,.15); border-color: rgba(30,122,154,.25) !important; }
+    .faq-item summary { cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item[open] .faq-icon { transform: rotate(45deg); background-color: #1e7a9a; color: #fff; }
+    .faq-icon { transition: transform .3s cubic-bezier(.34,1.56,.64,1), background-color .25s, color .25s; }
+    .faq-answer { animation: faqSlide .28s ease; }
+    @keyframes faqSlide { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
+    html[dir="rtl"] .faq-item summary { flex-direction: row-reverse; }
+
     /* Section anchors offset for fixed nav */
     .anchor { scroll-margin-top: 90px; }
 
@@ -141,6 +152,9 @@
         </a>
         <a href="#autres" class="chip-nav inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 px-4 py-2.5 rounded-full text-sm font-semibold">
           <i class="fas fa-th"></i> <span data-i18n="fiche.chip_autres">Autres programmes</span>
+        </a>
+        <a href="#faq" class="chip-nav inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 px-4 py-2.5 rounded-full text-sm font-semibold">
+          <i class="fas fa-circle-question"></i> <span data-i18n="admission.faq_label">FAQ</span>
         </a>
         <a href="#contact" class="chip-nav inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 px-4 py-2.5 rounded-full text-sm font-semibold">
           <i class="fas fa-phone"></i> <span data-i18n="fiche.chip_contact">Contact</span>
@@ -406,6 +420,119 @@
     </div>
   </section>
 
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="anchor py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="inline-block bg-rose-100 text-rose-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3" data-i18n="admission.faq_label">Questions fréquentes</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900" data-i18n="admission.faq_title">Questions fréquentes</h2>
+      </div>
+      <div class="space-y-3">
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq1_q">Quel est l'âge minimum pour l'admission ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq1_a">Les élèves doivent avoir au minimum 4 ans pour le programme primaire.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq2_q">Des bourses sont-elles disponibles ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq2_a">Oui, nous offrons des bourses partielles.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq3_q">Quelle est la durée de l'année scolaire ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq3_a">L'année scolaire débute en septembre et se termine en juillet.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq4_q">Puis-je changer de programme après l'inscription ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq4_a">Oui, un changement est possible avant la fin du premier mois scolaire.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq5_q">Comment fonctionnent les cours en ligne ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq5_a">Les cours sont dispensés via Google Meet chaque samedi et dimanche.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq6_q">Les repas servis sont-ils halal ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq6_a">Oui, tous les repas servis à l'académie sont 100 % halal.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq7_q">Mon enfant peut-il rentrer à la maison le week-end ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq7_a">Oui, les élèves de l'internat rentrent chaque vendredi soir et reviennent dimanche soir.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq8_q">Y a-t-il un test d'entrée ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq8_a">Non, pas de test écrit — un entretien de 30 minutes avec l'administration suffit.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq9_q">Quels documents sont requis pour l'inscription ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq9_a">Acte de naissance, 2 photos, pièce d'identité d'un parent, certificat médical et bulletins scolaires.</p>
+          </div>
+        </details>
+
+        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4 px-6 py-5">
+            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq10_q">Quels moyens de paiement sont acceptés ?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+          </summary>
+          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
+            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq10_a">Espèces sur place, Wave, Orange Money ou virement bancaire.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== CONTACT ==================== -->
   <section id="contact" class="anchor py-20 bg-gradient-to-br from-primary via-primary-dark to-accent relative overflow-hidden">
     <div class="absolute inset-0 opacity-10 pointer-events-none">
@@ -474,7 +601,7 @@
     // Chips active state on scroll
     (function() {
       const chips = document.querySelectorAll('.chip-nav');
-      const sections = ['programmes','frais','documents','autres','contact'];
+      const sections = ['programmes','frais','documents','autres','faq','contact'];
       function setActive() {
         const y = window.scrollY + 120;
         let active = sections[0];
