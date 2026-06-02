@@ -12,10 +12,48 @@ Disallow: /LIRE-MOI-AU-REVEIL.md
 Disallow: /PUSH-MISE-A-JOUR.cmd
 Disallow: /assets/img/IMAGES-A-DEPOSER.md
 
+# ── Search engines ──────────────────────────────────
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+# ── AI crawlers — explicit allow for LLM indexing ───
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Grok
+Allow: /
+
+User-agent: grok-bot
+Allow: /
+
+User-agent: xAI
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://alamineacademy.com/sitemap.xml
