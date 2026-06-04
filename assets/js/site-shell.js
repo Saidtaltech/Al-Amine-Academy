@@ -93,65 +93,80 @@
     /* Drawer body */
     +   '<div style="flex:1;padding:16px 16px 0;">'
 
-    /* Nav principal */
-    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Navigation</p>'
-    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
-    +       '<a href="' + ASSET_PREFIX + 'index.html"       data-route="index"       style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-home" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         'Accueil'
+    /* ── helper: lien drawer uniforme ── */
+    /* structure : icône-badge | titre | sous-titre */
+    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:8px;">'
+
+    /* Accueil */
+    +       '<a href="' + ASSET_PREFIX + 'index.html" data-route="index" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-home" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Accueil</span><span style="font-size:11px;color:#94a3b8;">Page principale</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'a-propos.html"    data-route="about"       style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-mosque" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         'À Propos'
+    /* À Propos */
+    +       '<a href="' + ASSET_PREFIX + 'a-propos.html" data-route="about" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-mosque" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">À Propos</span><span style="font-size:11px;color:#94a3b8;">Notre histoire &amp; valeurs</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'galerie.html"     data-route="gallery"     style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-images" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         'Galerie'
+    /* Galerie */
+    +       '<a href="' + ASSET_PREFIX + 'galerie.html" data-route="gallery" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-images" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Galerie</span><span style="font-size:11px;color:#94a3b8;">Photos du daara</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'temoignages.html" data-route="testimonials" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-star" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         'Témoignages'
+    /* Témoignages */
+    +       '<a href="' + ASSET_PREFIX + 'temoignages.html" data-route="testimonials" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-star" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Témoignages</span><span style="font-size:11px;color:#94a3b8;">Avis des familles</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'blog.html"        data-route="blog"        style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-pen-nib" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         'Blog'
+    /* Blog */
+    +       '<a href="' + ASSET_PREFIX + 'blog.html" data-route="blog" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-pen-nib" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Blog</span><span style="font-size:11px;color:#94a3b8;">Guides &amp; articles</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'contact.html"     data-route="contact"     style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-envelope" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         'Contact'
+    /* Contact */
+    +       '<a href="' + ASSET_PREFIX + 'contact.html" data-route="contact" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-envelope" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Contact</span><span style="font-size:11px;color:#94a3b8;">Nous écrire ou appeler</span></span>'
     +       '</a>'
     +     '</nav>'
 
-    /* Programmes section */
+    /* Séparateur Programmes */
+    +     '<div style="height:1px;background:#f1f5f9;margin:8px 0 12px;"></div>'
     +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Programmes</p>'
     +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
-    +       '<a href="' + ASSET_PREFIX + 'programme-internat.html"       data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-book-open" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         '<span><span style="display:block;font-size:14px;">Tahfiz Internat</span><span style="font-size:11px;color:#64748b;font-weight:400;">Mémorisation complète du Coran</span></span>'
+    /* Tahfiz */
+    +       '<a href="' + ASSET_PREFIX + 'programme-internat.html" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-book-open" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Tahfiz Internat</span><span style="font-size:11px;color:#94a3b8;">Mémorisation complète du Coran</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-mixte.html"           data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-balance-scale" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         '<span><span style="display:block;font-size:14px;">Programme Mixte</span><span style="font-size:11px;color:#64748b;font-weight:400;">Externat journalier</span></span>'
+    /* Mixte */
+    +       '<a href="' + ASSET_PREFIX + 'programme-mixte.html" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-balance-scale" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Programme Mixte</span><span style="font-size:11px;color:#94a3b8;">Externat journalier</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"  data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-laptop" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         '<span><span style="display:block;font-size:14px;">Cours en Ligne</span><span style="font-size:11px;color:#64748b;font-weight:400;">Apprenez de chez vous</span></span>'
+    /* En ligne */
+    +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-laptop" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Cours en Ligne</span><span style="font-size:11px;color:#94a3b8;">Apprenez de chez vous</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"  data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#fefce8\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-gift" style="color:#d97706;font-size:13px;"></i></span>'
-    +         '<span><span style="display:block;font-size:14px;">Cours Gratuits</span><span style="font-size:11px;color:#64748b;font-weight:400;">Accès libre pour tous</span></span>'
+    /* Gratuits */
+    +       '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#fffbeb\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-gift" style="color:#d97706;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Cours Gratuits</span><span style="font-size:11px;color:#94a3b8;">Accès libre pour tous</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'camp-vacances.html"             data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;background:linear-gradient(135deg,#fff7ed,#fefce8);border:1px solid #fed7aa;" onmouseover="this.style.background=\'linear-gradient(135deg,#ffedd5,#fef9c3)\'" onmouseout="this.style.background=\'linear-gradient(135deg,#fff7ed,#fefce8)\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#fde68a;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-umbrella-beach" style="color:#b45309;font-size:13px;"></i></span>'
-    +         '<span><span style="display:block;font-size:14px;">Camp de Vacances</span><span style="font-size:11px;color:#92400e;font-weight:600;">Été 2026 · Dakar &amp; Petite Côte</span></span>'
+    /* Camp — mis en avant */
+    +       '<a href="' + ASSET_PREFIX + 'camp-vacances.html" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;background:linear-gradient(135deg,#fff7ed,#fefce8);border:1px solid #fed7aa;" onmouseover="this.style.background=\'linear-gradient(135deg,#ffedd5,#fef9c3)\'" onmouseout="this.style.background=\'linear-gradient(135deg,#fff7ed,#fefce8)\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#fde68a;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-umbrella-beach" style="color:#b45309;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Camp de Vacances</span><span style="font-size:11px;color:#b45309;font-weight:600;">Été 2026 · Dakar &amp; Petite Côte</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'conferences.html"               data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-chalkboard-teacher" style="color:#1e7a9a;font-size:13px;"></i></span>'
-    +         '<span><span style="display:block;font-size:14px;">Formations &amp; Conférences</span><span style="font-size:11px;color:#64748b;font-weight:400;">Ateliers &amp; séminaires</span></span>'
+    /* Conférences */
+    +       '<a href="' + ASSET_PREFIX + 'conferences.html" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-chalkboard-teacher" style="color:#1e7a9a;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Formations &amp; Conférences</span><span style="font-size:11px;color:#94a3b8;">Ateliers &amp; séminaires</span></span>'
     +       '</a>'
-    +       '<a href="' + ASSET_PREFIX + 'aides-sociales.html"            data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0fdfa\'" onmouseout="this.style.background=\'transparent\'">'
-    +         '<span style="width:32px;height:32px;border-radius:9px;background:#ccfbf1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-hand-holding-heart" style="color:#0f766e;font-size:13px;"></i></span>'
-    +         '<span><span style="display:block;font-size:14px;">Projet Al Mouslihoon</span><span style="font-size:11px;color:#64748b;font-weight:400;">Aides sociales &amp; humanitaires</span></span>'
+    /* Al Mouslihoon */
+    +       '<a href="' + ASSET_PREFIX + 'aides-sociales.html" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#1e293b;text-decoration:none;transition:background .15s;" onmouseover="this.style.background=\'#f0fdfa\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:34px;height:34px;border-radius:10px;background:#ccfbf1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-hand-holding-heart" style="color:#0f766e;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span style="display:block;font-size:14px;font-weight:600;">Projet Al Mouslihoon</span><span style="font-size:11px;color:#94a3b8;">Aides sociales &amp; humanitaires</span></span>'
     +       '</a>'
     +     '</nav>'
 
