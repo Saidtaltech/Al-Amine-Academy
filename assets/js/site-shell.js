@@ -63,42 +63,126 @@
     +         '<a href="tel:+221777743700" class="hidden lg:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary hover:bg-secondary-dark text-white text-sm font-semibold transition-colors">'
     +           '<i class="fas fa-phone"></i><span>+221 77 774 37 00</span>'
     +         '</a>'
-    +         '<button id="aaa-mobile-btn" aria-label="Menu" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100">'
-    +           '<i class="fas fa-bars text-lg"></i>'
+    +         '<button id="aaa-mobile-btn" aria-label="Menu" class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-slate-700 hover:bg-slate-100 transition-colors">'
+    +           '<i id="aaa-mobile-icon" class="fas fa-bars text-lg"></i>'
     +         '</button>'
     +       '</div>'
     +     '</div>'
-
-    +     '<div id="aaa-mobile-menu" class="hidden lg:hidden pb-4 pt-2 border-t border-slate-200 text-slate-700">'
-    +       '<a href="' + ASSET_PREFIX + 'index.html"          data-route="index"        class="block py-2" data-i18n="menu.home">Accueil</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-internat.html"          data-route="programs" class="block py-2 pl-4 text-sm"><i class="fas fa-book-open text-primary mr-2 text-xs"></i>Tahfiz Internat</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-mixte.html"             data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.mixed">Programme Mixte</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"    data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.online">Cours en Ligne</a>'
-    +       '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"    data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.free">Cours Gratuits</a>'
-    +       '<a href="' + ASSET_PREFIX + 'camp-vacances.html"               data-route="programs" class="block py-2 pl-4 text-sm"><i class="fas fa-umbrella-beach text-secondary mr-2 text-xs"></i>Camp de Vacances</a>'
-    +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements.html"        data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="menu.fiche"><i class="fas fa-file-alt text-purple-600 mr-2 text-xs"></i>Fiche de Renseignements</a>'
-    +       '<a href="' + ASSET_PREFIX + 'conferences.html"                 data-route="programs" class="block py-2 pl-4 text-sm" data-i18n="programs.conferences"><i class="fas fa-chalkboard-teacher text-primary mr-2 text-xs"></i>Formations &amp; Conférences</a>'
-    +       '<p class="pl-4 pt-2 pb-1 text-[10px] uppercase tracking-wider font-bold text-slate-400">Aides Sociales</p>'
-    +       '<a href="' + ASSET_PREFIX + 'aides-sociales.html"             data-route="programs" class="block py-2 pl-8 text-sm"><i class="fas fa-hand-holding-heart text-primary mr-2 text-xs"></i>Projet Al Mouslihoon</a>'
-    +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements.html" data-route="fiche"       class="block py-2" data-i18n="menu.admission">Renseignements</a>'
-    +       '<a href="' + ASSET_PREFIX + 'a-propos.html"       data-route="about"        class="block py-2" data-i18n="menu.about">À Propos</a>'
-    +       '<a href="' + ASSET_PREFIX + 'galerie.html"        data-route="gallery"      class="block py-2" data-i18n="menu.gallery">Galerie</a>'
-    +       '<a href="' + ASSET_PREFIX + 'temoignages.html"    data-route="testimonials" class="block py-2" data-i18n="menu.testimonials">Témoignages</a>'
-    +       '<a href="' + ASSET_PREFIX + 'blog.html"           data-route="blog"         class="block py-2" data-i18n="menu.blog">Blog</a>'
-    +       '<a href="' + ASSET_PREFIX + 'contact.html"        data-route="contact"      class="block py-2" data-i18n="menu.contact">Contact</a>'
-    +       '<div class="flex items-center gap-2 py-3 mt-2 border-t border-slate-200 text-sm">'
-    +         '<span class="text-xs text-slate-500" data-i18n="menu.lang_label">Langue :</span>'
-    +         '<a href="#" data-lang-switch="fr" onclick="switchLanguage(\'fr\');return false;" class="px-2 py-1 rounded">FR</a>'
-    +         '<a href="#" data-lang-switch="en" onclick="switchLanguage(\'en\');return false;" class="px-2 py-1 rounded">EN</a>'
-    +         '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" class="px-2 py-1 rounded arabic-text">ع</a>'
-    +         '<a href="#" data-lang-switch="es" onclick="switchLanguage(\'es\');return false;" class="px-2 py-1 rounded">ES</a>'
-    +       '</div>'
-    +       '<a href="tel:+221777743700" class="block py-3 mt-2 text-center bg-secondary text-white rounded-lg font-semibold">'
-    +         '<i class="fas fa-phone mr-2"></i>+221 77 774 37 00'
-    +       '</a>'
-    +     '</div>'
     +   '</div>'
-    + '</nav>';
+    + '</nav>'
+
+    /* ── Mobile Drawer Overlay ── */
+    + '<div id="aaa-drawer-overlay" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.55);z-index:49;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);transition:opacity .25s;" aria-hidden="true"></div>'
+
+    + '<div id="aaa-mobile-menu" style="position:fixed;top:0;right:0;height:100%;width:88%;max-width:340px;background:#fff;z-index:50;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column;" role="dialog" aria-modal="true" aria-label="Menu principal">'
+
+    /* Drawer header */
+    +   '<div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px 14px;border-bottom:1px solid #e2e8f0;">'
+    +     '<div style="display:flex;align-items:center;gap:10px;">'
+    +       '<img src="' + ASSET_PREFIX + 'assets/img/LogoAAA.png" alt="Logo" style="width:36px;height:36px;object-fit:contain;"/>'
+    +       '<div style="line-height:1.2;">'
+    +         '<p style="font-size:13px;font-weight:800;color:#0f172a;margin:0;">DAARA Al Amine</p>'
+    +         '<p style="font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#1e7a9a;font-weight:700;margin:0;">Academy · Dakar</p>'
+    +       '</div>'
+    +     '</div>'
+    +     '<button id="aaa-mobile-close" aria-label="Fermer le menu" style="width:36px;height:36px;border-radius:10px;border:none;background:#f1f5f9;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#475569;font-size:15px;">'
+    +       '<i class="fas fa-times"></i>'
+    +     '</button>'
+    +   '</div>'
+
+    /* Drawer body */
+    +   '<div style="flex:1;padding:16px 16px 0;">'
+
+    /* Nav principal */
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Navigation</p>'
+    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
+    +       '<a href="' + ASSET_PREFIX + 'index.html"       data-route="index"       style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-home" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         'Accueil'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'a-propos.html"    data-route="about"       style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-mosque" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         'À Propos'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'galerie.html"     data-route="gallery"     style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-images" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         'Galerie'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'temoignages.html" data-route="testimonials" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-star" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         'Témoignages'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'blog.html"        data-route="blog"        style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-pen-nib" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         'Blog'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'contact.html"     data-route="contact"     style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-envelope" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         'Contact'
+    +       '</a>'
+    +     '</nav>'
+
+    /* Programmes section */
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Programmes</p>'
+    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
+    +       '<a href="' + ASSET_PREFIX + 'programme-internat.html"       data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-book-open" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         '<span><span style="display:block;font-size:14px;">Tahfiz Internat</span><span style="font-size:11px;color:#64748b;font-weight:400;">Mémorisation complète du Coran</span></span>'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'programme-mixte.html"           data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-balance-scale" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         '<span><span style="display:block;font-size:14px;">Programme Mixte</span><span style="font-size:11px;color:#64748b;font-weight:400;">Externat journalier</span></span>'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne.html"  data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-laptop" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         '<span><span style="display:block;font-size:14px;">Cours en Ligne</span><span style="font-size:11px;color:#64748b;font-weight:400;">Apprenez de chez vous</span></span>'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits.html"  data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#fefce8\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-gift" style="color:#d97706;font-size:13px;"></i></span>'
+    +         '<span><span style="display:block;font-size:14px;">Cours Gratuits</span><span style="font-size:11px;color:#64748b;font-weight:400;">Accès libre pour tous</span></span>'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'camp-vacances.html"             data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;background:linear-gradient(135deg,#fff7ed,#fefce8);border:1px solid #fed7aa;" onmouseover="this.style.background=\'linear-gradient(135deg,#ffedd5,#fef9c3)\'" onmouseout="this.style.background=\'linear-gradient(135deg,#fff7ed,#fefce8)\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#fde68a;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-umbrella-beach" style="color:#b45309;font-size:13px;"></i></span>'
+    +         '<span><span style="display:block;font-size:14px;">Camp de Vacances</span><span style="font-size:11px;color:#92400e;font-weight:600;">Été 2026 · Dakar &amp; Petite Côte</span></span>'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'conferences.html"               data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0f9fc\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-chalkboard-teacher" style="color:#1e7a9a;font-size:13px;"></i></span>'
+    +         '<span><span style="display:block;font-size:14px;">Formations &amp; Conférences</span><span style="font-size:11px;color:#64748b;font-weight:400;">Ateliers &amp; séminaires</span></span>'
+    +       '</a>'
+    +       '<a href="' + ASSET_PREFIX + 'aides-sociales.html"            data-route="programs" style="display:flex;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;color:#1e293b;text-decoration:none;font-size:14px;font-weight:600;transition:background .15s;" onmouseover="this.style.background=\'#f0fdfa\'" onmouseout="this.style.background=\'transparent\'">'
+    +         '<span style="width:32px;height:32px;border-radius:9px;background:#ccfbf1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-hand-holding-heart" style="color:#0f766e;font-size:13px;"></i></span>'
+    +         '<span><span style="display:block;font-size:14px;">Projet Al Mouslihoon</span><span style="font-size:11px;color:#64748b;font-weight:400;">Aides sociales &amp; humanitaires</span></span>'
+    +       '</a>'
+    +     '</nav>'
+
+    /* Langue */
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Langue</p>'
+    +     '<div style="display:flex;gap:6px;margin-bottom:20px;">'
+    +       '<a href="#" data-lang-switch="fr" onclick="switchLanguage(\'fr\');return false;" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:12px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;">FR</a>'
+    +       '<a href="#" data-lang-switch="en" onclick="switchLanguage(\'en\');return false;" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:12px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;">EN</a>'
+    +       '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:13px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;font-family:Amiri,serif;">ع</a>'
+    +       '<a href="#" data-lang-switch="es" onclick="switchLanguage(\'es\');return false;" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:12px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;">ES</a>'
+    +     '</div>'
+
+    +   '</div>'
+
+    /* Drawer footer CTA */
+    +   '<div style="padding:16px;border-top:1px solid #f1f5f9;background:#fafafa;">'
+    +     '<a href="tel:+221777743700" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border-radius:14px;font-weight:800;font-size:15px;text-decoration:none;letter-spacing:.01em;">'
+    +       '<i class="fas fa-phone" style="font-size:14px;"></i> +221 77 774 37 00'
+    +     '</a>'
+    +     '<a href="https://wa.me/221777743700" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:12px;margin-top:8px;background:#25d366;color:#fff;border-radius:14px;font-weight:700;font-size:14px;text-decoration:none;">'
+    +       '<i class="fab fa-whatsapp" style="font-size:16px;"></i> WhatsApp'
+    +     '</a>'
+    +   '</div>'
+    + '</div>'
+
+    + '<style>'
+    + '#aaa-mobile-menu { display:flex!important; }'
+    + '#aaa-mobile-menu.drawer-open { transform:translateX(0)!important; }'
+    + '#aaa-drawer-overlay.overlay-visible { opacity:1!important; }'
+    + '#aaa-drawer-overlay { opacity:0; }'
+    + '</style>';
 
   /* ====================  FOOTER HTML  ==================== */
   var FOOTER_HTML = ''
@@ -251,13 +335,38 @@
   }
 
   function bindMobileMenu() {
-    var btn = document.getElementById('aaa-mobile-btn');
-    var menu = document.getElementById('aaa-mobile-menu');
+    var btn     = document.getElementById('aaa-mobile-btn');
+    var closeBtn= document.getElementById('aaa-mobile-close');
+    var menu    = document.getElementById('aaa-mobile-menu');
+    var overlay = document.getElementById('aaa-drawer-overlay');
     if (!btn || !menu) return;
-    btn.addEventListener('click', function () { menu.classList.toggle('hidden'); });
-    menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () { menu.classList.add('hidden'); });
+
+    function openDrawer() {
+      menu.classList.add('drawer-open');
+      if (overlay) { overlay.style.display = 'block'; setTimeout(function(){ overlay.classList.add('overlay-visible'); }, 10); }
+      document.body.style.overflow = 'hidden';
+      var icon = document.getElementById('aaa-mobile-icon');
+      if (icon) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+    }
+
+    function closeDrawer() {
+      menu.classList.remove('drawer-open');
+      if (overlay) { overlay.classList.remove('overlay-visible'); setTimeout(function(){ overlay.style.display = 'none'; }, 260); }
+      document.body.style.overflow = '';
+      var icon = document.getElementById('aaa-mobile-icon');
+      if (icon) { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+    }
+
+    btn.addEventListener('click', function () {
+      menu.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
     });
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (overlay)  overlay.addEventListener('click', closeDrawer);
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeDrawer);
+    });
+    /* Close on Escape */
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeDrawer(); });
   }
 
   /* ==================== SCROLL PROGRESS + BACK-TO-TOP ==================== */
