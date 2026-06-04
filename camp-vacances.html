@@ -271,50 +271,125 @@
         </div>
 
         <!-- COMPARATEUR RAPIDE -->
-        <div class="mt-10 bg-gradient-to-br from-gray-50 to-blue-50/50 rounded-3xl p-6 md:p-8 border border-gray-100 reveal">
-          <h3 class="text-center text-sm font-bold text-gray-700 uppercase tracking-wider mb-6"><i class="fas fa-balance-scale mr-2 text-primary"></i>En un coup d'œil</h3>
-          <div class="overflow-x-auto -mx-2">
-            <table class="w-full text-sm min-w-[500px]">
-              <thead>
-                <tr class="text-left text-gray-500 uppercase text-[11px] tracking-wider">
-                  <th class="py-3 px-3 w-1/3"></th>
-                  <th class="py-3 px-3 text-primary">Cité des Magistrats</th>
-                  <th class="py-3 px-3 text-secondary-dark">Villa Petite Côte</th>
-                </tr>
-              </thead>
-              <tbody class="text-gray-700">
-                <tr class="border-t border-gray-200">
-                  <td class="py-3 px-3 font-semibold">Public</td>
-                  <td class="py-3 px-3">Filles &amp; garçons</td>
-                  <td class="py-3 px-3">Garçons 8 ans+</td>
-                </tr>
-                <tr class="border-t border-gray-200 bg-white/50">
-                  <td class="py-3 px-3 font-semibold">Lieu</td>
-                  <td class="py-3 px-3">Dakar</td>
-                  <td class="py-3 px-3">Mbour (Petite Côte)</td>
-                </tr>
-                <tr class="border-t border-gray-200">
-                  <td class="py-3 px-3 font-semibold">Tarif / mois</td>
-                  <td class="py-3 px-3 font-bold text-primary-dark">100 000 F</td>
-                  <td class="py-3 px-3 font-bold text-secondary-dark">130 000 F</td>
-                </tr>
-                <tr class="border-t border-gray-200 bg-white/50">
-                  <td class="py-3 px-3 font-semibold">Sport</td>
-                  <td class="py-3 px-3">Self-défense, activités ludiques</td>
-                  <td class="py-3 px-3">Natation, basket, baby-foot</td>
-                </tr>
-                <tr class="border-t border-gray-200">
-                  <td class="py-3 px-3 font-semibold">Linge / Goûter</td>
-                  <td class="py-3 px-3 text-green-700"><i class="fas fa-check"></i> Inclus</td>
-                  <td class="py-3 px-3 text-green-700"><i class="fas fa-check"></i> Inclus</td>
-                </tr>
-                <tr class="border-t border-gray-200 bg-white/50">
-                  <td class="py-3 px-3 font-semibold">% Coran</td>
-                  <td class="py-3 px-3">Programme classique</td>
-                  <td class="py-3 px-3 font-bold">80% du programme</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="mt-10 reveal">
+          <!-- Header -->
+          <div class="text-center mb-6">
+            <span class="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-5 py-2 text-xs font-bold text-gray-600 uppercase tracking-widest shadow-sm">
+              <i class="fas fa-balance-scale text-primary"></i> Comparatif des programmes
+            </span>
+          </div>
+          <!-- Card table -->
+          <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+            <!-- Column headers -->
+            <div class="grid grid-cols-3 text-sm">
+              <div class="bg-gray-50 px-5 py-4 border-b border-r border-gray-100"></div>
+              <!-- Prog A header -->
+              <div class="bg-gradient-to-b from-primary/10 to-primary/5 px-5 py-4 border-b border-r border-primary/10 text-center">
+                <div class="w-8 h-8 bg-primary rounded-xl flex items-center justify-center mx-auto mb-1.5 shadow">
+                  <i class="fas fa-city text-white text-xs"></i>
+                </div>
+                <p class="font-extrabold text-primary text-xs uppercase tracking-wider leading-tight">Cité des<br>Magistrats</p>
+                <p class="text-[10px] text-gray-500 mt-0.5">Dakar</p>
+              </div>
+              <!-- Prog B header -->
+              <div class="bg-gradient-to-b from-secondary/10 to-secondary/5 px-5 py-4 border-b border-secondary/10 text-center">
+                <div class="w-8 h-8 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-1.5 shadow">
+                  <i class="fas fa-umbrella-beach text-white text-xs"></i>
+                </div>
+                <p class="font-extrabold text-secondary-dark text-xs uppercase tracking-wider leading-tight">Villa<br>Petite Côte</p>
+                <p class="text-[10px] text-gray-500 mt-0.5">Mbour</p>
+              </div>
+            </div>
+
+            <!-- Row: Public -->
+            <div class="grid grid-cols-3 text-sm border-b border-gray-100 hover:bg-gray-50/60 transition-colors">
+              <div class="px-5 py-4 flex items-center gap-2 text-gray-500 font-semibold text-xs uppercase tracking-wider border-r border-gray-100">
+                <i class="fas fa-users text-gray-400 w-4 text-center"></i> Public
+              </div>
+              <div class="px-5 py-4 flex items-center justify-center gap-1.5 border-r border-gray-100">
+                <i class="fas fa-venus-mars text-primary text-xs"></i>
+                <span class="text-gray-700 text-xs font-medium">Filles &amp; garçons</span>
+              </div>
+              <div class="px-5 py-4 flex items-center justify-center gap-1.5">
+                <i class="fas fa-mars text-secondary-dark text-xs"></i>
+                <span class="text-gray-700 text-xs font-medium">Garçons 8 ans+</span>
+              </div>
+            </div>
+
+            <!-- Row: Tarif — highlighted -->
+            <div class="grid grid-cols-3 text-sm border-b border-gray-100 bg-gradient-to-r from-gray-50 via-primary/5 to-secondary/5">
+              <div class="px-5 py-5 flex items-center gap-2 text-gray-500 font-semibold text-xs uppercase tracking-wider border-r border-gray-100">
+                <i class="fas fa-tag text-gray-400 w-4 text-center"></i> Tarif / mois
+              </div>
+              <div class="px-5 py-5 flex flex-col items-center justify-center border-r border-primary/10">
+                <span class="text-2xl font-extrabold text-primary-dark leading-none">100 000</span>
+                <span class="text-xs text-gray-500 mt-0.5">FCFA / mois</span>
+              </div>
+              <div class="px-5 py-5 flex flex-col items-center justify-center">
+                <span class="text-2xl font-extrabold text-secondary-dark leading-none">130 000</span>
+                <span class="text-xs text-gray-500 mt-0.5">FCFA / mois</span>
+              </div>
+            </div>
+
+            <!-- Row: Sport -->
+            <div class="grid grid-cols-3 text-sm border-b border-gray-100 hover:bg-gray-50/60 transition-colors">
+              <div class="px-5 py-4 flex items-center gap-2 text-gray-500 font-semibold text-xs uppercase tracking-wider border-r border-gray-100">
+                <i class="fas fa-running text-gray-400 w-4 text-center"></i> Sport
+              </div>
+              <div class="px-5 py-4 flex flex-col items-center gap-1 border-r border-gray-100 text-center">
+                <span class="text-xs text-gray-700"><i class="fas fa-fist-raised text-primary mr-1 text-[10px]"></i>Self-défense</span>
+                <span class="text-xs text-gray-700"><i class="fas fa-puzzle-piece text-primary mr-1 text-[10px]"></i>Activités ludiques</span>
+              </div>
+              <div class="px-5 py-4 flex flex-col items-center gap-1 text-center">
+                <span class="text-xs text-gray-700"><i class="fas fa-swimming-pool text-secondary-dark mr-1 text-[10px]"></i>Natation</span>
+                <span class="text-xs text-gray-700"><i class="fas fa-basketball-ball text-secondary-dark mr-1 text-[10px]"></i>Basket · baby-foot</span>
+              </div>
+            </div>
+
+            <!-- Row: Linge / Goûter -->
+            <div class="grid grid-cols-3 text-sm border-b border-gray-100 hover:bg-gray-50/60 transition-colors">
+              <div class="px-5 py-4 flex items-center gap-2 text-gray-500 font-semibold text-xs uppercase tracking-wider border-r border-gray-100">
+                <i class="fas fa-tshirt text-gray-400 w-4 text-center"></i> Linge / Goûter
+              </div>
+              <div class="px-5 py-4 flex items-center justify-center border-r border-gray-100">
+                <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-700 font-bold text-xs px-3 py-1.5 rounded-full border border-green-200">
+                  <i class="fas fa-check text-[10px]"></i> Inclus
+                </span>
+              </div>
+              <div class="px-5 py-4 flex items-center justify-center">
+                <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-700 font-bold text-xs px-3 py-1.5 rounded-full border border-green-200">
+                  <i class="fas fa-check text-[10px]"></i> Inclus
+                </span>
+              </div>
+            </div>
+
+            <!-- Row: % Coran -->
+            <div class="grid grid-cols-3 text-sm hover:bg-gray-50/60 transition-colors">
+              <div class="px-5 py-4 flex items-center gap-2 text-gray-500 font-semibold text-xs uppercase tracking-wider border-r border-gray-100">
+                <i class="fas fa-book-open text-gray-400 w-4 text-center"></i> % Coran
+              </div>
+              <div class="px-5 py-4 flex items-center justify-center border-r border-gray-100">
+                <span class="text-xs text-gray-500 italic">Programme classique</span>
+              </div>
+              <div class="px-5 py-4 flex items-center justify-center">
+                <span class="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 font-extrabold text-xs px-3 py-1.5 rounded-full border border-amber-200">
+                  <i class="fas fa-star text-[10px]"></i> 80% du programme
+                </span>
+              </div>
+            </div>
+
+            <!-- Footer CTA -->
+            <div class="grid grid-cols-3 bg-gray-50 border-t border-gray-100 text-sm">
+              <div class="px-5 py-4 border-r border-gray-100 flex items-center">
+                <span class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Frais d'inscription uniques</span>
+              </div>
+              <div class="px-5 py-4 border-r border-gray-100 text-center">
+                <span class="text-xs font-bold text-gray-700">25 000 F</span>
+              </div>
+              <div class="px-5 py-4 text-center">
+                <span class="text-xs font-bold text-gray-700">25 000 F</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
