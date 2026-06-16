@@ -54,11 +54,11 @@
     +       '</div>'
 
     +       '<div class="flex items-center gap-2 lg:gap-3">'
-    +         '<div class="hidden md:flex items-center gap-0.5 text-xs font-semibold text-slate-600 border border-slate-200 rounded-lg p-0.5">'
-    +           '<a href="#" data-lang-switch="fr" onclick="switchLanguage(\'fr\');return false;" class="px-2 py-1 rounded-md hover:bg-slate-100" title="Français">FR</a>'
-    +           '<a href="#" data-lang-switch="en" onclick="switchLanguage(\'en\');return false;" class="px-2 py-1 rounded-md hover:bg-slate-100" title="English">EN</a>'
-    +           '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" class="px-2 py-1 rounded-md hover:bg-slate-100 arabic-text" title="العربية">ع</a>'
-    +           '<a href="#" data-lang-switch="es" onclick="switchLanguage(\'es\');return false;" class="px-2 py-1 rounded-md hover:bg-slate-100" title="Español">ES</a>'
+    +         '<div class="flex items-center gap-0.5 text-[10px] sm:text-xs font-semibold text-slate-600 border border-slate-200 rounded-lg p-0.5">'
+    +           '<a href="#" data-lang-switch="fr" onclick="switchLanguage(\'fr\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100" title="Français">FR</a>'
+    +           '<a href="#" data-lang-switch="en" onclick="switchLanguage(\'en\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100" title="English">EN</a>'
+    +           '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100 arabic-text text-sm sm:text-base" title="العربية">ع</a>'
+    +           '<a href="#" data-lang-switch="es" onclick="switchLanguage(\'es\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100" title="Español">ES</a>'
     +         '</div>'
     +         '<a href="tel:+221777743700" class="hidden lg:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary hover:bg-secondary-dark text-white text-sm font-semibold transition-colors">'
     +           '<i class="fas fa-phone"></i><span>+221 77 774 37 00</span>'
@@ -175,14 +175,7 @@
     +       '</a>'
     +     '</nav>'
 
-    /* Langue */
-    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Langue</p>'
-    +     '<div style="display:flex;gap:6px;margin-bottom:20px;">'
-    +       '<a href="#" data-lang-switch="fr" onclick="switchLanguage(\'fr\');return false;" class="aaa-lang-pill" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:12px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;">FR</a>'
-    +       '<a href="#" data-lang-switch="en" onclick="switchLanguage(\'en\');return false;" class="aaa-lang-pill" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:12px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;">EN</a>'
-    +       '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:13px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;font-family:Amiri,serif;">ع</a>'
-    +       '<a href="#" data-lang-switch="es" onclick="switchLanguage(\'es\');return false;" class="aaa-lang-pill" style="flex:1;text-align:center;padding:9px 4px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:12px;font-weight:700;color:#1e293b;text-decoration:none;background:#f8fafc;">ES</a>'
-    +     '</div>'
+    /* (sélecteur de langue déplacé dans la navbar) */
 
     +   '</div>'
 
