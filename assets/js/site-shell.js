@@ -117,6 +117,11 @@
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-star" style="color:#1e7a9a;font-size:14px;"></i></span>'
     +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Témoignages</span><span style="font-size:11px;color:#94a3b8;">Avis des familles</span></span>'
     +       '</a>'
+    /* Fiche de Renseignements */
+    +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements.html" data-route="fiche" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
+    +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-file-alt" style="color:#7c3aed;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Renseignements</span><span style="font-size:11px;color:#94a3b8;">Tarifs &amp; dossier complet</span></span>'
+    +       '</a>'
     /* Blog */
     +       '<a href="' + ASSET_PREFIX + 'blog.html" data-route="blog" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-pen-nib" style="color:#1e7a9a;font-size:14px;"></i></span>'
