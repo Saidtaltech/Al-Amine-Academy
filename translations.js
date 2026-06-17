@@ -362,7 +362,7 @@ window.AAA_TRANSLATIONS = {
       "whatsapp_tooltip": "Contacter sur WhatsApp"
     },
     "programme_internat": {
-      "hero_title": "Programme Tahfiz Complet",
+      "hero_title": "Daara Internat à Dakar — Tahfiz Complet",
       "hero_subtitle": "Mémorisation intégrale du Coran en internat avec un encadrement d'excellence.",
       "hero_badge": "Programme Tahfiz Internat",
       "btn_register": "S'inscrire maintenant",
@@ -1146,7 +1146,7 @@ window.AAA_TRANSLATIONS = {
       "whatsapp_tooltip": "Contact on WhatsApp"
     },
     "programme_internat": {
-      "hero_title": "Full Tahfiz Boarding Program",
+      "hero_title": "Daara Boarding School in Dakar — Full Tahfiz Program",
       "hero_subtitle": "Complete Quran memorization in our boarding school with excellent guidance and care.",
       "hero_badge": "Tahfiz Boarding Programme",
       "btn_register": "Enroll now",
@@ -1919,7 +1919,7 @@ window.AAA_TRANSLATIONS = {
       "whatsapp_tooltip": "تواصل عبر واتساب"
     },
     "programme_internat": {
-      "hero_title": "برنامج التحفيظ الكامل",
+      "hero_title": "دارا داخلية في داكار — برنامج تحفيظ كامل",
       "hero_subtitle": "حفظ القرآن الكريم كاملًا في الإقامة الداخلية مع إشراف متميّز ورعاية شاملة.",
       "hero_badge": "برنامج التحفيظ الداخلي",
       "btn_register": "سجّل الآن",
@@ -2687,7 +2687,7 @@ window.AAA_TRANSLATIONS = {
       "whatsapp_tooltip": "Contactar por WhatsApp"
     },
     "programme_internat": {
-      "hero_title": "Programa Tahfiz completo",
+      "hero_title": "Daara Internado en Dakar — Tahfiz Completo",
       "hero_subtitle": "Memorización integral del Corán en internado con un acompañamiento de excelencia.",
       "hero_badge": "Programa Tahfiz Internado",
       "btn_register": "Inscribirse ahora",

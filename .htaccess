@@ -22,6 +22,16 @@ ErrorDocument 404 /404.html
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}.html -f
     RewriteRule ^([^.]+)$ $1.html [L]
+
+    # ----------------------------------------------------------------------
+    # Aliases SEO — URLs optimisées qui servent une page existante.
+    # Permet aux backlinks externes de pointer sur l'URL marketing/SEO
+    # tout en gardant la page d'origine indexée. La balise <link rel="canonical">
+    # de chaque page fait l'arbitrage final pour Google.
+    # ----------------------------------------------------------------------
+    RewriteRule ^daara-internat-dakar/?$  programme-internat.html  [L]
+    RewriteRule ^daara-dakar/?$           programme-internat.html  [L]
+    RewriteRule ^internat-coranique-dakar/?$ programme-internat.html [L]
 </IfModule>
 
 # ----------------------------------------------------------------------
