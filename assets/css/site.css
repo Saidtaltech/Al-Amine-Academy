@@ -227,6 +227,11 @@ h2 { line-height: 1.1; }
 }
 .wa-float:hover { transform: scale(1.07); background: #16a34a; }
 .wa-float i { font-size: 1.5rem; }
+/* Mobile : caché car la sticky CTA bar et le drawer footer ont déjà WhatsApp.
+   Évite le doublon visuel à côté du bouton "S'inscrire" sticky. */
+@media (max-width: 1023px) {
+  .wa-float { display: none; }
+}
 
 /* ---------- Utility for rendering arabic in nav ---------- */
 .tabular { font-variant-numeric: tabular-nums; }
