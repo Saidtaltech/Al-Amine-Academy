@@ -196,6 +196,13 @@ h2 { line-height: 1.1; }
 .section-blue { background: var(--brand-blue-dark); color: #fff; }
 .section-blue-deep { background: var(--brand-blue-deep); color: #fff; }
 
+@supports (content-visibility: auto) {
+  .section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+}
+
 /* ---------- Animations ---------- */
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
 .float       { animation: float 6s ease-in-out infinite; }

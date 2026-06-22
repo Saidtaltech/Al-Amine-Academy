@@ -51,27 +51,10 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-                        secondary: { DEFAULT: '#f59e0b', dark: '#d4a520', light: '#fef9e7' }
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        arabic: ['Amiri', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
+    <link rel="stylesheet" href="../assets/css/tailwind.css"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/></noscript>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/></noscript>
+<style>
         body { font-family: 'Montserrat', sans-serif; }
         .arabic-text { font-family: 'Amiri', serif; direction: rtl; line-height: 2; }
         /* Prose tweaks */
@@ -146,7 +129,7 @@
 <!-- HERO / Article Header -->
 <header class="relative overflow-hidden">
     <div class="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1920&q=85&auto=format&fit=crop" alt="La Kaaba — Masjid al-Haram, La Mecque" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1920&q=85&auto=format&fit=crop" alt="La Kaaba — Masjid al-Haram, La Mecque" class="w-full h-full object-cover" onerror="this.style.display='none'" decoding="async" fetchpriority="high">
         <div class="absolute inset-0 bg-gradient-to-br from-[#0a3040]/95 via-[#0a3040]/80 to-primary-dark/70"></div>
     </div>
     <div class="relative container mx-auto px-4 py-20 md:py-28">
@@ -265,7 +248,7 @@
                     Ce guide reprend l'essentiel pour un pèlerinage réussi selon la Sunnah du Prophète (PSL). Il compile les cours de préparation dispensés à l'Institut Al Amine Academy, les ressources du site <em>Islam House</em> et l'ouvrage de référence <em>« Le Guide du Pèlerin et du Mu'tamir »</em> de Talal Ibn Ahmad Al Aqil.
                 </p>
                 <figure class="my-8 rounded-2xl overflow-hidden shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1400&q=85&auto=format&fit=crop" alt="La Kaaba, Masjid al-Haram" class="w-full h-80 object-cover" onerror="this.style.display='none'">
+                    <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1400&q=85&auto=format&fit=crop" alt="La Kaaba, Masjid al-Haram" class="w-full h-80 object-cover" onerror="this.style.display='none'" decoding="async" loading="lazy">
                     <figcaption class="bg-gray-900 text-white/80 text-sm p-3 text-center italic">La Kaaba, au cœur de la Masjid al-Haram — La Mecque.</figcaption>
                 </figure>
 
@@ -686,7 +669,7 @@
 <!-- CTA -->
 <section class="bg-gradient-to-br from-primary-dark to-[#0a3040] text-white py-20 relative overflow-hidden">
     <div class="absolute inset-0 opacity-20">
-        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1600&q=85&auto=format&fit=crop" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1600&q=85&auto=format&fit=crop" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'" decoding="async" loading="lazy">
     </div>
     <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
         <div class="inline-block bg-secondary/20 border border-secondary/40 text-secondary px-4 py-2 rounded-full text-xs font-extrabold mb-5 uppercase tracking-widest">

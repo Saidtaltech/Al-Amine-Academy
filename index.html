@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DAARA Al Amine Academy — École coranique moderne à Dakar</title>
-  <meta name="description" content="DAARA Al Amine Academy à Dakar : Tahfiz, programme académique bilingue et épanouissement personnel. Internat, externat, cours en ligne et cours gratuits. Note 4.9/5 sur Google."/>
+  <title>Al Amine Academy — Daara & internat coranique moderne à Dakar</title>
+  <meta name="description" content="Meilleur daara internat à Dakar : Tahfiz, programme bilingue français-arabe et épanouissement. Internat, externat, daara en ligne et cours gratuits. Noté 4.9/5 sur Google. Inscription 2026 ouverte."/>
   <meta name="keywords" content="daara dakar, école coranique dakar, tahfiz dakar, mémorisation coran, internat islamique, daara moderne, al amine academy"/>
   <link rel="canonical" href="https://alamineacademy.com/"/>
   <link rel="icon" type="image/png" href="assets/img/LogoAAA.png"/>
   <link rel="apple-touch-icon" href="assets/img/LogoAAA.png"/>
+  <link rel="preload" as="image" href="assets/img/hero-eleves-coran.jpg" fetchpriority="high"/>
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="fr" href="https://alamineacademy.com/"/>
@@ -18,7 +19,7 @@
   <link rel="alternate" hreflang="x-default" href="https://alamineacademy.com/"/>
 
   <!-- Open Graph -->
-  <meta property="og:title" content="DAARA Al Amine Academy — École coranique moderne à Dakar"/>
+  <meta property="og:title" content="Al Amine Academy — Daara & internat coranique moderne à Dakar"/>
   <meta property="og:description" content="Tahfiz, académique bilingue et épanouissement personnel. Note 4.9/5 sur Google."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://alamineacademy.com/"/>
@@ -29,30 +30,16 @@
   <!-- Fonts + icons + Tailwind -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/></noscript>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/></noscript>
+  <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/></noscript>
   <link rel="stylesheet" href="assets/css/site.css"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    if (typeof tailwind !== 'undefined') tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary:   { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73', light: '#e8f4f8' },
-            secondary: { DEFAULT: '#f5a623', dark: '#d97706', light: '#fef3c7' },
-            ink:       { DEFAULT: '#0f172a', soft: '#334155', muted: '#64748b' }
-          },
-          fontFamily: {
-            sans:    ['Montserrat', 'system-ui', 'sans-serif'],
-            display: ['Montserrat', 'system-ui', 'sans-serif'],
-            arabic:  ['Amiri', 'serif']
-          }
-        }
-      }
-    };
-  </script>
-  <style>.hero { --hero-image: url('assets/img/hero-eleves-coran.jpg'); }</style>
+  <link rel="stylesheet" href="assets/css/tailwind.css"/>
+<style>.hero { --hero-image: url('assets/img/hero-eleves-coran.jpg'); }</style>
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -64,7 +51,7 @@
     "logo": "https://alamineacademy.com/assets/img/LogoAAA.png",
     "telephone": "+221777743700",
     "email": "daara@alamineacademy.com",
-    "address": { "@type": "PostalAddress", "streetAddress": "Cité des Magistrats, Derrière Kër Yoff", "addressLocality": "Dakar", "addressCountry": "SN" },
+    "address": { "@type": "PostalAddress", "streetAddress": "Cité des Magistrats, route de Yoff", "addressLocality": "Dakar", "addressCountry": "SN" },
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "15" },
     "sameAs": [
       "https://www.facebook.com/DaaraAlAmineAcademy",
@@ -223,7 +210,7 @@
 
       <div data-aos="fade-left" class="relative">
         <img src="assets/img/batiment-ecole.jpg" alt="Bâtiment de l'école Al Amine Academy" class="w-full h-96 object-cover rounded-2xl shadow-xl"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
         <div style="display:none" class="w-full h-96 bg-gradient-to-br from-primary-deep to-primary rounded-2xl items-center justify-center">
           <i class="fas fa-mosque text-6xl text-white/30"></i>
         </div>
@@ -283,7 +270,7 @@
         <!-- Tahfiz Internat -->
         <article class="program-card flex flex-col" data-aos="fade-up" data-aos-delay="100">
           <div class="relative">
-            <img src="assets/img/programme-tahfiz.jpg" alt="Programme Tahfiz - mémorisation du Coran" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+            <img src="assets/img/programme-tahfiz.jpg" alt="Programme Tahfiz - mémorisation du Coran" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
             <div style="display:none" class="w-full h-48 bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-book-quran text-white/30 text-5xl"></i></div>
           </div>
           <div class="p-7 flex-1 flex flex-col">
@@ -304,35 +291,10 @@
           </div>
         </article>
 
-        <!-- Tahfiz + Académique (featured) -->
-        <article class="program-card featured flex flex-col relative" data-aos="fade-up" data-aos-delay="200">
-          <div class="absolute -top-3 right-6 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10" data-i18n="programs.popular_tag">POPULAIRE</div>
-          <div class="relative">
-            <img src="assets/img/programme-elementaire.jpg" alt="Programme Tahfiz + Académique" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
-            <div style="display:none" class="w-full h-48 bg-gradient-to-br from-secondary to-secondary-dark items-center justify-center"><i class="fas fa-graduation-cap text-white/30 text-5xl"></i></div>
-          </div>
-          <div class="p-7 flex-1 flex flex-col">
-            <div class="w-14 h-14 rounded-xl bg-secondary/15 flex items-center justify-center mb-4"><i class="fas fa-graduation-cap text-secondary text-2xl"></i></div>
-            <h3 class="text-xl font-bold mb-2">Tahfiz + Académique</h3>
-            <p class="text-ink-muted text-sm mb-5">Coran et études bilingues équilibrés.</p>
-            <ul class="space-y-2 mb-6 text-sm text-ink-soft">
-              <li class="flex items-start gap-2"><i class="fas fa-check-circle text-secondary mt-0.5 flex-shrink-0"></i>Mémorisation progressive du Coran</li>
-              <li class="flex items-start gap-2"><i class="fas fa-check-circle text-secondary mt-0.5 flex-shrink-0"></i>Français et Anglais avancés</li>
-              <li class="flex items-start gap-2"><i class="fas fa-check-circle text-secondary mt-0.5 flex-shrink-0"></i>Mathématiques et sciences</li>
-              <li class="flex items-start gap-2"><i class="fas fa-check-circle text-secondary mt-0.5 flex-shrink-0"></i>Hébergement et activités inclus</li>
-            </ul>
-            <div class="mt-auto border-t border-slate-100 pt-5">
-              <p class="text-xs text-ink-muted mb-1">À partir de</p>
-              <p class="text-2xl font-extrabold text-primary mb-4">115 000 <span class="text-sm font-medium text-ink-muted">FCFA / mois</span></p>
-              <a href="programme-tahfiz-academique.html" class="btn btn-primary w-full justify-center">S'inscrire maintenant</a>
-            </div>
-          </div>
-        </article>
-
         <!-- Programme Mixte -->
         <article class="program-card flex flex-col" data-aos="fade-up" data-aos-delay="300">
           <div class="relative">
-            <img src="assets/img/programme-mixte.jpg" alt="Programme Mixte externat" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+            <img src="assets/img/programme-mixte.jpg" alt="Programme Mixte externat" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
             <div style="display:none" class="w-full h-48 bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-balance-scale text-white/30 text-5xl"></i></div>
           </div>
           <div class="p-7 flex-1 flex flex-col">
@@ -492,7 +454,7 @@
   <div id="aaa-footer"></div>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
   <script src="translations.js"></script>
   <script src="lang.js"></script>

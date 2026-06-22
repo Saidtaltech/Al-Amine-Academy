@@ -33,7 +33,6 @@ window.AAA_TRANSLATIONS = {
     },
     "programs": {
       "tahfiz": "Tahfiz Internat",
-      "combined": "Tahfiz + Académique",
       "mixed": "Programme Mixte",
       "online": "Cours en ligne",
       "free": "Cours gratuits",
@@ -238,10 +237,6 @@ window.AAA_TRANSLATIONS = {
       "hero_title": "Programme Tahfiz Complet",
       "hero_subtitle": "Mémorisation intégrale du Coran en internat avec un encadrement d'excellence."
     },
-    "programme_combined": {
-      "hero_title_html": "Programme Mixte<br/><span class=\"text-secondary\">Tahfiz + Académique</span>",
-      "hero_subtitle_html": "Le meilleur des deux mondes : votre enfant mémorise le Coran <strong>ET</strong> suit le cursus scolaire français officiel."
-    },
     "programme_mixed": {
       "hero_title": "Programme Mixte en Externat",
       "hero_subtitle": "Coran le matin, cursus académique l'après-midi. Votre enfant rentre à la maison chaque soir — pour les familles qui veulent garder leur enfant proche tout en lui offrant Tahfiz + études."
@@ -276,7 +271,6 @@ window.AAA_TRANSLATIONS = {
       "blog_title": "Articles &amp; <span class='text-secondary'>ressources</span>",
       "conferences_title": "Conférences &amp; <span class='text-secondary'>Formation Hajj</span>",
       "tahfiz_title": "Tahfiz <span class='text-secondary'>Internat</span>",
-      "combined_title": "Tahfiz + <span class='text-secondary'>Académique</span>",
       "mixed_title": "Programme <span class='text-secondary'>Mixte</span>",
       "online_title": "Cours en <span class='text-secondary'>ligne</span>",
       "free_title": "Cours <span class='text-secondary'>gratuits</span>"
@@ -313,7 +307,6 @@ window.AAA_TRANSLATIONS = {
     },
     "programs": {
       "tahfiz": "Tahfiz Boarding",
-      "combined": "Tahfiz + Academic",
       "mixed": "Day Program",
       "online": "Online Courses",
       "free": "Free Courses",
@@ -518,10 +511,6 @@ window.AAA_TRANSLATIONS = {
       "hero_title": "Full Tahfiz Boarding Program",
       "hero_subtitle": "Complete Quran memorization in our boarding school with excellent guidance and care."
     },
-    "programme_combined": {
-      "hero_title_html": "Combined Program<br/><span class=\"text-secondary\">Tahfiz + Academic</span>",
-      "hero_subtitle_html": "The best of both worlds: your child memorizes the Quran <strong>AND</strong> follows the official French curriculum."
-    },
     "programme_mixed": {
       "hero_title": "Day Program (Externat)",
       "hero_subtitle": "Quran in the morning, academic curriculum in the afternoon. Your child comes home every evening — for families who want to keep their child close while offering Tahfiz + studies."
@@ -556,7 +545,6 @@ window.AAA_TRANSLATIONS = {
       "blog_title": "Articles &amp; <span class='text-secondary'>resources</span>",
       "conferences_title": "Conferences &amp; <span class='text-secondary'>Hajj Training</span>",
       "tahfiz_title": "Tahfiz <span class='text-secondary'>Boarding</span>",
-      "combined_title": "Tahfiz + <span class='text-secondary'>Academic</span>",
       "mixed_title": "<span class='text-secondary'>Day School</span> Program",
       "online_title": "Online <span class='text-secondary'>classes</span>",
       "free_title": "<span class='text-secondary'>Free</span> classes"
@@ -593,7 +581,6 @@ window.AAA_TRANSLATIONS = {
     },
     "programs": {
       "tahfiz": "تحفيظ داخلي",
-      "combined": "تحفيظ + أكاديمي",
       "mixed": "برنامج مختلط (خارجي)",
       "online": "دروس عبر الإنترنت",
       "free": "دروس مجانية",
@@ -798,10 +785,6 @@ window.AAA_TRANSLATIONS = {
       "hero_title": "برنامج التحفيظ الكامل",
       "hero_subtitle": "حفظ القرآن الكريم كاملًا في الإقامة الداخلية مع إشراف متميّز ورعاية شاملة."
     },
-    "programme_combined": {
-      "hero_title_html": "البرنامج المختلط<br/><span class=\"text-secondary\">تحفيظ + أكاديمي</span>",
-      "hero_subtitle_html": "أفضل ما في العالمين: يحفظ طفلك القرآن <strong>و</strong> يتابع المنهج الفرنسي الرسمي."
-    },
     "programme_mixed": {
       "hero_title": "البرنامج المختلط — خارجي",
       "hero_subtitle": "قرآن في الصباح، منهج أكاديمي بعد الظهر. يعود طفلك إلى المنزل كل مساء — للأسر التي تريد إبقاء أطفالها قريبين مع تقديم التحفيظ والدراسة."
@@ -836,7 +819,6 @@ window.AAA_TRANSLATIONS = {
       "blog_title": "المقالات و<span class='text-secondary'>المصادر</span>",
       "conferences_title": "المؤتمرات و<span class='text-secondary'>تدريب الحج</span>",
       "tahfiz_title": "تحفيظ <span class='text-secondary'>داخلي</span>",
-      "combined_title": "تحفيظ + <span class='text-secondary'>أكاديمي</span>",
       "mixed_title": "برنامج <span class='text-secondary'>المدرسة النهارية</span>",
       "online_title": "دروس <span class='text-secondary'>عبر الإنترنت</span>",
       "free_title": "دروس <span class='text-secondary'>مجانية</span>"
@@ -873,7 +855,6 @@ window.AAA_TRANSLATIONS = {
     },
     "programs": {
       "tahfiz": "Tahfiz Internado",
-      "combined": "Tahfiz + Académico",
       "mixed": "Programa Mixto",
       "online": "Cursos en línea",
       "free": "Cursos gratuitos",
@@ -1078,10 +1059,6 @@ window.AAA_TRANSLATIONS = {
       "hero_title": "Programa Tahfiz completo",
       "hero_subtitle": "Memorización integral del Corán en internado con un acompañamiento de excelencia."
     },
-    "programme_combined": {
-      "hero_title_html": "Programa Mixto<br/><span class=\"text-secondary\">Tahfiz + Académico</span>",
-      "hero_subtitle_html": "Lo mejor de los dos mundos: su hijo memoriza el Corán <strong>Y</strong> sigue el currículo francés oficial."
-    },
     "programme_mixed": {
       "hero_title": "Programa Mixto en externado",
       "hero_subtitle": "Corán por la mañana, currículo académico por la tarde. Su hijo regresa a casa cada noche — para las familias que quieren mantener cerca a sus hijos mientras les ofrecen Tahfiz + estudios."
@@ -1116,7 +1093,6 @@ window.AAA_TRANSLATIONS = {
       "blog_title": "Artículos y <span class='text-secondary'>recursos</span>",
       "conferences_title": "Conferencias y <span class='text-secondary'>formación Hajj</span>",
       "tahfiz_title": "<span class='text-secondary'>Internado</span> Tahfiz",
-      "combined_title": "Tahfiz + <span class='text-secondary'>Académico</span>",
       "mixed_title": "Programa <span class='text-secondary'>Mixto</span>",
       "online_title": "Clases <span class='text-secondary'>en línea</span>",
       "free_title": "Clases <span class='text-secondary'>gratuitas</span>"

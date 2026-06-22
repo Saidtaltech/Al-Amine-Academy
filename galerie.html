@@ -23,30 +23,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/></noscript>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/></noscript>
+  <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/></noscript>
   <link rel="stylesheet" href="assets/css/site.css"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    if (typeof tailwind !== 'undefined') tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary:   { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73', light: '#e8f4f8' },
-            secondary: { DEFAULT: '#f5a623', dark: '#d97706', light: '#fef3c7' },
-            ink:       { DEFAULT: '#0f172a', soft: '#334155', muted: '#64748b' }
-          },
-          fontFamily: {
-            sans:    ['Montserrat', 'system-ui', 'sans-serif'],
-            display: ['Montserrat', 'system-ui', 'sans-serif'],
-            arabic:  ['Amiri', 'serif']
-          }
-        }
-      }
-    };
-  </script>
-  
+  <link rel="stylesheet" href="assets/css/tailwind.css"/>
 </head>
 
 <body class="antialiased">
@@ -79,32 +64,32 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/img/galerie-classes.jpg" alt="Salles de classe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <img src="assets/img/galerie-classes.jpg" alt="Salles de classe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
           <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-chalkboard-teacher text-white/40 text-5xl"></i></div>
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Salles de classe</p></div>
         </a>
         <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="150">
-          <img src="assets/img/galerie-sport.jpg" alt="Sport" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <img src="assets/img/galerie-sport.jpg" alt="Sport" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
           <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-futbol text-white/40 text-5xl"></i></div>
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Sport</p></div>
         </a>
         <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/img/galerie-ceremonies.jpg" alt="Cérémonies & événements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <img src="assets/img/galerie-ceremonies.jpg" alt="Cérémonies & événements" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
           <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-award text-white/40 text-5xl"></i></div>
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Cérémonies & événements</p></div>
         </a>
         <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="250">
-          <img src="assets/img/galerie-batiment.jpg" alt="Bâtiment & locaux" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <img src="assets/img/galerie-batiment.jpg" alt="Bâtiment & locaux" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
           <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-building text-white/40 text-5xl"></i></div>
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Bâtiment & locaux</p></div>
         </a>
         <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/img/galerie-cantine.jpg" alt="Cantine & repas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <img src="assets/img/galerie-cantine.jpg" alt="Cantine & repas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
           <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-utensils text-white/40 text-5xl"></i></div>
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Cantine & repas</p></div>
         </a>
         <a href="#" class="card aspect-[4/3] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="350">
-          <img src="assets/img/galerie-priere.jpg" alt="Prières & vie spirituelle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+          <img src="assets/img/galerie-priere.jpg" alt="Prières & vie spirituelle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
           <div style="display:none" class="w-full h-full bg-gradient-to-br from-primary-deep to-primary items-center justify-center"><i class="fas fa-hands-praying text-white/40 text-5xl"></i></div>
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white"><p class="font-bold">Prières & vie spirituelle</p></div>
         </a>
@@ -119,7 +104,7 @@
 
   <div id="aaa-footer"></div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
   <script src="translations.js"></script>
   <script src="lang.js"></script>

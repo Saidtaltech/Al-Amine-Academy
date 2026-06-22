@@ -29,7 +29,6 @@
   },
   "programs": {
     "tahfiz": "Tahfiz Boarding",
-    "combined": "Tahfiz + Academic",
     "mixed": "Day Program",
     "online": "Online Courses",
     "free": "Free Courses",
@@ -234,10 +233,6 @@
     "hero_title": "Full Tahfiz Boarding Program",
     "hero_subtitle": "Complete Quran memorization in our boarding school with excellent guidance and care."
   },
-  "programme_combined": {
-    "hero_title_html": "Combined Program<br/><span class=\"text-secondary\">Tahfiz + Academic</span>",
-    "hero_subtitle_html": "The best of both worlds: your child memorizes the Quran <strong>AND</strong> follows the official French curriculum."
-  },
   "programme_mixed": {
     "hero_title": "Day Program (Externat)",
     "hero_subtitle": "Quran in the morning, academic curriculum in the afternoon. Your child comes home every evening — for families who want to keep their child close while offering Tahfiz + studies."
@@ -272,7 +267,6 @@
     "blog_title": "Articles &amp; <span class='text-secondary'>resources</span>",
     "conferences_title": "Conferences &amp; <span class='text-secondary'>Hajj Training</span>",
     "tahfiz_title": "Tahfiz <span class='text-secondary'>Boarding</span>",
-    "combined_title": "Tahfiz + <span class='text-secondary'>Academic</span>",
     "mixed_title": "<span class='text-secondary'>Day School</span> Program",
     "online_title": "Online <span class='text-secondary'>classes</span>",
     "free_title": "<span class='text-secondary'>Free</span> classes"

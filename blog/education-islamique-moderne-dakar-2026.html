@@ -74,32 +74,10 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: { DEFAULT: '#1e7a9a', dark: '#165b73', light: '#e8f4f8' },
-                        secondary: { DEFAULT: '#f59e0b', dark: '#d97706', light: '#fef3c7' },
-                        teal: {
-                            50: '#f0f9fc', 100: '#d5eef5', 200: '#aadcea', 300: '#7ec9df',
-                            400: '#3ba5c9', 500: '#2590b3', 600: '#1e7a9a', 700: '#165b73',
-                            800: '#0f4457', 900: '#0a3040', 950: '#061e2a'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        arabic: ['Amiri', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
+    <link rel="stylesheet" href="../assets/css/tailwind.css"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/></noscript>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/></noscript>
+<style>
         body { font-family: 'Montserrat', sans-serif; }
         .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
     </style>
@@ -146,13 +124,6 @@
          </i>
          <span data-i18n="programs.tahfiz">
           Programme Tahfiz Internat
-         </span>
-        </a>
-        <a class="block px-4 py-3 hover:bg-primary-light text-gray-700 hover:text-primary transition" href="../programme-tahfiz-academique.html">
-         <i class="fas fa-book-open mr-2">
-         </i>
-         <span data-i18n="programs.combined">
-          Tahfiz + Académique
          </span>
         </a>
         <a class="block px-4 py-3 hover:bg-primary-light text-gray-700 hover:text-primary transition" href="../programme-cours-en-ligne.html">
@@ -226,9 +197,6 @@
      <div class="pl-4 space-y-2">
       <a class="block py-2 text-gray-700" data-i18n="programs.tahfiz" href="../programme-internat.html">
        → Tahfiz Internat
-      </a>
-      <a class="block py-2 text-gray-700" data-i18n="programs.combined" href="../programme-tahfiz-academique.html">
-       → Tahfiz + Académique
       </a>
       <a class="block py-2 text-gray-700" data-i18n="programs.online" href="../programme-cours-en-ligne.html">
        → Cours en ligne

@@ -29,7 +29,6 @@
   },
   "programs": {
     "tahfiz": "Tahfiz Internado",
-    "combined": "Tahfiz + Académico",
     "mixed": "Programa Mixto",
     "online": "Cursos en línea",
     "free": "Cursos gratuitos",
@@ -234,10 +233,6 @@
     "hero_title": "Programa Tahfiz completo",
     "hero_subtitle": "Memorización integral del Corán en internado con un acompañamiento de excelencia."
   },
-  "programme_combined": {
-    "hero_title_html": "Programa Mixto<br/><span class=\"text-secondary\">Tahfiz + Académico</span>",
-    "hero_subtitle_html": "Lo mejor de los dos mundos: su hijo memoriza el Corán <strong>Y</strong> sigue el currículo francés oficial."
-  },
   "programme_mixed": {
     "hero_title": "Programa Mixto en externado",
     "hero_subtitle": "Corán por la mañana, currículo académico por la tarde. Su hijo regresa a casa cada noche — para las familias que quieren mantener cerca a sus hijos mientras les ofrecen Tahfiz + estudios."
@@ -272,7 +267,6 @@
     "blog_title": "Artículos y <span class='text-secondary'>recursos</span>",
     "conferences_title": "Conferencias y <span class='text-secondary'>formación Hajj</span>",
     "tahfiz_title": "<span class='text-secondary'>Internado</span> Tahfiz",
-    "combined_title": "Tahfiz + <span class='text-secondary'>Académico</span>",
     "mixed_title": "Programa <span class='text-secondary'>Mixto</span>",
     "online_title": "Clases <span class='text-secondary'>en línea</span>",
     "free_title": "Clases <span class='text-secondary'>gratuitas</span>"

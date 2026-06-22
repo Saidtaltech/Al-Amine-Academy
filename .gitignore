@@ -21,3 +21,6 @@ dist/
 # Files Claude / cowork mode
 .claude/
 local-agent-mode-sessions/
+
+# Artefact local (DB vectorielle ruflo)
+ruvector.db

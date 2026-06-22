@@ -23,30 +23,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/></noscript>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/></noscript>
+  <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/></noscript>
   <link rel="stylesheet" href="assets/css/site.css"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    if (typeof tailwind !== 'undefined') tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary:   { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73', light: '#e8f4f8' },
-            secondary: { DEFAULT: '#f5a623', dark: '#d97706', light: '#fef3c7' },
-            ink:       { DEFAULT: '#0f172a', soft: '#334155', muted: '#64748b' }
-          },
-          fontFamily: {
-            sans:    ['Montserrat', 'system-ui', 'sans-serif'],
-            display: ['Montserrat', 'system-ui', 'sans-serif'],
-            arabic:  ['Amiri', 'serif']
-          }
-        }
-      }
-    };
-  </script>
-  
+  <link rel="stylesheet" href="assets/css/tailwind.css"/>
 </head>
 
 <body class="antialiased">
@@ -78,7 +63,7 @@
         <p class="text-base text-ink-soft leading-relaxed" data-i18n="about.mission_text2">Nous croyons que chaque enfant peut allier mémorisation du Coran, réussite scolaire et épanouissement personnel — quand l'environnement et l'encadrement sont à la hauteur.</p>
       </div>
       <div data-aos="fade-left">
-        <img src="assets/img/equipe-pedagogique.jpg" alt="Équipe pédagogique d'Al Amine Academy" class="w-full h-96 object-cover rounded-2xl shadow-xl" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+        <img src="assets/img/equipe-pedagogique.jpg" alt="Équipe pédagogique d'Al Amine Academy" class="w-full h-96 object-cover rounded-2xl shadow-xl" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
         <div style="display:none" class="w-full h-96 bg-gradient-to-br from-primary-deep to-primary rounded-2xl items-center justify-center"><i class="fas fa-mosque text-6xl text-white/30"></i></div>
       </div>
     </div>
@@ -102,7 +87,7 @@
   <section class="section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div data-aos="fade-right">
-        <img src="assets/img/classe-apprentissage.jpg" alt="Classe d'apprentissage" class="w-full h-96 object-cover rounded-2xl shadow-xl" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
+        <img src="assets/img/classe-apprentissage.jpg" alt="Classe d'apprentissage" class="w-full h-96 object-cover rounded-2xl shadow-xl" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" decoding="async" loading="lazy">
         <div style="display:none" class="w-full h-96 bg-gradient-to-br from-primary-deep to-primary rounded-2xl items-center justify-center"><i class="fas fa-chalkboard-teacher text-6xl text-white/30"></i></div>
       </div>
       <div data-aos="fade-left">
@@ -132,7 +117,7 @@
 
   <div id="aaa-footer"></div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
   <script src="translations.js"></script>
   <script src="lang.js"></script>

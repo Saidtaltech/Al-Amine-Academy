@@ -29,7 +29,6 @@
   },
   "programs": {
     "tahfiz": "تحفيظ داخلي",
-    "combined": "تحفيظ + أكاديمي",
     "mixed": "برنامج مختلط (خارجي)",
     "online": "دروس عبر الإنترنت",
     "free": "دروس مجانية",
@@ -234,10 +233,6 @@
     "hero_title": "برنامج التحفيظ الكامل",
     "hero_subtitle": "حفظ القرآن الكريم كاملًا في الإقامة الداخلية مع إشراف متميّز ورعاية شاملة."
   },
-  "programme_combined": {
-    "hero_title_html": "البرنامج المختلط<br/><span class=\"text-secondary\">تحفيظ + أكاديمي</span>",
-    "hero_subtitle_html": "أفضل ما في العالمين: يحفظ طفلك القرآن <strong>و</strong> يتابع المنهج الفرنسي الرسمي."
-  },
   "programme_mixed": {
     "hero_title": "البرنامج المختلط — خارجي",
     "hero_subtitle": "قرآن في الصباح، منهج أكاديمي بعد الظهر. يعود طفلك إلى المنزل كل مساء — للأسر التي تريد إبقاء أطفالها قريبين مع تقديم التحفيظ والدراسة."
@@ -272,7 +267,6 @@
     "blog_title": "المقالات و<span class='text-secondary'>المصادر</span>",
     "conferences_title": "المؤتمرات و<span class='text-secondary'>تدريب الحج</span>",
     "tahfiz_title": "تحفيظ <span class='text-secondary'>داخلي</span>",
-    "combined_title": "تحفيظ + <span class='text-secondary'>أكاديمي</span>",
     "mixed_title": "برنامج <span class='text-secondary'>المدرسة النهارية</span>",
     "online_title": "دروس <span class='text-secondary'>عبر الإنترنت</span>",
     "free_title": "دروس <span class='text-secondary'>مجانية</span>"
