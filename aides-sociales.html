@@ -168,6 +168,7 @@
   <meta content="https://alamineacademy.com/assets/img/aides-sociales/complexe-1.jpg" property="og:image"/>
   <meta content="fr_SN" property="og:locale"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="preload" as="image" type="image/webp" href="assets/img/aides-sociales/complexe-1.webp" fetchpriority="high">
 </head>
 <body class="antialiased bg-white">
   <div id="aaa-wa"></div>
@@ -178,7 +179,10 @@
   <section class="relative overflow-hidden bg-gradient-to-br from-teal-900 via-teal-800 to-teal-700 py-24 md:py-32">
     <!-- Background image -->
     <div class="absolute inset-0 opacity-20">
-      <img src="assets/img/aides-sociales/complexe-1.jpg" alt="" class="w-full h-full object-cover" loading="eager"/>
+      <picture>
+        <source type="image/webp" srcset="assets/img/aides-sociales/complexe-1.webp">
+        <img src="assets/img/aides-sociales/complexe-1.jpg" alt="" class="w-full h-full object-cover" loading="eager" fetchpriority="high">
+      </picture>
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-teal-900/95 via-teal-900/60 to-teal-900/30"></div>
 
@@ -350,16 +354,16 @@
       <!-- Galerie photos -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
         <div class="reveal reveal-delay-1 gallery-item rounded-3xl overflow-hidden aspect-[4/3] shadow-lg shadow-teal-900/10">
-          <img src="assets/img/aides-sociales/complexe-1.jpg" alt="Projet Al Mouslihoon - Vue 1" class="w-full h-full object-cover"/>
+          <picture><source type="image/webp" srcset="assets/img/aides-sociales/complexe-1.webp"><img src="assets/img/aides-sociales/complexe-1.jpg" alt="Projet Al Mouslihoon - Vue 1" class="w-full h-full object-cover" loading="lazy"/></picture>
         </div>
         <div class="reveal reveal-delay-2 gallery-item rounded-3xl overflow-hidden aspect-[4/3] shadow-lg shadow-teal-900/10">
-          <img src="assets/img/aides-sociales/complexe-2.jpg" alt="Projet Al Mouslihoon - Vue 2" class="w-full h-full object-cover"/>
+          <picture><source type="image/webp" srcset="assets/img/aides-sociales/complexe-2.webp"><img src="assets/img/aides-sociales/complexe-2.jpg" alt="Projet Al Mouslihoon - Vue 2" class="w-full h-full object-cover" loading="lazy"/></picture>
         </div>
         <div class="reveal reveal-delay-3 gallery-item rounded-3xl overflow-hidden aspect-[4/3] shadow-lg shadow-teal-900/10">
-          <img src="assets/img/aides-sociales/complexe-3.jpg" alt="Projet Al Mouslihoon - Vue 3" class="w-full h-full object-cover"/>
+          <picture><source type="image/webp" srcset="assets/img/aides-sociales/complexe-3.webp"><img src="assets/img/aides-sociales/complexe-3.jpg" alt="Projet Al Mouslihoon - Vue 3" class="w-full h-full object-cover" loading="lazy"/></picture>
         </div>
         <div class="reveal reveal-delay-4 gallery-item rounded-3xl overflow-hidden aspect-[4/3] shadow-lg shadow-teal-900/10">
-          <img src="assets/img/aides-sociales/complexe-4.jpg" alt="Projet Al Mouslihoon - Vue 4" class="w-full h-full object-cover"/>
+          <picture><source type="image/webp" srcset="assets/img/aides-sociales/complexe-4.webp"><img src="assets/img/aides-sociales/complexe-4.jpg" alt="Projet Al Mouslihoon - Vue 4" class="w-full h-full object-cover" loading="lazy"/></picture>
         </div>
       </div>
 

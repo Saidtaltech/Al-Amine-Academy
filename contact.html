@@ -140,6 +140,7 @@
   <link href="https://alamineacademy.com/contact.html" hreflang="en" rel="alternate"/>
   <link href="https://alamineacademy.com/contact.html" hreflang="ar" rel="alternate"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="preload" as="image" type="image/webp" href="/assets/img/hero-eleves-coran.webp" fetchpriority="high">
 
   <!-- Geo SEO -->
   <meta content="SN-DK" name="geo.region"/>
@@ -184,7 +185,7 @@
   <div class="h-20"></div>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero-cover" style="--hero-image: url('/assets/img/hero-eleves-coran.jpg'); background-position: center, center 45%, center">
+  <section class="hero-cover" style="--hero-image: image-set(url('/assets/img/hero-eleves-coran.webp') type('image/webp'), url('/assets/img/hero-eleves-coran.jpg') type('image/jpeg')); background-position: center, center 45%, center">
     <div class="hero-inner max-w-7xl mx-auto px-4 lg:px-8">
       <div class="text-center max-w-4xl mx-auto">
         <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-6 reveal" data-i18n="contact.hero_title">

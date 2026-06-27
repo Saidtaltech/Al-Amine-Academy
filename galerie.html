@@ -103,6 +103,7 @@
   <meta content="Photos de DAARA Al Amine Academy — élèves, sport, bâtiment, cantine." property="og:description"/>
   <meta content="https://alamineacademy.com/assets/img/gallery-sport-1.jpg" property="og:image"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="preload" as="image" type="image/webp" href="assets/img/gallery-sport-1.webp" fetchpriority="high">
 </head>
 
 <body class="antialiased bg-white" style="font-family:'Montserrat',sans-serif">
@@ -112,7 +113,7 @@
   <div class="h-20"></div>
 
   <!-- ==================== HERO ==================== -->
-  <section class="hero-cover" style="--hero-image: url('/assets/img/gallery-sport-1.jpg'); background-position: center, center 40%, center">
+  <section class="hero-cover" style="--hero-image: image-set(url('/assets/img/gallery-sport-1.webp') type('image/webp'), url('/assets/img/gallery-sport-1.jpg') type('image/jpeg')); background-position: center, center 40%, center">
     <div class="hero-inner max-w-4xl mx-auto px-4 text-center">
       <div class="reveal">
         <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white text-sm font-semibold px-5 py-2 rounded-full mb-6">
@@ -149,9 +150,12 @@
              data-label="Salles de classe"
              data-images='["assets/img/hero-eleves-coran.jpg"]'>
           <div class="relative overflow-hidden rounded-3xl h-72 soft-card shadow-lg">
-            <img src="assets/img/hero-eleves-coran.jpg" alt="Salles de classe"
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                 loading="lazy" style="object-position:center 20%">
+            <picture>
+              <source type="image/webp" srcset="assets/img/hero-eleves-coran.webp">
+              <img src="assets/img/hero-eleves-coran.jpg" alt="Salles de classe"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   loading="lazy" style="object-position:center 20%">
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
               <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg">
@@ -170,9 +174,12 @@
              data-label="Sport & Taekwondo"
              data-images='["assets/img/gallery-sport-1.jpg","assets/img/gallery-sport-2.jpg","assets/img/gallery-sport-3.jpg"]'>
           <div class="relative overflow-hidden rounded-3xl h-72 soft-card shadow-lg">
-            <img src="assets/img/gallery-sport-1.jpg" alt="Sport et Taekwondo"
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                 loading="lazy" style="object-position:center 50%">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-sport-1.webp">
+              <img src="assets/img/gallery-sport-1.jpg" alt="Sport et Taekwondo"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   loading="lazy" style="object-position:center 50%">
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
               <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg">
@@ -191,9 +198,12 @@
              data-label="Événements"
              data-images='["assets/img/gallery-evenement-1.jpg"]'>
           <div class="relative overflow-hidden rounded-3xl h-72 soft-card shadow-lg">
-            <img src="assets/img/gallery-evenement-1.jpg" alt="Événements"
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                 loading="lazy" style="object-position:center 40%">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-evenement-1.webp">
+              <img src="assets/img/gallery-evenement-1.jpg" alt="Événements"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   loading="lazy" style="object-position:center 40%">
+            </picture>
             <!-- Whitened overlay for event -->
             <div class="absolute inset-0 bg-white/15"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent group-hover:from-black/75 transition-all duration-300"></div>
@@ -214,9 +224,12 @@
              data-label="Bâtiment & Campus"
              data-images='["assets/img/gallery-batiment-1.jpg","assets/img/gallery-batiment-2.jpg","assets/img/gallery-batiment-3.jpg","assets/img/gallery-batiment-4.jpg","assets/img/gallery-batiment-5.jpg","assets/img/gallery-batiment-6.jpg","assets/img/gallery-batiment-7.jpg","assets/img/gallery-batiment-8.jpg","assets/img/gallery-batiment-9.jpg","assets/img/gallery-batiment-10.jpg","assets/img/gallery-batiment-11.jpg"]'>
           <div class="relative overflow-hidden rounded-3xl h-72 soft-card shadow-lg">
-            <img src="assets/img/gallery-batiment-1.jpg" alt="Bâtiment et campus"
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                 loading="lazy" style="object-position:center 30%">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-batiment-1.webp">
+              <img src="assets/img/gallery-batiment-1.jpg" alt="Bâtiment et campus"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   loading="lazy" style="object-position:center 30%">
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
               <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg">
@@ -235,9 +248,12 @@
              data-label="Cantine & Repas"
              data-images='["assets/img/gallery-cantine-1.jpg","assets/img/gallery-cantine-2.jpg","assets/img/gallery-cantine-3.jpg","assets/img/gallery-cantine-4.jpg"]'>
           <div class="relative overflow-hidden rounded-3xl h-72 soft-card shadow-lg">
-            <img src="assets/img/gallery-cantine-1.jpg" alt="Cantine et repas halal"
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                 loading="lazy" style="object-position:center 50%">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-cantine-1.webp">
+              <img src="assets/img/gallery-cantine-1.jpg" alt="Cantine et repas halal"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   loading="lazy" style="object-position:center 50%">
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
               <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg">
@@ -256,9 +272,12 @@
              data-label="Espace de Prière"
              data-images='["assets/img/gallery-priere-1.jpg"]'>
           <div class="relative overflow-hidden rounded-3xl h-72 soft-card shadow-lg">
-            <img src="assets/img/gallery-priere-1.jpg" alt="Espace de prière"
-                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                 loading="lazy" style="object-position:center 40%">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gallery-priere-1.webp">
+              <img src="assets/img/gallery-priere-1.jpg" alt="Espace de prière"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   loading="lazy" style="object-position:center 40%">
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-300"></div>
             <div class="absolute inset-0 flex flex-col items-center justify-center">
               <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg">

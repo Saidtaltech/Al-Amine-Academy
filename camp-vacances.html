@@ -69,6 +69,7 @@
   <meta content="Du 5 juillet au 25 septembre 2026 — Coran, sport et vie en groupe." name="twitter:description"/>
   <meta content="https://alamineacademy.com/assets/img/LogoAAA.png" name="twitter:image"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="preload" as="image" type="image/webp" href="assets/img/camp-vacances-hero.webp" fetchpriority="high">
 
   <script type="application/ld+json">
   {
@@ -99,7 +100,7 @@
   <div class="h-20"></div>
 
   <!-- HERO -->
-  <section class="hero-cover" style="--hero-image: url('assets/img/camp-vacances-hero.jpg'); background-position: center, center 50%, center">
+  <section class="hero-cover" style="--hero-image: image-set(url('assets/img/camp-vacances-hero.webp') type('image/webp'), url('assets/img/camp-vacances-hero.jpg') type('image/jpeg')); background-position: center, center 50%, center">
    <div class="hero-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center text-white">
         <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-4 py-2 rounded-full text-white font-semibold text-xs uppercase tracking-widest mb-6 reveal">
@@ -222,7 +223,10 @@
           <div class="rounded-3xl overflow-hidden shadow-2xl card-hover reveal reveal-right" style="border-top:5px solid #f59e0b;background:linear-gradient(135deg,#ffffff 0%,#fef9ec 50%,#fef3c7 100%);">
             <!-- Cover photo -->
             <div class="prog-card-photo relative h-56 overflow-hidden">
-              <img src="assets/img/camp-prog-b-v2.png" alt="Camp de vacances Petite Côte — Villa Al Amine Academy Mbour" class="w-full h-full object-cover" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="assets/img/camp-prog-b-v2.webp">
+                <img src="assets/img/camp-prog-b-v2.png" alt="Camp de vacances Petite Côte — Villa Al Amine Academy Mbour" class="w-full h-full object-cover" loading="lazy">
+              </picture>
               <div class="absolute inset-0 bg-gradient-to-t from-amber-900/90 via-amber-800/50 to-transparent"></div>
               <div class="absolute top-3 right-3 bg-secondary text-gray-900 text-[10px] font-extrabold px-3 py-1.5 rounded-full shadow badge-pulse uppercase tracking-wider">Tout inclus</div>
               <div class="absolute bottom-0 left-0 p-5">

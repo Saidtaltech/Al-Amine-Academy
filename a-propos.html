@@ -61,6 +61,7 @@
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
   <meta content="SN-DK" name="geo.region"/>
   <meta content="Dakar" name="geo.placename"/>
+  <link rel="preload" as="image" type="image/webp" href="/assets/img/hero-eleves-coran.webp" fetchpriority="high">
 </head>
 
 <body class="antialiased bg-white" style="font-family:'Montserrat',sans-serif">
@@ -70,7 +71,7 @@
   <div class="h-20"></div>
 
   <!-- ==================== HERO ==================== -->
-  <section class="hero-cover" style="--hero-image: url('/assets/img/hero-eleves-coran.jpg'); background-position: center, center 30%, center">
+  <section class="hero-cover" style="--hero-image: image-set(url('/assets/img/hero-eleves-coran.webp') type('image/webp'), url('/assets/img/hero-eleves-coran.jpg') type('image/jpeg')); background-position: center, center 30%, center">
     <div class="hero-inner max-w-4xl mx-auto px-4 lg:px-8 text-center">
       <div class="reveal">
         <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-white text-sm font-semibold px-5 py-2 rounded-full mb-6">
@@ -207,8 +208,11 @@
       <!-- Photo banner -->
       <div class="mb-16 reveal">
         <div class="img-zoom rounded-3xl overflow-hidden shadow-xl h-72">
-          <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves en classe à DAARA Al Amine Academy"
-               class="w-full h-full object-cover" loading="lazy" style="object-position: center 35%">
+          <picture>
+            <source type="image/webp" srcset="assets/img/hero-eleves-coran.webp">
+            <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves en classe à DAARA Al Amine Academy"
+                 class="w-full h-full object-cover" loading="lazy" style="object-position: center 35%">
+          </picture>
         </div>
       </div>
 

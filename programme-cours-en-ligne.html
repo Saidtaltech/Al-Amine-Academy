@@ -101,6 +101,7 @@
   <link href="https://alamineacademy.com/programme-cours-en-ligne.html" hreflang="ar" rel="alternate"/>
   <link href="https://alamineacademy.com/programme-cours-en-ligne.html" hreflang="es" rel="alternate"/>
   <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="preload" as="image" type="image/webp" href="/assets/img/cours-en-ligne-cover.webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/site.css?v=20260616"/>
   <script type="application/ld+json">
   [
@@ -236,7 +237,7 @@
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
-  <section class="hero-cover" style="--hero-image: url('/assets/img/cours-en-ligne-cover.jpg'); background-position: center, center 55%, center">
+  <section class="hero-cover" style="--hero-image: image-set(url('/assets/img/cours-en-ligne-cover.webp') type('image/webp'), url('/assets/img/cours-en-ligne-cover.jpg') type('image/jpeg')); background-position: center, center 55%, center">
    <div class="hero-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
      <!-- Texte -->
@@ -267,7 +268,10 @@
      <div class="hidden lg:block reveal reveal-delay-4">
       <div class="relative">
        <div class="rounded-3xl overflow-hidden shadow-2xl ring-4 ring-white/20" style="transform:rotate(1.5deg)">
-        <img src="/assets/img/cours-en-ligne-cover.jpg" alt="Cours en ligne Coran — Al Amine Academy" class="w-full h-72 object-cover" loading="lazy">
+        <picture>
+          <source type="image/webp" srcset="/assets/img/cours-en-ligne-cover.webp">
+          <img src="/assets/img/cours-en-ligne-cover.jpg" alt="Cours en ligne Coran — Al Amine Academy" class="w-full h-72 object-cover" loading="lazy">
+        </picture>
         <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
        </div>
        <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl px-5 py-3 shadow-2xl">
