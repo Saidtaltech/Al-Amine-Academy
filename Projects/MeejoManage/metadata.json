@@ -1,0 +1,7 @@
+{
+  "name": "Meejo Manage",
+  "description": "ERP SaaS de gestion commerciale, stock et logistique pour l'Afrique. Sourcing Alibaba, RH, et Site Vitrine intégré.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
