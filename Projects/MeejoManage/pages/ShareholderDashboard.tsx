@@ -10,7 +10,17 @@ const ShareholderDashboard: React.FC<{ currentUser: User }> = ({ currentUser }) 
   const settings = StorageService.getSettings();
   const isRTL = settings.language === 'ar';
   
-  const [financials, setFinancials] = useState({ netProfit: 0, grossMargin: 0, totalExpenses: 0, history: [] as any[] });
+  const [financials, setFinancials] = useState({
+    netProfit: 0,
+    grossMargin: 0,
+    totalExpenses: 0,
+    inventoryExpenses: 0,
+    pendingRevenue: 0,
+    estimatedCostAmount: 0,
+    missingCostRevenue: 0,
+    missingCostItems: 0,
+    history: [] as any[]
+  });
 
   useEffect(() => {
     // Fix: storage methods are async
@@ -21,7 +31,11 @@ const ShareholderDashboard: React.FC<{ currentUser: User }> = ({ currentUser }) 
             StorageService.getProducts()
         ]);
         
-        const summary = calculateFinancialSummary(sales, expenses, products);
+        const scopedStoreId = currentUser.storeId && currentUser.storeId !== 'ALL' ? currentUser.storeId : null;
+        const scopedSales = scopedStoreId ? sales.filter(sale => sale.storeId === scopedStoreId) : sales;
+        const scopedExpenses = scopedStoreId ? expenses.filter(expense => expense.storeId === scopedStoreId) : expenses;
+        const scopedProducts = scopedStoreId ? products.filter(product => product.storeId === scopedStoreId) : products;
+        const summary = calculateFinancialSummary(scopedSales, scopedExpenses, scopedProducts);
 
         // History for chart
         const last12Months = [...Array(12)].map((_, i) => {
@@ -31,18 +45,18 @@ const ShareholderDashboard: React.FC<{ currentUser: User }> = ({ currentUser }) 
         });
 
         const chartData = last12Months.map(month => {
-            const monthSales = sales.filter(s => s.date.startsWith(month));
-            const monthExpenses = expenses.filter(e => e.date.startsWith(month));
-            const monthSummary = calculateFinancialSummary(monthSales, monthExpenses, products);
+            const monthSales = scopedSales.filter(s => s.date.startsWith(month));
+            const monthExpenses = scopedExpenses.filter(e => e.date.startsWith(month));
+            const monthSummary = calculateFinancialSummary(monthSales, monthExpenses, scopedProducts);
             return { name: month, profit: monthSummary.netProfit };
         });
 
-        setFinancials({ netProfit: summary.netProfit, grossMargin: summary.grossMargin, totalExpenses: summary.totalExpenses, history: chartData });
+        setFinancials({ ...summary, history: chartData });
     };
     loadFinancials();
-  }, []);
+  }, [currentUser.storeId]);
 
-  const { netProfit, grossMargin, totalExpenses, history } = financials;
+  const { netProfit, grossMargin, totalExpenses, inventoryExpenses, pendingRevenue, estimatedCostAmount, missingCostRevenue, missingCostItems, history } = financials;
   const userShare = currentUser.sharePercentage || 0;
   const userDividends = netProfit * (userShare / 100);
 
@@ -57,7 +71,11 @@ const ShareholderDashboard: React.FC<{ currentUser: User }> = ({ currentUser }) 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border-l-4 border-blue-600">
                 <p className={`text-sm text-gray-500 dark:text-gray-400 uppercase font-bold ${isRTL ? 'font-arabic' : ''}`}>{t('net_profit', settings.language)} (Global)</p>
                 <p className="text-3xl font-bold text-gray-900 dark:text-white mt-2">{formatCurrency(netProfit)}</p>
-                <p className="mt-2 text-xs font-bold text-slate-400">Marge brute {formatCurrency(grossMargin)} - dépenses {formatCurrency(totalExpenses)}</p>
+                <p className="mt-2 text-xs font-bold text-slate-400">Marge brute {formatCurrency(grossMargin)} - dépenses exploitation {formatCurrency(totalExpenses)}</p>
+                <p className="mt-1 text-[10px] font-bold text-slate-400">Stock exclu {formatCurrency(inventoryExpenses)} · En attente {formatCurrency(pendingRevenue)}</p>
+                {(estimatedCostAmount > 0 || missingCostItems > 0) && (
+                    <p className="mt-1 text-[10px] font-bold text-orange-500">Coûts estimés {formatCurrency(estimatedCostAmount)} · Coûts manquants {missingCostItems} ligne(s), CA {formatCurrency(missingCostRevenue)}</p>
+                )}
             </div>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border-l-4 border-purple-600">
                 <p className={`text-sm text-gray-500 dark:text-gray-400 uppercase font-bold ${isRTL ? 'font-arabic' : ''}`}>{t('my_shares', settings.language)}</p>

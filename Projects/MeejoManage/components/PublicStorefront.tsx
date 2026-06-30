@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { StorageService } from '../services/storage';
-import { Store, Product, CartItem, PaymentMethod, Category, Notification } from '../types';
+import { Store, Product, CartItem, PaymentMethod, Category, Notification, Source } from '../types';
 import { formatCurrency } from '../constants';
 import { CartIcon, FacebookIcon, InstagramIcon, TikTokIcon, SearchIcon, UserIcon, GlobeIcon, LogoIcon, TrashIcon, MapPin, Phone, Mail, Filter, Star, XIcon } from './Icons';
 import PublicNavbar from './PublicNavbar';
@@ -28,6 +28,7 @@ const PublicStorefront: React.FC<PublicStorefrontProps> = ({ storeId: initialSto
   const [selectedPayment, setSelectedPayment] = useState<PaymentMethod | null>(null);
   const [orderSuccess, setOrderSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isSavingOrder, setIsSavingOrder] = useState(false);
 
   useEffect(() => {
     // Fix: storage methods are async
@@ -70,6 +71,7 @@ const PublicStorefront: React.FC<PublicStorefrontProps> = ({ storeId: initialSto
     setCart(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {
+        if (existing.quantity >= product.stock) return prev;
         return prev.map(item => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item);
       }
       return [...prev, { ...product, quantity: 1, discountedPrice: product.discount_price || product.sellPrice }];
@@ -79,7 +81,9 @@ const PublicStorefront: React.FC<PublicStorefrontProps> = ({ storeId: initialSto
 
   const updateCartQuantity = (productId: string, newQuantity: number) => {
     if (newQuantity < 1) return;
-    setCart(prev => prev.map(item => item.id === productId ? { ...item, quantity: newQuantity } : item));
+    const product = products.find(p => p.id === productId);
+    const safeQuantity = Math.min(newQuantity, product?.stock ?? newQuantity);
+    setCart(prev => prev.map(item => item.id === productId ? { ...item, quantity: safeQuantity } : item));
   };
 
   const removeFromCart = (id: string) => {
@@ -93,33 +97,67 @@ const PublicStorefront: React.FC<PublicStorefrontProps> = ({ storeId: initialSto
   const handleCheckout = async () => {
       if (!customerInfo.name || !customerInfo.phone) { alert("Veuillez remplir votre nom et téléphone."); return; }
       if (!store) return;
+      if (cart.some(item => item.quantity > item.stock)) { alert("Stock insuffisant pour un article du panier."); return; }
+      if (isSavingOrder) return;
+
+      setIsSavingOrder(true);
 
       const orderId = Date.now().toString();
       const receiptNumber = 'WEB-' + orderId.slice(-6);
+      const saleItems = cart.map(item => ({
+          ...item,
+          discountedPrice: Number(item.discountedPrice ?? item.sellPrice) || 0,
+          buyPrice: Number(item.buyPrice) || 0,
+          unitCost: Number(item.buyPrice) || 0,
+          costAtSale: Number(item.buyPrice) || 0,
+          sellPrice: Number(item.sellPrice) || 0,
+          quantity: Number(item.quantity) || 0
+      }));
 
       const sale = {
           id: orderId,
           storeId: store.id,
           date: new Date().toISOString(),
           paymentDate: new Date().toISOString().split('T')[0],
-          items: cart,
+          items: saleItems,
           total: totalAmount,
           discountTotal: 0,
           manualDiscount: 0,
           paymentMethod: selectedPayment || PaymentMethod.CASH,
-          source: 'SITE WEB',
+          source: Source.WEB,
           status: 'PENDING',
-          amountPaid: totalAmount,
+          amountPaid: 0,
           changeReturned: 0,
-          remainingAmount: 0,
-          paymentStatus: 'PAID',
+          remainingAmount: totalAmount,
+          paymentStatus: 'PENDING',
           customerPhone: customerInfo.phone,
           receiptNumber: receiptNumber,
           cashierName: 'Online'
       };
       
-      // 1. Save Sale
-      await StorageService.saveSale(sale as any);
+      try {
+        // 1. Save Sale
+        await StorageService.saveSale(sale as any);
+
+        const nextProducts = products.map(product => {
+          const orderedItem = cart.find(item => item.id === product.id);
+          if (!orderedItem) return product;
+          return { ...product, stock: Math.max(0, product.stock - orderedItem.quantity) };
+        });
+
+        await Promise.all(
+          nextProducts
+            .filter(product => products.some(previous => previous.id === product.id && previous.stock !== product.stock))
+            .map(product => StorageService.saveProduct(product))
+        );
+
+        setProducts(nextProducts);
+      } catch (error) {
+        console.error(error);
+        alert("Impossible d'enregistrer la commande.");
+        setIsSavingOrder(false);
+        return;
+      }
 
       // 2. Create Notification for Store Owner
       const orderNotification: Notification = {
@@ -139,6 +177,7 @@ const PublicStorefront: React.FC<PublicStorefrontProps> = ({ storeId: initialSto
 
       setOrderSuccess(true);
       setCart([]);
+      setIsSavingOrder(false);
   };
 
   if (isLoading) return <div className="min-h-screen flex items-center justify-center bg-white"><div className="animate-spin rounded-full h-12 w-12 border-b-4 border-blue-600"></div></div>;
@@ -582,9 +621,10 @@ const PublicStorefront: React.FC<PublicStorefrontProps> = ({ storeId: initialSto
                             <div className="pt-6">
                                 <button 
                                     onClick={handleCheckout} 
-                                    className="w-full py-5 bg-black text-white font-black text-lg rounded-2xl shadow-2xl hover:scale-[1.02] active:scale-95 transition flex items-center justify-center gap-3"
+                                    disabled={isSavingOrder}
+                                    className="w-full py-5 bg-black text-white font-black text-lg rounded-2xl shadow-2xl hover:scale-[1.02] active:scale-95 transition flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    <span>Confirmer la commande</span>
+                                    <span>{isSavingOrder ? 'Enregistrement...' : 'Confirmer la commande'}</span>
                                     <span className="bg-white/20 px-3 py-1 rounded text-sm">{formatCurrency(totalAmount)}</span>
                                 </button>
                                 <p className="text-center text-xs text-gray-400 mt-4">Paiement à la livraison possible selon la zone.</p>

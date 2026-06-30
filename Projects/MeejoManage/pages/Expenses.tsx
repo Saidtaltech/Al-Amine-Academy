@@ -70,6 +70,7 @@ const Expenses: React.FC = () => {
         <div>
             <h2 className="text-3xl font-black text-slate-900 font-heading tracking-tight uppercase">Gestion des Dépenses</h2>
             <p className="text-slate-500 font-medium">Contrôlez vos sorties de fonds et optimisez vos coûts.</p>
+            <p className="text-xs text-slate-400 font-bold mt-2">La catégorie Stock est traitée comme inventaire et exclue du bénéfice net pour éviter un double comptage avec le coût produit vendu.</p>
         </div>
         <div className="flex gap-2">
             <button onClick={handleExportCSV} className="px-6 py-4 bg-white text-slate-700 rounded-2xl font-black shadow-sm border flex items-center gap-2 transition hover:bg-slate-50"><DownloadIcon /> Export CSV</button>
@@ -150,6 +151,7 @@ const Expenses: React.FC = () => {
                         <select className="w-full p-5 bg-slate-50 border-2 border-transparent focus:border-red-500 rounded-2xl font-bold transition outline-none" value={formData.category} onChange={e => setFormData({...formData, category: e.target.value})}>
                             {EXPENSE_CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
                         </select>
+                        {formData.category === 'Stock' && <p className="mt-2 text-[10px] font-bold text-orange-500">Stock = inventaire : suivi en cash-flow, non déduit une deuxième fois du bénéfice net.</p>}
                     </div>
                     <div>
                         <label className="text-[10px] font-black uppercase text-slate-400 ml-1">Description</label>

@@ -39,6 +39,24 @@ const normalizeProduct = (product: any): Product => ({
     imageUrl: product.imageUrl || product.image_url || `https://picsum.photos/seed/${product.id}/400/400`
 });
 
+const toProductPayload = (product: Partial<Product>, tenantId?: string) => ({
+    tenant_id: tenantId || product.storeId,
+    category_id: product.categoryId,
+    reference: product.reference,
+    name: product.name,
+    barcode: product.barcode,
+    stock: Number(product.stock ?? 0),
+    buy_price: Number(product.buyPrice ?? 0),
+    sell_price: Number(product.sellPrice ?? 0),
+    discount_price: product.discount_price,
+    wholesale_price: Number(product.wholesalePrice ?? 0),
+    wholesale_threshold: Number(product.wholesaleThreshold ?? 0),
+    min_margin: Number(product.minMargin ?? 0),
+    image_url: product.imageUrl,
+    alert_threshold: Number(product.alertThreshold ?? 0),
+    is_featured_market: product.isFeaturedMarket
+});
+
 const parseJsonArray = (value: any): any[] => {
     if (Array.isArray(value)) return value;
     if (typeof value !== 'string') return [];
@@ -69,6 +87,54 @@ const normalizeSale = (sale: any): Sale => ({
     cashierName: sale.cashierName || sale.cashier_name || ''
 });
 
+const toOptionalNumber = (value: unknown): number | undefined => (
+    value === undefined ? undefined : Number(value ?? 0)
+);
+
+const toSalePayload = (sale: Partial<Sale>, tenantId?: string) => ({
+    tenant_id: tenantId || sale.storeId,
+    date: sale.date,
+    payment_date: sale.paymentDate,
+    items: sale.items,
+    total: toOptionalNumber(sale.total),
+    discount_total: toOptionalNumber(sale.discountTotal),
+    manual_discount: toOptionalNumber(sale.manualDiscount),
+    amount_paid: toOptionalNumber(sale.amountPaid),
+    change_returned: toOptionalNumber(sale.changeReturned),
+    remaining_amount: toOptionalNumber(sale.remainingAmount),
+    payment_status: sale.paymentStatus,
+    payment_method: sale.paymentMethod,
+    source: sale.source,
+    status: sale.status,
+    customer_phone: sale.customerPhone,
+    customer_email: sale.customerEmail,
+    receipt_number: sale.receiptNumber,
+    cashier_name: sale.cashierName
+});
+
+const normalizeExpense = (expense: any): Expense => ({
+    ...expense,
+    storeId: expense.storeId || expense.store_id || expense.tenant_id || '',
+    description: expense.description || '',
+    amount: Number(expense.amount ?? 0),
+    date: expense.date,
+    category: expense.category || 'Autre'
+});
+
+const toExpensePayload = (expense: Partial<Expense>, tenantId?: string) => ({
+    tenant_id: tenantId || expense.storeId,
+    description: expense.description,
+    amount: Number(expense.amount ?? 0),
+    date: expense.date,
+    category: expense.category
+});
+
+const mergeById = <T extends { id: string }>(remoteItems: T[], localItems: T[]): T[] => {
+    const merged = new Map(remoteItems.map(item => [item.id, item]));
+    localItems.forEach(item => merged.set(item.id, item));
+    return Array.from(merged.values());
+};
+
 export const StorageService = {
   // SESSION & AUTH
   getCurrentSession: async () => {
@@ -94,25 +160,27 @@ export const StorageService = {
     try {
         const { data, error } = await supabase.from('products').select('*').order('name');
         if (error) throw error;
-        return (data || []).map(normalizeProduct);
+        const remoteProducts = (data || []).map(normalizeProduct);
+        const local = localStorage.getItem('meejo_sim_products');
+        const localProducts = local ? JSON.parse(local).map(normalizeProduct) : [];
+        return mergeById(remoteProducts, localProducts);
     } catch (e) {
         logError("StorageService.getProducts error", e);
         // Fallback to local storage for simulation data if supabase fails
         const local = localStorage.getItem('meejo_sim_products');
-        return local ? JSON.parse(local) : [];
+        return local ? JSON.parse(local).map(normalizeProduct) : [];
     }
   },
 
   saveProduct: async (product: Partial<Product>) => {
     try {
         const { data: profile } = await supabase.from('profiles').select('tenant_id').maybeSingle();
-        const payload = { ...product, tenant_id: profile?.tenant_id };
+        const payload = toProductPayload(product, profile?.tenant_id);
         let result;
         if (product.id && !product.id.toString().startsWith('temp')) {
           result = await supabase.from('products').update(payload).eq('id', product.id);
         } else {
-          const { id, ...newPayload } = payload;
-          result = await supabase.from('products').insert(newPayload);
+          result = await supabase.from('products').insert(payload);
         }
         if (result.error) throw result.error;
         return result;
@@ -135,7 +203,10 @@ export const StorageService = {
     try {
         const { data, error } = await supabase.from('sales').select('*').order('date', { ascending: false });
         if (error) throw error;
-        return (data || []).map(normalizeSale);
+        const remoteSales = (data || []).map(normalizeSale);
+        const local = localStorage.getItem('meejo_sim_sales');
+        const localSales = local ? JSON.parse(local).map(normalizeSale) : [];
+        return mergeById(remoteSales, localSales).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     } catch (e) { 
         const local = localStorage.getItem('meejo_sim_sales');
         return local ? JSON.parse(local).map(normalizeSale) : [];
@@ -145,7 +216,7 @@ export const StorageService = {
   saveSale: async (sale: Partial<Sale>) => {
     try {
         const { data: profile } = await supabase.from('profiles').select('tenant_id').maybeSingle();
-        const payload = { ...sale, tenant_id: profile?.tenant_id };
+        const payload = toSalePayload(sale, profile?.tenant_id);
         const result = await supabase.from('sales').insert(payload);
         if (result.error) throw result.error;
         return result;
@@ -153,6 +224,20 @@ export const StorageService = {
         const local = JSON.parse(localStorage.getItem('meejo_sim_sales') || '[]');
         local.push(sale);
         localStorage.setItem('meejo_sim_sales', JSON.stringify(local));
+    }
+  },
+
+  updateSale: async (id: string, updates: Partial<Sale>) => {
+    try {
+        const payload = toSalePayload(updates);
+        const cleanedPayload = Object.fromEntries(Object.entries(payload).filter(([, value]) => value !== undefined));
+        const result = await supabase.from('sales').update(cleanedPayload).eq('id', id);
+        if (result.error) throw result.error;
+        return result;
+    } catch (e) {
+        const local = JSON.parse(localStorage.getItem('meejo_sim_sales') || '[]');
+        const next = local.map((sale: Sale) => sale.id === id ? { ...sale, ...updates } : sale);
+        localStorage.setItem('meejo_sim_sales', JSON.stringify(next));
     }
   },
 
@@ -173,26 +258,46 @@ export const StorageService = {
     try {
         const { data, error } = await supabase.from('expenses').select('*').order('date', { ascending: false });
         if (error) throw error;
-        return (data || []) as unknown as Expense[];
-    } catch (e) { return []; }
+        const remoteExpenses = (data || []).map(normalizeExpense);
+        const local = localStorage.getItem('meejo_sim_expenses');
+        const localExpenses = local ? JSON.parse(local).map(normalizeExpense) : [];
+        return mergeById(remoteExpenses, localExpenses).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    } catch (e) {
+        const local = localStorage.getItem('meejo_sim_expenses');
+        return local ? JSON.parse(local).map(normalizeExpense) : [];
+    }
   },
 
   saveExpense: async (expense: Partial<Expense>) => {
     try {
         const { data: profile } = await supabase.from('profiles').select('tenant_id').maybeSingle();
-        const payload = { ...expense, tenant_id: profile?.tenant_id };
-        return await supabase.from('expenses').insert(payload);
-    } catch (e) { throw e; }
+        const payload = toExpensePayload(expense, profile?.tenant_id);
+        const result = await supabase.from('expenses').insert(payload);
+        if (result.error) throw result.error;
+        return result;
+    } catch (e) {
+        const local = JSON.parse(localStorage.getItem('meejo_sim_expenses') || '[]');
+        local.push(expense);
+        localStorage.setItem('meejo_sim_expenses', JSON.stringify(local));
+    }
   },
 
   deleteExpense: async (id: string) => {
-    try { return await supabase.from('expenses').delete().eq('id', id); } catch (e) { throw e; }
+    try {
+        const result = await supabase.from('expenses').delete().eq('id', id);
+        if (result.error) throw result.error;
+        return result;
+    } catch (e) {
+        const local = JSON.parse(localStorage.getItem('meejo_sim_expenses') || '[]');
+        localStorage.setItem('meejo_sim_expenses', JSON.stringify(local.filter((expense: Expense) => expense.id !== id)));
+    }
   },
 
   clearSimulationData: () => {
       localStorage.removeItem('meejo_sim_products');
       localStorage.removeItem('meejo_sim_sales');
       localStorage.removeItem('meejo_sim_employees');
+      localStorage.removeItem('meejo_sim_expenses');
   },
 
   getStats: async (): Promise<DashboardStats> => {
@@ -353,8 +458,14 @@ export const StorageService = {
     try {
         const { data, error } = await supabase.from('products').select('*').eq('tenant_id', storeId);
         if (error) throw error;
-        return (data || []).map(normalizeProduct);
-    } catch (e) { return []; }
+        const remoteProducts = (data || []).map(normalizeProduct);
+        const local = localStorage.getItem('meejo_sim_products');
+        const localProducts = local ? JSON.parse(local).map(normalizeProduct).filter((product: Product) => product.storeId === storeId) : [];
+        return mergeById(remoteProducts, localProducts);
+    } catch (e) {
+        const local = localStorage.getItem('meejo_sim_products');
+        return local ? JSON.parse(local).map(normalizeProduct).filter((product: Product) => product.storeId === storeId) : [];
+    }
   },
 
   verifyMfa: (otp: string, secret: string): boolean => {

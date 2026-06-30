@@ -55,6 +55,8 @@ const POS: React.FC<{ currentUser: User }> = ({ currentUser }) => {
         ...item,
         discountedPrice: Number(item.discountedPrice ?? item.sellPrice) || 0,
         buyPrice: Number(item.buyPrice) || 0,
+        unitCost: Number(item.buyPrice) || 0,
+        costAtSale: Number(item.buyPrice) || 0,
         sellPrice: Number(item.sellPrice) || 0,
         quantity: Number(item.quantity) || 0
       }));

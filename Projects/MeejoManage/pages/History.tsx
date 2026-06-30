@@ -44,6 +44,20 @@ const History: React.FC = () => {
     notify('Export Historique terminé');
   };
 
+  const handleMarkDelivered = async (sale: Sale) => {
+    const updates = {
+      status: 'DELIVERED' as const,
+      paymentStatus: 'PAID' as const,
+      amountPaid: sale.total,
+      remainingAmount: 0,
+      paymentDate: new Date().toISOString().split('T')[0]
+    };
+
+    await StorageService.updateSale(sale.id, updates);
+    setSales(prev => prev.map(item => item.id === sale.id ? { ...item, ...updates } : item));
+    notify('Vente validÃ©e', 'success');
+  };
+
   return (
     <div className="p-6 md:p-10 space-y-10 pt-24 bg-gray-50/50 dark:bg-gray-900 min-h-screen pb-32">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
@@ -108,6 +122,11 @@ const History: React.FC = () => {
                                 <span className={`block text-center py-2 rounded-xl text-[9px] font-black uppercase tracking-widest shadow-sm ${sale.status === 'DELIVERED' ? 'bg-green-50 text-green-600 border border-green-100' : 'bg-orange-50 text-orange-600 border border-orange-100'}`}>
                                     {sale.status === 'DELIVERED' ? 'LIVRÉ' : 'EN COURS'}
                                 </span>
+                                {sale.status !== 'DELIVERED' && (
+                                    <button onClick={() => handleMarkDelivered(sale)} className="mt-2 w-full py-2 rounded-xl bg-green-600 text-white text-[9px] font-black uppercase tracking-widest hover:bg-green-700 transition">
+                                        Valider
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>
