@@ -255,8 +255,13 @@
 
         <!-- Bouton Voir plus -->
         <div class="text-center pt-4" id="faq-btn-wrap-internat">
-          <button onclick="document.getElementById('faq-more-internat').style.display='block';document.getElementById('faq-btn-wrap-internat').style.display='none';" class="btn btn-outline-blue text-sm">
+          <button onclick="document.getElementById('faq-more-internat').style.display='block';document.getElementById('faq-btn-wrap-internat').style.display='none';document.getElementById('faq-less-internat').style.display='block';" class="btn btn-outline-blue text-sm">
             <i class="fas fa-chevron-down"></i>Voir plus de questions
+          </button>
+        </div>
+        <div class="text-center pt-4" id="faq-less-internat" style="display:none">
+          <button onclick="document.getElementById('faq-more-internat').style.display='none';document.getElementById('faq-btn-wrap-internat').style.display='block';document.getElementById('faq-less-internat').style.display='none';" class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition">
+            <i class="fas fa-chevron-up text-xs"></i>Voir moins de questions
           </button>
         </div>
       </div>

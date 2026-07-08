@@ -603,8 +603,13 @@
                     </div>
                 </div>
                 <div class="text-center mt-5" id="faq-hajj-btn">
-                  <button onclick="document.getElementById('faq-hajj-more').style.display='block';document.getElementById('faq-hajj-btn').style.display='none';" class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition">
+                  <button onclick="document.getElementById('faq-hajj-more').style.display='block';document.getElementById('faq-hajj-btn').style.display='none';document.getElementById('faq-hajj-less').style.display='block';" class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition">
                     <i class="fas fa-chevron-down text-xs"></i>Voir plus de questions
+                  </button>
+                </div>
+                <div class="text-center mt-5" id="faq-hajj-less" style="display:none">
+                  <button onclick="document.getElementById('faq-hajj-more').style.display='none';document.getElementById('faq-hajj-btn').style.display='block';document.getElementById('faq-hajj-less').style.display='none';" class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition">
+                    <i class="fas fa-chevron-up text-xs"></i>Voir moins de questions
                   </button>
                 </div>
                 </div>
