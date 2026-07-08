@@ -183,6 +183,7 @@
         <h2 class="text-3xl md:text-4xl">Ce que les parents nous demandent</h2>
       </div>
       <div class="space-y-3" data-aos="fade-up">
+        <!-- Q1-3 : toujours visibles -->
         <details class="card p-5 group">
           <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
             Y a-t-il un adulte qui dort avec les enfants la nuit ?
@@ -207,46 +208,57 @@
           </summary>
           <p class="text-ink-soft text-sm mt-3 leading-relaxed">Oui. 95 % du personnel a au moins 3 ans d'expérience. 80 % ont le niveau Licence (L3) en anglais, management ou sciences islamiques ; 5 % ont le niveau Master en management ou sciences islamiques.</p>
         </details>
-        <details class="card p-5 group">
-          <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
-            Peut-on joindre son enfant pendant son pensionariat ?
-            <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
-            <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
-          </summary>
-          <p class="text-ink-soft text-sm mt-3 leading-relaxed">Oui. Tous les dimanches, chaque enfant bénéficie de 10 minutes d'appel vocal avec ses parents. Les appels vidéo ne sont pas autorisés afin de maintenir la concentration en semaine.</p>
-        </details>
-        <details class="card p-5 group">
-          <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
-            En cas de souci de santé, comment procédez-vous ?
-            <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
-            <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
-          </summary>
-          <p class="text-ink-soft text-sm mt-3 leading-relaxed">Nous contactons toujours les parents en premier lieu avant toute décision. En cas d'urgence extrême ne permettant pas d'attendre, l'enfant est conduit immédiatement à l'hôpital et les parents sont prévenus aussitôt.</p>
-        </details>
-        <details class="card p-5 group">
-          <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
-            Quelles mesures prenez-vous en cas de problème disciplinaire ?
-            <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
-            <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
-          </summary>
-          <p class="text-ink-soft text-sm mt-3 leading-relaxed">Aucun châtiment corporel. Les sanctions éducatives sont : privation d'activités de divertissement, augmentation du temps d'apprentissage ou tâches ménagères. Nous appliquons une méthode rigoureusement sans violence.</p>
-        </details>
-        <details class="card p-5 group">
-          <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
-            Qui s'occupe de la toilette des enfants ?
-            <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
-            <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
-          </summary>
-          <p class="text-ink-soft text-sm mt-3 leading-relaxed">Les enfants de 6 à 7 ans sont accompagnés et aidés par une surveillante. Les plus grands sont contrôlés quotidiennement ; les manquements à l'hygiène font l'objet de sanctions éducatives.</p>
-        </details>
-        <details class="card p-5 group">
-          <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
-            Les enfants peuvent-ils être frappés s'ils se comportent mal ?
-            <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
-            <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
-          </summary>
-          <p class="text-ink-soft text-sm mt-3 leading-relaxed">Non, formellement non. Il est impératif de ne jamais porter la main sur un enfant. Cette règle est absolue et sans exception à Al Amine Academy.</p>
-        </details>
+
+        <!-- Q4-8 : cachées jusqu'au clic -->
+        <div id="faq-more-internat" style="display:none" class="space-y-3">
+          <details class="card p-5 group">
+            <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
+              Peut-on joindre son enfant pendant son pensionariat ?
+              <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
+              <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
+            </summary>
+            <p class="text-ink-soft text-sm mt-3 leading-relaxed">Oui. Tous les dimanches, chaque enfant bénéficie de 10 minutes d'appel vocal avec ses parents. Les appels vidéo ne sont pas autorisés afin de maintenir la concentration en semaine.</p>
+          </details>
+          <details class="card p-5 group">
+            <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
+              En cas de souci de santé, comment procédez-vous ?
+              <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
+              <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
+            </summary>
+            <p class="text-ink-soft text-sm mt-3 leading-relaxed">Nous contactons toujours les parents en premier lieu avant toute décision. En cas d'urgence extrême ne permettant pas d'attendre, l'enfant est conduit immédiatement à l'hôpital et les parents sont prévenus aussitôt.</p>
+          </details>
+          <details class="card p-5 group">
+            <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
+              Quelles mesures prenez-vous en cas de problème disciplinaire ?
+              <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
+              <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
+            </summary>
+            <p class="text-ink-soft text-sm mt-3 leading-relaxed">Aucun châtiment corporel. Les sanctions éducatives sont : privation d'activités de divertissement, augmentation du temps d'apprentissage ou tâches ménagères. Nous appliquons une méthode rigoureusement sans violence.</p>
+          </details>
+          <details class="card p-5 group">
+            <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
+              Qui s'occupe de la toilette des enfants ?
+              <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
+              <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
+            </summary>
+            <p class="text-ink-soft text-sm mt-3 leading-relaxed">Les enfants de 6 à 7 ans sont accompagnés et aidés par une surveillante. Les plus grands sont contrôlés quotidiennement ; les manquements à l'hygiène font l'objet de sanctions éducatives.</p>
+          </details>
+          <details class="card p-5 group">
+            <summary class="font-semibold text-ink cursor-pointer list-none flex items-center justify-between gap-3">
+              Les enfants peuvent-ils être frappés s'ils se comportent mal ?
+              <i class="fas fa-plus text-primary text-sm group-open:hidden"></i>
+              <i class="fas fa-minus text-primary text-sm hidden group-open:block"></i>
+            </summary>
+            <p class="text-ink-soft text-sm mt-3 leading-relaxed">Non, formellement non. Il est impératif de ne jamais porter la main sur un enfant. Cette règle est absolue et sans exception à Al Amine Academy.</p>
+          </details>
+        </div>
+
+        <!-- Bouton Voir plus -->
+        <div class="text-center pt-4" id="faq-btn-wrap-internat">
+          <button onclick="document.getElementById('faq-more-internat').style.display='block';document.getElementById('faq-btn-wrap-internat').style.display='none';" class="btn btn-outline-blue text-sm">
+            <i class="fas fa-chevron-down"></i>Voir plus de questions
+          </button>
+        </div>
       </div>
     </div>
   </section>
