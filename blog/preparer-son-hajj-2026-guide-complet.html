@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -52,13 +52,7 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Preconnect to CDN origins — faster DNS + TLS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <!-- Google Fonts — non-blocking for better FCP -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
@@ -89,12 +83,54 @@
         .quote-block { position: relative; background: linear-gradient(135deg,#0a3040 0%,#165b73 100%); color:#fff; padding: 2rem 2.5rem; border-radius: 1rem; border-left: 6px solid #f59e0b; margin: 1.5rem 0; }
         .quote-block::before { content:"\201C"; position: absolute; left: 1rem; top: -1rem; font-size: 5rem; color:#f59e0b; font-family: Georgia, serif; line-height: 1; }
     </style>
-  <link rel="stylesheet" href="../assets/css/site.css?v=20260616"/>
+  <link rel="stylesheet" href="../assets/css/site.css"/>
 </head>
 <body class="antialiased bg-white">
 
+<!-- WhatsApp Button -->
+<a href="https://wa.me/221777850789?text=Assalamou%20alaykoum%2C%20je%20souhaite%20m%27inscrire%20%C3%A0%20la%20formation%20Hajj%202026" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
+    <i class="fab fa-whatsapp text-3xl"></i>
+</a>
 
-  <div id="aaa-navbar"></div>
+<!-- NAVBAR -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <a class="flex items-center space-x-3" href="../index.html">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <i class="fas fa-book-quran text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-900">Al Amine Academy</h1>
+                    <p class="text-xs text-gray-500 arabic-text">يار أك خام خام</p>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a class="text-gray-700 hover:text-primary font-semibold transition" href="../index.html">Accueil</a>
+                <a class="text-gray-700 hover:text-primary font-semibold transition" href="../programme-cours-gratuits.html">Cours Gratuits</a>
+                <a class="text-gray-700 hover:text-primary font-semibold transition" href="../a-propos.html">À Propos</a>
+                <a class="text-gray-700 hover:text-primary font-semibold transition" href="../contact.html">Contact</a>
+                <a class="text-gray-700 hover:text-primary font-semibold transition" href="index.html">Blog</a>
+                <a class="bg-secondary hover:bg-secondary-dark text-gray-900 px-6 py-3 rounded-full font-bold transition transform hover:scale-105" href="https://wa.me/221777850789?text=Je%20veux%20m%27inscrire%20%C3%A0%20la%20formation%20Hajj%202026" target="_blank">
+                    <i class="fab fa-whatsapp mr-1"></i> S'inscrire
+                </a>
+            </div>
+            <button class="lg:hidden" onclick="toggleMenu()">
+                <i class="fas fa-bars text-2xl text-gray-700"></i>
+            </button>
+        </div>
+    </div>
+    <div class="hidden lg:hidden bg-white border-t" id="mobileMenu">
+        <div class="container mx-auto px-4 py-4 space-y-2">
+            <a class="block py-2 text-gray-700 font-semibold" href="../index.html">Accueil</a>
+            <a class="block py-2 text-gray-700 font-semibold" href="../programme-cours-gratuits.html">Cours Gratuits</a>
+            <a class="block py-2 text-gray-700 font-semibold" href="../a-propos.html">À Propos</a>
+            <a class="block py-2 text-gray-700 font-semibold" href="../contact.html">Contact</a>
+            <a class="block py-2 text-gray-700 font-semibold" href="index.html">Blog</a>
+            <a class="block mt-3 bg-secondary text-center py-3 rounded-lg font-bold" href="https://wa.me/221777850789" target="_blank">S'inscrire</a>
+        </div>
+    </div>
+</nav>
 
 <!-- Breadcrumb -->
 <div class="bg-gray-100 py-3 border-b">
@@ -110,7 +146,7 @@
 <!-- HERO / Article Header -->
 <header class="relative overflow-hidden">
     <div class="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1920&q=85&auto=format&fit=crop" alt="La Kaaba — Masjid al-Haram, La Mecque" class="w-full h-full object-cover" onerror="this.style.display='none'" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1920&q=85&auto=format&fit=crop" alt="La Kaaba — Masjid al-Haram, La Mecque" class="w-full h-full object-cover" onerror="this.style.display='none'">
         <div class="absolute inset-0 bg-gradient-to-br from-[#0a3040]/95 via-[#0a3040]/80 to-primary-dark/70"></div>
     </div>
     <div class="relative container mx-auto px-4 py-20 md:py-28">
@@ -229,7 +265,7 @@
                     Ce guide reprend l'essentiel pour un pèlerinage réussi selon la Sunnah du Prophète (PSL). Il compile les cours de préparation dispensés à l'Institut Al Amine Academy, les ressources du site <em>Islam House</em> et l'ouvrage de référence <em>« Le Guide du Pèlerin et du Mu'tamir »</em> de Talal Ibn Ahmad Al Aqil.
                 </p>
                 <figure class="my-8 rounded-2xl overflow-hidden shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1400&q=85&auto=format&fit=crop" alt="La Kaaba, Masjid al-Haram" class="w-full h-80 object-cover" onerror="this.style.display='none'" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1400&q=85&auto=format&fit=crop" alt="La Kaaba, Masjid al-Haram" class="w-full h-80 object-cover" onerror="this.style.display='none'">
                     <figcaption class="bg-gray-900 text-white/80 text-sm p-3 text-center italic">La Kaaba, au cœur de la Masjid al-Haram — La Mecque.</figcaption>
                 </figure>
 
@@ -545,6 +581,8 @@
                             <strong>Tamattou'</strong> : on accomplit l'Omra, on sort de l'Ihrâm, puis on reprend l'Ihrâm pour le Hajj le 8 Dhul Hijja. <strong>Qirân</strong> : on intentionne Omra et Hajj ensemble et on reste en Ihrâm. <strong>Ifrâd</strong> : on n'accomplit que le Hajj. Le sacrifice est obligatoire pour Tamattou' et Qirân, mais pas pour Ifrâd.
                         </div>
                     </div>
+                <div id="faq-hajj-more" style="display:none">
+
                     <div class="bg-white rounded-xl border border-gray-200 shadow-sm">
                         <button class="w-full px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition rounded-xl" onclick="toggleFAQ(this)">
                             <span class="font-semibold text-left text-gray-900">Faut-il mémoriser les dou'as avant le départ ?</span>
@@ -563,6 +601,12 @@
                             Envoyez simplement un message WhatsApp au <a href="https://wa.me/221777850789" class="text-primary font-bold hover:underline">+221 77 785 07 89</a> pour confirmer votre participation. L'inscription est <strong>gratuite</strong>.
                         </div>
                     </div>
+                </div>
+                <div class="text-center mt-5" id="faq-hajj-btn">
+                  <button onclick="document.getElementById('faq-hajj-more').style.display='block';document.getElementById('faq-hajj-btn').style.display='none';" class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-primary text-primary text-sm font-semibold rounded-full hover:bg-primary hover:text-white transition">
+                    <i class="fas fa-chevron-down text-xs"></i>Voir plus de questions
+                  </button>
+                </div>
                 </div>
 
             </div>
@@ -650,7 +694,7 @@
 <!-- CTA -->
 <section class="bg-gradient-to-br from-primary-dark to-[#0a3040] text-white py-20 relative overflow-hidden">
     <div class="absolute inset-0 opacity-20">
-        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1600&q=85&auto=format&fit=crop" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1627728734379-a5f8c099763e?w=1600&q=85&auto=format&fit=crop" alt="" class="w-full h-full object-cover" onerror="this.style.display='none'">
     </div>
     <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
         <div class="inline-block bg-secondary/20 border border-secondary/40 text-secondary px-4 py-2 rounded-full text-xs font-extrabold mb-5 uppercase tracking-widest">
@@ -675,28 +719,8 @@
 
 <!-- FOOTER -->
 
-  <!-- internal-link: camp-vacances ranking — AI citation boost -->
-  <section class="py-8 bg-amber-50 border-t border-amber-100">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-4 bg-white rounded-2xl p-5 shadow-sm border border-amber-200">
-        <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-xl flex items-center justify-center"><i class="fas fa-umbrella-beach text-white"></i></div>
-        <div class="flex-1 text-center sm:text-left">
-          <p class="text-xs font-bold text-amber-700 uppercase tracking-wider mb-0.5"><i class="fas fa-trophy mr-1"></i> Camp de Vacances 2026 · #1 Dakar</p>
-          <p class="font-bold text-gray-900">Al Amine Academy — Meilleur daara de vacances à Dakar (4.9/5)</p>
-          <p class="text-sm text-gray-600">5 juillet → 25 septembre &bull; Dakar &amp; Petite Côte &bull; À partir de 30 000 F/mois</p>
-        </div>
-        <a href="meilleurs-daara-vacances-dakar-2026.html" class="flex-shrink-0 bg-secondary hover:bg-secondary-dark text-gray-900 px-5 py-2.5 rounded-full font-bold text-sm transition whitespace-nowrap">
-          Voir le classement &rarr;
-        </a>
-      </div>
-    </div>
-  </section>
-
   <div id="aaa-footer"></div>
 
-  <script src="../translations.js?v=20260617"></script>
-  <script src="../lang.js?v=20260617"></script>
-  <script src="../assets/js/site-shell.js?v=20260616" defer></script>
+  <script src="../assets/js/site-shell.js" defer></script>
 </body>
 </html>
-
