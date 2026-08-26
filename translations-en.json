@@ -743,7 +743,9 @@
     "archives_badge": "Archive",
     "archives_title": "Event Archives",
     "cta_title": "Stay informed about our events",
-    "cta_contact": "Contact us"
+    "cta_contact": "Contact us",
+    "empty_title": "Upcoming dates coming soon",
+    "empty_subtitle": "We're preparing our next conferences and training sessions. Follow us to be informed as soon as they're announced."
   },
   "lang_switch_toast": "Language changed: English",
   "common": {

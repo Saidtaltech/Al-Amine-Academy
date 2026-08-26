@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <html class="scroll-smooth" lang="fr">
 <head>
-<script>document.documentElement.classList.add("dark");localStorage.setItem("theme","dark");</script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Conférences & Formations | Al Amine Academy</title>
@@ -211,62 +210,86 @@
                 <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="conferences_page.upcoming_subtitle">Retrouvez ici les événements à venir. Inscrivez-vous et ne manquez aucune opportunité d'apprentissage.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="card-hover bg-white dark:bg-slate-900 rounded-3xl shadow-lg border border-gray-100 dark:border-slate-800 overflow-hidden reveal reveal-delay-2 soft-card">
-                    <div class="bg-gradient-to-r from-primary to-teal-600 p-6 text-white">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold" data-i18n="conferences_page.card_status_upcoming">À venir</span>
-                            <i class="fas fa-microphone-lines text-2xl opacity-50"></i>
-                        </div>
-                        <p class="text-sm opacity-80"><i class="fas fa-calendar mr-2"></i><span data-i18n="conferences_page.card_date_tbd">Date à confirmer</span></p>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="conferences_page.card1_title">Les fondements de la foi</h3>
-                        <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                            <p><i class="fas fa-map-marker-alt mr-2 text-coral"></i><span data-i18n="conferences_page.card1_location">Al Amine Academy, Cité des Magistrats, Dakar</span></p>
-                            <p><i class="fas fa-user-tie mr-2 text-primary"></i><span data-i18n="conferences_page.card_speaker_tbd">Intervenant à confirmer</span></p>
-                            <p><i class="fas fa-tag mr-2 text-secondary"></i><span data-i18n="conferences_page.card1_topic">Aqida & Sciences Islamiques</span></p>
-                        </div>
-                        <div class="mt-5 pt-4 border-t border-gray-100 dark:border-slate-800">
-                            <span class="text-primary font-semibold text-sm"><i class="fas fa-info-circle mr-1"></i> <span data-i18n="conferences_page.card_details_soon">Détails bientôt disponibles</span></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="card-hover bg-white dark:bg-slate-900 rounded-3xl shadow-lg border border-gray-100 dark:border-slate-800 overflow-hidden reveal reveal-delay-4 soft-card">
-                    <div class="bg-gradient-to-r from-secondary to-yellow-500 p-6 text-white">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold" data-i18n="conferences_page.card_status_upcoming">À venir</span>
-                            <i class="fas fa-chalkboard-teacher text-2xl opacity-50"></i>
-                        </div>
-                        <p class="text-sm opacity-80"><i class="fas fa-calendar mr-2"></i><span data-i18n="conferences_page.card_date_tbd">Date à confirmer</span></p>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="conferences_page.card2_title">L'éducation islamique moderne</h3>
-                        <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                            <p><i class="fas fa-map-marker-alt mr-2 text-coral"></i><span data-i18n="conferences_page.card2_location">Al Amine Academy, Dakar</span></p>
-                            <p><i class="fas fa-user-tie mr-2 text-primary"></i><span data-i18n="conferences_page.card_speaker_tbd">Intervenant à confirmer</span></p>
-                            <p><i class="fas fa-tag mr-2 text-secondary"></i><span data-i18n="conferences_page.card2_topic">Pédagogie & Éducation</span></p>
-                        </div>
-                        <div class="mt-5 pt-4 border-t border-gray-100 dark:border-slate-800">
-                            <span class="text-primary font-semibold text-sm"><i class="fas fa-info-circle mr-1"></i> <span data-i18n="conferences_page.card_details_soon">Détails bientôt disponibles</span></span>
+            <!-- Carrousel des prochaines conférences -->
+            <!-- Aucune date n'est encore confirmée : le carrousel reste prêt à l'emploi           -->
+            <!-- (structure titre / date / heure / lieu / intervenant / CTA) mais masqué et         -->
+            <!-- remplacé par un état d'attente tant qu'aucun événement réel n'est renseigné.        -->
+            <!-- Pour publier une conférence : remplir un item de CONF_ITEMS_HTML ci-dessous, retirer -->
+            <!-- style="display:none" du #conf-carousel, et masquer #conf-empty-state.               -->
+            <div id="conf-carousel" style="display:none" class="relative reveal">
+                <div class="overflow-hidden rounded-3xl" id="conf-carousel-track-wrap">
+                    <div id="conf-carousel-track" class="flex transition-transform duration-500 ease-out">
+                        <!-- Exemple d'item (dupliquer ce bloc pour chaque conférence) -->
+                        <div class="w-full shrink-0 px-2">
+                            <div class="bg-white dark:bg-slate-900 rounded-3xl shadow-lg border border-gray-100 dark:border-slate-800 overflow-hidden md:grid md:grid-cols-2">
+                                <div class="bg-gradient-to-br from-primary to-teal-600 p-8 text-white flex flex-col justify-center">
+                                    <span class="inline-block bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold mb-4 w-fit">À venir</span>
+                                    <h3 class="text-2xl md:text-3xl font-extrabold mb-2">Titre de la conférence</h3>
+                                    <p class="text-white/85 text-sm"><i class="fas fa-user-tie mr-2"></i>Nom de l'intervenant</p>
+                                </div>
+                                <div class="p-8 flex flex-col justify-center gap-3">
+                                    <p class="text-gray-700 dark:text-gray-300"><i class="fas fa-calendar mr-2 text-primary"></i>Date</p>
+                                    <p class="text-gray-700 dark:text-gray-300"><i class="fas fa-clock mr-2 text-primary"></i>Heure</p>
+                                    <p class="text-gray-700 dark:text-gray-300"><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Lieu</p>
+                                    <a href="contact.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-dark text-slate-900 font-bold px-6 py-3 rounded-full transition w-fit">
+                                        <i class="fas fa-envelope"></i> Plus d'informations
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button id="conf-prev" aria-label="Conférence précédente" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-11 h-11 rounded-full bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center text-primary hover:scale-105 transition"><i class="fas fa-chevron-left"></i></button>
+                <button id="conf-next" aria-label="Conférence suivante" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-11 h-11 rounded-full bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center text-primary hover:scale-105 transition"><i class="fas fa-chevron-right"></i></button>
+                <div id="conf-dots" class="flex justify-center gap-2 mt-6"></div>
+            </div>
 
-                <!-- Card 3 - Placeholder -->
-                <div class="card-hover bg-white dark:bg-slate-900 rounded-3xl shadow-lg border border-gray-100 dark:border-slate-800 overflow-hidden flex items-center justify-center reveal reveal-delay-6 soft-card">
-                    <div class="p-10 text-center">
-                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-plus text-3xl text-primary"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2" data-i18n="conferences_page.card_more_title">Plus d'événements à venir</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="conferences_page.card_more_subtitle">Restez connectés pour découvrir nos prochaines conférences.</p>
+            <!-- État d'attente — affiché tant qu'aucune conférence n'est confirmée -->
+            <div id="conf-empty-state" class="reveal">
+                <div class="max-w-2xl mx-auto bg-white dark:bg-slate-900 rounded-3xl shadow-lg border border-gray-100 dark:border-slate-800 p-10 md:p-14 text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-calendar-days text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="conferences_page.empty_title">Prochaines dates bientôt annoncées</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6" data-i18n="conferences_page.empty_subtitle">Nous préparons nos prochaines conférences et formations. Suivez-nous pour être informé dès leur annonce.</p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a href="https://wa.me/221777743700" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        <a href="https://www.facebook.com/DaaraAlAmineAcademy" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-5 py-2.5 rounded-full font-semibold text-sm transition"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="contact.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary hover:bg-primary hover:text-white px-5 py-2.5 rounded-full font-semibold text-sm transition"><i class="fas fa-envelope"></i> Contact</a>
                     </div>
                 </div>
             </div>
+
+            <script>
+            (function(){
+                var carousel = document.getElementById('conf-carousel');
+                var track = document.getElementById('conf-carousel-track');
+                if (!carousel || !track) return;
+                var slides = track.children;
+                var dotsWrap = document.getElementById('conf-dots');
+                var idx = 0;
+                function render(){
+                    track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+                    if (dotsWrap) dotsWrap.querySelectorAll('button').forEach(function(d,i){
+                        d.classList.toggle('bg-primary', i===idx);
+                        d.classList.toggle('bg-gray-300', i!==idx);
+                    });
+                }
+                if (dotsWrap) {
+                    Array.from(slides).forEach(function(_, i){
+                        var dot = document.createElement('button');
+                        dot.className = 'w-2.5 h-2.5 rounded-full transition ' + (i===0 ? 'bg-primary' : 'bg-gray-300');
+                        dot.setAttribute('aria-label', 'Aller à la conférence ' + (i+1));
+                        dot.addEventListener('click', function(){ idx = i; render(); });
+                        dotsWrap.appendChild(dot);
+                    });
+                }
+                var prev = document.getElementById('conf-prev');
+                var next = document.getElementById('conf-next');
+                if (prev) prev.addEventListener('click', function(){ idx = (idx - 1 + slides.length) % slides.length; render(); });
+                if (next) next.addEventListener('click', function(){ idx = (idx + 1) % slides.length; render(); });
+            })();
+            </script>
         </div>
     </section>
 
@@ -514,8 +537,8 @@
   <div id="aaa-footer"></div>
 
     <!-- Scripts -->
-    <script src="translations.js?v=20260729"></script>
-    <script src="lang.js?v=20260617"></script>
+    <script src="translations.js?v=20260826"></script>
+    <script src="lang.js?v=20260826"></script>
     <script src="assets/js/site-shell.js?v=20260616"></script>
 
   <!-- STICKY MOBILE CTA -->

@@ -668,6 +668,7 @@ window.AAA_TRANSLATIONS = {
       "quick_nav": "Navigation rapide :"
     },
     "conferences_page": {
+      "empty_title": "Prochaines dates bientôt annoncées", "empty_subtitle": "Nous préparons nos prochaines conférences et formations. Suivez-nous pour être informé dès leur annonce.",
       "hero_badge": "Événements & Savoir",
       "hero_title_html": "Conférences <span class=\"text-secondary\">&</span> Formations",
       "hero_subtitle": "Découvrez nos conférences islamiques, formations et séminaires organisés pour le partage du savoir et le renforcement de la communauté.",
@@ -1443,6 +1444,7 @@ window.AAA_TRANSLATIONS = {
       "quick_nav": "Quick links:"
     },
     "conferences_page": {
+      "empty_title": "Upcoming dates coming soon", "empty_subtitle": "We're preparing our next conferences and training sessions. Follow us to be informed as soon as they're announced.",
       "hero_badge": "Events & Knowledge",
       "hero_title_html": "Lectures <span class=\"text-secondary\">&</span> Workshops",
       "hero_subtitle": "Discover our Islamic lectures, workshops and seminars hosted to share knowledge and strengthen the community.",
@@ -2222,6 +2224,7 @@ window.AAA_TRANSLATIONS = {
       "quick_nav": "روابط سريعة:"
     },
     "conferences_page": {
+      "empty_title": "سيتم الإعلان عن المواعيد القادمة قريباً", "empty_subtitle": "نحن بصدد تحضير محاضراتنا وتكويناتنا القادمة. تابعونا لتكونوا على اطلاع فور الإعلان عنها.",
       "hero_badge": "أحداث وعلم",
       "hero_title_html": "المحاضرات <span class=\"text-secondary\">و</span> التكوينات",
       "hero_subtitle": "اكتشف محاضراتنا الإسلامية، تكويناتنا وندواتنا المنظَّمة لنشر العلم وتعزيز المجتمع.",
@@ -2996,6 +2999,7 @@ window.AAA_TRANSLATIONS = {
       "quick_nav": "Navegación rápida:"
     },
     "conferences_page": {
+      "empty_title": "Próximas fechas se anunciarán pronto", "empty_subtitle": "Estamos preparando nuestras próximas conferencias y formaciones. Síganos para enterarse en cuanto se anuncien.",
       "hero_badge": "Eventos y saber",
       "hero_title_html": "Conferencias <span class=\"text-secondary\">y</span> formaciones",
       "hero_subtitle": "Descubra nuestras conferencias islámicas, formaciones y seminarios organizados para compartir el saber y reforzar la comunidad.",

@@ -743,7 +743,9 @@
     "archives_badge": "Retrospectiva",
     "archives_title": "Archivos de Eventos",
     "cta_title": "Manténgase informado sobre nuestros eventos",
-    "cta_contact": "Contáctenos"
+    "cta_contact": "Contáctenos",
+    "empty_title": "Próximas fechas se anunciarán pronto",
+    "empty_subtitle": "Estamos preparando nuestras próximas conferencias y formaciones. Síganos para enterarse en cuanto se anuncien."
   },
   "lang_switch_toast": "Idioma cambiado: Español",
   "common": {
