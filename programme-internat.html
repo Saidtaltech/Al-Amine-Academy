@@ -108,69 +108,271 @@
   </div>
 
   
-  <header class="page-header">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      <p class="eyebrow text-secondary mb-4">Programme phare</p>
-      <h1 class="text-4xl md:text-6xl text-white mb-5 max-w-3xl mx-auto" data-i18n-html="page.tahfiz_title">Tahfiz <span class='text-secondary'>Internat</span></h1>
-      <p class="text-white/85 text-lg max-w-2xl mx-auto">L'immersion complète dans la mémorisation du Coran, dans un cadre moderne et discipliné.</p>
-    </div>
-  </header>
+  <!-- ==================== HERO ==================== -->
+  <section class="hero-cover" style="--hero-image: image-set(url('assets/img/hero-eleves-coran.webp') type('image/webp'), url('assets/img/hero-eleves-coran.jpg') type('image/jpeg')); background-position: center, center 30%, center">
+    <div class="hero-inner">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-10 items-center">
 
+          <!-- Colonne texte -->
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-6">
+              <span class="inline-flex items-center gap-2 bg-secondary text-slate-900 px-4 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest shadow-lg">
+                <i class="fas fa-calendar-check"></i> <span data-i18n="fiche.school_year">Année scolaire 2026-2027</span>
+              </span>
+              <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-widest text-white">
+                <i class="fas fa-bed"></i> <span data-i18n="programme_internat.hero_badge">Programme Tahfiz Internat</span>
+              </span>
+            </div>
 
-  
-  <section class="section">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-        <div class="lg:col-span-2 space-y-5 text-lg text-ink-soft leading-relaxed" data-aos="fade-right">
-          <p>Le programme <strong>Tahfiz Internat</strong> est notre offre la plus immersive : votre enfant vit sur place et consacre l'essentiel de ses journées à la mémorisation du Coran, encadré par des enseignants qualifiés.</p><p>Au-delà du Coran, l'internat offre un cadre stable où discipline, propreté, sport et caractère sont travaillés au quotidien. C'est l'option choisie par les familles qui veulent une transformation profonde et durable.</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-5 leading-[1.08]" data-i18n-html="page.tahfiz_title">
+              Tahfiz <span class="text-secondary">Internat</span>
+            </h1>
+
+            <p class="text-white/85 text-lg md:text-xl max-w-xl mb-8 leading-relaxed" data-i18n="programme_internat.hero_subtitle">
+              Mémorisation intégrale du Coran en internat, avec un encadrement d'excellence et un cadre de vie structuré.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-dark text-slate-900 px-7 py-4 rounded-full font-extrabold shadow-2xl transition transform hover:scale-[1.03]">
+                <i class="fas fa-pen-fancy"></i> <span data-i18n="programme_internat.btn_register">S'inscrire maintenant</span>
+              </a>
+              <a href="#journee" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white px-7 py-4 rounded-full font-bold transition">
+                <i class="fas fa-clock"></i> <span data-i18n="programme_internat.btn_schedule">Voir une journée type</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Carte tarif -->
+          <div class="bg-white/95 backdrop-blur rounded-3xl p-7 shadow-2xl border border-white/60">
+            <p class="text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-1">Tarif mensuel</p>
+            <div class="flex items-baseline gap-2 mb-1">
+              <span class="text-5xl font-extrabold text-primary-dark tabular">110 000</span>
+              <span class="text-base font-semibold text-slate-500">FCFA</span>
+            </div>
+            <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wide mb-5">
+              <i class="fas fa-circle-check"></i> Tout inclus
+            </span>
+
+            <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
+              <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="programme_internat.housing_note">Hébergement &amp; repas inclus</span></li>
+              <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="fiche.frais_incl_gouter">Goûter quotidien</span></li>
+              <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="fiche.frais_incl_linge">Entretien du linge et de l'uniforme</span></li>
+              <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="programme_internat.price_activities">Sport + activités inclus</span></li>
+            </ul>
+
+            <div class="border-t border-slate-200 pt-4 mb-5 space-y-1">
+              <p class="text-xs text-slate-500" data-i18n="programme_internat.price_registration">Frais d'inscription : 95 000 FCFA (une fois)</p>
+              <p class="text-xs text-slate-500" data-i18n="programme_internat.price_age">Âge : à partir de 5 ans</p>
+            </div>
+
+            <a href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" rel="noopener"
+               class="block text-center bg-primary hover:bg-primary-dark text-white py-3.5 rounded-2xl font-bold transition mb-2.5">
+              <i class="fas fa-pen-fancy mr-1"></i> S'inscrire à l'internat
+            </a>
+            <a href="contact.html" class="block text-center border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 rounded-2xl font-semibold text-sm transition">
+              <i class="fas fa-comments mr-1"></i> Poser une question
+            </a>
+          </div>
+
         </div>
-        <aside class="lg:sticky lg:top-28 card p-6" data-aos="fade-left">
-          <p class="text-xs uppercase tracking-wider text-ink-muted mb-1">Tarif mensuel</p>
-          <p class="text-3xl font-extrabold text-primary mb-2">110 000<span class="text-base text-ink-muted font-medium"> FCFA</span></p>
-          <p class="text-xs text-ink-muted mb-5">Inscription : 95 000 FCFA</p>
-          <a href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" rel="noopener" class="btn btn-primary w-full justify-center mb-3"><i class="fas fa-pen-fancy"></i>S'inscrire à l'internat</a>
-          <a href="contact.html" class="btn btn-outline-blue w-full justify-center text-sm"><i class="fas fa-comments"></i>Poser une question</a>
-        </aside>
       </div>
     </div>
   </section>
 
-  <section class="section section-tint">
+  <!-- ==================== CHIFFRES CLÉS ==================== -->
+  <section class="bg-primary-dark text-white py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-10" data-aos="fade-up">
-        <p class="eyebrow mb-3">Ce qui est inclus</p>
-        <h2 class="text-3xl md:text-4xl">Le détail du programme</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-3xl md:text-4xl font-extrabold text-secondary mb-1"><span data-counter="24" data-counter-suffix="/7">24/7</span></p>
+          <p class="text-[11px] uppercase tracking-widest text-white/70 font-semibold">Encadrement</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-extrabold text-secondary mb-1"><span data-counter="4" data-counter-suffix="" data-counter-decimal="true">4.9</span><span class="text-lg">/5</span></p>
+          <p class="text-[11px] uppercase tracking-widest text-white/70 font-semibold">15 avis Google</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-extrabold text-secondary mb-1"><span data-counter="95" data-counter-suffix=" %">95 %</span></p>
+          <p class="text-[11px] uppercase tracking-widest text-white/70 font-semibold">Enseignants expérimentés</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-extrabold text-secondary mb-1">2023</p>
+          <p class="text-[11px] uppercase tracking-widest text-white/70 font-semibold">Excellence depuis</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ==================== POURQUOI ==================== -->
+  <section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
+        <p class="eyebrow mb-3">Ce qui est inclus</p>
+        <h2 class="text-3xl md:text-4xl mb-4" data-i18n="programme_internat.features_title">Pourquoi choisir le Tahfiz Internat ?</h2>
+        <p class="text-ink-soft" data-i18n="programme_internat.features_intro">Un programme conçu pour une immersion totale dans la mémorisation du Coran, dans un environnement structuré et bienveillant.</p>
+      </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="card p-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-book-quran text-primary"></i></div>
-          <h3 class="font-bold mb-2">Mémorisation structurée</h3>
-          <p class="text-sm text-ink-soft">Méthode progressive et révision quotidienne du Coran.</p>
+        <div class="card card-lift p-6" data-aos="fade-up" data-aos-delay="60">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-book-quran text-primary text-lg"></i></div>
+          <h3 class="font-bold mb-2" data-i18n="programme_internat.feat1_title">Mémorisation structurée</h3>
+          <p class="text-sm text-ink-soft" data-i18n="programme_internat.feat1_desc">Programme quotidien optimisé pour une mémorisation rapide et durable du Coran.</p>
         </div>
-        <div class="card p-6" data-aos="fade-up" data-aos-delay="150">
-          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-bed text-primary"></i></div>
-          <h3 class="font-bold mb-2">Hébergement complet</h3>
-          <p class="text-sm text-ink-soft">Dortoirs encadrés, propres et sécurisés.</p>
+        <div class="card card-lift p-6" data-aos="fade-up" data-aos-delay="110">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-user-shield text-primary text-lg"></i></div>
+          <h3 class="font-bold mb-2" data-i18n="programme_internat.feat2_title">Encadrement 24h/24</h3>
+          <p class="text-sm text-ink-soft" data-i18n="programme_internat.feat2_desc">Équipe éducative présente en permanence pour le suivi académique et le bien-être des élèves.</p>
         </div>
-        <div class="card p-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-utensils text-primary"></i></div>
-          <h3 class="font-bold mb-2">Repas inclus</h3>
-          <p class="text-sm text-ink-soft">Trois repas équilibrés par jour, cuisine sénégalaise.</p>
+        <div class="card card-lift p-6" data-aos="fade-up" data-aos-delay="160">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-futbol text-primary text-lg"></i></div>
+          <h3 class="font-bold mb-2" data-i18n="programme_internat.feat3_title">Sport &amp; épanouissement</h3>
+          <p class="text-sm text-ink-soft" data-i18n="programme_internat.feat3_desc">Activités physiques quotidiennes pour un développement complet du corps et de l'esprit.</p>
         </div>
-        <div class="card p-6" data-aos="fade-up" data-aos-delay="250">
-          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-futbol text-primary"></i></div>
-          <h3 class="font-bold mb-2">Sport et loisirs</h3>
-          <p class="text-sm text-ink-soft">Football, athlétisme et activités éducatives.</p>
+        <div class="card card-lift p-6" data-aos="fade-up" data-aos-delay="210">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-bed text-primary text-lg"></i></div>
+          <h3 class="font-bold mb-2" data-i18n="programme_internat.included1_title">Hébergement</h3>
+          <p class="text-sm text-ink-soft" data-i18n="programme_internat.included1_desc">Dortoirs encadrés, propres et sécurisés, surveillés jour et nuit.</p>
         </div>
-        <div class="card p-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-user-shield text-primary"></i></div>
-          <h3 class="font-bold mb-2">Encadrement 24/7</h3>
-          <p class="text-sm text-ink-soft">Une équipe dédiée présente jour et nuit.</p>
+        <div class="card card-lift p-6" data-aos="fade-up" data-aos-delay="260">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-utensils text-primary text-lg"></i></div>
+          <h3 class="font-bold mb-2" data-i18n="programme_internat.included2_title">Repas</h3>
+          <p class="text-sm text-ink-soft" data-i18n="programme_internat.included2_desc">3 repas halal équilibrés par jour + goûter quotidien.</p>
         </div>
-        <div class="card p-6" data-aos="fade-up" data-aos-delay="350">
-          <div class="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-chart-line text-primary"></i></div>
-          <h3 class="font-bold mb-2">Suivi parents</h3>
-          <p class="text-sm text-ink-soft">Suivez l'évolution de votre enfant en temps réel sur <a href="https://hassan.alamineacademy.com" class="text-primary font-semibold hover:underline" target="_blank">hassan.alamineacademy.com</a> — bientôt disponible.</p>
+        <div class="card card-lift p-6" data-aos="fade-up" data-aos-delay="310">
+          <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4"><i class="fas fa-chart-line text-primary text-lg"></i></div>
+          <h3 class="font-bold mb-2" data-i18n="programme_internat.feat4_title">Famille informée</h3>
+          <p class="text-sm text-ink-soft">Rapports réguliers aux parents et suivi en ligne sur <a href="https://hassan.alamineacademy.com" class="text-primary font-semibold hover:underline" target="_blank" rel="noopener">hassan.alamineacademy.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== JOURNÉE TYPE ==================== -->
+  <section id="journee" class="section section-tint">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
+        <p class="eyebrow mb-3">Emploi du temps</p>
+        <h2 class="text-3xl md:text-4xl mb-4" data-i18n="programme_internat.schedule_title">Emploi du temps type</h2>
+        <p class="text-ink-soft" data-i18n="programme_internat.schedule_subtitle">Une journée équilibrée entre mémorisation, études et épanouissement.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Matinée -->
+        <div class="card p-6" data-aos="fade-up" data-aos-delay="60">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-slate-100">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center"><i class="fas fa-sun text-amber-600"></i></div>
+            <h3 class="font-extrabold text-lg" data-i18n="programme_internat.schedule_morning">Matinée</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-ink-soft">
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">05h00</span><span data-i18n-html="programme_internat.sched_row_1">Fajr &amp; réveil</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">05h30</span><span data-i18n-html="programme_internat.sched_row_2">Révision Coran (Manzil)</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">07h00</span><span data-i18n-html="programme_internat.sched_row_3">Petit-déjeuner</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">07h30</span><span data-i18n-html="programme_internat.sched_row_4">Cours Tahfiz (Sabaq)</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">10h00</span><span data-i18n-html="programme_internat.sched_row_5">Pause</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">10h15</span><span data-i18n-html="programme_internat.sched_row_6">Tajwid &amp; récitation</span></li>
+          </ul>
+        </div>
+
+        <!-- Après-midi -->
+        <div class="card p-6" data-aos="fade-up" data-aos-delay="120">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-slate-100">
+            <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center"><i class="fas fa-cloud-sun text-sky-600"></i></div>
+            <h3 class="font-extrabold text-lg" data-i18n="programme_internat.schedule_afternoon">Après-midi</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-ink-soft">
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">12h00</span><span data-i18n-html="programme_internat.sched_row_7">Dhuhr &amp; déjeuner</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">13h00</span><span data-i18n-html="programme_internat.sched_row_8">Sieste &amp; repos</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">14h30</span><span data-i18n-html="programme_internat.sched_row_9">Cours du soir (Asr)</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">15h30</span><span data-i18n-html="programme_internat.sched_row_10">Sport &amp; activités</span></li>
+          </ul>
+        </div>
+
+        <!-- Soirée -->
+        <div class="card p-6" data-aos="fade-up" data-aos-delay="180">
+          <div class="flex items-center gap-3 mb-5 pb-4 border-b border-slate-100">
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 flex items-center justify-center"><i class="fas fa-moon text-indigo-600"></i></div>
+            <h3 class="font-extrabold text-lg" data-i18n="programme_internat.schedule_evening">Soirée</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-ink-soft">
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">17h00</span><span data-i18n-html="programme_internat.sched_row_11">Maghrib &amp; révision</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">18h00</span><span data-i18n-html="programme_internat.sched_row_12">Dîner</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">19h00</span><span data-i18n-html="programme_internat.sched_row_13">Isha &amp; cours du soir</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">20h30</span><span data-i18n-html="programme_internat.sched_row_14">Révision personnelle</span></li>
+            <li class="flex gap-3"><span class="tabular font-bold text-primary shrink-0 w-12">21h30</span><span data-i18n-html="programme_internat.sched_row_15">Coucher</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 gap-4">
+        <div class="bg-primary/5 border border-primary/15 rounded-2xl p-4 flex items-start gap-3">
+          <i class="fas fa-house-chimney text-primary mt-0.5"></i>
+          <p class="text-sm text-ink-soft" data-i18n="programme_internat.sched_row_16">Weekend : retour en famille (vendredi soir – dimanche soir).</p>
+        </div>
+        <div class="bg-slate-100 border border-slate-200 rounded-2xl p-4 flex items-start gap-3">
+          <i class="fas fa-circle-info text-slate-500 mt-0.5"></i>
+          <p class="text-sm text-slate-600" data-i18n="programme_internat.note_tahfiz">Cet emploi du temps est indicatif et peut être ajusté selon l'âge et le niveau des élèves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ENCADREMENT & SÉCURITÉ ==================== -->
+  <section class="section">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-right">
+          <p class="eyebrow mb-3">Confiance des parents</p>
+          <h2 class="text-3xl md:text-4xl mb-5">Un cadre sûr, sans aucune violence</h2>
+          <p class="text-ink-soft leading-relaxed mb-6">
+            Confier son enfant à un internat demande une confiance absolue. Nos règles sur la sécurité, l'hygiène et la discipline sont explicites et sans exception.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0"><i class="fas fa-ban text-emerald-700"></i></div>
+              <div>
+                <p class="font-bold text-ink mb-0.5">Zéro châtiment corporel</p>
+                <p class="text-sm text-ink-soft">Règle absolue et sans exception. Les sanctions sont exclusivement éducatives.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0"><i class="fas fa-moon text-emerald-700"></i></div>
+              <div>
+                <p class="font-bold text-ink mb-0.5">Adultes présents la nuit</p>
+                <p class="text-sm text-ink-soft">Des pensionnaires adultes dorment avec les enfants pour assurer leur sécurité en permanence.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0"><i class="fas fa-phone-volume text-emerald-700"></i></div>
+              <div>
+                <p class="font-bold text-ink mb-0.5">Appel hebdomadaire garanti</p>
+                <p class="text-sm text-ink-soft">Chaque dimanche, 10 minutes d'appel vocal avec les parents. Appels vidéo autorisés.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0"><i class="fas fa-kit-medical text-emerald-700"></i></div>
+              <div>
+                <p class="font-bold text-ink mb-0.5">Parents prévenus en premier</p>
+                <p class="text-sm text-ink-soft">Aucune décision de santé sans vous contacter, sauf urgence vitale — hôpital immédiat et appel aussitôt.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+          <picture class="col-span-2 rounded-3xl overflow-hidden shadow-lg block aspect-[16/10]">
+            <source type="image/webp" srcset="assets/img/gallery-batiment-1.webp">
+            <img src="assets/img/gallery-batiment-1.jpg" alt="Bâtiment de l'internat Al Amine Academy" class="w-full h-full object-cover" loading="lazy">
+          </picture>
+          <picture class="rounded-2xl overflow-hidden shadow-lg block aspect-square">
+            <source type="image/webp" srcset="assets/img/gallery-cantine-1.webp">
+            <img src="assets/img/gallery-cantine-1.jpg" alt="Repas halal servis aux pensionnaires" class="w-full h-full object-cover" loading="lazy">
+          </picture>
+          <picture class="rounded-2xl overflow-hidden shadow-lg block aspect-square">
+            <source type="image/webp" srcset="assets/img/gallery-sport-1.webp">
+            <img src="assets/img/gallery-sport-1.jpg" alt="Activités sportives des pensionnaires" class="w-full h-full object-cover" loading="lazy">
+          </picture>
         </div>
       </div>
     </div>
@@ -270,10 +472,18 @@
 
   <section class="section section-blue-deep text-center">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl mb-5">Prêt à inscrire votre enfant ?</h2>
-      <p class="text-white/85 text-lg mb-8">Notre équipe est disponible pour répondre à toutes vos questions.</p>
+      <span class="inline-flex items-center gap-2 bg-secondary text-slate-900 px-4 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest mb-6">
+        <i class="fas fa-calendar-check"></i> <span data-i18n="fiche.school_year">Année scolaire 2026-2027</span>
+      </span>
+      <h2 class="text-3xl md:text-4xl mb-5" data-i18n="programme_internat.cta_title">Prêt à inscrire votre enfant ?</h2>
+      <p class="text-white/85 text-lg mb-4" data-i18n="programme_internat.cta_subtitle">Rejoignez les familles qui ont choisi l'excellence pour leurs enfants.</p>
+      <p class="text-white/70 mb-8">
+        <span class="text-2xl font-extrabold text-secondary tabular">110 000 FCFA</span>
+        <span class="text-sm"> / mois — tout inclus</span>
+      </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-pen-fancy"></i>S'inscrire en ligne</a>
+        <a href="fiche-renseignements.html" class="btn btn-ghost"><i class="fas fa-file-alt"></i>Fiche de renseignements</a>
         <a href="tel:+221777743700" class="btn btn-ghost"><i class="fas fa-phone"></i><span class="tabular">+221 77 774 37 00</span></a>
       </div>
     </div>
@@ -284,8 +494,8 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
-  <script src="translations.js"></script>
-  <script src="lang.js"></script>
+  <script src="translations.js?v=20260826"></script>
+  <script src="lang.js?v=20260826"></script>
   <script src="assets/js/site-shell.js" defer></script>
 </body>
 </html>
