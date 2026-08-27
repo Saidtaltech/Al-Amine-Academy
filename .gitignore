@@ -26,3 +26,4 @@ local-agent-mode-sessions/
 deploy.cfg
 .deploy.cfg
 ruvector.db
+graphify-out/
