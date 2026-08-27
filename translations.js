@@ -28,7 +28,7 @@ window.AAA_TRANSLATIONS = {
       "free": "Cours gratuits",
       "conferences": "Formations & Conférences",
       "tahfiz_subtitle": "Coran, sport et hébergement",
-      "mixed_subtitle": "Internat — Coran & académique, hébergement inclus",
+      "mixed_subtitle": "Internat — Coran le matin, académique l'après-midi",
       "online_subtitle": "Apprendre depuis chez vous",
       "free_subtitle": "Cours en wolof, ouverts à tous",
       "conferences_subtitle": "Ateliers, séminaires & formations"
@@ -51,6 +51,13 @@ window.AAA_TRANSLATIONS = {
       "proof_students_sub": "inscrits & épanouis"
     },
     "home": {
+      "failure_eyebrow": "Pourquoi attendre ?",
+      "final_cta_eyebrow": "Inscriptions ouvertes",
+      "guide_eyebrow": "Notre engagement",
+      "plan_eyebrow": "Inscription",
+      "problems_eyebrow": "Les défis",
+      "programs_eyebrow": "Nos formations",
+      "testimonials_eyebrow": "Avis Google",
       "problems_title": "Les défis des parents aujourd'hui",
       "problems_title_html": "Les défis des parents <span class=\"text-primary\">aujourd'hui</span>",
       "problems_subtitle": "Vous n'êtes pas seul(e). Des centaines de parents vivent les mêmes préoccupations.",
@@ -106,7 +113,8 @@ window.AAA_TRANSLATIONS = {
       "card2_feat4": "Hébergement inclus",
       "card2_feat5": "Sport et activités",
       "card3_title": "Programme Mixte",
-      "card3_subtitle": "Internat : Coran le matin, académique l'après-midi, hébergement et repas inclus",
+      "card3_subtitle": "Internat : Coran le matin, académique l'après-midi, retour à la maison chaque quinzaine",
+      "mixed_subtitle": "Internat — retour à la maison chaque quinzaine",
       "card3_feat1": "Mémorisation du Coran ciblée",
       "card3_feat2": "Études académiques complètes",
       "card3_feat3": "Horaires adaptés aux familles",
@@ -278,7 +286,7 @@ window.AAA_TRANSLATIONS = {
       "faq6_q": "Les repas servis sont-ils halal ?",
       "faq6_a": "Oui, tous les repas servis à l'académie sont 100 % halal. Trois repas équilibrés par jour + un goûter sont inclus pour les élèves en internat. Nous adaptons les menus aux allergies et besoins spécifiques sur demande.",
       "faq7_q": "Mon enfant peut-il rentrer le week-end ?",
-      "faq7_a": "Oui. Pour le programme internat, les élèves peuvent rentrer en famille chaque week-end (du vendredi soir au dimanche soir) selon le calendrier convenu avec les parents. Pour le programme mixte, l'enfant rentre chaque jour à 17h30.",
+      "faq7_a": "Oui. Pour le programme internat (Tahfiz), les élèves peuvent rentrer en famille chaque week-end (du vendredi soir au dimanche soir) selon le calendrier convenu avec les parents. Pour le programme mixte, également en internat, l'enfant rentre à la maison chaque quinzaine.",
       "faq8_q": "Y a-t-il un examen d'entrée ?",
       "faq8_a": "Pas d'examen écrit. Un entretien de 30 minutes avec la direction permet d'évaluer le niveau de l'enfant (lecture, mémorisation déjà acquise) et d'orienter vers le programme adapté. L'objectif est d'accueillir, pas de sélectionner.",
       "faq9_q": "Quels documents fournir pour l'inscription ?",
@@ -709,6 +717,8 @@ window.AAA_TRANSLATIONS = {
       "age_range_6_16": "6-16 ans"
     },
     "fiche": {
+      "pdf_btn": "Télécharger la fiche en PDF",
+      "pdf_hint": "4 pages · disponible en FR · EN · AR · ES",
       "badge": "École Coranique d'Excellence",
       "subtitle": "Fiche de Renseignements",
       "hero_desc": "Un Daara privé moderne dédié à la mémorisation du Noble Coran, ouvert aux garçons et filles de 6 à 12 ans. Notre Daara place chaque élève au centre de l'attention et applique un programme adapté pour favoriser l'épanouissement personnel et spirituel de chaque enfant.",
@@ -822,7 +832,7 @@ window.AAA_TRANSLATIONS = {
       "mixed": "Day Program", "online": "Online Courses", "free": "Free Courses",
       "conferences": "Formations & Conferences",
       "tahfiz_subtitle": "Quran, sports and accommodation",
-      "mixed_subtitle": "Boarding — Quran & academics, accommodation included",
+      "mixed_subtitle": "Boarding — Quran in the morning, academics in the afternoon",
       "online_subtitle": "Learn from home",
       "free_subtitle": "Wolof courses, open to all",
       "conferences_subtitle": "Workshops, seminars & training"
@@ -843,6 +853,13 @@ window.AAA_TRANSLATIONS = {
       "proof_students_sub": "enrolled & thriving"
     },
     "home": {
+      "failure_eyebrow": "Why wait?",
+      "final_cta_eyebrow": "Enrollment open",
+      "guide_eyebrow": "Our commitment",
+      "plan_eyebrow": "Enrollment",
+      "problems_eyebrow": "The challenges",
+      "programs_eyebrow": "Our programs",
+      "testimonials_eyebrow": "Google Reviews",
       "problems_title": "The challenges parents face today",
       "problems_title_html": "The challenges parents <span class=\"text-primary\">face today</span>",
       "problems_subtitle": "You are not alone. Hundreds of parents share the same concerns.",
@@ -897,7 +914,8 @@ window.AAA_TRANSLATIONS = {
       "card2_feat4": "Accommodation included",
       "card2_feat5": "Sports and activities",
       "card3_title": "Day Program",
-      "card3_subtitle": "Boarding: Quran in the morning, academic in the afternoon, accommodation included",
+      "card3_subtitle": "Boarding: Quran in the morning, academics in the afternoon, return home every two weeks",
+      "mixed_subtitle": "Boarding — return home every two weeks",
       "card3_feat1": "Targeted Quran memorization",
       "card3_feat2": "Full academic curriculum",
       "card3_feat3": "Family-friendly schedules",
@@ -1069,7 +1087,7 @@ window.AAA_TRANSLATIONS = {
       "faq6_q": "Are the meals served halal?",
       "faq6_a": "Yes, all meals served at the academy are 100% halal. Three balanced meals per day plus a snack are included for boarding students. We adapt menus for allergies and specific needs on request.",
       "faq7_q": "Can my child come home on weekends?",
-      "faq7_a": "Yes. For the boarding program, students can return home every weekend (Friday evening to Sunday evening) according to the schedule agreed with parents. For the day program, the child returns home daily at 5:30 PM.",
+      "faq7_a": "Yes. For the boarding program (Tahfiz), students can return home every weekend (Friday evening to Sunday evening) according to the schedule agreed with parents. For the Mixed program, also a boarding program, the child returns home every two weeks.",
       "faq8_q": "Is there an entrance exam?",
       "faq8_a": "No written exam. A 30-minute interview with the management assesses the child's level (reading, memorization already acquired) and guides them toward the right program. The goal is to welcome, not select.",
       "faq9_q": "What documents are required for enrollment?",
@@ -1485,6 +1503,8 @@ window.AAA_TRANSLATIONS = {
       "age_range_6_16": "6-16 years"
     },
     "fiche": {
+      "pdf_btn": "Download the information sheet (PDF)",
+      "pdf_hint": "4 pages · available in FR · EN · AR · ES",
       "badge": "Excellence Quranic School",
       "subtitle": "Information Sheet",
       "hero_desc": "A modern private Daara dedicated to memorizing the Noble Quran, open to boys and girls aged 6 to 12. Our Daara places every student at the center of attention and applies a tailored program to foster the personal and spiritual development of each child.",
@@ -1599,7 +1619,7 @@ window.AAA_TRANSLATIONS = {
       "free": "دروس مجانية",
       "conferences": "تكوينات ومحاضرات",
       "tahfiz_subtitle": "قرآن، رياضة وإقامة",
-      "mixed_subtitle": "داخلية — قرآن وأكاديمي، الإقامة مشمولة",
+      "mixed_subtitle": "داخلي — القرآن صباحاً، الأكاديمي بعد الظهر",
       "online_subtitle": "تعلّم من بيتك",
       "free_subtitle": "دروس باللغة الولوفية، مفتوحة للجميع"
     },
@@ -1620,6 +1640,13 @@ window.AAA_TRANSLATIONS = {
       "proof_students_sub": "مسجلون وناجحون"
     },
     "home": {
+      "failure_eyebrow": "لماذا الانتظار؟",
+      "final_cta_eyebrow": "التسجيل مفتوح",
+      "guide_eyebrow": "التزامنا",
+      "plan_eyebrow": "التسجيل",
+      "problems_eyebrow": "التحديات",
+      "programs_eyebrow": "برامجنا",
+      "testimonials_eyebrow": "تقييمات غوغل",
       "problems_title": "تحديات الأهالي اليوم",
       "problems_title_html": "تحديات الأهالي <span class=\"text-primary\">اليوم</span>",
       "problems_subtitle": "أنت لست وحدك. مئات الأهالي يعيشون نفس المخاوف.",
@@ -1675,7 +1702,8 @@ window.AAA_TRANSLATIONS = {
       "card2_feat4": "الإقامة مشمولة",
       "card2_feat5": "رياضة وأنشطة",
       "card3_title": "برنامج مختلط",
-      "card3_subtitle": "داخلية: قرآن في الصباح، دراسة بعد الظهر، الإقامة مشمولة",
+      "card3_subtitle": "داخلي: القرآن صباحاً، الأكاديمي بعد الظهر، العودة إلى المنزل كل أسبوعين",
+      "mixed_subtitle": "داخلي — العودة إلى المنزل كل أسبوعين",
       "card3_feat1": "حفظ القرآن بأسلوب مركَّز",
       "card3_feat2": "منهج أكاديمي متكامل",
       "card3_feat3": "جداول ملائمة للأسر",
@@ -1849,7 +1877,7 @@ window.AAA_TRANSLATIONS = {
       "faq6_q": "هل الوجبات المقدَّمة حلال؟",
       "faq6_a": "نعم، جميع الوجبات المقدَّمة في الأكاديمية حلال 100٪. يشمل ذلك ثلاث وجبات متوازنة يوميًا مع وجبة خفيفة لطلاب الداخلية. نتكيّف مع الحساسيات والاحتياجات الخاصة عند الطلب.",
       "faq7_q": "هل يمكن لطفلي العودة إلى المنزل في نهاية الأسبوع؟",
-      "faq7_a": "نعم. في برنامج الداخلية، يعود الطلاب إلى المنزل كل نهاية أسبوع (من مساء الجمعة إلى مساء الأحد) وفق الجدول المتفق عليه مع الأهل. في البرنامج الخارجي يعود الطفل يوميًا في 17:30.",
+      "faq7_a": "نعم. في برنامج التحفيظ الداخلي، يعود الطلاب إلى المنزل كل نهاية أسبوع (من مساء الجمعة إلى مساء الأحد) وفق الجدول المتفق عليه مع الأهل. أما البرنامج المختلط، وهو داخلي أيضًا، فيعود فيه الطفل إلى المنزل كل أسبوعين.",
       "faq8_q": "هل هناك اختبار قبول؟",
       "faq8_a": "لا يوجد اختبار كتابي. مقابلة 30 دقيقة مع الإدارة تُقيِّم مستوى الطفل (القراءة والحفظ المكتسب) وتوجّهه نحو البرنامج الملائم. الهدف هو الاستقبال لا الانتقاء.",
       "faq9_q": "ما الوثائق المطلوبة للتسجيل؟",
@@ -2265,6 +2293,8 @@ window.AAA_TRANSLATIONS = {
       "age_range_6_16": "٦-١٦ سنة"
     },
     "fiche": {
+      "pdf_btn": "تحميل بطاقة المعلومات بصيغة PDF",
+      "pdf_hint": "4 صفحات · متاحة بالفرنسية · الإنجليزية · العربية · الإسبانية",
       "badge": "مدرسة قرآنية للتميز",
       "subtitle": "بطاقة المعلومات",
       "hero_desc": "دارة خاصة حديثة مخصصة لتحفيظ القرآن الكريم، مفتوحة للفتيان والفتيات من سن 6 إلى 12 سنة. تضع دارتنا كل طالب في محور الاهتمام وتطبق برنامجاً ملائماً لتعزيز التطور الشخصي والروحي لكل طفل.",
@@ -2378,7 +2408,7 @@ window.AAA_TRANSLATIONS = {
       "mixed": "Programa Mixto", "online": "Cursos en línea", "free": "Cursos gratuitos",
       "conferences": "Formaciones y Conferencias",
       "tahfiz_subtitle": "Corán, deporte y alojamiento",
-      "mixed_subtitle": "Internado — Corán y académico, alojamiento incluido",
+      "mixed_subtitle": "Internado — Corán por la mañana, académico por la tarde",
       "online_subtitle": "Aprende desde casa",
       "free_subtitle": "Cursos en wolof, abiertos a todos"
     },
@@ -2398,6 +2428,13 @@ window.AAA_TRANSLATIONS = {
       "proof_students_sub": "inscritos y felices"
     },
     "home": {
+      "failure_eyebrow": "¿Por qué esperar?",
+      "final_cta_eyebrow": "Inscripciones abiertas",
+      "guide_eyebrow": "Nuestro compromiso",
+      "plan_eyebrow": "Inscripción",
+      "problems_eyebrow": "Los desafíos",
+      "programs_eyebrow": "Nuestros programas",
+      "testimonials_eyebrow": "Reseñas de Google",
       "problems_title": "Los desafíos de los padres hoy",
       "problems_title_html": "Los desafíos de los padres <span class=\"text-primary\">hoy</span>",
       "problems_subtitle": "No está solo(a). Cientos de padres viven las mismas preocupaciones.",
@@ -2452,7 +2489,8 @@ window.AAA_TRANSLATIONS = {
       "card2_feat4": "Alojamiento incluido",
       "card2_feat5": "Deporte y actividades",
       "card3_title": "Programa Mixto",
-      "card3_subtitle": "Internado: Corán por la mañana, académico por la tarde, alojamiento incluido",
+      "card3_subtitle": "Internado: Corán por la mañana, académico por la tarde, regreso a casa cada quincena",
+      "mixed_subtitle": "Internado — regreso a casa cada quincena",
       "card3_feat1": "Memorización específica del Corán",
       "card3_feat2": "Estudios académicos completos",
       "card3_feat3": "Horarios adaptados a las familias",
@@ -2624,7 +2662,7 @@ window.AAA_TRANSLATIONS = {
       "faq6_q": "¿Las comidas servidas son halal?",
       "faq6_a": "Sí, todas las comidas del internado son 100 % halal. Se incluyen tres comidas equilibradas al día más una merienda para los alumnos internos. Adaptamos los menús a alergias y necesidades específicas bajo petición.",
       "faq7_q": "¿Mi hijo puede volver a casa el fin de semana?",
-      "faq7_a": "Sí. En el programa de internado, los alumnos pueden volver a casa cada fin de semana (del viernes por la noche al domingo por la noche) según el calendario acordado con los padres. En el programa mixto, el niño regresa a casa a diario a las 17:30.",
+      "faq7_a": "Sí. En el programa de internado (Tahfiz), los alumnos pueden volver a casa cada fin de semana (del viernes por la noche al domingo por la noche) según el calendario acordado con los padres. En el programa Mixto, también en internado, el niño regresa a casa cada quincena.",
       "faq8_q": "¿Hay examen de acceso?",
       "faq8_a": "Sin examen escrito. Una entrevista de 30 minutos con la dirección evalúa el nivel del niño (lectura, memorización ya adquirida) y orienta hacia el programa adecuado. El objetivo es acoger, no seleccionar.",
       "faq9_q": "¿Qué documentos hay que presentar para la inscripción?",
@@ -3040,6 +3078,8 @@ window.AAA_TRANSLATIONS = {
       "age_range_6_16": "6-16 años"
     },
     "fiche": {
+      "pdf_btn": "Descargar la ficha en PDF",
+      "pdf_hint": "4 páginas · disponible en FR · EN · AR · ES",
       "badge": "Escuela Coránica de Excelencia",
       "subtitle": "Ficha de Información",
       "hero_desc": "Una Daara privada moderna dedicada a la memorización del Noble Corán, abierta a niños y niñas de 6 a 12 años. Nuestra Daara coloca a cada alumno en el centro de la atención y aplica un programa adaptado para favorecer el desarrollo personal y espiritual de cada niño.",

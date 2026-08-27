@@ -147,7 +147,14 @@
     "testimonial3_text": "“Recomiendo ampliamente este Daara. Inscribí a mi hermano de 9 años y en menos de 2 meses se volvió educado, tranquilo y estudioso. Su recitación del Corán se ha vuelto muy fluida.”",
     "testimonial4_text": "“Muy buen internado. Bien estructurado, muy buena pedagógia, muy buen aprendizaje. Evolución del niño en el aprendizaje.”",
     "parent_label": "Padre/Madre de alumno",
-    "parent_label_plural": "Padre/Madre de alumnos"
+    "parent_label_plural": "Padre/Madre de alumnos",
+    "failure_eyebrow": "¿Por qué esperar?",
+    "final_cta_eyebrow": "Inscripciones abiertas",
+    "guide_eyebrow": "Nuestro compromiso",
+    "plan_eyebrow": "Inscripción",
+    "problems_eyebrow": "Los desafíos",
+    "programs_eyebrow": "Nuestros programas",
+    "testimonials_eyebrow": "Reseñas de Google"
   },
   "about": {
     "hero_title": "Sobre DAARA Al Amine Academy",
@@ -306,7 +313,7 @@
     "faq6_q": "¿Las comidas servidas son halal?",
     "faq6_a": "Sí, todas las comidas del internado son 100 % halal. Se incluyen tres comidas equilibradas al día más una merienda para los alumnos internos. Adaptamos los menús a alergias y necesidades específicas bajo petición.",
     "faq7_q": "¿Mi hijo puede volver a casa el fin de semana?",
-    "faq7_a": "Sí. En el programa de internado, los alumnos pueden volver a casa cada fin de semana (del viernes por la noche al domingo por la noche) según el calendario acordado con los padres. En el programa mixto, el niño regresa a casa a diario a las 17:30.",
+    "faq7_a": "Sí. En el programa de internado (Tahfiz), los alumnos pueden volver a casa cada fin de semana (del viernes por la noche al domingo por la noche) según el calendario acordado con los padres. En el programa Mixto, también en internado, el niño regresa a casa cada quincena.",
     "faq8_q": "¿Hay examen de acceso?",
     "faq8_a": "Sin examen escrito. Una entrevista de 30 minutos con la dirección evalúa el nivel del niño (lectura, memorización ya adquirida) y orienta hacia el programa adecuado. El objetivo es acoger, no seleccionar.",
     "faq9_q": "¿Qué documentos hay que presentar para la inscripción?",

@@ -147,7 +147,14 @@
     "testimonial3_text": "“I highly recommend this Daara. I enrolled my 9-year-old brother and in less than 2 months he became polite, calm, and studious. His Quranic recitation has become very fluent.”",
     "testimonial4_text": "“Very good boarding school. Well structured, excellent pedagogy, great learning. Real progress in the child’s education.”",
     "parent_label": "Student’s parent",
-    "parent_label_plural": "Students’ parent"
+    "parent_label_plural": "Students’ parent",
+    "failure_eyebrow": "Why wait?",
+    "final_cta_eyebrow": "Enrollment open",
+    "guide_eyebrow": "Our commitment",
+    "plan_eyebrow": "Enrollment",
+    "problems_eyebrow": "The challenges",
+    "programs_eyebrow": "Our programs",
+    "testimonials_eyebrow": "Google Reviews"
   },
   "about": {
     "hero_title": "About DAARA Al Amine Academy",
@@ -306,7 +313,7 @@
     "faq6_q": "Are the meals served halal?",
     "faq6_a": "Yes, all meals served at the academy are 100% halal. Three balanced meals per day plus a snack are included for boarding students. We adapt menus for allergies and specific needs on request.",
     "faq7_q": "Can my child come home on weekends?",
-    "faq7_a": "Yes. For the boarding program, students can return home every weekend (Friday evening to Sunday evening) according to the schedule agreed with parents. For the day program, the child returns home daily at 5:30 PM.",
+    "faq7_a": "Yes. For the boarding program (Tahfiz), students can return home every weekend (Friday evening to Sunday evening) according to the schedule agreed with parents. For the Mixed program, also a boarding program, the child returns home every two weeks.",
     "faq8_q": "Is there an entrance exam?",
     "faq8_a": "No written exam. A 30-minute interview with the management assesses the child's level (reading, memorization already acquired) and guides them toward the right program. The goal is to welcome, not select.",
     "faq9_q": "What documents are required for enrollment?",

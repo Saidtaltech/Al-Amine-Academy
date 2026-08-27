@@ -147,7 +147,14 @@
     "testimonial3_text": "“Je recommande vivement cette Daara. J’y ai inscrit mon petit frère de 9 ans et en moins de 2 mois, il est devenu poli, posé et studieux. Sa lecture coranique est devenue très fluide.”",
     "testimonial4_text": "“Très bon internat. Bien structuré, très bonne pédagogie, très bon apprentissage. Évolution de l’enfant dans l’apprentissage.”",
     "parent_label": "Parent d’élève",
-    "parent_label_plural": "Parent d’élèves"
+    "parent_label_plural": "Parent d’élèves",
+    "failure_eyebrow": "Pourquoi attendre ?",
+    "final_cta_eyebrow": "Inscriptions ouvertes",
+    "guide_eyebrow": "Notre engagement",
+    "plan_eyebrow": "Inscription",
+    "problems_eyebrow": "Les défis",
+    "programs_eyebrow": "Nos formations",
+    "testimonials_eyebrow": "Avis Google"
   },
   "about": {
     "hero_title": "À propos de DAARA Al Amine Academy",
@@ -306,7 +313,7 @@
     "faq6_q": "Les repas servis sont-ils halal ?",
     "faq6_a": "Oui, tous les repas servis à l'académie sont 100 % halal. Trois repas équilibrés par jour + un goûter sont inclus pour les élèves en internat. Nous adaptons les menus aux allergies et besoins spécifiques sur demande.",
     "faq7_q": "Mon enfant peut-il rentrer le week-end ?",
-    "faq7_a": "Oui. Pour le programme internat, les élèves peuvent rentrer en famille chaque week-end (du vendredi soir au dimanche soir) selon le calendrier convenu avec les parents. Pour le programme mixte, l'enfant rentre chaque jour à 17h30.",
+    "faq7_a": "Oui. Pour le programme internat (Tahfiz), les élèves peuvent rentrer en famille chaque week-end (du vendredi soir au dimanche soir) selon le calendrier convenu avec les parents. Pour le programme mixte, également en internat, l'enfant rentre à la maison chaque quinzaine.",
     "faq8_q": "Y a-t-il un examen d'entrée ?",
     "faq8_a": "Pas d'examen écrit. Un entretien de 30 minutes avec la direction permet d'évaluer le niveau de l'enfant (lecture, mémorisation déjà acquise) et d'orienter vers le programme adapté. L'objectif est d'accueillir, pas de sélectionner.",
     "faq9_q": "Quels documents fournir pour l'inscription ?",
