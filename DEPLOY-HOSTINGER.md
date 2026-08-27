@@ -93,7 +93,7 @@ Hostinger Premium et Business supportent Git :
 Tant que tu y es, dans hPanel :
 
 1. **E-mails → Comptes e-mail → Créer un compte**.
-2. Crée `daara@alamineacademy.com` (ou `contact@`, `inscription@`).
+2. Crée `contact@alamineacademy.com` (ou `contact@`, `inscription@`).
 3. Le site renvoie déjà vers cette adresse — il faut que la boîte existe.
 
 ---
