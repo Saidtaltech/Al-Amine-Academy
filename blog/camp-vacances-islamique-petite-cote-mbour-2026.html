@@ -131,7 +131,7 @@
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <link rel="icon" type="image/png" href="../assets/img/LogoAAA.png">
-    <link rel="stylesheet" href="../assets/css/site.css">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20260827">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         if (typeof tailwind !== 'undefined') tailwind.config = { theme: { extend: { colors: {
@@ -141,6 +141,14 @@
     </script>
 </head>
 <body class="antialiased bg-slate-50">
+  <!-- PAGE LOADER -->
+  <div id="aaa-loader" aria-hidden="true">
+    <div class="aaa-loader-inner">
+      <img src="../assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
+      <div class="aaa-loader-ring"></div>
+    </div>
+  </div>
+
 
 <div id="aaa-navbar"></div>
 
@@ -843,6 +851,6 @@
 <div id="aaa-wa"></div>
 <div id="aaa-footer"></div>
 
-<script src="../assets/js/site-shell.js?v=20260616"></script>
+<script src="../assets/js/site-shell.js?v=20260827"></script>
 </body>
 </html>

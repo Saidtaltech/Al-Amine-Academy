@@ -23,7 +23,7 @@
   <!-- Font Awesome — non-blocking -->
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260616"/>
+  <link rel="stylesheet" href="assets/css/site.css?v=20260827"/>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -90,6 +90,14 @@
   </script>
  </head>
  <body class="antialiased bg-white">
+  <!-- PAGE LOADER -->
+  <div id="aaa-loader" aria-hidden="true">
+    <div class="aaa-loader-inner">
+      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
+      <div class="aaa-loader-ring"></div>
+    </div>
+  </div>
+
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
@@ -695,8 +703,8 @@
 
   <div id="aaa-footer"></div>
   <script src="translations.js?v=20260729"></script>
-  <script src="lang.js?v=20260617"></script>
-  <script src="assets/js/site-shell.js?v=20260616"></script>
+  <script src="lang.js?v=20260827"></script>
+  <script src="assets/js/site-shell.js?v=20260827"></script>
  
   <!-- STICKY MOBILE CTA -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">

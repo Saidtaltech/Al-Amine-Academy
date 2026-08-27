@@ -75,7 +75,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/site.css"/>
+  <link rel="stylesheet" href="assets/css/site.css?v=20260827"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     if (typeof tailwind !== 'undefined') tailwind.config = {
@@ -99,6 +99,14 @@
 </head>
 
 <body class="antialiased">
+  <!-- PAGE LOADER -->
+  <div id="aaa-loader" aria-hidden="true">
+    <div class="aaa-loader-inner">
+      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
+      <div class="aaa-loader-ring"></div>
+    </div>
+  </div>
+
 
   <div id="aaa-wa"></div>
   <div id="aaa-navbar">
@@ -495,7 +503,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
   <script src="translations.js?v=20260826"></script>
-  <script src="lang.js?v=20260826"></script>
-  <script src="assets/js/site-shell.js" defer></script>
+  <script src="lang.js?v=20260827"></script>
+  <script src="assets/js/site-shell.js?v=20260827" defer></script>
 </body>
 </html>

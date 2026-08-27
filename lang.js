@@ -175,7 +175,8 @@ function decorateLangSwitchers() {
 document.addEventListener('DOMContentLoaded', function () {
     decorateLangSwitchers();
     if (translationsReady) applyTranslations();
-    overlayJsonTranslations(); // best-effort overlay; no-op in file://
+    /* Exposed so site-shell.js can hide the page loader once real content is in place */
+    window.AAA_translationsReadyPromise = overlayJsonTranslations(); // best-effort overlay; no-op in file://
 });
 
 /* ========================================================================== *

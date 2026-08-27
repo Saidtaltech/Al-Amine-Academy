@@ -16,13 +16,21 @@
   <!-- Font Awesome — non-blocking -->
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260616"/>
+  <link rel="stylesheet" href="assets/css/site.css?v=20260827"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     if (typeof tailwind !== 'undefined') tailwind.config = { theme: { extend: { colors: { primary: { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73' }, secondary: { DEFAULT: '#f5a623', dark: '#d97706' } } } } };
   </script>
 </head>
 <body class="antialiased">
+  <!-- PAGE LOADER -->
+  <div id="aaa-loader" aria-hidden="true">
+    <div class="aaa-loader-inner">
+      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
+      <div class="aaa-loader-ring"></div>
+    </div>
+  </div>
+
   <main class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-deep via-primary-dark to-primary text-white relative overflow-hidden">
     <div class="absolute top-10 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl float pointer-events-none"></div>
     <div class="absolute bottom-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl float-delay pointer-events-none"></div>
@@ -36,6 +44,6 @@
       </div>
     </div>
   </main>
-  <script src="assets/js/site-shell.js?v=20260616"></script>
+  <script src="assets/js/site-shell.js?v=20260827"></script>
 </body>
 </html>

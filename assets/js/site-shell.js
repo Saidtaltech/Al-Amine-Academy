@@ -524,6 +524,79 @@
     });
   }
 
+  /* ==================== IMAGE LOADING — shimmer skeleton + fade-in ========= */
+  /* Applies to every content <img> (gallery, blog covers, program photos).    *
+   * Nav/footer/WA logos and the page loader itself are excluded.             */
+  function bindImageLoading() {
+    document.querySelectorAll('img').forEach(function (img) {
+      if (img.classList.contains('aaa-img-tracked')) return;
+      if (img.closest('#aaa-navbar, #aaa-footer, #aaa-wa, #aaa-loader')) return;
+      img.classList.add('aaa-img-tracked', 'aaa-img-fade');
+      function reveal() { img.classList.add('aaa-img-loaded'); }
+      if (img.complete && img.naturalWidth > 0) reveal();
+      else {
+        img.addEventListener('load', reveal, { once: true });
+        img.addEventListener('error', reveal, { once: true });
+      }
+    });
+  }
+
+  /* ==================== PAGE LOADER — hide once content is ready =========== */
+  function bindPageLoader() {
+    var el = document.getElementById('aaa-loader');
+    if (!el) return;
+    function hide() {
+      el.classList.add('aaa-loader-hidden');
+      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 500);
+    }
+    var minDelay = new Promise(function (res) { setTimeout(res, 350); });
+    var contentReady = (window.AAA_translationsReadyPromise && typeof window.AAA_translationsReadyPromise.then === 'function')
+      ? window.AAA_translationsReadyPromise
+      : Promise.resolve();
+    var hardTimeout = new Promise(function (res) { setTimeout(res, 2500); });
+    Promise.race([
+      Promise.all([contentReady, minDelay]).catch(function () {}),
+      hardTimeout
+    ]).then(hide);
+  }
+
+  /* ==================== TOP NAV LOADING BAR — internal link clicks ========= */
+  function bindNavLoadingBar() {
+    var bar = document.getElementById('aaa-progress');
+    if (!bar) return;
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (!href || href.charAt(0) === '#' || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) return;
+      if (a.target === '_blank' || a.hasAttribute('download')) return;
+      var url;
+      try { url = new URL(a.href, location.href); } catch (err) { return; }
+      if (url.origin !== location.origin) return;
+      if (url.pathname === location.pathname && url.hash) return; /* same-page anchor */
+      bar.classList.add('aaa-progress-loading');
+      bar.style.width = '78%';
+    });
+  }
+
+  /* ==================== CTA LOADING FEEDBACK — inscription/WhatsApp ======== */
+  function bindCtaLoadingFeedback() {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a || a.target !== '_blank') return;
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf('hassan.alamineacademy.com') === -1 && href.indexOf('wa.me') === -1) return;
+      if (a.classList.contains('is-loading')) return;
+      var original = a.innerHTML;
+      a.classList.add('is-loading');
+      a.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; ' + (a.getAttribute('data-loading-label') || 'Redirection…');
+      setTimeout(function () {
+        a.innerHTML = original;
+        a.classList.remove('is-loading');
+      }, 1100);
+    });
+  }
+
   function ready(fn) {
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
     else fn();
@@ -537,6 +610,10 @@
     bindBackToTop();
     bindCounters();
     bindImageZoom();
+    bindImageLoading();
+    bindNavLoadingBar();
+    bindCtaLoadingFeedback();
+    bindPageLoader();
     if (typeof window.applyTranslations === 'function') {
       try { window.applyTranslations(); } catch (e) { /* ignore */ }
     }

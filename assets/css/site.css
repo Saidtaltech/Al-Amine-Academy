@@ -408,6 +408,69 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ============================================================
+ *  PAGE LOADER — full-screen branded loader shown until page
+ *  content + translations are actually ready (masks CDN/i18n
+ *  flash instead of letting raw/unstyled content pop in).
+ * ============================================================ */
+#aaa-loader {
+  position: fixed; inset: 0; z-index: 100000;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--brand-blue-deep) 0%, var(--brand-blue) 100%);
+  transition: opacity .45s ease, visibility .45s ease;
+  /* Safety net: force-hide even if JS never runs (blocked script, ad-blocker) */
+  animation: aaaLoaderForceHide 0s ease-in 3.2s forwards;
+}
+#aaa-loader.aaa-loader-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+@keyframes aaaLoaderForceHide { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+.aaa-loader-inner { display: flex; flex-direction: column; align-items: center; gap: 1.15rem; }
+.aaa-loader-logo {
+  width: 62px; height: 62px; object-fit: contain;
+  border-radius: 16px; background: #fff; padding: 8px;
+  box-shadow: 0 12px 28px -10px rgba(0,0,0,.35);
+  animation: aaaLoaderPulse 1.6s ease-in-out infinite;
+}
+@keyframes aaaLoaderPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.07); }
+}
+.aaa-loader-ring {
+  width: 32px; height: 32px;
+  border: 3px solid rgba(255,255,255,.25);
+  border-top-color: var(--brand-yellow);
+  border-radius: 50%;
+  animation: aaaLoaderSpin .75s linear infinite;
+}
+@keyframes aaaLoaderSpin { to { transform: rotate(360deg); } }
+
+/* ============================================================
+ *  TOP NAV LOADING BAR — reuses #aaa-progress, switched from
+ *  scroll-tracking to an indeterminate creep on internal clicks.
+ * ============================================================ */
+#aaa-progress.aaa-progress-loading { transition: width 1s cubic-bezier(.1,.6,.4,1); }
+
+/* ============================================================
+ *  IMAGE LOADING (shimmer skeleton → fade in on load)
+ * ============================================================ */
+img.aaa-img-fade {
+  opacity: 0;
+  transition: opacity .5s ease;
+  background: linear-gradient(90deg, #e8f4f8 25%, #cde8f0 50%, #e8f4f8 75%);
+  background-size: 200% 100%;
+  animation: shimmerAnim 1.6s infinite;
+}
+img.aaa-img-loaded { opacity: 1; animation: none; background: none; }
+
+/* ============================================================
+ *  CTA LOADING FEEDBACK (inscription / WhatsApp buttons)
+ * ============================================================ */
+a.is-loading { pointer-events: none; opacity: .85; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aaa-loader-logo, .aaa-loader-ring, img.aaa-img-fade { animation: none !important; }
+  #aaa-loader { animation: none !important; }
+}
+
+/* ============================================================
  *  REDUCED MOTION — respect OS preference
  * ============================================================ */
 @media (prefers-reduced-motion: reduce) {

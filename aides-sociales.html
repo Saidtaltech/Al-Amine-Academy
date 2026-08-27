@@ -14,7 +14,7 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260616"/>
+  <link rel="stylesheet" href="assets/css/site.css?v=20260827"/>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
   <script>
     tailwind.config = {
@@ -171,6 +171,14 @@
   <link rel="preload" as="image" type="image/webp" href="assets/img/aides-sociales/complexe-1.webp" fetchpriority="high">
 </head>
 <body class="antialiased bg-white">
+  <!-- PAGE LOADER -->
+  <div id="aaa-loader" aria-hidden="true">
+    <div class="aaa-loader-inner">
+      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
+      <div class="aaa-loader-ring"></div>
+    </div>
+  </div>
+
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
@@ -499,8 +507,8 @@
 
   <div id="aaa-footer"></div>
 
-  <script src="assets/js/site-shell.js?v=20260616"></script>
-  <script src="lang.js" defer></script>
+  <script src="assets/js/site-shell.js?v=20260827"></script>
+  <script src="lang.js?v=20260827" defer></script>
   <script src="translations.js" defer></script>
 
   <!-- ============ REVEAL ON SCROLL OBSERVER ============ -->
