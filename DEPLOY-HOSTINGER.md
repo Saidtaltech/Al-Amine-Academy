@@ -2,6 +2,8 @@
 
 Hostinger utilise hPanel (leur version de cPanel). Apache + .htaccess sont supportés nativement, donc tout ce qu'on a préparé fonctionne directement. Pas de build, pas de config supplémentaire.
 
+> **CSS Tailwind** : le site charge `assets/css/tailwind.css`, un fichier déjà compilé et committé dans le repo — rien à construire pour déployer. Si tu ajoutes de **nouvelles classes Tailwind** dans une page, il faut recompiler ce fichier avant de déployer (une seule fois, depuis un poste avec Node.js) : `npm install` puis `npm run build:css`. Les fichiers `node_modules/`, `tailwind.config.js` et `tailwind-src.css` sont des sources de développement — inutile de les inclure dans le ZIP envoyé à Hostinger.
+
 ---
 
 ## Méthode 1 — File Manager (la plus simple, sans logiciel)
@@ -93,7 +95,7 @@ Hostinger Premium et Business supportent Git :
 Tant que tu y es, dans hPanel :
 
 1. **E-mails → Comptes e-mail → Créer un compte**.
-2. Crée `daara@alamineacademy.com` (ou `contact@`, `inscription@`).
+2. Crée `contact@alamineacademy.com` (ou `contact@`, `inscription@`).
 3. Le site renvoie déjà vers cette adresse — il faut que la boîte existe.
 
 ---

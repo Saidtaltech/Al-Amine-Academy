@@ -17,10 +17,7 @@
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/site.css?v=20260827"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    if (typeof tailwind !== 'undefined') tailwind.config = { theme: { extend: { colors: { primary: { DEFAULT: '#2590b3', dark: '#1e7a9a', deep: '#165b73' }, secondary: { DEFAULT: '#f5a623', dark: '#d97706' } } } } };
-  </script>
+<link rel="stylesheet" href="assets/css/tailwind.css?v=20260827"/>
 </head>
 <body class="antialiased">
   <!-- PAGE LOADER -->
@@ -40,7 +37,7 @@
       <p class="text-white/85 text-lg mb-8">La page que vous cherchez n'existe pas ou a été déplacée. Retournons à l'accueil pour repartir du bon pied.</p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href="/" class="btn btn-primary"><i class="fas fa-home"></i>Retour à l'accueil</a>
-        <a href="contact.html" class="btn btn-ghost"><i class="fas fa-envelope"></i>Nous contacter</a>
+        <a href="contact" class="btn btn-ghost"><i class="fas fa-envelope"></i>Nous contacter</a>
       </div>
     </div>
   </main>

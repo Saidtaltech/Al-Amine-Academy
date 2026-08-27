@@ -18,6 +18,12 @@ ErrorDocument 404 /404.html
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
     RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
+    # Redirection 301 (pas juste un alias interne) : toute URL en .html
+    # est renvoyée vers sa version propre, pour que Google et les liens
+    # entrants convergent tous vers une seule URL canonique par page.
+    RewriteCond %{THE_REQUEST} \s/+([^.]+)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
     # Retire .html des URLs (lien propre /a-propos au lieu de /a-propos.html)
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}.html -f
@@ -32,6 +38,15 @@ ErrorDocument 404 /404.html
     RewriteRule ^daara-internat-dakar/?$  programme-internat.html  [L]
     RewriteRule ^daara-dakar/?$           programme-internat.html  [L]
     RewriteRule ^internat-coranique-dakar/?$ programme-internat.html [L]
+
+    # Ancienne page jamais publiée, remplacée par programme-mixte.html
+    RewriteRule ^programme-tahfiz-academique/?$ programme-mixte.html [L,R=301]
+
+    # Article dupliqué : la version longue (les-10-...) est l'article canonique
+    RewriteRule ^blog/meilleurs-daara-dakar-2025/?$ blog/les-10-meilleurs-daara-dakar-2025.html [L,R=301]
+
+    # Ancien article, jamais rédigé, remplacé par programme-mixte.html
+    RewriteRule ^blog/bilingue-francais-arabe-ecole-coranique/?$ programme-mixte.html [L,R=301]
 </IfModule>
 
 # ----------------------------------------------------------------------

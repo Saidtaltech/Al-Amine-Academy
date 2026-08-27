@@ -3,8 +3,14 @@
 /*  /404.html  404
 
 # Pages legacy / typos courantes vers les vraies URLs
-/programmes  /programme-internat.html  301
-/inscription  /admission.html  301
-/about  /a-propos.html  301
-/gallery  /galerie.html  301
-/testimonials  /temoignages.html  301
+/programme-tahfiz-academique  /programme-mixte  301
+/blog/meilleurs-daara-dakar-2025  /blog/les-10-meilleurs-daara-dakar-2025  301
+/blog/bilingue-francais-arabe-ecole-coranique  /programme-mixte  301
+/programmes  /programme-internat  301
+/inscription  /admission  301
+/about  /a-propos  301
+/gallery  /galerie  301
+/testimonials  /temoignages  301
+
+# Toute URL en .html redirige vers sa version propre (une seule URL canonique)
+/*.html  /:splat  301
