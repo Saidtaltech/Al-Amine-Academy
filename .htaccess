@@ -38,6 +38,9 @@ ErrorDocument 404 /404.html
     RewriteRule ^daara-internat-dakar/?$  programme-internat.html  [L]
     RewriteRule ^daara-dakar/?$           programme-internat.html  [L]
     RewriteRule ^internat-coranique-dakar/?$ programme-internat.html [L]
+
+    # Ancienne page jamais publiée, remplacée par programme-mixte.html
+    RewriteRule ^programme-tahfiz-academique/?$ programme-mixte.html [L,R=301]
 </IfModule>
 
 # ----------------------------------------------------------------------

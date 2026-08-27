@@ -37,8 +37,8 @@
     }
   ],
   "redirects": [
-    { "source": "/programme-tahfiz-academique", "destination": "/", "permanent": true },
-    { "source": "/programme-tahfiz-academique.html", "destination": "/", "permanent": true },
+    { "source": "/programme-tahfiz-academique", "destination": "/programme-mixte", "permanent": true },
+    { "source": "/programme-tahfiz-academique.html", "destination": "/programme-mixte", "permanent": true },
     { "source": "/programmes", "destination": "/programme-internat", "permanent": true },
     { "source": "/inscription", "destination": "/admission", "permanent": true },
     { "source": "/about", "destination": "/a-propos", "permanent": true },
