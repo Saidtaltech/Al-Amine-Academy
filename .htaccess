@@ -41,6 +41,12 @@ ErrorDocument 404 /404.html
 
     # Ancienne page jamais publiée, remplacée par programme-mixte.html
     RewriteRule ^programme-tahfiz-academique/?$ programme-mixte.html [L,R=301]
+
+    # Article dupliqué : la version longue (les-10-...) est l'article canonique
+    RewriteRule ^blog/meilleurs-daara-dakar-2025/?$ blog/les-10-meilleurs-daara-dakar-2025.html [L,R=301]
+
+    # Ancien article, jamais rédigé, remplacé par programme-mixte.html
+    RewriteRule ^blog/bilingue-francais-arabe-ecole-coranique/?$ programme-mixte.html [L,R=301]
 </IfModule>
 
 # ----------------------------------------------------------------------

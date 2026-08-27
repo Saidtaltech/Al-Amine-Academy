@@ -39,6 +39,10 @@
   "redirects": [
     { "source": "/programme-tahfiz-academique", "destination": "/programme-mixte", "permanent": true },
     { "source": "/programme-tahfiz-academique.html", "destination": "/programme-mixte", "permanent": true },
+    { "source": "/blog/meilleurs-daara-dakar-2025", "destination": "/blog/les-10-meilleurs-daara-dakar-2025", "permanent": true },
+    { "source": "/blog/meilleurs-daara-dakar-2025.html", "destination": "/blog/les-10-meilleurs-daara-dakar-2025", "permanent": true },
+    { "source": "/blog/bilingue-francais-arabe-ecole-coranique", "destination": "/programme-mixte", "permanent": true },
+    { "source": "/blog/bilingue-francais-arabe-ecole-coranique.html", "destination": "/programme-mixte", "permanent": true },
     { "source": "/programmes", "destination": "/programme-internat", "permanent": true },
     { "source": "/inscription", "destination": "/admission", "permanent": true },
     { "source": "/about", "destination": "/a-propos", "permanent": true },
