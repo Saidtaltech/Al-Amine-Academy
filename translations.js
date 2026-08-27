@@ -294,7 +294,11 @@ window.AAA_TRANSLATIONS = {
       "faq9_q": "Quels documents fournir pour l'inscription ?",
       "faq9_a": "Acte de naissance de l'enfant, deux photos d'identité récentes, carte d'identité de l'un des parents, certificat médical de moins de 3 mois et bulletins scolaires de l'année précédente. Pour les internes, un certificat de groupe sanguin est demandé.",
       "faq10_q": "Quels modes de paiement acceptez-vous ?",
-      "faq10_a": "Cash sur place, Wave, Orange Money ou virement bancaire. Le paiement est mensuel ; un règlement trimestriel donne droit à 2 % de remise et un règlement annuel à 5 %."
+      "faq10_a": "Cash sur place, Wave, Orange Money ou virement bancaire. Le paiement est mensuel ; un règlement trimestriel donne droit à 2 % de remise et un règlement annuel à 5 %.",
+      "faq11_q": "Comment se passe l'encadrement de nuit et en cas d'urgence médicale ?",
+      "faq11_a": "Un encadrement est assuré 24h/24, avec des adultes dormant auprès des enfants, sous vidéosurveillance et dans le respect strict du « zéro châtiment corporel ». En cas d'urgence médicale, l'enfant est immédiatement pris en charge et les parents sont contactés sans délai au +221 77 774 37 00 (également joignable par WhatsApp, disponible 24h/24) ; pour toute décision médicale non urgente, l'accord préalable des parents est requis.",
+      "faq12_q": "Puis-je rendre visite à mon enfant en semaine ?",
+      "faq12_a": "Les visites en semaine restent occasionnelles et se font sur demande auprès de l'administration. Le retour en famille reste la norme : chaque week-end pour le Tahfiz Internat, chaque quinzaine pour le Programme Mixte."
     },
     "testimonials_page": {
       "hero_title": "Témoignages",
@@ -1096,7 +1100,11 @@ window.AAA_TRANSLATIONS = {
       "faq9_q": "What documents are required for enrollment?",
       "faq9_a": "Child's birth certificate, two recent ID photos, one parent's ID card, medical certificate less than 3 months old, and previous year's school reports. For boarding students, a blood type certificate is required.",
       "faq10_q": "What payment methods do you accept?",
-      "faq10_a": "Cash on site, Wave, Orange Money, or bank transfer. Payment is monthly; quarterly payment gives a 2% discount and annual payment gives 5%."
+      "faq10_a": "Cash on site, Wave, Orange Money, or bank transfer. Payment is monthly; quarterly payment gives a 2% discount and annual payment gives 5%.",
+      "faq11_q": "How does night supervision and medical emergency handling work?",
+      "faq11_a": "Supervision is provided 24/7, with adults sleeping alongside the children, under video surveillance and under a strict \"zero corporal punishment\" policy. In a medical emergency, the child is cared for immediately and parents are contacted without delay at +221 77 774 37 00 (also reachable via WhatsApp, available 24/7); for any non-urgent medical decision, prior parental consent is required.",
+      "faq12_q": "Can I visit my child during the week?",
+      "faq12_a": "Weekday visits remain occasional and are arranged on request with the administration. Returning home stays the norm: every weekend for Tahfiz Boarding, every two weeks for the Day Program."
     },
     "testimonials_page": {
       "hero_title": "Testimonials",
@@ -1887,7 +1895,11 @@ window.AAA_TRANSLATIONS = {
       "faq9_q": "ما الوثائق المطلوبة للتسجيل؟",
       "faq9_a": "شهادة ميلاد الطفل، صورتان شمسيتان حديثتان، بطاقة هوية أحد الوالدَين، شهادة طبية لا يتجاوز عمرها 3 أشهر، وكشوف درجات العام السابق. لطلاب الداخلية يُطلب أيضًا شهادة فصيلة الدم.",
       "faq10_q": "ما طرق الدفع المقبولة؟",
-      "faq10_a": "نقدًا في الموقع، أو عبر Wave أو Orange Money أو تحويل بنكي. الدفع شهري؛ الدفع الفصلي يمنح خصمًا 2٪ والدفع السنوي خصمًا 5٪."
+      "faq10_a": "نقدًا في الموقع، أو عبر Wave أو Orange Money أو تحويل بنكي. الدفع شهري؛ الدفع الفصلي يمنح خصمًا 2٪ والدفع السنوي خصمًا 5٪.",
+      "faq11_q": "كيف يتم الإشراف الليلي وكيف يتم التعامل مع حالات الطوارئ الطبية؟",
+      "faq11_a": "يُضمن الإشراف على مدار 24 ساعة، مع نوم بالغين بجانب الأطفال، تحت المراقبة بالفيديو ووفق سياسة صارمة بعدم العقاب البدني. في حالة الطوارئ الطبية، يُعتنى بالطفل فورًا ويُتصل بالوالدين دون تأخير على الرقم +221 77 774 37 00 (متاح أيضًا عبر واتساب على مدار الساعة)؛ وبالنسبة لأي قرار طبي غير عاجل، تُطلب موافقة الوالدين المسبقة.",
+      "faq12_q": "هل يمكنني زيارة طفلي خلال الأسبوع؟",
+      "faq12_a": "تبقى الزيارات خلال الأسبوع استثنائية وتتم بطلب من الإدارة. يبقى العودة إلى الأسرة هي القاعدة: كل نهاية أسبوع بالنسبة لبرنامج تحفيظ الداخلي، وكل أسبوعين بالنسبة للبرنامج المختلط."
     },
     "testimonials_page": {
       "hero_title": "الشهادات",
@@ -2673,7 +2685,11 @@ window.AAA_TRANSLATIONS = {
       "faq9_q": "¿Qué documentos hay que presentar para la inscripción?",
       "faq9_a": "Acta de nacimiento del niño, dos fotos de identidad recientes, DNI de uno de los padres, certificado médico de menos de 3 meses y boletines del curso anterior. Para los internos se solicita además un certificado de grupo sanguíneo.",
       "faq10_q": "¿Qué métodos de pago aceptan?",
-      "faq10_a": "Efectivo en sede, Wave, Orange Money o transferencia bancaria. El pago es mensual; el pago trimestral da derecho a un 2 % de descuento y el anual al 5 %."
+      "faq10_a": "Efectivo en sede, Wave, Orange Money o transferencia bancaria. El pago es mensual; el pago trimestral da derecho a un 2 % de descuento y el anual al 5 %.",
+      "faq11_q": "¿Cómo funciona la supervisión nocturna y en caso de emergencia médica?",
+      "faq11_a": "La supervisión se garantiza las 24 horas, con adultos que duermen junto a los niños, bajo videovigilancia y con una política estricta de \"cero castigo corporal\". En caso de emergencia médica, el niño es atendido de inmediato y se contacta a los padres sin demora al +221 77 774 37 00 (también disponible por WhatsApp, las 24 horas); para cualquier decisión médica no urgente, se requiere el consentimiento previo de los padres.",
+      "faq12_q": "¿Puedo visitar a mi hijo entre semana?",
+      "faq12_a": "Las visitas entre semana siguen siendo ocasionales y se organizan bajo petición a la administración. El regreso a casa sigue siendo la norma: cada fin de semana para el internado Tahfiz, cada quince días para el Programa Mixto."
     },
     "testimonials_page": {
       "hero_title": "Testimonios",
