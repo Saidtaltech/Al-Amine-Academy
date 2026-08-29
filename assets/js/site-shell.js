@@ -387,28 +387,47 @@
   }
   injectModernAssets();
 
-  function inject() {
-    /* --- Bannière d'annonce (rentrée / nouveau local) --- */
-    try {
-      if (!document.getElementById(ANNOUNCE_ID) && !localStorage.getItem(ANNOUNCE_ID + '-dismissed')) {
-        var wrap = document.createElement('div');
-        wrap.innerHTML = ANNOUNCE_HTML;
-        var bar = wrap.firstChild;
-        document.body.insertBefore(bar, document.body.firstChild);
-        var closeBtn = document.getElementById('aaa-announce-close');
-        if (closeBtn) closeBtn.addEventListener('click', function () {
-          bar.remove();
-          try { localStorage.setItem(ANNOUNCE_ID + '-dismissed', '1'); } catch (e) {}
-        });
-      }
-    } catch (e) {}
+  function pushNavBelowBanner(bar) {
+    /* La navbar est fixed top:0 — pousse-la (elle + le spacer h-20) sous la bannière */
+    function apply() {
+      var h = bar && bar.parentNode ? bar.offsetHeight : 0;
+      var navEl = document.getElementById('aaa-nav');
+      var spacer = document.getElementById('aaa-navbar') && document.getElementById('aaa-navbar').nextElementSibling;
+      if (navEl) navEl.style.top = h + 'px';
+      if (spacer) spacer.style.marginTop = h + 'px';
+    }
+    apply();
+    window.addEventListener('resize', apply);
+  }
 
+  function inject() {
     var nav = document.getElementById('aaa-navbar');
     if (nav) {
       nav.innerHTML = NAV_HTML;
       var active = getActiveRoute();
       nav.querySelectorAll('[data-route="' + active + '"]').forEach(function (a) { a.classList.add('active'); });
     }
+
+    /* --- Bannière d'annonce (rentrée / nouveau local) --- */
+    try {
+      if (!document.getElementById(ANNOUNCE_ID) && !localStorage.getItem(ANNOUNCE_ID + '-dismissed')) {
+        var wrap = document.createElement('div');
+        wrap.innerHTML = ANNOUNCE_HTML;
+        var bar = wrap.firstChild;
+        bar.style.position = 'fixed';
+        bar.style.top = '0';
+        bar.style.left = '0';
+        bar.style.right = '0';
+        document.body.insertBefore(bar, document.body.firstChild);
+        pushNavBelowBanner(bar);
+        var closeBtn = document.getElementById('aaa-announce-close');
+        if (closeBtn) closeBtn.addEventListener('click', function () {
+          bar.remove();
+          pushNavBelowBanner(null);
+          try { localStorage.setItem(ANNOUNCE_ID + '-dismissed', '1'); } catch (e) {}
+        });
+      }
+    } catch (e) {}
     var foot = document.getElementById('aaa-footer');
     if (foot) foot.innerHTML = FOOTER_HTML;
     var wa = document.getElementById('aaa-wa');
