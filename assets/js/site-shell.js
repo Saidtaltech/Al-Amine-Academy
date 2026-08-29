@@ -328,6 +328,18 @@
     +   '<i class="fab fa-whatsapp"></i>'
     + '</a>';
 
+  /* ====================  ANNONCE RENTRÉE — NOUVEAU LOCAL  ==================== */
+  var ANNOUNCE_ID = 'aaa-announce-socabeg-2026';
+  var ANNOUNCE_HTML = ''
+    + '<div id="' + ANNOUNCE_ID + '" style="position:relative;z-index:60;background:linear-gradient(90deg,#1e7a9a,#165b73);color:#fff;font-size:13px;font-weight:600;text-align:center;padding:10px 44px 10px 14px;">'
+    +   '<i class="fas fa-bullhorn" style="margin-right:8px;color:#fbbf24;"></i>'
+    +   '<span>Rentrée 2026 : le Tahfiz Internat &amp; le Programme Mixte (garçons) déménagent à la Cité SOCABEG. </span>'
+    +   '<a href="' + ASSET_PREFIX + 'programme-internat" style="color:#fbbf24;text-decoration:underline;font-weight:800;white-space:nowrap;">Voir le nouveau local</a>'
+    +   '<button id="aaa-announce-close" aria-label="Fermer" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;opacity:.8;font-size:15px;cursor:pointer;padding:6px;">'
+    +     '<i class="fas fa-times"></i>'
+    +   '</button>'
+    + '</div>';
+
   /* ====================  ROUTING  ==================== */
   function getActiveRoute() {
     var path = (window.location.pathname || '').toLowerCase();
@@ -363,6 +375,21 @@
   injectModernAssets();
 
   function inject() {
+    /* --- Bannière d'annonce (rentrée / nouveau local) --- */
+    try {
+      if (!document.getElementById(ANNOUNCE_ID) && !localStorage.getItem(ANNOUNCE_ID + '-dismissed')) {
+        var wrap = document.createElement('div');
+        wrap.innerHTML = ANNOUNCE_HTML;
+        var bar = wrap.firstChild;
+        document.body.insertBefore(bar, document.body.firstChild);
+        var closeBtn = document.getElementById('aaa-announce-close');
+        if (closeBtn) closeBtn.addEventListener('click', function () {
+          bar.remove();
+          try { localStorage.setItem(ANNOUNCE_ID + '-dismissed', '1'); } catch (e) {}
+        });
+      }
+    } catch (e) {}
+
     var nav = document.getElementById('aaa-navbar');
     if (nav) {
       nav.innerHTML = NAV_HTML;
