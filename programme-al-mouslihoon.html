@@ -7,7 +7,7 @@
    Programme pour Femme (Bientôt disponible) — DAARA Al Amine Academy
   </title>
   <meta content="Programme pour Femme (Al-Mouslihoon) : futur programme féminin (internat &amp; externat) de DAARA Al Amine Academy — Coran, Tajwid, Tawhid, Fiqh, Hadiths, Sira, langue arabe et développement personnel à la lumière du Coran et de la Sounna. Bientôt disponible." name="description"/>
-  <link rel="stylesheet" href="assets/css/tailwind.css?v=20260827"/>
+  <link rel="stylesheet" href="assets/css/tailwind.css?v=20260830"/>
   <!-- Preconnect to CDN origins — faster DNS + TLS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +18,32 @@
   <!-- Font Awesome — non-blocking -->
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260827"/>
+  <link rel="stylesheet" href="assets/css/site.css?v=20260830"/>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
   <style>
    body { font-family: 'Montserrat', sans-serif; }
    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
    .card-hover { transition: all 0.3s ease; }
    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
-   .mouslihoon-hero { background: radial-gradient(circle at top right, #165b73 0%, #0f4457 55%, #0a3040 100%); }
+   .mouslihoon-hero { background: radial-gradient(circle at top right, #165b73 0%, #0f4457 55%, #0a3040 100%); position: relative; overflow: hidden; }
+   .mouslihoon-hero::before {
+     content: '';
+     position: absolute;
+     top: -120px; right: -120px;
+     width: 420px; height: 420px;
+     border-radius: 9999px;
+     background: radial-gradient(circle, rgba(244,63,94,0.25), transparent 70%);
+     pointer-events: none;
+   }
+   .mouslihoon-hero::after {
+     content: '';
+     position: absolute;
+     bottom: -160px; left: -100px;
+     width: 380px; height: 380px;
+     border-radius: 9999px;
+     background: radial-gradient(circle, rgba(245,158,11,0.18), transparent 70%);
+     pointer-events: none;
+   }
   </style>
   <link href="https://alamineacademy.com/programme-al-mouslihoon" rel="canonical"/>
   <meta content="DAARA Al Amine Academy" property="og:title"/>
@@ -59,10 +77,10 @@
 
   <!-- Hero Section -->
   <section class="mouslihoon-hero py-20 md:py-28">
-   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
     <div class="inline-flex items-center gap-2 bg-secondary text-primary-dark font-extrabold text-xs uppercase tracking-wider px-4 py-2 rounded-full mb-6 reveal shadow-lg">
      <i class="fas fa-clock"></i>
-     <span>Bientôt disponible</span>
+     <span>Bientôt disponible — Rentrée 2026</span>
     </div>
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 reveal reveal-delay-2">
      Programme pour Femme <span class="block text-lg md:text-xl font-semibold text-white/80 mt-1">Al-Mouslihoon <span class="arabic-text align-middle">المُصلحون</span></span>
@@ -73,7 +91,7 @@
     <p class="text-lg text-white/80 max-w-2xl mx-auto mb-10 reveal reveal-delay-6">
      Un programme complet pour apprendre, se réformer et s'épanouir à la lumière du Coran et de la Sounna.
     </p>
-    <div class="flex flex-wrap justify-center gap-4 reveal reveal-delay-6">
+    <div class="flex flex-wrap justify-center gap-4 mb-12 reveal reveal-delay-6">
      <a class="inline-flex items-center justify-center rounded-full bg-secondary hover:bg-secondary-dark text-gray-900 px-8 py-4 text-lg font-bold shadow-xl transition" href="https://wa.me/221777743700?text=Assalamu%20alaikum%2C%20je%20souhaite%20être%20informé(e)%20du%20lancement%20du%20programme%20Al-Mouslihoon." rel="noopener" target="_blank">
       <i class="fab fa-whatsapp mr-2"></i>
       Être informé(e) du lancement
@@ -83,44 +101,90 @@
       Découvrir le programme
      </a>
     </div>
+
+    <!-- Bandeau infos clés — carte flottante -->
+    <div class="max-w-3xl mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 sm:p-6 reveal reveal-delay-6">
+     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 divide-x divide-white/15">
+      <div class="text-center px-1">
+       <div class="text-2xl font-extrabold text-secondary mb-1">100%</div>
+       <p class="text-[11px] sm:text-xs text-white/75 leading-tight">Réservé aux femmes</p>
+      </div>
+      <div class="text-center px-1">
+       <div class="text-2xl font-extrabold text-secondary mb-1">2</div>
+       <p class="text-[11px] sm:text-xs text-white/75 leading-tight">Formules : internat &amp; externat</p>
+      </div>
+      <div class="text-center px-1">
+       <div class="text-2xl font-extrabold text-secondary mb-1">CEFE</div>
+       <p class="text-[11px] sm:text-xs text-white/75 leading-tight">Certificat obtenu en arabe</p>
+      </div>
+      <div class="text-center px-1">
+       <div class="text-2xl font-extrabold text-secondary mb-1">18+</div>
+       <p class="text-[11px] sm:text-xs text-white/75 leading-tight">Âge minimum accepté</p>
+      </div>
+     </div>
+    </div>
    </div>
   </section>
 
   <!-- Infos clés -->
-  <section class="py-12 bg-white border-b">
+  <section class="py-16 bg-white border-b">
    <div class="container mx-auto px-4">
-    <div class="grid sm:grid-cols-4 gap-6 max-w-5xl mx-auto">
-     <div class="text-center reveal">
-      <div class="text-2xl font-bold text-primary mb-2"><i class="fas fa-venus"></i></div>
-      <p class="text-sm text-slate-600">Programme réservé aux femmes</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+     <div class="card-hover reveal bg-rose-50 border border-rose-100 rounded-2xl p-6 text-center">
+      <div class="w-12 h-12 mx-auto rounded-xl bg-rose-100 flex items-center justify-center mb-3">
+       <i class="fas fa-venus text-rose-600 text-xl"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-800">Programme réservé aux femmes</p>
      </div>
-     <div class="text-center reveal reveal-delay-2">
-      <div class="text-2xl font-bold text-primary mb-2"><i class="fas fa-house-user"></i></div>
-      <p class="text-sm text-slate-600">Internat &amp; Externat au choix</p>
+     <div class="card-hover reveal reveal-delay-2 bg-primary/5 border border-primary/10 rounded-2xl p-6 text-center">
+      <div class="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+       <i class="fas fa-house-user text-primary text-xl"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-800">Internat &amp; Externat au choix</p>
      </div>
-     <div class="text-center reveal reveal-delay-4">
-      <div class="text-2xl font-bold text-primary mb-2"><i class="fas fa-certificate"></i></div>
-      <p class="text-sm text-slate-600">Obtention du CEFE en arabe</p>
+     <div class="card-hover reveal reveal-delay-4 bg-amber-50 border border-amber-100 rounded-2xl p-6 text-center">
+      <div class="w-12 h-12 mx-auto rounded-xl bg-amber-100 flex items-center justify-center mb-3">
+       <i class="fas fa-certificate text-amber-600 text-xl"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-800">Obtention du CEFE en arabe</p>
      </div>
-     <div class="text-center reveal reveal-delay-6">
-      <div class="text-2xl font-bold text-primary mb-2"><i class="fas fa-user-check"></i></div>
-      <p class="text-sm text-slate-600">Âge accepté : à partir de 18 ans</p>
+     <div class="card-hover reveal reveal-delay-6 bg-emerald-50 border border-emerald-100 rounded-2xl p-6 text-center">
+      <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 flex items-center justify-center mb-3">
+       <i class="fas fa-user-check text-emerald-600 text-xl"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-800">Âge accepté : à partir de 18 ans</p>
      </div>
     </div>
    </div>
   </section>
 
   <!-- Répartition du programme -->
-  <section class="py-12 bg-slate-50 border-b">
+  <section class="py-16 bg-slate-50 border-b">
    <div class="container mx-auto px-4">
-    <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-6">
-     <div class="bg-white rounded-2xl shadow-lg p-6 text-center reveal soft-card">
-      <div class="text-4xl font-extrabold text-primary mb-2">60%</div>
-      <p class="font-semibold text-slate-800"><i class="fas fa-book-quran mr-2 text-primary"></i>Mémorisation du Coran</p>
+    <div class="max-w-3xl mx-auto">
+     <div class="text-center mb-8 reveal">
+      <h2 class="text-2xl font-bold text-slate-900 mb-2">Équilibre du programme</h2>
+      <p class="text-slate-500 text-sm">Une répartition pensée entre mémorisation et sciences islamiques</p>
      </div>
-     <div class="bg-white rounded-2xl shadow-lg p-6 text-center reveal reveal-delay-2 soft-card">
-      <div class="text-4xl font-extrabold text-primary mb-2">40%</div>
-      <p class="font-semibold text-slate-800"><i class="fas fa-mosque mr-2 text-primary"></i>Langue arabe &amp; sciences islamiques</p>
+     <div class="reveal reveal-delay-2 flex rounded-full overflow-hidden h-3 shadow-inner mb-6">
+      <div class="bg-primary" style="width:60%"></div>
+      <div class="bg-rose-400" style="width:40%"></div>
+     </div>
+     <div class="grid sm:grid-cols-2 gap-6">
+      <div class="bg-white rounded-2xl shadow-lg p-6 reveal reveal-delay-2 soft-card border-l-4 border-primary">
+       <div class="flex items-center gap-3 mb-1">
+        <span class="text-3xl font-extrabold text-primary">60%</span>
+        <i class="fas fa-book-quran text-primary text-xl"></i>
+       </div>
+       <p class="font-semibold text-slate-800">Mémorisation du Coran</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-6 reveal reveal-delay-4 soft-card border-l-4 border-rose-400">
+       <div class="flex items-center gap-3 mb-1">
+        <span class="text-3xl font-extrabold text-rose-500">40%</span>
+        <i class="fas fa-mosque text-rose-500 text-xl"></i>
+       </div>
+       <p class="font-semibold text-slate-800">Langue arabe &amp; sciences islamiques</p>
+      </div>
      </div>
     </div>
    </div>
@@ -148,49 +212,67 @@
       <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 reveal">
        Au programme
       </h2>
-      <p class="text-lg text-slate-700 leading-relaxed mb-8">
-       <span class="font-bold text-primary">Le Programme pour Femme (Al-Mouslihoon)</span> est le futur programme féminin de DAARA Al Amine Academy, disponible en internat comme en externat. Il propose un cursus complet mêlant mémorisation du Coran, sciences islamiques et développement personnel, dans un cadre pensé pour les filles.
+      <p class="text-lg text-slate-700 leading-relaxed mb-10">
+       <span class="font-bold text-primary">Le Programme pour Femme (Al-Mouslihoon)</span> est le futur programme féminin de DAARA Al Amine Academy, disponible en internat comme en externat. Il propose un cursus complet mêlant mémorisation du Coran, sciences islamiques et développement personnel, dans un cadre pensé pour les femmes.
       </p>
-      <div class="grid sm:grid-cols-2 gap-4">
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-book-quran text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Mémorisation du Coran</span>
+
+      <div class="grid md:grid-cols-2 gap-8">
+       <div>
+        <p class="text-xs font-extrabold uppercase tracking-wider text-primary mb-4 flex items-center gap-2"><i class="fas fa-book-quran"></i> Sciences religieuses</p>
+        <div class="space-y-3">
+         <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-book-quran text-primary text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Mémorisation du Coran</span>
+         </div>
+         <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-microphone-lines text-primary text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Tajwid</span>
+         </div>
+         <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-hand-holding-heart text-primary text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Tawhid</span>
+         </div>
+         <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-scale-balanced text-primary text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Fiqh</span>
+         </div>
+         <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-scroll text-primary text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Hadiths</span>
+         </div>
+         <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-mosque text-primary text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Sira</span>
+         </div>
+         <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0"><i class="fas fa-language text-primary text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Langue arabe</span>
+         </div>
+        </div>
        </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-microphone-lines text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Tajwid</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-hand-holding-heart text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Tawhid</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-scale-balanced text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Fiqh</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-scroll text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Hadiths</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-mosque text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Sira</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-language text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Langue arabe</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-heart text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Bon comportement</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-ring text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Science du mariage</span>
-       </div>
-       <div class="flex items-center gap-3 bg-primary/5 rounded-xl px-4 py-3">
-        <i class="fas fa-seedling text-primary"></i>
-        <span class="font-semibold text-slate-800 text-sm">Développement personnel (Coran &amp; Sounna)</span>
+
+       <div>
+        <p class="text-xs font-extrabold uppercase tracking-wider text-rose-500 mb-4 flex items-center gap-2"><i class="fas fa-seedling"></i> Développement personnel</p>
+        <div class="space-y-3">
+         <div class="flex items-center gap-3 bg-rose-50 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0"><i class="fas fa-heart text-rose-500 text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Bon comportement</span>
+         </div>
+         <div class="flex items-center gap-3 bg-rose-50 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0"><i class="fas fa-ring text-rose-500 text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Science du mariage</span>
+         </div>
+         <div class="flex items-center gap-3 bg-rose-50 rounded-xl px-4 py-3">
+          <span class="w-8 h-8 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0"><i class="fas fa-seedling text-rose-500 text-sm"></i></span>
+          <span class="font-semibold text-slate-800 text-sm">Développement personnel (Coran &amp; Sounna)</span>
+         </div>
+        </div>
+
+        <div class="mt-6 bg-slate-900 text-white rounded-2xl p-5">
+         <p class="text-xs uppercase tracking-widest text-white/60 font-bold mb-2">Diplôme visé</p>
+         <p class="font-bold text-lg mb-1"><i class="fas fa-certificate text-secondary mr-2"></i>CEFE en arabe</p>
+         <p class="text-sm text-white/70">Délivré à l'issue du cursus, en complément de la mémorisation du Coran.</p>
+        </div>
        </div>
       </div>
      </div>
@@ -211,8 +293,8 @@
 
   <div id="aaa-footer"></div>
   <script src="translations.js?v=20260729"></script>
-  <script src="lang.js?v=20260827"></script>
-  <script src="assets/js/site-shell.js?v=20260827"></script>
+  <script src="lang.js?v=20260830"></script>
+  <script src="assets/js/site-shell.js?v=20260830"></script>
 
   <!-- STICKY MOBILE CTA -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">

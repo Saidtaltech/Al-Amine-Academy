@@ -24,13 +24,21 @@ Les filles internes du Programme Mixte vivent et suivent leurs cours de Coran à
 - Le **Tahfiz reste un programme internat uniquement** — il n'existe pas de formule externat pour le Tahfiz.
 - Le **Programme Mixte**, lui, propose désormais une option **externat**, réservée aux **cours académiques (8h–13h)** — sans les cours de Coran, qui restent propres au programme interne.
 
-## 4. Tarifs
+## 4. Tarifs — scolarité et frais annexes, désormais bien séparés
 
-| Programme | Formule | Tarif |
-|---|---|---|
-| **Tahfiz** | Internat | **110 000 FCFA / mois** |
-| **Programme Mixte** | Internat (Coran + Académique) | **125 000 FCFA / mois** |
-| **Programme Mixte** | Externat (Académique uniquement) | Droits d'inscription : **95 000 FCFA**<br>Scolarité : **45 000 FCFA / mois**<br>Cantine : **20 000 FCFA / mois** |
+Pour que chaque famille sache précisément ce qu'elle doit régler, nous distinguons maintenant **deux éléments obligatoires** dans chaque tarif mensuel : la **scolarité**, et des **frais annexes** (goûter et/ou linge selon le programme).
+
+| Programme | Scolarité | Frais annexes obligatoires | Total mensuel |
+|---|---|---|---|
+| **Tahfiz Internat** | 100 000 FCFA | 10 000 FCFA (5 000 goûter + 5 000 linge) | **110 000 FCFA / mois** |
+| **Programme Mixte Internat** | 115 000 FCFA | 5 000 FCFA (linge — le goûter est offert) | **120 000 FCFA / mois** |
+| **Programme Mixte Externat** | 45 000 FCFA | 20 000 FCFA (cantine) | **65 000 FCFA / mois** |
+
+Pour le Programme Mixte, le goûter est offert en guise d'allègement — seul le linge reste un frais obligatoire en plus de la scolarité. Pour le Tahfiz, le goûter et le linge sont tous deux des frais obligatoires.
+
+**Frais d'inscription** (à régler une fois, en plus du tarif mensuel) :
+- **Réinscription** (élève déjà scolarisé l'année précédente) : **55 000 FCFA**
+- **Nouvelle inscription** (nouvel élève) : **95 000 FCFA**
 
 ## 5. Option Taekwondo — précision importante
 

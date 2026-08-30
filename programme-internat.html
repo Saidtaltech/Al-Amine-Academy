@@ -75,8 +75,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260827"/>
-<link rel="stylesheet" href="assets/css/tailwind.css?v=20260827"/>
+  <link rel="stylesheet" href="assets/css/site.css?v=20260830"/>
+<link rel="stylesheet" href="assets/css/tailwind.css?v=20260830"/>
   
 </head>
 
@@ -137,23 +137,30 @@
           <!-- Carte tarif -->
           <div class="bg-white/95 backdrop-blur rounded-3xl p-7 shadow-2xl border border-white/60">
             <p class="text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-1">Tarif mensuel</p>
-            <div class="flex items-baseline gap-2 mb-1">
+            <div class="flex items-baseline gap-2 mb-3">
               <span class="text-5xl font-extrabold text-primary-dark tabular">110 000</span>
               <span class="text-base font-semibold text-slate-500">FCFA</span>
             </div>
-            <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wide mb-5">
-              <i class="fas fa-circle-check"></i> Tout inclus
-            </span>
+
+            <div class="rounded-xl border border-slate-200 divide-y divide-slate-200 overflow-hidden mb-2">
+              <div class="flex items-center justify-between px-3 py-2 bg-slate-50">
+                <span class="text-xs text-slate-600">Scolarité</span>
+                <span class="text-sm font-extrabold text-slate-800">100 000 F</span>
+              </div>
+              <div class="flex items-center justify-between px-3 py-2 bg-amber-50">
+                <span class="text-xs text-slate-600">Frais annexes <span class="text-[9px] text-amber-700 font-extrabold uppercase tracking-wide align-middle">obligatoires</span></span>
+                <span class="text-sm font-extrabold text-slate-800">10 000 F</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-500 mb-4">Frais annexes = goûter (5 000 F) + linge (5 000 F). Ces deux frais sont désormais obligatoires, en plus de la scolarité.</p>
 
             <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
               <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="programme_internat.housing_note">Hébergement &amp; repas inclus</span></li>
-              <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="fiche.frais_incl_gouter">Goûter quotidien</span></li>
-              <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="fiche.frais_incl_linge">Entretien du linge et de l'uniforme</span></li>
               <li class="flex items-center gap-2.5"><i class="fas fa-check text-emerald-600 w-4"></i><span data-i18n="programme_internat.price_activities">Sport + activités inclus</span></li>
             </ul>
 
             <div class="border-t border-slate-200 pt-4 mb-5 space-y-1">
-              <p class="text-xs text-slate-500" data-i18n="programme_internat.price_registration">Frais d'inscription : 95 000 FCFA (une fois)</p>
+              <p class="text-xs text-slate-500">Inscription : <strong>55 000 FCFA</strong> (réinscription) ou <strong>95 000 FCFA</strong> (nouvelle inscription)</p>
               <p class="text-xs text-slate-500" data-i18n="programme_internat.price_age">Âge : de 6 à 12 ans</p>
             </div>
 
@@ -213,7 +220,7 @@
           <a href="https://maps.app.goo.gl/qd3m2HHquPa8QXCm7" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline mb-2">
             <i class="fas fa-location-dot"></i> Voir l'itinéraire vers la Cité SOCABEG
           </a>
-          <p class="text-xs text-slate-500 mt-2">Tarif inchangé : 110 000 FCFA/mois, comme indiqué ci-dessus.</p>
+          <p class="text-xs text-slate-500 mt-2">Tarif inchangé : 110 000 FCFA/mois (scolarité 100 000 F + frais annexes obligatoires 10 000 F), comme indiqué ci-dessus.</p>
         </div>
       </div>
     </div>
@@ -493,7 +500,7 @@
       <p class="text-white/85 text-lg mb-4" data-i18n="programme_internat.cta_subtitle">Rejoignez les familles qui ont choisi l'excellence pour leurs enfants.</p>
       <p class="text-white/70 mb-8">
         <span class="text-2xl font-extrabold text-secondary tabular">110 000 FCFA</span>
-        <span class="text-sm"> / mois — tout inclus</span>
+        <span class="text-sm"> / mois — scolarité 100 000 F + frais annexes obligatoires 10 000 F (goûter + linge)</span>
       </p>
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <a href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-pen-fancy"></i>S'inscrire en ligne</a>
@@ -509,7 +516,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>if (typeof AOS !== 'undefined') AOS.init({ duration: 700, easing: 'ease-out-quart', once: true, offset: 80 });</script>
   <script src="translations.js?v=20260826"></script>
-  <script src="lang.js?v=20260827"></script>
-  <script src="assets/js/site-shell.js?v=20260827" defer></script>
+  <script src="lang.js?v=20260830"></script>
+  <script src="assets/js/site-shell.js?v=20260830" defer></script>
 </body>
 </html>

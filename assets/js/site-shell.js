@@ -141,10 +141,10 @@
     +       '</a>'
     +     '</nav>'
 
-    /* Séparateur Programmes */
+    /* Séparateur Programmes enfants */
     +     '<div style="height:1px;background:#f1f5f9;margin:8px 0 12px;"></div>'
-    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Programmes</p>'
-    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Programmes enfants</p>'
+    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:16px;">'
     /* Tahfiz */
     +       '<a href="' + ASSET_PREFIX + 'programme-internat" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-book-open" style="color:#1e7a9a;font-size:14px;"></i></span>'
@@ -153,12 +153,7 @@
     /* Mixte */
     +       '<a href="' + ASSET_PREFIX + 'programme-mixte" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-balance-scale" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Programme Mixte</span><span style="font-size:11px;color:#94a3b8;">Internat · Coran + Académique</span></span>'
-    +       '</a>'
-    /* Fiche de Renseignements */
-    +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements" data-route="fiche" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
-    +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-file-alt" style="color:#7c3aed;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Fiche de Renseignements</span><span style="font-size:11px;color:#94a3b8;">Tarifs, dossier &amp; programmes</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Programme Mixte</span><span style="font-size:11px;color:#94a3b8;">Internat &amp; Externat · Coran + Académique</span></span>'
     +       '</a>'
     /* En ligne */
     +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
@@ -170,25 +165,40 @@
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-gift" style="color:#d97706;font-size:14px;"></i></span>'
     +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Cours Gratuits</span><span style="font-size:11px;color:#94a3b8;">Accès libre pour tous</span></span>'
     +       '</a>'
-    /* Al-Mouslihoon — bientôt */
-    +       '<a href="' + ASSET_PREFIX + 'programme-al-mouslihoon" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
-    +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fce7f3;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-venus" style="color:#db2777;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;">Programme pour Femme <span style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;background:#fef3c7;color:#b45309;font-weight:800;padding:2px 7px;border-radius:9999px;">Bientôt</span></span><span style="font-size:11px;color:#94a3b8;">Programme féminin · Internat &amp; Externat</span></span>'
-    +       '</a>'
     /* Camp — mis en avant */
     +       '<a href="' + ASSET_PREFIX + 'camp-vacances" data-route="programs" class="aaa-dlink camp-highlight" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;background:linear-gradient(135deg,#fff7ed,#fefce8);border:1px solid #fed7aa;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fde68a;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-umbrella-beach" style="color:#b45309;font-size:14px;"></i></span>'
     +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Camp de Vacances</span><span style="font-size:11px;color:#b45309;font-weight:600;">Été 2026 · Dakar &amp; Petite Côte</span></span>'
+    +       '</a>'
+    +     '</nav>'
+
+    /* Séparateur Autres programmes */
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Autres programmes</p>'
+    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:16px;">'
+    /* Al-Mouslihoon — bientôt */
+    +       '<a href="' + ASSET_PREFIX + 'programme-al-mouslihoon" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
+    +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fce7f3;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-venus" style="color:#db2777;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;">Programme pour Femme <span style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;background:#fef3c7;color:#b45309;font-weight:800;padding:2px 7px;border-radius:9999px;">Bientôt</span></span><span style="font-size:11px;color:#94a3b8;">Al-Mouslihoon · Internat &amp; Externat</span></span>'
     +       '</a>'
     /* Conférences */
     +       '<a href="' + ASSET_PREFIX + 'conferences" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-chalkboard-teacher" style="color:#1e7a9a;font-size:14px;"></i></span>'
     +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Formations &amp; Conférences</span><span style="font-size:11px;color:#94a3b8;">Ateliers &amp; séminaires</span></span>'
     +       '</a>'
-    /* Al Mouslihoon */
+    /* Al Mouslihoon — aides sociales */
     +       '<a href="' + ASSET_PREFIX + 'aides-sociales" data-route="programs" class="aaa-dlink social-link" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#ccfbf1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-hand-holding-heart" style="color:#0f766e;font-size:14px;"></i></span>'
     +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Projet Al Mouslihoon</span><span style="font-size:11px;color:#94a3b8;">Aides sociales &amp; humanitaires</span></span>'
+    +       '</a>'
+    +     '</nav>'
+
+    /* Séparateur Ressources */
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Ressources</p>'
+    +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
+    /* Fiche de Renseignements */
+    +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements" data-route="fiche" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
+    +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-file-alt" style="color:#7c3aed;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Fiche de Renseignements</span><span style="font-size:11px;color:#94a3b8;">Tarifs, dossier &amp; programmes</span></span>'
     +       '</a>'
     +     '</nav>'
 
@@ -243,6 +253,9 @@
     + '#aaa-mobile-menu.drawer-open .aaa-dlink:nth-child(11) { animation-delay: 340ms; }'
     + '#aaa-mobile-menu.drawer-open .aaa-dlink:nth-child(12) { animation-delay: 370ms; }'
     + '#aaa-mobile-menu.drawer-open .aaa-dlink:nth-child(13) { animation-delay: 400ms; }'
+    + '#aaa-mobile-menu.drawer-open .aaa-dlink:nth-child(14) { animation-delay: 430ms; }'
+    + '#aaa-mobile-menu.drawer-open .aaa-dlink:nth-child(15) { animation-delay: 460ms; }'
+    + '#aaa-mobile-menu.drawer-open .aaa-dlink:nth-child(n+16) { animation-delay: 490ms; }'
 
     /* Active route highlight */
     + '.aaa-dlink.active { background:#e8f4f8!important; }'
