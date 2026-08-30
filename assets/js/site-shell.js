@@ -332,6 +332,7 @@
     +         '<ul class="space-y-3 text-sm">'
     +           '<li class="flex items-start gap-3"><i class="fas fa-location-dot text-secondary mt-0.5"></i><span data-i18n="contact.address">Cité des Magistrats, Derrière Kër Yoff, Dakar</span></li>'
     +           '<li class="flex items-start gap-3"><i class="fas fa-location-dot text-secondary mt-0.5"></i><span>Cité SOCABEG, Dakar <span style="font-size:9px;text-transform:uppercase;background:#fef3c7;color:#b45309;font-weight:800;padding:1px 6px;border-radius:9999px;margin-left:4px;">Nouveau</span></span></li>'
+    +           '<li class="flex items-start gap-3"><i class="fas fa-location-dot text-secondary mt-0.5"></i><span>Villa de la Petite Côte, Ngérigne, Mbour <span style="font-size:9px;text-transform:uppercase;background:#fef3c7;color:#b45309;font-weight:800;padding:1px 6px;border-radius:9999px;margin-left:4px;">Nouveau</span></span></li>'
     +           '<li class="flex items-center gap-3"><i class="fas fa-phone text-secondary"></i><a href="tel:+221777743700" class="tabular">+221 77 774 37 00</a></li>'
     +           '<li class="flex items-center gap-3"><i class="fas fa-envelope text-secondary"></i><a href="mailto:contact@alamineacademy.com">contact@alamineacademy.com</a></li>'
     +         '</ul>'
