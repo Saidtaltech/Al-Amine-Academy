@@ -137,7 +137,7 @@ Le Tahfiz et le Programme Mixte restent ouverts aux garçons **et** aux filles. 
 - **Aucun prérequis** — tous niveaux acceptés.
 - **5 niveaux progressifs** : Initial → Irtiqâ' (ارتقاء) → Tazkiya (تزكية) → Itqân (إتقان) → Ijâza (إجازة, niveau certification).
 - **Formules et tarifs :**
-  - **Collectif** : 10 000 FCFA/mois — max 12 apprenants, tous niveaux, cours en direct les samedis & dimanches.
+  - **Collectif** : 12 500 FCFA/mois (facturation mensuelle, 5 séances/mois — n'est plus facturé par cycle de 4 séances) — max 12 apprenants, tous niveaux, cours en direct les samedis & dimanches.
   - **Individuel — Option 1 (Lecture du Coran)** :
     - 3h/mois (45 min × 4 séances) : 25 000 FCFA
     - 5h/mois (1h × 5 séances) : 35 000 FCFA
@@ -246,7 +246,7 @@ R : Programme A (Cité des Magistrats, Dakar, filles et garçons) : 100 000 F/mo
 R : Téléphones personnels interdits ; appels encadrés les dimanches de 12h à 19h, 20 minutes maximum, via les téléphones de l'équipe.
 
 **Q : Quels sont les tarifs des cours en ligne ?**
-R : Collectif 10 000 F/mois (max 12 apprenants). Individuel à partir de 25 000 F/mois (3h) jusqu'à 50 000 F+/mois (6h, formation complète). Aucun frais d'inscription. Paiement via Wave, Orange Money ou virement.
+R : Collectif 12 500 F/mois, facturation mensuelle de 5 séances (max 12 apprenants). Individuel à partir de 25 000 F/mois (3h) jusqu'à 50 000 F+/mois (6h, formation complète). Aucun frais d'inscription. Paiement via Wave, Orange Money ou virement.
 
 **Q : Les cours gratuits sont-ils vraiment gratuits ?**
 R : Oui, 100 % gratuits (Tafsir du Coran, Hayatu as-Sahaba, etc.), en Wolof, dans des mosquées de Dakar ou à l'Institut Al Amine Academy (Liberté 6 Extension).
