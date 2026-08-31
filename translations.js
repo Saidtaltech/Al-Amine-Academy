@@ -14,7 +14,19 @@ window.AAA_TRANSLATIONS = {
       "about": "À propos", "contact": "Contact", "blog": "Blog",
       "testimonials": "Témoignages", "admission": "Renseignements",
       "conferences": "Conférences", "register": "S'inscrire",
-      "camp": "Camp de Vacances", "camp_subtitle": "Été 2026", "fiche": "Fiche" },
+      "camp": "Camp de Vacances", "camp_subtitle": "Été 2026", "fiche": "Fiche",
+      "section_kids": "Programmes enfants", "section_other": "Autres programmes",
+      "tahfiz_desc": "Mémorisation complète du Coran",
+      "camp_subtitle_full": "Été 2026 &middot; Dakar &amp; Petite Côte",
+      "women_program": "Programme pour Femme", "women_subtitle": "Programme féminin &middot; Internat &amp; Externat",
+      "soon": "Bientôt", "fiche_subtitle": "Tarifs, dossier &amp; programmes",
+      "al_mouslihoon": "Projet Al Mouslihoon", "al_mouslihoon_subtitle": "Aides sociales &amp; humanitaires",
+      "rentree_badge": "Rentrée 2026",
+      "rentree_text": "Internat garçons à la Cité SOCABEG, internat filles à la Cité des Magistrats" },
+    "announce": {
+      "text": "Rentrée 2026 : internat garçons désormais à la Cité SOCABEG, internat filles à la Cité des Magistrats. ",
+      "cta": "Voir le nouveau local"
+    },
     "nav": {
       "problems": "Nos défis", "approach": "Notre approche",
       "programs": "Programmes", "testimonials": "Témoignages",
@@ -819,7 +831,19 @@ window.AAA_TRANSLATIONS = {
       "about": "About", "contact": "Contact", "blog": "Blog",
       "testimonials": "Testimonials", "admission": "Information",
       "conferences": "Conferences", "register": "Register",
-      "camp": "Summer Camp", "camp_subtitle": "Summer 2026", "fiche": "Information Sheet" },
+      "camp": "Summer Camp", "camp_subtitle": "Summer 2026", "fiche": "Information Sheet",
+      "section_kids": "Kids Programs", "section_other": "Other Programs",
+      "tahfiz_desc": "Complete memorization of the Quran",
+      "camp_subtitle_full": "Summer 2026 &middot; Dakar &amp; Petite Côte",
+      "women_program": "Women's Program", "women_subtitle": "Women's program &middot; Boarding &amp; Day",
+      "soon": "Coming Soon", "fiche_subtitle": "Fees, admission file &amp; programs",
+      "al_mouslihoon": "Al Mouslihoon Project", "al_mouslihoon_subtitle": "Social &amp; humanitarian aid",
+      "rentree_badge": "2026 Enrollment",
+      "rentree_text": "Boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats" },
+    "announce": {
+      "text": "2026 enrollment: boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats. ",
+      "cta": "See the new location"
+    },
     "nav": {
       "problems": "The challenges", "approach": "Our approach",
       "programs": "Programs", "testimonials": "Testimonials",
@@ -1603,7 +1627,19 @@ window.AAA_TRANSLATIONS = {
       "about": "من نحن", "contact": "اتصل بنا", "blog": "المدونة",
       "testimonials": "الشهادات", "admission": "معلومات",
       "conferences": "المحاضرات", "register": "سجّل الآن",
-      "camp": "مخيم الصيف", "camp_subtitle": "صيف 2026", "fiche": "بطاقة المعلومات" },
+      "camp": "مخيم الصيف", "camp_subtitle": "صيف 2026", "fiche": "بطاقة المعلومات",
+      "section_kids": "برامج الأطفال", "section_other": "برامج أخرى",
+      "tahfiz_desc": "الحفظ الكامل للقرآن الكريم",
+      "camp_subtitle_full": "صيف 2026 &middot; دكار والساحل الصغير",
+      "women_program": "برنامج النساء", "women_subtitle": "برنامج نسائي &middot; داخلي وخارجي",
+      "soon": "قريباً", "fiche_subtitle": "الرسوم والملف والبرامج",
+      "al_mouslihoon": "مشروع المصلحون", "al_mouslihoon_subtitle": "مساعدات اجتماعية وإنسانية",
+      "rentree_badge": "الدخول المدرسي 2026",
+      "rentree_text": "داخلية البنين الآن في سيتي سوكابيغ، وداخلية البنات في سيتي دي ماجيستراس" },
+    "announce": {
+      "text": "الدخول المدرسي 2026: داخلية البنين الآن في سيتي سوكابيغ، وداخلية البنات في سيتي دي ماجيستراس. ",
+      "cta": "شاهد الموقع الجديد"
+    },
     "nav": {
       "problems": "تحديات الأهالي", "approach": "منهجنا",
       "programs": "البرامج", "testimonials": "الشهادات",
@@ -2391,7 +2427,19 @@ window.AAA_TRANSLATIONS = {
       "about": "Sobre nosotros", "contact": "Contacto", "blog": "Blog",
       "testimonials": "Testimonios", "admission": "Información",
       "conferences": "Conferencias", "register": "Inscribirse",
-      "camp": "Campamento de Verano", "camp_subtitle": "Verano 2026", "fiche": "Ficha" },
+      "camp": "Campamento de Verano", "camp_subtitle": "Verano 2026", "fiche": "Ficha",
+      "section_kids": "Programas para niños", "section_other": "Otros programas",
+      "tahfiz_desc": "Memorización completa del Corán",
+      "camp_subtitle_full": "Verano 2026 &middot; Dakar y Petite Côte",
+      "women_program": "Programa para Mujeres", "women_subtitle": "Programa femenino &middot; Internado y Externado",
+      "soon": "Próximamente", "fiche_subtitle": "Tarifas, expediente &amp; programas",
+      "al_mouslihoon": "Proyecto Al Mouslihoon", "al_mouslihoon_subtitle": "Ayuda social &amp; humanitaria",
+      "rentree_badge": "Curso 2026",
+      "rentree_text": "Internado de niños ahora en Cité SOCABEG, el de niñas en Cité des Magistrats" },
+    "announce": {
+      "text": "Curso 2026: el internado de niños está ahora en Cité SOCABEG, el de niñas en Cité des Magistrats. ",
+      "cta": "Ver el nuevo local"
+    },
     "nav": {
       "problems": "Los desafíos", "approach": "Nuestro enfoque",
       "programs": "Programas", "testimonials": "Testimonios",

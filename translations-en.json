@@ -20,7 +20,23 @@
     "register": "Register",
     "camp": "Summer Camp",
     "camp_subtitle": "Summer 2026",
-    "fiche": "Information Sheet"
+    "fiche": "Information Sheet",
+    "section_kids": "Kids Programs",
+    "section_other": "Other Programs",
+    "tahfiz_desc": "Complete memorization of the Quran",
+    "camp_subtitle_full": "Summer 2026 &middot; Dakar &amp; Petite Côte",
+    "women_program": "Women's Program",
+    "women_subtitle": "Women's program &middot; Boarding &amp; Day",
+    "soon": "Coming Soon",
+    "fiche_subtitle": "Fees, admission file &amp; programs",
+    "al_mouslihoon": "Al Mouslihoon Project",
+    "al_mouslihoon_subtitle": "Social &amp; humanitarian aid",
+    "rentree_badge": "2026 Enrollment",
+    "rentree_text": "Boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats"
+  },
+  "announce": {
+    "text": "2026 enrollment: boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats. ",
+    "cta": "See the new location"
   },
   "nav": {
     "problems": "The challenges",

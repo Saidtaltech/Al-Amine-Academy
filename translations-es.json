@@ -20,7 +20,23 @@
     "register": "Inscribirse",
     "camp": "Campamento de Verano",
     "camp_subtitle": "Verano 2026",
-    "fiche": "Ficha"
+    "fiche": "Ficha",
+    "section_kids": "Programas para niños",
+    "section_other": "Otros programas",
+    "tahfiz_desc": "Memorización completa del Corán",
+    "camp_subtitle_full": "Verano 2026 &middot; Dakar y Petite Côte",
+    "women_program": "Programa para Mujeres",
+    "women_subtitle": "Programa femenino &middot; Internado y Externado",
+    "soon": "Próximamente",
+    "fiche_subtitle": "Tarifas, expediente &amp; programas",
+    "al_mouslihoon": "Proyecto Al Mouslihoon",
+    "al_mouslihoon_subtitle": "Ayuda social &amp; humanitaria",
+    "rentree_badge": "Curso 2026",
+    "rentree_text": "Internado de niños ahora en Cité SOCABEG, el de niñas en Cité des Magistrats"
+  },
+  "announce": {
+    "text": "Curso 2026: el internado de niños está ahora en Cité SOCABEG, el de niñas en Cité des Magistrats. ",
+    "cta": "Ver el nuevo local"
   },
   "nav": {
     "problems": "Los desafíos",

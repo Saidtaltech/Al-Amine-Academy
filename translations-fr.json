@@ -20,7 +20,23 @@
     "register": "S'inscrire",
     "camp": "Camp de Vacances",
     "camp_subtitle": "Été 2026",
-    "fiche": "Fiche"
+    "fiche": "Fiche",
+    "section_kids": "Programmes enfants",
+    "section_other": "Autres programmes",
+    "tahfiz_desc": "Mémorisation complète du Coran",
+    "camp_subtitle_full": "Été 2026 &middot; Dakar &amp; Petite Côte",
+    "women_program": "Programme pour Femme",
+    "women_subtitle": "Programme féminin &middot; Internat &amp; Externat",
+    "soon": "Bientôt",
+    "fiche_subtitle": "Tarifs, dossier &amp; programmes",
+    "al_mouslihoon": "Projet Al Mouslihoon",
+    "al_mouslihoon_subtitle": "Aides sociales &amp; humanitaires",
+    "rentree_badge": "Rentrée 2026",
+    "rentree_text": "Internat garçons à la Cité SOCABEG, internat filles à la Cité des Magistrats"
+  },
+  "announce": {
+    "text": "Rentrée 2026 : internat garçons désormais à la Cité SOCABEG, internat filles à la Cité des Magistrats. ",
+    "cta": "Voir le nouveau local"
   },
   "nav": {
     "problems": "Nos défis",
