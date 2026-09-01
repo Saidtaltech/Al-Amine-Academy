@@ -36,6 +36,13 @@
 
 html { scroll-behavior: smooth; }
 
+html, body {
+  /* Empêche le tiroir de menu mobile (fixed + transform, hors écran)
+     de générer un débordement horizontal / scroll fantôme sur mobile. */
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: 'Montserrat', system-ui, sans-serif;
   font-feature-settings: 'kern' 1, 'liga' 1;
