@@ -36,17 +36,17 @@
 
     /* Colonne gauche — Programmes enfants */
     +             '<div style="padding:18px 10px 18px 18px;">'
-    +               '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:800;margin:0 0 8px 10px;" data-i18n="menu.section_kids">Programmes enfants</p>'
+    +               '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5b6a7d;font-weight:800;margin:0 0 8px 10px;" data-i18n="menu.section_kids">Programmes enfants</p>'
     +               '<a href="' + ASSET_PREFIX + 'programme-internat"          class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-primary/5 transition-colors"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-book-open text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.tahfiz">Tahfiz Internat</p><p class="text-xs text-slate-500" data-i18n="menu.tahfiz_desc">Mémorisation complète du Coran</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'programme-mixte"             class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-primary/5 transition-colors"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-balance-scale text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.mixed">Programme Mixte</p><p class="text-xs text-slate-500">Internat · Coran + Académique</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne"    class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-primary/5 transition-colors"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-laptop text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.online">Cours en Ligne</p><p class="text-xs text-slate-500">Apprenez de chez vous</p></div></a>'
-    +               '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits"    class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-secondary/5 transition-colors"><div class="w-9 h-9 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-gift text-secondary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-slate-500">Accès libre pour tous</p></div></a>'
+    +               '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits"    class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-secondary/5 transition-colors"><div class="w-9 h-9 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-gift text-amber-600 text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.free">Cours Gratuits</p><p class="text-xs text-slate-500">Accès libre pour tous</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'camp-vacances"               class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl transition-colors" style="background:linear-gradient(135deg,#fff7ed,#fefce8);border:1px solid #fed7aa;margin-top:4px;"><div class="w-9 h-9 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-umbrella-beach text-secondary-dark text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="menu.camp">Camp de Vacances</p><p class="text-xs text-amber-700 font-semibold" data-i18n-html="menu.camp_subtitle_full">Été 2026 &middot; Dakar &amp; Petite Côte</p></div></a>'
     +             '</div>'
 
     /* Colonne droite — Femmes / formations / social + local */
     +             '<div style="padding:18px 18px 18px 10px;border-left:1px solid #f1f5f9;">'
-    +               '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:800;margin:0 0 8px 10px;" data-i18n="menu.section_other">Autres programmes</p>'
+    +               '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5b6a7d;font-weight:800;margin:0 0 8px 10px;" data-i18n="menu.section_other">Autres programmes</p>'
     +               '<a href="' + ASSET_PREFIX + 'programme-al-mouslihoon"     class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-pink-50 transition-colors"><div class="w-9 h-9 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-venus text-pink-600 text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm flex items-center gap-2"><span data-i18n="menu.women_program">Programme pour Femme</span> <span data-i18n="menu.soon" style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;background:#fef3c7;color:#b45309;font-weight:800;padding:2px 7px;border-radius:9999px;">Bientôt</span></p><p class="text-xs text-slate-500" data-i18n-html="menu.women_subtitle">Programme féminin &middot; Internat &amp; Externat</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'fiche-renseignements"        class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-purple-50 transition-colors"><div class="w-9 h-9 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-file-alt text-purple-600 text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="menu.fiche">Fiche de Renseignements</p><p class="text-xs text-slate-500" data-i18n-html="menu.fiche_subtitle">Tarifs, dossier &amp; programmes</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'conferences"                 class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-primary/5 transition-colors"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-chalkboard-teacher text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.conferences">Formations &amp; Conférences</p><p class="text-xs text-slate-500" data-i18n="programs.conferences_subtitle">Ateliers, séminaires &amp; formations</p></div></a>'
@@ -72,7 +72,7 @@
     +           '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100 arabic-text text-sm sm:text-base" title="العربية">ع</a>'
     +           '<a href="#" data-lang-switch="es" onclick="switchLanguage(\'es\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100" title="Español">ES</a>'
     +         '</div>'
-    +         '<a href="tel:+221777743700" class="hidden lg:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary hover:bg-secondary-dark text-white text-sm font-semibold transition-colors">'
+    +         '<a href="tel:+221777743700" class="hidden lg:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary hover:bg-secondary-dark text-slate-900 text-sm font-semibold transition-colors">'
     +           '<i class="fas fa-phone"></i><span>+221 77 774 37 00</span>'
     +         '</a>'
     +         '<button id="aaa-mobile-btn" aria-label="Menu" class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-slate-700 hover:bg-slate-100 transition-colors">'
@@ -112,93 +112,93 @@
     /* Accueil */
     +       '<a href="' + ASSET_PREFIX + 'index" data-route="index" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-home" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Accueil</span><span style="font-size:11px;color:#94a3b8;">Page principale</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Accueil</span><span style="font-size:11px;color:#5b6a7d;">Page principale</span></span>'
     +       '</a>'
     /* À Propos */
     +       '<a href="' + ASSET_PREFIX + 'a-propos" data-route="about" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-mosque" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">À Propos</span><span style="font-size:11px;color:#94a3b8;">Notre histoire &amp; valeurs</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">À Propos</span><span style="font-size:11px;color:#5b6a7d;">Notre histoire &amp; valeurs</span></span>'
     +       '</a>'
     /* Galerie */
     +       '<a href="' + ASSET_PREFIX + 'galerie" data-route="gallery" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-images" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Galerie</span><span style="font-size:11px;color:#94a3b8;">Photos du daara</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Galerie</span><span style="font-size:11px;color:#5b6a7d;">Photos du daara</span></span>'
     +       '</a>'
     /* Témoignages */
     +       '<a href="' + ASSET_PREFIX + 'temoignages" data-route="testimonials" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-star" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Témoignages</span><span style="font-size:11px;color:#94a3b8;">Avis des familles</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Témoignages</span><span style="font-size:11px;color:#5b6a7d;">Avis des familles</span></span>'
     +       '</a>'
     /* Blog */
     +       '<a href="' + ASSET_PREFIX + 'blog" data-route="blog" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-pen-nib" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Blog</span><span style="font-size:11px;color:#94a3b8;">Guides &amp; articles</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Blog</span><span style="font-size:11px;color:#5b6a7d;">Guides &amp; articles</span></span>'
     +       '</a>'
     /* Contact */
     +       '<a href="' + ASSET_PREFIX + 'contact" data-route="contact" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-envelope" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Contact</span><span style="font-size:11px;color:#94a3b8;">Nous écrire ou appeler</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Contact</span><span style="font-size:11px;color:#5b6a7d;">Nous écrire ou appeler</span></span>'
     +       '</a>'
     +     '</nav>'
 
     /* Séparateur Programmes enfants */
     +     '<div style="height:1px;background:#f1f5f9;margin:8px 0 12px;"></div>'
-    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Programmes enfants</p>'
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5b6a7d;font-weight:700;margin:0 0 8px 4px;">Programmes enfants</p>'
     +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:16px;">'
     /* Tahfiz */
     +       '<a href="' + ASSET_PREFIX + 'programme-internat" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-book-open" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Tahfiz Internat</span><span style="font-size:11px;color:#94a3b8;">Mémorisation complète du Coran</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Tahfiz Internat</span><span style="font-size:11px;color:#5b6a7d;">Mémorisation complète du Coran</span></span>'
     +       '</a>'
     /* Mixte */
     +       '<a href="' + ASSET_PREFIX + 'programme-mixte" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-balance-scale" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Programme Mixte</span><span style="font-size:11px;color:#94a3b8;">Internat &amp; Externat · Coran + Académique</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Programme Mixte</span><span style="font-size:11px;color:#5b6a7d;">Internat &amp; Externat · Coran + Académique</span></span>'
     +       '</a>'
     /* En ligne */
     +       '<a href="' + ASSET_PREFIX + 'programme-cours-en-ligne" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-laptop" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Cours en Ligne</span><span style="font-size:11px;color:#94a3b8;">Apprenez de chez vous</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Cours en Ligne</span><span style="font-size:11px;color:#5b6a7d;">Apprenez de chez vous</span></span>'
     +       '</a>'
     /* Gratuits */
     +       '<a href="' + ASSET_PREFIX + 'programme-cours-gratuits" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-gift" style="color:#d97706;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Cours Gratuits</span><span style="font-size:11px;color:#94a3b8;">Accès libre pour tous</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Cours Gratuits</span><span style="font-size:11px;color:#5b6a7d;">Accès libre pour tous</span></span>'
     +       '</a>'
     /* Camp — mis en avant */
     +       '<a href="' + ASSET_PREFIX + 'camp-vacances" data-route="programs" class="aaa-dlink camp-highlight" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;background:linear-gradient(135deg,#fff7ed,#fefce8);border:1px solid #fed7aa;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fde68a;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-umbrella-beach" style="color:#b45309;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Camp de Vacances</span><span style="font-size:11px;color:#b45309;font-weight:600;">Été 2026 · Dakar &amp; Petite Côte</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Camp de Vacances</span><span style="font-size:11px;color:#92400e;font-weight:600;">Été 2026 · Dakar &amp; Petite Côte</span></span>'
     +       '</a>'
     +     '</nav>'
 
     /* Séparateur Autres programmes */
-    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Autres programmes</p>'
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5b6a7d;font-weight:700;margin:0 0 8px 4px;">Autres programmes</p>'
     +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:16px;">'
     /* Al-Mouslihoon — bientôt */
     +       '<a href="' + ASSET_PREFIX + 'programme-al-mouslihoon" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fce7f3;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-venus" style="color:#db2777;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;">Programme pour Femme <span style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;background:#fef3c7;color:#b45309;font-weight:800;padding:2px 7px;border-radius:9999px;">Bientôt</span></span><span style="font-size:11px;color:#94a3b8;">Al-Mouslihoon · Internat &amp; Externat</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;">Programme pour Femme <span style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;background:#fef3c7;color:#b45309;font-weight:800;padding:2px 7px;border-radius:9999px;">Bientôt</span></span><span style="font-size:11px;color:#5b6a7d;">Al-Mouslihoon · Internat &amp; Externat</span></span>'
     +       '</a>'
     /* Conférences */
     +       '<a href="' + ASSET_PREFIX + 'conferences" data-route="programs" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#e8f4f8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-chalkboard-teacher" style="color:#1e7a9a;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Formations &amp; Conférences</span><span style="font-size:11px;color:#94a3b8;">Ateliers &amp; séminaires</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Formations &amp; Conférences</span><span style="font-size:11px;color:#5b6a7d;">Ateliers &amp; séminaires</span></span>'
     +       '</a>'
     /* Al Mouslihoon — aides sociales */
     +       '<a href="' + ASSET_PREFIX + 'aides-sociales" data-route="programs" class="aaa-dlink social-link" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#ccfbf1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-hand-holding-heart" style="color:#0f766e;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Projet Al Mouslihoon</span><span style="font-size:11px;color:#94a3b8;">Aides sociales &amp; humanitaires</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Projet Al Mouslihoon</span><span style="font-size:11px;color:#5b6a7d;">Aides sociales &amp; humanitaires</span></span>'
     +       '</a>'
     +     '</nav>'
 
     /* Séparateur Ressources */
-    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#94a3b8;font-weight:700;margin:0 0 8px 4px;">Ressources</p>'
+    +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5b6a7d;font-weight:700;margin:0 0 8px 4px;">Ressources</p>'
     +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
     /* Fiche de Renseignements */
     +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements" data-route="fiche" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-file-alt" style="color:#7c3aed;font-size:14px;"></i></span>'
-    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Fiche de Renseignements</span><span style="font-size:11px;color:#94a3b8;">Tarifs, dossier &amp; programmes</span></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Fiche de Renseignements</span><span style="font-size:11px;color:#5b6a7d;">Tarifs, dossier &amp; programmes</span></span>'
     +       '</a>'
     +     '</nav>'
 
@@ -208,10 +208,10 @@
 
     /* Drawer footer CTA */
     +   '<div style="padding:16px;border-top:1px solid #f1f5f9;background:#fafafa;">'
-    +     '<a href="tel:+221777743700" class="aaa-cta-tel" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border-radius:14px;font-weight:800;font-size:15px;text-decoration:none;letter-spacing:.01em;">'
+    +     '<a href="tel:+221777743700" class="aaa-cta-tel" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f172a;border-radius:14px;font-weight:800;font-size:15px;text-decoration:none;letter-spacing:.01em;">'
     +       '<i class="fas fa-phone" style="font-size:14px;"></i> +221 77 774 37 00'
     +     '</a>'
-    +     '<a href="https://wa.me/221777743700" target="_blank" rel="noopener" class="aaa-cta-tel" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:12px;margin-top:8px;background:#25d366;color:#fff;border-radius:14px;font-weight:700;font-size:14px;text-decoration:none;">'
+    +     '<a href="https://wa.me/221777743700" target="_blank" rel="noopener" class="aaa-cta-tel" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:12px;margin-top:8px;background:#12855a;color:#fff;border-radius:14px;font-weight:700;font-size:14px;text-decoration:none;">'
     +       '<i class="fab fa-whatsapp" style="font-size:16px;"></i> WhatsApp'
     +     '</a>'
     +   '</div>'
@@ -259,7 +259,7 @@
 
     /* Active route highlight */
     + '.aaa-dlink.active { background:#e8f4f8!important; }'
-    + '.aaa-dlink.active .aaa-dlink-title { color:#1e7a9a!important; }'
+    + '.aaa-dlink.active .aaa-dlink-title { color:#165b73!important; }'
 
     /* Lang pills */
     + '.aaa-lang-pill { cursor:pointer; transition:background 180ms, border-color 180ms, color 180ms; }'
@@ -447,6 +447,11 @@
     var wa = document.getElementById('aaa-wa');
     if (wa) wa.innerHTML = WA_HTML;
 
+    /* --- Barre CTA mobile : marque le body pour lui réserver sa hauteur --- */
+    if (document.querySelector('.sticky-cta')) {
+      document.body.classList.add('aaa-has-sticky-cta');
+    }
+
     /* --- Scroll progress bar --- */
     if (!document.getElementById('aaa-progress')) {
       var prog = document.createElement('div');
@@ -611,6 +616,10 @@
     document.querySelectorAll('img').forEach(function (img) {
       if (img.classList.contains('aaa-img-tracked')) return;
       if (img.closest('#aaa-navbar, #aaa-footer, #aaa-wa, #aaa-loader')) return;
+      /* Les images portant une opacité voulue (calques de fond en opacity-20,
+         etc.) sont exclues : .aaa-img-loaded { opacity: 1 } est plus spécifique
+         que l'utilitaire Tailwind et les faisait passer à 100 % d'opacité. */
+      if (/(^|\s)opacity-\d/.test(img.className)) { img.classList.add('aaa-img-tracked'); return; }
       img.classList.add('aaa-img-tracked', 'aaa-img-fade');
       function reveal() { img.classList.add('aaa-img-loaded'); }
       if (img.complete && img.naturalWidth > 0) reveal();

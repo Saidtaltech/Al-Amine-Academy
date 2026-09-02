@@ -115,15 +115,17 @@ h2 { line-height: 1.1; }
 }
 .btn-ghost:hover { background: #fff; color: var(--brand-blue-dark); border-color: #fff; }
 .btn-blue {
-  background: var(--brand-blue); color: #fff;
+  /* Blanc sur --brand-blue = 3,67:1 : on descend d'un cran pour atteindre 4,88:1 */
+  background: var(--brand-blue-dark); color: #fff;
   padding: .85rem 1.5rem; border-radius: var(--radius-sm);
 }
-.btn-blue:hover { background: var(--brand-blue-dark); transform: translateY(-2px); }
+.btn-blue:hover { background: var(--brand-blue-deep); transform: translateY(-2px); }
 .btn-outline-blue {
-  border: 1.5px solid var(--brand-blue); color: var(--brand-blue);
+  /* --brand-blue (#2590b3) ne fait que 3,67:1 sur blanc : on prend la teinte foncée (4,88:1) */
+  border: 1.5px solid var(--brand-blue-dark); color: var(--brand-blue-dark);
   padding: .85rem 1.5rem; border-radius: var(--radius-sm); background: #fff;
 }
-.btn-outline-blue:hover { background: var(--brand-blue); color: #fff; }
+.btn-outline-blue:hover { background: var(--brand-blue-dark); color: #fff; }
 
 /* ---------- Glass stat strip ---------- */
 .stats-bar {
@@ -488,3 +490,109 @@ a.is-loading { pointer-events: none; opacity: .85; }
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================
+ *  COUCHE CONTRASTE (WCAG 2.1 AA)
+ *  Ces utilitaires de marque étaient tous sous le seuil sur les
+ *  surfaces claires (mesuré au rendu sur les 15 pages). On corrige
+ *  ici, en un seul endroit, plutôt que classe par classe dans le HTML.
+ *  site.css est chargé après tailwind.css : ces règles gagnent.
+ * ============================================================ */
+
+/* Ambre foncé de marque : #d97706 = 3,19:1 sur blanc (texte, seuil 4,5).
+   Utilisé exclusivement sur fond clair. -> #9a4a0b = 6,25:1 */
+.text-secondary-dark { color: #9a4a0b; }
+
+/* Bleu de marque en surtitre : #2590b3 = 3,67:1 sur blanc. -> #1e7a9a = 4,88:1 */
+.eyebrow,
+.section-badge { color: var(--brand-blue-dark); }
+
+/* Corail : #f43f5e = 3,67:1 sur blanc -> #e11d48 = 4,70:1 */
+.text-coral { color: var(--coral-dark, #e11d48); }
+
+/* Pastilles grises : slate-500 sur slate-100 = 4,34:1 -> slate-600 = 6,92:1 */
+.bg-slate-100.text-slate-500 { color: #475569; }
+
+/* Vert WhatsApp : #25d366 / #22c55e ne donnent que 1,98–2,28:1 avec du blanc.
+   #12855a reste dans la famille chromatique WhatsApp et atteint 4,64:1,
+   au-dessus du seuil 4,5 (texte) comme du seuil 3 (icônes). */
+:root { --wa-green: #12855a; --wa-green-dark: #0e6c49; }
+.wa-float { background: var(--wa-green); }
+.wa-float:hover { background: var(--wa-green-dark); }
+.bg-green-500.text-white { background-color: var(--wa-green); }
+.bg-green-500.text-white:hover,
+.hover\:bg-green-600.text-white:hover { background-color: var(--wa-green-dark); }
+
+/* Vert sur fond clair : #16a34a = 3,30:1 -> #15803d = 5,02:1 */
+.text-green-600 { color: #15803d; }
+
+/* Micro-libellés (uppercase, 11-12px) sur pastilles teintées :
+   slate-500 n'y fait que 4,24:1 -> slate-600 = 6,9:1 */
+.bg-primary-light .text-slate-500,
+.bg-primary-light.text-slate-500,
+.bg-amber-100 .text-slate-500,
+.bg-secondary-light .text-slate-500,
+.bg-secondary-light.text-slate-500 { color: #475569; }
+
+/* Surtitres/labels bleus sur pastille bleu clair : #1e7a9a = 4,35:1 -> #165b73 */
+.bg-primary-light .text-primary,
+.bg-primary-light.text-primary,
+.bg-blue-50 .text-primary,
+.bg-blue-50.text-primary { color: var(--brand-blue-deep); }
+
+/* ============================================================
+ *  BARRE CTA MOBILE — réservation d'espace
+ *  La barre « S'inscrire / WhatsApp » est en position:fixed sur 12 pages
+ *  mais rien ne réservait sa hauteur : elle recouvrait en permanence la fin
+ *  de page (derniers CTA, mentions légales du footer).
+ * ============================================================ */
+@media (max-width: 1023px) {
+  /* L'espace réservé est ajouté au footer plutôt qu'au body : la bande
+     recouverte par la barre garde ainsi le fond sombre du footer au lieu
+     d'afficher un liseré blanc en bas de page. */
+  body.aaa-has-sticky-cta .site-footer,
+  body:has(.sticky-cta) .site-footer {
+    padding-bottom: calc(2rem + 4.75rem + env(safe-area-inset-bottom, 0px));
+  }
+  /* Filet pour une page sans footer */
+  body.aaa-has-sticky-cta:not(:has(.site-footer)) {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  }
+  .sticky-cta {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* ============================================================
+ *  CIBLES TACTILES (WCAG 2.2 — 2.5.8 Target Size, minimum 24x24 px)
+ *  Les liens du footer partagé et de la bannière mesuraient 16 à 20 px de haut
+ *  sur mobile. On les met à 28 px sans changer la densité visuelle : le
+ *  remplissage est vertical et le texte reste à la même place.
+ * ============================================================ */
+.site-footer li > a,
+.site-footer a[href^="tel:"],
+.site-footer a[href^="mailto:"] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+/* Compense le padding ajouté pour ne pas allonger les colonnes */
+.site-footer ul.space-y-2 > li + li { margin-top: 0; }
+
+/* Bannière d'annonce : lien 16 px de haut, bouton de fermeture 23 px de large */
+#aaa-announce-socabeg-2026 a {
+  display: inline-block;
+  padding-block: 4px;
+}
+#aaa-announce-socabeg-2026 #aaa-announce-close {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+#aaa-announce-socabeg-2026 #aaa-announce-close:hover { background: rgba(255,255,255,.14); opacity: 1; }
+
+/* Sélecteur de langue : la pastille arabe « ع » ne faisait que 20 px de large */
+[data-lang-switch] { min-width: 30px; text-align: center; }

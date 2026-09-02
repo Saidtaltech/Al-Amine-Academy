@@ -247,8 +247,10 @@ window.AAA_TRANSLATIONS = {
       "visit_desc": "Une visite guidée est possible sur rendez-vous. Venez découvrir nos installations et rencontrer notre équipe.",
       "cta_title": "Commencez l'aventure Al Amine",
       "cta_subtitle": "Inscrivez votre enfant dès aujourd'hui. Notre équipe vous accompagne à chaque étape.",
-      "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Écrire sur WhatsApp",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Appeler directement"
+      "cta_btn_primary": "<i class=\"fas fa-edit\"></i> Formulaire d'inscription",
+      "cta_btn_secondary": "<i class=\"fab fa-whatsapp\"></i> Écrire sur WhatsApp",
+      "group_channels": "Nous joindre",
+      "group_places": "Nos adresses"
     },
     "admission": {
       "hero_title": "Inscription & admission",
@@ -329,18 +331,18 @@ window.AAA_TRANSLATIONS = {
     },
     "testimonials_page": {
       "hero_title": "Témoignages",
-      "hero_subtitle": "Découvrez pourquoi plus de 150 familles font confiance à DAARA Al Amine Academy.",
+      "hero_subtitle": "Découvrez pourquoi plus de 200 familles font confiance à DAARA Al Amine Academy.",
       "stat_families": "Familles satisfaites", "stat_rating": "Note moyenne",
       "stat_recommend": "Satisfaction (avis Google)",
       "hero_badge": "Avis de familles",
       "section_badge": "Ce que disent nos familles",
       "section_title": "Témoignages de parents et d'élèves",
       "stat_google": "Avis Google",
-      "stat_verified": "Avis vérifiés",
+      "stat_verified": "15+ avis vérifiés",
       "stat_satisfied": "Satisfaction (avis Google)",
       "google_badge": "Avis certifiés Google",
       "cta_title": "Rejoignez les familles qui nous font confiance",
-      "cta_subtitle": "Plus de 150 familles ont déjà choisi Al Amine Academy. C'est votre tour.",
+      "cta_subtitle": "Plus de 200 familles ont déjà choisi Al Amine Academy. C'est votre tour.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Inscrire mon enfant",
       "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Nous appeler",
       "role_parent": "Parent",
@@ -379,8 +381,8 @@ window.AAA_TRANSLATIONS = {
       "cat_cantine_desc": "Repas halal équilibrés préparés chaque jour pour les élèves internes.",
       "cat_prayer": "Espace de Prière",
       "cat_prayer_desc": "Un espace de prière dédié pour la salat en communauté et l'éducation spirituelle.",
-      "coming_soon_title": "Galerie en cours de construction",
-      "coming_soon_text": "Nous préparons de belles photos pour vous faire découvrir notre académie. Revenez bientôt !",
+      "coming_soon_title": "Notre galerie s'enrichit constamment",
+      "coming_soon_text": "Suivez-nous sur WhatsApp pour découvrir le quotidien de nos élèves en temps réel.",
       "coming_soon_btn1": "Nous contacter",
       "coming_soon_btn2": "Voir nos programmes"
     },
@@ -883,7 +885,7 @@ window.AAA_TRANSLATIONS = {
       "method2_bullet5": "Outils pédagogiques modernes",
       "cta_title": "Inscrivez votre enfant au Programme Mixte Internat",
       "cta_subtitle": "La solution idéale pour une éducation islamique et académique d'excellence.",
-      "cta_btn1": "<i class=\"fab fa-whatsapp\"></i> S'inscrire maintenant",
+      "cta_btn1": "<i class=\"fas fa-edit\"></i> Remplir le formulaire d'inscription",
       "cta_btn2": "<i class=\"fas fa-phone\"></i> Nous appeler"
     },
     "programme_online": {
@@ -1469,8 +1471,10 @@ window.AAA_TRANSLATIONS = {
       "visit_desc": "A guided tour is available by appointment. Come see our facilities and meet our team.",
       "cta_title": "Begin the Al Amine journey",
       "cta_subtitle": "Enroll your child today. Our team will guide you every step of the way.",
-      "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Write on WhatsApp",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Call directly"
+      "cta_btn_primary": "<i class=\"fas fa-edit\"></i> Registration form",
+      "cta_btn_secondary": "<i class=\"fab fa-whatsapp\"></i> Write on WhatsApp",
+      "group_channels": "Reach us",
+      "group_places": "Our locations"
     },
     "admission": {
       "hero_title": "Registration & admission",
@@ -1551,18 +1555,18 @@ window.AAA_TRANSLATIONS = {
     },
     "testimonials_page": {
       "hero_title": "Testimonials",
-      "hero_subtitle": "Discover why more than 150 families trust DAARA Al Amine Academy.",
+      "hero_subtitle": "Discover why more than 200 families trust DAARA Al Amine Academy.",
       "stat_families": "Satisfied families", "stat_rating": "Average rating",
       "stat_recommend": "Satisfaction (Google reviews)",
       "hero_badge": "Family reviews",
       "section_badge": "What our families say",
       "section_title": "Testimonials from parents and students",
       "stat_google": "Google reviews",
-      "stat_verified": "Verified reviews",
+      "stat_verified": "15+ verified reviews",
       "stat_satisfied": "Satisfaction (Google reviews)",
       "google_badge": "Google certified reviews",
       "cta_title": "Join the families who trust us",
-      "cta_subtitle": "More than 150 families have already chosen Al Amine Academy. It's your turn.",
+      "cta_subtitle": "More than 200 families have already chosen Al Amine Academy. It's your turn.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Enroll my child",
       "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Call us",
       "role_parent": "Parent",
@@ -1601,8 +1605,8 @@ window.AAA_TRANSLATIONS = {
       "cat_cantine_desc": "Balanced halal meals prepared every day for boarding students.",
       "cat_prayer": "Prayer Space",
       "cat_prayer_desc": "A dedicated prayer space for community salat and spiritual education.",
-      "coming_soon_title": "Gallery under construction",
-      "coming_soon_text": "We are preparing beautiful photos to show you our academy. Come back soon!",
+      "coming_soon_title": "Our gallery keeps growing",
+      "coming_soon_text": "Follow us on WhatsApp to see our students' daily life in real time.",
       "coming_soon_btn1": "Contact us",
       "coming_soon_btn2": "View our programmes"
     },
@@ -2090,7 +2094,7 @@ window.AAA_TRANSLATIONS = {
       "method2_bullet5": "Modern pedagogical tools",
       "cta_title": "Enroll your child in the Mixed Boarding Programme",
       "cta_subtitle": "The ideal solution for excellent Islamic and academic education.",
-      "cta_btn1": "<i class=\"fab fa-whatsapp\"></i> Enroll now",
+      "cta_btn1": "<i class=\"fas fa-edit\"></i> Fill in the registration form",
       "cta_btn2": "<i class=\"fas fa-phone\"></i> Call us"
     },
     "programme_online": {
@@ -2680,8 +2684,10 @@ window.AAA_TRANSLATIONS = {
       "visit_desc": "يمكن إجراء جولة إرشادية بموعد مسبق. تفضّل لمعاينة مرافقنا ومقابلة فريقنا.",
       "cta_title": "ابدأ مسيرة الأمين",
       "cta_subtitle": "سجّل طفلك اليوم. فريقنا سيرافقك في كل خطوة.",
-      "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> الكتابة على واتساب",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> الاتصال مباشرة"
+      "cta_btn_primary": "<i class=\"fas fa-edit\"></i> استمارة التسجيل",
+      "cta_btn_secondary": "<i class=\"fab fa-whatsapp\"></i> الكتابة على واتساب",
+      "group_channels": "للتواصل معنا",
+      "group_places": "عناويننا"
     },
     "admission": {
       "hero_title": "التسجيل والقبول",
@@ -2762,18 +2768,18 @@ window.AAA_TRANSLATIONS = {
     },
     "testimonials_page": {
       "hero_title": "الشهادات",
-      "hero_subtitle": "اكتشف لماذا تثق أكثر من 150 أسرة بدارة الأمين أكاديمي.",
+      "hero_subtitle": "اكتشف لماذا تثق أكثر من 200 أسرة بدارة الأمين أكاديمي.",
       "stat_families": "أسر راضية", "stat_rating": "متوسط التقييم",
       "stat_recommend": "نسبة الرضا (تقييمات غوغل)",
       "hero_badge": "آراء الأسر",
       "section_badge": "ماذا تقول أسرنا",
       "section_title": "شهادات الآباء والطلاب",
       "stat_google": "تقييمات غوغل",
-      "stat_verified": "تقييمات موثّقة",
+      "stat_verified": "أكثر من 15 تقييمًا موثقًا",
       "stat_satisfied": "نسبة الرضا (تقييمات غوغل)",
       "google_badge": "تقييمات مُعتمَدة من غوغل",
       "cta_title": "انضمّ إلى الأسر التي تثق بنا",
-      "cta_subtitle": "اختارت أكثر من 150 أسرة أكاديمية الأمين بالفعل. حان دورك.",
+      "cta_subtitle": "اختارت أكثر من 200 أسرة أكاديمية الأمين بالفعل. حان دورك.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> تسجيل طفلي",
       "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> اتصل بنا",
       "role_parent": "أحد الوالدين",
@@ -2812,8 +2818,8 @@ window.AAA_TRANSLATIONS = {
       "cat_cantine_desc": "وجبات حلال متوازنة تُعدّ يوميًا لطلاب الداخلية.",
       "cat_prayer": "مصلّى",
       "cat_prayer_desc": "مصلّى مخصَّص لأداء الصلاة جماعةً والتربية الروحية.",
-      "coming_soon_title": "المعرض قيد الإنشاء",
-      "coming_soon_text": "نُعدّ صورًا جميلة لعرض أكاديميتنا عليك. عُد قريبًا!",
+      "coming_soon_title": "معرضنا يثرى باستمرار",
+      "coming_soon_text": "تابعونا على واتساب لاكتشاف الحياة اليومية لطلابنا مباشرة.",
       "coming_soon_btn1": "اتصل بنا",
       "coming_soon_btn2": "اطّلع على برامجنا"
     },
@@ -3301,7 +3307,7 @@ window.AAA_TRANSLATIONS = {
       "method2_bullet5": "أدوات بيداغوجية حديثة",
       "cta_title": "سجّل طفلك في البرنامج المختلط الداخلي",
       "cta_subtitle": "الحلّ المثالي لتربية إسلامية وأكاديمية متميّزة.",
-      "cta_btn1": "<i class=\"fab fa-whatsapp\"></i> سجّل الآن",
+      "cta_btn1": "<i class=\"fas fa-edit\"></i> تعبئة استمارة التسجيل",
       "cta_btn2": "<i class=\"fas fa-phone\"></i> اتصل بنا"
     },
     "programme_online": {
@@ -3886,8 +3892,10 @@ window.AAA_TRANSLATIONS = {
       "visit_desc": "Se puede realizar una visita guiada con cita previa. Venga a conocer nuestras instalaciones y a nuestro equipo.",
       "cta_title": "Empiece la aventura Al Amine",
       "cta_subtitle": "Inscriba a su hijo hoy. Nuestro equipo le acompañará en cada paso.",
-      "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Escribir por WhatsApp",
-      "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Llamar directamente"
+      "cta_btn_primary": "<i class=\"fas fa-edit\"></i> Formulario de inscripción",
+      "cta_btn_secondary": "<i class=\"fab fa-whatsapp\"></i> Escribir por WhatsApp",
+      "group_channels": "Contactarnos",
+      "group_places": "Nuestras sedes"
     },
     "admission": {
       "hero_title": "Inscripción y admisión",
@@ -3968,18 +3976,18 @@ window.AAA_TRANSLATIONS = {
     },
     "testimonials_page": {
       "hero_title": "Testimonios",
-      "hero_subtitle": "Descubra por qué más de 150 familias confían en DAARA Al Amine Academy.",
+      "hero_subtitle": "Descubra por qué más de 200 familias confían en DAARA Al Amine Academy.",
       "stat_families": "Familias satisfechas", "stat_rating": "Nota media",
       "stat_recommend": "Satisfacción (reseñas Google)",
       "hero_badge": "Opiniones de familias",
       "section_badge": "Lo que dicen nuestras familias",
       "section_title": "Testimonios de padres y alumnos",
       "stat_google": "Reseñas Google",
-      "stat_verified": "Reseñas verificadas",
+      "stat_verified": "15+ reseñas verificadas",
       "stat_satisfied": "Satisfacción (reseñas Google)",
       "google_badge": "Reseñas certificadas de Google",
       "cta_title": "Únase a las familias que confían en nosotros",
-      "cta_subtitle": "Más de 150 familias ya han elegido Al Amine Academy. Es su turno.",
+      "cta_subtitle": "Más de 200 familias ya han elegido Al Amine Academy. Es su turno.",
       "cta_btn_primary": "<i class=\"fab fa-whatsapp\"></i> Inscribir a mi hijo",
       "cta_btn_secondary": "<i class=\"fas fa-phone\"></i> Llamarnos",
       "role_parent": "Padre / Madre",
@@ -4018,8 +4026,8 @@ window.AAA_TRANSLATIONS = {
       "cat_cantine_desc": "Comidas halal equilibradas preparadas cada día para los alumnos internos.",
       "cat_prayer": "Espacio de Oración",
       "cat_prayer_desc": "Un espacio de oración dedicado a la salat en comunidad y la educación espiritual.",
-      "coming_soon_title": "Galería en construcción",
-      "coming_soon_text": "Estamos preparando hermosas fotos para mostrarle nuestra academia. ¡Vuelva pronto!",
+      "coming_soon_title": "Nuestra galería crece constantemente",
+      "coming_soon_text": "Síguenos en WhatsApp para descubrir el día a día de nuestros alumnos en tiempo real.",
       "coming_soon_btn1": "Contáctenos",
       "coming_soon_btn2": "Ver nuestros programas"
     },
@@ -4507,7 +4515,7 @@ window.AAA_TRANSLATIONS = {
       "method2_bullet5": "Herramientas pedagógicas modernas",
       "cta_title": "Inscriba a su hijo en el Programa Mixto Internado",
       "cta_subtitle": "La solución ideal para una educación islámica y académica de excelencia.",
-      "cta_btn1": "<i class=\"fab fa-whatsapp\"></i> Inscribirse ahora",
+      "cta_btn1": "<i class=\"fas fa-edit\"></i> Rellenar el formulario de inscripción",
       "cta_btn2": "<i class=\"fas fa-phone\"></i> Llamarnos"
     },
     "programme_online": {

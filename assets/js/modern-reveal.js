@@ -18,6 +18,9 @@
       return;
     }
 
+    /* Drapeau : à partir d'ici le CSS a le droit de masquer avant révélation. */
+    document.documentElement.classList.add('aaa-reveal-ready');
+
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {

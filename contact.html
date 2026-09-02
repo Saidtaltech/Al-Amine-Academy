@@ -20,6 +20,7 @@
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/site.css?v=20260901">
+  <link rel="stylesheet" href="assets/css/modern.css?v=20260902"/>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -194,9 +195,12 @@
   <section class="py-24 bg-white dark:bg-slate-900 relative">
     <div class="container mx-auto px-4 lg:px-8">
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="mb-8 reveal">
+        <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500" data-i18n="contact.group_channels">Nous joindre</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         <!-- Téléphone Card -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal">
+        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal h-full flex flex-col">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full"></div>
           <div class="w-16 h-16 bg-gradient-to-br from-primary to-teal-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
             <i class="fas fa-phone text-white text-2xl"></i>
@@ -210,20 +214,20 @@
         </div>
 
         <!-- Email Card -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal reveal-delay-2">
+        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal h-full flex flex-col reveal-delay-2">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-bl-full"></div>
           <div class="w-16 h-16 bg-gradient-to-br from-secondary to-yellow-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
             <i class="fas fa-envelope text-gray-900 text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="contact.email_label">Email</h3>
-          <a href="mailto:contact@alamineacademy.com" class="text-secondary-dark font-semibold hover:text-secondary transition-colors break-all">
+          <a href="mailto:contact@alamineacademy.com" class="text-secondary-dark font-semibold hover:text-secondary transition-colors text-[15px]" style="overflow-wrap:anywhere">
             contact@alamineacademy.com
           </a>
           <p class="text-gray-500 dark:text-gray-400 text-sm mt-4" data-i18n="contact.email_response">Réponse sous 24 heures</p>
         </div>
 
         <!-- WhatsApp Card -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal reveal-delay-4">
+        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal h-full flex flex-col reveal-delay-4">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/10 to-transparent rounded-bl-full"></div>
           <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
             <i class="fab fa-whatsapp text-white text-2xl"></i>
@@ -235,8 +239,14 @@
           <p class="text-gray-500 dark:text-gray-400 text-sm mt-4" data-i18n="contact.whatsapp_hint">Chat instantané disponible</p>
         </div>
 
+      </div>
+
+      <div class="mt-16 mb-8 reveal">
+        <p class="text-xs font-bold uppercase tracking-[0.16em] text-slate-500" data-i18n="contact.group_places">Nos adresses</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         <!-- Adresse Card -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal reveal-delay-6">
+        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal h-full flex flex-col reveal-delay-6">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full"></div>
           <div class="w-16 h-16 bg-gradient-to-br from-accent to-purple-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
             <i class="fas fa-map-marker-alt text-white text-2xl"></i>
@@ -263,7 +273,7 @@
         </div>
 
         <!-- Adresse Card — Cité SOCABEG -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal reveal-delay-6">
+        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal h-full flex flex-col reveal-delay-6">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/10 to-transparent rounded-bl-full"></div>
           <div class="w-16 h-16 bg-gradient-to-br from-secondary to-amber-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
             <i class="fas fa-map-marker-alt text-white text-2xl"></i>
@@ -290,7 +300,7 @@
         </div>
 
         <!-- Adresse Card — Villa de la Petite Côte (Nguérigne, Mbour) -->
-        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal reveal-delay-6">
+        <div class="relative overflow-hidden bg-white dark:bg-slate-800 rounded-3xl p-8 card-3d border border-gray-100 dark:border-slate-700 group reveal h-full flex flex-col reveal-delay-6">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-bl-full"></div>
           <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
             <i class="fas fa-umbrella-beach text-white text-2xl"></i>
@@ -334,7 +344,7 @@
         </div>
         <div class="text-center reveal reveal-delay-2">
           <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-directions text-secondary text-2xl"></i>
+            <i class="fas fa-directions text-amber-600 text-2xl"></i>
           </div>
           <h3 class="font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact.access_title">Accès facile</h3>
           <p class="text-sm text-gray-600 dark:text-gray-400">2 min de <strong>Kër Yoff</strong></p>
@@ -358,10 +368,10 @@
       <h2 class="text-4xl lg:text-5xl font-extrabold text-white mb-6 reveal" data-i18n="contact.cta_title">Prêt à inscrire votre enfant ?</h2>
       <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto" data-i18n="contact.cta_subtitle">Rejoignez la famille Al Amine Academy et offrez à votre enfant une éducation d'excellence alliant Coran et savoir académique.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a class="inline-flex items-center justify-center bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 soft-card" href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" data-i18n-html="contact.cta_btn_primary">
+        <a class="inline-flex items-center justify-center gap-2 bg-white text-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 soft-card" href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" data-i18n-html="contact.cta_btn_primary">
           <i class="fas fa-edit mr-2"></i> Formulaire d'inscription
         </a>
-        <a class="inline-flex items-center justify-center border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank" data-i18n-html="contact.cta_btn_secondary">
+        <a class="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all" href="https://wa.me/221777743700" target="_blank" data-i18n-html="contact.cta_btn_secondary">
           <i class="fab fa-whatsapp mr-2"></i> WhatsApp
         </a>
       </div>
@@ -374,6 +384,7 @@
 
   <script src="translations.js?v=20260729"></script>
   <script src="lang.js?v=20260901"></script>
+  <script src="assets/js/modern-reveal.js?v=20260902"></script>
   <script src="assets/js/site-shell.js?v=20260901"></script>
 
   <!-- STICKY MOBILE CTA -->
