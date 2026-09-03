@@ -971,23 +971,23 @@
 
   <!-- POPUP PROGRAMME TAHFIZ INTERNAT -->
   <div id="popup-vpc" role="dialog" aria-modal="true" aria-labelledby="popup-vpc-title"
-       class="fixed inset-0 z-50 items-end sm:items-center justify-center p-0 sm:p-4" style="display:none">
+       class="fixed inset-0 z-[70] items-end sm:items-center justify-center p-0 sm:p-4" style="display:none">
     <div id="popup-vpc-backdrop" class="absolute inset-0 bg-slate-950/45" style="backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)"></div>
-    <div id="popup-vpc-panel" class="relative bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl max-w-sm w-full overflow-hidden max-h-[92vh] overflow-y-auto" style="animation:popupIn .45s cubic-bezier(.34,1.56,.64,1)">
+    <div id="popup-vpc-panel" tabindex="-1" class="relative bg-white focus:outline-none rounded-t-3xl sm:rounded-2xl shadow-2xl max-w-sm w-full overflow-y-auto max-h-[92vh] pb-[env(safe-area-inset-bottom,0px)] sm:pb-0" style="animation:popupIn .45s cubic-bezier(.34,1.56,.64,1)">
       <!-- Header -->
-      <div class="relative bg-gradient-to-br from-[#165b73] to-[#3ba5c9] px-6 pt-5 pb-7 text-white">
-        <button id="popup-vpc-close" aria-label="Fermer le popup"
-                class="absolute top-2.5 right-2.5 w-11 h-11 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white font-bold text-xl leading-none transition">×</button>
-        <span class="inline-flex items-center gap-1.5 bg-amber-400 text-gray-900 text-[10px] font-black px-3 py-1 rounded-full mb-3 uppercase tracking-widest">
-          <i class="fas fa-calendar-check text-orange-600 text-[9px]"></i> Année scolaire 2026-2027
+      <div class="relative bg-gradient-to-br from-[#165b73] to-[#3ba5c9] px-6 pt-5 pb-7 text-white" style="padding-inline-end:3.75rem">
+        <button id="popup-vpc-close" type="button" aria-label="Fermer" data-i18n-attr="aria-label:popup_tahfiz.close"
+                class="absolute top-2.5 w-11 h-11 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white font-bold text-xl leading-none transition" style="inset-inline-end:.625rem"><span aria-hidden="true">&times;</span></button>
+        <span class="inline-flex items-center gap-1.5 bg-amber-400 text-gray-900 text-[10px] font-black px-3 py-1 rounded-full mb-3 uppercase tracking-widest whitespace-nowrap">
+          <i class="fas fa-calendar-check text-orange-600 text-[9px]"></i> <span data-i18n-html="popup_tahfiz.badge">Année scolaire 2026-2027</span>
         </span>
         <div class="flex items-end gap-3">
           <div class="flex-1">
-            <p id="popup-vpc-title" class="text-2xl font-black leading-tight">
+            <p id="popup-vpc-title" class="text-2xl font-black leading-tight" data-i18n-html="popup_tahfiz.title">
               Programme<br><span class="text-amber-300">Tahfiz Internat</span>
             </p>
-            <p class="text-white/70 text-xs mt-1 flex items-center gap-1">
-              <i class="fas fa-location-dot"></i> Cité des Magistrats · Dakar
+            <p class="text-white/85 text-xs mt-1 flex items-center gap-1">
+              <i class="fas fa-location-dot"></i> <span data-i18n="popup_tahfiz.location">Cité des Magistrats &middot; Dakar</span>
             </p>
           </div>
           <span class="text-5xl leading-none select-none mb-1">📖</span>
@@ -1005,47 +1005,46 @@
             <div class="w-11 h-11 rounded-xl bg-[#e8f4f8] flex items-center justify-center text-[#1e7a9a] text-lg">
               <i class="fas fa-book-quran"></i>
             </div>
-            <span class="text-[10px] font-bold text-gray-500 text-center">Coran</span>
+            <span class="text-[10px] font-bold text-gray-600 text-center" data-i18n="popup_tahfiz.feat_quran">Coran</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <div class="w-11 h-11 rounded-xl bg-[#e8f4f8] flex items-center justify-center text-[#1e7a9a] text-lg">
               <i class="fas fa-bed"></i>
             </div>
-            <span class="text-[10px] font-bold text-gray-500 text-center">Internat</span>
+            <span class="text-[10px] font-bold text-gray-600 text-center" data-i18n="popup_tahfiz.feat_boarding">Internat</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <div class="w-11 h-11 rounded-xl bg-[#e8f4f8] flex items-center justify-center text-[#1e7a9a] text-lg">
               <i class="fas fa-futbol"></i>
             </div>
-            <span class="text-[10px] font-bold text-gray-500 text-center">Sport</span>
+            <span class="text-[10px] font-bold text-gray-600 text-center" data-i18n="popup_tahfiz.feat_sport">Sport</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <div class="w-11 h-11 rounded-xl bg-[#e8f4f8] flex items-center justify-center text-[#1e7a9a] text-lg">
               <i class="fas fa-utensils"></i>
             </div>
-            <span class="text-[10px] font-bold text-gray-500 text-center">Repas</span>
+            <span class="text-[10px] font-bold text-gray-600 text-center" data-i18n="popup_tahfiz.feat_meals">Repas</span>
           </div>
         </div>
         <!-- Âge + Prix -->
         <div class="flex gap-2 mb-4">
           <div class="flex-1 bg-gray-50 rounded-xl p-3 text-center border border-gray-100">
-            <p class="text-[10px] text-gray-500 font-semibold uppercase tracking-wide mb-0.5">Âge</p>
-            <p class="text-xs font-black text-gray-700">6 à 12 ans</p>
+            <p class="text-[10px] text-gray-600 font-semibold uppercase tracking-wide mb-0.5" data-i18n="popup_tahfiz.age_label">Âge</p>
+            <p class="text-xs font-black text-gray-800" data-i18n="popup_tahfiz.age_value">6 à 12 ans</p>
           </div>
           <div class="flex-1 bg-amber-50 rounded-xl p-3 text-center border border-amber-100">
-            <p class="text-[10px] text-amber-700 font-semibold uppercase tracking-wide mb-0.5">Dès</p>
-            <p class="text-xs font-black text-amber-700">110 000 F<span class="font-normal text-[10px]">/mois</span></p>
+            <p class="text-[10px] text-amber-700 font-semibold uppercase tracking-wide mb-0.5" data-i18n="popup_tahfiz.price_label">Dès</p>
+            <p class="text-xs font-black text-amber-700" data-i18n-html="popup_tahfiz.price_value">110 000 F<span class="font-normal text-[10px]">/mois</span></p>
           </div>
         </div>
         <!-- CTAs -->
         <a href="programme-internat"
            class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#1e7a9a] to-[#3ba5c9] hover:from-[#165b73] hover:to-[#1e7a9a] text-white px-4 py-3 rounded-full font-bold text-sm transition shadow-md mb-2">
-          <i class="fas fa-circle-info"></i> Voir plus d'informations
+          <i class="fas fa-circle-info"></i> <span data-i18n="popup_tahfiz.cta_info">Voir plus d'informations</span>
         </a>
         <a href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" rel="noopener"
-           onclick="document.getElementById('popup-vpc').style.display='none'"
            class="w-full flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-dark text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition">
-          <i class="fas fa-pen-fancy"></i> S'inscrire maintenant
+          <i class="fas fa-pen-fancy"></i> <span data-i18n="popup_tahfiz.cta_register">S'inscrire maintenant</span>
         </a>
       </div>
     </div>
@@ -1079,6 +1078,7 @@
 
       var lastFocused = null;
       var open = false;
+      var timer = null;
 
       function focusables(){
         return Array.prototype.filter.call(
@@ -1099,28 +1099,59 @@
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
 
+      function lockScroll(on){
+        var v = on ? 'hidden' : '';
+        document.documentElement.style.overflow = v;
+        document.body.style.overflow = v;
+      }
+
       function openPopup(){
+        if (open) return;
         lastFocused = document.activeElement;
         el.style.display = 'flex';
         open = true;
-        /* Verrouille le défilement de l'arrière-plan pendant l'ouverture. */
-        document.documentElement.style.overflow = 'hidden';
-        btn.focus();
+        lockScroll(true);
+        panel.focus();
       }
 
-      function closePopup(){
+      function closePopup(restoreFocus){
         if (!open) return;
         open = false;
         el.style.display = 'none';
-        document.documentElement.style.overflow = '';
+        lockScroll(false);
         try { sessionStorage.setItem('vpcSeen','1'); } catch (e) {}
-        if (lastFocused && lastFocused.focus) lastFocused.focus();
+        if (restoreFocus !== false && lastFocused && lastFocused.focus) lastFocused.focus();
       }
 
-      btn.addEventListener('click', closePopup);
-      backdrop.addEventListener('click', closePopup);
+      btn.addEventListener('click', function(){ closePopup(); });
+      backdrop.addEventListener('click', function(){ closePopup(); });
       document.addEventListener('keydown', onKey);
-      setTimeout(openPopup, 2800);
+
+      /* Tout lien de la modale la ferme d'abord. Sans ça, le CTA « S'inscrire »
+         (target=_blank) se contentait de masquer la modale : le verrou de
+         défilement restait posé et la page d'accueil devenait infigeable au
+         retour de l'onglet. On ne rend pas le focus, la navigation s'en charge. */
+      panel.addEventListener('click', function(e){
+        if (e.target.closest('a[href]')) closePopup(false);
+      });
+
+      /* Filet bfcache : au retour arrière la page est restaurée telle quelle,
+         verrou compris. On le relâche systématiquement en quittant. */
+      window.addEventListener('pagehide', function(){ lockScroll(false); });
+      window.addEventListener('pageshow', function(e){ if (e.persisted) lockScroll(false); });
+
+      /* N'ouvre pas la modale dans un onglet en arrière-plan : elle serait
+         « déjà vue » sans avoir été lue. */
+      function schedule(){
+        if (timer) return;
+        timer = setTimeout(function(){
+          timer = null;
+          if (document.visibilityState === 'hidden') { document.addEventListener('visibilitychange', onVisible, { once: true }); return; }
+          openPopup();
+        }, 2800);
+      }
+      function onVisible(){ if (document.visibilityState === 'visible') openPopup(); }
+      schedule();
     })();
   </script>
 
