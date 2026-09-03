@@ -3,22 +3,6 @@
  * superpose au runtime pour permettre la mise à jour sans rebuild. */
 window.AAA_TRANSLATIONS = {
   fr: {
-    "popup_tahfiz": {
-      "badge": "Année scolaire 2026-2027",
-      "title": "Programme<br><span class=\"text-amber-300\">Tahfiz Internat</span>",
-      "location": "Cité des Magistrats · Dakar",
-      "feat_quran": "Coran",
-      "feat_boarding": "Internat",
-      "feat_sport": "Sport",
-      "feat_meals": "Repas",
-      "age_label": "Âge",
-      "age_value": "6 à 12 ans",
-      "price_label": "Dès",
-      "price_value": "110 000 F<span class=\"font-normal text-[10px]\">/mois</span>",
-      "cta_info": "Voir plus d'informations",
-      "cta_register": "S'inscrire maintenant",
-      "close": "Fermer"
-    },
     "site": { "name": "Al Amine Academy" },
     "meta": {
       "lang": "fr",
@@ -1249,22 +1233,6 @@ window.AAA_TRANSLATIONS = {
     }
   },
   en: {
-    "popup_tahfiz": {
-      "badge": "2026-2027 school year",
-      "title": "<span class=\"text-amber-300\">Tahfiz Boarding</span><br>programme",
-      "location": "Cité des Magistrats · Dakar",
-      "feat_quran": "Quran",
-      "feat_boarding": "Boarding",
-      "feat_sport": "Sport",
-      "feat_meals": "Meals",
-      "age_label": "Age",
-      "age_value": "6 to 12 years",
-      "price_label": "From",
-      "price_value": "110,000 F<span class=\"font-normal text-[10px]\">/month</span>",
-      "cta_info": "See more information",
-      "cta_register": "Enrol now",
-      "close": "Close"
-    },
     "site": { "name": "Al Amine Academy" },
     "meta": {
       "lang": "en",
@@ -2474,22 +2442,6 @@ window.AAA_TRANSLATIONS = {
     }
   },
   ar: {
-    "popup_tahfiz": {
-      "badge": "العام الدراسي <bdi dir=\"ltr\">2026-2027</bdi>",
-      "title": "برنامج<br><span class=\"text-amber-300\">التحفيظ الداخلي</span>",
-      "location": "حي القضاة · داكار",
-      "feat_quran": "القرآن",
-      "feat_boarding": "داخلي",
-      "feat_sport": "رياضة",
-      "feat_meals": "وجبات",
-      "age_label": "العمر",
-      "age_value": "من 6 إلى 12 سنة",
-      "price_label": "ابتداءً من",
-      "price_value": "<bdi dir=\"ltr\">110 000</bdi> ف<span class=\"font-normal text-[10px]\">/شهر</span>",
-      "cta_info": "مزيد من المعلومات",
-      "cta_register": "سجّل الآن",
-      "close": "إغلاق"
-    },
     "site": { "name": "أكاديمية الأمين" },
     "meta": {
       "lang": "ar",
@@ -3703,22 +3655,6 @@ window.AAA_TRANSLATIONS = {
     }
   },
   es: {
-    "popup_tahfiz": {
-      "badge": "Curso escolar 2026-2027",
-      "title": "Programa<br><span class=\"text-amber-300\">Tahfiz Internado</span>",
-      "location": "Cité des Magistrats · Dakar",
-      "feat_quran": "Corán",
-      "feat_boarding": "Internado",
-      "feat_sport": "Deporte",
-      "feat_meals": "Comidas",
-      "age_label": "Edad",
-      "age_value": "De 6 a 12 años",
-      "price_label": "Desde",
-      "price_value": "110 000 F<span class=\"font-normal text-[10px]\">/mes</span>",
-      "cta_info": "Ver más información",
-      "cta_register": "Inscribirse ahora",
-      "close": "Cerrar"
-    },
     "site": { "name": "Academia Al Amine" },
     "meta": {
       "lang": "es",

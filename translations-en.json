@@ -1274,21 +1274,5 @@
     "karang_stat2_label": "Volunteering",
     "karang_stat3_label": "The Benefactors",
     "karang_note": "The Al Mouhlisoon Karang Project is a separate charitable initiative, independent of the vacation camp. Participation is free and open to any family who wishes to contribute."
-  },
-  "popup_tahfiz": {
-    "badge": "2026-2027 school year",
-    "title": "<span class=\"text-amber-300\">Tahfiz Boarding</span><br>programme",
-    "location": "Cité des Magistrats · Dakar",
-    "feat_quran": "Quran",
-    "feat_boarding": "Boarding",
-    "feat_sport": "Sport",
-    "feat_meals": "Meals",
-    "age_label": "Age",
-    "age_value": "6 to 12 years",
-    "price_label": "From",
-    "price_value": "110,000 F<span class=\"font-normal text-[10px]\">/month</span>",
-    "cta_info": "See more information",
-    "cta_register": "Enrol now",
-    "close": "Close"
   }
 }

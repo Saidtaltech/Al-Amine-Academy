@@ -1274,21 +1274,5 @@
     "karang_stat2_label": "تطوع",
     "karang_stat3_label": "المحسنون",
     "karang_note": "مشروع المخلصون في كارانغ عمل تضامني منفصل ومستقل عن مخيم العطلة. المشاركة حرة ومفتوحة لكل الأسر الراغبة في المساهمة."
-  },
-  "popup_tahfiz": {
-    "badge": "العام الدراسي <bdi dir=\"ltr\">2026-2027</bdi>",
-    "title": "برنامج<br><span class=\"text-amber-300\">التحفيظ الداخلي</span>",
-    "location": "حي القضاة · داكار",
-    "feat_quran": "القرآن",
-    "feat_boarding": "داخلي",
-    "feat_sport": "رياضة",
-    "feat_meals": "وجبات",
-    "age_label": "العمر",
-    "age_value": "من 6 إلى 12 سنة",
-    "price_label": "ابتداءً من",
-    "price_value": "<bdi dir=\"ltr\">110 000</bdi> ف<span class=\"font-normal text-[10px]\">/شهر</span>",
-    "cta_info": "مزيد من المعلومات",
-    "cta_register": "سجّل الآن",
-    "close": "إغلاق"
   }
 }

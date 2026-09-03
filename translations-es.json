@@ -1274,21 +1274,5 @@
     "karang_stat2_label": "Voluntariado",
     "karang_stat3_label": "Los Benefactores",
     "karang_note": "El Proyecto Al Mouhlisoon de Karang es una acción solidaria independiente, distinta del campamento de vacaciones. La participación es libre y está abierta a todas las familias que deseen contribuir."
-  },
-  "popup_tahfiz": {
-    "badge": "Curso escolar 2026-2027",
-    "title": "Programa<br><span class=\"text-amber-300\">Tahfiz Internado</span>",
-    "location": "Cité des Magistrats · Dakar",
-    "feat_quran": "Corán",
-    "feat_boarding": "Internado",
-    "feat_sport": "Deporte",
-    "feat_meals": "Comidas",
-    "age_label": "Edad",
-    "age_value": "De 6 a 12 años",
-    "price_label": "Desde",
-    "price_value": "110 000 F<span class=\"font-normal text-[10px]\">/mes</span>",
-    "cta_info": "Ver más información",
-    "cta_register": "Inscribirse ahora",
-    "close": "Cerrar"
   }
 }
