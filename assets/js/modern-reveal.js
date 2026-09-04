@@ -1,6 +1,9 @@
 /* ========================================================================
-   AAA Modern Reveal — IntersectionObserver scroll animations
-   Active automatiquement les classes .reveal une fois visibles.
+   AAA Modern Reveal — animations d'apparition par IntersectionObserver.
+   Active les classes .reveal et les attributs [data-aos] une fois l'élément
+   visible. Le support de data-aos remplace la bibliothèque AOS chargée depuis
+   unpkg par cinq pages : mêmes attributs dans le HTML, deux requêtes tierces
+   en moins, et les styles vivent dans site.css.
    ======================================================================== */
 (function () {
   'use strict';
@@ -9,12 +12,16 @@
     var reduced = window.matchMedia &&
                   window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    var els = document.querySelectorAll('.reveal:not(.is-visible)');
+    var els = document.querySelectorAll('.reveal:not(.is-visible), [data-aos]:not(.aos-animate)');
     if (!els.length) return;
 
-    // Reduced motion or no IntersectionObserver support → reveal immediately
+    function show(el) {
+      el.classList.add(el.hasAttribute('data-aos') ? 'aos-animate' : 'is-visible');
+    }
+
+    // Mouvement réduit ou pas d'IntersectionObserver → tout afficher tout de suite
     if (reduced || !('IntersectionObserver' in window)) {
-      for (var i = 0; i < els.length; i++) els[i].classList.add('is-visible');
+      for (var i = 0; i < els.length; i++) show(els[i]);
       return;
     }
 
@@ -24,7 +31,7 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          show(entry.target);
           io.unobserve(entry.target);
         }
       });

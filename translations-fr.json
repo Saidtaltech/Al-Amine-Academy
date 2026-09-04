@@ -36,8 +36,11 @@
     "rentree_text": "Internat garçons à la Cité SOCABEG, internat filles à la Cité des Magistrats"
   },
   "announce": {
+    "text_short": "Rentrée 2026 : nouveaux locaux",
     "text": "Rentrée 2026 : internat garçons désormais à la Cité SOCABEG, internat filles à la Cité des Magistrats. ",
-    "cta": "Voir le nouveau local"
+    "cta": "Voir le nouveau local",
+    "cta_short": "Détails",
+    "close": "Fermer l'annonce"
   },
   "nav": {
     "problems": "Nos défis",

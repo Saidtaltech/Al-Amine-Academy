@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="fr">
 <head>
   <meta charset="utf-8"/>
@@ -7,20 +7,14 @@
   <meta content="Contactez DAARA Al Amine Academy à Dakar. Téléphone, WhatsApp, email et adresse. Prenez rendez-vous pour visiter notre école coranique moderne. Réponse sous 24h." name="description"/>
   <meta content="contact daara, école coranique dakar contact, daara al amine contact, telefone daara dakar" name="keywords"/>
 
-  <!-- Tailwind CSS -->
-<link rel="stylesheet" href="assets/css/tailwind.css?v=20260901"/>
-  <!-- Preconnect to CDN origins — faster DNS + TLS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <!-- Google Fonts — non-blocking for better FCP -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
-  <!-- Font Awesome — non-blocking -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260901">
-  <link rel="stylesheet" href="assets/css/modern.css?v=20260902"/>
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -29,7 +23,6 @@
    details[open] summary .faq-icon { transform: rotate(45deg); }
    .faq-icon { transition: transform .25s ease; }
 </style>
-
 
   <style>
     body { font-family: 'Montserrat', sans-serif; }
@@ -116,7 +109,7 @@
   <link href="https://alamineacademy.com/contact" hreflang="fr" rel="alternate"/>
   <link href="https://alamineacademy.com/contact" hreflang="en" rel="alternate"/>
   <link href="https://alamineacademy.com/contact" hreflang="ar" rel="alternate"/>
-  <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png"/>
   <link rel="preload" as="image" type="image/webp" href="/assets/img/hero-eleves-coran.webp" fetchpriority="high">
 
   <!-- Geo SEO -->
@@ -156,14 +149,6 @@
 </head>
 
 <body class="antialiased bg-white dark:bg-slate-900 dark:text-white">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
-
 
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
@@ -382,11 +367,6 @@
 
   <!-- AOS Init -->
 
-  <script src="translations.js?v=20260729"></script>
-  <script src="lang.js?v=20260901"></script>
-  <script src="assets/js/modern-reveal.js?v=20260902"></script>
-  <script src="assets/js/site-shell.js?v=20260901"></script>
-
   <!-- STICKY MOBILE CTA -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
     <div class="flex gap-2">
@@ -399,5 +379,8 @@
     </div>
   </div>
 
- </body>
+   <script src="lang.min.js?v=20260904"></script>
+  <script src="assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="assets/js/site-shell.min.js?v=20260904" defer></script>
+</body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
  <head>
   <meta charset="utf-8"/>
@@ -7,10 +7,6 @@
    Blog | Al Amine Academy - Articles sur les Daaras de Dakar
   </title>
   <meta content="Guides, conseils et actualités sur les écoles coraniques de Dakar. Articles SEO pour vous aider à choisir le meilleur daara pour votre enfant." name="description"/>
-<link rel="stylesheet" href="../assets/css/tailwind.css?v=20260901"/>
-  <!-- Font Awesome — non-blocking -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   <link href="https://alamineacademy.com/blog/" rel="canonical"/>
   <meta content="Blog Al Amine Academy — Articles sur les Daaras de Dakar" property="og:title"/>
   <meta content="Guides, conseils et actualités sur les écoles coraniques de Dakar. Choisir le meilleur daara pour votre enfant." property="og:description"/>
@@ -26,7 +22,7 @@
   <link href="https://alamineacademy.com/blog/" hreflang="en" rel="alternate"/>
   <link href="https://alamineacademy.com/blog/" hreflang="ar" rel="alternate"/>
   <link href="https://alamineacademy.com/blog/" hreflang="es" rel="alternate"/>
-  <link href="../assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png"/>
   <meta content="SN-DK" name="geo.region"/>
   <meta content="Dakar" name="geo.placename"/>
   <meta content="14.7473;-17.4569" name="geo.position"/>
@@ -100,17 +96,16 @@
         ]
     }
   </script>
-   <link rel="stylesheet" href="../assets/css/site.css?v=20260901"/>
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="../assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
 </head>
  <body class="bg-gray-50">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="../assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
-
 
   <div id="aaa-navbar"></div>
   <section class="bg-gradient-to-r from-primary to-primary-dark text-white py-16">
@@ -342,9 +337,9 @@
   </div>
 
   <div id="aaa-footer"></div>
-  <script src="../translations.js"></script>
-  <script src="../lang.js?v=20260901"></script>
-   <script src="../assets/js/site-shell.js?v=20260901" defer></script>
- </body>
+   <script src="../lang.min.js?v=20260904"></script>
+  <script src="../assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="../assets/js/site-shell.min.js?v=20260904" defer></script>
+</body>
 </html>
 

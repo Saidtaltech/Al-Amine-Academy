@@ -8,16 +8,15 @@
   <title>
    Les 10 Meilleurs Daara de Dakar 2025 | Al Amine Academy
   </title>
-  <!-- Tailwind CSS -->
-<link rel="stylesheet" href="../assets/css/tailwind.css?v=20260901"/>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-  </script>
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="../assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
   <style>
    body {
             font-family: 'Montserrat', sans-serif;
@@ -58,9 +57,7 @@
   <link href="https://alamineacademy.com/blog/les-10-meilleurs-daara-dakar-2025" hreflang="en" rel="alternate"/>
   <link href="https://alamineacademy.com/blog/les-10-meilleurs-daara-dakar-2025" hreflang="ar" rel="alternate"/>
   <link href="https://alamineacademy.com/blog/les-10-meilleurs-daara-dakar-2025" hreflang="es" rel="alternate"/>
-  <link href="../assets/img/LogoAAA.png" rel="icon" type="image/png"/>
-   <link rel="stylesheet" href="../assets/css/site.css?v=20260901"/>
-   <link rel="stylesheet" href="../assets/css/modern.css?v=20260902"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png"/>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -91,13 +88,6 @@
   </script>
 </head>
  <body class="antialiased bg-white">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="../assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
 
   <!-- WhatsApp Button Flottant -->
   <a aria-label="Contactez-nous sur WhatsApp" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all hover:scale-110" href="https://wa.me/221777743700?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20le%20DAARA%20Al%20Amine%20Academy" target="_blank">
@@ -1224,9 +1214,8 @@
   <!-- Footer -->
 
   <div id="aaa-footer"></div>
-  <script src="../translations.js"></script>
-  <script src="../lang.js?v=20260901"></script>
-   <script src="../assets/js/modern-reveal.js?v=20260902" defer></script>
-   <script src="../assets/js/site-shell.js?v=20260901" defer></script>
- </body>
+   <script src="../lang.min.js?v=20260904"></script>
+  <script src="../assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="../assets/js/site-shell.min.js?v=20260904" defer></script>
+</body>
 </html>

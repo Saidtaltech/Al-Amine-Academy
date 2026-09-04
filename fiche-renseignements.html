@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="fr">
 <head>
   <meta charset="utf-8"/>
@@ -12,7 +12,7 @@
   <link rel="alternate" hreflang="en" href="https://alamineacademy.com/fiche-renseignements"/>
   <link rel="alternate" hreflang="ar" href="https://alamineacademy.com/fiche-renseignements"/>
   <link rel="alternate" hreflang="es" href="https://alamineacademy.com/fiche-renseignements"/>
-  <link rel="icon" type="image/png" href="assets/img/LogoAAA.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png"/>
 
   <meta property="og:title" content="Fiche de Renseignements — DAARA Al Amine Academy"/>
   <meta property="og:description" content="Programmes, frais, documents : tout savoir sur l'inscription à Al Amine Academy."/>
@@ -20,13 +20,15 @@
   <meta property="og:url" content="https://alamineacademy.com/fiche-renseignements"/>
   <meta property="og:image" content="https://alamineacademy.com/assets/img/LogoAAA.png"/>
 
-<link rel="stylesheet" href="assets/css/tailwind.css?v=20260901"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260901"/>
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
   <style data-aaa-inline-resilience>[data-aos]{opacity:1!important;transform:none!important;transition:none!important;}[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
-
 
   <style>
     body { font-family: 'Montserrat', sans-serif; }
@@ -114,14 +116,6 @@
   </script>
 </head>
 <body class="antialiased bg-gray-50">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
-
 
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
@@ -655,8 +649,6 @@
 
   <div id="aaa-footer"></div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/site-shell.js?v=20260901"></script>
   <script>
     /* Garde : si le CDN AOS est bloqué ou lent, l'appel nu lançait une
        ReferenceError qui interrompait tout le script suivant (nav par chips). */
@@ -717,7 +709,8 @@
     })();
   </script>
 
-  <script src="translations.js?v=20260729"></script>
-  <script src="lang.js?v=20260901a"></script>
+  <script src="lang.min.js?v=20260904"></script>
+  <script src="assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="assets/js/site-shell.min.js?v=20260904" defer></script>
 </body>
 </html>

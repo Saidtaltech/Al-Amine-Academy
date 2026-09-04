@@ -1,13 +1,21 @@
-/* Translation System for Al Amine Academy
- * - Source #1: window.AAA_TRANSLATIONS (set by translations.js, loaded via <script>).
- *   Synchronous, works in file:// — no fetch needed.
- * - Source #2 (optional overlay): translations-{lang}.json fetched in background
- *   when served via HTTP, so the JSON files can be hot-edited without touching JS.
- * - switchLanguage(lang) is exposed globally and is safe to call before the
- *   translations have finished loading.
- * - Updates <html lang> and dir (RTL for ar) and the #currentLang indicator.
- * - Includes a Font Awesome / AOS resilience layer for offline / blocked-CDN users. */
+/* Système de traduction — Al Amine Academy
+ *
+ * Les pages sont rédigées en français dans le HTML ; le dictionnaire ne sert
+ * qu'à les basculer vers en/ar/es. On ne charge donc RIEN pour un visiteur
+ * francophone, et un seul fichier (plus le français en repli) pour les autres.
+ *
+ * Auparavant chaque page téléchargeait translations.js (357 Ko, les quatre
+ * langues) puis, en plus, les quatre translations-*.json — soit ~700 Ko bruts
+ * pour afficher un texte déjà présent dans la page.
+ *
+ * switchLanguage(lang) reste exposé globalement et gère l'attente du fichier.
+ * Met à jour <html lang> et dir (RTL pour l'arabe) ainsi que #currentLang.
+ * Contient aussi une couche de résilience Font Awesome / AOS. */
 
+const LANGS = ['fr', 'en', 'ar', 'es'];
+
+/* translations.js n'est plus chargé par les pages, mais s'il l'était (page
+ * ancienne, ouverture en file://) on réutilise ses données. */
 const TRANSLATIONS = (window.AAA_TRANSLATIONS && typeof window.AAA_TRANSLATIONS === 'object')
     ? window.AAA_TRANSLATIONS
     : { fr: {}, en: {}, ar: {}, es: {} };
@@ -15,33 +23,42 @@ const TRANSLATIONS = (window.AAA_TRANSLATIONS && typeof window.AAA_TRANSLATIONS 
 let currentLanguage = (function () {
     try {
         var stored = localStorage.getItem('language');
-        if (stored && ['fr', 'en', 'ar', 'es'].indexOf(stored) !== -1) return stored;
+        if (stored && LANGS.indexOf(stored) !== -1) return stored;
     } catch (e) { /* ignore */ }
     return 'fr';
 })();
-
-let translationsReady = !!(TRANSLATIONS && TRANSLATIONS.fr && Object.keys(TRANSLATIONS.fr).length);
 
 if (!window.AAA_LANG_PATH_PREFIX) {
     var path = (typeof window !== 'undefined' && window.location && window.location.pathname) || '';
     window.AAA_LANG_PATH_PREFIX = (path.indexOf('/blog/') !== -1) ? '../' : '';
 }
 
-/* Optional overlay: try to fetch JSON files when served via HTTP. Silently
- * fall back to the embedded data if fetch fails (CORS in file:// for example). */
-async function overlayJsonTranslations() {
-    if (typeof fetch === 'undefined') return;
-    var languages = ['fr', 'en', 'ar', 'es'];
-    var prefix = window.AAA_LANG_PATH_PREFIX || '';
-    await Promise.all(languages.map(async function (lang) {
-        try {
-            var resp = await fetch(prefix + 'translations-' + lang + '.json');
-            if (!resp.ok) return;
-            var data = await resp.json();
-            if (data && typeof data === 'object') TRANSLATIONS[lang] = data;
-        } catch (e) { /* offline / file:// — ignore */ }
-    }));
-    applyTranslations();
+/* Chargement à la demande : une langue = un fichier, récupéré une seule fois. */
+const loaded = {};
+function loadLanguage(lang) {
+    if (LANGS.indexOf(lang) === -1) return Promise.resolve(false);
+    if (loaded[lang]) return loaded[lang];
+    if (TRANSLATIONS[lang] && Object.keys(TRANSLATIONS[lang]).length) {
+        loaded[lang] = Promise.resolve(true);
+        return loaded[lang];
+    }
+    if (typeof fetch === 'undefined') return Promise.resolve(false);
+    var url = (window.AAA_LANG_PATH_PREFIX || '') + 'translations-' + lang + '.json';
+    loaded[lang] = fetch(url)
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+            if (data && typeof data === 'object') { TRANSLATIONS[lang] = data; return true; }
+            return false;
+        })
+        .catch(function () { return false; }); /* hors ligne / file:// — on garde le français de la page */
+    return loaded[lang];
+}
+
+/* Le français est déjà dans le HTML : rien à charger. Pour les autres langues
+ * on prend la langue voulue et le français, qui sert de repli clé par clé. */
+function ensureLanguage(lang) {
+    if (lang === 'fr') return Promise.resolve();
+    return Promise.all([loadLanguage(lang), loadLanguage('fr')]);
 }
 
 function getTranslation(key) {
@@ -150,12 +167,15 @@ function closeOpenDropdowns() {
 }
 
 function switchLanguage(lang) {
-    if (['fr', 'en', 'ar', 'es'].indexOf(lang) === -1) return false;
+    if (LANGS.indexOf(lang) === -1) return false;
     currentLanguage = lang;
     try { localStorage.setItem('language', lang); } catch (e) { /* ignore */ }
+    closeOpenDropdowns();
+    /* Bascule de sens et indicateur tout de suite, texte dès le fichier reçu :
+       l'utilisateur voit une réaction immédiate même sur une connexion lente. */
     applyTranslations();
     showLangToast();
-    closeOpenDropdowns();
+    ensureLanguage(lang).then(applyTranslations);
     return true;
 }
 
@@ -174,9 +194,8 @@ function decorateLangSwitchers() {
 
 document.addEventListener('DOMContentLoaded', function () {
     decorateLangSwitchers();
-    if (translationsReady) applyTranslations();
-    /* Exposed so site-shell.js can hide the page loader once real content is in place */
-    window.AAA_translationsReadyPromise = overlayJsonTranslations(); // best-effort overlay; no-op in file://
+    applyTranslations();          /* sens du texte, indicateur de langue, états actifs */
+    if (currentLanguage !== 'fr') ensureLanguage(currentLanguage).then(applyTranslations);
 });
 
 /* ========================================================================== *

@@ -53,7 +53,7 @@ ErrorDocument 404 /404.html
 # Compression gzip
 # ----------------------------------------------------------------------
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml application/xml text/xml
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml application/xml text/xml text/plain
 </IfModule>
 
 # ----------------------------------------------------------------------
@@ -70,6 +70,8 @@ ErrorDocument 404 /404.html
     ExpiresByType image/svg+xml "access plus 6 months"
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType application/font-woff2 "access plus 1 year"
+    # Dictionnaires de traduction : récupérés par lang.js pour en/ar/es
+    ExpiresByType application/json "access plus 1 week"
 </IfModule>
 
 # ----------------------------------------------------------------------

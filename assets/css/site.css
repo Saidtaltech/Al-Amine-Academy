@@ -417,41 +417,6 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ============================================================
- *  PAGE LOADER — full-screen branded loader shown until page
- *  content + translations are actually ready (masks CDN/i18n
- *  flash instead of letting raw/unstyled content pop in).
- * ============================================================ */
-#aaa-loader {
-  position: fixed; inset: 0; z-index: 100000;
-  display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, var(--brand-blue-deep) 0%, var(--brand-blue) 100%);
-  transition: opacity .45s ease, visibility .45s ease;
-  /* Safety net: force-hide even if JS never runs (blocked script, ad-blocker) */
-  animation: aaaLoaderForceHide 0s ease-in 3.2s forwards;
-}
-#aaa-loader.aaa-loader-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-@keyframes aaaLoaderForceHide { to { opacity: 0; visibility: hidden; pointer-events: none; } }
-.aaa-loader-inner { display: flex; flex-direction: column; align-items: center; gap: 1.15rem; }
-.aaa-loader-logo {
-  width: 62px; height: 62px; object-fit: contain;
-  border-radius: 16px; background: #fff; padding: 8px;
-  box-shadow: 0 12px 28px -10px rgba(0,0,0,.35);
-  animation: aaaLoaderPulse 1.6s ease-in-out infinite;
-}
-@keyframes aaaLoaderPulse {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.07); }
-}
-.aaa-loader-ring {
-  width: 32px; height: 32px;
-  border: 3px solid rgba(255,255,255,.25);
-  border-top-color: var(--brand-yellow);
-  border-radius: 50%;
-  animation: aaaLoaderSpin .75s linear infinite;
-}
-@keyframes aaaLoaderSpin { to { transform: rotate(360deg); } }
-
-/* ============================================================
  *  TOP NAV LOADING BAR — reuses #aaa-progress, switched from
  *  scroll-tracking to an indeterminate creep on internal clicks.
  * ============================================================ */
@@ -475,8 +440,7 @@ img.aaa-img-loaded { opacity: 1; animation: none; background: none; }
 a.is-loading { pointer-events: none; opacity: .85; }
 
 @media (prefers-reduced-motion: reduce) {
-  .aaa-loader-logo, .aaa-loader-ring, img.aaa-img-fade { animation: none !important; }
-  #aaa-loader { animation: none !important; }
+  img.aaa-img-fade { animation: none !important; }
 }
 
 /* ============================================================
@@ -596,3 +560,89 @@ a.is-loading { pointer-events: none; opacity: .85; }
 
 /* Sélecteur de langue : la pastille arabe « ع » ne faisait que 20 px de large */
 [data-lang-switch] { min-width: 30px; text-align: center; }
+
+/* ============================================================
+ *  APPARITIONS AU DÉFILEMENT — remplace la bibliothèque AOS
+ *
+ *  Cinq pages chargeaient AOS depuis unpkg (CSS + JS, dont un
+ *  script bloquant dans le <head>) pour animer 178 éléments.
+ *  modern-reveal.js reconnaît désormais [data-aos] et pose
+ *  .aos-animate ; il ne reste que ces quelques règles.
+ *
+ *  Résilience : comme pour .reveal, rien n'est masqué tant que
+ *  modern-reveal.js n'a pas posé html.aaa-reveal-ready. Sans JS,
+ *  le contenu reste visible.
+ * ============================================================ */
+[data-aos] {
+  transition: opacity .6s cubic-bezier(.22,.61,.36,1),
+              transform .6s cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+html.aaa-reveal-ready [data-aos]:not(.aos-animate) { opacity: 0; }
+html.aaa-reveal-ready [data-aos="fade-up"]:not(.aos-animate)    { transform: translateY(28px); }
+html.aaa-reveal-ready [data-aos="fade-down"]:not(.aos-animate)  { transform: translateY(-28px); }
+html.aaa-reveal-ready [data-aos="fade-right"]:not(.aos-animate) { transform: translateX(-28px); }
+html.aaa-reveal-ready [data-aos="fade-left"]:not(.aos-animate)  { transform: translateX(28px); }
+html.aaa-reveal-ready [data-aos="zoom-in"]:not(.aos-animate)    { transform: scale(.94); }
+[data-aos].aos-animate { opacity: 1; transform: none; }
+
+/* Les délais d'AOS sont conservés pour ne pas retoucher le HTML. */
+[data-aos-delay="100"] { transition-delay: .1s; }
+[data-aos-delay="150"] { transition-delay: .15s; }
+[data-aos-delay="200"] { transition-delay: .2s; }
+[data-aos-delay="250"] { transition-delay: .25s; }
+[data-aos-delay="300"] { transition-delay: .3s; }
+[data-aos-delay="400"] { transition-delay: .4s; }
+[data-aos-delay="500"] { transition-delay: .5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { transition: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+/* ============================================================
+ *  BANNIÈRE D'ANNONCE — hauteur réservée avant le premier rendu
+ *
+ *  La bannière est injectée par site-shell.js après l'analyse du
+ *  document. Elle poussait alors tout le contenu vers le bas :
+ *  0,095 de décalage cumulé (CLS) sur la page d'accueil, jusque-là
+ *  masqué par l'écran de chargement supprimé pour gagner en LCP.
+ *
+ *  On réserve donc sa hauteur en CSS. Pour que cette hauteur soit
+ *  exacte quelle que soit la langue, la bannière tient sur une
+ *  seule ligne : phrase courte sur mobile, phrase complète à partir
+ *  de 768 px. Elle faisait 106 px de haut sur un écran de 360 px,
+ *  soit un quart de la hauteur utile.
+ * ============================================================ */
+:root { --aaa-banner-h: 40px; }
+@media (min-width: 768px) { :root { --aaa-banner-h: 44px; } }
+
+.aaa-announce {
+  position: fixed; inset-inline: 0; top: 0; z-index: 60;
+  height: var(--aaa-banner-h);
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  padding-inline: 14px 44px;
+  background: linear-gradient(90deg, #1e7a9a, #165b73);
+  color: #fff; font-size: 13px; font-weight: 600; text-align: center;
+  overflow: hidden;
+}
+.aaa-announce > i:first-child { color: #fbbf24; flex-shrink: 0; }
+.aaa-announce span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.aaa-announce a {
+  color: #fbbf24; text-decoration: underline; font-weight: 800;
+  white-space: nowrap; flex-shrink: 0;
+}
+.aaa-announce-long { display: none; }
+@media (min-width: 768px) {
+  .aaa-announce-short { display: none; }
+  .aaa-announce-long  { display: inline; }
+}
+#aaa-announce-close {
+  position: absolute; inset-inline-end: 4px; top: 50%; transform: translateY(-50%);
+  background: none; border: 0; color: #fff; opacity: .85; cursor: pointer;
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+}
+#aaa-announce-close:hover { opacity: 1; }
+
+/* L'espace est réservé tant que la bannière n'a pas été fermée. */
+html:not(.aaa-announce-off) #aaa-nav { top: var(--aaa-banner-h); }
+html:not(.aaa-announce-off) #aaa-navbar + div { margin-top: var(--aaa-banner-h); }

@@ -36,8 +36,11 @@
     "rentree_text": "Boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats"
   },
   "announce": {
+    "text_short": "2026 intake: new premises",
     "text": "2026 enrollment: boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats. ",
-    "cta": "See the new location"
+    "cta": "See the new location",
+    "cta_short": "Details",
+    "close": "Close announcement"
   },
   "nav": {
     "problems": "The challenges",

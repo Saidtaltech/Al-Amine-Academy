@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -165,16 +165,16 @@
     }
     </script>
 
-<link rel="stylesheet" href="../assets/css/tailwind.css?v=20260901"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="../assets/css/site.css?v=20260901"/>
-    <link href="../assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png"/>
 
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="../assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
     <style>
         body { font-family: 'Montserrat', sans-serif; }
         .hero-bg { background: linear-gradient(135deg, #0a3040 0%, #1e7a9a 60%, #165b73 100%); }
@@ -196,14 +196,6 @@
     </style>
 </head>
 <body class="bg-white antialiased">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="../assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
-
 
     <div id="aaa-navbar"></div>
     <div class="h-20"></div>
@@ -668,9 +660,9 @@
 
     <div id="aaa-footer"></div>
 
-    <script src="../translations.js?v=20260729"></script>
-    <script src="../lang.js?v=20260901"></script>
-    <script src="../assets/js/site-shell.js?v=20260901"></script>
+  <script src="../lang.min.js?v=20260904"></script>
+  <script src="../assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="../assets/js/site-shell.min.js?v=20260904" defer></script>
 </body>
 </html>
 

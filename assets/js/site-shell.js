@@ -21,7 +21,7 @@
     +   '<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">'
     +     '<div class="flex items-center justify-between h-20">'
     +       '<a href="' + ASSET_PREFIX + 'index" class="flex items-center gap-3 group">'
-    +         '<img src="' + ASSET_PREFIX + 'assets/img/LogoAAA.png" alt="Logo DAARA Al Amine Academy" class="w-11 h-11 object-contain"/>'
+    +         '<img src="' + ASSET_PREFIX + 'assets/img/logo-96.webp" alt="Logo DAARA Al Amine Academy" class="w-11 h-11 object-contain"/>'
     +         '<span class="hidden sm:flex flex-col leading-tight">'
     +           '<span class="text-base font-extrabold text-slate-900 tracking-tight">DAARA Al Amine</span>'
     +           '<span class="text-[10px] uppercase tracking-[0.18em] text-primary font-semibold">Academy · Dakar</span>'
@@ -91,7 +91,7 @@
     /* Drawer header */
     +   '<div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px 14px;border-bottom:1px solid #e2e8f0;">'
     +     '<div style="display:flex;align-items:center;gap:10px;">'
-    +       '<img src="' + ASSET_PREFIX + 'assets/img/LogoAAA.png" alt="Logo" style="width:36px;height:36px;object-fit:contain;"/>'
+    +       '<img src="' + ASSET_PREFIX + 'assets/img/logo-96.webp" alt="Logo" style="width:36px;height:36px;object-fit:contain;"/>'
     +       '<div style="line-height:1.2;">'
     +         '<p style="font-size:13px;font-weight:800;color:#0f172a;margin:0;">DAARA Al Amine</p>'
     +         '<p style="font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#1e7a9a;font-weight:700;margin:0;">Academy · Dakar</p>'
@@ -285,7 +285,7 @@
     +     '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">'
     +       '<div>'
     +         '<a href="' + ASSET_PREFIX + 'index" class="flex items-center gap-3 mb-4">'
-    +           '<img src="' + ASSET_PREFIX + 'assets/img/LogoAAA.png" alt="Logo DAARA Al Amine Academy" class="w-12 h-12 object-contain bg-white rounded-xl p-1"/>'
+    +           '<img src="' + ASSET_PREFIX + 'assets/img/logo-96.webp" alt="Logo DAARA Al Amine Academy" class="w-12 h-12 object-contain bg-white rounded-xl p-1"/>'
     +           '<div>'
     +             '<p class="text-white font-extrabold leading-tight">DAARA Al Amine</p>'
     +             '<p class="text-[10px] uppercase tracking-[0.18em] text-secondary font-semibold">Academy · Dakar</p>'
@@ -358,12 +358,16 @@
   /* ====================  ANNONCE RENTRÉE — NOUVEAU LOCAL  ==================== */
   var ANNOUNCE_ID = 'aaa-announce-socabeg-2026';
   var ANNOUNCE_HTML = ''
-    + '<div id="' + ANNOUNCE_ID + '" style="position:relative;z-index:60;background:linear-gradient(90deg,#1e7a9a,#165b73);color:#fff;font-size:13px;font-weight:600;text-align:center;padding:10px 44px 10px 14px;">'
-    +   '<i class="fas fa-bullhorn" style="margin-right:8px;color:#fbbf24;"></i>'
-    +   '<span data-i18n="announce.text">Rentrée 2026 : internat garçons désormais à la Cité SOCABEG, internat filles à la Cité des Magistrats. </span>'
-    +   '<a href="' + ASSET_PREFIX + 'programme-internat" data-i18n="announce.cta" style="color:#fbbf24;text-decoration:underline;font-weight:800;white-space:nowrap;">Voir le nouveau local</a>'
-    +   '<button id="aaa-announce-close" aria-label="Fermer" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;opacity:.8;font-size:15px;cursor:pointer;padding:6px;">'
-    +     '<i class="fas fa-times"></i>'
+    + '<div id="' + ANNOUNCE_ID + '" class="aaa-announce">'
+    +   '<i class="fas fa-bullhorn" aria-hidden="true"></i>'
+    +   '<span class="aaa-announce-short" data-i18n="announce.text_short">Rentrée 2026 : nouveaux locaux</span>'
+    +   '<span class="aaa-announce-long" data-i18n="announce.text">Rentrée 2026 : internat garçons désormais à la Cité SOCABEG, internat filles à la Cité des Magistrats.</span>'
+    +   '<a href="' + ASSET_PREFIX + 'programme-internat">'
+    +     '<span class="aaa-announce-short" data-i18n="announce.cta_short">Détails</span>'
+    +     '<span class="aaa-announce-long" data-i18n="announce.cta">Voir le nouveau local</span>'
+    +   '</a>'
+    +   '<button id="aaa-announce-close" type="button" aria-label="Fermer l\'annonce" data-i18n-attr="aria-label:announce.close">'
+    +     '<i class="fas fa-times" aria-hidden="true"></i>'
     +   '</button>'
     + '</div>';
 
@@ -382,36 +386,26 @@
     return 'index';
   }
 
-  /* --- Auto-inject modern CSS + JS once, before anything else --- */
+  /* --- Filet de sécurité pour modern-reveal.js ---
+     modern.css fait désormais partie de assets/css/app.css et modern-reveal.js
+     est déclaré dans chaque page ; on n'injecte plus rien par défaut. L'ancien
+     bloc injectait les deux sans reconnaître les balises statiques ajoutées
+     depuis, ce qui les faisait télécharger deux fois. Ne reste qu'un secours
+     pour une page qui aurait été oubliée. */
   function injectModernAssets() {
-    if (!document.querySelector('link[data-aaa-modern]')) {
-      var link = document.createElement('link');
-      link.rel  = 'stylesheet';
-      link.href = ASSET_PREFIX + 'assets/css/modern.css';
-      link.setAttribute('data-aaa-modern', '1');
-      document.head.appendChild(link);
-    }
-    if (!document.querySelector('script[data-aaa-modern-js]')) {
-      var s = document.createElement('script');
-      s.src   = ASSET_PREFIX + 'assets/js/modern-reveal.js';
-      s.defer = true;
-      s.setAttribute('data-aaa-modern-js', '1');
-      document.head.appendChild(s);
-    }
+    if (document.querySelector('script[src*="modern-reveal"]')) return;
+    var s = document.createElement('script');
+    s.src   = ASSET_PREFIX + 'assets/js/modern-reveal.min.js';
+    s.defer = true;
+    document.head.appendChild(s);
   }
   injectModernAssets();
 
-  function pushNavBelowBanner(bar) {
-    /* La navbar est fixed top:0 — pousse-la (elle + le spacer h-20) sous la bannière */
-    function apply() {
-      var h = bar && bar.parentNode ? bar.offsetHeight : 0;
-      var navEl = document.getElementById('aaa-nav');
-      var spacer = document.getElementById('aaa-navbar') && document.getElementById('aaa-navbar').nextElementSibling;
-      if (navEl) navEl.style.top = h + 'px';
-      if (spacer) spacer.style.marginTop = h + 'px';
-    }
-    apply();
-    window.addEventListener('resize', apply);
+  /* La hauteur de la bannière est réservée en CSS (--aaa-banner-h) dès le
+     premier rendu : elle était auparavant appliquée en JS après coup, ce qui
+     décalait tout le contenu vers le bas une fois le shell injecté. */
+  function setAnnounceVisible(on) {
+    document.documentElement.classList.toggle('aaa-announce-off', !on);
   }
 
   function inject() {
@@ -428,18 +422,16 @@
         var wrap = document.createElement('div');
         wrap.innerHTML = ANNOUNCE_HTML;
         var bar = wrap.firstChild;
-        bar.style.position = 'fixed';
-        bar.style.top = '0';
-        bar.style.left = '0';
-        bar.style.right = '0';
         document.body.insertBefore(bar, document.body.firstChild);
-        pushNavBelowBanner(bar);
+        setAnnounceVisible(true);
         var closeBtn = document.getElementById('aaa-announce-close');
         if (closeBtn) closeBtn.addEventListener('click', function () {
           bar.remove();
-          pushNavBelowBanner(null);
+          setAnnounceVisible(false);
           try { localStorage.setItem(ANNOUNCE_ID + '-dismissed', '1'); } catch (e) {}
         });
+      } else {
+        setAnnounceVisible(false);
       }
     } catch (e) {}
     var foot = document.getElementById('aaa-footer');
@@ -615,7 +607,7 @@
   function bindImageLoading() {
     document.querySelectorAll('img').forEach(function (img) {
       if (img.classList.contains('aaa-img-tracked')) return;
-      if (img.closest('#aaa-navbar, #aaa-footer, #aaa-wa, #aaa-loader')) return;
+      if (img.closest('#aaa-navbar, #aaa-footer, #aaa-wa')) return;
       /* Les images portant une opacité voulue (calques de fond en opacity-20,
          etc.) sont exclues : .aaa-img-loaded { opacity: 1 } est plus spécifique
          que l'utilitaire Tailwind et les faisait passer à 100 % d'opacité. */
@@ -631,24 +623,6 @@
   }
 
   /* ==================== PAGE LOADER — hide once content is ready =========== */
-  function bindPageLoader() {
-    var el = document.getElementById('aaa-loader');
-    if (!el) return;
-    function hide() {
-      el.classList.add('aaa-loader-hidden');
-      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 500);
-    }
-    var minDelay = new Promise(function (res) { setTimeout(res, 350); });
-    var contentReady = (window.AAA_translationsReadyPromise && typeof window.AAA_translationsReadyPromise.then === 'function')
-      ? window.AAA_translationsReadyPromise
-      : Promise.resolve();
-    var hardTimeout = new Promise(function (res) { setTimeout(res, 2500); });
-    Promise.race([
-      Promise.all([contentReady, minDelay]).catch(function () {}),
-      hardTimeout
-    ]).then(hide);
-  }
-
   /* ==================== TOP NAV LOADING BAR — internal link clicks ========= */
   function bindNavLoadingBar() {
     var bar = document.getElementById('aaa-progress');
@@ -702,7 +676,6 @@
     bindImageLoading();
     bindNavLoadingBar();
     bindCtaLoadingFeedback();
-    bindPageLoader();
     if (typeof window.applyTranslations === 'function') {
       try { window.applyTranslations(); } catch (e) { /* ignore */ }
     }

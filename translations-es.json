@@ -36,8 +36,11 @@
     "rentree_text": "Internado de niños ahora en Cité SOCABEG, el de niñas en Cité des Magistrats"
   },
   "announce": {
+    "text_short": "Curso 2026: nuevos locales",
     "text": "Curso 2026: el internado de niños está ahora en Cité SOCABEG, el de niñas en Cité des Magistrats. ",
-    "cta": "Ver el nuevo local"
+    "cta": "Ver el nuevo local",
+    "cta_short": "Detalles",
+    "close": "Cerrar el aviso"
   },
   "nav": {
     "problems": "Los desafíos",

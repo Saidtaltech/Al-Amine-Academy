@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8"/>
@@ -6,8 +6,8 @@
   <title>Blog & ressources — DAARA Al Amine Academy</title>
   <meta name="description" content="Conseils et guides sur l'éducation coranique moderne, le choix d'un daara, la mémorisation du Coran, le Hajj et la vie d'élève à Dakar."/>
   <link rel="canonical" href="https://alamineacademy.com/blog"/>
-  <link rel="icon" type="image/png" href="assets/img/LogoAAA.png"/>
-  <link rel="apple-touch-icon" href="assets/img/LogoAAA.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png"/>
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"/>
   <link rel="alternate" hreflang="fr" href="https://alamineacademy.com/blog"/>
   <link rel="alternate" hreflang="en" href="https://alamineacademy.com/blog"/>
   <link rel="alternate" hreflang="ar" href="https://alamineacademy.com/blog"/>
@@ -21,33 +21,18 @@
   <meta property="og:locale" content="fr_SN"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <!-- Preconnect to CDN origins — faster DNS + TLS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <!-- Google Fonts — non-blocking for better FCP -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
-  <!-- Font Awesome — non-blocking -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260901"/>
-  <link rel="stylesheet" href="assets/css/modern.css?v=20260902"/>
-<link rel="stylesheet" href="assets/css/tailwind.css?v=20260901"/>
   
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
 </head>
 
 <body class="antialiased">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
-
 
   <div id="aaa-wa"></div>
   <div id="aaa-navbar">
@@ -64,7 +49,6 @@
       <p class="text-white/85 text-lg max-w-2xl mx-auto" data-i18n="blog.header_desc">Tout ce qu'il faut savoir sur l'éducation coranique moderne au Sénégal.</p>
     </div>
   </header>
-
 
   
   <section class="section">
@@ -139,7 +123,6 @@
     </div>
   </section>
 
-
   <!-- ==================== LOCALISATION ==================== -->
   <section class="py-16 bg-gradient-to-br from-primary/5 to-primary/10 border-t border-primary/10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,9 +188,8 @@
 
   <div id="aaa-footer"></div>
 
-  <script src="translations.js"></script>
-  <script src="lang.js?v=20260901"></script>
-  <script src="assets/js/modern-reveal.js?v=20260902" defer></script>
-  <script src="assets/js/site-shell.js?v=20260901" defer></script>
+  <script src="lang.min.js?v=20260904"></script>
+  <script src="assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="assets/js/site-shell.min.js?v=20260904" defer></script>
 </body>
 </html>

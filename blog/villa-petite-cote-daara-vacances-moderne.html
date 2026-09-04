@@ -40,20 +40,17 @@
     }
     </script>
 
-    <link rel="icon" type="image/png" href="../assets/img/LogoAAA.png">
-    <link rel="stylesheet" href="../assets/css/site.css?v=20260901">
-    <link rel="stylesheet" href="../assets/css/modern.css?v=20260902"/>
-<link rel="stylesheet" href="../assets/css/tailwind.css?v=20260901"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png"/>
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="../assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
 </head>
 <body class="antialiased bg-slate-50">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="../assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
-
 
 <div id="aaa-navbar"></div>
 
@@ -370,7 +367,8 @@
 <div id="aaa-wa"></div>
 <div id="aaa-footer"></div>
 
-<script src="../assets/js/modern-reveal.js?v=20260902"></script>
-<script src="../assets/js/site-shell.js?v=20260901"></script>
+  <script src="../lang.min.js?v=20260904"></script>
+  <script src="../assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="../assets/js/site-shell.min.js?v=20260904" defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="fr">
 <head>
   <meta charset="utf-8"/>
@@ -7,16 +7,14 @@
   <meta content="Découvrez DAARA Al Amine Academy — son fondateur Oustaz Al Amine Niang, sa mission, ses valeurs et son histoire depuis 2023." name="description"/>
   <meta content="oustaz al amine niang, fondateur daara al amine, école coranique dakar, mission valeurs tahfiz" name="keywords"/>
 
-<link rel="stylesheet" href="assets/css/tailwind.css?v=20260901"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Amiri:wght@400;700&display=swap"></noscript>
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-  <link rel="stylesheet" href="assets/css/site.css?v=20260901">
-  <link rel="stylesheet" href="assets/css/modern.css">
+  <!-- Feuille unique auto-hébergée : Tailwind + polices + icônes + styles du site.
+       Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin/>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fa-solid-subset.woff2" crossorigin/>
+  <link rel="stylesheet" href="assets/css/app.css?v=20260904"/>
+  <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
+     pour éviter que le contenu ne se décale quand le shell est injecté. */
+  try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
     .timeline-line::after {
       content: '';
@@ -27,7 +25,6 @@
       background: linear-gradient(180deg, #1e7a9a 0%, transparent 100%);
     }
   </style>
-
 
   <link href="https://alamineacademy.com/a-propos" rel="canonical"/>
   <meta content="À Propos | DAARA Al Amine Academy" property="og:title"/>
@@ -40,21 +37,13 @@
   <link href="https://alamineacademy.com/a-propos" hreflang="fr" rel="alternate"/>
   <link href="https://alamineacademy.com/a-propos" hreflang="en" rel="alternate"/>
   <link href="https://alamineacademy.com/a-propos" hreflang="ar" rel="alternate"/>
-  <link href="assets/img/LogoAAA.png" rel="icon" type="image/png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png"/>
   <meta content="SN-DK" name="geo.region"/>
   <meta content="Dakar" name="geo.placename"/>
   <link rel="preload" as="image" type="image/webp" href="/assets/img/hero-eleves-coran.webp" fetchpriority="high">
 </head>
 
 <body class="antialiased bg-white" style="font-family:'Montserrat',sans-serif">
-  <!-- PAGE LOADER -->
-  <div id="aaa-loader" aria-hidden="true">
-    <div class="aaa-loader-inner">
-      <img src="assets/img/LogoAAA.png" alt="" class="aaa-loader-logo">
-      <div class="aaa-loader-ring"></div>
-    </div>
-  </div>
-
 
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
@@ -431,11 +420,6 @@
 
   <div id="aaa-footer"></div>
 
-  <script src="translations.js?v=20260515"></script>
-  <script src="lang.js?v=20260901"></script>
-  <script src="assets/js/site-shell.js?v=20260901"></script>
-  <script src="assets/js/modern-reveal.js" defer></script>
-
   <!-- STICKY MOBILE CTA -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 border-t border-gray-200 shadow-2xl px-4 py-3"
        style="backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">
@@ -451,5 +435,8 @@
     </div>
   </div>
 
+  <script src="lang.min.js?v=20260904"></script>
+  <script src="assets/js/modern-reveal.min.js?v=20260904" defer></script>
+  <script src="assets/js/site-shell.min.js?v=20260904" defer></script>
 </body>
 </html>
