@@ -301,7 +301,7 @@
     +       '</div>'
 
     +       '<div>'
-    +         '<h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.navigation">Navigation</h4>'
+    +         '<h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.navigation">Navigation</h3>'
     +         '<ul class="space-y-2 text-sm">'
     +           '<li><a href="' + ASSET_PREFIX + 'index"        data-i18n="menu.home">Accueil</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'a-propos"     data-i18n="menu.about">À propos</a></li>'
@@ -313,7 +313,7 @@
     +       '</div>'
 
     +       '<div>'
-    +         '<h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.programs">Nos programmes</h4>'
+    +         '<h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.programs">Nos programmes</h3>'
     +         '<ul class="space-y-2 text-sm">'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-internat"          data-i18n="programs.tahfiz">Tahfiz Internat</a></li>'
     +           '<li><a href="' + ASSET_PREFIX + 'programme-mixte"             data-i18n="programs.mixed">Programme Mixte</a></li>'
@@ -328,7 +328,7 @@
     +       '</div>'
 
     +       '<div>'
-    +         '<h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.contact">Contact</h4>'
+    +         '<h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider" data-i18n="footer.contact">Contact</h3>'
     +         '<ul class="space-y-3 text-sm">'
     +           '<li class="flex items-start gap-3"><i class="fas fa-location-dot text-secondary mt-0.5"></i><span data-i18n="contact.address">Cité des Magistrats, Derrière Kër Yoff, Dakar</span></li>'
     +           '<li class="flex items-start gap-3"><i class="fas fa-location-dot text-secondary mt-0.5"></i><span>Cité SOCABEG, Dakar <span style="font-size:9px;text-transform:uppercase;background:#fef3c7;color:#b45309;font-weight:800;padding:1px 6px;border-radius:9999px;margin-left:4px;" data-i18n="menu.badge_new">Nouveau</span></span></li>'

@@ -188,11 +188,15 @@
     }
     .aaa-filter:hover { border-color: #94a3b8; background: #f8fafc; }
     .aaa-filter.is-active { background: #165b73; border-color: #165b73; color: #fff; }
+    /* Pas d'opacité sur le compteur : à 0,75 il tombait à 3,48:1 sur le bleu
+       du filtre actif, sous le seuil de 4,5:1 (WCAG 2.1 AA). */
     .aaa-filter-count {
-      font-size: .75rem; font-weight: 700; opacity: .75;
-      background: rgba(15,23,42,.08); border-radius: 9999px; padding: 0 .4rem;
+      font-size: .75rem; font-weight: 700; color: #475569;
+      background: rgba(15,23,42,.07); border-radius: 9999px; padding: 0 .4rem;
     }
-    .aaa-filter.is-active .aaa-filter-count { background: rgba(255,255,255,.2); }
+    .aaa-filter.is-active .aaa-filter-count {
+      color: #fff; background: rgba(15,23,42,.22);   /* 9,4:1 sur le bleu actif */
+    }
     /* La carte entière est cliquable via le lien du titre (after:inset-0). */
     article[data-cat] { position: relative; }
   </style>
