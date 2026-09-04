@@ -1,0 +1,191 @@
+{
+  "_comment": "Source unique de l'index du blog (blog/index.html). Ajouter un article ici puis relancer tools/build-blog-index.py. Le champ image désigne un fichier de assets/img/ ; la vignette 640x360 est générée automatiquement dans assets/img/blog/.",
+  "categories": {
+    "comparatifs": "Comparatifs",
+    "choisir": "Bien choisir",
+    "tarifs": "Tarifs",
+    "internat": "Internat",
+    "programme": "Programme scolaire",
+    "tahfiz": "Coran & Tahfiz",
+    "camps": "Camps de vacances",
+    "vie": "Vie de l'école"
+  },
+  "articles": [
+    {
+      "slug": "comment-choisir-daara-internat-dakar-2026",
+      "cat": "choisir",
+      "date": "2026-07-08",
+      "image": "gallery-batiment-10",
+      "title": "Choisir un daara internat à Dakar : 8 critères",
+      "desc": "Qualité pédagogique, encadrement, sécurité, tarifs, méthode de mémorisation : ce qu'il faut vérifier avant d'inscrire son enfant."
+    },
+    {
+      "slug": "villa-petite-cote-daara-vacances-moderne",
+      "cat": "camps",
+      "date": "2026-06-20",
+      "image": "camp-prog-b-piscine",
+      "title": "La Villa Petite Côte, daara de vacances en bord de mer",
+      "desc": "Un hectare face à la mer à Ngérigne : 80 % de Coran, 20 % d'activités. Le programme, les tarifs et les conditions d'admission."
+    },
+    {
+      "slug": "daara-filles-garcons-dakar-ecole-coranique-mixte",
+      "cat": "internat",
+      "date": "2026-06-16",
+      "image": "mixte-card",
+      "title": "Un daara qui accueille les filles et les garçons",
+      "desc": "Al Amine Academy accepte les filles comme les garçons, en internat, à tous les âges. Comment cela s'organise au quotidien."
+    },
+    {
+      "slug": "daara-programme-academique-cfee-dakar",
+      "cat": "programme",
+      "date": "2026-06-16",
+      "image": "admission-cover",
+      "title": "Mémoriser le Coran et préparer le CFEE et le BFEM",
+      "desc": "Comment le cursus académique sénégalais s'articule avec la mémorisation, sans que l'un se fasse au détriment de l'autre."
+    },
+    {
+      "slug": "camp-vacances-islamique-petite-cote-mbour-2026",
+      "cat": "camps",
+      "date": "2026-06-16",
+      "image": "gallery-sport-3",
+      "title": "Camp islamique à la Petite Côte, Mbour 2026",
+      "desc": "Du 5 juillet au 25 septembre : natation, basket et Coran à Ngérigne. Garçons à partir de 8 ans, 130 000 F par mois."
+    },
+    {
+      "slug": "camp-vacances-coran-juillet-2026-dakar",
+      "cat": "camps",
+      "date": "2026-06-02",
+      "image": "camp-prog-a",
+      "title": "Camp de vacances Coran, juillet 2026 à Dakar",
+      "desc": "Deux formules pour l'été : Cité des Magistrats et Villa Petite Côte. Programme des journées, encadrement et tarifs."
+    },
+    {
+      "slug": "meilleurs-daara-vacances-dakar-2026",
+      "cat": "comparatifs",
+      "date": "2026-06-02",
+      "image": "camp-vacances-hero",
+      "title": "Les 5 meilleurs daara de vacances à Dakar en 2026",
+      "desc": "Comparatif des camps coraniques de l'été : programmes, notes, tarifs et contacts, y compris ceux de nos confrères."
+    },
+    {
+      "slug": "preparer-son-hajj-2026-guide-complet",
+      "cat": "vie",
+      "date": "2026-04-17",
+      "image": "gallery-priere-1",
+      "title": "Préparer son Hajj 2026 : le guide du pèlerin",
+      "desc": "Les quatre piliers, les sept obligations, les dix étapes, l'Ihrâm et les invocations. Formation gratuite à Dakar."
+    },
+    {
+      "slug": "al-amine-academy-vs-autres-daara-dakar",
+      "cat": "comparatifs",
+      "date": "2026-03-26",
+      "image": "gallery-batiment-1",
+      "title": "Al Amine Academy face aux autres daara de Dakar",
+      "desc": "Ce qui nous distingue et ce que d'autres font mieux : une comparaison honnête pour vous aider à trancher."
+    },
+    {
+      "slug": "cout-ecole-coranique-dakar-2026",
+      "cat": "tarifs",
+      "date": "2026-03-26",
+      "image": "gallery-cantine-2",
+      "title": "Combien coûte une école coranique à Dakar en 2026 ?",
+      "desc": "Frais de scolarité, internat, restauration, fournitures : le détail poste par poste, et les écarts entre établissements."
+    },
+    {
+      "slug": "internat-islamique-dakar-guide-complet",
+      "cat": "internat",
+      "date": "2026-03-26",
+      "image": "gallery-batiment-5",
+      "title": "L'internat islamique à Dakar : guide complet",
+      "desc": "Rythme d'une journée, encadrement de nuit, visites des parents, retours en famille : à quoi ressemble vraiment le pensionnat."
+    },
+    {
+      "slug": "pourquoi-choisir-daara-moderne-2026",
+      "cat": "choisir",
+      "date": "2026-03-26",
+      "image": "hero-eleves-coran",
+      "title": "Pourquoi choisir un daara moderne en 2026",
+      "desc": "Ce que change l'ajout d'un programme académique et de vraies conditions d'hébergement à l'enseignement coranique."
+    },
+    {
+      "slug": "preparation-cfee-ecole-coranique",
+      "cat": "programme",
+      "date": "2026-03-26",
+      "image": "gallery-evenement-1",
+      "title": "Préparer le CFEE dans une école coranique",
+      "desc": "L'organisation de l'année d'examen : volume horaire, matières, révisions et résultats de nos candidats."
+    },
+    {
+      "slug": "programme-tahfiz-accelere-dakar",
+      "cat": "tahfiz",
+      "date": "2026-03-26",
+      "image": "tahfiz-card",
+      "title": "Le programme Tahfiz accéléré",
+      "desc": "Pour les élèves qui progressent vite : rythme quotidien, révision cyclique et accompagnement individuel."
+    },
+    {
+      "slug": "temoignages-parents-daara-al-amine",
+      "cat": "vie",
+      "date": "2026-03-26",
+      "image": "gallery-sport-1",
+      "title": "Ce que disent les parents",
+      "desc": "Des familles racontent leur première année : ce qui les a rassurées, ce qui les a surprises, ce qu'elles referaient."
+    },
+    {
+      "slug": "ecole-coranique-dakar-inscription-2026",
+      "cat": "choisir",
+      "date": "2026-03-25",
+      "image": "admission-cover",
+      "title": "S'inscrire en école coranique à Dakar en 2026",
+      "desc": "Les pièces à fournir, les dates, l'entretien d'admission et le déroulement des premières semaines."
+    },
+    {
+      "slug": "education-islamique-moderne-dakar-2026",
+      "cat": "programme",
+      "date": "2026-03-25",
+      "image": "mixte-card",
+      "title": "Une éducation islamique moderne à Dakar",
+      "desc": "Concilier la transmission traditionnelle et les exigences scolaires d'aujourd'hui, sans renoncer ni à l'une ni aux autres."
+    },
+    {
+      "slug": "tahfiz-methode-memorisation-coran-2026",
+      "cat": "tahfiz",
+      "date": "2026-03-25",
+      "image": "gallery-priere-1",
+      "title": "Les méthodes de mémorisation du Coran",
+      "desc": "Techniques éprouvées, planning quotidien et rôle des parents dans la mémorisation. Guide complet du Tahfiz."
+    },
+    {
+      "slug": "daara-moderne-vs-traditionnel",
+      "cat": "comparatifs",
+      "date": "2025-12-14",
+      "image": "hero-eleves-coran",
+      "title": "Daara moderne ou daara traditionnel ?",
+      "desc": "Avantages, limites et coûts des deux modèles au Sénégal, pour choisir en connaissance de cause."
+    },
+    {
+      "slug": "les-10-meilleurs-daara-dakar-2025",
+      "cat": "comparatifs",
+      "date": "2025-11-20",
+      "image": "gallery-batiment-11",
+      "title": "Les 10 meilleurs daara de Dakar",
+      "desc": "Classement commenté des écoles coraniques de la capitale : programmes, tarifs, témoignages et critères de choix."
+    },
+    {
+      "slug": "prix-daara-senegal-2025",
+      "cat": "tarifs",
+      "date": "2025-11-12",
+      "image": "aides-sociales/complexe-2",
+      "title": "Les prix des daara au Sénégal",
+      "desc": "Tarifs détaillés, frais souvent oubliés et comparaison régionale, pour situer le rapport qualité-prix."
+    },
+    {
+      "slug": "comment-choisir-le-bon-daara-2025",
+      "cat": "choisir",
+      "date": "2025-11-05",
+      "image": "tahfiz-card",
+      "title": "Comment choisir le bon daara : 12 critères",
+      "desc": "Une liste de contrôle à emporter lors de vos visites, du taux d'encadrement à la propreté des dortoirs."
+    }
+  ]
+}

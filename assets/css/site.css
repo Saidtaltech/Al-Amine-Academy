@@ -467,9 +467,15 @@ a.is-loading { pointer-events: none; opacity: .85; }
    Utilisé exclusivement sur fond clair. -> #9a4a0b = 6,25:1 */
 .text-secondary-dark { color: #9a4a0b; }
 
-/* Bleu de marque en surtitre : #2590b3 = 3,67:1 sur blanc. -> #1e7a9a = 4,88:1 */
-.eyebrow,
-.section-badge { color: var(--brand-blue-dark); }
+/* Bleu de marque en surtitre : #2590b3 = 3,67:1 sur blanc. -> #1e7a9a = 4,88:1
+   :where() annule la spécificité : c'est une valeur par défaut, pas un
+   remplacement. Sans cela la règle l'emportait sur les utilitaires text-*
+   de Tailwind et rendait « eyebrow text-secondary » illisible sur les
+   en-têtes bleu foncé (.page-header). */
+:where(.eyebrow, .section-badge) { color: var(--brand-blue-dark); }
+
+/* Sur les en-têtes sombres, le surtitre reste sur l'ambre de marque. */
+.page-header .eyebrow { color: var(--brand-yellow); }
 
 /* Corail : #f43f5e = 3,67:1 sur blanc -> #e11d48 = 4,70:1 */
 .text-coral { color: var(--coral-dark, #e11d48); }
@@ -646,3 +652,7 @@ html.aaa-reveal-ready [data-aos="zoom-in"]:not(.aos-animate)    { transform: sca
 /* L'espace est réservé tant que la bannière n'a pas été fermée. */
 html:not(.aaa-announce-off) #aaa-nav { top: var(--aaa-banner-h); }
 html:not(.aaa-announce-off) #aaa-navbar + div { margin-top: var(--aaa-banner-h); }
+
+/* Évite les titres dont le dernier mot — ou la seule ponctuation — tombe
+   seul sur une ligne. Ignoré par les navigateurs qui ne le connaissent pas. */
+h1, h2, h3, .page-header p { text-wrap: balance; }
