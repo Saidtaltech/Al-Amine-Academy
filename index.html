@@ -75,7 +75,8 @@
       "itemListElement": [
         { "@type": "Offer", "name": "Tahfiz Internat (Daara Internat)", "price": "110000", "priceCurrency": "XOF", "url": "https://alamineacademy.com/programme-internat" },
         { "@type": "Offer", "name": "Tahfiz + Académique", "price": "125000", "priceCurrency": "XOF", "url": "https://alamineacademy.com/programme-mixte" },
-        { "@type": "Offer", "name": "Programme Mixte (Internat)", "price": "125000", "priceCurrency": "XOF", "url": "https://alamineacademy.com/programme-mixte" }
+        { "@type": "Offer", "name": "Programme Mixte (Internat)", "price": "125000", "priceCurrency": "XOF", "url": "https://alamineacademy.com/programme-mixte" },
+        { "@type": "Offer", "name": "Externat (cours académiques)", "price": "45000", "priceCurrency": "XOF", "url": "https://alamineacademy.com/programme-mixte" }
       ]
     }
   }
@@ -580,7 +581,7 @@
       </div>
 
       <!-- Programs Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-w-6xl mx-auto">
         <!-- Program 1: Tahfiz Internat -->
         <div class="reveal reveal-delay-1 soft-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700">
           <div class="img-zoom">
@@ -672,6 +673,52 @@
               <p class="text-xs text-slate-500 mb-2">115 000 F scolarité + 5 000 F frais de linge obligatoires (goûter offert)</p>
               <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Inscription : 55 000 F (réinscription) / 95 000 F (nouvelle inscription)</p>
               <a href="programme-mixte" class="block w-full text-center px-6 py-3 rounded-full bg-gradient-to-r from-primary to-teal-700 hover:from-primary/95 hover:to-teal-700 text-white font-semibold shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5" data-i18n="cta.learn_more">
+                En savoir plus
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Program 3: Externat (formule du Programme Mixte, sans hébergement) -->
+        <div class="reveal reveal-delay-3 soft-card group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] border border-slate-100 dark:border-slate-700">
+          <div class="img-zoom">
+            <picture>
+              <source type="image/webp" srcset="assets/img/admission-cover.webp">
+              <img src="assets/img/admission-cover.jpg" alt="Externat - cours académiques" class="w-full h-48 object-cover" loading="lazy" style="object-position:center 35%">
+            </picture>
+          </div>
+          <div class="p-8">
+            <div class="mb-6">
+              <div class="icon-wrap w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/30 to-emerald-500/5 flex items-center justify-center mb-4 shadow-sm">
+                <i class="fas fa-house-user text-emerald-600 text-3xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2 tracking-tight" data-i18n="home.card_externat_title">Externat</h3>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed" data-i18n="home.card_externat_subtitle">Cours académiques seuls (8h-13h), sans hébergement — retour à la maison chaque jour</p>
+            </div>
+            <ul class="space-y-3 mb-8 text-slate-700 dark:text-slate-300">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+                <span data-i18n="home.card_externat_feat1">Cursus académique complet (français, maths, sciences)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+                <span data-i18n="home.card_externat_feat2">Horaires 8h–13h, du lundi au vendredi</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+                <span data-i18n="home.card_externat_feat3">Cantine disponible sur place (en option)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+                <span data-i18n="home.card_externat_feat4">Ouvert à tous, garçons et filles</span>
+              </li>
+            </ul>
+            <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+              <p class="text-slate-600 dark:text-slate-400 text-sm mb-2" data-i18n="home.pricing_label">À partir de</p>
+              <p class="text-3xl font-bold text-emerald-600 mb-1">45,000 <span class="text-lg">FCFA/mois</span></p>
+              <p class="text-xs text-slate-500 mb-2" data-i18n="home.card_externat_price_note">Scolarité seule — + 20 000 F cantine en option</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6" data-i18n="home.card_externat_price_note2">Inscription : 55 000 F (réinscription) / 95 000 F (nouvelle inscription)</p>
+              <a href="programme-mixte#externat" class="block w-full text-center px-6 py-3 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-600/95 hover:to-emerald-700 text-white font-semibold shadow-lg shadow-emerald-600/20 transition-all hover:-translate-y-0.5" data-i18n="cta.learn_more">
                 En savoir plus
               </a>
             </div>

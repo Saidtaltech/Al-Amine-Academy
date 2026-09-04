@@ -56,8 +56,9 @@
     }
 
     /* Program card */
-    .program-card-tahfiz { border-top: 4px solid #1e7a9a; background: linear-gradient(155deg,#fff 0%, #f0f9fc 100%); }
-    .program-card-mixte  { border-top: 4px solid #f59e0b; background: linear-gradient(155deg,#fff 0%, #fef9ec 100%); }
+    .program-card-tahfiz   { border-top: 4px solid #1e7a9a; background: linear-gradient(155deg,#fff 0%, #f0f9fc 100%); }
+    .program-card-mixte    { border-top: 4px solid #f59e0b; background: linear-gradient(155deg,#fff 0%, #fef9ec 100%); }
+    .program-card-externat { border-top: 4px solid #059669; background: linear-gradient(155deg,#fff 0%, #ecfdf5 100%); }
 
     /* Subject pills */
     .subject-pill {
@@ -75,6 +76,10 @@
     .subject-pill.amber {
       background: rgba(245,158,11,0.12);
       color: #a16207;
+    }
+    .subject-pill.emerald {
+      background: rgba(5,150,105,0.10);
+      color: #047857;
     }
 
     /* Sticky CTA + FAQ */
@@ -205,11 +210,11 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12" data-aos="fade-up">
         <span class="inline-block bg-primary-light text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3" data-i18n="fiche.section_programmes_eyebrow">Nos programmes</span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900" data-i18n="fiche.section_programmes_title">Deux programmes, une même excellence</h2>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900" data-i18n="fiche.section_programmes_title">Nos programmes, une même excellence</h2>
         <p class="text-gray-600 mt-3 max-w-2xl mx-auto" data-i18n="fiche.section_programmes_desc">Choisissez le programme qui correspond au projet éducatif de votre enfant.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
         <!-- PROGRAMME TAHFIZ -->
         <div class="program-card-tahfiz rounded-3xl p-8 shadow-lg" data-aos="fade-right">
@@ -247,6 +252,10 @@
 
           <div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-lg mb-5">
             <p class="text-sm text-amber-900"><i class="fas fa-info-circle mr-1"></i> <strong>100 000 F</strong> scolarité + <strong>10 000 F</strong> frais annexes obligatoires (5 000 F goûter + 5 000 F linge)</p>
+          </div>
+
+          <div class="bg-blue-50 border-l-4 border-primary p-3 rounded-r-lg mb-5">
+            <p class="text-sm text-primary-dark"><i class="fas fa-info-circle mr-1"></i> <strong data-i18n="fiche.cfee_label">CFEE :</strong> <span data-i18n="fiche.cfee_text">à l'issue de la mémorisation du Coran, possibilité de suivre une formation de 3 ans pour le Certificat de Fin d'Études Élémentaires.</span></p>
           </div>
 
           <a href="programme-internat" class="block text-center bg-primary hover:bg-primary-dark text-white py-3 rounded-full font-bold text-sm transition shadow-md">
@@ -294,11 +303,48 @@
             <p class="text-sm text-amber-900"><i class="fas fa-info-circle mr-1"></i> <strong>115 000 F</strong> scolarité + <strong>5 000 F</strong> frais de linge obligatoires — le goûter est offert</p>
           </div>
 
-          <div class="bg-blue-50 border-l-4 border-primary p-3 rounded-r-lg mb-5">
-            <p class="text-sm text-primary-dark"><i class="fas fa-info-circle mr-1"></i> <strong data-i18n="fiche.cfee_label">CFEE :</strong> <span data-i18n="fiche.cfee_text">à l'issue de la mémorisation du Coran, possibilité de suivre une formation de 3 ans pour le Certificat de Fin d'Études Élémentaires.</span></p>
+          <a href="programme-mixte" class="block text-center bg-secondary hover:bg-secondary-dark text-gray-900 py-3 rounded-full font-bold text-sm transition shadow-md">
+            <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <!-- EXTERNAT (formule du Programme Mixte, sans hébergement) -->
+        <div class="program-card-externat rounded-3xl p-8 shadow-lg" data-aos="fade-up">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-md flex-shrink-0">
+              <i class="fas fa-house-user text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-emerald-700 uppercase tracking-wider" data-i18n="fiche.externat_eyebrow">Formule Programme Mixte</p>
+              <h3 class="text-2xl font-extrabold text-gray-900" data-i18n="fiche.externat_title">Externat</h3>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="fiche.externat_age">6 à 12 ans · cours académiques uniquement</p>
+            </div>
           </div>
 
-          <a href="programme-mixte" class="block text-center bg-secondary hover:bg-secondary-dark text-gray-900 py-3 rounded-full font-bold text-sm transition shadow-md">
+          <p class="text-gray-700 leading-relaxed mb-5" data-i18n="fiche.externat_intro">
+            Cursus académique français de 8h à 13h, sans hébergement ni mémorisation du Coran — l'enfant rentre chez lui chaque jour.
+          </p>
+
+          <div class="bg-emerald-50 rounded-xl p-4 mb-5">
+            <h4 class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3"><i class="fas fa-check-circle mr-1"></i> <span data-i18n="fiche.externat_subjects_title">Au programme</span></h4>
+            <div class="flex flex-wrap">
+              <span class="subject-pill emerald"><i class="fas fa-graduation-cap"></i> <span data-i18n="fiche.subject_academic">Programme français (8h-13h)</span></span>
+              <span class="subject-pill emerald"><i class="fas fa-calculator"></i> <span data-i18n="fiche.subject_math">Maths</span></span>
+              <span class="subject-pill emerald"><i class="fas fa-language"></i> <span data-i18n="fiche.subject_french">Français</span></span>
+              <span class="subject-pill emerald"><i class="fas fa-flask"></i> <span data-i18n="fiche.subject_science">Sciences</span></span>
+            </div>
+          </div>
+
+          <div class="text-center py-4 mb-3 border-y border-emerald-200">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="fiche.externat_price_label">Scolarité mensuelle (externat)</p>
+            <p class="text-4xl font-extrabold text-emerald-700">45 000<span class="text-base ml-1 font-medium text-gray-600"> XOF</span></p>
+          </div>
+
+          <div class="bg-emerald-50 border-l-4 border-emerald-500 p-3 rounded-r-lg mb-5">
+            <p class="text-sm text-emerald-900"><i class="fas fa-info-circle mr-1"></i> <span data-i18n="fiche.externat_note">+ 20 000 F cantine en option — droits d'inscription identiques aux internats : 55 000 F (réinscription) ou 95 000 F (nouvelle inscription)</span></p>
+          </div>
+
+          <a href="programme-mixte#externat" class="block text-center bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-full font-bold text-sm transition shadow-md">
             <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
