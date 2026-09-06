@@ -69,7 +69,7 @@
     +         '<div class="flex items-center gap-0.5 text-[10px] sm:text-xs font-semibold text-slate-600 border border-slate-200 rounded-lg p-0.5">'
     +           '<a href="#" data-lang-switch="fr" onclick="switchLanguage(\'fr\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100" title="Français">FR</a>'
     +           '<a href="#" data-lang-switch="en" onclick="switchLanguage(\'en\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100" title="English">EN</a>'
-    +           '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100 arabic-text text-sm sm:text-base" title="العربية">ع</a>'
+    +           '<a href="#" data-lang-switch="ar" onclick="switchLanguage(\'ar\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100 text-sm sm:text-base" style="font-family:\'Segoe UI\',Tahoma,Arial,sans-serif" title="العربية">ع</a>'
     +           '<a href="#" data-lang-switch="es" onclick="switchLanguage(\'es\');return false;" class="px-1.5 sm:px-2 py-1 rounded-md hover:bg-slate-100" title="Español">ES</a>'
     +         '</div>'
     +         '<a href="tel:+221777743700" class="hidden lg:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-secondary hover:bg-secondary-dark text-slate-900 text-sm font-semibold transition-colors">'

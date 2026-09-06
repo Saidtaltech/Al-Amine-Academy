@@ -14,7 +14,7 @@
        Générée par tools/build-css.sh — ne pas éditer assets/css/app.css à la main. -->
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fa-solid-subset.woff2" crossorigin/>
-  <link rel="stylesheet" href="assets/css/app.css?v=20260904"/>
+  <link rel="stylesheet" href="assets/css/app.css?v=20260906"/>
   <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
      pour éviter que le contenu ne se décale quand le shell est injecté. */
   try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
@@ -119,6 +119,7 @@
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
 
+<main>
   <!-- HERO -->
   <section class="hero-cover" style="--hero-image: image-set(url('/assets/img/camp-vacances-hero.webp') type('image/webp'), url('/assets/img/camp-vacances-hero.jpg') type('image/jpeg')); background-position: center, center 50%, center">
    <div class="hero-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,10 +244,7 @@
           <div class="rounded-3xl overflow-hidden shadow-2xl card-hover reveal reveal-right" style="border-top:5px solid #f59e0b;background:linear-gradient(135deg,#ffffff 0%,#fef9ec 50%,#fef3c7 100%);">
             <!-- Cover photo -->
             <div class="prog-card-photo relative h-56 overflow-hidden">
-              <picture>
-                <source type="image/webp" srcset="assets/img/camp-prog-b-v2.webp">
-                <img src="assets/img/camp-prog-b-v2.png" alt="Camp de vacances Petite Côte — Villa Al Amine Academy Mbour" class="w-full h-full object-cover" loading="lazy">
-              </picture>
+              <img src="assets/img/camp-prog-b-v2.png" alt="Camp de vacances Petite Côte — Villa Al Amine Academy Mbour" class="w-full h-full object-cover" loading="lazy">
               <div class="absolute inset-0 bg-gradient-to-t from-amber-900/90 via-amber-800/50 to-transparent"></div>
               <div class="absolute top-3 right-3 bg-secondary text-gray-900 text-[10px] font-extrabold px-3 py-1.5 rounded-full shadow badge-pulse uppercase tracking-wider" data-i18n="camp_vacances.prog_b_allinclusive">Tout inclus</div>
               <div class="absolute bottom-0 left-0 p-5">
@@ -807,11 +805,12 @@
     </div>
   </section>
 
+  </main>
   <div id="aaa-footer"></div>
 
-   <script src="lang.min.js?v=20260904"></script>
-  <script src="assets/js/modern-reveal.min.js?v=20260904" defer></script>
-  <script src="assets/js/site-shell.min.js?v=20260904" defer></script>
+   <script src="lang.min.js?v=20260906"></script>
+  <script src="assets/js/modern-reveal.min.js?v=20260906" defer></script>
+  <script src="assets/js/site-shell.min.js?v=20260906" defer></script>
 </body>
 </html>
 
