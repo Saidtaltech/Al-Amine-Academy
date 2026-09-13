@@ -88,7 +88,7 @@ Le Tahfiz et le Programme Mixte restent ouverts aux garçons **et** aux filles. 
 - **Public** : garçons et filles, 6 à 12 ans (admission stricte, aucune exception en dessous ou au-dessus selon la FAQ fiche de renseignements).
 - **Formule** : **Internat uniquement — pas d'externat** pour le Tahfiz.
 - **Contenu** : mémorisation intégrale du Coran, Tajweed, éducation islamique (Tawhid, Fiqh, Adhkar), arabe, français, sport.
-- **Retour en famille** : chaque week-end.
+- **Retour en famille** : chaque quinzaine (aligné sur le Programme Mixte).
 - **Tarif mensuel : 110 000 FCFA**, décomposé en :
   - Scolarité : 100 000 FCFA
   - Frais annexes **obligatoires** : 10 000 FCFA (5 000 F goûter + 5 000 F linge)
@@ -184,7 +184,7 @@ Cours ouverts à tous, en dehors des horaires scolaires, hors mosquées organis�
 - **Urgence médicale** : les parents sont contactés en premier ; en cas d'urgence extrême, l'enfant est conduit immédiatement à l'hôpital et les parents sont prévenus aussitôt, au +221 77 774 37 00 (joignable aussi par WhatsApp, 24h/24).
 - **Contenu religieux** : au-delà de la mémorisation, les enfants étudient le Tawhid (Unicité d'Allah), le Fiqh (jurisprudence) et les Adhkar (invocations quotidiennes).
 - **Repas** : 100 % halal.
-- **Visites en semaine** : possibles mais occasionnelles, sur demande auprès de l'administration. Le retour en famille reste la norme : chaque week-end pour le Tahfiz Internat, chaque quinzaine pour le Programme Mixte.
+- **Visites en semaine** : possibles mais occasionnelles, sur demande auprès de l'administration. Le retour en famille reste la norme : chaque quinzaine, pour le Tahfiz Internat comme pour le Programme Mixte.
 - **Changement de programme** : possible avant la fin du premier mois scolaire.
 - **Année scolaire** : de septembre à juillet.
 - **Bourses** : des bourses partielles sont disponibles (se renseigner directement auprès de l'administration pour les conditions).
@@ -237,7 +237,7 @@ R : Acte de naissance, 2 photos, pièce d'identité d'un parent, certificat méd
 R : Oui, des bourses partielles sont disponibles.
 
 **Q : Quand a lieu le retour en famille ?**
-R : Chaque week-end pour le Tahfiz Internat, chaque quinzaine pour le Programme Mixte.
+R : Chaque quinzaine, pour le Tahfiz Internat comme pour le Programme Mixte.
 
 **Q : Quels sont les tarifs du Camp de Vacances 2026 ?**
 R : Programme A (Cité des Magistrats, Dakar, filles et garçons) : 100 000 F/mois. Programme B (Villa Petite Côte, Mbour, garçons 7 ans et demi+) : 130 000 F/mois. Externat : 30 000 F/mois (Coran uniquement, 9h–17h). Inscription unique : 25 000 F. Séjour du 5 juillet au 25 septembre 2026.

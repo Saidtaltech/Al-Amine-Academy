@@ -360,8 +360,8 @@
     "faq5_a": "Online classes are held via Google Meet on Saturday and Sunday afternoons (12 PM–5 PM), with follow-up between sessions via WhatsApp group. 10,000 FCFA/month for group class (25,000 FCFA individual).",
     "faq6_q": "Are the meals served halal?",
     "faq6_a": "Yes, all meals served at the academy are 100% halal. Three balanced meals per day plus a snack are included for boarding students. We adapt menus for allergies and specific needs on request.",
-    "faq7_q": "Can my child come home on weekends?",
-    "faq7_a": "Yes. For the boarding program (Tahfiz), students can return home every weekend (Friday evening to Sunday evening) according to the schedule agreed with parents. For the Mixed program, also a boarding program, the child returns home every two weeks.",
+    "faq7_q": "How often can my child come home?",
+    "faq7_a": "Children return home every two weeks, for both the Tahfiz Boarding program and the Mixed program, according to the schedule agreed with parents (generally Friday afternoon to Sunday).",
     "faq8_q": "Is there an entrance exam?",
     "faq8_a": "No written exam. A 30-minute interview with the management assesses the child's level (reading, memorization already acquired) and guides them toward the right program. The goal is to welcome, not select.",
     "faq9_q": "What documents are required for enrollment?",
@@ -371,7 +371,7 @@
     "faq11_q": "How does night supervision and medical emergency handling work?",
     "faq11_a": "Supervision is provided 24/7, with adults sleeping alongside the children, under video surveillance and under a strict \"zero corporal punishment\" policy. In a medical emergency, the child is cared for immediately and parents are contacted without delay at +221 77 774 37 00 (also reachable via WhatsApp, available 24/7); for any non-urgent medical decision, prior parental consent is required.",
     "faq12_q": "Can I visit my child during the week?",
-    "faq12_a": "Weekday visits remain occasional and are arranged on request with the administration. Returning home stays the norm: every weekend for Tahfiz Boarding, every two weeks for the Day Program.",
+    "faq12_a": "Weekday visits remain occasional and are arranged on request with the administration. Returning home stays the norm, every two weeks, for Tahfiz Boarding as well as the Mixed Program.",
     "pdf_hint": "Download the information sheet"
   },
   "testimonials_page": {
@@ -523,7 +523,7 @@
     "sched_row_13": "<strong>19:00</strong> — Isha & evening lesson",
     "sched_row_14": "<strong>20:30</strong> — Personal revision",
     "sched_row_15": "<strong>21:30</strong> — Bedtime",
-    "sched_row_16": "Weekend: Home visit (Friday evening – Sunday evening)",
+    "sched_row_16": "Every two weeks: home visit (Friday – Sunday)",
     "note_tahfiz": "This timetable is indicative and may be adjusted according to students' age and level.",
     "included_title": "What is included",
     "included1_title": "Accommodation",

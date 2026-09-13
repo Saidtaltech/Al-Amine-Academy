@@ -360,8 +360,8 @@
     "faq5_a": "Las clases en línea se imparten por Google Meet los sábados y domingos por la tarde (12h–17h), con seguimiento entre sesiones por grupo de WhatsApp. 10 000 FCFA/mes en clase grupal (25 000 FCFA individual).",
     "faq6_q": "¿Las comidas servidas son halal?",
     "faq6_a": "Sí, todas las comidas del internado son 100 % halal. Se incluyen tres comidas equilibradas al día más una merienda para los alumnos internos. Adaptamos los menús a alergias y necesidades específicas bajo petición.",
-    "faq7_q": "¿Mi hijo puede volver a casa el fin de semana?",
-    "faq7_a": "Sí. En el programa de internado (Tahfiz), los alumnos pueden volver a casa cada fin de semana (del viernes por la noche al domingo por la noche) según el calendario acordado con los padres. En el programa Mixto, también en internado, el niño regresa a casa cada quincena.",
+    "faq7_q": "¿Con qué frecuencia puede mi hijo volver a casa?",
+    "faq7_a": "El regreso a casa se hace cada quincena, tanto para el internado Tahfiz como para el Programa Mixto, según el calendario acordado con los padres (generalmente del viernes por la tarde al domingo).",
     "faq8_q": "¿Hay examen de acceso?",
     "faq8_a": "Sin examen escrito. Una entrevista de 30 minutos con la dirección evalúa el nivel del niño (lectura, memorización ya adquirida) y orienta hacia el programa adecuado. El objetivo es acoger, no seleccionar.",
     "faq9_q": "¿Qué documentos hay que presentar para la inscripción?",
@@ -371,7 +371,7 @@
     "faq11_q": "¿Cómo funciona la supervisión nocturna y en caso de emergencia médica?",
     "faq11_a": "La supervisión se garantiza las 24 horas, con adultos que duermen junto a los niños, bajo videovigilancia y con una política estricta de \"cero castigo corporal\". En caso de emergencia médica, el niño es atendido de inmediato y se contacta a los padres sin demora al +221 77 774 37 00 (también disponible por WhatsApp, las 24 horas); para cualquier decisión médica no urgente, se requiere el consentimiento previo de los padres.",
     "faq12_q": "¿Puedo visitar a mi hijo entre semana?",
-    "faq12_a": "Las visitas entre semana siguen siendo ocasionales y se organizan bajo petición a la administración. El regreso a casa sigue siendo la norma: cada fin de semana para el internado Tahfiz, cada quince días para el Programa Mixto.",
+    "faq12_a": "Las visitas entre semana siguen siendo ocasionales y se organizan bajo petición a la administración. El regreso a casa sigue siendo la norma, cada quincena, tanto para el internado Tahfiz como para el Programa Mixto.",
     "pdf_hint": "Descargar la ficha de información"
   },
   "testimonials_page": {
@@ -523,7 +523,7 @@
     "sched_row_13": "<strong>19:00</strong> — Isha y clase nocturna",
     "sched_row_14": "<strong>20:30</strong> — Repaso personal",
     "sched_row_15": "<strong>21:30</strong> — Acostarse",
-    "sched_row_16": "Fin de semana: Vuelta a casa (viernes por la noche – domingo por la noche)",
+    "sched_row_16": "Cada quincena: vuelta a casa (viernes – domingo)",
     "note_tahfiz": "Este horario es orientativo y puede adaptarse según la edad y el nivel de los alumnos.",
     "included_title": "Qué está incluido",
     "included1_title": "Alojamiento",
