@@ -76,6 +76,10 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fa-solid-subset.woff2" crossorigin/>
   <link rel="stylesheet" href="assets/css/app.css?v=20260906"/>
+  <style>
+    /* Décalage pour que #externat ne se cache pas sous la navbar fixe */
+    .anchor { scroll-margin-top: 90px; }
+  </style>
   <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
      pour éviter que le contenu ne se décale quand le shell est injecté. */
   try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
@@ -236,15 +240,62 @@
         <div>
           <p class="inline-block text-[11px] font-extrabold uppercase tracking-wider text-amber-800 bg-amber-200 px-3 py-1 rounded-full mb-2" data-i18n="programme_internat.rentree_badge">Rentrée 2026 — Nouveaux locaux</p>
           <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2" data-i18n="programme_internat.rentree_title">Le Tahfiz Internat garçons déménage à la Cité SOCABEG</h2>
-          <p class="text-slate-700 leading-relaxed mb-4" data-i18n-html="programme_internat.rentree_intro_html">Le Tahfiz reste un programme <strong>internat uniquement</strong> (pas d'externat), ouvert aux garçons comme aux filles :</p>
+          <p class="text-slate-700 leading-relaxed mb-4" data-i18n-html="programme_internat.rentree_intro_html">Le Tahfiz est proposé en <strong>internat</strong> comme en <strong>externat</strong>, ouvert aux garçons comme aux filles :</p>
           <ul class="text-slate-700 leading-relaxed mb-4 space-y-1 list-disc list-inside">
             <li data-i18n-html="programme_internat.rentree_boys_html"><strong>Garçons</strong> : nouvel internat à la <strong>Cité SOCABEG</strong> — à 60 secondes du stade, 5 minutes à pied de l'internat de la Cité des Magistrats.</li>
             <li data-i18n-html="programme_internat.rentree_girls_html"><strong>Filles</strong> : internat à la <strong>Cité des Magistrats</strong>, dans l'ancien bâtiment des garçons, désormais entièrement réservé aux filles (Tahfiz et Programme Mixte).</li>
           </ul>
+          <p class="text-slate-700 leading-relaxed mb-4" data-i18n-html="programme_internat.externat_link_intro">Un <strong>externat Tahfiz</strong> est aussi proposé, du lundi au vendredi de <strong>9h à 17h</strong>, cantine incluse — sans hébergement. <a href="#externat" class="text-primary font-semibold hover:underline"><span data-i18n="programme_internat.externat_link">Voir les tarifs de l'externat ↓</span></a></p>
           <a href="https://maps.app.goo.gl/qd3m2HHquPa8QXCm7" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary font-semibold hover:underline mb-2">
             <i class="fas fa-location-dot"></i> <span data-i18n="programme_internat.rentree_link">Voir l'itinéraire vers la Cité SOCABEG</span>
           </a>
-          <p class="text-xs text-slate-500 mt-2" data-i18n="programme_internat.rentree_price_note">Tarif inchangé : 110 000 FCFA/mois (scolarité 100 000 F + frais annexes obligatoires 10 000 F), comme indiqué ci-dessus.</p>
+          <p class="text-xs text-slate-500 mt-2" data-i18n="programme_internat.rentree_price_note">Tarif internat inchangé : 110 000 FCFA/mois (scolarité 100 000 F + frais annexes obligatoires 10 000 F), comme indiqué ci-dessus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FORMULE EXTERNAT ==================== -->
+  <section id="externat" class="anchor py-16 bg-emerald-50 border-b border-emerald-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded-full mb-4">
+            <i class="fas fa-house-user" aria-hidden="true"></i> <span data-i18n="programme_internat.externat_badge">Formule Tahfiz</span>
+          </p>
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3" data-i18n="programme_internat.externat_title">L'Externat Tahfiz : la mémorisation du Coran, sans l'internat</h2>
+          <p class="text-slate-700 leading-relaxed mb-5" data-i18n="programme_internat.externat_intro">
+            Ouvert à tous, garçons et filles de 6 à 12 ans, du lundi au vendredi de 9h à 17h. Pas d'hébergement — l'enfant rentre chez lui chaque jour.
+          </p>
+          <ul class="space-y-3 mb-6 text-slate-700">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+              <span data-i18n="programme_internat.externat_feat1">Mémorisation du Coran et Tajwid, même contenu qu'en internat</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+              <span data-i18n="programme_internat.externat_feat2">Horaires 9h–17h, du lundi au vendredi</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+              <span data-i18n="programme_internat.externat_feat3">Cantine incluse dans le tarif</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-emerald-600 mt-1 flex-shrink-0"></i>
+              <span data-i18n="programme_internat.externat_feat4">Mêmes droits d'inscription que l'internat</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-xl p-8" style="border-top:4px solid #059669;">
+          <p class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1" data-i18n="programme_internat.externat_price_label">Scolarité mensuelle (externat, cantine incluse)</p>
+          <p class="text-4xl font-extrabold text-emerald-700 mb-4">50 000<span class="text-base ml-1 font-medium text-slate-500">FCFA</span></p>
+          <p class="text-xs text-slate-500 mb-1" data-i18n="programme_internat.externat_age_label">Âge d'admission</p>
+          <p class="text-sm font-semibold text-slate-700 mb-4" data-i18n="programme_internat.externat_age">6 à 12 ans, strictement</p>
+          <p class="text-xs text-slate-500 mb-6" data-i18n-html="programme_internat.externat_registration_note">Droits d'inscription : <strong>55 000 FCFA</strong> (réinscription) ou <strong>95 000 FCFA</strong> (nouvelle inscription), comme pour l'internat.</p>
+          <a href="https://hassan.alamineacademy.com/inscription/al-amine-academy" target="_blank" rel="noopener" class="block w-full text-center rounded-full bg-emerald-700 hover:bg-emerald-800 text-white py-3.5 font-bold shadow-lg transition">
+            <span data-i18n="programme_internat.externat_cta">S'inscrire à l'externat</span> <i class="fas fa-arrow-right ml-1"></i>
+          </a>
         </div>
       </div>
     </div>

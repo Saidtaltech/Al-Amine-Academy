@@ -215,7 +215,7 @@
         <p class="text-gray-600 mt-3 max-w-2xl mx-auto" data-i18n="fiche.section_programmes_desc">Choisissez le programme qui correspond au projet éducatif de votre enfant.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
 
         <!-- PROGRAMME TAHFIZ -->
         <div class="program-card-tahfiz rounded-3xl p-8 shadow-lg" data-aos="fade-right">
@@ -261,6 +261,47 @@
           </div>
 
           <a href="programme-internat" class="block text-center bg-primary hover:bg-primary-dark text-white py-3 rounded-full font-bold text-sm transition shadow-md">
+            <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <!-- EXTERNAT (formule du Tahfiz, sans hébergement) -->
+        <div class="program-card-externat rounded-3xl p-8 shadow-lg" data-aos="fade-up">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-md flex-shrink-0">
+              <i class="fas fa-house-user text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-emerald-700 uppercase tracking-wider" data-i18n="fiche.tahfiz_externat_eyebrow">Formule Tahfiz</p>
+              <h3 class="text-2xl font-extrabold text-gray-900" data-i18n="fiche.tahfiz_externat_title">Externat</h3>
+              <p class="text-sm text-gray-500 mt-1" data-i18n="fiche.tahfiz_externat_age">6 à 12 ans · 9h-17h, cantine incluse</p>
+            </div>
+          </div>
+
+          <p class="text-gray-700 leading-relaxed mb-5" data-i18n="fiche.tahfiz_externat_intro">
+            Mémorisation du Coran de 9h à 17h, sans hébergement — l'enfant rentre chez lui chaque jour. Cantine incluse dans le tarif.
+          </p>
+
+          <div class="bg-emerald-50 rounded-xl p-4 mb-5">
+            <h4 class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3"><i class="fas fa-check-circle mr-1"></i> <span data-i18n="fiche.externat_subjects_title">Au programme</span></h4>
+            <div class="flex flex-wrap">
+              <span class="subject-pill emerald"><i class="fas fa-book-quran"></i> <span data-i18n="fiche.subject_coran">Mémorisation du Coran</span></span>
+              <span class="subject-pill emerald"><i class="fas fa-microphone-alt"></i> <span data-i18n="fiche.subject_tajweed">Tajweed</span></span>
+              <span class="subject-pill emerald"><i class="fas fa-mosque"></i> <span data-i18n="fiche.subject_islamic">Éducation islamique</span></span>
+              <span class="subject-pill emerald"><i class="fas fa-utensils"></i> <span data-i18n="fiche.tahfiz_externat_cantine">Cantine incluse</span></span>
+            </div>
+          </div>
+
+          <div class="text-center py-4 mb-3 border-y border-emerald-200">
+            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1" data-i18n="fiche.tahfiz_externat_price_label">Scolarité mensuelle (externat, cantine incluse)</p>
+            <p class="text-4xl font-extrabold text-emerald-700">50 000<span class="text-base ml-1 font-medium text-gray-600"> XOF</span></p>
+          </div>
+
+          <div class="bg-emerald-50 border-l-4 border-emerald-500 p-3 rounded-r-lg mb-5">
+            <p class="text-sm text-emerald-900"><i class="fas fa-info-circle mr-1"></i> <span data-i18n="fiche.tahfiz_externat_note">Droits d'inscription identiques à l'internat : 55 000 F (réinscription) ou 95 000 F (nouvelle inscription)</span></p>
+          </div>
+
+          <a href="programme-internat#externat" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white py-3 rounded-full font-bold text-sm transition shadow-md">
             <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -394,6 +435,11 @@
                 <td class="py-4 px-3 font-bold text-primary-dark" data-i18n="fiche.tahfiz_title">Tahfiz Internat</td>
                 <td class="py-4 px-3 text-gray-600 text-xs">Scolarité 100 000 F + frais annexes obligatoires 10 000 F (goûter + linge)</td>
                 <td class="py-4 px-3 text-right font-extrabold text-primary-dark">110 000 XOF</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="py-4 px-3 font-bold text-slate-700">Tahfiz Externat</td>
+                <td class="py-4 px-3 text-gray-600 text-xs">Scolarité 50 000 F, cantine incluse (9h-17h)</td>
+                <td class="py-4 px-3 text-right font-extrabold text-slate-700">50 000 XOF</td>
               </tr>
               <tr class="border-b border-gray-100 bg-amber-50/40">
                 <td class="py-4 px-3 font-bold text-secondary-dark" data-i18n="fiche.mixte_title">Mixte Internat</td>

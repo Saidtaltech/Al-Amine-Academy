@@ -84,17 +84,25 @@ Le Tahfiz et le Programme Mixte restent ouverts aux garçons **et** aux filles. 
 
 ## 4. Les programmes
 
-### 4.1 Tahfiz Internat
+### 4.1 Tahfiz
 - **Public** : garçons et filles, 6 à 12 ans (admission stricte, aucune exception en dessous ou au-dessus selon la FAQ fiche de renseignements).
-- **Formule** : **Internat uniquement — pas d'externat** pour le Tahfiz.
 - **Contenu** : mémorisation intégrale du Coran, Tajweed, éducation islamique (Tawhid, Fiqh, Adhkar), arabe, français, sport.
-- **Retour en famille** : chaque quinzaine (aligné sur le Programme Mixte).
-- **Tarif mensuel : 110 000 FCFA**, décomposé en :
-  - Scolarité : 100 000 FCFA
-  - Frais annexes **obligatoires** : 10 000 FCFA (5 000 F goûter + 5 000 F linge)
-- **Inclus dans le tarif** : hébergement, repas (100 % halal), sport et activités.
-- **Frais d'inscription** (une fois) : **55 000 FCFA** (réinscription, élève déjà scolarisé l'année précédente) ou **95 000 FCFA** (nouvelle inscription).
-- **Lieu d'internat** : garçons → Cité SOCABEG ; filles → Cité des Magistrats.
+- **Deux formules :**
+
+  **A. Internat**
+  - **Tarif mensuel : 110 000 FCFA**, décomposé en :
+    - Scolarité : 100 000 FCFA
+    - Frais annexes **obligatoires** : 10 000 FCFA (5 000 F goûter + 5 000 F linge)
+  - **Inclus dans le tarif** : hébergement, repas (100 % halal), sport et activités.
+  - **Lieu d'internat** : garçons → Cité SOCABEG ; filles → Cité des Magistrats.
+  - **Retour en famille** : chaque quinzaine (aligné sur le Programme Mixte).
+
+  **B. Externat**
+  - Ouvert à tous (garçons et filles), 6 à 12 ans, horaires **9h–17h**.
+  - **Tarif mensuel : 50 000 FCFA**, cantine **incluse** (à la différence de l'externat du Programme Mixte, où la cantine est en option).
+  - Pas d'hébergement : l'enfant rentre chez lui chaque jour.
+
+- **Frais d'inscription** (internat comme externat) : **55 000 FCFA** (réinscription, élève déjà scolarisé l'année précédente) ou **95 000 FCFA** (nouvelle inscription).
 - **Option Taekwondo** (facultative, non incluse) : 2 500 FCFA/mois + dobok (tenue officielle, obligatoire pour la pratique) 10 000 FCFA à l'achat, une seule fois.
 - **CFEE** : à l'issue de la mémorisation du Coran, possibilité de suivre une formation de 3 ans pour le Certificat de Fin d'Études Élémentaires (CFEE).
 
@@ -197,6 +205,9 @@ Cours ouverts à tous, en dehors des horaires scolaires, hors mosquées organis�
 **Q : Quel est le tarif du Tahfiz Internat ?**
 R : 110 000 FCFA/mois (100 000 F de scolarité + 10 000 F de frais annexes obligatoires : 5 000 F goûter + 5 000 F linge). Inscription : 55 000 F (réinscription) ou 95 000 F (nouvelle inscription).
 
+**Q : Quel est le tarif du Tahfiz Externat ?**
+R : 50 000 FCFA/mois, cantine incluse. Horaires 9h–17h, ouvert de 6 à 12 ans. Inscription : 55 000 F (réinscription) ou 95 000 F (nouvelle inscription), comme pour l'internat.
+
 **Q : Quel est le tarif du Programme Mixte Internat ?**
 R : 120 000 FCFA/mois (115 000 F de scolarité + 5 000 F de linge obligatoire ; le goûter est offert). Inscription : 55 000 F (réinscription) ou 95 000 F (nouvelle inscription).
 
@@ -204,10 +215,10 @@ R : 120 000 FCFA/mois (115 000 F de scolarité + 5 000 F de linge obligatoire ; 
 R : 65 000 FCFA/mois (45 000 F scolarité + 20 000 F cantine), cours académiques uniquement de 8h à 13h, sans Coran.
 
 **Q : Le Tahfiz propose-t-il un externat ?**
-R : Non, le Tahfiz est un programme internat uniquement.
+R : Oui. Externat Tahfiz : 50 000 FCFA/mois cantine incluse, horaires 9h–17h, 6 à 12 ans, sans hébergement.
 
 **Q : Quelle est la différence entre Tahfiz et Programme Mixte ?**
-R : Le Tahfiz est entièrement dédié à la mémorisation du Coran (internat uniquement). Le Programme Mixte combine mémorisation du Coran le matin (5h–7h) et cursus académique français l'après-midi (8h–13h), avec un choix internat ou externat.
+R : Le Tahfiz est entièrement dédié à la mémorisation du Coran (internat ou externat). Le Programme Mixte combine mémorisation du Coran le matin (5h–7h) et cursus académique français l'après-midi (8h–13h), avec un choix internat ou externat.
 
 **Q : Où sont situés les internats ?**
 R : Depuis la rentrée 2026, l'internat garçons (Tahfiz et Mixte) est à la Cité SOCABEG, et l'internat filles (Tahfiz et Mixte) est à la Cité des Magistrats. Les filles du Programme Mixte se déplacent chaque matin à la Cité SOCABEG pour les cours académiques.
@@ -219,7 +230,7 @@ R : Pour le Tahfiz, les deux (goûter et linge) sont des frais obligatoires en p
 R : Oui, en option facultative payante (non incluse dans le tarif du Tahfiz ni du Mixte) : 2 500 FCFA/mois, plus un dobok (tenue) obligatoire à l'achat, 10 000 FCFA une seule fois.
 
 **Q : Quel est l'âge d'admission ?**
-R : Tahfiz Internat : de 6 à 12 ans, strictement (aucune exception). Programme Mixte : à partir de 6 ans.
+R : Tahfiz (internat comme externat) : de 6 à 12 ans, strictement (aucune exception). Programme Mixte : à partir de 6 ans.
 
 **Q : Les repas sont-ils halal ?**
 R : Oui, 100 % des repas servis sont halal.
