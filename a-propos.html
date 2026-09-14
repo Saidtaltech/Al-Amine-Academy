@@ -15,16 +15,7 @@
   <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
      pour éviter que le contenu ne se décale quand le shell est injecté. */
   try{if(localStorage.getItem("aaa-announce-socabeg-2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
-  <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
-    .timeline-line::after {
-      content: '';
-      position: absolute;
-      left: 23px; top: 56px;
-      width: 2px;
-      height: calc(100% + 24px);
-      background: linear-gradient(180deg, #1e7a9a 0%, transparent 100%);
-    }
-  </style>
+  <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}</style>
 
   <link href="https://alamineacademy.com/a-propos" rel="canonical"/>
   <meta content="À Propos | DAARA Al Amine Academy" property="og:title"/>
@@ -142,42 +133,22 @@
             </p>
           </div>
 
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
-              <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-book-open text-primary"></i>
-              </div>
-              <div>
-                <p class="font-bold text-slate-900 text-sm" data-i18n="about.fact1_title">Hafiz du Coran</p>
-                <p class="text-xs text-slate-500 mt-0.5" data-i18n="about.fact1_desc">Mémorisation complète avec isnâd</p>
-              </div>
+          <div class="flex flex-wrap gap-x-8 gap-y-4 pt-2 border-t border-slate-100">
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-book-open text-primary"></i>
+              <span class="text-slate-800 font-semibold text-sm" data-i18n="about.fact1_title">Hafiz du Coran</span>
             </div>
-            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
-              <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-school text-secondary-dark"></i>
-              </div>
-              <div>
-                <p class="font-bold text-slate-900 text-sm" data-i18n="about.fact2_title">Fondateur 2023</p>
-                <p class="text-xs text-slate-500 mt-0.5" data-i18n="about.fact2_desc">DAARA Al Amine Academy, Dakar</p>
-              </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-school text-secondary-dark"></i>
+              <span class="text-slate-800 font-semibold text-sm" data-i18n="about.fact2_title">Fondateur 2023</span>
             </div>
-            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
-              <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-users text-primary"></i>
-              </div>
-              <div>
-                <p class="font-bold text-slate-900 text-sm" data-i18n="about.fact3_title">+200 Élèves formés</p>
-                <p class="text-xs text-slate-500 mt-0.5" data-i18n="about.fact3_desc">Internat, mixte et en ligne</p>
-              </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-users text-primary"></i>
+              <span class="text-slate-800 font-semibold text-sm" data-i18n="about.fact3_title">+200 élèves formés</span>
             </div>
-            <div class="flex items-start gap-4 bg-white border border-slate-100 rounded-2xl p-4 shadow-sm soft-card">
-              <div class="w-10 h-10 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <i class="fas fa-map-marker-alt text-secondary-dark"></i>
-              </div>
-              <div>
-                <p class="font-bold text-slate-900 text-sm" data-i18n="about.fact4_title">Cité des Magistrats</p>
-                <p class="text-xs text-slate-500 mt-0.5" data-i18n="about.fact4_desc">Derrière Kër Yoff, Dakar</p>
-              </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-map-marker-alt text-secondary-dark"></i>
+              <span class="text-slate-800 font-semibold text-sm" data-i18n="about.fact4_title">Cité des Magistrats</span>
             </div>
           </div>
         </div>
@@ -187,89 +158,44 @@
 
   <!-- ==================== MISSION & VISION ==================== -->
   <section class="py-24 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Photo banner -->
-      <div class="mb-16 reveal">
-        <div class="img-zoom rounded-3xl overflow-hidden shadow-xl h-72">
-          <picture>
-            <source type="image/webp" srcset="assets/img/hero-eleves-coran.webp">
-            <img src="assets/img/hero-eleves-coran.jpg" alt="Élèves en classe à DAARA Al Amine Academy"
-                 class="w-full h-full object-cover" loading="lazy" style="object-position: center 35%">
-          </picture>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-16 items-start">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10">
         <!-- Mission -->
-        <div class="reveal reveal-left">
-          <div class="inline-flex items-center gap-3 mb-5">
-            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-              <i class="fas fa-bullseye text-primary text-xl"></i>
-            </div>
-            <span class="text-primary font-semibold text-sm uppercase tracking-wider" data-i18n="about.mission_label">Notre Mission</span>
+        <div class="reveal reveal-left bg-white rounded-3xl p-8 md:p-10 soft-card border border-slate-100">
+          <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+            <i class="fas fa-bullseye text-primary text-xl"></i>
           </div>
-          <h2 class="text-4xl font-extrabold text-slate-900 mb-6 heading-tight" data-i18n="about.mission_title">
+          <span class="text-primary font-semibold text-xs uppercase tracking-wider" data-i18n="about.mission_label">Notre Mission</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4 heading-tight" data-i18n="about.mission_title">
             Éduquer avec Excellence
           </h2>
-          <p class="text-slate-600 text-lg leading-relaxed mb-8" data-i18n="about.mission_text">
-            Offrir une éducation holistique combinant la mémorisation du Coran noble avec une formation académique solide. Nous formons des jeunes musulmans conscients, cultivés et prêts à contribuer à la société.
+          <p class="text-slate-600 leading-relaxed mb-6" data-i18n="about.mission_text">
+            Offrir une éducation holistique combinant la mémorisation du Coran noble avec une formation académique solide.
           </p>
-          <ul class="space-y-4">
-            <li class="check-row flex items-start gap-3 bg-white border border-slate-100 rounded-2xl px-4 py-3 shadow-sm">
-              <div class="w-6 h-6 bg-primary/15 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                <i class="fas fa-check text-primary text-xs"></i>
-              </div>
-              <span class="text-slate-700 font-medium text-sm" data-i18n="about.mission_bullet1">Mémorisation du Coran certifiée</span>
-            </li>
-            <li class="check-row flex items-start gap-3 bg-white border border-slate-100 rounded-2xl px-4 py-3 shadow-sm">
-              <div class="w-6 h-6 bg-primary/15 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                <i class="fas fa-check text-primary text-xs"></i>
-              </div>
-              <span class="text-slate-700 font-medium text-sm" data-i18n="about.mission_bullet2">Excellence académique reconnue</span>
-            </li>
-            <li class="check-row flex items-start gap-3 bg-white border border-slate-100 rounded-2xl px-4 py-3 shadow-sm">
-              <div class="w-6 h-6 bg-primary/15 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                <i class="fas fa-check text-primary text-xs"></i>
-              </div>
-              <span class="text-slate-700 font-medium text-sm" data-i18n="about.mission_bullet3">Développement personnel intégral</span>
-            </li>
-          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 bg-primary/5 text-primary-dark text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fas fa-check text-[10px]"></i><span data-i18n="about.mission_bullet1">Mémorisation certifiée</span></span>
+            <span class="inline-flex items-center gap-1.5 bg-primary/5 text-primary-dark text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fas fa-check text-[10px]"></i><span data-i18n="about.mission_bullet2">Excellence académique</span></span>
+            <span class="inline-flex items-center gap-1.5 bg-primary/5 text-primary-dark text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fas fa-check text-[10px]"></i><span data-i18n="about.mission_bullet3">Développement personnel</span></span>
+          </div>
         </div>
 
         <!-- Vision -->
-        <div class="reveal reveal-right">
-          <div class="inline-flex items-center gap-3 mb-5">
-            <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
-              <i class="fas fa-eye text-secondary-dark text-xl"></i>
-            </div>
-            <span class="text-secondary-dark font-semibold text-sm uppercase tracking-wider" data-i18n="about.vision_label">Notre Vision</span>
+        <div class="reveal reveal-right bg-white rounded-3xl p-8 md:p-10 soft-card border border-slate-100">
+          <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-5">
+            <i class="fas fa-eye text-secondary-dark text-xl"></i>
           </div>
-          <h2 class="text-4xl font-extrabold text-slate-900 mb-6 heading-tight" data-i18n="about.vision_title">
+          <span class="text-secondary-dark font-semibold text-xs uppercase tracking-wider" data-i18n="about.vision_label">Notre Vision</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4 heading-tight" data-i18n="about.vision_title">
             Bâtir l'Avenir Ensemble
           </h2>
-          <p class="text-slate-600 text-lg leading-relaxed mb-8" data-i18n="about.vision_text">
-            Devenir la référence des écoles coraniques modernes en Afrique de l'Ouest — une institution qui marie tradition islamique et modernité, produisant des leaders pieux, instruits et éthiques.
+          <p class="text-slate-600 leading-relaxed mb-6" data-i18n="about.vision_text">
+            Devenir la référence des écoles coraniques modernes en Afrique de l'Ouest, alliant tradition islamique et modernité.
           </p>
-          <ul class="space-y-4">
-            <li class="check-row flex items-start gap-3 bg-white border border-slate-100 rounded-2xl px-4 py-3 shadow-sm">
-              <div class="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                <i class="fas fa-star text-secondary-dark text-xs"></i>
-              </div>
-              <span class="text-slate-700 font-medium text-sm" data-i18n="about.vision_bullet1">Infrastructure moderne et sécurisée</span>
-            </li>
-            <li class="check-row flex items-start gap-3 bg-white border border-slate-100 rounded-2xl px-4 py-3 shadow-sm">
-              <div class="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                <i class="fas fa-star text-secondary-dark text-xs"></i>
-              </div>
-              <span class="text-slate-700 font-medium text-sm" data-i18n="about.vision_bullet2">Enseignants qualifiés et dévoués</span>
-            </li>
-            <li class="check-row flex items-start gap-3 bg-white border border-slate-100 rounded-2xl px-4 py-3 shadow-sm">
-              <div class="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                <i class="fas fa-star text-secondary-dark text-xs"></i>
-              </div>
-              <span class="text-slate-700 font-medium text-sm" data-i18n="about.vision_bullet3">Réseau international de collaboration</span>
-            </li>
-          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 bg-secondary/10 text-secondary-dark text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fas fa-star text-[10px]"></i><span data-i18n="about.vision_bullet1">Infrastructure moderne</span></span>
+            <span class="inline-flex items-center gap-1.5 bg-secondary/10 text-secondary-dark text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fas fa-star text-[10px]"></i><span data-i18n="about.vision_bullet2">Enseignants qualifiés</span></span>
+            <span class="inline-flex items-center gap-1.5 bg-secondary/10 text-secondary-dark text-xs font-semibold px-3 py-1.5 rounded-full"><i class="fas fa-star text-[10px]"></i><span data-i18n="about.vision_bullet3">Réseau international</span></span>
+          </div>
         </div>
       </div>
     </div>
@@ -345,53 +271,45 @@
         </p>
       </div>
 
-      <div class="relative">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Timeline Item 1 -->
-        <div class="timeline-line mb-12 relative pl-16 reveal">
-          <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center shadow-lg">
+        <div class="reveal text-center lg:text-left">
+          <div class="w-12 h-12 mx-auto lg:mx-0 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center shadow-lg mb-4">
             <i class="fas fa-flag text-white text-lg"></i>
           </div>
-          <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-            <p class="text-xs font-bold text-primary uppercase tracking-wider mb-2">2023</p>
-            <h3 class="text-2xl font-bold text-slate-900 mb-2" data-i18n="about.timeline_event1_title">Fondation</h3>
-            <p class="text-slate-600" data-i18n="about.timeline_event1_desc">DAARA Al Amine Academy est fondée par Oustaz Al Amine Niang avec une vision claire : créer une école coranique moderne alliant tradition et innovation à Dakar.</p>
-          </div>
+          <p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">2023</p>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5" data-i18n="about.timeline_event1_title">Fondation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about.timeline_event1_desc">Créer une école coranique moderne alliant tradition et innovation à Dakar.</p>
         </div>
 
         <!-- Timeline Item 2 -->
-        <div class="timeline-line mb-12 relative pl-16 reveal reveal-delay-2">
-          <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-secondary to-secondary-dark rounded-full flex items-center justify-center shadow-lg">
+        <div class="reveal reveal-delay-2 text-center lg:text-left">
+          <div class="w-12 h-12 mx-auto lg:mx-0 bg-gradient-to-br from-secondary to-secondary-dark rounded-full flex items-center justify-center shadow-lg mb-4">
             <i class="fas fa-graduation-cap text-gray-900 text-lg"></i>
           </div>
-          <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-            <p class="text-xs font-bold text-secondary-dark uppercase tracking-wider mb-2">2023 – 2024</p>
-            <h3 class="text-2xl font-bold text-slate-900 mb-2" data-i18n="about.timeline_event2_title">Première promotion</h3>
-            <p class="text-slate-600" data-i18n="about.timeline_event2_desc">Lancement du programme Tahfiz Internat avec une première cohorte d'élèves. Inauguration de nos installations modernes à la Cité des Magistrats.</p>
-          </div>
+          <p class="text-xs font-bold text-secondary-dark uppercase tracking-wider mb-1">2023 – 2024</p>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5" data-i18n="about.timeline_event2_title">Première promotion</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about.timeline_event2_desc">Lancement du Tahfiz Internat et inauguration de nos installations à la Cité des Magistrats.</p>
         </div>
 
         <!-- Timeline Item 3 -->
-        <div class="timeline-line mb-12 relative pl-16 reveal reveal-delay-4">
-          <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-primary-dark to-primary rounded-full flex items-center justify-center shadow-lg">
+        <div class="reveal reveal-delay-4 text-center lg:text-left">
+          <div class="w-12 h-12 mx-auto lg:mx-0 bg-gradient-to-br from-primary-dark to-primary rounded-full flex items-center justify-center shadow-lg mb-4">
             <i class="fas fa-book-open text-white text-lg"></i>
           </div>
-          <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-            <p class="text-xs font-bold text-primary uppercase tracking-wider mb-2">2024 – 2026</p>
-            <h3 class="text-2xl font-bold text-slate-900 mb-2" data-i18n="about.timeline_event3_title">Expansion</h3>
-            <p class="text-slate-600" data-i18n="about.timeline_event3_desc">Ouverture du programme mixte en externat et des cours en ligne. Renforcement de l'équipe pédagogique, passage à plus de 200 élèves. Lancement des conférences et du camp de vacances.</p>
-          </div>
+          <p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">2024 – 2026</p>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5" data-i18n="about.timeline_event3_title">Expansion</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about.timeline_event3_desc">Programme mixte, cours en ligne, plus de 200 élèves, conférences et camp de vacances.</p>
         </div>
 
         <!-- Timeline Item 4 -->
-        <div class="relative pl-16 reveal reveal-delay-6">
-          <div class="absolute left-0 top-0 w-12 h-12 bg-gradient-to-br from-secondary-dark to-secondary rounded-full flex items-center justify-center shadow-lg">
+        <div class="reveal reveal-delay-6 text-center lg:text-left">
+          <div class="w-12 h-12 mx-auto lg:mx-0 bg-gradient-to-br from-secondary-dark to-secondary rounded-full flex items-center justify-center shadow-lg mb-4">
             <i class="fas fa-star text-white text-lg"></i>
           </div>
-          <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-            <p class="text-xs font-bold text-secondary-dark uppercase tracking-wider mb-2" data-i18n="about.timeline_event4_year">2027 et au-delà</p>
-            <h3 class="text-2xl font-bold text-slate-900 mb-2" data-i18n="about.timeline_event4_title">Vision 2027</h3>
-            <p class="text-slate-600" data-i18n="about.timeline_event4_desc">Devenir une référence ouest-africaine de l'éducation coranique moderne : nouveau campus, cycle secondaire complet jusqu'au baccalauréat, et programme de bourses pour les familles méritantes.</p>
-          </div>
+          <p class="text-xs font-bold text-secondary-dark uppercase tracking-wider mb-1" data-i18n="about.timeline_event4_year">2027 et au-delà</p>
+          <h3 class="text-lg font-bold text-slate-900 mb-1.5" data-i18n="about.timeline_event4_title">Vision 2027</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="about.timeline_event4_desc">Nouveau campus, cycle secondaire jusqu'au bac, bourses pour les familles méritantes.</p>
         </div>
       </div>
     </div>

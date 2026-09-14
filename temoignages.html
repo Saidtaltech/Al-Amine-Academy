@@ -26,63 +26,13 @@
 
   <style>
     body { font-family: 'Montserrat', sans-serif; }
-    .arabic-text { font-family: 'Amiri', serif; direction: rtl; }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .gradient-animate {
-      background-size: 200% 200%;
-      animation: gradientShift 8s ease infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    .float { animation: float 6s ease-in-out infinite; }
-    .float-delay { animation: float 6s ease-in-out 2s infinite; }
-
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 20px rgba(30, 122, 154, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(30, 122, 154, 0.6); }
-    }
-    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
-
-    .card-3d {
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .card-3d:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    .nav-scrolled {
-      background: rgba(255,255,255,0.95) !important;
-      backdrop-filter: blur(20px);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    }
-    .dark .nav-scrolled {
-      background: rgba(15,23,42,0.95) !important;
-    }
-
-    * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
-
-    .text-gradient {
-      background: linear-gradient(135deg, #1e7a9a, #1e7a9a, #f59e0b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
     html { scroll-behavior: smooth; }
-
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e7a9a, #1e7a9a); border-radius: 10px; }
-    .dark ::-webkit-scrollbar-track { background: #1e293b; }
+    .line-clamp-5 {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   </style>
 
   <link href="https://alamineacademy.com/temoignages" rel="canonical"/>
@@ -123,20 +73,22 @@
   </section>
 
   <!-- ==================== STATISTICS SECTION ==================== -->
-  <section class="py-16 bg-white relative -mt-8">
+  <section class="py-14 bg-white relative -mt-8">
     <div class="container mx-auto px-4 lg:px-8 relative z-10">
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 text-white shadow-xl card-3d text-center reveal">
-          <div class="text-5xl font-extrabold mb-2" data-counter="200" data-counter-suffix="+">200+</div>
-          <p class="text-lg opacity-90" data-i18n="testimonials_page.stat_families">Familles satisfaites</p>
-        </div>
-        <div class="bg-gradient-to-br from-secondary to-secondary-dark rounded-3xl p-8 text-gray-900 shadow-xl card-3d text-center reveal reveal-delay-2">
-          <div class="text-5xl font-extrabold mb-2" data-counter="4.9" data-counter-suffix="/5" data-counter-decimal="true">4.9/5</div>
-          <p class="text-lg opacity-90" data-i18n="testimonials_page.stat_rating">Note moyenne</p>
-        </div>
-        <div class="bg-gradient-to-br from-primary-dark to-primary rounded-3xl p-8 text-white shadow-xl card-3d text-center reveal reveal-delay-4">
-          <div class="text-5xl font-extrabold mb-2" data-counter="98" data-counter-suffix="%">98%</div>
-          <p class="text-lg opacity-90" data-i18n="testimonials_page.stat_recommend">Satisfaction (avis Google)</p>
+      <div class="bg-white rounded-3xl border border-slate-100 soft-card shadow-[0_4px_20px_-8px_rgba(0,0,0,0.06)] px-8 py-8 reveal">
+        <div class="grid grid-cols-3 divide-x divide-slate-100 text-center">
+          <div>
+            <div class="text-4xl lg:text-5xl font-extrabold text-primary mb-1" data-counter="200" data-counter-suffix="+">200+</div>
+            <p class="text-sm lg:text-base text-slate-500 font-medium" data-i18n="testimonials_page.stat_families">Familles satisfaites</p>
+          </div>
+          <div>
+            <div class="text-4xl lg:text-5xl font-extrabold text-secondary-dark mb-1" data-counter="4.9" data-counter-suffix="/5" data-counter-decimal="true">4.9/5</div>
+            <p class="text-sm lg:text-base text-slate-500 font-medium" data-i18n="testimonials_page.stat_rating">Note moyenne</p>
+          </div>
+          <div>
+            <div class="text-4xl lg:text-5xl font-extrabold text-primary mb-1" data-counter="98" data-counter-suffix="%">98%</div>
+            <p class="text-sm lg:text-base text-slate-500 font-medium" data-i18n="testimonials_page.stat_recommend">Satisfaction (avis Google)</p>
+          </div>
         </div>
       </div>
     </div>
@@ -164,7 +116,8 @@
       <!-- Testimonials Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Testimonial 1 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl">T</div>
             <div>
@@ -179,14 +132,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_1">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_1">
             "J'ai mis 5 étoiles parce que c'est le maximum qu'on peut noter, sinon vous méritez plus. À peine 1 an que nos enfants sont rentrés dans votre école, franchement on ne le regrette pas."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal reveal-delay-2">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal reveal-delay-2">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-secondary to-secondary-dark rounded-full flex items-center justify-center text-gray-900 font-bold text-xl">S</div>
             <div>
@@ -201,14 +155,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_2">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_2">
             "Je suis plus que satisfaite du Daara Al amine, j'y avais laissé mes deux enfants mais machallah que de bons retours de leur part. Merci encore pour le professionnalisme."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal reveal-delay-4">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal reveal-delay-4">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl">D</div>
             <div>
@@ -223,14 +178,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_3">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_3">
             "Je recommande vivement cette Daara. J'y ai inscrit mon petit frère de 9 ans et en moins de 2 mois, il est devenu poli, posé et studieux dans ses prières. Sa lecture coranique est devenue très fluide. Alhamdulillah."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 4 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal reveal-delay-6">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal reveal-delay-6">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-coral to-coral-dark rounded-full flex items-center justify-center text-white font-bold text-xl">B</div>
             <div>
@@ -245,14 +201,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star-half-alt text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_4">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_4">
             "Machallah le daara Al amine. Les cours couvrent quotidiennement le Coran, le Tajweed et le Fiqh avec une excellente pédagogie. Mon enfant a appris à réciter avec fluidité et à maîtriser les règles de prononciation."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 5 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal reveal-delay-8">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal reveal-delay-8">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-primary/80 to-primary rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>
             <div>
@@ -267,14 +224,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_5">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_5">
             "Je recommande vivement. Le contenu pédagogique est structuré, le local est impeccable avec vidéosurveillance 24/7, et les oustaz sont compétents et bienveillants. Alhamdulillah."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 6 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-secondary/80 to-secondary-dark rounded-full flex items-center justify-center text-gray-900 font-bold text-xl">A</div>
             <div>
@@ -289,14 +247,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_6">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_6">
             "C'est la discipline qui m'a frappé en particulier. En 3 mois, mon enfant a gagné en responsabilité, en ponctualité aux prières, et en respect des aînés. Masha Allah la transformation."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 7 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl">A</div>
             <div>
@@ -311,14 +270,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_7">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_7">
             "Très bon internat, bien structuré avec une pédagogie d'excellence. Mon enfant a progressé de 5 sourates en un été et a consolidé sa maîtrise du Tajweed. Progression visible chaque semaine."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 8 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl">M</div>
             <div>
@@ -333,14 +293,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_8">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_8">
             "La famille Amar vous remercie infiniment. Nos enfants ont non seulement mémorisé 3 nouvelles sourates, mais ils sont revenus transformés — plus respectueux, plus disciplinés, avec une vraie pratique islamique."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 9 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-secondary to-secondary-dark rounded-full flex items-center justify-center text-gray-900 font-bold text-xl">D</div>
             <div>
@@ -355,14 +316,15 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_9">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_9">
             "Franchement macha'Allah — l'encadrement est excellent, les repas sont savoureux et nutritifs, et l'ambiance est vraiment fraternelle. Mes enfants demandent déjà à revenir l'année prochaine."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>
         </div>
 
         <!-- Testimonial 10 -->
-        <div class="bg-white rounded-3xl p-8 card-3d border border-gray-100 reveal">
+        <div class="relative overflow-hidden bg-white rounded-3xl p-8 soft-card border border-slate-100 reveal">
+          <i class="fas fa-quote-left absolute top-5 right-6 text-5xl pointer-events-none" style="color:rgba(30,122,154,.08)"></i>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl">Z</div>
             <div>
@@ -377,7 +339,7 @@
             <i class="fas fa-star text-secondary"></i>
             <i class="fas fa-star text-secondary"></i>
           </div>
-          <p class="text-gray-600 mb-4" data-i18n="testimonials_page.quote_10">
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-5" data-i18n="testimonials_page.quote_10">
             "Merci infiniment à l'Académie Daara Al Amine, nous sommes comblés. Ma fille a maîtrisé la Juz' Amma en 2 mois, elle récite maintenant avec élégance et confiance. Al-Hamdulillah pour cette excellente école."
           </p>
           <p class="text-xs text-gray-500" data-i18n="testimonials_page.source_google">Google Review</p>

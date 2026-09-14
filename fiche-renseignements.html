@@ -56,6 +56,7 @@
     }
 
     /* Program card */
+    .program-card-tahfiz, .program-card-mixte, .program-card-externat-tahfiz, .program-card-externat-mixte { display: flex; flex-direction: column; height: 100%; }
     .program-card-tahfiz          { border-top: 4px solid #1e7a9a; background: linear-gradient(155deg,#fff 0%, #f0f9fc 100%); }
     .program-card-mixte           { border-top: 4px solid #f59e0b; background: linear-gradient(155deg,#fff 0%, #fef9ec 100%); }
     .program-card-externat-tahfiz { border-top: 4px solid #1e7a9a; background: #fff; }
@@ -81,17 +82,6 @@
 
     /* Sticky CTA + FAQ */
     .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
-
-    /* FAQ accordion */
-    .faq-item { transition: box-shadow .25s ease, border-color .25s ease; }
-    .faq-item:hover { box-shadow: 0 4px 24px -8px rgba(30,122,154,.15); border-color: rgba(30,122,154,.25) !important; }
-    .faq-item summary { cursor: pointer; list-style: none; }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item[open] .faq-icon { transform: rotate(45deg); background-color: #1e7a9a; color: #fff; }
-    .faq-icon { transition: transform .3s cubic-bezier(.34,1.56,.64,1), background-color .25s, color .25s; }
-    .faq-answer { animation: faqSlide .28s ease; }
-    @keyframes faqSlide { from { opacity:0; transform:translateY(-6px); } to { opacity:1; transform:translateY(0); } }
-    html[dir="rtl"] .faq-item summary { flex-direction: row-reverse; }
 
     /* Section anchors offset for fixed nav */
     .anchor { scroll-margin-top: 90px; }
@@ -257,7 +247,7 @@
             <p class="text-sm text-primary-dark"><i class="fas fa-info-circle mr-1"></i> <strong data-i18n="fiche.cfee_label">CFEE :</strong> <span data-i18n="fiche.cfee_text">à l'issue de la mémorisation du Coran, possibilité de suivre une formation de 3 ans pour le Certificat de Fin d'Études Élémentaires.</span></p>
           </div>
 
-          <a href="programme-internat" class="block text-center bg-primary hover:bg-primary-dark text-white py-3 rounded-full font-bold text-sm transition shadow-md">
+          <a href="programme-internat" class="mt-auto block text-center bg-primary hover:bg-primary-dark text-white py-3 rounded-full font-bold text-sm transition shadow-md">
             <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -270,7 +260,7 @@
             </div>
             <div>
               <p class="text-xs font-bold text-primary-dark uppercase tracking-wider" data-i18n="fiche.tahfiz_externat_eyebrow">Formule Tahfiz</p>
-              <h3 class="text-2xl font-extrabold text-gray-900" data-i18n="fiche.tahfiz_externat_title">Externat</h3>
+              <h3 class="text-2xl font-extrabold text-gray-900" data-i18n="fiche.tahfiz_externat_title">Tahfiz Externat</h3>
               <p class="text-sm text-gray-500 mt-1" data-i18n="fiche.tahfiz_externat_age">6 à 12 ans · 9h-17h, cantine incluse</p>
             </div>
           </div>
@@ -298,7 +288,7 @@
             <p class="text-sm text-primary-dark"><i class="fas fa-info-circle mr-1"></i> <span data-i18n="fiche.tahfiz_externat_note">Droits d'inscription identiques à l'internat : 55 000 F (réinscription) ou 95 000 F (nouvelle inscription)</span></p>
           </div>
 
-          <a href="programme-internat#externat" class="block text-center bg-primary hover:bg-primary-dark text-white py-3 rounded-full font-bold text-sm transition shadow-md">
+          <a href="programme-internat#externat" class="mt-auto block text-center bg-primary hover:bg-primary-dark text-white py-3 rounded-full font-bold text-sm transition shadow-md">
             <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -343,7 +333,7 @@
             <p class="text-sm text-amber-900"><i class="fas fa-info-circle mr-1"></i> <strong>115 000 F</strong> scolarité + <strong>5 000 F</strong> frais de linge obligatoires — le goûter est offert</p>
           </div>
 
-          <a href="programme-mixte" class="block text-center bg-secondary hover:bg-secondary-dark text-gray-900 py-3 rounded-full font-bold text-sm transition shadow-md">
+          <a href="programme-mixte" class="mt-auto block text-center bg-secondary hover:bg-secondary-dark text-gray-900 py-3 rounded-full font-bold text-sm transition shadow-md">
             <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -384,7 +374,7 @@
             <p class="text-sm text-amber-900"><i class="fas fa-info-circle mr-1"></i> <span data-i18n="fiche.externat_note">+ 20 000 F cantine en option — droits d'inscription identiques aux internats : 55 000 F (réinscription) ou 95 000 F (nouvelle inscription)</span></p>
           </div>
 
-          <a href="programme-mixte#externat" class="block text-center bg-secondary hover:bg-secondary-dark text-gray-900 py-3 rounded-full font-bold text-sm transition shadow-md">
+          <a href="programme-mixte#externat" class="mt-auto block text-center bg-secondary hover:bg-secondary-dark text-gray-900 py-3 rounded-full font-bold text-sm transition shadow-md">
             <span data-i18n="fiche.btn_learn_more">Voir le programme complet</span> <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -564,124 +554,100 @@
       </div>
       <div class="space-y-3">
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq1_q">Quel est l'âge minimum pour l'admission ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq1_q">Quel est l'âge minimum pour l'admission ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq1_a">Pour le Programme Mixte, les enfants sont acceptés à partir de 4 ans. Pour le Tahfiz Internat, l'âge d'admission est strictement fixé de 6 à 12 ans (aucune exception en dessous ou au-dessus).</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq1_a">Pour le Programme Mixte, les enfants sont acceptés à partir de 4 ans. Pour le Tahfiz Internat, l'âge d'admission est strictement fixé de 6 à 12 ans (aucune exception en dessous ou au-dessus).</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq2_q">Des bourses sont-elles disponibles ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq2_q">Des bourses sont-elles disponibles ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq2_a">Oui, nous offrons des bourses partielles.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq2_a">Oui, nous offrons des bourses partielles.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq3_q">Quelle est la durée de l'année scolaire ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq3_q">Quelle est la durée de l'année scolaire ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq3_a">L'année scolaire débute en septembre et se termine en juillet.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq3_a">L'année scolaire débute en septembre et se termine en juillet.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq4_q">Puis-je changer de programme après l'inscription ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq4_q">Puis-je changer de programme après l'inscription ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq4_a">Oui, un changement est possible avant la fin du premier mois scolaire.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq4_a">Oui, un changement est possible avant la fin du premier mois scolaire.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq5_q">Comment fonctionnent les cours en ligne ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq5_q">Comment fonctionnent les cours en ligne ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq5_a">Les cours sont dispensés via Google Meet chaque samedi et dimanche.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq5_a">Les cours sont dispensés via Google Meet chaque samedi et dimanche.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq6_q">Les repas servis sont-ils halal ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq6_q">Les repas servis sont-ils halal ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq6_a">Oui, tous les repas servis à l'académie sont 100 % halal.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq6_a">Oui, tous les repas servis à l'académie sont 100 % halal.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq7_q">À quelle fréquence mon enfant peut-il rentrer à la maison ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq7_q">À quelle fréquence mon enfant peut-il rentrer à la maison ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq7_a">Le retour en famille se fait chaque quinzaine, aussi bien pour le Tahfiz Internat que pour le Programme Mixte, selon le calendrier convenu avec les parents (généralement du vendredi après-midi au dimanche).</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq7_a">Le retour en famille se fait chaque quinzaine, aussi bien pour le Tahfiz Internat que pour le Programme Mixte, selon le calendrier convenu avec les parents (généralement du vendredi après-midi au dimanche).</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq8_q">Y a-t-il un test d'entrée ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq8_q">Y a-t-il un test d'entrée ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq8_a">Non, pas de test écrit — un entretien de 30 minutes avec l'administration suffit.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq8_a">Non, pas de test écrit — un entretien de 30 minutes avec l'administration suffit.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq9_q">Quels documents sont requis pour l'inscription ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq9_q">Quels documents sont requis pour l'inscription ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq9_a">Acte de naissance, 2 photos, pièce d'identité d'un parent, certificat médical et bulletins scolaires.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq9_a">Acte de naissance, 2 photos, pièce d'identité d'un parent, certificat médical et bulletins scolaires.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq10_q">Quels moyens de paiement sont acceptés ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq10_q">Quels moyens de paiement sont acceptés ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq10_a">Espèces sur place, Wave, Orange Money ou virement bancaire.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq10_a">Espèces sur place, Wave, Orange Money ou virement bancaire.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq11_q">Comment se passe l'encadrement de nuit et en cas d'urgence médicale ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq11_q">Comment se passe l'encadrement de nuit et en cas d'urgence médicale ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq11_a">Un encadrement est assuré 24h/24, avec des adultes dormant auprès des enfants, sous vidéosurveillance et dans le respect strict du « zéro châtiment corporel ». En cas d'urgence médicale, l'enfant est immédiatement pris en charge et les parents sont contactés sans délai au +221 77 774 37 00 (également joignable par WhatsApp, disponible 24h/24) ; pour toute décision médicale non urgente, l'accord préalable des parents est requis.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq11_a">Un encadrement est assuré 24h/24, avec des adultes dormant auprès des enfants, sous vidéosurveillance et dans le respect strict du « zéro châtiment corporel ». En cas d'urgence médicale, l'enfant est immédiatement pris en charge et les parents sont contactés sans délai au +221 77 774 37 00 (également joignable par WhatsApp, disponible 24h/24) ; pour toute décision médicale non urgente, l'accord préalable des parents est requis.</p>
         </details>
 
-        <details class="faq-item bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden" data-aos="fade-up">
-          <summary class="flex items-center justify-between gap-4 px-6 py-5">
-            <span class="font-semibold text-gray-900 text-sm md:text-base leading-snug" data-i18n="admission.faq12_q">Puis-je rendre visite à mon enfant en semaine ?</span>
-            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-plus text-xs"></i></span>
+        <details class="faq-item" data-aos="fade-up">
+          <summary class="flex items-center justify-between gap-4">
+            <span class="faq-q" data-i18n="admission.faq12_q">Puis-je rendre visite à mon enfant en semaine ?</span>
+            <span class="faq-icon"><i class="fas fa-plus text-xs"></i></span>
           </summary>
-          <div class="faq-answer px-6 pb-5 pt-1 border-t border-gray-100">
-            <p class="text-sm text-gray-600 leading-relaxed" data-i18n="admission.faq12_a">Les visites en semaine restent occasionnelles et se font sur demande auprès de l'administration. Le retour en famille reste la norme, chaque quinzaine, pour le Tahfiz Internat comme pour le Programme Mixte.</p>
-          </div>
+          <p class="faq-a" data-i18n="admission.faq12_a">Les visites en semaine restent occasionnelles et se font sur demande auprès de l'administration. Le retour en famille reste la norme, chaque quinzaine, pour le Tahfiz Internat comme pour le Programme Mixte.</p>
         </details>
 
       </div>
