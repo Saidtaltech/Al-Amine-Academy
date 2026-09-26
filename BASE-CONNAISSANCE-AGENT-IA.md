@@ -25,7 +25,7 @@ Ces règles priment sur tout le reste. L'objectif : ne jamais transmettre une in
 
 - **Nom** : DAARA Al Amine Academy (aussi écrit "Institut Al Amine Academy" pour certaines activités).
 - **Fondateur** : Oustaz Al Amine Niang, Hafiz du Coran et éducateur.
-- **Fondation** : 2023.
+- **Fondation** : 2022.
 - **Mission** : offrir aux enfants sénégalais une éducation islamique d'excellence, alliant mémorisation intégrale du Coran et solide formation académique française.
 - **Valeurs mises en avant** : excellence académique reconnue, mémorisation du Coran certifiée, développement personnel intégral, modernité (intégration de la technologie et de méthodes pédagogiques contemporaines sans compromettre les valeurs islamiques).
 - **Réputation** : 4,9/5 sur 15 avis Google. 95 % des enseignants ont au moins 3 ans d'expérience (80 % niveau Licence, 5 % niveau Master).

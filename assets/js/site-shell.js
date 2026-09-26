@@ -340,7 +340,7 @@
     +     '</div>'
 
     +     '<div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-400">'
-    +       '<p data-i18n="footer.copyright">© 2023–2026 DAARA Al Amine Academy. Tous droits réservés.</p>'
+    +       '<p data-i18n="footer.copyright">© 2022–2026 DAARA Al Amine Academy. Tous droits réservés.</p>'
     +       '<div class="flex gap-6">'
     +         '<a href="mailto:contact@alamineacademy.com?subject=Politique%20de%20confidentialit%C3%A9" data-i18n="footer.privacy">Politique de confidentialité</a>'
     +         '<a href="mailto:contact@alamineacademy.com?subject=Conditions%20d%27utilisation" data-i18n="footer.terms">Conditions d\'utilisation</a>'

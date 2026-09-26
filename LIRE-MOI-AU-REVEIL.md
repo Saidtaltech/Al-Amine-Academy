@@ -36,7 +36,7 @@ git push origin main
 
 1. Ouvre https://alamineacademy.com
 2. Fais **Ctrl+Shift+R** (recharge sans cache)
-3. Le hero doit afficher : « Offrez à votre enfant une éducation coranique d'excellence » + le sous-texte + les deux CTAs + la barre de stats (4.9/5, 200+, 3, 2023)
+3. Le hero doit afficher : « Offrez à votre enfant une éducation coranique d'excellence » + le sous-texte + les deux CTAs + la barre de stats (4.9/5, 200+, 4, 2022)
 4. Clique sur **EN** en haut à droite → tout doit basculer en anglais avec un toast en bas à gauche
 5. Clique sur **ع** → bascule en arabe + RTL automatique
 6. Scrolle → la bande tarifs jaune doit apparaître, puis les sections « Les défis des parents », « Nous comprenons vos inquiétudes », etc.
