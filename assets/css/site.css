@@ -632,6 +632,9 @@ html.aaa-reveal-ready [data-aos="zoom-in"]:not(.aos-animate)    { transform: sca
   overflow: hidden;
 }
 .aaa-announce > i:first-child { color: #fbbf24; flex-shrink: 0; }
+.aaa-announce-urgent { background: linear-gradient(90deg, #be123c, #9f1239); }
+.aaa-announce-urgent > i:first-child { color: #fde68a; animation: aaa-pulse 1.6s ease-in-out infinite; }
+@keyframes aaa-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
 .aaa-announce span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .aaa-announce a {
   color: #fbbf24; text-decoration: underline; font-weight: 800;

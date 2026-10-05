@@ -355,16 +355,16 @@
     +   '<i class="fab fa-whatsapp"></i>'
     + '</a>';
 
-  /* ====================  ANNONCE RENTRÉE — NOUVEAU LOCAL  ==================== */
-  var ANNOUNCE_ID = 'aaa-announce-socabeg-2026';
+  /* ====================  ANNONCE RENTRÉE — REPORT AU 15 OCTOBRE  ==================== */
+  var ANNOUNCE_ID = 'aaa-announce-report-15oct-2026';
   var ANNOUNCE_HTML = ''
-    + '<div id="' + ANNOUNCE_ID + '" class="aaa-announce">'
-    +   '<i class="fas fa-bullhorn" aria-hidden="true"></i>'
-    +   '<span class="aaa-announce-short" data-i18n="announce.text_short">Rentrée 2026 : nouveaux locaux</span>'
-    +   '<span class="aaa-announce-long" data-i18n="announce.text">Rentrée 2026 : internat garçons désormais à la Cité SOCABEG, internat filles à la Cité des Magistrats.</span>'
+    + '<div id="' + ANNOUNCE_ID + '" class="aaa-announce aaa-announce-urgent">'
+    +   '<i class="fas fa-triangle-exclamation" aria-hidden="true"></i>'
+    +   '<span class="aaa-announce-short" data-i18n="announce.text_short">Rentrée reportée au 15 octobre</span>'
+    +   '<span class="aaa-announce-long" data-i18n="announce.text">Rentrée scolaire reportée au 15 octobre 2026 : imprévus sur l\'aménagement des locaux et inondations à Dakar.</span>'
     +   '<a href="' + ASSET_PREFIX + 'programme-internat">'
     +     '<span class="aaa-announce-short" data-i18n="announce.cta_short">Détails</span>'
-    +     '<span class="aaa-announce-long" data-i18n="announce.cta">Voir le nouveau local</span>'
+    +     '<span class="aaa-announce-long" data-i18n="announce.cta">En savoir plus</span>'
     +   '</a>'
     +   '<button id="aaa-announce-close" type="button" aria-label="Fermer l\'annonce" data-i18n-attr="aria-label:announce.close">'
     +     '<i class="fas fa-times" aria-hidden="true"></i>'

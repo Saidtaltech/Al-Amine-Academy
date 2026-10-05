@@ -37,9 +37,9 @@
     "rentree_text": "Internat garçons à la Cité SOCABEG, internat filles à la Cité des Magistrats"
   },
   "announce": {
-    "text_short": "Rentrée 2026 : nouveaux locaux",
-    "text": "Rentrée 2026 : internat garçons désormais à la Cité SOCABEG, internat filles à la Cité des Magistrats. ",
-    "cta": "Voir le nouveau local",
+    "text_short": "Rentrée reportée au 15 octobre",
+    "text": "Rentrée scolaire reportée au 15 octobre 2026 : imprévus sur l'aménagement des locaux et inondations à Dakar. ",
+    "cta": "En savoir plus",
     "cta_short": "Détails",
     "close": "Fermer l'annonce"
   },
@@ -179,7 +179,7 @@
     "problems_eyebrow": "Les défis",
     "programs_eyebrow": "Nos formations",
     "testimonials_eyebrow": "Avis Google",
-    "rentree_banner": "Rentrée scolaire 2026-2027 : ouverture le <strong>8 octobre 2026 à 6h</strong>. Les enfants regagnent l'internat dès le <strong>7 octobre</strong>."
+    "rentree_banner": "<span class=\"uppercase tracking-wide\">Report de la rentrée</span> — Rentrée scolaire 2026-2027 reportée au <strong>15 octobre 2026</strong> en raison d'imprévus liés à l'aménagement des locaux et aux inondations à Dakar. Merci de votre compréhension."
   },
   "about": {
     "hero_title": "À propos de DAARA Al Amine Academy",
