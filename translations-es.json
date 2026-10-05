@@ -37,9 +37,9 @@
     "rentree_text": "Internado de niños ahora en Cité SOCABEG, el de niñas en Cité des Magistrats"
   },
   "announce": {
-    "text_short": "Curso 2026: nuevos locales",
-    "text": "Curso 2026: el internado de niños está ahora en Cité SOCABEG, el de niñas en Cité des Magistrats. ",
-    "cta": "Ver el nuevo local",
+    "text_short": "Inicio de curso postergado al 15 oct.",
+    "text": "El curso 2026-2027 se postergó al 15 de octubre de 2026: imprevistos en las obras del local e inundaciones en Dakar. ",
+    "cta": "Más información",
     "cta_short": "Detalles",
     "close": "Cerrar el aviso"
   },
@@ -179,7 +179,7 @@
     "problems_eyebrow": "Los desafíos",
     "programs_eyebrow": "Nuestros programas",
     "testimonials_eyebrow": "Reseñas de Google",
-    "rentree_banner": "Apertura del año escolar 2026-2027: <strong>8 de octubre de 2026 a las 6h</strong>. Los internos regresan el <strong>7 de octubre</strong>."
+    "rentree_banner": "<span class=\"uppercase tracking-wide\">Inicio de curso postergado</span> — El año escolar 2026-2027 se posterga al <strong>15 de octubre de 2026</strong> debido a imprevistos en las obras del local y a las inundaciones en Dakar. Gracias por su comprensión."
   },
   "about": {
     "hero_title": "Sobre DAARA Al Amine Academy",

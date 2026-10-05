@@ -37,9 +37,9 @@
     "rentree_text": "Boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats"
   },
   "announce": {
-    "text_short": "2026 intake: new premises",
-    "text": "2026 enrollment: boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats. ",
-    "cta": "See the new location",
+    "text_short": "School start postponed to Oct 15",
+    "text": "2026-2027 school year postponed to October 15, 2026: unforeseen facility works and flooding in Dakar. ",
+    "cta": "Learn more",
     "cta_short": "Details",
     "close": "Close announcement"
   },
@@ -179,7 +179,7 @@
     "problems_eyebrow": "The challenges",
     "programs_eyebrow": "Our programs",
     "testimonials_eyebrow": "Google Reviews",
-    "rentree_banner": "2026-2027 school year opening: <strong>October 8, 2026 at 6am</strong>. Boarding students return on <strong>October 7</strong>."
+    "rentree_banner": "<span class=\"uppercase tracking-wide\">School start postponed</span> — The 2026-2027 school year is postponed to <strong>October 15, 2026</strong> due to unforeseen facility works and flooding in Dakar. Thank you for your understanding."
   },
   "about": {
     "hero_title": "About DAARA Al Amine Academy",
