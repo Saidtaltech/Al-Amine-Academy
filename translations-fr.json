@@ -34,7 +34,9 @@
     "al_mouslihoon": "Projet Al Mouslihoon",
     "al_mouslihoon_subtitle": "Aides sociales &amp; humanitaires",
     "rentree_badge": "Rentrée 2026",
-    "rentree_text": "Internat garçons à la Cité SOCABEG, internat filles à la Cité des Magistrats"
+    "rentree_text": "Internat garçons à la Cité SOCABEG, internat filles à la Cité des Magistrats",
+    "info": "Informations & Annonces",
+    "info_subtitle": "Notes et consignes pour les parents"
   },
   "announce": {
     "text_short": "Rentrée reportée au 15 octobre",
@@ -1328,5 +1330,22 @@
     "karang_stat2_label": "Bénévolat",
     "karang_stat3_label": "Les Bientfaîteurs",
     "karang_note": "Le Projet Al Mouhlisoon de Karang est une action solidaire distincte, indépendante du camp de vacances. La participation est libre et ouverte à toutes les familles qui souhaitent y contribuer."
+  },
+  "info": {
+    "header_eyebrow": "DAARA Al Amine Academy",
+    "header_title": "Informations &amp; <span class='text-secondary'>Annonces</span>",
+    "header_desc": "Les notes officielles de la Direction, publiées ici dès qu'un événement concerne vos enfants — santé, sécurité ou organisation de l'internat.",
+    "section_desc": "Classées de la plus récente à la plus ancienne. Une note archivée reste consultable pour la transparence de nos communications.",
+    "count_label": "notes",
+    "filter_all": "Toutes",
+    "resolved_tag": "Résolu",
+    "empty": "Aucune note dans cette catégorie.",
+    "cta_title": "Une question sur l'une de ces notes ?",
+    "cta_desc": "La Direction reste à votre disposition tous les jours, par WhatsApp ou par téléphone.",
+    "cta_btn1": "Écrire sur WhatsApp",
+    "cta_btn2": "Voir nos coordonnées",
+    "sev_urgent": "Urgent",
+    "sev_sante": "Santé",
+    "sev_info": "Info"
   }
 }

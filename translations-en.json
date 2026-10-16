@@ -34,7 +34,9 @@
     "al_mouslihoon": "Al Mouslihoon Project",
     "al_mouslihoon_subtitle": "Social &amp; humanitarian aid",
     "rentree_badge": "2026 Enrollment",
-    "rentree_text": "Boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats"
+    "rentree_text": "Boys' boarding school now at Cité SOCABEG, girls' at Cité des Magistrats",
+    "info": "Information & Notices",
+    "info_subtitle": "Notices and guidance for parents"
   },
   "announce": {
     "text_short": "School start postponed to Oct 15",
@@ -1328,5 +1330,22 @@
     "karang_stat2_label": "Volunteering",
     "karang_stat3_label": "The Benefactors",
     "karang_note": "The Al Mouhlisoon Karang Project is a separate charitable initiative, independent of the vacation camp. Participation is free and open to any family who wishes to contribute."
+  },
+  "info": {
+    "header_eyebrow": "DAARA Al Amine Academy",
+    "header_title": "Information &amp; <span class='text-secondary'>Notices</span>",
+    "header_desc": "Official notices from the Direction, published here as soon as an event concerns your children — health, safety, or boarding-school organization.",
+    "section_desc": "Listed from most recent to oldest. An archived notice stays available for the transparency of our communications.",
+    "count_label": "notices",
+    "filter_all": "All",
+    "resolved_tag": "Resolved",
+    "empty": "No notices in this category.",
+    "cta_title": "A question about one of these notices?",
+    "cta_desc": "The Direction is available every day, by WhatsApp or phone.",
+    "cta_btn1": "Write on WhatsApp",
+    "cta_btn2": "See our contact details",
+    "sev_urgent": "Urgent",
+    "sev_sante": "Health",
+    "sev_info": "Info"
   }
 }

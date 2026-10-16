@@ -634,6 +634,10 @@ html.aaa-reveal-ready [data-aos="zoom-in"]:not(.aos-animate)    { transform: sca
 .aaa-announce > i:first-child { color: #fbbf24; flex-shrink: 0; }
 .aaa-announce-urgent { background: linear-gradient(90deg, #be123c, #9f1239); }
 .aaa-announce-urgent > i:first-child { color: #fde68a; animation: aaa-pulse 1.6s ease-in-out infinite; }
+/* Variante "santé" — notices sanitaires (épidémie, allergie...) : distincte du
+   rouge "urgent" pour ne pas banaliser ce dernier, mais toujours visible. */
+.aaa-announce-sante { background: linear-gradient(90deg, #d97706, #b45309); }
+.aaa-announce-sante > i:first-child { color: #fff7ed; }
 @keyframes aaa-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
 .aaa-announce span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .aaa-announce a {
