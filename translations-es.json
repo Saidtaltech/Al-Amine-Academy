@@ -34,7 +34,9 @@
     "al_mouslihoon": "Proyecto Al Mouslihoon",
     "al_mouslihoon_subtitle": "Ayuda social &amp; humanitaria",
     "rentree_badge": "Curso 2026",
-    "rentree_text": "Internado de niños ahora en Cité SOCABEG, el de niñas en Cité des Magistrats"
+    "rentree_text": "Internado de niños ahora en Cité SOCABEG, el de niñas en Cité des Magistrats",
+    "info": "Información y avisos",
+    "info_subtitle": "Avisos y consignas para los padres"
   },
   "announce": {
     "text_short": "Inicio de curso postergado al 15 oct.",
@@ -1328,5 +1330,22 @@
     "karang_stat2_label": "Voluntariado",
     "karang_stat3_label": "Los Benefactores",
     "karang_note": "El Proyecto Al Mouhlisoon de Karang es una acción solidaria independiente, distinta del campamento de vacaciones. La participación es libre y está abierta a todas las familias que deseen contribuir."
+  },
+  "info": {
+    "header_eyebrow": "DAARA Al Amine Academy",
+    "header_title": "Información &amp; <span class='text-secondary'>Avisos</span>",
+    "header_desc": "Los avisos oficiales de la Dirección, publicados aquí en cuanto un evento concierne a sus hijos — salud, seguridad u organización del internado.",
+    "section_desc": "Ordenados del más reciente al más antiguo. Un aviso archivado sigue disponible por la transparencia de nuestras comunicaciones.",
+    "count_label": "avisos",
+    "filter_all": "Todos",
+    "resolved_tag": "Resuelto",
+    "empty": "Ningún aviso en esta categoría.",
+    "cta_title": "¿Una pregunta sobre uno de estos avisos?",
+    "cta_desc": "La Dirección está a su disposición todos los días, por WhatsApp o por teléfono.",
+    "cta_btn1": "Escribir por WhatsApp",
+    "cta_btn2": "Ver nuestros contactos",
+    "sev_urgent": "Urgente",
+    "sev_sante": "Salud",
+    "sev_info": "Info"
   }
 }

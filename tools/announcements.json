@@ -1,0 +1,37 @@
+{
+  "_comment": "Source unique des informations publiées aux parents. Pour ajouter une note : ajouter un objet en tête de 'items' (ordre = plus récent en premier), mettre 'banner' à true sur CETTE entrée et false sur l'ancienne, puis lancer `python3 tools/build-announcements.py`. Le contenu reste en français (les notes officielles de l'Academy ne sont émises qu'en français) ; seuls les textes d'interface (filtres, titres de page) sont traduits.",
+  "severities": {
+    "urgent": { "label": "Urgent", "icon": "fa-triangle-exclamation" },
+    "sante":  { "label": "Santé",  "icon": "fa-notes-medical" },
+    "info":   { "label": "Info",   "icon": "fa-circle-info" }
+  },
+  "items": [
+    {
+      "id": "conjonctivite-16oct2026",
+      "severity": "sante",
+      "date": "2026-10-16",
+      "banner": true,
+      "banner_short": "Épidémie de conjonctivite : lisez la note",
+      "banner_text": "Une épidémie de conjonctivite circule au sein de l'Academy. Gardez votre enfant à la maison en cas de symptômes.",
+      "title": "Épidémie de conjonctivite — ce que les parents doivent savoir",
+      "excerpt": "Une épidémie de conjonctivite circule actuellement au sein de l'Academy. Si votre enfant présente des yeux rouges, larmoyants ou irrités, gardez-le à la maison jusqu'à sa guérison complète.",
+      "body_html": "<p>As Salamu alaykum wa rahmatuAllah, chers parents,</p><p>Nous espérons que ces lignes vous trouvent, vous et vos proches, en bonne santé.</p><p>Une épidémie de <strong>conjonctivite</strong>, une infection qui touche les yeux, circule actuellement au sein de l'Academy. Plusieurs personnes ont été atteintes, dont des membres du personnel. Nous partageons avec vous cette information en toute transparence, parce que nous savons combien la santé de vos enfants vous est précieuse.</p><div class=\"aaa-info-callout aaa-info-callout-sante\"><p class=\"aaa-info-callout-title\">Si votre enfant est atteint</p><p>Nous prions les parents qui constatent que leur enfant est contaminé (yeux rouges, larmoyants ou irrités) de bien vouloir le garder à la maison <strong>jusqu'à sa guérison complète</strong>, et de consulter un médecin si nécessaire.</p><p>Cette demande n'est pas une contrainte légère, et nous en mesurons le poids pour vos familles. Elle est pourtant indispensable&nbsp;: un seul enfant arrivé contaminé a suffi pour atteindre <strong>plus de trois personnes, membres du personnel compris, en moins de 48 heures</strong>, avant son retour à la maison.</p></div><div class=\"aaa-info-callout aaa-info-callout-gold\"><p class=\"aaa-info-callout-title\">Prévenir la contagion</p><p>Nous invitons également les parents à <strong>contrôler l'hygiène des mains</strong> de leurs enfants&nbsp;: lavage régulier au savon, et éviter de se frotter ou de se toucher les yeux. Ces gestes simples protègent toute la famille comme l'ensemble de l'école.</p></div><p>Votre vigilance et votre confiance sont précieuses. Nous prions Allah d'accorder une prompte guérison aux enfants concernés et de préserver chacun de vos foyers. Nous restons à votre entière disposition pour toute question.</p><p class=\"aaa-info-sign\">La Direction — Fait à Dakar, le 16/10/2026</p>",
+      "cta_label": "Nous contacter sur WhatsApp",
+      "cta_url": "https://wa.me/221777743700"
+    },
+    {
+      "id": "rentree-report-15oct2026",
+      "severity": "urgent",
+      "date": "2026-09-24",
+      "banner": false,
+      "resolved": true,
+      "banner_short": "Rentrée reportée au 15 octobre",
+      "banner_text": "Rentrée scolaire reportée au 15 octobre 2026 : imprévus sur l'aménagement des locaux et inondations à Dakar.",
+      "title": "Report de la rentrée 2026–2027 au 15 octobre",
+      "excerpt": "La rentrée scolaire 2026–2027 a été reportée au 15 octobre 2026 en raison d'imprévus sur l'aménagement des locaux et des inondations survenues à Dakar.",
+      "body_html": "<p>As Salamu alaykum wa rahmatuAllah, chers parents,</p><p>La rentrée scolaire 2026–2027 est reportée au <strong>15 octobre 2026</strong> suite à des imprévus sur l'aménagement des locaux et aux inondations survenues à Dakar.</p><p>Nous vous tiendrons informés de toute évolution. Merci de votre compréhension.</p><p class=\"aaa-info-sign\">La Direction</p>",
+      "cta_label": "Voir le programme internat",
+      "cta_url": "programme-internat"
+    }
+  ]
+}

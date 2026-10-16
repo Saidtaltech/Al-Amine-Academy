@@ -48,6 +48,7 @@
     +             '<div style="padding:18px 18px 18px 10px;border-left:1px solid #f1f5f9;">'
     +               '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5b6a7d;font-weight:800;margin:0 0 8px 10px;" data-i18n="menu.section_other">Autres programmes</p>'
     +               '<a href="' + ASSET_PREFIX + 'programme-al-mouslihoon"     class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-pink-50 transition-colors"><div class="w-9 h-9 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-venus text-pink-600 text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm flex items-center gap-2"><span data-i18n="menu.women_program">Programme pour Femme</span> <span data-i18n="menu.soon" style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;background:#fef3c7;color:#b45309;font-weight:800;padding:2px 7px;border-radius:9999px;">Bientôt</span></p><p class="text-xs text-slate-500" data-i18n-html="menu.women_subtitle">Programme féminin &middot; Internat &amp; Externat</p></div></a>'
+    +               '<a href="' + ASSET_PREFIX + 'informations"                class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-amber-50 transition-colors"><div class="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-bullhorn text-amber-600 text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="menu.info">Informations &amp; Annonces</p><p class="text-xs text-slate-500" data-i18n="menu.info_subtitle">Notes et consignes pour les parents</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'fiche-renseignements"        class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-purple-50 transition-colors"><div class="w-9 h-9 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-file-alt text-purple-600 text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="menu.fiche">Fiche de Renseignements</p><p class="text-xs text-slate-500" data-i18n-html="menu.fiche_subtitle">Tarifs, dossier &amp; programmes</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'conferences"                 class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-primary/5 transition-colors"><div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-chalkboard-teacher text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm" data-i18n="programs.conferences">Formations &amp; Conférences</p><p class="text-xs text-slate-500" data-i18n="programs.conferences_subtitle">Ateliers, séminaires &amp; formations</p></div></a>'
     +               '<a href="' + ASSET_PREFIX + 'aides-sociales"             class="flex items-center gap-3 px-2.5 py-2.5 rounded-xl hover:bg-teal-50 transition-colors"><div class="w-9 h-9 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-hand-holding-heart text-primary text-sm"></i></div><div><p class="font-semibold text-slate-800 text-sm"><span data-i18n="menu.al_mouslihoon">Projet Al Mouslihoon</span> <span style="font-family:Amiri,serif;font-size:0.85em;color:#0f766e;">المُصلحون</span></p><p class="text-xs text-slate-500" data-i18n-html="menu.al_mouslihoon_subtitle">Aides sociales &amp; humanitaires</p></div></a>'
@@ -195,6 +196,11 @@
     /* Séparateur Ressources */
     +     '<p style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5b6a7d;font-weight:700;margin:0 0 8px 4px;">Ressources</p>'
     +     '<nav style="display:flex;flex-direction:column;gap:2px;margin-bottom:20px;">'
+    /* Informations & Annonces */
+    +       '<a href="' + ASSET_PREFIX + 'informations" data-route="info" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
+    +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-bullhorn" style="color:#d97706;font-size:14px;"></i></span>'
+    +         '<span style="line-height:1.25;"><span class="aaa-dlink-title" style="display:block;font-size:14px;font-weight:600;">Informations &amp; Annonces</span><span style="font-size:11px;color:#5b6a7d;">Notes et consignes pour les parents</span></span>'
+    +       '</a>'
     /* Fiche de Renseignements */
     +       '<a href="' + ASSET_PREFIX + 'fiche-renseignements" data-route="fiche" class="aaa-dlink" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;color:#1e293b;text-decoration:none;min-height:44px;">'
     +         '<span class="aaa-icon" style="width:34px;height:34px;border-radius:10px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-file-alt" style="color:#7c3aed;font-size:14px;"></i></span>'
@@ -355,14 +361,19 @@
     +   '<i class="fab fa-whatsapp"></i>'
     + '</a>';
 
-  /* ====================  ANNONCE RENTRÉE — REPORT AU 15 OCTOBRE  ==================== */
-  var ANNOUNCE_ID = 'aaa-announce-report-15oct-2026';
+  /* ====================  BANNIÈRE D'ANNONCE  ====================
+     Ce bloc est régénéré automatiquement par tools/build-announcements.py
+     à partir de l'entrée "banner": true de tools/announcements.json.
+     Ne pas éditer ANNOUNCE_ID / ANNOUNCE_HTML à la main : modifier le JSON
+     puis relancer `python3 tools/build-announcements.py`.
+     AAA_ANNOUNCE_START */
+  var ANNOUNCE_ID = 'aaa-announce-conjonctivite-16oct2026';
   var ANNOUNCE_HTML = ''
-    + '<div id="' + ANNOUNCE_ID + '" class="aaa-announce aaa-announce-urgent">'
-    +   '<i class="fas fa-triangle-exclamation" aria-hidden="true"></i>'
-    +   '<span class="aaa-announce-short" data-i18n="announce.text_short">Rentrée reportée au 15 octobre</span>'
-    +   '<span class="aaa-announce-long" data-i18n="announce.text">Rentrée scolaire reportée au 15 octobre 2026 : imprévus sur l\'aménagement des locaux et inondations à Dakar.</span>'
-    +   '<a href="' + ASSET_PREFIX + 'programme-internat">'
+    + '<div id="' + ANNOUNCE_ID + '" class="aaa-announce aaa-announce-sante">'
+    +   '<i class="fas fa-notes-medical" aria-hidden="true"></i>'
+    +   '<span class="aaa-announce-short">Épidémie de conjonctivite : lisez la note</span>'
+    +   '<span class="aaa-announce-long">Une épidémie de conjonctivite circule au sein de l&#x27;Academy. Gardez votre enfant à la maison en cas de symptômes.</span>'
+    +   '<a href="' + ASSET_PREFIX + 'informations#conjonctivite-16oct2026">'
     +     '<span class="aaa-announce-short" data-i18n="announce.cta_short">Détails</span>'
     +     '<span class="aaa-announce-long" data-i18n="announce.cta">En savoir plus</span>'
     +   '</a>'
@@ -370,6 +381,7 @@
     +     '<i class="fas fa-times" aria-hidden="true"></i>'
     +   '</button>'
     + '</div>';
+  /* AAA_ANNOUNCE_END */
 
   /* ====================  ROUTING  ==================== */
   function getActiveRoute() {
@@ -377,6 +389,7 @@
     if (path.indexOf('/blog/') !== -1) return 'blog';
     if (/admission(\.html)?$/.test(path)) return 'fiche';
     if (/fiche-renseignements(\.html)?$/.test(path)) return 'fiche';
+    if (/informations(\.html)?$/.test(path)) return 'info';
     if (/a-propos(\.html)?$/.test(path)) return 'about';
     if (/galerie(\.html)?$/.test(path)) return 'gallery';
     if (/temoignages(\.html)?$/.test(path)) return 'testimonials';
