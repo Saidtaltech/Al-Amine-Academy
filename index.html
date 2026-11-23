@@ -106,6 +106,19 @@
   <script>/* Réserve (ou non) la hauteur de la bannière avant le premier rendu,
      pour éviter que le contenu ne se décale quand le shell est injecté. */
   try{if(localStorage.getItem("aaa-announce-conjonctivite-16oct2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
+  <!-- Bannière recrutement (page d'accueil uniquement) : fermeture mémorisée +
+       auto-désactivation après la clôture des candidatures (30/11/2026 17h00,
+       heure de Dakar = UTC). Pour retirer l'annonce : supprimer ce bloc, le
+       <script> ci-dessous, la <div id="aaa-recrutement-banner"> plus bas et
+       son script de fermeture. -->
+  <script>
+  try{
+    if(localStorage.getItem("aaa-recrutement-banner-dismissed")||new Date()>new Date("2026-11-30T17:00:00+00:00")){
+      document.documentElement.classList.add("aaa-recrutement-banner-off");
+    }
+  }catch(e){}
+  </script>
+  <style>html.aaa-recrutement-banner-off #aaa-recrutement-banner{display:none}</style>
   <style data-aaa-inline-resilience>[data-i18n],[data-i18n-html]{opacity:1!important;}
    /* Sticky mobile CTA + FAQ pattern */
    .sticky-cta { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
@@ -219,6 +232,31 @@
   <div id="aaa-wa"></div>
   <div id="aaa-navbar"></div>
   <div class="h-20"></div>
+
+  <!-- Bannière recrutement — page d'accueil uniquement, distincte de la
+       bannière sanitaire sitewide (#aaa-announce, injectée par site-shell.js). -->
+  <div id="aaa-recrutement-banner" class="relative" style="background:linear-gradient(90deg,#0A1F3D,#12345c)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-center gap-3 text-center" style="padding-right:44px">
+      <i class="fas fa-user-shield text-sm" style="color:#F4C640" aria-hidden="true"></i>
+      <span class="text-xs sm:text-sm font-semibold text-white">Recrutement : deux surveillants pour l'internat</span>
+      <span class="hidden sm:block text-sm text-white/70">— Candidatures avant <strong style="color:#F4C640">le 30 novembre 2026, 17h</strong></span>
+      <a href="recrutement" class="text-xs sm:text-sm font-bold underline" style="color:#F4C640">Voir l'offre <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i></a>
+    </div>
+    <button type="button" id="aaa-recrutement-banner-close" aria-label="Fermer l'annonce de recrutement" class="absolute top-1/2 -translate-y-1/2 right-3 w-9 h-9 inline-flex items-center justify-center text-white/80 hover:text-white">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+  <script>
+  (function(){
+    var bar = document.getElementById('aaa-recrutement-banner');
+    var btn = document.getElementById('aaa-recrutement-banner-close');
+    if(!bar||!btn) return;
+    btn.addEventListener('click', function(){
+      bar.remove();
+      try{localStorage.setItem('aaa-recrutement-banner-dismissed','1');}catch(e){}
+    });
+  })();
+  </script>
 
 <main>
   <!-- HERO SECTION -->
