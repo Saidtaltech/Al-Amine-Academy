@@ -367,20 +367,8 @@
      Ne pas éditer ANNOUNCE_ID / ANNOUNCE_HTML à la main : modifier le JSON
      puis relancer `python3 tools/build-announcements.py`.
      AAA_ANNOUNCE_START */
-  var ANNOUNCE_ID = 'aaa-announce-conjonctivite-16oct2026';
-  var ANNOUNCE_HTML = ''
-    + '<div id="' + ANNOUNCE_ID + '" class="aaa-announce aaa-announce-sante">'
-    +   '<i class="fas fa-notes-medical" aria-hidden="true"></i>'
-    +   '<span class="aaa-announce-short">Épidémie de conjonctivite : lisez la note</span>'
-    +   '<span class="aaa-announce-long">Une épidémie de conjonctivite circule au sein de l&#x27;Academy. Gardez votre enfant à la maison en cas de symptômes.</span>'
-    +   '<a href="' + ASSET_PREFIX + 'informations#conjonctivite-16oct2026">'
-    +     '<span class="aaa-announce-short" data-i18n="announce.cta_short">Détails</span>'
-    +     '<span class="aaa-announce-long" data-i18n="announce.cta">En savoir plus</span>'
-    +   '</a>'
-    +   '<button id="aaa-announce-close" type="button" aria-label="Fermer l\'annonce" data-i18n-attr="aria-label:announce.close">'
-    +     '<i class="fas fa-times" aria-hidden="true"></i>'
-    +   '</button>'
-    + '</div>';
+  var ANNOUNCE_ID = null;
+  var ANNOUNCE_HTML = '';
   /* AAA_ANNOUNCE_END */
 
   /* ====================  ROUTING  ==================== */
@@ -431,7 +419,7 @@
 
     /* --- Bannière d'annonce (rentrée / nouveau local) --- */
     try {
-      if (!document.getElementById(ANNOUNCE_ID) && !localStorage.getItem(ANNOUNCE_ID + '-dismissed')) {
+      if (ANNOUNCE_ID && !document.getElementById(ANNOUNCE_ID) && !localStorage.getItem(ANNOUNCE_ID + '-dismissed')) {
         var wrap = document.createElement('div');
         wrap.innerHTML = ANNOUNCE_HTML;
         var bar = wrap.firstChild;

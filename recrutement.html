@@ -85,52 +85,15 @@
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/montserrat-latin.woff2" crossorigin/>
   <link rel="preload" as="font" type="font/woff2" href="assets/fonts/fa-solid-subset.woff2" crossorigin/>
   <link rel="stylesheet" href="assets/css/app.css?v=20260906"/>
-  <script>/* Réserve (ou non) la hauteur de la bannière sanitaire sitewide avant le
-     premier rendu, pour éviter que le contenu ne se décale (cf. site-shell.js). */
-  try{if(localStorage.getItem("aaa-announce-conjonctivite-16oct2026-dismissed"))document.documentElement.classList.add("aaa-announce-off");}catch(e){}</script>
-
-  <!-- Polices éditoriales propres à cette page (identité visuelle v1.0) :
-       Cormorant Garamond pour les titres éditoriaux, Inter pour le texte
-       courant. Montserrat (institutionnel) est déjà auto-hébergée sitewide. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ---- Identité visuelle v1.0 : jetons propres à cette page ---- */
-    :root {
-      --aaa-bleu-nuit: #0A1F3D;
-      --aaa-or-sacre: #B8860B;   /* trait/texte sur fond clair : #F4C640 n'a pas assez de contraste (2,1:1) sur blanc */
-      --aaa-or-sacre-sombre: #F4C640; /* même or, utilisable tel quel sur fond sombre (6,8:1 sur #0A1F3D) */
-      --aaa-ivoire: #FAF7F0;
-      --aaa-encre: #0F172A;
-      --aaa-plomb: #64748B;
-    }
-    .font-editorial { font-family: 'Cormorant Garamond', Georgia, serif; }
-    .font-body-recrutement { font-family: 'Inter', 'Montserrat', sans-serif; }
-    .bg-bleu-nuit { background-color: var(--aaa-bleu-nuit); }
-    .bg-ivoire { background-color: var(--aaa-ivoire); }
-    .text-or-sacre { color: var(--aaa-or-sacre); }
-    .text-encre { color: var(--aaa-encre); }
-    .text-plomb { color: var(--aaa-plomb); }
-    .hero-recrutement {
-      background: linear-gradient(160deg, var(--aaa-bleu-nuit) 0%, #12345c 55%, #1e7a9a 100%);
-    }
-    /* Barre de date limite : toujours visible en haut de page */
-    .deadline-bar {
-      background: var(--aaa-bleu-nuit);
-      color: #fff;
-    }
-    .deadline-bar strong { color: var(--aaa-or-sacre-sombre); font-weight: 700; }
-
     /* État "candidatures closes", activé par script une fois l'échéance dépassée */
     html:not(.aaa-recrutement-closed) .recrutement-closed-state { display: none; }
     html.aaa-recrutement-closed .recrutement-open-state { display: none; }
-    html.aaa-recrutement-closed .deadline-bar { background: var(--aaa-plomb); }
-    html.aaa-recrutement-closed .deadline-bar strong { color: #fff; }
+    html.aaa-recrutement-closed #deadline-bar { background: #475569; }
 
-    details summary { cursor: pointer; list-style: none; }
-    details summary::-webkit-details-marker { display: none; }
+    /* Section "Conditions" : même dégradé que les sections CTA du reste du site */
+    .hero-gradient { background: linear-gradient(135deg, #0a3040 0%, #1e7a9a 50%, #165b73 100%); }
   </style>
 </head>
 <body class="font-sans bg-white text-gray-800 transition-colors duration-300">
@@ -140,110 +103,106 @@
   <div class="h-20"></div>
 
   <!-- Barre de date limite — toujours visible en haut de la page -->
-  <div class="deadline-bar px-4 py-3 text-center text-sm font-semibold font-body-recrutement">
+  <div id="deadline-bar" class="bg-primary-dark px-4 py-3 text-center text-sm font-semibold text-white">
     <i class="fas fa-calendar-days mr-2" aria-hidden="true"></i>
-    <span class="recrutement-open-state">Date limite de candidature : <strong>lundi 30 novembre 2026, 17h00</strong></span>
+    <span class="recrutement-open-state">Date limite de candidature : <strong class="text-secondary">lundi 30 novembre 2026, 17h00</strong></span>
     <span class="recrutement-closed-state">Candidatures closes depuis le 30 novembre 2026, 17h00</span>
   </div>
 
-<main class="bg-ivoire font-body-recrutement">
+<main>
 
   <!-- Hero -->
-  <section class="hero-recrutement py-16 sm:py-16 px-4">
-    <div class="max-w-3xl mx-auto text-center reveal">
-      <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-white/90 text-xs sm:text-sm mb-5 font-body-recrutement">
-        <i class="fas fa-user-shield" aria-hidden="true"></i> Offre d'emploi — Internat
-      </span>
-      <h1 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5 leading-tight">
-        Recrutement : deux surveillants pour l'internat
-      </h1>
-      <p class="text-white/85 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+  <header class="page-header">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+      <p class="eyebrow justify-center mb-4"><i class="fas fa-user-shield" aria-hidden="true"></i> Offre d'emploi — Internat</p>
+      <h1 class="text-4xl md:text-5xl text-white mb-5 max-w-3xl mx-auto">Recrutement : deux surveillants pour l'internat</h1>
+      <p class="text-white/85 text-base md:text-lg max-w-2xl mx-auto">
         Le Daara Al Amine Academy recrute deux surveillants pour accompagner les élèves de l'internat au quotidien&nbsp;: repas, hygiène, coucher, apprentissage et suivi de la conduite. Les postes sont à pourvoir à Dakar, avec présence de nuit sur place.
       </p>
     </div>
-  </section>
+  </header>
 
   <!-- Postes -->
-  <section class="py-14 sm:py-16 px-4">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 sm:gap-6">
+  <section class="py-14 sm:py-16 bg-white">
+    <div class="container mx-auto px-4 lg:px-8 max-w-5xl grid md:grid-cols-2 gap-6 sm:gap-6">
 
       <!-- Poste 1 -->
-      <article class="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 flex flex-col reveal">
+      <article class="bg-white rounded-3xl border border-gray-100 shadow-lg soft-card p-6 sm:p-8 flex flex-col reveal">
         <span class="inline-flex items-center gap-2 bg-primary/10 text-primary-dark px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4 w-fit">
           Poste 1
         </span>
-        <h2 class="font-editorial text-xl md:text-2xl font-bold text-encre mb-5">Surveillant-enseignant</h2>
+        <h2 class="text-xl md:text-2xl font-extrabold text-gray-900 mb-5">Surveillant-enseignant</h2>
 
-        <h3 class="text-xs font-bold uppercase tracking-wide text-plomb mb-3">Missions</h3>
-        <ul class="space-y-3 mb-6 text-sm leading-relaxed">
+        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">Missions</h3>
+        <ul class="space-y-3 mb-6 text-sm text-gray-600 leading-relaxed">
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Enseigner le Coran à un groupe de 14 élèves, de 5h à 7h et de 19h à 21h.</span></li>
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Surveiller un dortoir et dormir sur place.</span></li>
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Aider au petit-déjeuner, aux repas et à la sieste, et faire le tour du cadre de vie.</span></li>
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Évaluer et consigner la conduite des élèves.</span></li>
         </ul>
 
-        <h3 class="text-xs font-bold uppercase tracking-wide text-plomb mb-3">Profil recherché</h3>
-        <ul class="space-y-3 text-sm leading-relaxed mb-6">
+        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">Profil recherché</h3>
+        <ul class="space-y-3 text-sm text-gray-600 leading-relaxed mb-6">
           <li class="flex gap-3"><i class="fas fa-book-quran text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Maîtrise du Coran avec le tajwiid, au minimum jusqu'à sourate Yasin.</span></li>
           <li class="flex gap-3"><i class="fas fa-book-quran text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Pratiquant de la sounna, y compris dans son apparence.</span></li>
           <li class="flex gap-3"><i class="fas fa-book-quran text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Sait lire l'arabe, le français ou l'anglais (l'une des trois suffit).</span></li>
           <li class="flex gap-3"><i class="fas fa-book-quran text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Sens des responsabilités, patience et respect des enfants.</span></li>
         </ul>
 
-        <a class="recrutement-open-state" href="mailto:contact@alamineacademy.com?subject=Candidature%20%E2%80%94%20Surveillant-enseignant%20(internat)&amp;body=As%20salamu%20alaykum%2C%0A%0AVeuillez%20trouver%20ci-joint%20mon%20CV%20et%20une%20copie%20de%20ma%20pi%C3%A8ce%20d'identit%C3%A9%20pour%20le%20poste%20de%20surveillant-enseignant.%0A%0A"
-           class="mt-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-6 py-3.5 rounded-2xl transition-colors text-sm sm:text-sm">
+        <a href="mailto:contact@alamineacademy.com?subject=Candidature%20%E2%80%94%20Surveillant-enseignant%20(internat)&amp;body=As%20salamu%20alaykum%2C%0A%0AVeuillez%20trouver%20ci-joint%20mon%20CV%20et%20une%20copie%20de%20ma%20pi%C3%A8ce%20d'identit%C3%A9%20pour%20le%20poste%20de%20surveillant-enseignant.%0A%0A"
+           class="recrutement-open-state mt-auto inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-dark text-gray-900 font-bold px-6 py-3.5 rounded-2xl transition-colors text-sm">
           <i class="fas fa-envelope" aria-hidden="true"></i> Postuler par e-mail
         </a>
-        <p class="recrutement-closed-state" class="mt-auto text-sm text-plomb font-semibold text-center py-3.5">Candidatures closes</p>
+        <p class="recrutement-closed-state mt-auto text-sm text-gray-500 font-semibold text-center py-3.5">Candidatures closes</p>
       </article>
 
       <!-- Poste 2 -->
-      <article class="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-8 flex flex-col reveal">
+      <article class="bg-white rounded-3xl border border-gray-100 shadow-lg soft-card p-6 sm:p-8 flex flex-col reveal">
         <span class="inline-flex items-center gap-2 bg-primary/10 text-primary-dark px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-4 w-fit">
           Poste 2
         </span>
-        <h2 class="font-editorial text-xl md:text-2xl font-bold text-encre mb-5">Surveillant à plein temps, responsable de terrain</h2>
+        <h2 class="text-xl md:text-2xl font-extrabold text-gray-900 mb-5">Surveillant à plein temps, responsable de terrain</h2>
 
-        <h3 class="text-xs font-bold uppercase tracking-wide text-plomb mb-3">Missions</h3>
-        <ul class="space-y-3 mb-6 text-sm leading-relaxed">
+        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">Missions</h3>
+        <ul class="space-y-3 mb-6 text-sm text-gray-600 leading-relaxed">
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Coordonner la surveillance sur le terrain, sous l'autorité du Secrétaire Général.</span></li>
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Gérer le service du petit-déjeuner et conduire les élèves au cercle d'apprentissage.</span></li>
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Surveiller un dortoir et dormir sur place.</span></li>
           <li class="flex gap-3"><i class="fas fa-check text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Tenir les registres quotidiens et la plateforme de suivi des élèves.</span></li>
         </ul>
 
-        <h3 class="text-xs font-bold uppercase tracking-wide text-plomb mb-3">Profil recherché</h3>
-        <ul class="space-y-3 text-sm leading-relaxed mb-6">
+        <h3 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">Profil recherché</h3>
+        <ul class="space-y-3 text-sm text-gray-600 leading-relaxed mb-6">
           <li class="flex gap-3"><i class="fas fa-user-shield text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Pratiquant de la sounna, y compris dans son apparence.</span></li>
           <li class="flex gap-3"><i class="fas fa-user-shield text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Sait lire l'arabe, le français ou l'anglais (l'une des trois suffit).</span></li>
           <li class="flex gap-3"><i class="fas fa-user-shield text-primary mt-1 flex-shrink-0" aria-hidden="true"></i><span>Rigueur, sens de l'organisation et esprit d'équipe.</span></li>
         </ul>
 
-        <a class="recrutement-open-state" href="mailto:contact@alamineacademy.com?subject=Candidature%20%E2%80%94%20Surveillant%20responsable%20de%20terrain%20(internat)&amp;body=As%20salamu%20alaykum%2C%0A%0AVeuillez%20trouver%20ci-joint%20mon%20CV%20et%20une%20copie%20de%20ma%20pi%C3%A8ce%20d'identit%C3%A9%20pour%20le%20poste%20de%20surveillant%20responsable%20de%20terrain.%0A%0A"
-           class="mt-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-6 py-3.5 rounded-2xl transition-colors text-sm sm:text-sm">
+        <a href="mailto:contact@alamineacademy.com?subject=Candidature%20%E2%80%94%20Surveillant%20responsable%20de%20terrain%20(internat)&amp;body=As%20salamu%20alaykum%2C%0A%0AVeuillez%20trouver%20ci-joint%20mon%20CV%20et%20une%20copie%20de%20ma%20pi%C3%A8ce%20d'identit%C3%A9%20pour%20le%20poste%20de%20surveillant%20responsable%20de%20terrain.%0A%0A"
+           class="recrutement-open-state mt-auto inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-dark text-gray-900 font-bold px-6 py-3.5 rounded-2xl transition-colors text-sm">
           <i class="fas fa-envelope" aria-hidden="true"></i> Postuler par e-mail
         </a>
-        <p class="recrutement-closed-state" class="mt-auto text-sm text-plomb font-semibold text-center py-3.5">Candidatures closes</p>
+        <p class="recrutement-closed-state mt-auto text-sm text-gray-500 font-semibold text-center py-3.5">Candidatures closes</p>
       </article>
 
     </div>
   </section>
 
   <!-- Conditions -->
-  <section class="bg-bleu-nuit py-14 sm:py-16 px-4">
+  <section class="hero-gradient py-14 sm:py-16 px-4">
     <div class="max-w-3xl mx-auto reveal">
-      <h2 class="font-editorial text-2xl sm:text-3xl font-bold text-white text-center mb-8">Conditions</h2>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white text-center mb-8">Conditions</h2>
       <ul class="grid md:grid-cols-3 gap-4 text-center">
-        <li class="bg-white/5 rounded-2xl p-5">
-          <i class="fas fa-moon text-xl mb-2" style="color:var(--aaa-or-sacre-sombre)" aria-hidden="true"></i>
+        <li class="bg-white/10 backdrop-blur-sm rounded-2xl p-5">
+          <i class="fas fa-moon text-secondary text-xl mb-2" aria-hidden="true"></i>
           <p class="text-white/90 text-sm leading-relaxed">Présence de nuit sur place</p>
         </li>
-        <li class="bg-white/5 rounded-2xl p-5">
-          <i class="fas fa-utensils text-xl mb-2" style="color:var(--aaa-or-sacre-sombre)" aria-hidden="true"></i>
+        <li class="bg-white/10 backdrop-blur-sm rounded-2xl p-5">
+          <i class="fas fa-utensils text-secondary text-xl mb-2" aria-hidden="true"></i>
           <p class="text-white/90 text-sm leading-relaxed">Repas assurés gratuitement</p>
         </li>
-        <li class="bg-white/5 rounded-2xl p-5">
-          <i class="fas fa-circle-info text-xl mb-2" style="color:var(--aaa-or-sacre-sombre)" aria-hidden="true"></i>
+        <li class="bg-white/10 backdrop-blur-sm rounded-2xl p-5">
+          <i class="fas fa-circle-info text-secondary text-xl mb-2" aria-hidden="true"></i>
           <p class="text-white/90 text-sm leading-relaxed">Rémunération&nbsp;: à discuter lors de l'entretien</p>
         </li>
       </ul>
@@ -251,32 +210,32 @@
   </section>
 
   <!-- Comment postuler -->
-  <section class="py-14 sm:py-16 px-4" id="postuler">
+  <section class="py-14 sm:py-16 px-4 bg-gray-50" id="postuler">
     <div class="max-w-2xl mx-auto text-center reveal">
-      <h2 class="font-editorial text-2xl sm:text-3xl font-bold text-encre mb-4">Comment postuler</h2>
-      <p class="text-sm sm:text-base text-plomb leading-relaxed mb-2">
-        Envoyer un <strong class="text-encre">CV obligatoire</strong> avec une copie de la pièce d'identité, en précisant le poste visé, à
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">Comment postuler</h2>
+      <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-2">
+        Envoyer un <strong class="text-gray-900">CV obligatoire</strong> avec une copie de la pièce d'identité, en précisant le poste visé, à
         <a href="mailto:contact@alamineacademy.com" class="text-primary font-semibold" style="overflow-wrap:anywhere">contact@alamineacademy.com</a>.
       </p>
-      <p class="text-sm sm:text-base text-plomb leading-relaxed mb-8">
+      <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-8">
         Pour toute question, contactez-nous par WhatsApp au
         <a href="https://wa.me/221777850789" target="_blank" rel="noopener" class="text-primary font-semibold">+221 77 785 07 89</a>.
         <br><span class="text-sm">Les dossiers sans CV ne seront pas examinés. Les candidatures se font uniquement par e-mail.</span>
       </p>
 
-      <div class="recrutement-open-state" class="flex flex-wrap justify-center gap-3 mb-8">
+      <div class="recrutement-open-state flex flex-wrap justify-center gap-3 mb-8">
         <a href="mailto:contact@alamineacademy.com?subject=Candidature%20%E2%80%94%20Internat%20Al%20Amine%20Academy"
-           class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-7 py-3.5 rounded-2xl transition-colors text-sm sm:text-sm">
+           class="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary-dark text-gray-900 font-bold px-7 py-3.5 rounded-2xl transition-colors text-sm">
           <i class="fas fa-envelope" aria-hidden="true"></i> Postuler par e-mail
         </a>
         <a href="https://wa.me/221777850789" target="_blank" rel="noopener"
-           class="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary hover:bg-primary/5 font-bold px-7 py-3.5 rounded-2xl transition-colors text-sm sm:text-sm">
+           class="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary hover:bg-primary/5 font-bold px-7 py-3.5 rounded-2xl transition-colors text-sm">
           <i class="fab fa-whatsapp" aria-hidden="true"></i> Une question ?
         </a>
       </div>
-      <p class="recrutement-closed-state" class="text-plomb font-semibold mb-8">Les candidatures sont closes depuis le 30 novembre 2026, 17h00.</p>
+      <p class="recrutement-closed-state text-gray-500 font-semibold mb-8">Les candidatures sont closes depuis le 30 novembre 2026, 17h00.</p>
 
-      <p class="font-editorial text-lg md:text-2xl text-encre italic">Qu'Allah facilite la tâche à ceux qui postulent.</p>
+      <p class="text-lg text-gray-700 italic">Qu'Allah facilite la tâche à ceux qui postulent.</p>
     </div>
   </section>
 
@@ -284,9 +243,9 @@
 <div id="aaa-footer"></div>
 
 <!-- STICKY MOBILE CTA -->
-<div class="recrutement-open-state" class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3" style="backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">
+<div class="recrutement-open-state lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 sticky-cta border-t border-gray-200 shadow-2xl px-4 py-3">
   <div class="flex gap-2">
-    <a href="#postuler" class="flex-1 inline-flex items-center justify-center bg-primary text-white px-4 py-3 rounded-full font-bold text-sm transition shadow-lg">
+    <a href="#postuler" class="flex-1 inline-flex items-center justify-center bg-gradient-to-r from-amber-400 to-yellow-400 text-gray-900 px-4 py-3 rounded-full font-bold text-sm transition shadow-lg btn-shimmer">
       <i class="fas fa-envelope mr-1" aria-hidden="true"></i> Postuler
     </a>
     <a href="https://wa.me/221777850789" target="_blank" rel="noopener" aria-label="WhatsApp" class="inline-flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition shadow-lg flex-shrink-0">
