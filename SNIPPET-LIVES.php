@@ -249,24 +249,40 @@ add_action( 'manage_rw_live_posts_custom_column', function ( $col, $id ) {
 function rw_live_box( $id ) {
 	$oeuvre = (int) get_post_meta( $id, '_rw_live_oeuvre', true );
 	$aut    = (int) get_post_meta( $id, '_rw_live_auteure', true );
+	$pionn  = ( get_post_meta( $id, '_rw_live_acces', true ) !== 'membres' );
 	list( $s ) = rw_live_times( $id );
-	$h  = '<div class="rw-live-box">';
-	$h .= '<p class="rw-live-box__type">' . esc_html( rw_live_type_label( $id ) ) . ' · <span class="rw-live-badge">' . esc_html( rw_live_acces_label( $id ) ) . '</span></p>';
-	$h .= '<p class="rw-live-box__quand">' . esc_html( rw_live_horaire( $id ) ) . '</p>';
-	if ( $s ) $h .= '<p class="rw-live-box__local">Chez toi : <span data-rw-ts="' . (int) $s . '"></span></p>';
+	$h  = '<section class="rw-live-box" aria-label="Informations du live">';
+	$h .= '<div class="rw-live-box__top"><span class="rw-live-eyebrow">' . esc_html( rw_live_type_label( $id ) ) . '</span>' . rw_live_statut_html( $id ) . '</div>';
+	$h .= '<div class="rw-live-box__main">';
+	if ( $s ) {
+		$h .= '<div class="rw-live-date" aria-hidden="true"><span class="rw-live-date__jour">' . esc_html( rw_live_date( $s, 'j', 'Africa/Dakar' ) ) . '</span><span class="rw-live-date__mois">' . esc_html( rw_live_mois_court( $s ) ) . '</span><span class="rw-live-date__wd">' . esc_html( rw_live_date( $s, 'l', 'Africa/Dakar' ) ) . '</span></div>';
+	}
+	$h .= '<div class="rw-live-box__infos">';
+	$h .= '<p class="rw-live-sr">' . esc_html( rw_live_horaire( $id ) ) . '</p>';
 	if ( $aut ) $h .= '<p class="rw-live-box__avec">Avec <a href="' . esc_url( get_permalink( $aut ) ) . '">' . esc_html( get_the_title( $aut ) ) . '</a></p>';
 	if ( $oeuvre ) $h .= '<p class="rw-live-box__oeuvre">Autour de <a href="' . esc_url( get_permalink( $oeuvre ) ) . '"><em>' . esc_html( get_the_title( $oeuvre ) ) . '</em></a></p>';
-	if ( $s && rw_live_etat( $id ) !== 'termine' ) {
-		$h .= '<p><a class="rw-live-link" href="' . esc_url( rw_live_ics_url( $id ) ) . '">＋ Ajouter à mon agenda</a></p>';
+	if ( $s ) {
+		$h .= '<ul class="rw-live-heures">';
+		$h .= '<li>' . rw_live_icon( 'clock' ) . '<strong>' . esc_html( rw_live_date( $s, 'H\hi', 'Africa/Dakar' ) ) . '</strong> Dakar</li>';
+		$h .= '<li><strong>' . esc_html( rw_live_date( $s, 'H\hi', 'Europe/Paris' ) ) . '</strong> Paris</li>';
+		$h .= '<li class="rw-live-heures__local" hidden data-dakar="' . esc_attr( rw_live_date( $s, 'H:i', 'Africa/Dakar' ) ) . '" data-paris="' . esc_attr( rw_live_date( $s, 'H:i', 'Europe/Paris' ) ) . '"><strong data-rw-ts="' . (int) $s . '"></strong> chez toi</li>';
+		$h .= '</ul>';
 	}
-	$h .= '<div class="rw-live-acces" data-id="' . (int) $id . '" aria-live="polite"><p>Chargement de ton accès…</p></div>';
-	$h .= '</div>';
+	$h .= '</div></div>';
+	$h .= '<p class="rw-live-badge">' . rw_live_icon( $pionn ? 'lock' : 'users' ) . esc_html( $pionn ? 'Réservé aux Pionnières' : 'Ouvert à tous les membres' ) . '</p>';
+	$h .= '<div class="rw-live-acces" data-id="' . (int) $id . '" aria-live="polite"><div class="rw-live-skel" aria-hidden="true"></div><span class="rw-live-sr">Chargement de ton accès…</span></div>';
+	if ( $s && rw_live_etat( $id ) !== 'termine' ) {
+		$h .= '<p class="rw-live-box__outils"><a class="rw-live-ghost" href="' . esc_url( rw_live_ics_url( $id ) ) . '">' . rw_live_icon( 'calendar' ) . 'Ajouter à mon agenda</a></p>';
+	}
+	$h .= '</section>';
 	return $h;
 }
 
+// Le gabarit maison (snippet 12) applique the_content hors de la boucle : on ne teste donc pas in_the_loop().
 add_filter( 'the_content', function ( $content ) {
-	if ( ! is_singular( 'rw_live' ) || ! in_the_loop() || ! is_main_query() ) return $content;
-	return rw_live_box( get_the_ID() ) . $content;
+	if ( ! is_singular( 'rw_live' ) || doing_filter( 'get_the_excerpt' ) ) return $content;
+	if ( (int) get_the_ID() !== (int) get_queried_object_id() ) return $content;
+	return rw_live_box( get_queried_object_id() ) . $content . rw_live_inline_assets();
 }, 20 );
 
 /* ---------- AJAX : accès (lien / replay), jamais en cache ---------- */
@@ -339,21 +355,63 @@ function rw_live_ics_output() {
 	exit;
 }
 
+/* ---------- Habillage : icônes, dates courtes, statut ---------- */
+function rw_live_icon( $n ) {
+	$p = array(
+		'clock'    => '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+		'lock'     => '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+		'users'    => '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+		'calendar' => '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/>',
+		'play'     => '<path d="M7 4v16l13-8z"/>',
+		'arrow'    => '<path d="M5 12h14M13 6l6 6-6 6"/>',
+	);
+	return '<svg class="rw-live-ic" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' . ( $p[ $n ] ?? '' ) . '</svg>';
+}
+
+function rw_live_mois_court( $ts ) {
+	$m = array( 1 => 'janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.' );
+	return $m[ (int) rw_live_date( $ts, 'n', 'Africa/Dakar' ) ];
+}
+
+function rw_live_horaire_court( $id ) {
+	list( $s ) = rw_live_times( $id );
+	if ( ! $s ) return 'Date à venir';
+	return ucfirst( rw_live_date( $s, 'l j F', 'Africa/Dakar' ) ) . ' · ' . rw_live_date( $s, 'H\hi', 'Africa/Dakar' ) . ' Dakar · ' . rw_live_date( $s, 'H\hi', 'Europe/Paris' ) . ' Paris';
+}
+
+function rw_live_statut_html( $id ) {
+	list( $s, $e ) = rw_live_times( $id );
+	if ( ! $s ) return '';
+	$map = array( 'a_venir' => array( 'bientot', 'À venir' ), 'ouvert' => array( 'live', 'En direct' ), 'termine' => array( 'fini', 'Terminé' ) );
+	list( $c, $t ) = $map[ rw_live_etat( $id ) ] ?? $map['a_venir'];
+	return '<span class="rw-live-statut rw-live-statut--' . $c . '" data-rw-countdown="' . (int) $s . '" data-rw-end="' . (int) $e . '">' . esc_html( $t ) . '</span>';
+}
+
 /* ---------- Shortcodes ---------- */
 function rw_live_card( $id, $passe = false ) {
 	list( $s ) = rw_live_times( $id );
-	$etat = rw_live_etat( $id );
-	$aut  = (int) get_post_meta( $id, '_rw_live_auteure', true );
-	$h  = '<article class="rw-live-card' . ( $passe ? ' rw-live-card--passe' : '' ) . '">';
-	$h .= '<div class="rw-live-card__date"><span class="rw-live-card__jour">' . ( $s ? esc_html( rw_live_date( $s, 'j', 'Africa/Dakar' ) ) : '?' ) . '</span><span class="rw-live-card__mois">' . ( $s ? esc_html( rw_live_date( $s, 'M', 'Africa/Dakar' ) ) : '' ) . '</span></div>';
+	$etat   = rw_live_etat( $id );
+	$aut    = (int) get_post_meta( $id, '_rw_live_auteure', true );
+	$pionn  = ( get_post_meta( $id, '_rw_live_acces', true ) !== 'membres' );
+	$replay = (bool) get_post_meta( $id, '_rw_live_replay', true );
+	$cls    = 'rw-live-card' . ( $passe ? ' rw-live-card--passe' : '' ) . ( 'ouvert' === $etat ? ' rw-live-card--live' : '' );
+	$h  = '<article class="' . $cls . '">';
+	$h .= '<div class="rw-live-card__date" aria-hidden="true"><span class="rw-live-card__jour">' . ( $s ? esc_html( rw_live_date( $s, 'j', 'Africa/Dakar' ) ) : '—' ) . '</span><span class="rw-live-card__mois">' . ( $s ? esc_html( rw_live_mois_court( $s ) ) : '' ) . '</span></div>';
 	$h .= '<div class="rw-live-card__body">';
-	$h .= '<p class="rw-live-card__meta">' . esc_html( rw_live_type_label( $id ) ) . ' · <span class="rw-live-badge">' . esc_html( rw_live_acces_label( $id ) ) . '</span>' . ( 'ouvert' === $etat ? ' · <strong class="rw-live-encours">En direct</strong>' : '' ) . '</p>';
-	$h .= '<h3 class="rw-live-card__titre"><a href="' . esc_url( get_permalink( $id ) ) . '">' . esc_html( get_the_title( $id ) ) . '</a></h3>';
-	if ( $aut ) $h .= '<p class="rw-live-card__avec">Avec ' . esc_html( get_the_title( $aut ) ) . '</p>';
-	$h .= '<p class="rw-live-card__heure">' . esc_html( rw_live_horaire( $id ) ) . '</p>';
+	$h .= '<p class="rw-live-card__meta"><span class="rw-live-card__type">' . esc_html( rw_live_type_label( $id ) ) . '</span>';
+	$h .= '<span class="rw-live-tag">' . rw_live_icon( $pionn ? 'lock' : 'users' ) . esc_html( $pionn ? 'Pionnières' : 'Membres' ) . '</span>';
+	if ( 'ouvert' === $etat ) {
+		$h .= '<span class="rw-live-tag rw-live-tag--live"><span class="rw-live-dot" aria-hidden="true"></span>En direct</span>';
+	} elseif ( $passe && $replay ) {
+		$h .= '<span class="rw-live-tag rw-live-tag--replay">' . rw_live_icon( 'play' ) . 'Replay</span>';
+	}
+	$h .= '</p>';
+	$h .= '<h3 class="rw-live-card__titre"><a class="rw-live-card__lien" href="' . esc_url( get_permalink( $id ) ) . '">' . esc_html( get_the_title( $id ) ) . '</a></h3>';
+	if ( $aut ) $h .= '<p class="rw-live-card__avec">avec ' . esc_html( get_the_title( $aut ) ) . '</p>';
+	$h .= '<p class="rw-live-card__heure">' . rw_live_icon( 'clock' ) . '<span>' . esc_html( rw_live_horaire_court( $id ) ) . '</span></p>';
 	$h .= '</div>';
-	$cta = $passe ? ( get_post_meta( $id, '_rw_live_replay', true ) ? 'Voir le replay' : 'Voir le live' ) : ( 'ouvert' === $etat && rw_live_user_can_join( $id ) ? 'Rejoindre' : 'Voir le live' );
-	$h .= '<a class="rw-live-card__cta" href="' . esc_url( get_permalink( $id ) ) . '">' . esc_html( $cta ) . '</a>';
+	$cta = $passe ? ( $replay ? 'Voir le replay' : 'Revoir la page' ) : ( 'ouvert' === $etat && rw_live_user_can_join( $id ) ? 'Rejoindre' : 'Voir le live' );
+	$h .= '<span class="rw-live-card__cta" aria-hidden="true">' . esc_html( $cta ) . rw_live_icon( 'arrow' ) . '</span>';
 	$h .= '</article>';
 	return $h;
 }
@@ -392,18 +450,22 @@ function rw_lives_query( $a_venir, $limit ) {
 add_shortcode( 'rw_lives', function ( $atts ) {
 	$a = shortcode_atts( array( 'limite' => 12, 'passes' => 6 ), $atts );
 	do_action( 'litespeed_control_set_ttl', 1800 );
-	$h = '<div class="rw-lives">';
 	$avenir = rw_lives_query( true, (int) $a['limite'] );
-	$h .= '<h2 class="rw-lives__titre">Prochains lives</h2>';
-	if ( $avenir ) {
-		foreach ( $avenir as $id ) $h .= rw_live_card( $id );
-	} else {
-		$h .= '<p class="rw-lives__vide">Le prochain live sera annoncé ici et par e-mail, 7 jours avant.</p>';
-	}
 	$passes = rw_lives_query( false, (int) $a['passes'] );
+	$h  = '<div class="rw-lives">';
+	$h .= '<section class="rw-lives__section"><header class="rw-lives__head"><span class="rw-live-eyebrow">À venir</span><h2 class="rw-lives__titre">Prochains lives</h2></header>';
+	if ( $avenir ) {
+		$h .= '<div class="rw-lives__liste">';
+		foreach ( $avenir as $id ) $h .= rw_live_card( $id );
+		$h .= '</div>';
+	} else {
+		$h .= '<div class="rw-lives__vide">' . rw_live_icon( 'calendar' ) . '<p class="rw-lives__vide-t">Le prochain live se prépare.</p><p>Il sera annoncé ici et par e-mail, 7 jours avant.</p></div>';
+	}
+	$h .= '</section>';
 	if ( $passes ) {
-		$h .= '<h2 class="rw-lives__titre">Lives passés et replays</h2>';
+		$h .= '<section class="rw-lives__section"><header class="rw-lives__head"><span class="rw-live-eyebrow">Mémoire du Salon</span><h2 class="rw-lives__titre">Lives passés et replays</h2></header><div class="rw-lives__liste">';
 		foreach ( $passes as $id ) $h .= rw_live_card( $id, true );
+		$h .= '</div></section>';
 	}
 	return $h . '</div>' . rw_live_inline_assets();
 } );
@@ -413,13 +475,13 @@ add_shortcode( 'rw_prochain_live', function () {
 	$ids = rw_lives_query( true, 1 );
 	$h   = '<div class="rw-lives rw-lives--mini">';
 	if ( ! $ids ) {
-		$h .= '<p>Aucun live programmé pour l’instant. Les dates sont annoncées 7 jours avant, par e-mail et sur la page <a href="' . esc_url( home_url( '/rendez-vous/' ) ) . '">Rendez-vous</a>.</p>';
+		$h .= '<div class="rw-lives__vide">' . rw_live_icon( 'calendar' ) . '<p class="rw-lives__vide-t">Aucun live programmé pour l’instant.</p><p>Les dates sont annoncées 7 jours avant, par e-mail et sur la page <a href="' . esc_url( home_url( '/rendez-vous/' ) ) . '">Rendez-vous</a>.</p></div>';
 	} else {
 		$h .= rw_live_card( $ids[0] );
 		if ( is_user_logged_in() && ! rw_live_user_can_join( $ids[0] ) ) {
-			$h .= '<p class="rw-live-note">Les lives sont réservés aux Pionnières. <a href="' . esc_url( home_url( '/adhesion/' ) ) . '">Découvrir l’adhésion Pionnière</a></p>';
+			$h .= '<p class="rw-live-note">' . rw_live_icon( 'lock' ) . '<span>Les lives sont réservés aux Pionnières. <a href="' . esc_url( home_url( '/adhesion/' ) ) . '">Découvrir l’adhésion Pionnière</a></span></p>';
 		}
-		$h .= '<p><a class="rw-live-link" href="' . esc_url( home_url( '/rendez-vous/' ) ) . '">Tous les rendez-vous →</a></p>';
+		$h .= '<p class="rw-lives__tous"><a class="rw-live-ghost" href="' . esc_url( home_url( '/rendez-vous/' ) ) . '">Tous les rendez-vous' . rw_live_icon( 'arrow' ) . '</a></p>';
 	}
 	return $h . '</div>' . rw_live_inline_assets();
 } );
@@ -446,34 +508,129 @@ add_action( 'wp', function () { if ( is_singular( 'rw_live' ) ) rw_live_assets()
 function rw_live_print_assets() {
 	?>
 	<style id="rw-lives-css">
-	.rw-live-box,.rw-live-card{--rw-a:var(--theme-palette-color-1,#b48cff);border:1px solid color-mix(in srgb,currentColor 18%,transparent);border-radius:14px}
-	.rw-live-box{padding:20px 22px;margin:0 0 28px;background:color-mix(in srgb,var(--rw-a) 7%,transparent)}
-	.rw-live-box p{margin:0 0 8px}.rw-live-box__type,.rw-live-card__meta{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;opacity:.8}
-	.rw-live-box__quand{font-size:1.15rem;font-weight:600}.rw-live-box__local{font-size:.9rem;opacity:.75}
-	.rw-live-badge{display:inline-block;padding:1px 8px;border-radius:99px;border:1px solid var(--rw-a);color:var(--rw-a);text-transform:none;letter-spacing:0}
-	.rw-live-acces{margin-top:14px;padding-top:14px;border-top:1px dashed color-mix(in srgb,currentColor 20%,transparent)}
-	.rw-live-btn{display:inline-block;padding:11px 20px;border-radius:99px;background:var(--rw-a);color:#fff!important;text-decoration:none!important;font-weight:600;margin:4px 8px 4px 0}
-	.rw-live-btn--go{font-size:1.05rem;padding:14px 26px}
-	.rw-live-link{color:var(--rw-a);font-weight:600}.rw-live-note{font-size:.88rem;opacity:.75}
-	.rw-live-replay{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden}.rw-live-replay iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-	.rw-lives__titre{margin:28px 0 14px}.rw-lives__vide{opacity:.8}
-	.rw-live-card{display:flex;gap:16px;align-items:center;padding:14px 16px;margin:0 0 12px}
-	.rw-live-card--passe{opacity:.8}
-	.rw-live-card__date{flex:0 0 58px;text-align:center;border-radius:10px;padding:8px 0;background:color-mix(in srgb,var(--rw-a) 14%,transparent)}
-	.rw-live-card__jour{display:block;font-size:1.5rem;font-weight:700;line-height:1}.rw-live-card__mois{display:block;font-size:.78rem;text-transform:uppercase}
-	.rw-live-card__body{flex:1;min-width:0}.rw-live-card__body p{margin:0}.rw-live-card__titre{margin:2px 0 4px;font-size:1.08rem}
-	.rw-live-card__titre a{text-decoration:none}.rw-live-card__heure,.rw-live-card__avec{font-size:.9rem;opacity:.8}
-	.rw-live-card__cta{flex:0 0 auto;color:var(--rw-a);font-weight:600;text-decoration:none;white-space:nowrap}
-	.rw-live-encours{color:#e5484d}
-	@media(max-width:600px){.rw-live-card{flex-wrap:wrap}.rw-live-card__cta{flex-basis:100%;padding-left:74px}}
+	.rw-live-box,.rw-lives{--rw-mag:#c21e5c;--rw-mag-soft:#e35c8a;--rw-mag-deep:#8e1543;--rw-vio:#4d2d87;--rw-nuit:#0d0820;--rw-nuit-2:#1a0e30;--rw-mute:rgba(255,255,255,.66);--rw-line:rgba(255,255,255,.1);--rw-serif:'Playfair Display',Georgia,serif;--rw-display:'Bricolage Grotesque','Plus Jakarta Sans',system-ui,sans-serif;color:rgba(255,255,255,.92)}
+	.rw-live-ic{width:16px;height:16px;flex:0 0 auto}
+	.rw-live-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+	.rw-lives p,.rw-live-box p{border-bottom:0!important;padding-bottom:0!important}
+	.rw-lives a:not(.rw-live-ghost):not(.rw-live-btn),.rw-live-box a:not(.rw-live-ghost):not(.rw-live-btn){border-bottom:0!important}
+	.rw-live-eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--rw-line);font:500 .68rem/1.2 var(--rw-display);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+	.rw-live-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rw-mag)}
+	.rw-live-box{position:relative;overflow:hidden;margin:0 0 36px;padding:28px;border-radius:22px;border:1px solid rgba(227,92,138,.22);background:radial-gradient(120% 90% at 100% 0%,rgba(194,30,92,.2) 0%,transparent 55%),radial-gradient(90% 80% at 0% 100%,rgba(77,45,135,.38) 0%,transparent 60%),linear-gradient(160deg,var(--rw-nuit-2),var(--rw-nuit) 70%);box-shadow:0 30px 80px -40px rgba(194,30,92,.45)}
+	.rw-live-box p{margin:0}
+	.rw-live-box__top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:22px}
+	.rw-live-box__main{display:flex;gap:24px;align-items:center}
+	.rw-live-date{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;width:104px;padding:14px 0 12px;border-radius:18px;background:rgba(5,5,5,.45);border:1px solid var(--rw-line);text-align:center}
+	.rw-live-date__jour{font:italic 700 3.1rem/1 var(--rw-serif);color:#fff}
+	.rw-live-date__mois{margin-top:6px;font:600 .78rem/1 var(--rw-display);letter-spacing:.2em;text-transform:uppercase;color:var(--rw-mag-soft)}
+	.rw-live-date__wd{margin-top:6px;font-size:.74rem;color:var(--rw-mute);text-transform:capitalize}
+	.rw-live-box__infos{min-width:0;display:grid;gap:8px}
+	.rw-live-box__avec{font:italic 400 1.5rem/1.25 var(--rw-serif);color:#fff}
+	.rw-live-box__avec a,.rw-live-box__oeuvre a{color:inherit;text-decoration:underline;text-decoration-color:rgba(227,92,138,.6);text-underline-offset:4px}
+	.rw-live-box__oeuvre{color:var(--rw-mute);font-size:.95rem}
+	.rw-live-heures{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0!important;padding:0!important;list-style:none!important}
+	.rw-live-heures li{display:inline-flex;align-items:center;gap:6px;margin:0!important;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--rw-line);font-size:.86rem;color:var(--rw-mute)}
+	.rw-live-heures li strong{color:#fff;font-weight:600}
+	.rw-live-heures li[hidden]{display:none}
+	.rw-live-badge{display:inline-flex;align-items:center;gap:8px;margin-top:22px!important;font-size:.88rem;color:var(--rw-mag-soft)}
+	.rw-live-acces{margin-top:14px;padding:18px 20px;border-radius:16px;background:rgba(5,5,5,.5);border:1px solid var(--rw-line);min-height:64px}
+	.rw-live-acces p{margin:0 0 10px!important;line-height:1.6}.rw-live-acces p:last-child{margin-bottom:0!important}
+	.rw-live-skel{height:22px;width:60%;border-radius:8px;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.12),rgba(255,255,255,.05));background-size:200% 100%;animation:rwSkel 1.4s ease-in-out infinite}
+	@keyframes rwSkel{to{background-position:-200% 0}}
+	.rw-live-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;margin:4px 10px 4px 0;border-radius:999px;background:var(--rw-mag);color:#fff!important;font-weight:600;font-size:.95rem;text-decoration:none!important;box-shadow:0 8px 24px -8px rgba(194,30,92,.6);transition:background-color .2s,box-shadow .2s;cursor:pointer}
+	.rw-live-btn:hover{background:var(--rw-mag-deep)}
+	.rw-live-btn--go{min-height:56px;padding:0 30px;font-size:1.05rem}
+	.rw-live-btn--go::before{content:"";width:9px;height:9px;border-radius:50%;background:#fff;animation:rwPulse 1.8s infinite}
+	@keyframes rwPulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+	.rw-live-link,.rw-live-ghost{color:var(--rw-mag-soft)!important;font-weight:600;text-decoration:none!important}
+	.rw-live-ghost{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid rgba(227,92,138,.35);transition:border-color .2s,background-color .2s;cursor:pointer}
+	.rw-live-ghost:hover{border-color:var(--rw-mag-soft);background:rgba(227,92,138,.08)}
+	.rw-live-btn:focus-visible,.rw-live-ghost:focus-visible,.rw-live-link:focus-visible{outline:2px solid #fff;outline-offset:3px}
+	.rw-live-box__outils{margin-top:16px!important}
+	.rw-live-note{display:flex;gap:8px;align-items:flex-start;font-size:.88rem;color:var(--rw-mute)}
+	.rw-live-note .rw-live-ic{margin-top:3px}
+	.rw-live-note a{color:var(--rw-mag-soft)}
+	.rw-live-statut{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font:600 .74rem/1.2 var(--rw-display);letter-spacing:.06em;background:rgba(255,255,255,.07);color:#fff}
+	.rw-live-statut--live{background:rgba(229,72,77,.16);color:#ff8a8e}
+	.rw-live-statut--live::before,.rw-live-dot{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff5a5f;animation:rwBlink 1.6s infinite}
+	@keyframes rwBlink{50%{opacity:.35}}
+	.rw-live-statut--fini{color:var(--rw-mute)}
+	.rw-live-replay{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;border:1px solid var(--rw-line)}
+	.rw-live-replay iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+	.rw-lives__section{margin:8px 0 44px}
+	.rw-lives__head{display:grid;gap:12px;justify-items:start;margin-bottom:22px}
+	.rw-lives__titre{margin:0!important;font:italic 700 clamp(1.7rem,4vw,2.3rem)/1.1 var(--rw-serif)!important;color:#fff!important}
+	.rw-lives__liste{position:relative;display:grid;gap:14px;padding-left:24px}
+	.rw-lives__liste::before{content:"";position:absolute;left:6px;top:18px;bottom:18px;width:1px;background:linear-gradient(var(--rw-mag),rgba(77,45,135,.45) 70%,transparent)}
+	.rw-live-card{position:relative;display:flex;gap:18px;align-items:center;padding:18px 20px;border-radius:18px;background:linear-gradient(150deg,rgba(26,14,48,.9),rgba(13,8,32,.9));border:1px solid var(--rw-line);transition:border-color .2s,box-shadow .2s;cursor:pointer}
+	.rw-lives__liste .rw-live-card::before{content:"";position:absolute;left:-23px;top:50%;width:11px;height:11px;margin-top:-6px;border-radius:50%;background:var(--rw-nuit);border:2px solid var(--rw-mag)}
+	.rw-live-card:hover{border-color:rgba(227,92,138,.5);box-shadow:0 18px 50px -28px rgba(194,30,92,.75)}
+	.rw-live-card:focus-within{outline:2px solid var(--rw-mag-soft);outline-offset:3px}
+	.rw-live-card--live{border-color:rgba(255,90,95,.45)}
+	.rw-live-card--passe{background:rgba(255,255,255,.03)}
+	.rw-live-card--passe .rw-live-card__jour{color:rgba(255,255,255,.6)}
+	.rw-lives__liste .rw-live-card--passe::before{border-color:rgba(255,255,255,.3)}
+	.rw-live-card__date{flex:0 0 68px;display:flex;flex-direction:column;align-items:center;padding:10px 0;border-radius:14px;background:rgba(5,5,5,.45);border:1px solid var(--rw-line)}
+	.rw-live-card__jour{font:italic 700 2rem/1 var(--rw-serif);color:#fff}
+	.rw-live-card__mois{margin-top:5px;font:600 .66rem/1 var(--rw-display);letter-spacing:.18em;text-transform:uppercase;color:var(--rw-mag-soft)}
+	.rw-live-card__body{flex:1;min-width:0;display:grid;gap:5px}
+	.rw-live-card__body p{margin:0!important}
+	.rw-live-card__meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+	.rw-live-card__type{font:500 .66rem/1.2 var(--rw-display);letter-spacing:.16em;text-transform:uppercase;color:var(--rw-mute)}
+	.rw-live-tag{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:999px;font-size:.72rem;font-weight:600;line-height:1.2;color:var(--rw-mag-soft);background:rgba(227,92,138,.1);border:1px solid rgba(227,92,138,.25)}
+	.rw-live-tag .rw-live-ic{width:12px;height:12px}
+	.rw-live-tag--live{color:#ff8a8e;background:rgba(229,72,77,.14);border-color:rgba(255,90,95,.35)}
+	.rw-live-tag--replay{color:#fff;background:rgba(77,45,135,.5);border-color:rgba(180,140,255,.35)}
+	.rw-live-card__titre{margin:2px 0 0!important;font:italic 700 1.3rem/1.25 var(--rw-serif)!important}
+	.rw-live-card__lien{color:#fff!important;text-decoration:none!important}
+	.rw-live-card__lien::after{content:"";position:absolute;inset:0;border-radius:inherit}
+	.rw-live-card__lien:focus{outline:none}
+	.rw-live-card__avec{font:italic 400 1rem/1.3 var(--rw-serif);color:rgba(255,255,255,.82)}
+	.rw-live-card__heure{display:flex;gap:6px;align-items:flex-start;font-size:.85rem;color:var(--rw-mute)}
+	.rw-live-card__heure .rw-live-ic{margin-top:2px}
+	.rw-live-card__cta{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;color:var(--rw-mag-soft);font-weight:600;font-size:.9rem;white-space:nowrap}
+	.rw-live-card__cta .rw-live-ic{transition:transform .2s}
+	.rw-live-card:hover .rw-live-card__cta .rw-live-ic{transform:translateX(4px)}
+	.rw-lives__vide{display:grid;justify-items:center;gap:6px;padding:34px 24px;text-align:center;border-radius:18px;border:1px dashed rgba(227,92,138,.3);background:rgba(13,8,32,.6);color:var(--rw-mute)}
+	.rw-lives__vide .rw-live-ic{width:28px;height:28px;color:var(--rw-mag-soft);margin-bottom:6px}
+	.rw-lives__vide p{margin:0!important}
+	.rw-lives__vide-t{font:italic 700 1.25rem/1.3 var(--rw-serif);color:#fff}
+	.rw-lives__vide a{color:var(--rw-mag-soft)}
+	.rw-lives__tous{margin:14px 0 0!important}
+	.rw-lives--mini .rw-live-note{margin:12px 0 0!important}
+	@media (max-width:600px){
+		.rw-live-box{padding:20px;border-radius:18px}
+		.rw-live-box__main{gap:16px;align-items:flex-start}
+		.rw-live-date{width:78px;padding:10px 0}
+		.rw-live-date__jour{font-size:2.3rem}
+		.rw-live-box__avec{font-size:1.2rem}
+		.rw-live-btn{width:100%;margin-right:0}
+		.rw-live-card{flex-wrap:wrap;align-items:flex-start;padding:16px}
+		.rw-live-card__titre{font-size:1.15rem!important}
+		.rw-live-card__cta{flex-basis:100%;padding-left:86px}
+	}
+	@media (prefers-reduced-motion:reduce){.rw-live-box *,.rw-live-box *::before,.rw-lives *,.rw-lives *::before{animation:none!important;transition:none!important}}
 	</style>
 	<script id="rw-lives-js">
 	(function(){
 		var AJAX=<?php echo wp_json_encode( admin_url( 'admin-ajax.php' ) ); ?>;
-		document.querySelectorAll('[data-rw-ts]').forEach(function(s){
-			try{var d=new Date(parseInt(s.getAttribute('data-rw-ts'),10)*1000);
-			s.textContent=d.toLocaleString('fr-FR',{weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'});}catch(e){s.parentNode.style.display='none';}
+		document.querySelectorAll('.rw-live-heures__local').forEach(function(li){
+			try{var s=li.querySelector('[data-rw-ts]');var d=new Date(parseInt(s.getAttribute('data-rw-ts'),10)*1000);
+			var t=d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+			if(t!==li.getAttribute('data-dakar')&&t!==li.getAttribute('data-paris')){s.textContent=t.replace(':','h');li.hidden=false;}}catch(e){}
 		});
+		function statut(){
+			var now=Date.now()/1000;
+			document.querySelectorAll('[data-rw-countdown]').forEach(function(el){
+				var s=+el.getAttribute('data-rw-countdown'),e=+el.getAttribute('data-rw-end'),t,c;
+				if(now>e+1800){t='Terminé';c='fini';}
+				else if(now>=s){t='En direct';c='live';}
+				else if(now>=s-900){t='Portes ouvertes';c='live';}
+				else{var d=s-now,j=Math.floor(d/86400),h=Math.floor(d%86400/3600),m=Math.max(1,Math.floor(d%3600/60));
+					t='Dans '+(j?j+' j '+h+' h':(h?h+' h '+m+' min':m+' min'));c='bientot';}
+				el.textContent=t;el.className='rw-live-statut rw-live-statut--'+c;
+			});
+		}
+		statut();setInterval(statut,30000);
 		document.querySelectorAll('.rw-live-acces').forEach(function(b){
 			function load(){
 				fetch(AJAX+'?action=rw_live_acces&id='+encodeURIComponent(b.getAttribute('data-id'))+'&_='+Date.now(),{credentials:'same-origin',cache:'no-store'})
